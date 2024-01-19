@@ -1,2 +1,2 @@
-# Dock Wallet
+# 📳 Dock Wallet
 

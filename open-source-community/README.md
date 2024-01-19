@@ -1,2 +1,2 @@
-# Open Source Community
+# 👥 Open Source Community
 
