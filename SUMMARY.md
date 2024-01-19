@@ -3,6 +3,7 @@
 * [🌐 Dock Overview](README.md)
 * [▶ Getting Started](getting-started/README.md)
   * [Create an Organization Profile (DID)](getting-started/create-an-organization-profile-did.md)
+  * [Issue Verifiable Credentials](getting-started/issue-verifiable-credentials.md)
 * [Dock Certs](page-1.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes.md)
 * [Dock Wallet](page.md)
