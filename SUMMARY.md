@@ -25,6 +25,8 @@
     * [Changing team member roles](dock-certs/team-management/changing-team-member-roles.md)
 * [📳 Dock Wallet](page.md)
   * [Dock Wallet Release Notes](dock-wallet/dock-wallet-release-notes.md)
+  * [Downloading Dock Wallet](dock-wallet/downloading-dock-wallet.md)
+  * [Create and Manage DIDs From the Dock Wallet](dock-wallet/create-and-manage-dids-from-the-dock-wallet.md)
 * [📄 Developer Documentation](developer-documentation/README.md)
   * [Dock API](developer-documentation/dock-api/README.md)
     * [Dock API Release Notes](developer-documentation/dock-api/dock-api-release-notes.md)
