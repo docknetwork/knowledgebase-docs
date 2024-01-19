@@ -6,6 +6,7 @@
   * [Issue Verifiable Credentials](getting-started/issue-verifiable-credentials.md)
   * [Verify Credentials](getting-started/verify-credentials.md)
   * [Create a Schema](getting-started/create-a-schema.md)
+  * [Create a Design](getting-started/create-a-design.md)
 * [🗳 Dock Certs](page-1.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes.md)
 * [📳 Dock Wallet](page.md)
