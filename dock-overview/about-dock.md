@@ -8,8 +8,6 @@ Since 2017, we have been building state-of-the-art decentralized identity and Ve
 
 Dock is building a gateway to Web3 by providing simple solutions for businesses and developers to build, manage, and present digital Verifiable Credentials and decentralized identities using blockchain.
 
-L[about us.](https://www.dock.io/verifiable-credentials-company)
-
 ## Mission <a href="#h_2a5e246677" id="h_2a5e246677"></a>
 
 Dock’s mission is to empower lives through verifiable data by enabling organizations and individuals to create and share validated information.
