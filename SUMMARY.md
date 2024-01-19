@@ -2,7 +2,7 @@
 
 * [🌐 Dock Overview](README.md)
 * [▶ Getting Started](getting-started/README.md)
-  * [Create an Organisation Profile (DID)](getting-started/create-an-organisation-profile-did.md)
+  * [Create an Organization Profile (DID)](getting-started/create-an-organization-profile-did.md)
 * [Dock Certs](page-1.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes.md)
 * [Dock Wallet](page.md)
