@@ -2,7 +2,8 @@
 
 * [🌐 Dock Overview](README.md)
   * [About Dock](dock-overview/about-dock.md)
-  * [Why Dock?](dock-overview/why-dock.md)
+  * [Why Dock?](dock-overview/why-dock/README.md)
+    * [Technology Solutions](dock-overview/why-dock/technology-solutions.md)
   * [Dock Blockchain](dock-overview/dock-blockchain/README.md)
     * [What information is stored on the Dock blockchain?](dock-overview/dock-blockchain/what-information-is-stored-on-the-dock-blockchain.md)
 * [▶ Getting Started](getting-started/README.md)
