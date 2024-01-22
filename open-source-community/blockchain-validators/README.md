@@ -21,7 +21,7 @@ Specifically, the following are required:
 
 Some familiarity with provisioning machines (either cloud or on-prem) and some familiarity with Linux command line is needed to run the provided scripts to generate keys and deploy node. Dock currently supports Ubuntu 18.04.
 
-There are different requirements to become a validator in the PoS network. More information is available in the following sections:
+There are different requirements to become a validator in the PoS network. More information is available in the following sections.
 
 
 
