@@ -56,6 +56,7 @@
 * [👥 Open Source Community](open-source-community/README.md)
   * [Blockchain Validators](open-source-community/blockchain-validators/README.md)
     * [Blockchain Release Notes](open-source-community/blockchain-validators/blockchain-release-notes.md)
+    * [Tooling](open-source-community/blockchain-validators/tooling.md)
   * [Blockchain Developers](open-source-community/blockchain-developers.md)
   * [Blockchain SDK](open-source-community/blockchain-sdk/README.md)
     * [Blockchain SDK Release Notes](open-source-community/blockchain-sdk/blockchain-sdk-release-notes.md)
