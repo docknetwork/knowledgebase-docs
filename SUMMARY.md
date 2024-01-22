@@ -69,3 +69,4 @@
       * [Proposals](open-source-community/governance/elections-and-voting/proposals.md)
       * [Council Membership](open-source-community/governance/elections-and-voting/council-membership.md)
       * [Council Proposals](open-source-community/governance/elections-and-voting/council-proposals.md)
+      * [Technical Committee](open-source-community/governance/elections-and-voting/technical-committee.md)
