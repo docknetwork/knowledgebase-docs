@@ -67,3 +67,4 @@
     * [Rewards and slashing](open-source-community/governance/rewards-and-slashing.md)
     * [Elections and voting](open-source-community/governance/elections-and-voting/README.md)
       * [Proposals](open-source-community/governance/elections-and-voting/proposals.md)
+      * [Council Membership](open-source-community/governance/elections-and-voting/council-membership.md)
