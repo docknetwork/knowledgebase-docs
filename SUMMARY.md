@@ -82,3 +82,7 @@
       * [Council Membership](open-source-community/governance/elections-and-voting/council-membership.md)
       * [Council Proposals](open-source-community/governance/elections-and-voting/council-proposals.md)
       * [Technical Committee](open-source-community/governance/elections-and-voting/technical-committee.md)
+  * [Staking](open-source-community/staking/README.md)
+    * [Staking process](open-source-community/staking/staking-process.md)
+    * [Account setup for staking](open-source-community/staking/account-setup-for-staking.md)
+    * [How to stake on Dock](open-source-community/staking/how-to-stake-on-dock.md)
