@@ -86,3 +86,7 @@
     * [Staking process](open-source-community/staking/staking-process.md)
     * [Account setup for staking](open-source-community/staking/account-setup-for-staking.md)
     * [How to stake on Dock](open-source-community/staking/how-to-stake-on-dock.md)
+    * [How to unbond and rebond](open-source-community/staking/how-to-unbond-and-rebond.md)
+    * [How to redistribute stake to other validators](open-source-community/staking/how-to-redistribute-stake-to-other-validators.md)
+    * [How to claim staking rewards](open-source-community/staking/how-to-claim-staking-rewards.md)
+    * [What is the staking yield on Dock?](open-source-community/staking/what-is-the-staking-yield-on-dock.md)
