@@ -55,6 +55,8 @@
   * [Emission Rewards](dock-token/emission-rewards.md)
   * [Wallets and Account Creation](dock-token/wallets-and-account-creation.md)
   * [Dock Token Migration](dock-token/dock-token-migration.md)
+  * [Sub Accounts & Killing an Identity](dock-token/sub-accounts-and-killing-an-identity.md)
+  * [Send Dock tokens from the mainnet portal](dock-token/send-dock-tokens-from-the-mainnet-portal.md)
 * [👥 Open Source Community](open-source-community/README.md)
   * [Blockchain Validators](open-source-community/blockchain-validators/README.md)
     * [Blockchain Release Notes](open-source-community/blockchain-validators/blockchain-release-notes.md)
