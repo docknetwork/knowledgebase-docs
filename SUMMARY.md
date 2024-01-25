@@ -14,7 +14,6 @@
   * [Verify Credentials](getting-started/verify-credentials.md)
   * [Create a Schema](getting-started/create-a-schema.md)
   * [Create a Design](getting-started/create-a-design.md)
-  * [DID types](getting-started/did-types.md)
   * [Encrypted credential backup](getting-started/encrypted-credential-backup.md)
   * [Key Concepts](getting-started/key-concepts.md)
 * [🗳 Dock Certs](dock-certs/README.md)

@@ -30,6 +30,18 @@ Your issuer profile is now created and all of your profiles (DIDs) will be liste
 
 ***
 
+### Choosing a DID type
+
+
+
+| Method        | Pros | Cons |
+| ------------- | ---- | ---- |
+| did:key       |      |      |
+| did:dock      |      |      |
+| did:polygonid |      |      |
+
+***
+
 ### Edit an Organization Profile (DID) <a href="#h_c1052e8bf2" id="h_c1052e8bf2"></a>
 
 Click on Organization Profiles in the menu, click on the three dots of the DID you want to edit, and select Update DID.
