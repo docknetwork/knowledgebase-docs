@@ -2,17 +2,21 @@
 
 ***
 
-### Create an Organization Profile <a href="#h_95e2ff9378" id="h_95e2ff9378"></a>
+### What is a DID? <a href="#h_95e2ff9378" id="h_95e2ff9378"></a>
 
-To create your organization profiles, select Organization Profiles on the left side menu and then click Create Organization Profile.
+Decentralized identifiers (DIDs) are unique identifiers that are associated with a digital identity. DIDs are made up of a string of letters and numbers that can be stored on the blockchain and can be used to authenticate that identity.
 
-<div align="left">
+### Create an Organization Profile (DID) <a href="#h_95e2ff9378" id="h_95e2ff9378"></a>
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 14.11.19.png" alt="" width="563"><figcaption></figcaption></figure>
+To create your organization profiles (DIDs) , select Organization Profiles on the left side menu and then click Create Organization Profile.
+
+<div align="left" data-full-width="true">
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 14.11.19.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
-Fill in the Public Name, add the Logo and Public Description you can leave the DID Type to the default setting “dock” (learn more about different [DID Types](create-an-organization-profile-did.md#choosing-a-did-type)). Then select Create a DID.
+Fill in the Public Name, add the Logo and Public Description you can leave the DID Type to the default setting “dock” (learn more about different [DID Types](create-an-organization-profile-did.md#choosing-a-did-type)). Then select **Create Organization Profile**.
 
 <div align="left">
 
@@ -20,11 +24,11 @@ Fill in the Public Name, add the Logo and Public Description you can leave the D
 
 </div>
 
-Your issuer profile is now created and all of your profiles (DIDs) will be listed on this page.
+All of your profiles (DIDs) will be listed on this page.
 
 <div align="left">
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 14.36.06.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 14.36.06.png" alt=""><figcaption></figcaption></figure>
 
 </div>
 
@@ -44,19 +48,19 @@ Your issuer profile is now created and all of your profiles (DIDs) will be liste
 
 ### Edit an Organization Profile (DID) <a href="#h_c1052e8bf2" id="h_c1052e8bf2"></a>
 
-Click on Organization Profiles in the menu, click on the three dots of the DID you want to edit, and select Update DID.
+Click on Organization Profiles in the menu, click on the three dots of the DID you want to edit, and select **Update DID**.
 
-![](<../.gitbook/assets/Screenshot 2024-01-19 at 14.38.28.png>)
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 14.38.28.png" alt=""><figcaption></figcaption></figure>
 
-Update the details and select Update DID.
+Update the details and select **Update DID**.
 
 ***
 
 ### Export an Organization Profile (DID) <a href="#h_157926b249" id="h_157926b249"></a>
 
-Click on Issuer Profiles in the menu, click on the three dots of the DID you want to export, and select Export DID.
+Click on the three dots of the DID you want to export, and select Export DID.
 
-![](<../.gitbook/assets/Screenshot 2024-01-19 at 14.38.28.png>)
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 14.38.28.png" alt=""><figcaption></figcaption></figure>
 
 You can export your DID to a wallet or another platform. Create a password to encrypt the file and select Export.
 
@@ -66,11 +70,9 @@ You can export your DID to a wallet or another platform. Create a password to en
 
 ### Delete an Organization Profile (DID) <a href="#h_88118e48bc" id="h_88118e48bc"></a>
 
-Click on Organization Profiles in the menu, click on the three dots of the DID you want to delete, and select Delete DID.
+Click on the three dots of the DID you want to delete, and select Delete DID.
 
-![](<../.gitbook/assets/Screenshot 2024-01-19 at 14.38.28.png>)
-
-Select Delete.
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 14.38.28.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Deleting your DID will make it unresolvable. This means that any credentials you issued with it will become invalid and it cannot be looked up on the blockchain anymore. Your associated key pair will also be deleted. This action cannot be undone.
