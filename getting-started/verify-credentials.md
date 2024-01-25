@@ -1,43 +1,43 @@
 # Verify Credentials
 
-## Verification process <a href="#h_d119e38335" id="h_d119e38335"></a>
+### Verification process <a href="#h_d119e38335" id="h_d119e38335"></a>
 
-In the verification process, there are three main parties:
+In a typical verification process, there are three main parties:
 
-1. Issuer: Party that creates and issues a Verifiable Credential to a holder (individual or organization)
-2. Holder: Person or organization that holds the credential (e.g. degree, professional certificate, or identity document)
-3. Verifier: Party that checks that the credential is valid and authentic
+1. **Issuer:** Party that creates and issues a Verifiable Credential to a holder (individual or organization)
+2. **Holder:** Person or organization that holds the credential (e.g. degree, professional certificate, or identity document)
+3. **Verifier:** Party that checks that the credential is valid and authentic
 
-![](https://downloads.intercomcdn.com/i/o/801931889/c9976b09a48fe6e88920e78a/631f7526f09bcf3b4b2e6209\_3-certificate+fraud-issuer%2C+holder%2C+verifier.jpeg)
+<figure><img src="https://downloads.intercomcdn.com/i/o/801931889/c9976b09a48fe6e88920e78a/631f7526f09bcf3b4b2e6209_3-certificate+fraud-issuer%2C+holder%2C+verifier.jpeg" alt=""><figcaption></figcaption></figure>
 
 ## Steps for the Verifier <a href="#h_4638f9252a" id="h_4638f9252a"></a>
 
-❗ Verification request templates can only be created in Dock Certs, not the wallet. These templates can be important into the wallet from Dock Certs for wallet-to-wallet verification.
-
 Click on Verification in the left menu and select Create verification template
 
-![](https://downloads.intercomcdn.com/i/o/801933692/5203a19c476d97fd6531e65f/63dd39a9db4a3e2a50cf9e20\_1-Create+a+verification+template+.png)
+<figure><img src="https://downloads.intercomcdn.com/i/o/801933692/5203a19c476d97fd6531e65f/63dd39a9db4a3e2a50cf9e20_1-Create+a+verification+template+.png" alt=""><figcaption></figcaption></figure>
 
 First, type in the template title and template purpose, which the holder will be able to see.
 
 Optionally, you can choose a Verifier DID which will be shown to the holder so that they can verify who you are.
 
-![](<../.gitbook/assets/Screenshot 2024-01-19 at 15.00.55.png>)
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 15.00.55.png" alt=""><figcaption></figcaption></figure>
 
 The verifier can choose which credential details the holder is required to send in order for the credential to be accepted.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 15.03.35.png" alt=""><figcaption></figcaption></figure>
 
-The list will have all attributes that are included in the credential templates - schemas, therefore if you want to include an attribute to the verification template it has to be included in at least one of your credential templates.
+{% hint style="info" %}
+The list will have only the attributes that are included in the credential schemas. If you want to include an attribute to the verification template it has to be included in at least one of your credential templates.
+{% endhint %}
 
-For Zero Knowledge Proof credentials you can use range proof verification conditions that will verify the credential without disclosing the actual value of that attribute. For example if you want to verify that the holder is older than 18 you can choose attribute Age and condition is greater than 18.
+When verifying Zero Knowledge Proof credentials, you can use range proof verification conditions, that will verify the credential without disclosing the actual value of an attribute. For example, if you want to verify that the credential holder is older than 18 you can choose attribute Age and condition is greater than 18.
 
-![](<../.gitbook/assets/Screenshot 2024-01-19 at 15.11.23.png>)
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 15.11.23.png" alt=""><figcaption></figcaption></figure>
 
 Last step for a verification request is to click Request, which will generate a QR code. Every time a new request is made, it generates a new QR code.\
 ​
 
-![](https://downloads.intercomcdn.com/i/o/801942152/e6f4175aa1923403d2509951/63dc133a7f9006477e2c9e15\_4-select+request.png)
+<figure><img src="https://downloads.intercomcdn.com/i/o/801942152/e6f4175aa1923403d2509951/63dc133a7f9006477e2c9e15_4-select+request.png" alt=""><figcaption></figcaption></figure>
 
 ## Steps for the Holder <a href="#h_551a4bc680" id="h_551a4bc680"></a>
 
@@ -66,6 +66,10 @@ For the verifier to see a log of all your verification requests, go to Verificat
 When the credentials are valid it will show up as “Verified” under Status. The verifier won’t get a notification if the credential is invalid because Dock’s tools won’t let the holder submit invalid credentials.
 
 ![](https://downloads.intercomcdn.com/i/o/801948999/996e97fbbc669281dff49d03/63dc17fdac49966e2cfebd6c\_8-credential+verified+and+requested.png)
+
+{% hint style="warning" %}
+Verification request templates can only be created in Dock Certs, not the wallet. These templates can be important into the wallet from Dock Certs for wallet-to-wallet verification.
+{% endhint %}
 
 ## Wallet-to-Wallet Verification <a href="#h_9833d67c15" id="h_9833d67c15"></a>
 
