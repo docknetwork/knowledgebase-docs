@@ -12,7 +12,7 @@ To create your organization profiles, select Organization Profiles on the left s
 
 </div>
 
-Fill in the Public Name, add the Logo and Public Description you can leave the DID Type to the default setting “dock” (learn more about different DID Types). Then select Create a DID.
+Fill in the Public Name, add the Logo and Public Description you can leave the DID Type to the default setting “dock” (learn more about different [DID Types](create-an-organization-profile-did.md#choosing-a-did-type)). Then select Create a DID.
 
 <div align="left">
 
@@ -72,4 +72,6 @@ Click on Organization Profiles in the menu, click on the three dots of the DID y
 
 Select Delete.
 
-:exclamation: _Deleting your DID will make it unresolvable. This means that any credentials you issued with it will become invalid and it cannot be looked up on the blockchain anymore. Your associated key pair will also be deleted. This action cannot be undone._
+{% hint style="warning" %}
+Deleting your DID will make it unresolvable. This means that any credentials you issued with it will become invalid and it cannot be looked up on the blockchain anymore. Your associated key pair will also be deleted. This action cannot be undone.
+{% endhint %}
