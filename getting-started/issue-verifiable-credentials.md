@@ -4,33 +4,33 @@
 
 In the Credentials menu, click Issue credentials.
 
-![](https://downloads.intercomcdn.com/i/o/797669904/4c77143e4d9f9ce6f4f345fc/Screenshot+2023-08-01+at+14.47.45.png)
+<figure><img src="https://downloads.intercomcdn.com/i/o/797669904/4c77143e4d9f9ce6f4f345fc/Screenshot+2023-08-01+at+14.47.45.png" alt=""><figcaption></figcaption></figure>
 
-### Select a credential template <a href="#h_e6f35266ad" id="h_e6f35266ad"></a>
+### Select a credential schema <a href="#h_e6f35266ad" id="h_e6f35266ad"></a>
 
-Select a pre-made credential template by clicking on it's name or [Create your own template](https://help.dock.io/en/articles/8201064-create-a-credential-template). You can click on Preview to see what attributes are included in the template.
+Select a pre-made credential schema by clicking on it's name or [Create your own schema](create-a-schema.md). You can click on Preview to see what attributes are included in the template.
 
-![](https://downloads.intercomcdn.com/i/o/797670025/fc5ac03614def89819df7b28/Screenshot+2023-08-01+at+14.48.04.png)
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-25 at 16.19.52.png" alt=""><figcaption></figcaption></figure>
 
 ### Select a design <a href="#h_662fe7eaa5" id="h_662fe7eaa5"></a>
 
-Select a design or [create a new one](https://help.dock.io/en/articles/8201081-create-a-new-design) for your credentials. Alternatively, you can proceed without a design.
+Select a design or [create a new one](create-a-design.md) for your credentials. Alternatively, you can proceed without a design.
 
-![](https://downloads.intercomcdn.com/i/o/797670108/d8f1948a00a9b8d934c5b070/Screenshot+2023-08-01+at+14.50.40.png)
+<figure><img src="https://downloads.intercomcdn.com/i/o/797670108/d8f1948a00a9b8d934c5b070/Screenshot+2023-08-01+at+14.50.40.png" alt=""><figcaption></figcaption></figure>
 
 ### Add recipients <a href="#h_5fb66344c4" id="h_5fb66344c4"></a>
 
 If you have many credentials to issue, you can issue them in bulk. To do this, select Import Spreadsheet.
 
-![](https://downloads.intercomcdn.com/i/o/797670167/d0dbab0c2d32c4b8fb42882a/Screenshot+2023-08-01+at+14.51.00.png)
+<figure><img src="https://downloads.intercomcdn.com/i/o/797670167/d0dbab0c2d32c4b8fb42882a/Screenshot+2023-08-01+at+14.51.00.png" alt=""><figcaption></figcaption></figure>
 
-Download the sample CSV template and fill in the details needed for your credential template. Upload the completed .csv file back to Dock Certs.[ Read more how to correctly format the Spreadsheet for CSV upload.](https://help.dock.io/en/articles/8201104-import-from-spreadsheet)
+Download the sample CSV template and fill in the details needed for your credential template. Upload the completed .csv file back to Dock Certs. [Read how to correctly format the Spreadsheet for CSV upload.](issue-verifiable-credentials.md#formatting-the-csv-file-for-recipient-upload)
 
-![](https://downloads.intercomcdn.com/i/o/797695179/a28c99740299645f876ce8be/6356f7181e5260685afe7bd9\_9-Download+CSV.png)
+<figure><img src="https://downloads.intercomcdn.com/i/o/797695179/a28c99740299645f876ce8be/6356f7181e5260685afe7bd9_9-Download+CSV.png" alt=""><figcaption></figcaption></figure>
 
 If you want to add recipients one by one, select Add Manually.
 
-![](https://downloads.intercomcdn.com/i/o/797700428/213956fd1fef006ab1f9adba/Screenshot+2023-08-01+at+14.51.00.png)
+<figure><img src="https://downloads.intercomcdn.com/i/o/797700428/213956fd1fef006ab1f9adba/Screenshot+2023-08-01+at+14.51.00.png" alt=""><figcaption></figcaption></figure>
 
 You can distribute your credentials by email or directly to their wallet through a DID.
 
@@ -44,6 +44,8 @@ To send the credential directly to the holders wallet fill in their DID in the S
 
 Fill in all other attributes that need to be included in the credential _e.g. Subject name, Credential Title etc._
 
+### Formatting the CSV file for recipient upload
+
 ### Expire credential <a href="#h_c9b588481e" id="h_c9b588481e"></a>
 
 If you need the credential to expire, turn off expiration and enter expiration date.
@@ -52,9 +54,9 @@ If you need the credential to expire, turn off expiration and enter expiration d
 
 ### Choose credential settings <a href="#h_e26a4957df" id="h_e26a4957df"></a>
 
-Select which Issuer Profile (DID) you want to use to issue the credentials.
+Select which Organization Profile (DID) you want to use to issue the credentials.
 
-![](https://downloads.intercomcdn.com/i/o/797708546/ada9869c6e3b399c5cea38e2/Screenshot+2023-08-01+at+15.34.15.png)
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-25 at 16.27.06.png" alt=""><figcaption></figcaption></figure>
 
 You have the options to:
 
@@ -66,7 +68,7 @@ You have the options to:
 
 ### Distribute credentials <a href="#h_22a510abcd" id="h_22a510abcd"></a>
 
-If you have entered the holders DIDs to Subject ID the holder will receives the credential directly in their wallet without any additional communication needed.
+If you have entered the holders DIDs to Subject ID the holder will receive the credential directly in their wallet without any additional communication needed.
 
 ![](https://downloads.intercomcdn.com/i/o/797749646/ccd7861183dd7a3d07a392dc/Screenshot\_20230801\_160347\_DockApp.jpg)![](https://downloads.intercomcdn.com/i/o/797749786/65a19e3bd9bdb27970ce16ea/e4aebe54-e4c5-46b4-b30e-1b9083b74a87.jpeg)
 
