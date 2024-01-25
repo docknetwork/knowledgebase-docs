@@ -20,7 +20,7 @@ Select a design or [create a new one](create-a-design.md) for your credentials. 
 
 ### Add recipients <a href="#h_5fb66344c4" id="h_5fb66344c4"></a>
 
-If you have many credentials to issue, you can issue them in bulk. To do this, select Import Spreadsheet.
+If you have many credentials to issue, you can issue them in bulk. To do this, select **Import Spreadsheet.**
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797670167/d0dbab0c2d32c4b8fb42882a/Screenshot+2023-08-01+at+14.51.00.png" alt=""><figcaption></figcaption></figure>
 
@@ -32,9 +32,9 @@ If you want to add recipients one by one, select Add Manually.
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797700428/213956fd1fef006ab1f9adba/Screenshot+2023-08-01+at+14.51.00.png" alt=""><figcaption></figcaption></figure>
 
-You can distribute your credentials by email or directly to their wallet through a DID.
+You can distribute your credentials by email or directly to their wallet through their DID.
 
-To send the credential by email, fill in their email in the Recipient Email field.
+To send the credential by email, fill in their email in the **Recipient Email** field.
 
 ![](https://downloads.intercomcdn.com/i/o/797721246/2840f531c2020bf9df3a117c/64744417375359ce3af2c7ea\_1-email+distribution.png)
 
@@ -48,13 +48,13 @@ Fill in all other attributes that need to be included in the credential _e.g. Su
 
 ### Expire credential <a href="#h_c9b588481e" id="h_c9b588481e"></a>
 
-If you need the credential to expire, turn off expiration and enter expiration date.
+If you need the credential to expire, turn on the expiration toggle and enter the expiration date.
 
 ![](https://downloads.intercomcdn.com/i/o/797671954/0a79de9246c232395c2825c1/Screenshot+2023-08-01+at+14.52.52.png)
 
 ### Choose credential settings <a href="#h_e26a4957df" id="h_e26a4957df"></a>
 
-Select which Organization Profile (DID) you want to use to issue the credentials.
+After you have added your credential recipients you will be able to select the credential settings. First select which Organization Profile (DID) you want to use to issue the credentials.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-25 at 16.27.06.png" alt=""><figcaption></figcaption></figure>
 
@@ -70,11 +70,11 @@ You have the options to:
 
 If you have entered the holders DIDs to Subject ID the holder will receive the credential directly in their wallet without any additional communication needed.
 
-![](https://downloads.intercomcdn.com/i/o/797749646/ccd7861183dd7a3d07a392dc/Screenshot\_20230801\_160347\_DockApp.jpg)![](https://downloads.intercomcdn.com/i/o/797749786/65a19e3bd9bdb27970ce16ea/e4aebe54-e4c5-46b4-b30e-1b9083b74a87.jpeg)
+![](https://downloads.intercomcdn.com/i/o/797749786/65a19e3bd9bdb27970ce16ea/e4aebe54-e4c5-46b4-b30e-1b9083b74a87.jpeg)
 
 If you have entered the email address, you will have an option to write a message and preview the email that is going to be sent to the receiver of the credential.
 
-![](https://downloads.intercomcdn.com/i/o/797730898/839d62e93c6bb388f29eb493/Screenshot+2023-08-01+at+15.57.06.png)![](https://downloads.intercomcdn.com/i/o/797731022/a4ca1c0385b4919197452603/Screenshot+2023-08-01+at+15.57.28.png)
+<figure><img src="https://downloads.intercomcdn.com/i/o/797730898/839d62e93c6bb388f29eb493/Screenshot+2023-08-01+at+15.57.06.png" alt=""><figcaption></figcaption></figure>
 
 If you do not have or want to use DIDs or email for credential distribution you can skip entering those details into the credential. System will notify you that there is no recipient data and credentials will have to be distributed manually.
 
@@ -83,21 +83,5 @@ If you do not have or want to use DIDs or email for credential distribution you 
 Once the credential has been issued, it’s important that you download the credentials especially if you didn’t persist them otherwise you can’t get them back.
 
 ![](https://downloads.intercomcdn.com/i/o/797754454/75bc4cbf24590fcd6ec79e6c/Screenshot+2023-08-01+at+16.18.34.png)
-
-If you chose to generate a PDF format, this is how your files will appear when you download the credentials:
-
-![](https://downloads.intercomcdn.com/i/o/797765639/fe42442c912b2ded4a964613/6356f612c0a00c4c5380a8ed\_11a-PDF+and+JSON+credentials.png)
-
-This is how the JSON file looks when you open it. JSON is used if you want to import this to a wallet or send it to another platform. A JSON file is a file that stores simple data structures and objects in JavaScript Object Notation (JSON) format, which is a standard data exchange format.
-
-![](https://downloads.intercomcdn.com/i/o/797765858/b084dd886402eca1e5be9c27/6356f626d561c75a0316ad0d\_11b-JSON+contents.png)
-
-This is an example of how a pdf credential can look:
-
-![](https://downloads.intercomcdn.com/i/o/797766854/960c1aaeedfd789ac1cf4a2a/63e68b64a7726364e88277a1\_2-self-sovereign+identity+verifiable+credential.png)
-
-This is how the credential looks when it is imported into the Dock Wallet:
-
-![](https://downloads.intercomcdn.com/i/o/797766989/c7fb150f925ee058ec39220e/63e68ba046f3584041d1cf0f\_3-self-sovereign+identity+wallet+credentials.png)
 
 ## &#x20;<a href="#h_655a2ecaf5" id="h_655a2ecaf5"></a>
