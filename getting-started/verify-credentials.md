@@ -1,6 +1,6 @@
 # Verify Credentials
 
-### Verification process <a href="#h_d119e38335" id="h_d119e38335"></a>
+## Verification process <a href="#h_d119e38335" id="h_d119e38335"></a>
 
 In a typical verification process, there are three main parties:
 
@@ -55,7 +55,7 @@ If the credentials were issued with Zero Knowledge Proof signatures the holder w
 
 If the credentials are valid and the verification is successful, this is what the holder will see a **Verification Successful** message, if the credential could not be verified a **Verification Failed** message will appear.&#x20;
 
-### Verification History
+## Verification History
 
 To see a log of all your verification requests, go to Verification and click on **History**.
 
@@ -63,7 +63,11 @@ To see a log of all your verification requests, go to Verification and click on 
 
 When the credentials are valid it will show up as “Verified” under Status. The verifier won’t get a notification if the credential is invalid because Dock’s tools won’t let the holder submit invalid credentials.
 
-![](<../.gitbook/assets/Screenshot 2024-01-25 at 17.59.50.png>)
+<div align="left">
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-25 at 17.59.50.png" alt="" width="375"><figcaption></figcaption></figure>
+
+</div>
 
 {% hint style="warning" %}
 Verification request templates can only be created in Dock Certs, not the wallet. These templates can be important into the wallet from Dock Certs for wallet-to-wallet verification.
