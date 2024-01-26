@@ -52,7 +52,7 @@ Subject refers to the recipient or item that the credential is being issued to.
 
 If you want your organization’s logo (Issuer Logo) and description (Issuer Description) to appear on your credential, you have to fill out those details in your Organization Profile (DIDs).
 
-### Other Settings <a href="#h_0097b6e872" id="h_0097b6e872"></a>
+## Other Settings <a href="#h_0097b6e872" id="h_0097b6e872"></a>
 
 You can use your brand color for the design background. Chose it by changing the background colour in **Setup.**
 
