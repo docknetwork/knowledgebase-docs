@@ -25,7 +25,7 @@
   * [Downloading and Deleting Credentials](dock-certs/downloading-and-deleting-credentials.md)
   * [Creating API keys and Webhook endpoints](dock-certs/creating-api-keys-and-webhook-endpoints.md)
   * [Transaction History](dock-certs/transaction-history.md)
-  * [Using Custom Branding for Emails](dock-certs/using-custom-branding-for-emails.md)
+  * [Custom branded distribution emails](dock-certs/custom-branded-distribution-emails.md)
   * [Ecosystems](dock-certs/ecosystems.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes.md)
 * [📳 Dock Wallet](dock-wallet/README.md)
