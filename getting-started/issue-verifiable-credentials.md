@@ -66,6 +66,10 @@ You have the options to:
 * **Anchor credentials:** This adds a hash of the credentials you issue on the Dock blockchain that can be referenced later to verify when and who created it.
 * **Zero-Knowledge Proof:** Selecting this option will issue your credential with a Dock BBS+ signing scheme. This allows credential holders to share specific data rather than show the whole credential to enhance their privacy.
 
+{% hint style="info" %}
+Persisting is a good option for issuers if they want to securely store the credentials as a backup. It encrypts the credentials and stores them on our servers that are located in the US and are powered by Amazon Web Services (AWS). Because the credential information is encrypted, Dock can’t access the information to ensure data privacy and security. ​ An encrypted document is a file that has been scrambled in a way that makes it unreadable to anyone who does not have the right key or password to decode it.
+{% endhint %}
+
 ### Distribute credentials <a href="#h_22a510abcd" id="h_22a510abcd"></a>
 
 If you have entered the holders DIDs to Subject ID the holder will receive the credential directly in their wallet without any additional communication needed.
