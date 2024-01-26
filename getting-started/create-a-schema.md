@@ -32,11 +32,7 @@ You can choose what format the field will appear in and which fields are require
 You don’t need to add an Issue Date and Expiry Date field because these fields will automatically appear on all templates.
 {% endhint %}
 
-Once you’ve added all the fields, select Publish at the top and on the message that appears afterwards.
-
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.10.13.png" alt=""><figcaption></figcaption></figure>
-
-The new credential schema is created. If you add more schemas they will all be listed on this page when you select Schemas from the menu.
+Once you’ve added all the fields, click Publish.  All credential schemas will be listed on this page when you select Schemas from the menu.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.11.03.png" alt=""><figcaption></figcaption></figure>
 
@@ -44,11 +40,11 @@ You can also see your new credential templates added to the pre-built templates.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.12.13.png" alt=""><figcaption></figcaption></figure>
 
-Select Preview to see the fields that you set up on your credential schema.
+Select Preview to see the attributes that are included in the credential schema.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.12.42.png" alt=""><figcaption></figcaption></figure>
 
-The Issue Date and Expiration Date are default fields that will appear on every template if you create the template manually.
+The Issue Date and Expiration Date are default attributes that will appear on every template if you create the template manually.
 
 ![](<../.gitbook/assets/Screenshot 2024-01-19 at 16.13.52.png>)
 
