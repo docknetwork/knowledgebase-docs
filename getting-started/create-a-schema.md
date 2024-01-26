@@ -20,7 +20,7 @@ b) Importing an existing credential template from another source
 
 ### Add Credential Attributes manually <a href="#h_faa71c7067" id="h_faa71c7067"></a>
 
-Click Create manually.
+Click **Create manually**.
 
 ![](https://downloads.intercomcdn.com/i/o/800464123/6f1b15f7e4f0ca019984f74b/6431f2bf08ce44742be1746a\_4-custom+verifiable+credential+create+manually.png)
 
@@ -32,7 +32,7 @@ You can choose what format the field will appear in and which fields are require
 You don’t need to add an Issue Date and Expiry Date field because these fields will automatically appear on all templates.
 {% endhint %}
 
-Once you’ve added all the fields, click Publish.  All credential schemas will be listed on this page when you select Schemas from the menu.
+Once you’ve added all the fields, click **Publish**.  All credential schemas will be listed on this page when you select Schemas from the menu.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.11.03.png" alt=""><figcaption></figcaption></figure>
 
@@ -40,11 +40,11 @@ You can also see your new credential templates added to the pre-built templates.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.12.13.png" alt=""><figcaption></figcaption></figure>
 
-Select Preview to see the attributes that are included in the credential schema.
+Select **Preview** to see the attributes that are included in the credential schema.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.12.42.png" alt=""><figcaption></figcaption></figure>
 
-The Issue Date and Expiration Date are default attributes that will appear on every template if you create the template manually.
+The **Issue Date** and **Expiration Date** are default attributes that will appear on every template if you create the template manually.
 
 ![](<../.gitbook/assets/Screenshot 2024-01-19 at 16.13.52.png>)
 
@@ -68,12 +68,12 @@ Update the schema Name so you can tell the difference between this updated versi
 
 ### View a Credential Schema <a href="#h_7b90f5840a" id="h_7b90f5840a"></a>
 
-To view the fields on the credential, go to Schemas, click on the three dots of the credential you want to view, and click View schema.
+To see the attributes included in a particular schema your can click on the three dots of the credential you want to view, and click **View schema**.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.19.11.png" alt=""><figcaption></figcaption></figure>
 
 ### Delete a Credential Schema <a href="#h_b89d37d495" id="h_b89d37d495"></a>
 
-Go to Schemas, click on the three dots of the schema you want to delete, and click Delete schema.
+Go to Schemas, click on the three dots of the schema you want to delete, and click **Delete schema**.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.19.11 (1).png" alt=""><figcaption></figcaption></figure>
