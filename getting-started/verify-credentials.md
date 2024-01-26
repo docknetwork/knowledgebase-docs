@@ -16,9 +16,9 @@ Click on Verification in the left menu and select Create verification template
 
 <figure><img src="../.gitbook/assets/63dd39a9db4a3e2a50cf9e20_1-Create a verification template .png" alt=""><figcaption></figcaption></figure>
 
-First, type in the template title and template purpose, which the holder will be able to see.
+First, type in the **Template Title** and **Template Purpose**, which the holder will be able to see.
 
-Optionally, you can choose a Verifier DID which will be shown to the holder so that they can verify who you are.
+Optionally, you can choose a **Verifier DID** which will be shown to the holder so that they can verify who you are.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 15.00.55.png" alt=""><figcaption></figcaption></figure>
 
