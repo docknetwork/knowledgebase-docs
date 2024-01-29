@@ -46,6 +46,20 @@ Fill in all other attributes that need to be included in the credential _e.g. Su
 
 ### Formatting the CSV file for recipient upload
 
+You can download the CSV sample file to use as a base for you recipient data upload. The sample file has only 3 collumns with the _name_, _did_ and _date_ attributes.&#x20;
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-29 at 17.22.04.png" alt=""><figcaption></figcaption></figure>
+
+You will need to add columns and remove the ones you do not have in your credential schema.
+
+{% hint style="info" %}
+If you do not know the holders dids you do not have to use it for the import, you can add emails, for the email distribution or distribute credentials manually.&#x20;
+{% endhint %}
+
+You will be asked to match the columns on the csv file to the credential fields. If there are any required fields on the credential schema they must be filled in, otherwise the import will not be successful.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-01-29 at 17.29.15.png" alt=""><figcaption></figcaption></figure>
+
 ### Expire credential <a href="#h_c9b588481e" id="h_c9b588481e"></a>
 
 If you need the credential to expire, turn on the expiration toggle and enter the expiration date.
