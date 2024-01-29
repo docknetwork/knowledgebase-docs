@@ -1,12 +1,7 @@
 # Table of contents
 
 * [🌐 Dock Overview](README.md)
-  * [About Dock](dock-overview/about-dock.md)
-  * [Why Dock?](dock-overview/why-dock/README.md)
-    * [Technology Solutions](dock-overview/why-dock/technology-solutions.md)
-    * [Follow W3C Standards](dock-overview/why-dock/follow-w3c-standards.md)
-  * [Dock Blockchain](dock-overview/dock-blockchain/README.md)
-    * [What information is stored on the Dock blockchain?](dock-overview/dock-blockchain/what-information-is-stored-on-the-dock-blockchain.md)
+  * [Technology Solutions](dock-overview/technology-solutions.md)
   * [Roadmap](dock-overview/roadmap.md)
   * [Subscription Plans & Billing](dock-overview/subscription-plans-and-billing.md)
 * [▶ Getting Started](getting-started/README.md)
@@ -57,6 +52,7 @@
   * [Sub Accounts & Killing an Identity](dock-token/sub-accounts-and-killing-an-identity.md)
   * [Send Dock tokens from the mainnet portal](dock-token/send-dock-tokens-from-the-mainnet-portal.md)
 * [👥 Open Source Community](open-source-community/README.md)
+  * [What information is stored on the Dock blockchain?](open-source-community/what-information-is-stored-on-the-dock-blockchain.md)
   * [Blockchain Validators](open-source-community/blockchain-validators/README.md)
     * [Blockchain Release Notes](open-source-community/blockchain-validators/blockchain-release-notes.md)
     * [Tooling](open-source-community/blockchain-validators/tooling/README.md)
