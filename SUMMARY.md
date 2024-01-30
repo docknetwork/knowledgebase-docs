@@ -1,8 +1,8 @@
 # Table of contents
 
 * [🌐 Dock Overview](README.md)
-  * [Technology Solutions](dock-overview/technology-solutions.md)
-  * [Key Concepts](getting-started/key-concepts.md)
+  * [SSI Basics](dock-overview/ssi-basics/README.md)
+    * [Key Concepts](dock-overview/ssi-basics/key-concepts.md)
   * [Roadmap](dock-overview/roadmap.md)
   * [Subscription Plans & Billing](dock-overview/subscription-plans-and-billing.md)
 * [🗳 Dock Certs](dock-certs/README.md)
