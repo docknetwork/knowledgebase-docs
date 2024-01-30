@@ -2,10 +2,9 @@
 
 * [🌐 Dock Overview](README.md)
   * [Technology Solutions](dock-overview/technology-solutions.md)
+  * [Key Concepts](dock-overview/key-concepts.md)
   * [Roadmap](dock-overview/roadmap.md)
   * [Subscription Plans & Billing](dock-overview/subscription-plans-and-billing.md)
-* [▶ Getting Started](getting-started/README.md)
-  * [Key Concepts](getting-started/key-concepts.md)
 * [🗳 Dock Certs](dock-certs/README.md)
   * [Create an Organization Profile (DID)](dock-certs/create-an-organization-profile-did.md)
   * [Issue Verifiable Credentials](dock-certs/issue-verifiable-credentials.md)
