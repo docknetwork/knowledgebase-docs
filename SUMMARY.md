@@ -1,8 +1,7 @@
 # Table of contents
 
 * [🌐 Dock Overview](README.md)
-  * [Decentralized identity explained](dock-overview/decentralized-identity-explained/README.md)
-    * [Key Concepts](dock-overview/decentralized-identity-explained/key-concepts.md)
+  * [Decentralized identity explained](dock-overview/decentralized-identity-explained.md)
   * [Roadmap](dock-overview/roadmap.md)
   * [Subscription Plans & Billing](dock-overview/subscription-plans-and-billing.md)
 * [🗳 Dock Certs](dock-certs/README.md)
