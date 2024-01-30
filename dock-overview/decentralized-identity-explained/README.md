@@ -1,40 +1,18 @@
-# Technology Solutions
+# Decentralized identity explained
 
-### Decentralized Identity Management Approach
-
-Decentralized identity is a way of managing your online identity that doesn't rely on centralized third parties such as social media platforms or government ID systems. Decentralized identity systems enable users to completely own and control their data.&#x20;
-
-A digital identity is the body of information about an individual, organization, or electronic device that exists online. Data that form a digital identity include:
-
-* Login information
-* Browsing history
-* Purchase history
+Decentralized  identity is a way of managing online identities that do not rely on storing personal data in centralized databases such as social media platforms or government ID systems. Decentralized identity systems enable users to completely own and control their data.&#x20;
 
 **The 3 main parties involved in a decentralized identity system are:**
 
-1. **Issuer:** An organization that has the authority to issue Verifiable Credentials such as a health and safety organization issuing a training credential or an online course platform issuing completion certificates
+1. **Issuer:** An organization that has the authority to issue Verifiable Credentials such a KYC company issuing a KYC credential or online course platform issuing completion certificates
 2. **Holder:** User who owns the credential and stores it in their digital wallet
 3. **Verifier:** The party validating or authenticating the credential like an employer needing to check a candidate’s educational credentials or staff at a store that needs to verify that a customer is at least 18 to buy alcohol
 
 <figure><img src="../../.gitbook/assets/decentralized identity system.png" alt=""><figcaption></figcaption></figure>
 
-
-
 [Learn more from our complete guide to decentralized identity](https://www.dock.io/post/decentralized-identity).
 
-### Self-Sovereign Identity
-
-<figure><img src="../../.gitbook/assets/self-sovereign identity.png" alt=""><figcaption></figcaption></figure>
-
-Decentralized identity is often used interchangeably with the term Self-Sovereign Identity (SSI). Self-Sovereign Identity is an approach to digital identity that gives individuals control of their identities.&#x20;
-
-**The three pillars of Self-Sovereign Identity are:**&#x20;
-
-* **Blockchain:** A decentralized digital database that is shared among computers in the blockchain network that records information in a way that makes it very difficult to change, hack, or cheat the system.&#x20;
-* **Verifiable Credentials:** Digital cryptographically-secure versions that people can present to parties that need them for verification.
-* **Decentralized Identifiers (DIDs):** Verifiable identifiers created by the user, owned by the user, and independent of any organization. DIDs contain no personally identifiable information.&#x20;
-
-[Learn more from our complete guide to Self-Sovereign Identity](https://www.dock.io/post/self-sovereign-identity).
+Decentralized identity is often used interchangeably with the term Self-Sovereign Identity (SSI).&#x20;
 
 ### Blockchain
 
