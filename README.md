@@ -48,12 +48,11 @@ Create a network of trusted digital identity issuers and verifiers through a use
 
 ## Interoperability&#x20;
 
-The Dock Certs Platform is built on [W3C](https://www.w3.org/TR/vc-data-model/) open standards. This ensures that users can store their Credentials on any digital wallet that adheres to these standards and that any stakeholder, wherever they are in the world, can verify the authenticity of the data as long as their verification system adheres to these standards.\
-
+The Dock Certs Platform is built on [W3C](https://www.w3.org/TR/vc-data-model/) open standards. This ensures that users can store their Credentials on any digital wallet that adheres to these standards and that any stakeholder, wherever they are in the world, can verify the authenticity of the data as long as their verification system adheres to these standards.
 
 ## Get Started
 
-&#x20;
+Begin your journey with digital identity by signing up and start issuing verifiable credentials.
 
 <table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Sign up </td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.12.06 (1).png">Screenshot 2024-01-30 at 11.12.06 (1).png</a></td></tr><tr><td>Issue Verifiable Credentials</td><td><a href="dock-certs/issue-verifiable-credentials.md">issue-verifiable-credentials.md</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-29 at 15.35.37.png">Screenshot 2024-01-29 at 15.35.37.png</a></td></tr><tr><td>See API docs</td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.17.28.png">Screenshot 2024-01-30 at 11.17.28.png</a></td></tr></tbody></table>
 
