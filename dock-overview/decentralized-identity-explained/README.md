@@ -2,7 +2,7 @@
 
 Decentralized  identity is a way of managing online identities that do not rely on storing personal data in centralized databases such as social media platforms or government ID systems. Decentralized identity systems enable users to completely own and control their data.&#x20;
 
-**The 3 main parties involved in a decentralized identity system are:**
+#### **The 3 main parties involved in a decentralized identity system are:**
 
 1. **Issuer:** An organization that has the authority to issue Verifiable Credentials such a KYC company issuing a KYC credential or online course platform issuing completion certificates
 2. **Holder:** User who owns the credential and stores it in their digital wallet
@@ -10,9 +10,13 @@ Decentralized  identity is a way of managing online identities that do not rely 
 
 <figure><img src="../../.gitbook/assets/decentralized identity system.png" alt=""><figcaption></figcaption></figure>
 
-[Learn more from our complete guide to decentralized identity](https://www.dock.io/post/decentralized-identity).
-
+{% hint style="info" %}
 Decentralized identity is often used interchangeably with the term Self-Sovereign Identity (SSI).&#x20;
+{% endhint %}
+
+#### The technical building blocks of decentralized identity
+
+
 
 ### Blockchain
 
