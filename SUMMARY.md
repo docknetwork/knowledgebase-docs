@@ -2,7 +2,7 @@
 
 * [🌐 Dock Overview](README.md)
   * [Technology Solutions](dock-overview/technology-solutions.md)
-  * [Key Concepts](dock-overview/key-concepts.md)
+  * [Key Concepts](getting-started/key-concepts.md)
   * [Roadmap](dock-overview/roadmap.md)
   * [Subscription Plans & Billing](dock-overview/subscription-plans-and-billing.md)
 * [🗳 Dock Certs](dock-certs/README.md)
