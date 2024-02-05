@@ -4,13 +4,15 @@
 
 ## Products
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Dock API</strong></td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.17.28.png">Screenshot 2024-01-30 at 11.17.28.png</a></td></tr><tr><td><strong>Dock</strong> <strong>Certs</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.12.06.png">Screenshot 2024-01-30 at 11.12.06.png</a></td></tr><tr><td><strong>Dock Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.16.14.png">Screenshot 2024-01-30 at 11.16.14.png</a></td></tr><tr><td>SDK?</td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Dock API</strong></td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.17.28.png">Screenshot 2024-01-30 at 11.17.28.png</a></td></tr><tr><td><strong>Dock</strong> <strong>Certs</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.12.06.png">Screenshot 2024-01-30 at 11.12.06.png</a></td></tr><tr><td><strong>Dock Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.16.14.png">Screenshot 2024-01-30 at 11.16.14.png</a></td></tr><tr><td><strong>Dock SDK</strong></td><td></td><td><a href=".gitbook/assets/Screenshot 2024-02-05 at 14.32.21.png">Screenshot 2024-02-05 at 14.32.21.png</a></td></tr></tbody></table>
 
 [Dock ​Certs API ](developer-documentation/dock-api/)Dock’s API easily integrates with your system and data sources, simplifying the creation, verification and management of Verifiable Credentials. No blockchain or cryptography knowledge is required.
 
 [Dock Certs Web App](https://certs.dock.io/): A user-friendly platform​ that enables you to issue, verify, manage, and revoke fraud-proof Verifiable Credentials as well create and manage Decentralized Identifiers (DIDs).
 
 [ID Wallet](https://www.dock.io/feature/identity-wallet) SDK and White Label: Build ID Wallet capabilities inside your existing app with Dock’s powerful Wallet SDK, enabling users to effortlessly store, manage and share their Verifiable Credentials without having to download an extra app. If you don’t have an existing app, Dock’s White Label ID Wallet is the best option when development speed is a priority. Try the [Dock Wallet](https://www.dock.io/dock-wallet-app) for free.
+
+[Dock SDK ](https://github.com/docknetwork/sdk)contains a Javascript library and tooling to interact for working with Verifiable Credentials, DIDs, Claim Deduction and more. Built with PolkadotJS, for use with the [Dock Substrate Node](https://github.com/docknetwork/dock-substrate) or our public main/test networks.&#x20;
 
 ## **What can you do with Dock?**
 
@@ -64,7 +66,7 @@ The Dock blockchain acts as an immutable registry of all credential issuers. Thi
 
 ## Interoperability&#x20;
 
-The Dock Certs Platform is built on [W3C](https://www.w3.org/TR/vc-data-model/) open standards. This ensures that users can store their Credentials on any digital wallet that adheres to these standards and that any stakeholder, wherever they are in the world, can verify the authenticity of the data as long as their verification system adheres to these standards.
+Dock products are  built on [W3C](https://www.w3.org/TR/vc-data-model/) open standards. Our goal is to maximise interoperability with W3C compatible services and tools in the SSI ecosystem. To enable users to store their Credentials on any digital wallet that adheres to these standards and that any stakeholder would be able to verify the authenticity of the data as long as their verification system adheres to these standards.
 
 ## Get Started
 
