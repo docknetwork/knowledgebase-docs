@@ -4,19 +4,19 @@
 
 ## Products
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Dock</strong> <strong>Certs</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.12.06.png">Screenshot 2024-01-30 at 11.12.06.png</a></td></tr><tr><td><strong>Dock Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.16.14.png">Screenshot 2024-01-30 at 11.16.14.png</a></td></tr><tr><td><strong>Dock API</strong></td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.17.28.png">Screenshot 2024-01-30 at 11.17.28.png</a></td></tr><tr><td>SDK?</td><td></td><td></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Dock API</strong></td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.17.28.png">Screenshot 2024-01-30 at 11.17.28.png</a></td></tr><tr><td><strong>Dock</strong> <strong>Certs</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.12.06.png">Screenshot 2024-01-30 at 11.12.06.png</a></td></tr><tr><td><strong>Dock Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.16.14.png">Screenshot 2024-01-30 at 11.16.14.png</a></td></tr><tr><td>SDK?</td><td></td><td></td></tr></tbody></table>
 
-[​Dock Certs:](https://certs.dock.io/) **u**ser-friendly, no code platform​  enables users to easily issue, verify, manage, and revoke fraud-proof Verifiable Credentials as well create and manage decentralized identifiers (DIDs).
+[Dock ​Certs API ](developer-documentation/dock-api/)Dock’s API easily integrates with your system and data sources, simplifying the creation, verification and management of Verifiable Credentials. No blockchain or cryptography knowledge is required.
 
-​[Dock Wallet](https://www.dock.io/dock-wallet-app) ready-made ID wallet that securely stores and manages verifiable credentials and DIDs. It can be white labelled to saves you the time and money of building a wallet from scratch or you can use the Wallet SDK to build ID Wallet capabilities inside your existing app.
+[Dock Certs Web App](https://certs.dock.io/): A user-friendly platform​ that enables you to issue, verify, manage, and revoke fraud-proof Verifiable Credentials as well create and manage Decentralized Identifiers (DIDs).
 
-[Dock ​Certs API ](developer-documentation/dock-api/)enables developers to instantly and conveniently issue, verify, manage, and revoke Verifiable Credentials from their existing system. The Certs API is easy to integrate, scalable, and allows faster deployment.
+[ID Wallet](https://www.dock.io/feature/identity-wallet) SDK and White Label: Build ID Wallet capabilities inside your existing app with Dock’s powerful Wallet SDK, enabling users to effortlessly store, manage and share their Verifiable Credentials without having to download an extra app. If you don’t have an existing app, Dock’s White Label ID Wallet is the best option when development speed is a priority. Try the [Dock Wallet](https://www.dock.io/dock-wallet-app) for free.
 
 ## **What can you do with Dock?**
 
 <details>
 
-<summary>Create and manage decentralized identifier (DIDs)</summary>
+<summary>Create and manage decentralized identifiers (DIDs)</summary>
 
 Create DIDs on the Dock or Polygon Blockchain using `did:dock` or `did:polygonid` methods or a non-registry based DID using the `did:key` method.
 
@@ -32,17 +32,33 @@ Issue credentials that are reusable, verifiable and secure against fraud. Protec
 
 <details>
 
-<summary>Instantly verify your users credentials</summary>
+<summary>Instantly verify credentials</summary>
 
-Streamline your verification process, reduce data verification costs, eliminate manual checks, and accelerate user onboarding experience.
+Create Verification Requests and send Verification QR Codes to your users. They’ll scan them with their Digital ID Wallet app and you’ll receive instant confirmation of the credentials’ authenticity.
 
 </details>
 
 <details>
 
-<summary>Set up your Digital ID Ecosystem</summary>
+<summary>Launch your Digital ID Ecosystem</summary>
 
-Create a network of trusted digital identity issuers and verifiers through a user-friendly dashboard. Empower your trusted ecosystem with seamless interoperability and enhanced data security.
+Dock’s user-friendly web dashboard and API allow you to invite and manage trusted issuers and verifiers. Simplify the process of identifying which issuers and verifiers are trustworthy within a particular ecosystem.
+
+</details>
+
+<details>
+
+<summary>Embed an ID Wallet into your app</summary>
+
+Build ID wallet capabilities inside your existing app with Dock’s powerful Wallet SDK. Users can manage and share their Verifiable Credentials without having to download an extra app.
+
+</details>
+
+<details>
+
+<summary>Utilize the Dock Blockchain</summary>
+
+The Dock blockchain acts as an immutable registry of all credential issuers. This ensures that Verifiable Credentials are always available for verification without ever needing to contact the issuers, and the list of trusted issuers and verifiers is reliable and auditable.
 
 </details>
 
