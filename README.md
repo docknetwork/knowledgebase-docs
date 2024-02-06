@@ -66,7 +66,7 @@ The Dock blockchain acts as an immutable registry of all credential issuers. Thi
 
 ## Interoperability&#x20;
 
-Dock products are  built on [W3C](https://www.w3.org/TR/vc-data-model/) open standards. Our goal is to maximise interoperability with W3C compatible services and tools in the SSI ecosystem. To enable users to store their Credentials on any digital wallet that adheres to these standards and that any stakeholder would be able to verify the authenticity of the data as long as their verification system adheres to these standards.
+Dock believes that credentials are most useful when they are interoperable across service providers. Our W3C compliant credential format is designed for maximum interoperability. Our anonymous credential format adheres to many W3C standards, but are designed for maximum privacy protection. We also leverage standards from OpenID, IETF, DIF, and related organizations.
 
 ## Get Started
 
