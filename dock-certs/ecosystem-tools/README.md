@@ -10,6 +10,13 @@ Governing Authority could register as an Ecosystem Admin in Dock Certs where the
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-02-05 at 17.16.20.png" alt=""><figcaption></figcaption></figure>
 
+### Capabilities of Ecosystem Tools
+
+* Defining a brand to communicate trust to issuers, verifiers and holders
+* Defining a governance framework that is shared with participants
+* Inviting issuers and assigning schemas
+* Inviting verifiers and sharing verification templates
+
 ### Example Ecosystem
 
 Ecosystem Admin:&#x20;
@@ -29,12 +36,9 @@ Schemas:&#x20;
 * Skill certifications
 * Certificates of completion
 
-### Capabilities of Ecosystem Tools
-
-* Defining a brand to communicate trust to issuers, verifiers and holders
-* Defining a governance framework that is shared with participants
-* Inviting issuers and assigning schemas
-* Inviting verifiers and sharing verification templates
+{% hint style="info" %}
+Ecosystem Tools is an add-on feature. If you want it enabled for your account please contact support@dock.io
+{% endhint %}
 
 
 
