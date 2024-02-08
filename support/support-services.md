@@ -31,23 +31,11 @@ Severity levels refers to the types of issues that may be reported by the Custom
 
 The mentioned times are for the Dock’s regular business hours. All resolution targets apply only to those errors that are within the control of Dock.
 
-| Severity Level | Contact Method  | Coverage            | Triage   | Resolution target |
-| -------------- | --------------- | ------------------- | -------- | ----------------- |
-| SEV-1          | Emergency email | 24x7x365            | 2 hours  | 8 hours           |
-| SEV-2          | Slack/Email     | Dock Business Hours | 8 hours  | 24 hours          |
-| SEV-3          | Slack/Email     | Dock Business Hours | 24 hours | 2 weeks           |
-| SEV-4          | Slack/Email     | Dock Business Hours | 48 hours | 2 weeks           |
-| SEV-5          | Slack/Email     | Dock Business Hours | 2 weeks  | N/A               |
+<table data-full-width="true"><thead><tr><th width="112">Severity Level</th><th>Contact Method</th><th width="156">Coverage</th><th width="119">Triage</th><th>Resolution target</th></tr></thead><tbody><tr><td>SEV-1</td><td>Emergency email</td><td>24x7x365</td><td>2 hours</td><td>8 hours</td></tr><tr><td>SEV-2</td><td>Slack/Email</td><td>Dock Business Hours</td><td>8 hours</td><td>24 hours</td></tr><tr><td>SEV-3</td><td>Slack/Email</td><td>Dock Business Hours</td><td>24 hours</td><td>2 weeks</td></tr><tr><td>SEV-4</td><td>Slack/Email</td><td>Dock Business Hours</td><td>48 hours</td><td>2 weeks</td></tr><tr><td>SEV-5</td><td>Slack/Email</td><td>Dock Business Hours</td><td>2 weeks</td><td>N/A</td></tr></tbody></table>
 
 #### **Regular Support**
 
-| Severity Level | Contact Method | Coverage            | Triage   | Resolution target |
-| -------------- | -------------- | ------------------- | -------- | ----------------- |
-| SEV-1          | Slack/Email    | Dock Business Hours | 4 hours  | 12 hours          |
-| SEV-2          | Slack/Email    | Dock Business Hours | 24 hours | 4 days            |
-| SEV-3          | Slack/Email    | Dock Business Hours | 48 hours | 4 weeks           |
-| SEV-4          | Slack/Email    | Dock Business Hours | 96 hours | 4 weeks           |
-| SEV-5          | Slack/Email    | Dock Business Hours | 2 weeks  | N/A               |
+<table><thead><tr><th>Severity Level</th><th>Contact Method</th><th>Coverage</th><th width="157">Triage</th><th>Resolution target</th></tr></thead><tbody><tr><td>SEV-1</td><td>Slack/Email</td><td>Dock Business Hours</td><td>4 hours</td><td>12 hours</td></tr><tr><td>SEV-2</td><td>Slack/Email</td><td>Dock Business Hours</td><td>24 hours</td><td>4 days</td></tr><tr><td>SEV-3</td><td>Slack/Email</td><td>Dock Business Hours</td><td>48 hours</td><td>4 weeks</td></tr><tr><td>SEV-4</td><td>Slack/Email</td><td>Dock Business Hours</td><td>96 hours</td><td>4 weeks</td></tr><tr><td>SEV-5</td><td>Slack/Email</td><td>Dock Business Hours</td><td>2 weeks</td><td>N/A</td></tr></tbody></table>
 
 ### Contacting Support
 
