@@ -45,7 +45,7 @@ We can provide a private Slack channel for contacting support as an additional s
 
 #### Emergency Escalation
 
-Customers who are licensed for production support will receive the emergency escalation email address at the time they deploy to production. This address is used for pager support, where any message sent will be routed to the mobile device of the on-call support representative. It is the fastest way to get help.
+Customers who are licensed for priority production support will receive the emergency escalation email address at the time they deploy to production. This address is used for pager support, where any message sent will be routed to the mobile device of the on-call support representative. It is the fastest way to get help.
 
 This service is available only for premium support customers and allows raising SEV-1 errors.
 
