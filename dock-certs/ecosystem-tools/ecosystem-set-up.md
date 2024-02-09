@@ -8,13 +8,22 @@ You can create an Ecosystem through the left side menu Ecosystem button.
 Ecosystem Tools is an add-on feature. If you do not see it in your menu bar and want it enabled for your account please contact support@dock.io
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-08 at 17.18.10.png" alt=""><figcaption></figcaption></figure>
+First steps in creating your ecosystem is defining your brand. Ecosystem branding is important, it will be present on the credentials issued by the participants and verification templates for the verifiers. Having a clearly defined brand makes it easier for ecosystem participants to trust the ecosystem and have a unified experience from credential issuance, to storage and verification.
 
-First steps in creating your ecosystem is defining your brand and choosing the Administrator DID
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 15.39.50.png" alt=""><figcaption></figcaption></figure>
+
+You will need to set the Ecosystem **Name**, **Description,** add an **Ecosystem URL, a** valid URL that links to a page outlining the advantages and key details of joining your ecosystem.
+
+**Convener DID** will allow you to choose from an existing or add a new DID that will be the administrator of the ecosystem.&#x20;
+
+Next step will allow you to set your Governance Framework document, that is used to communicate the rules and guidelines of the ecosystem to every stakeholder, ensuring clarity and consistency, which helps align all stakeholders on the processes surrounding issuance and verification.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 16.30.03.png" alt=""><figcaption></figcaption></figure>
 
 ### Invite a participant&#x20;
 
-* &#x20;\+
+
+
 * Create a schema +
 * Invite an issuer +
 * Assign the schema to the issuer +
