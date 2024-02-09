@@ -22,6 +22,12 @@ Next step will allow you to set your Governance Framework document, that is used
 
 ### Invite a participant&#x20;
 
+After the ecosystem is set up you can start inviting participants.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 16.41.36.png" alt=""><figcaption></figcaption></figure>
+
+Ecosystem participants can be Issuers, Verifiers or both depending on their role in your ecosystem. You will be able to asign credential schemas based on the role of the participant.
+
 
 
 * Create a schema +
