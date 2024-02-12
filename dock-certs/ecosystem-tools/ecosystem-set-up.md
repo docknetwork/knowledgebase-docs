@@ -22,23 +22,34 @@ Next step will allow you to set your Governance Framework document, that is used
 
 ### Invite a participant&#x20;
 
-After the ecosystem is set up you can start inviting participants.
+After the ecosystem is set up you can start inviting participants. Ecosystem participants can be Issuers, Verifiers or both depending on their role in your ecosystem. You will be able to assign credential schemas based on the role of the participant.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 16.41.36.png" alt=""><figcaption></figcaption></figure>
 
-Ecosystem participants can be Issuers, Verifiers or both depending on their role in your ecosystem. You will be able to asign credential schemas based on the role of the participant.
+After clicking **Invite participants** you will get an invite link which you will need to share with the invitee.&#x20;
+
+Ecosystem participants will need to have an account with Dock Certs to join the ecosystem and click on the link after logging in to their account, they will be immediately prompted to Join the ecosystem and select an organization profile that will be used to participate in the ecosystem.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 16.10.15.png" alt=""><figcaption></figcaption></figure>
+
+Ecosystem Administrator and participants will see the list of Issuers and Verifiers in the table.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 16.38.19.png" alt=""><figcaption></figcaption></figure>
+
+Ecosystem administrator will be able to Suspend, Remove or Edit the existing Ecosystem participants. They can change the role of the participant or assign schemas.
+
+### Assign credential schemas
+
+To Assign a credential schema to participants you will need to first [create the schemas](../create-a-schema.md). To assign the schema you can either click Edit on an individual participant or select **View All** participants and assign the same schema to multiple participants at once.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 16.41.38.png" alt=""><figcaption></figcaption></figure>
+
+Assigned schemas will be immediately available to participants and once credentials are issued using a schema assigned to an ecosystem, the ecosystem branding will be visible throughout the entire credential user journey.
+
+Ecosystem branding&#x20;
+
+![](<../../.gitbook/assets/Screenshot\_20240212\_164914\_Dock Wallet.jpg>)
 
 
 
-* Create a schema +
-* Invite an issuer +
-* Assign the schema to the issuer +
-* Invite a verifier +
-* Assign the same schema to the verifier +
-* Issue a credential to the wallet based on that schema
-* See the ecosystem branding in the wallet
-* Verify that credential, with ecosystem branding throughout the flow
-
-### Invite Issuers and assign schemas
-
-### Invite verifiers and share verification templates
+###
