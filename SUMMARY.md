@@ -30,6 +30,7 @@
   * [Create and Manage DIDs From the Dock Wallet](dock-wallet/create-and-manage-dids-from-the-dock-wallet.md)
 * [📄 Developer Documentation](developer-documentation/README.md)
   * [Dock API](developer-documentation/dock-api/README.md)
+    * [API Documentation](developer-documentation/dock-api/api-docs.md)
     * [Dock API Release Notes](developer-documentation/dock-api/dock-api-release-notes.md)
     * [API usage](developer-documentation/dock-api/api-usage.md)
     * [API examples](developer-documentation/dock-api/api-examples.md)
