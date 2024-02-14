@@ -21,7 +21,6 @@
   * [Custom branded distribution emails](dock-certs/custom-branded-distribution-emails.md)
   * [Ecosystem Tools](dock-certs/ecosystem-tools/README.md)
     * [Ecosystem set up](dock-certs/ecosystem-tools/ecosystem-set-up.md)
-    * [Trust registry on the blockchain](dock-certs/ecosystem-tools/trust-registry-on-the-blockchain.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes.md)
 * [📳 Dock Wallet](dock-wallet/README.md)
   * [Dock Wallet Release Notes](dock-wallet/dock-wallet-release-notes.md)
