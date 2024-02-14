@@ -2,9 +2,7 @@
 
 ### What are Ecosystem Tools?
 
-Ecosystem Tools allow organizations to create a network of trusted digital identity issuers and verifiers through a user-friendly dashboard.&#x20;
-
-A trust ecosystem helps organizations to simplify everyday interactions and have confidence to allow other organizations or people to interact and share fraud-proof and digitally verifiable data.&#x20;
+Ecosystem Tools allow organizations to create a network of trusted digital identity issuers and verifiers through a user-friendly dashboard. A trust ecosystem helps organizations to simplify everyday interactions and have confidence to allow other organizations or people to interact and share fraud-proof and digitally verifiable data.&#x20;
 
 Governing Authority could register as an Ecosystem Admin in Dock Certs where they can establish a Trusted Brand, communicate rules for participation in a Governance Framework, and administer the ecosystem.
 

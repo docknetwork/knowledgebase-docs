@@ -4,6 +4,8 @@
 
 You can create an Ecosystem through the left side menu by clicking **Ecosystem -> Create Ecosystem** button.
 
+When creating an ecosystem an on-chain trust registry is created on the blockchain, a list of relationships between issuers and verifiers. It simplifies the process of identifying which issuers and verifiers are trustworthy within a particular ecosystem.
+
 {% hint style="info" %}
 Ecosystem Tools is an add-on feature. If you do not see it in your menu bar and want it enabled for your account please contact support@dock.io
 {% endhint %}
