@@ -1,11 +1,17 @@
 # How to Buy Dock
 
-### &#x20;Buy on Crypto Exchanges With Other Cryptocurrencies
+There are different ways to buy DOCK token, you can use crypto exchanges and buy DOCK with other cryptocurrencies or use Transak and buy DOCK using fiat.
 
-DOCK token is available on the world’s leading cryptocurrency exchanges like [Binance](https://www.binance.com/en/trade/DOCK\_USDT?ref=H31B921U), [Huobi](https://www.huobi.com/en-us/exchange/dock\_usdt/), [Kucoin](https://trade.kucoin.com/DOCK-BTC), and [Gate](https://www.gate.io/trade/DOCK\_USDT). If you hold other leading crypto like Bitcoin and stablecoins like USDT, you can trade DOCK on these exchanges.&#x20;
+### Crypto Exchanges&#x20;
 
-**To buy DOCK on Binance:**
+DOCK token is available on the world’s leading cryptocurrency exchanges like [Binance](https://www.binance.com/en/trade/DOCK\_USDT?ref=H31B921U), [Huobi](https://www.huobi.com/en-us/exchange/dock\_usdt/), [Kucoin](https://trade.kucoin.com/DOCK-BTC), and [Gate](https://www.gate.io/trade/DOCK\_USDT). You can register on their platforms and buy DOCK with leading base cryptocurrencies including USDT, BTC, or BUSD
 
-1. Login on your Binance account&#x20;
-2. Search for the [DOCK/USDT](https://www.binance.com/en-IN/trade/DOCK\_USDT) or [DOCK/BTC](https://www.binance.com/en-IN/trade/DOCK\_BTC?theme=dark\&type=spot) pair &#x20;
-3. Buy DOCK by placing market or limit orders on the trading platform
+### Transak
+
+Our collaboration with Transak offers the simplest mechanism to buy DOCK tokens across 60+ countries including the UK and India.&#x20;
+
+{% hint style="info" %}
+The Transak integration is not available in the United States, China, and other select countries. [View list of supported countries](https://docs.transak.com/docs/fiat-currency-country-payment-method-coverage-plus-fees-and-limits)
+{% endhint %}
+
+{% embed url="https://global.transak.com/" %}

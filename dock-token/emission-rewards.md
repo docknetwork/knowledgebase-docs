@@ -24,7 +24,7 @@ The rewards for each era consist of the transaction fees collected in the era an
 * Each year, the network will release **up to** 25% of the remaining supply.
 * The released tokens are distributed across eras, each of which lasts 12 hours.
 * For each era, the emission rewards and the transaction fees are first distributed: 50% to the Treasury and 50% to the validators.
-* Dock uses [Nominated Proof of Stake (NPoS)](https://w3f-research.readthedocs.io/en/latest/polkadot/overview/2-token-economics.html) developed by the Web3 Foundation.
+* Dock uses [Nominated Proof of Stake (NPoS)](https://research.web3.foundation/Polkadot/protocols/NPoS) developed by the Web3 Foundation.
 * Anyone can register on-chain to be a validator by declaring their stake and commission levels.
 * The validators are selected based on the stake behind them, but their rewards depend on their performance in the network. These rewards are then distributed to the nominators proportionally.
 * The emission rate is kept such that it incentivizes 40% of the circulating supply to be liquid as NPoS increases the emission per era linearly (next era will have more emission) until the 40% level (`Chi_ideal` in NPoS doc) is reached. Otherwise, emission rates per era decrease exponentially.

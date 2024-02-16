@@ -2,7 +2,7 @@
 
 DOCK is the native token of Dock’s blockchain network that is used to transact, incentivize, and vote in its Verifiable Credentials and Decentralized Identifier ecosystem.
 
-All transactions to the Dock Blockchain, like creating DIDs, updating Revocation Registries, and creating Schemas amongst others, require [DOCK tokens](https://www.dock.io/token). The use of DOCK extends further to other initiatives that include governance and staking.
+All transactions to the Dock Blockchain, like creating DIDs, updating Revocation Registries, and creating Schemas amongst others, require DOCK tokens. The use of DOCK extends further to other initiatives that include governance and staking.
 
 **The utilities of DOCK can be divided into 3 main categories:**
 
@@ -12,4 +12,4 @@ All transactions to the Dock Blockchain, like creating DIDs, updating Revocation
 
 The total supply of DOCK tokens is fixed at 1 billion. Out of which 70% is with holders, 15% is with the Treasury and Dock Association, and 15% is for emission rewards.
 
-According to the team, the circulating supply is 770 million and the emission of the remaining DOCK will happen over 25 years distributing 25-30% per year. DOCK’s token emission schedule can be found [here](https://docs.dock.io/learn/token-economics/econ-pos).\
+Over 700 million of the 1 billion tokens are in circulation and the emission of the remaining DOCK will happen over 25 years distributing 25-30% per year. DOCK’s token emission schedule can be found [here](https://docs.dock.io/learn/token-economics/econ-pos).\
