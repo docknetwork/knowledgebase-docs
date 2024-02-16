@@ -8,10 +8,8 @@ DOCK token is available on the world’s leading cryptocurrency exchanges like [
 
 ### Transak
 
-Our collaboration with Transak offers the simplest mechanism to buy DOCK tokens across 60+ countries including the UK and India.&#x20;
+Our collaboration with [Transak](https://global.transak.com/) offers the simplest mechanism to buy DOCK tokens across 60+ countries including the UK and India.&#x20;
 
 {% hint style="info" %}
 The Transak integration is not available in the United States, China, and other select countries. [View list of supported countries](https://docs.transak.com/docs/fiat-currency-country-payment-method-coverage-plus-fees-and-limits)
 {% endhint %}
-
-{% embed url="https://global.transak.com/" %}
