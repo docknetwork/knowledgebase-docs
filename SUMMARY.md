@@ -54,7 +54,7 @@
     * [How to redistribute stake to other validators](dock-token/staking/how-to-redistribute-stake-to-other-validators.md)
     * [How to claim staking rewards](dock-token/staking/how-to-claim-staking-rewards.md)
     * [What is the staking yield on Dock?](dock-token/staking/what-is-the-staking-yield-on-dock.md)
-  * [Sub Accounts & Killing an Identity](dock-token/sub-accounts-and-killing-an-identity.md)
+  * [Sub Identities](dock-token/sub-accounts-and-killing-an-identity.md)
   * [Send Dock tokens from the mainnet portal](dock-token/send-dock-tokens-from-the-mainnet-portal.md)
   * [Dock Token Migration](dock-token/dock-token-migration.md)
 * [👥 Open Source Community](open-source-community/README.md)
