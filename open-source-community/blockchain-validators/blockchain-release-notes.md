@@ -1,2 +1,0 @@
-# Blockchain Release Notes
-

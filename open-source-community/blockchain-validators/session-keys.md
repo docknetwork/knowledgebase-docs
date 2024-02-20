@@ -47,4 +47,4 @@ If you go to the "Staking" tab, you will see a list of active validators current
 
 The validator set is refreshed every era. In the next era, if there is a slot available and your node is selected to join the validator set, your node will become an active validator. Until then, it will remain in the waiting queue. If your validator is not selected to become part of the validator set, it will remain in the waiting queue until it is. There is no need to re-start if you are not selected for the validator set in a particular era. However, it may be necessary to increase the number of DOCK staked or seek out nominators for your validator in order to join the validator set.
 
-Congratulations! If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Dock validator! If you need help, reach out on the [Dock Validator chat](https://riot.im/app/#/room/#!KpPIERdKQjLTTwsOkn:matrix.org).\
+Congratulations! If you have followed all of these steps, and been selected to be a part of the validator set, you are now running a Dock validator! \

@@ -19,7 +19,7 @@ As with configuration, features can be added or removed through proposals and vo
 
 ### Rewards and Punishments
 
-The network rewards participation for actions such as block production and reporting bad behavior, and punishes bad behavior such as validators being offline, accepting invalid transactions, producing bad blocks, or any kind of equivocation. The conditions of these rewards and penalties are defined by the governance. As an example, the network will emit at most a fixed amount of tokens each year and this amount will decrease each year. For more details on the economics, refer to the [token economics section](broken-reference).
+The network rewards participation for actions such as block production and reporting bad behavior, and punishes bad behavior such as validators being offline, accepting invalid transactions, producing bad blocks, or any kind of equivocation. The conditions of these rewards and penalties are defined by the governance. As an example, the network will emit at most a fixed amount of tokens each year and this amount will decrease each year. For more details on the economics, refer to the [token economics section](../../dock-token/emission-rewards.md).
 
 ### Treasury Management
 

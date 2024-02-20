@@ -3,7 +3,7 @@
 There are two scripts provided, one to generate account (and associated keypair) and libp2p keypair and the other to rotate the session key of a running node and return the new key. A candidate validator is expected to generate his account and _optionally_ a libp2p keypair with the first script and then run his node _optionally_ with the libp2p key and then run the second script to rotate his session key and then share the account address and session key with Dock before his node can be made a validator. \
 Generating the libp2p key is optional and only needed when the node needs to be whitelisted and the peer id needs to be communicated to other nodes using the _reserved_ (`--reserved-only` or `--reserved-nodes`) feature. Even then the running node can be inspected for its libp2p key but that's a bit of work. We ask for libp2p peer IDs of validators as we might run our validators with the reserved flags.
 
-The [session key](https://www.substrate.io/kb/learn-substrate/session-keys) represents a pair of public keys, its the concatenation of Aura and Grandpa public keys (as we are a proof of Authority for now). You can generate new session keys with the script or the UI and that results in the creation of 2 new keypairs, inserting the corresponding private keys in the node's keystore and returning the concatenated public keys as the session key.
+The session key represents a pair of public keys, its the concatenation of Aura and Grandpa public keys (as we are a proof of Authority for now). You can generate new session keys with the script or the UI and that results in the creation of 2 new keypairs, inserting the corresponding private keys in the node's keystore and returning the concatenated public keys as the session key.
 
 ## Generating account and libp2p key
 
@@ -46,7 +46,7 @@ If you do not wish to generate the libp2p key and do not want to use the script,
 
 The browser UI can be used to restore the account generated with the script above by entering the secret phrase and password. Something that's not obvious is the password given to the script should go in the derivation path. Below is a screenshot of how the secret phrase generated in the above script is restored
 
-<figure><img src="../../../.gitbook/assets/account-creation.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/account-creation.png" alt=""><figcaption></figcaption></figure>
 
 ## Generating session key
 
@@ -86,7 +86,7 @@ If the validator wishes to change their account or session, they can run the abo
 
 If you do not wish to use the script, you can connect our UI to your node and point it to your node by going [here](https://fe.dock.io/#/settings) and add your node details by editing the "_remote node/endpoint to connect to_" dropdown and enabling "_custom endpoint_". Note that your node must be running with `--rpc-cors=all` flag for this to work. Once the UI has connected to the node, RPC call `rotateKeys` must be made by going [here](https://fe.dock.io/#/toolbox), and submitting the RPC call shown in the image.
 
-<figure><img src="../../../.gitbook/assets/rotate_keys.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/rotate_keys.png" alt=""><figcaption></figcaption></figure>
 
 ### Inserting session keys
 
@@ -94,6 +94,6 @@ To generate session keys deterministically and insert them to the node's keystor
 
 **Example runs of the script**
 
-<figure><img src="../../../.gitbook/assets/session_key_seed.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/session_key_seed.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/session_key_phrase.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/session_key_phrase.png" alt=""><figcaption></figcaption></figure>

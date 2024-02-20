@@ -6,7 +6,7 @@ There are two proposals in the queue  and every 20 days a proposal is considered
 
 Another thing to note about the proposal process is that it happens in 2 steps for reducing on-chain storage and then also making it cheaper for proposers to propose. First, the proposal hash is submitted on-chain and then the expectation is that the proposer will share the actual proposal with the community off-chain like on forums. People can then compare the proposal with its on-chain hash and then express their opinion and may decide to back it with tokens as well, this backing is called `second`ing. People might not like the proposal and thus the proposer will understand that his proposal does not stand a chance to be approved and he will not publish the full proposal and thus take chain-storage and pay fees.
 
-Current proposals will be publicly [here](https://fe.dock.io/#/democracy) and any Dock token holder will be able to make a new proposal from that page, more on that [here](broken-reference).
+Current proposals will be publicly [here](https://fe.dock.io/#/democracy) and any Dock token holder will be able to make a new proposal from that page.
 
 ### Preparing a proposal
 

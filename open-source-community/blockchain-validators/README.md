@@ -1,6 +1,6 @@
 # Blockchain Validators
 
-Validators are in charge of producing blocks (processing transactions) and validating blocks produced by other validators. Validators earn token rewards for participating in the network, these are described in the [token-economics](broken-reference) section.
+Validators are in charge of producing blocks (processing transactions) and validating blocks produced by other validators. Validators earn token rewards for participating in the network, these are described in the [emission rewards](../../dock-token/emission-rewards.md) section.
 
 {% hint style="info" %}
 Join Dock's [Validator Discord channel](https://discord.gg/kV9ZfsskGy) for additional support and to connect with other Dock validators

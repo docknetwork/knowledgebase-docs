@@ -1,2 +1,0 @@
-# Blockchain SDK Release Notes
-
