@@ -49,7 +49,7 @@ _**(stakers and validators)**_
 
 \
 \
-4\. Withdraw the amount and transfer it to another of your stash accounts to [stake a new set of validators](https://docs.dock.io/staking/how-to-nominate-stake-on-dock). Each stash account can only stake for one set of validators.\
+4\. Withdraw the amount and transfer it to another of your stash accounts to stake a new set of validators. Each stash account can only stake for one set of validators.\
 
 
 {% hint style="warning" %}

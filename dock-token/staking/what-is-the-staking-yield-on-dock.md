@@ -6,7 +6,7 @@ The Dock network utilizes a proof-of-stake consensus which enables token holders
 * **Validator commission rates** - Validators are able to set their own commission rates which are paid from the amount of emission rewards distributed to each validator. The commission rates for each validator can be viewed on the [Staking dashboard](https://fe.dock.io/#/staking).
 * **Number of other token holders staking the same validators** - After a validator receives their commission, the remaining rewards are distributed proportionally to the token holders based on their amount of stake.&#x20;
 * **Total network staked**  - The Dock network has an optimal staking rate of 40% of the total network staked and the amount of rewards adjusts to optimize towards that staking rate. This means the higher the % of the network staked, the higher the amount of rewards that will be distributed.
-* **Rewards emission schedule** - The maximum amount of staking rewards distributed by the network changes annually based on the [emission reward schedule](https://docs.dock.io/learn/token-economics/econ-pos) which releases up to 25% of the remaining rewards each year.
+* **Rewards emission schedule** - The maximum amount of staking rewards distributed by the network changes annually based on the [emission reward schedule](../emission-rewards.md) which releases up to 25% of the remaining rewards each year.
 
 <figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 

@@ -28,8 +28,8 @@ Click on "Nominate" on an account you've bonded and you will be presented with a
 
 Select your validators, confirm the transaction, and you're done - you are now staking! Your stake will become active in two eras, you can check how far along Dock is in the current era on the [Staking page](https://fe.dock.io/#/staking).
 
-Assuming at least one of the validators you selected is in the active validator set, you will receive staking rewards. Rewards must be manually transferred to your account, see the [Claiming Rewards](https://docs.dock.io/help-center/staking/how-to-claim-rewards) article for more details.
+Assuming at least one of the validators you selected is in the active validator set, you will receive staking rewards. Rewards must be manually transferred to your account, see the [Claiming Rewards](how-to-claim-staking-rewards.md) article for more details.
 
 ### Step 3: Stop staking
 
-If you decide to stop staking one or more validators, you will need to unbond your tokens. You may need to do this if for example you want to change which validators you are staking or if you want to withdraw your tokens. Detailed instructions about how to unbond are available [here](https://docs.dock.io/help-center/staking/how-to-unbond-and-rebond).\
+If you decide to stop staking one or more validators, you will need to unbond your tokens. You may need to do this if for example you want to change which validators you are staking or if you want to withdraw your tokens. Detailed instructions about how to unbond are available [here](how-to-unbond-and-rebond.md) .\
