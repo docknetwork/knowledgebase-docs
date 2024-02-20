@@ -6,7 +6,11 @@ An account can have a maximum of 100 sub-accounts.
 
 To register a sub-identity, go to the [Accounts Page](https://fe.dock.io/#/accounts), select the three dots to the right of the account to which you would like to add the sub-identity. Please note that the account needs to have an Identity registered in order to be able to add a sub-identity. Next, select Set on-chain sub-identities and then select one or more sub-identities. You can remove the sub-identities by following the same steps.
 
-<figure><img src="../.gitbook/assets/subidentity.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-02-20 at 12.53.49.png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+Make sure you have set your on-chain identity first before creating sub-identities.
+{% endhint %}
 
 Note that a deposit of 20.053 is required for every sub-account. You can use the [Chain States > Constants](https://fe.dock.io/#/chainstate/constants) page again to verify this amount by querying the identity.subAccountDeposit constant.
 
