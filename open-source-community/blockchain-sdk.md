@@ -15,4 +15,3 @@ Some useful references:
 9. Another useful place is the [SDK tests](https://github.com/docknetwork/sdk/tree/master/tests)
 10. [API reference](https://docknetwork.github.io/sdk/reference/)
 11. To see how to do basic operations like generate addresses, validate addresses, check balance, do token transfer, get block by hash or number, etc, see [this example script](https://github.com/docknetwork/sdk/blob/master/example/chain-ops.js). The script uses functions defined [here](https://github.com/docknetwork/sdk/blob/master/src/utils/chain-ops.js).
-12. For offline signing of transactions, see [here](https://github.com/docknetwork/sdk/tree/master/src/offline-signing).
