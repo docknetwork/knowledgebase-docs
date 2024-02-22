@@ -11,13 +11,15 @@ Embodying the core principles of privacy, Dock's ID Wallet technology is inheren
 
 If you don’t have an existing app, Dock’s White Label ID Wallet is the best option when development speed is a priority. It’s a ready-made, tested solution that saves you the time and money of building a wallet from scratch.
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><p>White Label wallet allows you to:</p><ul><li>Customize it with your brand identity. </li></ul><ul><li>Only activate the features you need (composable feature sets).</li></ul><ul><li>Manage your own App Store profile and relationships with users.</li></ul><ul><li>Automatic wallet updates for easier maintenance.</li></ul></td><td></td></tr><tr><td></td><td><img src="../.gitbook/assets/64d56c2d933df9ceec8f9b50_white label mockup 01.png" alt=""></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/64d56c2d933df9ceec8f9b50_white label mockup 01.png" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2dca022c113851b25f_white label mockup 02.webp" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2d550809f0b632e773_white label mockup 03 (1).webp" alt=""></td><td></td></tr></tbody></table>
 
+White Label wallet allows you to:
 
-
-
-
-Put users in control of their data
+* Customize it with your brand identity.&#x20;
+* Only activate the features you need (composable feature sets).
+* Manage your own App Store profile and relationships with users.&#x20;
+* Automatic wallet updates for easier maintenance.
+* Put users in control of their data
 
 Dock’s Wallet React Native SDK is built with composable feature sets, meaning you can turn on only the features you need.
 
