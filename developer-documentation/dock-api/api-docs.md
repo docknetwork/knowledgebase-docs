@@ -1,6 +1,8 @@
-# Dock Certs API v1
+# API Documentation
 
 ## The Dock Certs API
+
+[See the API documentation](https://docs.api.dock.io/#the-dock-certs-api)
 
 _A complete solution for creating, managing and presenting Verifiable Credentials._
 
@@ -600,12 +602,11 @@ Dock Swagger UI generates interactive API documentation to try out the API calls
 
 > Endpoints
 
-[POST   /dids](index.html.md#create-did)\
-[GET    /dids/{did}](index.html.md#get-did-responses)\
-[GET    /dids](index.html.md#list-dids-responses)\
+[POST /dids](index.html.md#create-did)\
+[GET /dids/{did}](index.html.md#get-did-responses)\
+[GET /dids](index.html.md#list-dids-responses)\
 [DELETE /dids/{did}](index.html.md#delete-did)\
-[POST /dids/{did}/export](index.html.md#export-did)\
-
+[POST /dids/{did}/export](index.html.md#export-did)\\
 
 DID stands for Decentralized IDentifiers. DIDs are meant to be globally unique identifiers that allow their owner to prove cryptographic control over them. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides that it identifies.
 
@@ -870,12 +871,11 @@ Exports the DID document and keys as an encrypted Universal Wallet JSON-LD docum
 
 > Endpoints
 
-[POST   /profiles](index.html.md#create-profile)\
-[GET    /profiles/{did}](index.html.md#get-profile-responses)\
-[GET    /profiles](index.html.md#list-profiles-responses)\
-[PATCH  /profiles/{did}](index.html.md#update-profile)\
-[DELETE /profiles/{did}](index.html.md#delete-profile)\
-
+[POST /profiles](index.html.md#create-profile)\
+[GET /profiles/{did}](index.html.md#get-profile-responses)\
+[GET /profiles](index.html.md#list-profiles-responses)\
+[PATCH /profiles/{did}](index.html.md#update-profile)\
+[DELETE /profiles/{did}](index.html.md#delete-profile)\\
 
 Organization Profiles are used to provide more context for an Issuer DID. Details about the issuer such as name and logo can be added using a Organization Profile. These details will be included in credentials that are issued by the DID.
 
@@ -1106,10 +1106,9 @@ Deletes a profile from our platform. It does NOT delete the associated DID, nor 
 
 > Endpoints
 
-[POST   /credentials](index.html.md#issue-credentials)\
-[GET    /credentials/{id}](index.html.md#get-credential)\
-[DELETE /credentials/{id}](index.html.md#delete-credential)\
-
+[POST /credentials](index.html.md#issue-credentials)\
+[GET /credentials/{id}](index.html.md#get-credential)\
+[DELETE /credentials/{id}](index.html.md#delete-credential)\\
 
 You can create and sign Verifiable Credentials on Dock Certs and its API. By default, Dock does not store the credential - only its metadata. You can choose to persist a credential, in which case we will encrypt and store the credential for later retrieval using a password. Verifiable Credentials are cryptographically secure and tamper-proof. Once issued, they cannot be edited.
 
@@ -2395,12 +2394,11 @@ curl -X DELETE https://api-testnet.dock.io/proof-templates/{id} \
 
 > Endpoints
 
-[POST   /registries](index.html.md#create-registry-parameters)\
-[GET    /registries](index.html.md#list-registries-responses)\
-[GET    /registries/{id}](index.html.md#get-registry-parameters)\
-[POST   /registries/{id}](index.html.md#revoke/unrevoke-credential-parameters)\
-[DELETE /registries/{id}](index.html.md#delete-registry-responses)\
-
+[POST /registries](index.html.md#create-registry-parameters)\
+[GET /registries](index.html.md#list-registries-responses)\
+[GET /registries/{id}](index.html.md#get-registry-parameters)\
+[POST /registries/{id}](index.html.md#revoke/unrevoke-credential-parameters)\
+[DELETE /registries/{id}](index.html.md#delete-registry-responses)\\
 
 Revocation means deleting or updating a credential. On Dock, credential revocation is managed with a revocation registry.
 
@@ -2789,10 +2787,9 @@ The accumulator witness is utilized by the holder to generate a proof, which com
 
 > Endpoints
 
-[POST   /schemas](index.html.md#create-schema-responses)\
-[GET    /schemas](index.html.md#list-schemas-responses)\
-[GET    /schemas/{schemaId}](index.html.md#get-schema-parameters)\
-
+[POST /schemas](index.html.md#create-schema-responses)\
+[GET /schemas](index.html.md#list-schemas-responses)\
+[GET /schemas/{schemaId}](index.html.md#get-schema-parameters)\\
 
 Schemas are useful when enforcing a specific structure on a collection of data like a Verifiable Credential. Data Verification schemas, for example, are used to verify that the structure and contents of a Verifiable Credential conform to a published schema. On the other hand, Data Encoding schemas are used to map the contents of a Verifiable Credential to an alternative representation format, such as a binary format used in a zero-knowledge proof.
 
@@ -3036,9 +3033,9 @@ Reading a Schema from the Dock chain can easily be achieved by using the `get` m
 > Endpoints
 
 \
-[POST   /anchors](index.html.md#create-anchor-responses)\
-[GET    /anchors](index.html.md#list-anchors-responses)\
-[GET    /anchors/{anchor}](index.html.md#get-anchor-responses)
+[POST /anchors](index.html.md#create-anchor-responses)\
+[GET /anchors](index.html.md#list-anchors-responses)\
+[GET /anchors/{anchor}](index.html.md#get-anchor-responses)
 
 Anchoring allows users to store a digest of one or more credentials (or any document) on our blockchain, tying them to immutable timestamps and proving that they were generated at a certain moment in time. By enabling this feature, users will have more options for auditing credentials given and timestamping any documents.
 
@@ -3249,8 +3246,7 @@ Verify an anchor's merkle root and proof by supplying the source documents (arra
 
 > Endpoints
 
-[GET    /jobs/{Id}](index.html.md#get-job-status-and-data-parameters)\
-
+[GET /jobs/{Id}](index.html.md#get-job-status-and-data-parameters)\\
 
 In Dock Certs, "jobs" are blockchain transactions that we submit on your behalf. You can choose to either register a webhook or poll the API to receive job information. Certain things in the API, such as revoking a credential, require a blockchain transaction to finalize before the job can be considered "done". The time to wait varies on network load and other factors, but typically is within 5-10 seconds.
 
