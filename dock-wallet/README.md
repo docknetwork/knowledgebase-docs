@@ -9,22 +9,23 @@ Embodying the core principles of privacy, Dock's ID Wallet technology is inheren
 
 ### White Label ID Wallet
 
-If you don’t have an existing app, Dock’s White Label ID Wallet is the best option when development speed is a priority. It’s a ready-made, tested solution that saves you the time and money of building a wallet from scratch.
+If you don’t have an existing app, Dock’s White Label ID Wallet is the best option when development speed is a priority. It’s a ready-made, tested solution that saves you the time and money of building a wallet from scratch. Dock takes care of automatic wallet updates making it is easier to maintain.&#x20;
 
 <table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/64d56c2d933df9ceec8f9b50_white label mockup 01.png" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2dca022c113851b25f_white label mockup 02.webp" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2d550809f0b632e773_white label mockup 03 (1).webp" alt=""></td><td></td></tr></tbody></table>
 
-White Label wallet allows you to:
+With White Label ID wallet you will be able to:
 
-* Customize it with your brand identity.&#x20;
+* Customize the wallet with your brand identity.&#x20;
 * Only activate the features you need (composable feature sets).
 * Manage your own App Store profile and relationships with users.&#x20;
-* Automatic wallet updates for easier maintenance.
 * Put users in control of their data
 
-Dock’s Wallet React Native SDK is built with composable feature sets, meaning you can turn on only the features you need.
+See the technical implementation steps [here](../developer-documentation/white-label-wallet/).
 
-Receive and manage Reusable Digital ID credentials.Scan Verification QR Codes and present credentials for verification.Privately verify credentials using Zero-Knowledge Proofs and Selective Disclosure.Create and manage Decentralized Identifiers (W3C compliant).Enable Verifier Mode to verify credentials from others users’ wallets.Turn on biometric security.
+### Dock’s Wallet React Native SDK
 
-Build ID Wallet capabilities inside your existing app with Dock’s powerful Wallet SDK, enabling users to effortlessly store, manage and share their Reusable Digital ID credentials without having to download an extra app.
+Build ID Wallet capabilities inside your existing app with Dock’s  Wallet SDK, enabling users to effortlessly store, manage and share their Reusable Digital ID credentials without having to download an extra app.
+
+
 
 ###
