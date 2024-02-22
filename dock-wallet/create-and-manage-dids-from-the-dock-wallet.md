@@ -1,4 +1,4 @@
-# Create and Manage DIDs From the Dock Wallet
+# Create and Manage DIDs in the Dock Wallet
 
 ## Create a DID <a href="#h_2bd05e9472" id="h_2bd05e9472"></a>
 
@@ -10,13 +10,15 @@ Select Create New DID.
 
 ![](https://downloads.intercomcdn.com/i/o/800523644/3e55b352d156ccd216fc55fe/63698097bf459d7b3fd4cb4a\_2-Create+a+new+DID.png)
 
-Choose a DID type. (See [here](https://app.intercom.com/a/apps/d6pvnpq9/articles/articles/8177395/show) on the difference between supported DID types)
+Choose a DID type.&#x20;
 
-❗ DID:dock requires DOCK token to create. DID:key is free to create.
+{% hint style="warning" %}
+DID:dock requires DOCK token to create. DID:key is free to create.
+{% endhint %}
 
 ![](https://downloads.intercomcdn.com/i/o/800530488/d371384b4c30d9479abe885c/f5f56593-2e92-44e1-9313-c5e56dd24796.jpeg)
 
-_If you select did:dock. Name your DID and select the DID Payment Account. If you have multiple accounts, you will see an extra field on this screen for you to choose which account to use to pay for the DID._
+If you select did:dock. Name your DID and select the DID Payment Account. If you have multiple accounts, you will see an extra field on this screen for you to choose which account to use to pay for the DID.
 
 Name your DID e.g. Work, University, IDs etc. and select Create.
 

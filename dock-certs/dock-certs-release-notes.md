@@ -1,2 +1,0 @@
-# Dock Certs Release Notes
-
