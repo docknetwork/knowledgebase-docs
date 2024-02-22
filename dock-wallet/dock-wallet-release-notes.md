@@ -1,2 +1,0 @@
-# Dock Wallet Release Notes
-

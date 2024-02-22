@@ -23,7 +23,6 @@
     * [Ecosystem set up](dock-certs/ecosystem-tools/ecosystem-set-up.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes.md)
 * [📳 Dock Wallet](dock-wallet/README.md)
-  * [Dock Wallet Release Notes](dock-wallet/dock-wallet-release-notes.md)
   * [Downloading Dock Wallet](dock-wallet/downloading-dock-wallet.md)
   * [Create and Manage DIDs From the Dock Wallet](dock-wallet/create-and-manage-dids-from-the-dock-wallet.md)
 * [📄 Developer Documentation](developer-documentation/README.md)
