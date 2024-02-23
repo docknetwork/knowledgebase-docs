@@ -83,22 +83,32 @@ The app icon and the splash screen logo can be customized on the app.
 
 **TIP** You can use tools like https://www.appicon.co to auto-size your images to the appropriate sizes.
 
-<details>
-
-<summary>Updating the Splash Screen Logo </summary>
+#### Updating the Splash Screen Logo&#x20;
 
 There are two logos with sizes variations available for customization, they need to be replaced in the following folders.
 
-❗❗❗**Please ensure that the image width matches while allowing the height to be flexible. Avoid adding empty margins to fill the remaining height.**
+{% hint style="warning" %}
+&#x20;**Please ensure that the image width matches while allowing the height to be flexible. Avoid adding empty margins to fill the remaining height.**
+{% endhint %}
 
+| Icon Size | Example                                           | Icon Size | Example                                               |
+| --------- | ------------------------------------------------- | --------- | ----------------------------------------------------- |
+| 382 x 128 | ![](../../.gitbook/assets/logo.png)               | 318 x 72  | ![](<../../.gitbook/assets/splash\_logo (1) (1).png>) |
+| 850 x 192 | ![](../../.gitbook/assets/splash-logo.png)        | 425 x 96  | ![](<../../.gitbook/assets/splash\_logo (2).png>)     |
+| 212 x 48  | ![](../../.gitbook/assets/splash\_logo.png)       | 637 x 144 | ![](<../../.gitbook/assets/splash\_logo (3).png>)     |
+| 212 x 48  | ![](<../../.gitbook/assets/splash\_logo (1).png>) | 850 x 192 | ![](<../../.gitbook/assets/splash\_logo (4).png>)     |
 
+#### Updating the App Icon&#x20;
 
-</details>
+The app icon should be a `.png` file and needs to be replaced with your custom app icon in these sizes.
 
-<details>
-
-<summary>Updating the App Icon </summary>
-
-The app icon should be a `.png` file and needs to be replaced in the following folders.
-
-</details>
+| Android icon size | Example                                           | iOS icon size | Example                                                |
+| ----------------- | ------------------------------------------------- | ------------- | ------------------------------------------------------ |
+| 120 x 120         | ![](../../.gitbook/assets/icon.png)               | 40 x 40       | ![](../../.gitbook/assets/40.png)                      |
+| 48 x 48           | ![](../../.gitbook/assets/ic\_launcher.png)       | 58 x 58       | ![](../../.gitbook/assets/58.png)                      |
+| 72 x 72           | ![](<../../.gitbook/assets/ic\_launcher (1).png>) | 60 x 60       | ![](../../.gitbook/assets/60.png)                      |
+| 96 x 96           | ![](<../../.gitbook/assets/ic\_launcher (2).png>) | 80 x 80       | ![](../../.gitbook/assets/80.png)                      |
+| 144 x 144         | ![](<../../.gitbook/assets/ic\_launcher (3).png>) | 87 x 87       | ![](../../.gitbook/assets/87.png)                      |
+| 192 x 192         | ![](<../../.gitbook/assets/ic\_launcher (4).png>) | 120 x 120     | ![](../../.gitbook/assets/120.png)                     |
+|                   |                                                   | 180 x 180     | ![](../../.gitbook/assets/180.png)                     |
+|                   |                                                   | 1024 x 1024   | ![](<../../.gitbook/assets/App icon – Appstore-1.png>) |
