@@ -1,13 +1,5 @@
 # DIDs
 
-## Endpoints
-
-[POST /dids](index.html.md#create-did)\
-[GET /dids/{did}](index.html.md#get-did-responses)\
-[GET /dids](index.html.md#list-dids-responses)\
-[DELETE /dids/{did}](index.html.md#delete-did)\
-[POST /dids/{did}/export](index.html.md#export-did)
-
 DID stands for Decentralized IDentifiers. DIDs are meant to be globally unique identifiers that allow their owner to prove cryptographic control over them. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides that it identifies.
 
 DIDs in Dock are created by choosing a 32-byte unique (on Dock chain) identifier along with a public key. You can update and delete a DID as well as list all DIDs. DID is identified by a unique, random key.
@@ -17,6 +9,14 @@ For a detailed example of the DIDs workflow. Please refer [here](https://github.
 {% hint style="info" %}
 Currently a DID can have only one key at a time as a controller, soon we will support multiple keys per DID.
 {% endhint %}
+
+## Endpoints
+
+[POST /dids](index.html.md#create-did)\
+[GET /dids/{did}](index.html.md#get-did-responses)\
+[GET /dids](index.html.md#list-dids-responses)\
+[DELETE /dids/{did}](index.html.md#delete-did)\
+[POST /dids/{did}/export](index.html.md#export-did)
 
 ## Create DID
 
