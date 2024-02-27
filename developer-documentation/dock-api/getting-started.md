@@ -4,7 +4,9 @@
 
 You must first have an account and acquire your credentials (API keys) before accessing the Dock Certs API. You can register an account and generate a key in your [Dock Certs](https://certs.dock.io/) dashboard.
 
+{% hint style="warning" %}
 Keep in mind that your API keys should be kept private, so keep them safe! Do not post your private API keys on GitHub, in client-side code, or anywhere else that is publicly available.
+{% endhint %}
 
 ## Endpoints
 
