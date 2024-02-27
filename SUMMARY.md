@@ -30,6 +30,8 @@
     * [Getting Started](developer-documentation/dock-api/getting-started.md)
     * [Webhooks](developer-documentation/dock-api/webhooks.md)
     * [Dock Postman Collection](developer-documentation/dock-api/dock-postman-collection.md)
+    * [Dock Swagger UI](developer-documentation/dock-api/dock-swagger-ui.md)
+    * [DIDs](developer-documentation/dock-api/dids.md)
   * [White label wallet](developer-documentation/white-label-wallet/README.md)
     * [Configuration](developer-documentation/white-label-wallet/configuration/README.md)
       * [Enabling and Disabling Features](developer-documentation/white-label-wallet/configuration/enabling-and-disabling-features.md)
