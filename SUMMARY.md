@@ -41,6 +41,8 @@
     * [Anchors](developer-documentation/dock-api/anchors.md)
     * [Jobs](developer-documentation/dock-api/jobs.md)
     * [Verify](developer-documentation/dock-api/verify.md)
+    * [Sub-Accounts](developer-documentation/dock-api/sub-accounts.md)
+    * [Messaging](developer-documentation/dock-api/messaging.md)
   * [White label wallet](developer-documentation/white-label-wallet/README.md)
     * [Configuration](developer-documentation/white-label-wallet/configuration/README.md)
       * [Enabling and Disabling Features](developer-documentation/white-label-wallet/configuration/enabling-and-disabling-features.md)
