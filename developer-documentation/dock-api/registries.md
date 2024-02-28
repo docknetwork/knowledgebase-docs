@@ -10,7 +10,7 @@ For a detailed example of the registry workflow. Please refer [here](https://git
 If you want to revoke BBS+ credentials, you must create a registry with type \`DockVBAccumulator2022\`. For revoking other credentials, you can use \`StatusList2021Entry\` or \`CredentialStatusList2017\`.
 {% endhint %}
 
-> Endpoints
+## Endpoints
 
 [POST /registries](index.html.md#create-registry-parameters)\
 [GET /registries](index.html.md#list-registries-responses)\
