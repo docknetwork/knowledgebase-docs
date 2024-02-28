@@ -34,6 +34,7 @@
     * [DIDs](developer-documentation/dock-api/dids.md)
     * [Profiles](developer-documentation/dock-api/profiles.md)
     * [Credentials](developer-documentation/dock-api/credentials.md)
+    * [Page](developer-documentation/dock-api/page.md)
   * [White label wallet](developer-documentation/white-label-wallet/README.md)
     * [Configuration](developer-documentation/white-label-wallet/configuration/README.md)
       * [Enabling and Disabling Features](developer-documentation/white-label-wallet/configuration/enabling-and-disabling-features.md)
