@@ -70,6 +70,7 @@
   * [Sub Identities](dock-token/sub-accounts-and-killing-an-identity.md)
   * [Dock Token Migration](dock-token/dock-token-migration.md)
 * [👥 Open Source Community](open-source-community/README.md)
+  * [Code of Conduct](open-source-community/code-of-conduct.md)
   * [Consensus](open-source-community/consensus.md)
   * [Governance](open-source-community/governance/README.md)
     * [Responsibilities](open-source-community/governance/responsibilities.md)
