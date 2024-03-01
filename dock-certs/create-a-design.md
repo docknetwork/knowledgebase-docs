@@ -1,5 +1,5 @@
 # Create a Design
-This is a video tutorial.
+
 ## Video tutorial <a href="#h_05a8c37fff" id="h_05a8c37fff"></a>
 
 {% embed url="https://www.youtube.com/embed/BotZiSMJOcU?rel=0" %}
@@ -59,6 +59,3 @@ You can use your brand color for the design background. Chose it by changing the
 You can also add a custom background image. To add a background image for your design go to Setup and click **Add Background Image.**
 
 ![](https://downloads.intercomcdn.com/i/o/802013789/e81df52148283faac0becc4c/63570d9f5432fa87e8a12f21\_5-Add+background+image.png)
-
-
-
