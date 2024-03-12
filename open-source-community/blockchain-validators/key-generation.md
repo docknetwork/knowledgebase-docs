@@ -1,3 +1,6 @@
+# Another Test of Integration
+This should be removed.
+
 # Key generation
 
 There are two scripts provided, one to generate account (and associated keypair) and libp2p keypair and the other to rotate the session key of a running node and return the new key. A candidate validator is expected to generate his account and _optionally_ a libp2p keypair with the first script and then run his node _optionally_ with the libp2p key and then run the second script to rotate his session key and then share the account address and session key with Dock before his node can be made a validator. \
