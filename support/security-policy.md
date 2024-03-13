@@ -1,0 +1,31 @@
+# Security Policy
+
+## How We Process Vulnerability Reports
+
+We address security concerns as a high priority, whether they are raised by our customers or reported by third parties. In order to limit the possibility that a concern could be exploited, we ask to be provided the opportunity to address security concerns before they are reported publicly. Security concerns can be privately reported to us through the Intercom support button in the bottom-right corner of Dock Certs, or by sending an email to [security@dock.io](mailto:security@dock.io).
+
+Our open source code bases are available for public inspection, and we love pull requests! Upon receiving a security report, we will:
+
+* Triage the security report within 3 business days, and respond to the reporter. The triage will consist of an initial prioritization assessment and identification of next steps.
+* Prioritize the fix for an appropriate product release, recognizing that backwards incompatible changes might not be immediately releasable.
+* Publicly disclose the vulnerability after a mitigation has been identified or a fix has been released. If such disclosure will take more than 90 days, we commit to discuss the timeline of the disclosure with the reporter.
+
+## How We Categorize Security Incidents
+
+### Severity Level: High
+
+Any security breach where confidentiality or information integrity is compromised.
+
+### Severity Level: Medium
+
+Identification of a significant security vulnerability with no evidence of it having been exploited.
+
+### Severity Level: Low
+
+Other events that impact system security.
+
+## How We Communicate About Security Incidents
+
+We will proactively notify our customers about High Severity incidents.
+
+We will include information about other incidents in our normal customer communications.

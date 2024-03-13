@@ -70,7 +70,7 @@
   * [Sub Identities](dock-token/sub-accounts-and-killing-an-identity.md)
   * [Dock Token Migration](dock-token/dock-token-migration.md)
 * [👥 Open Source Community](open-source-community/README.md)
-  * [Code of Conduct](open-source-community/code_of_conduct.md)
+  * [Code of Conduct](open-source-community/code\_of\_conduct.md)
   * [Consensus](open-source-community/consensus.md)
   * [Governance](open-source-community/governance/README.md)
     * [Responsibilities](open-source-community/governance/responsibilities.md)
@@ -98,3 +98,4 @@
   * [System Status](https://dockstatus.io/)
   * [Discord](https://discord.com/invite/feW8KGf7r3)
   * [Support Services](support/support-services.md)
+  * [Security Policy](support/security-policy.md)
