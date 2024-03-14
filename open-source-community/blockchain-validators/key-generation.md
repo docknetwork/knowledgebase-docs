@@ -1,6 +1,6 @@
 # Key generation
 
-There are two scripts provided, one to generate account (and associated keypair) and libp2p keypair and the other to rotate the session key of a running node and return the new key. A candidate validator is expected to generate his account and _optionally_ a libp2p keypair with the first script and then run his node _optionally_ with the libp2p key and then run the second script to rotate his session key and then share the account address and session key with Dock before his node can be made a validator. \
+There are two scripts provided, one to generate account (and associated keypair) and libp2p keypair and the other to rotate the session key of a running node and return the new key. A candidate validator is expected to generate his account and _optionally_ a libp2p keypair with the first script and then run his node _optionally_ with the libp2p key and then run the second script to rotate his session key and then share the account address and session key with Dock before his node can be made a validator.\
 Generating the libp2p key is optional and only needed when the node needs to be whitelisted and the peer id needs to be communicated to other nodes using the _reserved_ (`--reserved-only` or `--reserved-nodes`) feature. Even then the running node can be inspected for its libp2p key but that's a bit of work. We ask for libp2p peer IDs of validators as we might run our validators with the reserved flags.
 
 The session key represents a pair of public keys, its the concatenation of Aura and Grandpa public keys (as we are a proof of Authority for now). You can generate new session keys with the script or the UI and that results in the creation of 2 new keypairs, inserting the corresponding private keys in the node's keystore and returning the concatenated public keys as the session key.
@@ -52,7 +52,7 @@ The browser UI can be used to restore the account generated with the script abov
 
 ### Using curl from the command line
 
-Log into the machine running the node. If you are running a docker container, ssh into the container with `docker exec -it /bin/bash`. Now run the following curl command to send the RPC call to the node (assuming node is running at  localhost:9933)
+Log into the machine running the node. If you are running a docker container, ssh into the container with `docker exec -it /bin/bash`. Now run the following curl command to send the RPC call to the node (assuming node is running at localhost:9933)
 
 ```
 $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d \
@@ -65,11 +65,11 @@ $ curl http://localhost:9933 -H "Content-Type:application/json;charset=utf-8" -d
 
 ```
 
-The above command will generate new keypairs, insert them into your keystore and output the session key (which is a concatenation of public keys).&#x20;
+The above command will generate new keypairs, insert them into your keystore and output the session key (which is a concatenation of public keys).
 
 ### Using script
 
-The script [rotate\_session\_key](https://github.com/docknetwork/dock-substrate/blob/master/scripts/rotate\_session\_key) is used to generate a new session key, which is a pair of public keys, of a running node, insert the corresponding private keys in the node's keystore, and return the session key.  It optionally accepts an argument of the node's RPC endpoint and if not given, assumes the node running at http://localhost:9933.&#x20;
+The script [rotate\_session\_key](https://github.com/docknetwork/dock-substrate/blob/master/scripts/rotate\_session\_key) is used to generate a new session key, which is a pair of public keys, of a running node, insert the corresponding private keys in the node's keystore, and return the session key. It optionally accepts an argument of the node's RPC endpoint and if not given, assumes the node running at http://localhost:9933.
 
 **Example run of the script**
 
@@ -90,7 +90,7 @@ If you do not wish to use the script, you can connect our UI to your node and po
 
 ### Inserting session keys
 
-To generate session keys deterministically and insert them to the node's keystore (which is needed when using running validators with backups as explained [here](broken-reference) in the Deployment section), you need to run the node.js script  `insert_session_key_with_seed.js` from [here](https://github.com/docknetwork/sdk/blob/poa-1/scripts/insert\_session\_key\_with\_seed.js) on the machine running the node as the script makes an unsafe RPC call. The script assumes an environment variable `FullNodeEndpoint` to be set which contains the websocket endpoint of the node and takes 1 argument which is the seed used to generate the session key (session key is a pair of Aura and Grandpa public keys and we use the same seed to generate both the keys). The seed can be a 32 byte hex or a secret phrase.&#x20;
+To generate session keys deterministically and insert them to the node's keystore (which is needed when using running validators with backups as explained [here](deployment.md) , you need to run the node.js script `insert_session_key_with_seed.js` from [here](https://github.com/docknetwork/sdk/blob/poa-1/scripts/insert\_session\_key\_with\_seed.js) on the machine running the node as the script makes an unsafe RPC call. The script assumes an environment variable `FullNodeEndpoint` to be set which contains the websocket endpoint of the node and takes 1 argument which is the seed used to generate the session key (session key is a pair of Aura and Grandpa public keys and we use the same seed to generate both the keys). The seed can be a 32 byte hex or a secret phrase.
 
 **Example runs of the script**
 
