@@ -1,4 +1,4 @@
-# March 07, 2024 Release Note v1.25.0
+# March 07, 2024 Release Notes v1.25.0
 
 ## Overview
 
@@ -40,6 +40,3 @@ This release includes significant improvements on Dock Certs, focusing on making
   * \[DCKA-2397] Fix for error on duplicated schema assignment when original was deleted
   * \[DCKA-2399] Fix for job failure error when updating participant information.
 
-### **Documentation and Support**
-
-* **Updated Documentation**: Our [documentation](https://docs.dock.io/) has been updated to reflect the new features and enhancements in this release. Please refer to the updated docs for detailed guidance on utilizing the new Ecosystem Tools and other features introduced in Dock Certs 1.25.0.
