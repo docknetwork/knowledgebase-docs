@@ -21,6 +21,7 @@
   * [Custom branded distribution emails](dock-certs/custom-branded-distribution-emails.md)
   * [Ecosystem Tools](dock-certs/ecosystem-tools/README.md)
     * [Ecosystem set up](dock-certs/ecosystem-tools/ecosystem-set-up.md)
+    * [Ecosystem example](dock-certs/ecosystem-tools/ecosystem-example.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes/README.md)
     * [March 07, 2024 Release Notes v1.25.0](dock-certs/dock-certs-release-notes/march-07-2024-release-note-v1.25.0.md)
     * [Feb 22, 2024 Release Notes v.1.24.0](dock-certs/dock-certs-release-notes/feb-22-2024-release-notes-v.1.24.0.md)
