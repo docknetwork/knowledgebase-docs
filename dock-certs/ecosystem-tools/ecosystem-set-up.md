@@ -34,7 +34,7 @@ After clicking **Invite participants** you will be able to select a credential s
 
 Ecosystem participants will need to have an account with Dock Certs to join the ecosystem. When they are logged in to their Dock Certs account and click on the link provided by the ecosystem administrator, they will be immediately prompted to **Join the ecosystem** and select an organization profile that will be used to participate in the ecosystem.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 16.10.15.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 16.10.15.png" alt=""><figcaption></figcaption></figure>
 
 Ecosystem Administrator and participants will see the list of Issuers and Verifiers in the table.
 
