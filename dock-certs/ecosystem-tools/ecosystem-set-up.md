@@ -12,7 +12,7 @@ Ecosystem Tools is an add-on feature. If you do not see it in your menu bar and 
 
 First steps in creating your ecosystem is defining your brand. Ecosystem branding is important, it will be present on the credentials issued by the participants and verification templates for the verifiers. Having a clearly defined brand makes it easier for ecosystem participants to trust the ecosystem and have a unified experience from credential issuance, to storage and verification.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 15.39.50.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 15.39.50.png" alt="" width="375"><figcaption></figcaption></figure>
 
 You will need to set the Ecosystem **Name**, **Description,** add an **Ecosystem URL**, a valid URL that links to a page outlining the advantages and key details of joining your ecosystem.
 
@@ -20,7 +20,7 @@ You will need to set the Ecosystem **Name**, **Description,** add an **Ecosystem
 
 Next step will allow you to set your Governance Framework document, that is used to communicate the rules and guidelines of the ecosystem to every stakeholder, ensuring clarity and consistency, which helps align all stakeholders on the processes surrounding issuance and verification.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 16.30.03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 16.30.03.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Invite a participant
 
@@ -34,7 +34,7 @@ After clicking **Invite participants** you will be able to select a credential s
 
 Ecosystem participants will need to have an account with Dock Certs to join the ecosystem. When they are logged in to their Dock Certs account and click on the link provided by the ecosystem administrator, they will be immediately prompted to **Join the ecosystem** and select an organization profile that will be used to participate in the ecosystem.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 16.10.15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 16.10.15.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Ecosystem Administrator and participants will see the list of Issuers and Verifiers in the table.
 
