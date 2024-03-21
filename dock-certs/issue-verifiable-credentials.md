@@ -1,6 +1,6 @@
 # Issue Verifiable Credentials
 
-### Issuing Credentials <a href="#h_c3a1aee140" id="h_c3a1aee140"></a>
+Issuing Credentials
 
 In the Credentials menu, click Issue credentials.
 
@@ -10,7 +10,7 @@ In the Credentials menu, click Issue credentials.
 
 Select a pre-made credential schema by clicking on it's name or [Create your own schema](create-a-schema.md). You can click on Preview to see what attributes are included in the template.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-25 at 16.19.52.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40.png" alt=""><figcaption></figcaption></figure>
 
 ### Select a design <a href="#h_662fe7eaa5" id="h_662fe7eaa5"></a>
 
@@ -46,14 +46,18 @@ Fill in all other attributes that need to be included in the credential _e.g. Su
 
 ### Formatting the CSV file for recipient upload
 
-You can download the CSV sample file to use as a base for you recipient data upload. The sample file has only 3 collumns with the _name_, _did_ and _date_ attributes.&#x20;
+You can download the CSV sample file to use as a base for you recipient data upload. The sample file has only 3 collumns with the _name_, _did_ and _date_ attributes.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-29 at 17.22.04.png" alt=""><figcaption></figcaption></figure>
 
 You will need to add columns and remove the ones you do not have in your credential schema.
 
+When uploading a file you will be able to select a charset specification. UTF-8 will bet the choice for most users. If your dataset contains special characters you might need to choose a different charset, based on the one used to encode your data file.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-03-21 at 16.19.02.png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
-If you do not know the holders dids you do not have to use it for the import, you can add emails, for the email distribution or distribute credentials manually.&#x20;
+If you do not know the holders dids you do not have to use it for the import, you can add emails, for the email distribution or distribute credentials manually.
 {% endhint %}
 
 You will be asked to match the columns on the csv file to the credential fields. If there are any required fields on the credential schema they must be filled in, otherwise the import will not be successful.
@@ -81,7 +85,7 @@ You have the options to:
 * **Zero-Knowledge Proof:** Selecting this option will issue your credential with a Dock BBS+ signing scheme. This allows credential holders to share specific data rather than show the whole credential to enhance their privacy.
 
 {% hint style="info" %}
-Persisting is a good option for issuers if they want to securely store the credentials as a backup. It encrypts the credentials using  Libsodium crypto secretbox Salsa20/Poly1305 algorithm and stores them on our servers that are located in the US and are powered by Amazon Web Services (AWS). Because the credential information is encrypted, Dock can’t access the information to ensure data privacy and security. ​
+Persisting is a good option for issuers if they want to securely store the credentials as a backup. It encrypts the credentials using Libsodium crypto secretbox Salsa20/Poly1305 algorithm and stores them on our servers that are located in the US and are powered by Amazon Web Services (AWS). Because the credential information is encrypted, Dock can’t access the information to ensure data privacy and security. ​
 {% endhint %}
 
 ### Distribute credentials <a href="#h_22a510abcd" id="h_22a510abcd"></a>
