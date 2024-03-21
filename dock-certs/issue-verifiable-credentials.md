@@ -10,7 +10,7 @@ In the Credentials menu, click Issue credentials.
 
 Select a pre-made credential schema by clicking on it's name or [Create your own schema](create-a-schema.md). You can click on Preview to see what attributes are included in the template.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Select a design <a href="#h_662fe7eaa5" id="h_662fe7eaa5"></a>
 
