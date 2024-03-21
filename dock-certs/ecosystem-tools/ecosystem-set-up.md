@@ -52,9 +52,11 @@ You will be able to select from your schemas from a dropdown or enter schema URL
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-03-21 at 17.04.20.png" alt="" width="375"><figcaption></figcaption></figure>
 
-Assigned schemas will be immediately available to participants and once credentials are issued using a schema assigned to an ecosystem, the ecosystem branding will be visible throughout the entire credential user journey.
+Credential schemas can have Restricted or Public verifiability. If the schema is assigned to at least one participant that can verify the schema, the verification will restricted to only those participants. If there are no assigned verifiers the schema will be publicly verifiable.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-02-12 at 17.30.23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-03-21 at 17.30.45.png" alt=""><figcaption></figcaption></figure>
+
+Assigned schemas will be immediately available to participants and once credentials are issued using a schema assigned to an ecosystem, the ecosystem branding will be visible throughout the entire credential user journey.
 
 Ecosystem branding will be visible in the wallet once a credential is issued by an ecosystem participant.
 
