@@ -1,4 +1,4 @@
-# Feb 09, 2024 Release Notes v1.23.0
+# Release Notes v1.23.0 Feb 09, 2024
 
 ## **Overview**
 

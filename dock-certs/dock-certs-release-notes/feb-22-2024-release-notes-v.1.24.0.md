@@ -1,6 +1,6 @@
-# Feb 22, 2024 Release Notes v.1.24.0
+# Release Notes v.1.24.0 Feb 22, 2024
 
-## **Overview:**
+## **Overview**
 
 The Dock Certs 1.24.0 release introduces a suite of Ecosystem Tools with Trust Registry integration, enhancing the platform's capabilities in managing digital credentials within ecosystems. This update emphasizes flexibility, security, and scalability, ensuring that Dock Certs remains at the forefront of digital credential management solutions.
 
