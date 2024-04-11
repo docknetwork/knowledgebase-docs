@@ -33,6 +33,7 @@
   * [Create and Manage DIDs in the Dock Wallet](dock-wallet/create-and-manage-dids-from-the-dock-wallet.md)
   * [Dock Wallet Release Notes](dock-wallet/dock-wallet-release-notes/README.md)
     * [Release Notes v0.4.19 Apr 03, 2024](dock-wallet/dock-wallet-release-notes/release-notes-v0.4.19-apr-03-2024.md)
+    * [Release Notes v0.4.19 Apr 03, 2024](dock-wallet/dock-wallet-release-notes/release-notes-v0.4.19-apr-03-2024-1.md)
 * [📄 Developer Documentation](developer-documentation/README.md)
   * [The Dock Certs API](developer-documentation/dock-api/README.md)
     * [Example Use Case](developer-documentation/dock-api/example-use-case.md)
