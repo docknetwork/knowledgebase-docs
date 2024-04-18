@@ -1,6 +1,6 @@
 # Verify Credentials
 
-## Verification process <a href="#h_d119e38335" id="h_d119e38335"></a>
+Verification process
 
 In a typical verification process, there are three main parties:
 
@@ -22,12 +22,12 @@ Optionally, you can choose a **Verifier DID** which will be shown to the holder 
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 15.00.55.png" alt=""><figcaption></figcaption></figure>
 
-The verifier can choose which credential details the holder is required to send in order for the credential to be accepted.&#x20;
+The verifier can choose which credential details the holder is required to share  for the credential to be accepted.  Each attribute will be either required for verification and if not present will return an invalid verification or optional which means that the holder can choose if they want to share that information or not.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 15.03.35.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-04-18 at 16.20.04.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-The list will have only the attributes that are included in the credential schemas. If you want to include an attribute to the verification template it has to be included in at least one of your credential templates.
+The list will have only the attributes that are included in the credential schemas. If you want to include another attribute to the verification template you need to choose Custom Attribute and type in the name of the attribute.&#x20;
 {% endhint %}
 
 When verifying Zero Knowledge Proof credentials, you can use range proof verification conditions, that will verify the credential without disclosing the actual value of an attribute. For example, if you want to verify that the credential holder is older than 18 you can choose attribute Age and condition is greater than 18.
@@ -53,7 +53,7 @@ First step for the holder is to **Scan** the QR code with their wallet and selec
 If the credentials were issued with Zero Knowledge Proof signatures the holder will be able to choose which details on the credentials to share with the verifier.
 {% endhint %}
 
-If the credentials are valid and the verification is successful, this is what the holder will see a **Verification Successful** message, if the credential could not be verified a **Verification Failed** message will appear.&#x20;
+If the credentials are valid and the verification is successful, this is what the holder will see a **Verification Successful** message, if the credential could not be verified a **Verification Failed** message will appear.
 
 ## Verification History
 
@@ -91,4 +91,4 @@ After the Verification template is imported you can share it with the holder to 
 
 ![](https://downloads.intercomcdn.com/i/o/801966471/8b2b8552b1276fc19e7bc89d/Screenshot\_20230807\_141402\_DockApp.jpg)
 
-Holder will scan this QR code with their Dock Wallet and follow the [verification steps for the holder](verify-credentials.md#h\_551a4bc680).&#x20;
+Holder will scan this QR code with their Dock Wallet and follow the [verification steps for the holder](verify-credentials.md#h\_551a4bc680).
