@@ -10,10 +10,6 @@ This release includes updates to the user interface, improvements to verificatio
 
 * **\[DCKA-2468]**: Verification templates in Certs now support optional fields. Administrators can designate attributes as optional, enhancing flexibility in proof presentation responses.
 
-#### **Ability to Close Upgrade Pop-up**
-
-* **\[DCKA-2485]**: Users now have the option to close the "Upgrade your plan to continue" pop-up and remain on the same screen. This feature allows users to adjust their work and proceed without triggering the pop-up again.
-
 #### **Ecosystem Membership Display in Organization Profiles**
 
 * **\[DCKA-2417]**: Organization profiles now display the ecosystems where the organization profile is used. Additionally, ecosystem badges are included in the organization profile details, providing easy access to ecosystem information.
