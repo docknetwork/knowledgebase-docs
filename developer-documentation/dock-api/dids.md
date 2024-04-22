@@ -96,7 +96,7 @@ The API supports resolving many DID methods, some examples are:
 
 <details>
 
-<summary>GET /dids/{did} REQUEST CURL</summary>
+<summary>GET /dids/{did} REQUEST </summary>
 
 ```bash
 curl --location --request GET 'https://api.dock.io/dids/did:dock:xyz' \
@@ -144,24 +144,22 @@ curl --location --request GET 'https://api.dock.io/dids/did:dock:xyz' \
 
 Return a list of all DIDs that your user account controls as fully resolved DID documents.
 
-### Parameters <a href="#list-dids-parameters" id="list-dids-parameters"></a>
+<details>
 
-<table><thead><tr><th width="92">Name</th><th width="81">In</th><th width="88">Type</th><th width="107">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
+<summary>GET /dids REQUEST</summary>
 
-### Responses <a href="#list-dids-responses" id="list-dids-responses"></a>
-
-<table><thead><tr><th width="99">Status</th><th width="134">Meaning</th><th width="350">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>All of a user's DIDs fully resolved into DID documents.</td><td><a href="index.html.md#schemadiddoc">DIDDock</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
-
-> GET /dids REQUEST
-
-```shell
+```bash
 curl --location --request GET 'https://api.dock.io/dids' \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --data-raw ''
 
 ```
 
-> 200 Response
+</details>
+
+<details>
+
+<summary>200 Response</summary>
 
 ```json
 [
@@ -186,21 +184,25 @@ curl --location --request GET 'https://api.dock.io/dids' \
 ]
 ```
 
+</details>
+
+### Parameters <a href="#list-dids-parameters" id="list-dids-parameters"></a>
+
+<table data-full-width="true"><thead><tr><th width="92">Name</th><th width="81">In</th><th width="88">Type</th><th width="107">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
+
+### Responses <a href="#list-dids-responses" id="list-dids-responses"></a>
+
+<table data-full-width="true"><thead><tr><th width="99">Status</th><th width="134">Meaning</th><th width="350">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>All of a user's DIDs fully resolved into DID documents.</td><td><a href="index.html.md#schemadiddoc">DIDDock</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
 ## Delete DID <a href="#list-dids-parameters" id="list-dids-parameters"></a>
 
 Deletes a DID and its metadata from the blockchain and our platform. This will also delete the associated keypair from the key management system meaning that you cannot sign messages or credentials with it after this operation. The DID will no longer be able to be resolved. This operation is not reversible.
 
-### Parameters <a href="#delete-did-parameters" id="delete-did-parameters"></a>
+<details>
 
-<table><thead><tr><th width="100">Name</th><th width="73">In</th><th width="85">Type</th><th width="97">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td><a href="index.html.md#schemadiddock">DID</a></td><td>true</td><td>Represents a specific DID that uniquely identifies the key resource.</td></tr></tbody></table>
+<summary>DELETE /dids/{did} REQUEST</summary>
 
-### Responses <a href="#delete-did-responses" id="delete-did-responses"></a>
-
-<table><thead><tr><th width="99">Status</th><th width="141">Meaning</th><th width="345">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will remove the DID.</td><td><a href="index.html.md#schemajobid">JobId</a></td></tr><tr><td>401</td><td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td><td>The request was unsuccessful, because you don't own the DID.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The DID does not exist.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>405</td><td><a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.5">Method not Allowed</a></td><td>The {did} value is blank/empty. Please ensure that the {did} value does exist.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
-
-> DELETE /dids/{did} REQUEST
-
-```shell
+```bash
 curl --location --request DELETE https://api.dock.io/dids/{did} \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --header 'Content-Type: application/json' \
@@ -209,7 +211,11 @@ curl --location --request DELETE https://api.dock.io/dids/{did} \
 
 ```
 
-> 200 Response
+</details>
+
+<details>
+
+<summary>200 Response</summary>
 
 ```json
 {
@@ -220,21 +226,25 @@ curl --location --request DELETE https://api.dock.io/dids/{did} \
 }
 ```
 
+</details>
+
+### Parameters <a href="#delete-did-parameters" id="delete-did-parameters"></a>
+
+<table><thead><tr><th width="100">Name</th><th width="73">In</th><th width="85">Type</th><th width="97">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td><a href="index.html.md#schemadiddock">DID</a></td><td>true</td><td>Represents a specific DID that uniquely identifies the key resource.</td></tr></tbody></table>
+
+### Responses <a href="#delete-did-responses" id="delete-did-responses"></a>
+
+<table><thead><tr><th width="99">Status</th><th width="141">Meaning</th><th width="345">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will remove the DID.</td><td><a href="index.html.md#schemajobid">JobId</a></td></tr><tr><td>401</td><td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td><td>The request was unsuccessful, because you don't own the DID.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The DID does not exist.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>405</td><td><a href="https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.5">Method not Allowed</a></td><td>The {did} value is blank/empty. Please ensure that the {did} value does exist.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
 ## Export DID
 
 Exports the DID document and keys as an encrypted Universal Wallet JSON-LD document
 
-### Parameters <a href="#export-did-parameters" id="export-did-parameters"></a>
+<details>
 
-<table><thead><tr><th width="125">Name</th><th width="84">In</th><th width="92">Type</th><th width="115">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td><a href="index.html.md#schemadiddock">DID</a></td><td>true</td><td>Represents a specific DID that uniquely identifies the key resource.</td></tr><tr><td>password</td><td>body</td><td>string</td><td>true</td><td>A password to encrypt the JSON-LD payload with</td></tr></tbody></table>
+<summary>POST /dids/{did}/export REQUEST</summary>
 
-### Responses <a href="#export-did-responses" id="export-did-responses"></a>
-
-<table><thead><tr><th width="101">Status</th><th width="158">Meaning</th><th width="333">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and the DID has been exported.</td><td></td></tr><tr><td>401</td><td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td><td>The request was unsuccessful, because you don't own the DID.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The DID does not exist.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
-
-> POST /dids/{did}/export REQUEST
-
-```shell
+```bash
 curl --location --request POST https://api.dock.io/dids/{did}/export \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --header 'Content-Type: application/json' \
@@ -244,9 +254,23 @@ curl --location --request POST https://api.dock.io/dids/{did}/export \
 
 ```
 
-> 200 Response
+</details>
 
-```json
+<details>
+
+<summary>200 Response</summary>
+
+```
 {
 }
 ```
+
+</details>
+
+### Parameters <a href="#export-did-parameters" id="export-did-parameters"></a>
+
+<table><thead><tr><th width="125">Name</th><th width="84">In</th><th width="92">Type</th><th width="115">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td><a href="index.html.md#schemadiddock">DID</a></td><td>true</td><td>Represents a specific DID that uniquely identifies the key resource.</td></tr><tr><td>password</td><td>body</td><td>string</td><td>true</td><td>A password to encrypt the JSON-LD payload with</td></tr></tbody></table>
+
+### Responses <a href="#export-did-responses" id="export-did-responses"></a>
+
+<table><thead><tr><th width="101">Status</th><th width="158">Meaning</th><th width="333">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and the DID has been exported.</td><td></td></tr><tr><td>401</td><td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td><td>The request was unsuccessful, because you don't own the DID.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The DID does not exist.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
