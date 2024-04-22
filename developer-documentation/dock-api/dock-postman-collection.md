@@ -23,17 +23,11 @@ To create a new DID to issue with, go to **Create DID** and click **Send**. The 
 
 The Dock API supports `did:dock`, `did:polygonid` and `did:key` method creation.
 
-{% hint style="info" %}
-Creating a Dock DID submits a transaction to the blockchain, this could take some time to process. Please hit the \`/jobs\` endpoint to check the status of the job to see if it's finalized or not.
-{% endhint %}
+<details>
 
-{% hint style="info" %}
-When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
-{% endhint %}
+<summary>DID CREATED - 200 Response</summary>
 
-> DID CREATED - 200 Response
-
-```json
+```
 {
     "id": "823",
     "data": {
@@ -44,15 +38,23 @@ When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
 }
 ```
 
+</details>
+
+{% hint style="info" %}
+Creating a Dock DID submits a transaction to the blockchain, this could take some time to process. Please hit the \`/jobs\` endpoint to check the status of the job to see if it's finalized or not.
+{% endhint %}
+
+{% hint style="info" %}
+When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
+{% endhint %}
+
 ### 2. Verify the New DID
 
 To verify if the new DID has been registered, go to **Verify DID Registered** and click **Send**.
 
-{% hint style="info" %}
-You only need to create a DID once and then you can issue many credentials with it. A subject/holder DID should not be the same as the issuer DID in a real world credential.
-{% endhint %}
+<details>
 
-> DID VERIFIED - 200 Response
+<summary>DID VERIFIED - 200 Response</summary>
 
 ```json
 {
@@ -68,13 +70,21 @@ You only need to create a DID once and then you can issue many credentials with 
 }
 ```
 
+</details>
+
+{% hint style="info" %}
+You only need to create a DID once and then you can issue many credentials with it. A subject/holder DID should not be the same as the issuer DID in a real world credential.
+{% endhint %}
+
 ### 3. Create a Signed Credential
 
 To create a Verifiable Credential using the the new issuer DID, go to **Create Signed Credential** and click **Send**. This will send some example credential data to the API and sign it with your DID keypair. It will return a Verifiable Credential that conforms to the W3C spec.
 
-> CREDENTIAL ISSUED - 200 Response
+<details>
 
-```json
+<summary>CREDENTIAL ISSUED - 200 Response</summary>
+
+```
 {
     "@context": [
         "https://www.w3.org/2018/credentials/v1",
@@ -93,11 +103,15 @@ To create a Verifiable Credential using the the new issuer DID, go to **Create S
 }
 ```
 
+</details>
+
 ### 4. Verify the Signed Credential
 
 To verify if the credential's cryptographic proof, revocation status and more go to **Verify Signed Credential** and click **Send**.
 
-> CREDENTIAL VERIFIED - 200 Response
+<details>
+
+<summary>CREDENTIAL VERIFIED - 200 Response</summary>
 
 ```json
 {
@@ -106,13 +120,17 @@ To verify if the credential's cryptographic proof, revocation status and more go
 }
 ```
 
+</details>
+
 ### 5. Create a Presentation
 
 To create a Verifiable Presentation by using the credential, go to **Create Presentation** and click **Send**.
 
-> PRESENTATION CREATED - 200 Response
+<details>
 
-```json
+<summary>PRESENTATION CREATED - 200 Response</summary>
+
+```
 {
     "@context": [
         "https://www.w3.org/2018/credentials/v1"
@@ -143,21 +161,26 @@ To create a Verifiable Presentation by using the credential, go to **Create Pres
 }
 ```
 
+</details>
+
 ### 6. Verify the Presentation
 
 The same credential verification route can be used to verify a presentation. In Postman, go to **Verify Presentation** and click **Send**.
 
-{% hint style="info" %}
-These steps involve using the API to create presentations on behalf of your holders. Ideally, you should not do this and distribute the credential to your users and have their own wallet apps create the presentations for a verifier.
-{% endhint %}
+<details>
 
-> PRESENTATION VERIFIED - 200 Response
+<summary>PRESENTATION VERIFIED - 200 Response</summary>
 
-```json
+```
 {
     "verified": true,
     "results": []
 }
 ```
 
-####
+</details>
+
+{% hint style="info" %}
+These steps involve using the API to create presentations on behalf of your holders. Ideally, you should not do this and distribute the credential to your users and have their own wallet apps create the presentations for a verifier.
+{% endhint %}
+
