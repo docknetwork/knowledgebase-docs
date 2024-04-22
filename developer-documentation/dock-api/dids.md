@@ -52,22 +52,6 @@ curl --location --request POST 'https://api.dock.io/dids' \
 
 </details>
 
-### Parameters <a href="#create-did-parameters" id="create-did-parameters"></a>
-
-<table data-full-width="true"><thead><tr><th width="118">Name</th><th width="79">In</th><th width="98">Type</th><th width="92">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>body</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>DID as fully qualified, e.g., <code>did:dock:</code>. Default value will is a randomly generated DID.</td></tr><tr><td>type</td><td>body</td><td>string</td><td>false</td><td>Specifies the DID method to for the generated DID. Supported options are <code>key</code>, <code>polygonid</code> and <code>dock</code> (default).</td></tr><tr><td>controller</td><td>body</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>DID as fully qualified, e.g., <code>did:dock:</code>. The default value of the controller is the <code>did</code> property.</td></tr><tr><td>keyType</td><td>body</td><td><a href="index.html.md#schemakeytype">KeyType</a></td><td>false</td><td>Type of public key for DID. The default value of the keyType is <code>sr25519</code>.</td></tr></tbody></table>
-
-### Enumerated Values
-
-<table data-full-width="true"><thead><tr><th width="131">Parameter</th><th>Value</th><th>Desctiprion</th></tr></thead><tbody><tr><td>keyType</td><td>sr25519 <strong>or</strong> ed25519 <strong>or</strong> secp256k1 <strong>or</strong> bjj</td><td>keyType signature variants.</td></tr><tr><td>type</td><td>dock <strong>or</strong> key <strong>or</strong> polyginid</td><td>which DID method to generate</td></tr></tbody></table>
-
-{% hint style="info" %}
-When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
-{% endhint %}
-
-### Responses <a href="#create-did-responses" id="create-did-responses"></a>
-
-<table data-full-width="true"><thead><tr><th width="84">Status</th><th width="109">Meaning</th><th width="511">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will try to create DID. NOTE: DID does not exist on network until the job identified in the response is complete.</td><td><a href="index.html.md#schemajobstartedresult">JobStartedResult</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
-
 <details>
 
 <summary>200 Response</summary>
@@ -84,6 +68,22 @@ When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
 ```
 
 </details>
+
+### Parameters <a href="#create-did-parameters" id="create-did-parameters"></a>
+
+<table data-full-width="true"><thead><tr><th width="118">Name</th><th width="79">In</th><th width="98">Type</th><th width="92">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>body</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>DID as fully qualified, e.g., <code>did:dock:</code>. Default value will is a randomly generated DID.</td></tr><tr><td>type</td><td>body</td><td>string</td><td>false</td><td>Specifies the DID method to for the generated DID. Supported options are <code>key</code>, <code>polygonid</code> and <code>dock</code> (default).</td></tr><tr><td>controller</td><td>body</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>DID as fully qualified, e.g., <code>did:dock:</code>. The default value of the controller is the <code>did</code> property.</td></tr><tr><td>keyType</td><td>body</td><td><a href="index.html.md#schemakeytype">KeyType</a></td><td>false</td><td>Type of public key for DID. The default value of the keyType is <code>sr25519</code>.</td></tr></tbody></table>
+
+### Enumerated Values
+
+<table data-full-width="true"><thead><tr><th width="131">Parameter</th><th>Value</th><th>Desctiprion</th></tr></thead><tbody><tr><td>keyType</td><td>sr25519 <strong>or</strong> ed25519 <strong>or</strong> secp256k1 <strong>or</strong> bjj</td><td>keyType signature variants.</td></tr><tr><td>type</td><td>dock <strong>or</strong> key <strong>or</strong> polyginid</td><td>which DID method to generate</td></tr></tbody></table>
+
+{% hint style="info" %}
+When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
+{% endhint %}
+
+### Responses <a href="#create-did-responses" id="create-did-responses"></a>
+
+<table data-full-width="true"><thead><tr><th width="106">Status</th><th width="129">Meaning</th><th width="511">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will try to create DID. NOTE: DID does not exist on network until the job identified in the response is complete.</td><td><a href="index.html.md#schemajobstartedresult">JobStartedResult</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
 ## Get DID
 
@@ -105,16 +105,6 @@ curl --location --request GET 'https://api.dock.io/dids/did:dock:xyz' \
 ```
 
 </details>
-
-
-
-### Parameters <a href="#get-did-parameters" id="get-did-parameters"></a>
-
-<table data-full-width="true"><thead><tr><th width="94">Name</th><th width="82">In</th><th width="100">Type</th><th width="108">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>true</td><td>Represents a specific DID that uniquely identifies the key resource.</td></tr></tbody></table>
-
-### Responses <a href="#get-did-responses" id="get-did-responses"></a>
-
-<table data-full-width="true"><thead><tr><th width="100">Status</th><th width="190">Meaning</th><th width="457">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return the DID doc.</td><td></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The requested DID was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
 <details>
 
@@ -141,6 +131,14 @@ curl --location --request GET 'https://api.dock.io/dids/did:dock:xyz' \
 </code></pre>
 
 </details>
+
+### Parameters <a href="#get-did-parameters" id="get-did-parameters"></a>
+
+<table data-full-width="true"><thead><tr><th width="94">Name</th><th width="82">In</th><th width="100">Type</th><th width="108">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>true</td><td>Represents a specific DID that uniquely identifies the key resource.</td></tr></tbody></table>
+
+### Responses <a href="#get-did-responses" id="get-did-responses"></a>
+
+<table data-full-width="true"><thead><tr><th width="100">Status</th><th width="190">Meaning</th><th width="457">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return the DID doc.</td><td></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The requested DID was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
 ## List DIDs
 
