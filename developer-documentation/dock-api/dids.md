@@ -12,11 +12,11 @@ Currently a DID can have only one key at a time as a controller, soon we will su
 
 ## Endpoints
 
-[POST /dids](index.html.md#create-did)\
-[GET /dids/{did}](index.html.md#get-did-responses)\
-[GET /dids](index.html.md#list-dids-responses)\
-[DELETE /dids/{did}](index.html.md#delete-did)\
-[POST /dids/{did}/export](index.html.md#export-did)
+[POST /dids](dids.md#create-did)\
+[GET /dids/{did}](dids.md#get-did)\
+[GET /dids](dids.md#list-dids)\
+[DELETE /dids/{did}](dids.md#list-dids-parameters-1)\
+[POST /dids/{did}/export](dids.md#export-did)
 
 ## Create DID
 
@@ -24,24 +24,33 @@ A DID, a public key, and a controller are required to create a new DID. The cont
 
 It is important to have a public key of one of its three supported types. Dock supports 3 types of public keys: `sr25519`, `ed25519`, and `secp256k1`.
 
-> POST /dids REQUEST
+<details>
 
-```shell
+<summary>POST /dids REQUEST PAYLOAD</summary>
+
+```json
+{
+  "type": "dock",
+  "keyType": "ed25519"
+}
+```
+
+</details>
+
+<details>
+
+<summary>POST /dids REQUEST CURL</summary>
+
+```bash
 curl --location --request POST 'https://api.dock.io/dids' \
 --header 'DOCK-API-TOKEN: API_KEY' \
 --data-raw '{
   "type": "dock",
   "keyType": "ed25519"
 }'
-
 ```
 
-```json-doc
-{
-  "type": "dock",
-  "keyType": "ed25519"
-}
-```
+</details>
 
 ### Parameters <a href="#create-did-parameters" id="create-did-parameters"></a>
 
@@ -49,7 +58,7 @@ curl --location --request POST 'https://api.dock.io/dids' \
 
 ### Enumerated Values
 
-<table><thead><tr><th width="131">Parameter</th><th>Value</th><th>Desctiprion</th></tr></thead><tbody><tr><td>keyType</td><td>sr25519 <strong>or</strong> ed25519 <strong>or</strong> secp256k1 <strong>or</strong> bjj</td><td>keyType signature variants.</td></tr><tr><td>type</td><td>dock <strong>or</strong> key <strong>or</strong> polyginid</td><td>which DID method to generate</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="131">Parameter</th><th>Value</th><th>Desctiprion</th></tr></thead><tbody><tr><td>keyType</td><td>sr25519 <strong>or</strong> ed25519 <strong>or</strong> secp256k1 <strong>or</strong> bjj</td><td>keyType signature variants.</td></tr><tr><td>type</td><td>dock <strong>or</strong> key <strong>or</strong> polyginid</td><td>which DID method to generate</td></tr></tbody></table>
 
 {% hint style="info" %}
 When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
@@ -57,9 +66,11 @@ When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
 
 ### Responses <a href="#create-did-responses" id="create-did-responses"></a>
 
-<table><thead><tr><th width="84">Status</th><th width="109">Meaning</th><th width="327">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will try to create DID. NOTE: DID does not exist on network until the job identified in the response is complete.</td><td><a href="index.html.md#schemajobstartedresult">JobStartedResult</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="84">Status</th><th width="109">Meaning</th><th width="511">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will try to create DID. NOTE: DID does not exist on network until the job identified in the response is complete.</td><td><a href="index.html.md#schemajobstartedresult">JobStartedResult</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
-> 200 Response
+<details>
+
+<summary>200 Response</summary>
 
 ```json
 {
@@ -72,6 +83,8 @@ When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
 }
 ```
 
+</details>
+
 ## Get DID
 
 When a DID is provided in the path, the API will attempt to resolve that DID into a [DID document](https://www.w3.org/TR/did-core/#dfn-did-documents). This document contains the public keys and more information relating to that DID, check [the identity foundation did configuration](https://identity.foundation/.well-known/resources/did-configuration/) document to learn more.
@@ -81,28 +94,34 @@ The API supports resolving many DID methods, some examples are:
 * `did:dock:5CEdyZkZnALDdCAp7crTRiaCq6KViprTM6kHUQCD8X6VqGPW` - resolves through the Dock blockchain
 * `did:key:z6MkjRagNiMu91DduvCvgEsqLZDVzrJzFrwahc4tXLt9DoHd` - the public key is embedded in the DID
 
-> GET /dids/{did} REQUEST
+<details>
 
-```shell
+<summary>GET /dids/{did} REQUEST CURL</summary>
+
+```bash
 curl --location --request GET 'https://api.dock.io/dids/did:dock:xyz' \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --data-raw ''
-
 ```
+
+</details>
+
+
 
 ### Parameters <a href="#get-did-parameters" id="get-did-parameters"></a>
 
-<table><thead><tr><th width="94">Name</th><th width="82">In</th><th width="100">Type</th><th width="108">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>true</td><td>Represents a specific DID that uniquely identifies the key resource.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="94">Name</th><th width="82">In</th><th width="100">Type</th><th width="108">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>true</td><td>Represents a specific DID that uniquely identifies the key resource.</td></tr></tbody></table>
 
 ### Responses <a href="#get-did-responses" id="get-did-responses"></a>
 
-<table><thead><tr><th width="109">Status</th><th width="119">Meaning</th><th width="353">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return the DID doc.</td><td></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The requested DID was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="100">Status</th><th width="190">Meaning</th><th width="457">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return the DID doc.</td><td></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The requested DID was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
-> 200 Response
+<details>
 
-```json
-{
-  "@context": "https://www.w3.org/ns/did/v1",
+<summary>200 Response</summary>
+
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>  "@context": "https://www.w3.org/ns/did/v1",
   "id": "did:dock:5EEepQGeAeWnYgV8DWj5pH7pjHqrP2ZN2oBiE6ND2ZHA1dyN",
   "authentication": [
     "did:dock:5EEepQGeAeWnYgV8DWj5pH7pjHqrP2ZN2oBiE6ND2ZHA1dyN#keys-1"
@@ -119,7 +138,9 @@ curl --location --request GET 'https://api.dock.io/dids/did:dock:xyz' \
     }
   ]
 }
-```
+</code></pre>
+
+</details>
 
 ## List DIDs
 

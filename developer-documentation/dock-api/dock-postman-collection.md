@@ -27,7 +27,7 @@ The Dock API supports `did:dock`, `did:polygonid` and `did:key` method creation.
 
 <summary>DID CREATED - 200 Response</summary>
 
-```
+```json
 {
     "id": "823",
     "data": {
@@ -84,7 +84,7 @@ To create a Verifiable Credential using the the new issuer DID, go to **Create S
 
 <summary>CREDENTIAL ISSUED - 200 Response</summary>
 
-```
+```json
 {
     "@context": [
         "https://www.w3.org/2018/credentials/v1",
@@ -130,7 +130,7 @@ To create a Verifiable Presentation by using the credential, go to **Create Pres
 
 <summary>PRESENTATION CREATED - 200 Response</summary>
 
-```
+```json
 {
     "@context": [
         "https://www.w3.org/2018/credentials/v1"
@@ -171,7 +171,7 @@ The same credential verification route can be used to verify a presentation. In 
 
 <summary>PRESENTATION VERIFIED - 200 Response</summary>
 
-```
+```json
 {
     "verified": true,
     "results": []

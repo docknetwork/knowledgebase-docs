@@ -50,7 +50,7 @@ This event indicates a credential has been created. It will fire when a credenti
 
 <summary>SAMPLE JSON PAYLOAD</summary>
 
-```
+```json
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "credential_create",
@@ -99,7 +99,7 @@ This event indicates a credential has been issued. It will fire when a credentia
 
 <summary>SAMPLE JSON PAYLOAD</summary>
 
-```
+```json
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "credential_issued",
@@ -147,7 +147,7 @@ This event indicates a credential has been revoked. It will fire when a credenti
 
 <summary>SAMPLE JSON PAYLOAD</summary>
 
-```
+```json
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "credential_revoke",
@@ -171,7 +171,7 @@ This event indicates a credential has been unrevoked. It will fire when a creden
 
 <summary>SAMPLE JSON PAYLOAD</summary>
 
-```
+```json
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "credential_unrevoke",
@@ -219,7 +219,7 @@ This event indicates a `keyType` value within the DID has been updated. It will 
 
 <summary>SAMPLE JSON PAYLOAD</summary>
 
-```
+```json
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "did_update_key",
@@ -245,7 +245,7 @@ When you update both `controller` and `keyType`, you will receive `did_update_co
 
 <summary>SAMPLE JSON PAYLOAD</summary>
 
-```
+```json
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "did_update_controller",
@@ -269,7 +269,7 @@ This event indicates a DID has been deleted. It will fire when a DID has been de
 
 <summary>SAMPLE JSON PAYLOAD</summary>
 
-```
+```json
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "did_delete",
@@ -293,7 +293,7 @@ This event indicates a registry has been created. It will fire when a registry h
 
 <summary>SAMPLE JSON PAYLOAD</summary>
 
-```
+```json
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "registry_create",
