@@ -22,7 +22,9 @@ You can configure the following events to trigger the HTTP request to send the d
 
 This event indicates an anchor has been created. It will fire when an anchor has been created.
 
-> SAMPLE JSON PAYLOAD
+<details>
+
+<summary>SAMPLE JSON PAYLOAD</summary>
 
 ```json
 {
@@ -38,13 +40,17 @@ This event indicates an anchor has been created. It will fire when an anchor has
 }
 ```
 
+</details>
+
 ### credential\_create
 
 This event indicates a credential has been created. It will fire when a credential has been created.
 
-> SAMPLE JSON PAYLOAD
+<details>
 
-```json
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "credential_create",
@@ -83,13 +89,17 @@ This event indicates a credential has been created. It will fire when a credenti
 }
 ```
 
+</details>
+
 ### credential\_issued
 
 This event indicates a credential has been issued. It will fire when a credential has been issued.
 
-> SAMPLE JSON PAYLOAD
+<details>
 
-```json
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "credential_issued",
@@ -127,13 +137,17 @@ This event indicates a credential has been issued. It will fire when a credentia
 }
 ```
 
+</details>
+
 ### credential\_revoke
 
 This event indicates a credential has been revoked. It will fire when a credential has been revoked.
 
-> SAMPLE JSON PAYLOAD
+<details>
 
-```json
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "credential_revoke",
@@ -147,13 +161,17 @@ This event indicates a credential has been revoked. It will fire when a credenti
 }
 ```
 
+</details>
+
 ### credential\_unrevoke
 
 This event indicates a credential has been unrevoked. It will fire when a credential has been unrevoked.
 
-> SAMPLE JSON PAYLOAD
+<details>
 
-```json
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "credential_unrevoke",
@@ -167,11 +185,15 @@ This event indicates a credential has been unrevoked. It will fire when a creden
 }
 ```
 
+</details>
+
 ### did\_create
 
 This event indicates a DID has been created. It will fire when a DID has been created.
 
-> SAMPLE JSON PAYLOAD
+<details>
+
+<summary>SAMPLE JSON PAYLOAD</summary>
 
 ```json
 {
@@ -187,13 +209,17 @@ This event indicates a DID has been created. It will fire when a DID has been cr
 }
 ```
 
+</details>
+
 ### did\_update\_key
 
 This event indicates a `keyType` value within the DID has been updated. It will fire when the `keyType` value has been updated.
 
-> SAMPLE JSON PAYLOAD
+<details>
 
-```json
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "did_update_key",
@@ -207,15 +233,19 @@ This event indicates a `keyType` value within the DID has been updated. It will 
 }
 ```
 
+</details>
+
 ### did\_update\_controller
 
 This event indicates a `controller` value within the DID has been updated. It will fire when the `controller` value has been updated.
 
 When you update both `controller` and `keyType`, you will receive `did_update_controller` event notification too on your webhook since updating `controller` value will update the `keyType` value.
 
-> SAMPLE JSON PAYLOAD
+<details>
 
-```json
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "did_update_controller",
@@ -229,13 +259,17 @@ When you update both `controller` and `keyType`, you will receive `did_update_co
 }
 ```
 
+</details>
+
 ### did\_delete
 
 This event indicates a DID has been deleted. It will fire when a DID has been deleted.
 
-> SAMPLE JSON PAYLOAD
+<details>
 
-```json
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "did_delete",
@@ -249,13 +283,17 @@ This event indicates a DID has been deleted. It will fire when a DID has been de
 }
 ```
 
+</details>
+
 ### registry\_create
 
 This event indicates a registry has been created. It will fire when a registry has been created.
 
-> SAMPLE JSON PAYLOAD
+<details>
 
-```json
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```
 {
   "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
   "event": "registry_create",
@@ -269,11 +307,15 @@ This event indicates a registry has been created. It will fire when a registry h
 }
 ```
 
+</details>
+
 ### registry\_delete
 
 This event indicates a registry has been deleted. It will fire when a registry has been deleted.
 
-> SAMPLE JSON PAYLOAD
+<details>
+
+<summary>SAMPLE JSON PAYLOAD</summary>
 
 ```json
 {
@@ -289,11 +331,15 @@ This event indicates a registry has been deleted. It will fire when a registry h
 }
 ```
 
+</details>
+
 ### schema\_create
 
 This event indicates a schema has been created. It will fire when a schema has been created.
 
-> SAMPLE JSON PAYLOAD
+<details>
+
+<summary>SAMPLE JSON PAYLOAD</summary>
 
 ```json
 {
@@ -309,4 +355,4 @@ This event indicates a schema has been created. It will fire when a schema has b
 }
 ```
 
-####
+</details>
