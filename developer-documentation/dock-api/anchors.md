@@ -10,9 +10,9 @@ For a detailed example of the anchor workflow. Please refer [here](https://githu
 
 ## Endpoints
 
-[POST /anchors](index.html.md#create-anchor-responses)\
-[GET /anchors](index.html.md#list-anchors-responses)\
-[GET /anchors/{anchor}](index.html.md#get-anchor-responses)
+[POST /anchors](anchors.md#create-anchor)\
+[GET /anchors](anchors.md#list-anchors)\
+[GET /anchors/{anchor}](anchors.md#get-anchor)
 
 ## Create Anchor
 
@@ -22,11 +22,33 @@ The API will store the `blake2b256` hash of a document or string that you provid
 
 ### Parameters <a href="#create-anchor-parameters" id="create-anchor-parameters"></a>
 
-<table><thead><tr><th width="92">Name</th><th width="82">In</th><th width="126">Type</th><th width="94">Required</th><th>Description</th></tr></thead><tbody><tr><td>body</td><td>body</td><td>array of strings or JSON</td><td>true</td><td>Supply an array of strings or JSON documents to be hashed and anchored to the blockchain. For credentials, send the Verifiable Credential document(s) or anchor when issuing.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="92">Name</th><th width="82">In</th><th width="126">Type</th><th width="94">Required</th><th>Description</th></tr></thead><tbody><tr><td>body</td><td>body</td><td>array of strings or JSON</td><td>true</td><td>Supply an array of strings or JSON documents to be hashed and anchored to the blockchain. For credentials, send the Verifiable Credential document(s) or anchor when issuing.</td></tr></tbody></table>
 
-> POST /anchors REQUEST
+### Responses <a href="#create-anchor-responses" id="create-anchor-responses"></a>
 
-```shell
+<table data-full-width="true"><thead><tr><th width="119">Status</th><th width="169">Meaning</th><th width="307">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will try to create an anchor on the blockchain.</td><td><a href="index.html.md#schemajobid">JobId</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
+<details>
+
+<summary>POST /anchors REQUEST PAYLOAD</summary>
+
+```json
+
+[
+  "can be a string",
+  {
+    "or": "a JSON document"
+  }
+]
+```
+
+</details>
+
+<details>
+
+<summary>POST /anchors REQUEST CURL</summary>
+
+```bash
 curl --location --request POST https://api.dock.io/anchors \
 
   --header 'DOCK-API-TOKEN: API_KEY' \
@@ -37,24 +59,13 @@ curl --location --request POST https://api.dock.io/anchors \
     "or": "a JSON document"
   }
 ]'
-
 ```
 
-```json-doc
+</details>
 
-[
-  "can be a string",
-  {
-    "or": "a JSON document"
-  }
-]
-```
+<details>
 
-### Responses <a href="#create-anchor-responses" id="create-anchor-responses"></a>
-
-<table><thead><tr><th width="119">Status</th><th width="169">Meaning</th><th width="307">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will try to create an anchor on the blockchain.</td><td><a href="index.html.md#schemajobid">JobId</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
-
-> 200 Response
+<summary>200 Response</summary>
 
 ```json
 {
@@ -66,35 +77,42 @@ curl --location --request POST https://api.dock.io/anchors \
 }
 ```
 
+</details>
+
 ## List Anchors
 
 Return a list of all anchors created by the authenticated user, regardless of whether they have contributed to the batching or not.
 
 ### Parameters <a href="#list-anchors-parameters" id="list-anchors-parameters"></a>
 
-<table><thead><tr><th width="112">Name</th><th width="93">In</th><th width="121">Type</th><th width="118">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="112">Name</th><th width="93">In</th><th width="121">Type</th><th width="118">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
 
-> GET /anchors REQUEST
+### Responses <a href="#list-anchors-responses" id="list-anchors-responses"></a>
 
-```shell
+<table data-full-width="true"><thead><tr><th width="120">Status</th><th width="182">Meaning</th><th width="283">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return all anchors created by the user.</td><td>Inline</td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
+<details>
+
+<summary>GET /anchors REQUEST CURL</summary>
+
+```bash
 curl --location --request GET https://api.dock.io/anchors \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --data-raw ''
 
 ```
 
-### Responses <a href="#list-anchors-responses" id="list-anchors-responses"></a>
+</details>
 
-<table><thead><tr><th width="120">Status</th><th width="182">Meaning</th><th width="283">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return all anchors created by the user.</td><td>Inline</td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<details>
 
-> 200 Response
+<summary>200 Response</summary>
 
-```json
-[
+<pre class="language-json"><code class="lang-json">[
   {
     "anchor":"54bdd55207c4d41d2b8a7780e967bb5a06bdfb793fc4055baf244e60cd0d839c",
-    "type": "single",
-    "data": {
+<strong>    "type": "single",
+</strong>    "data": {
       "proofs": [],
       "root":"0x54bdd55207c4d41d2b8a7780e967bb5a06bdfb793fc4055baf244e60cd0d839c",
       "documentIds": [
@@ -105,7 +123,9 @@ curl --location --request GET https://api.dock.io/anchors \
      "job_id": "827"
   }
 ]
-```
+</code></pre>
+
+</details>
 
 ## Get Anchor
 
@@ -113,24 +133,27 @@ Get a specific anchor with the given ID.
 
 ### Parameters <a href="#get-anchor-parameters" id="get-anchor-parameters"></a>
 
-| Name   | In   | Type                               | Required | Description   |
-| ------ | ---- | ---------------------------------- | -------- | ------------- |
-| anchor | path | [Hex32](index.html.md#schemahex32) | true     | An anchor id. |
-
-> GET /anchors/{anchor} REQUEST
-
-```shell
-curl --location --request GET https://api.dock.io/anchors/{anchor} \
-  --header 'DOCK-API-TOKEN: API_KEY'
-  --data-raw ''
-
-```
+<table data-full-width="true"><thead><tr><th>Name</th><th>In</th><th>Type</th><th>Required</th><th>Description</th></tr></thead><tbody><tr><td>anchor</td><td>path</td><td><a href="index.html.md#schemahex32">Hex32</a></td><td>true</td><td>An anchor id.</td></tr></tbody></table>
 
 ### Responses <a href="#get-anchor-responses" id="get-anchor-responses"></a>
 
-<table><thead><tr><th width="119">Status</th><th width="159">Meaning</th><th width="303">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the anchor's details, e.g., <code>blockHash</code> and <code>root</code>.</td><td><a href="index.html.md#schemaanchor">Anchor</a></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The request was unsuccessful, because the anchor was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="119">Status</th><th width="159">Meaning</th><th width="303">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the anchor's details, e.g., <code>blockHash</code> and <code>root</code>.</td><td><a href="index.html.md#schemaanchor">Anchor</a></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The request was unsuccessful, because the anchor was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
-> 200 Response
+<details>
+
+<summary>GET /anchors/{anchor} REQUEST CURL</summary>
+
+```bash
+curl --location --request GET https://api.dock.io/anchors/{anchor} \
+  --header 'DOCK-API-TOKEN: API_KEY'
+  --data-raw ''
+```
+
+</details>
+
+<details>
+
+<summary>200 Response</summary>
 
 ```json
 {
@@ -141,17 +164,39 @@ curl --location --request GET https://api.dock.io/anchors/{anchor} \
 }
 ```
 
+</details>
+
 ## Verify Anchor
 
 Verify an anchor's merkle root and proof by supplying the source documents (array of strings of JSON objects, same as in anchor creation).
 
 ### Parameters <a href="#get-anchor-parameters" id="get-anchor-parameters"></a>
 
-<table><thead><tr><th width="133">Name</th><th width="101">In</th><th width="148">Type</th><th width="102">Required</th><th>Description</th></tr></thead><tbody><tr><td>documents</td><td>body</td><td>array of strings or JSON</td><td>true</td><td>An array of strings or JSON objects to represent documents to be hashed</td></tr><tr><td>proofs</td><td>body</td><td>JSON object array</td><td>true</td><td>An array of proofs given on anchor creation</td></tr><tr><td>root</td><td>body</td><td><a href="index.html.md#schemahex32">Hex32</a></td><td>true</td><td>The anchor merkle root/ID.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="133">Name</th><th width="101">In</th><th width="148">Type</th><th width="102">Required</th><th>Description</th></tr></thead><tbody><tr><td>documents</td><td>body</td><td>array of strings or JSON</td><td>true</td><td>An array of strings or JSON objects to represent documents to be hashed</td></tr><tr><td>proofs</td><td>body</td><td>JSON object array</td><td>true</td><td>An array of proofs given on anchor creation</td></tr><tr><td>root</td><td>body</td><td><a href="index.html.md#schemahex32">Hex32</a></td><td>true</td><td>The anchor merkle root/ID.</td></tr></tbody></table>
 
-> POST /verify REQUEST
+### Responses <a href="#get-anchor-responses" id="get-anchor-responses"></a>
 
-```shell
+<table data-full-width="true"><thead><tr><th width="110">Status</th><th>Meaning</th><th width="325">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the anchor's details, e.g., <code>blockHash</code> and <code>root</code>.</td><td><a href="index.html.md#schemaanchor">Anchor</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
+<details>
+
+<summary>POST /verify REQUEST PAYLOAD</summary>
+
+```
+{
+  "documents": [],
+  "proofs": [],
+  "root": "0x00"
+}
+```
+
+</details>
+
+<details>
+
+<summary>POST /verify REQUEST CURL</summary>
+
+```bash
 curl --location --request POST https://api.dock.io/anchors \
 
   --header 'DOCK-API-TOKEN: API_KEY' \
@@ -164,20 +209,11 @@ curl --location --request POST https://api.dock.io/anchors \
 ]'
 ```
 
-```json-doc
+</details>
 
-{
-  "documents": [],
-  "proofs": [],
-  "root": "0x00"
-}
-```
+<details>
 
-### Responses <a href="#get-anchor-responses" id="get-anchor-responses"></a>
-
-<table><thead><tr><th width="110">Status</th><th>Meaning</th><th width="325">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the anchor's details, e.g., <code>blockHash</code> and <code>root</code>.</td><td><a href="index.html.md#schemaanchor">Anchor</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
-
-> 200 Response
+<summary>200 Response</summary>
 
 ```json
 {
@@ -187,3 +223,5 @@ curl --location --request POST https://api.dock.io/anchors \
   ]
 }
 ```
+
+</details>
