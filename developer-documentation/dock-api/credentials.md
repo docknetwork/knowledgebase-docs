@@ -13,9 +13,9 @@ For Polygon ID credentials:
 
 ## Endpoints
 
-[POST /credentials](index.html.md#issue-credentials)\
-[GET /credentials/{id}](index.html.md#get-credential)\
-[DELETE /credentials/{id}](index.html.md#delete-credential)\\
+[POST /credentials](credentials.md#issue-credentials)\
+[GET /credentials/{id}](credentials.md#get-credential)\
+[DELETE /credentials/{id}](credentials.md#delete-credential)
 
 ## Issue Credential <a href="#issue-credentials" id="issue-credentials"></a>
 
@@ -40,9 +40,39 @@ By default, Dock does not store the credential contents at all - only minimal cr
 
 For a detailed example of the credential workflow. Please refer [here](https://github.com/docknetwork/dock-api-js/blob/main/workflows/credentialsFlow.js).
 
-> POST /credentials REQUEST
+### Zero Knowledge Proofs (ZKP) <a href="#zero-knowledge-proofs" id="zero-knowledge-proofs"></a>
 
-```json-doc
+Dock credentials support [anonymous credentials](https://blog.dock.io/anonymous-credentials/) using Zero Knowledge Proofs and [Selective Disclosure](https://www.dock.io/post/selective-disclosure) by using the BBS+ signing algorithm when issuing the credential. To enable this functionality, simply set the `algorithm` field in the request to `dockbbs+`.
+
+### Credential Distribution <a href="#credential-distribution" id="credential-distribution"></a>
+
+Dock's API has built in credential distribution on issuance, allowing you to send credentials directly to a holder's email and/or Dock-compatible wallet. You can achieve this by supplying the `recipientEmail` field and `distribute: true` in your request. For DID distribution, simply set the `credentialSubject.id` property to the holder's DID.
+
+### Revocation <a href="#credential-issuance-revocation" id="credential-issuance-revocation"></a>
+
+In order to support revocation the credential must be linked to a revocation [registry](index.html.md#registry\_create) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](index.html.md#schemacredential) body to the `registry.id` value.
+
+{% hint style="warning" %}
+This operation counts towards your monthly transaction/credential issuance limit for each successful call
+{% endhint %}
+
+### Parameters <a href="#issue-a-credential-parameters" id="issue-a-credential-parameters"></a>
+
+<table data-full-width="true"><thead><tr><th width="122">Name</th><th width="84">In</th><th width="100">Type</th><th width="85">Required</th><th>Description</th></tr></thead><tbody><tr><td>anchor</td><td>body</td><td>boolean</td><td>false</td><td>Whether to anchor the credential on the blockchain as soon as it is issued. Defaults to false.</td></tr><tr><td>persist</td><td>body</td><td>boolean</td><td>false</td><td>Whether to store an encrypted version of this credential with us. Defaults to false, if true you must supply password.</td></tr><tr><td>password</td><td>body</td><td>string</td><td>false</td><td>Password used to encrypt the credential if you choose to store it. The same password must be used to retrieve the credential contents. Dock does not store this password.</td></tr><tr><td>template</td><td>body</td><td>UUID string</td><td>false</td><td>The ID of the intended template/design, optional</td></tr><tr><td>format</td><td>body</td><td>string</td><td>false</td><td>Specifies the output format of the credential, either <code>jsonld</code> or <code>jwt</code>. Defaults to <code>jsonld</code>.</td></tr><tr><td>algorithm</td><td>body</td><td>string</td><td>false</td><td>Specifies which signing algorithm to use to sign the issued credential. Defaults to <code>ed25519</code>.</td></tr><tr><td>distribute</td><td>body</td><td>boolean</td><td>false</td><td>Whether to use credential distribution to DID/email, optional</td></tr><tr><td>recipientEmail</td><td>body</td><td>string</td><td>false</td><td>The holder's email for email distribution</td></tr><tr><td>credential</td><td>body</td><td><a href="index.html.md#schemacredential">Credential</a></td><td>true</td><td>Credential object as described in the <a href="index.html.md#schemacredential">schema</a>.</td></tr></tbody></table>
+
+### Enumerated Values
+
+<table data-full-width="true"><thead><tr><th width="161">Parameter</th><th width="232">Value</th><th>Description</th></tr></thead><tbody><tr><td>algorithm</td><td>ed25519 <strong>or</strong> secp256k1 <strong>or</strong> sr25519 <strong>or</strong> dockbbs+</td><td>The algorithm used to sign the credential.</td></tr></tbody></table>
+
+### Responses <a href="#issue-a-credential-responses" id="issue-a-credential-responses"></a>
+
+<table data-full-width="true"><thead><tr><th width="90">Status</th><th width="134">Meaning</th><th width="310">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the created Verifiable Credential.</td><td><a href="index.html.md#schemaverifiablecredential">VerifiableCredential</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid/insufficient credential params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>401</td><td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td><td>The request was unsuccessful, either because the authorization token was missing/invalid or you don't own the DID.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
+<details>
+
+<summary>POST /credentials REQUEST PAYLOAD</summary>
+
+```json
 
 {
   "anchor": true,
@@ -66,7 +96,13 @@ For a detailed example of the credential workflow. Please refer [here](https://g
 }
 ```
 
-```shell
+</details>
+
+<details>
+
+<summary>POST /credentials REQUEST CURL</summary>
+
+```bash
 curl --location --request POST https://api.dock.io/credentials/ \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --header 'Content-Type: application/json' \
@@ -91,35 +127,11 @@ curl --location --request POST https://api.dock.io/credentials/ \
 
 ```
 
-### Zero Knowledge Proofs (ZKP) <a href="#zero-knowledge-proofs" id="zero-knowledge-proofs"></a>
+</details>
 
-Dock credentials support [anonymous credentials](https://blog.dock.io/anonymous-credentials/) using Zero Knowledge Proofs and [Selective Disclosure](https://www.dock.io/post/selective-disclosure) by using the BBS+ signing algorithm when issuing the credential. To enable this functionality, simply set the `algorithm` field in the request to `dockbbs+`.
+<details>
 
-### Credential Distribution <a href="#credential-distribution" id="credential-distribution"></a>
-
-Dock's API has built in credential distribution on issuance, allowing you to send credentials directly to a holder's email and/or Dock-compatible wallet. You can achieve this by supplying the `recipientEmail` field and `distribute: true` in your request. For DID distribution, simply set the `credentialSubject.id` property to the holder's DID.
-
-### Revocation <a href="#credential-issuance-revocation" id="credential-issuance-revocation"></a>
-
-In order to support revocation the credential must be linked to a revocation [registry](index.html.md#registry\_create) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](index.html.md#schemacredential) body to the `registry.id` value.
-
-{% hint style="warning" %}
-This operation counts towards your monthly transaction/credential issuance limit for each successful call
-{% endhint %}
-
-### Parameters <a href="#issue-a-credential-parameters" id="issue-a-credential-parameters"></a>
-
-<table><thead><tr><th width="122">Name</th><th width="84">In</th><th width="100">Type</th><th width="85">Required</th><th>Description</th></tr></thead><tbody><tr><td>anchor</td><td>body</td><td>boolean</td><td>false</td><td>Whether to anchor the credential on the blockchain as soon as it is issued. Defaults to false.</td></tr><tr><td>persist</td><td>body</td><td>boolean</td><td>false</td><td>Whether to store an encrypted version of this credential with us. Defaults to false, if true you must supply password.</td></tr><tr><td>password</td><td>body</td><td>string</td><td>false</td><td>Password used to encrypt the credential if you choose to store it. The same password must be used to retrieve the credential contents. Dock does not store this password.</td></tr><tr><td>template</td><td>body</td><td>UUID string</td><td>false</td><td>The ID of the intended template/design, optional</td></tr><tr><td>format</td><td>body</td><td>string</td><td>false</td><td>Specifies the output format of the credential, either <code>jsonld</code> or <code>jwt</code>. Defaults to <code>jsonld</code>.</td></tr><tr><td>algorithm</td><td>body</td><td>string</td><td>false</td><td>Specifies which signing algorithm to use to sign the issued credential. Defaults to <code>ed25519</code>.</td></tr><tr><td>distribute</td><td>body</td><td>boolean</td><td>false</td><td>Whether to use credential distribution to DID/email, optional</td></tr><tr><td>recipientEmail</td><td>body</td><td>string</td><td>false</td><td>The holder's email for email distribution</td></tr><tr><td>credential</td><td>body</td><td><a href="index.html.md#schemacredential">Credential</a></td><td>true</td><td>Credential object as described in the <a href="index.html.md#schemacredential">schema</a>.</td></tr></tbody></table>
-
-### Enumerated Values
-
-<table><thead><tr><th width="161">Parameter</th><th width="232">Value</th><th>Description</th></tr></thead><tbody><tr><td>algorithm</td><td>ed25519 <strong>or</strong> secp256k1 <strong>or</strong> sr25519 <strong>or</strong> dockbbs+</td><td>The algorithm used to sign the credential.</td></tr></tbody></table>
-
-### Responses <a href="#issue-a-credential-responses" id="issue-a-credential-responses"></a>
-
-<table><thead><tr><th width="90">Status</th><th width="134">Meaning</th><th width="310">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the created Verifiable Credential.</td><td><a href="index.html.md#schemaverifiablecredential">VerifiableCredential</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid/insufficient credential params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>401</td><td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td><td>The request was unsuccessful, either because the authorization token was missing/invalid or you don't own the DID.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
-
-> 200 Response
+<summary>200 Response</summary>
 
 ```json
 {
@@ -151,6 +163,8 @@ This operation counts towards your monthly transaction/credential issuance limit
 }
 ```
 
+</details>
+
 ## Request Claims <a href="#request-claims" id="request-claims"></a>
 
 Creates a request to gather certain claims and then issues the holder a credential after submission. The claims are user provided and type is based on the schema provided. This can be useful to catch a subject's DID without knowing it beforehand, name or other field. It should only be used when you do not already know this data or cannot find it by other means. There is a risk that a user may enter false data - so use it sparingly and not for fields that are important.
@@ -163,11 +177,17 @@ This operation counts towards your monthly transaction/credential issuance limit
 
 ### Parameters <a href="#request-claims-parameters" id="request-claims-parameters"></a>
 
-<table><thead><tr><th width="134">Name</th><th width="76">In</th><th width="144">Type</th><th width="108">Required</th><th>Description</th></tr></thead><tbody><tr><td>schema</td><td>body</td><td>string</td><td>false</td><td>Schema URL for the issued credential</td></tr><tr><td>claims</td><td>body</td><td>array</td><td>false</td><td>The list of claims for the subject</td></tr><tr><td>credentialOptions</td><td>body</td><td><a href="index.html.md#issue-a-credential-parameters">CredentialIssueParameters</a></td><td>true</td><td>Credential issue parameters.</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="134">Name</th><th width="76">In</th><th width="144">Type</th><th width="108">Required</th><th>Description</th></tr></thead><tbody><tr><td>schema</td><td>body</td><td>string</td><td>false</td><td>Schema URL for the issued credential</td></tr><tr><td>claims</td><td>body</td><td>array</td><td>false</td><td>The list of claims for the subject</td></tr><tr><td>credentialOptions</td><td>body</td><td><a href="index.html.md#issue-a-credential-parameters">CredentialIssueParameters</a></td><td>true</td><td>Credential issue parameters.</td></tr></tbody></table>
 
-> POST /credentials/request-claims REQUEST
+### Responses <a href="#request-claims-responses" id="request-claims-responses"></a>
 
-```json-doc
+<table data-full-width="true"><thead><tr><th width="107">Status</th><th width="192">Meaning</th><th width="399">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the claims request properties.</td><td><a href="index.html.md#schemaoidcissuer">OIDCIssuer</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid/insufficient credential params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>401</td><td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td><td>The request was unsuccessful, either because the authorization token was missing/invalid or you don't own the DID.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
+<details>
+
+<summary>POST /credentials/request-claims REQUEST PAYLOAD</summary>
+
+```json
 
 {
   "schema": "https://docknetwork.github.io/vc-schemas/basic-credential.json",
@@ -195,7 +215,13 @@ This operation counts towards your monthly transaction/credential issuance limit
 }
 ```
 
-```shell
+</details>
+
+<details>
+
+<summary>POST /credentials/request-claims REQUEST CURL</summary>
+
+```bash
 curl --location --request POST https://api.dock.io/credentials/ \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --header 'Content-Type: application/json' \
@@ -225,11 +251,11 @@ curl --location --request POST https://api.dock.io/credentials/ \
 }'
 ```
 
-### Responses <a href="#request-claims-responses" id="request-claims-responses"></a>
+</details>
 
-<table><thead><tr><th width="107">Status</th><th width="130">Meaning</th><th width="330">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the claims request properties.</td><td><a href="index.html.md#schemaoidcissuer">OIDCIssuer</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid/insufficient credential params.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>401</td><td><a href="https://tools.ietf.org/html/rfc7235#section-3.1">Unauthorized</a></td><td>The request was unsuccessful, either because the authorization token was missing/invalid or you don't own the DID.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<details>
 
-> 200 Response
+<summary>200 Response</summary>
 
 ```json
 {
@@ -264,28 +290,36 @@ curl --location --request POST https://api.dock.io/credentials/ \
 }
 ```
 
+</details>
+
 ## Get Credential
 
 When a credential has been persisted on our systems, you can fetch the credential data by supplying a credential ID and the password used at issuance to encrypt the credential.
 
 ### Parameters <a href="#get-credential-parameters" id="get-credential-parameters"></a>
 
-<table><thead><tr><th width="130">Name</th><th width="99">In</th><th width="90">Type</th><th width="107">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td>string</td><td>true</td><td>The ID of the credential (as a full URI).</td></tr><tr><td>password</td><td>query</td><td>string</td><td>true</td><td>The password given at issuance to encrypt the credential in storage</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="130">Name</th><th width="99">In</th><th width="90">Type</th><th width="107">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td>string</td><td>true</td><td>The ID of the credential (as a full URI).</td></tr><tr><td>password</td><td>query</td><td>string</td><td>true</td><td>The password given at issuance to encrypt the credential in storage</td></tr></tbody></table>
 
-> GET /credentials/{id} REQUEST
+### Responses <a href="#get-credential-responses" id="get-credential-responses"></a>
 
-```shell
+<table data-full-width="true"><thead><tr><th width="118">Status</th><th width="177">Meaning</th><th width="294">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return the credential metadata and its JSON contents.</td><td></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The requested credential was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
+<details>
+
+<summary>GET /credentials/{id} REQUEST CURL</summary>
+
+```bash
 curl --location --request GET 'https://api.dock.io/credentials/credential_id?password=test' \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --data-raw ''
 
 ```
 
-### Responses <a href="#get-credential-responses" id="get-credential-responses"></a>
+</details>
 
-<table><thead><tr><th width="118">Status</th><th width="177">Meaning</th><th width="294">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return the credential metadata and its JSON contents.</td><td></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The requested credential was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<details>
 
-> 200 Response
+<summary>200 Response</summary>
 
 ```json
 {
@@ -297,31 +331,41 @@ curl --location --request GET 'https://api.dock.io/credentials/credential_id?pas
 }
 ```
 
+</details>
+
 ## Delete Credential
 
 A credential can have its metadata deleted, and if persisted the contents will also be deleted. Deleting a credential will remove any reference to it and its contents from our systems. This action cannot be undone. This action will not revoke or invalidate the credential in any way.
 
 ### Parameters <a href="#delete-credential-parameters" id="delete-credential-parameters"></a>
 
-<table><thead><tr><th width="99">Name</th><th width="76">In</th><th width="102">Type</th><th width="119">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td>string</td><td>true</td><td>The ID of the credential (as a full URL-encoded URI).</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="99">Name</th><th width="76">In</th><th width="102">Type</th><th width="119">Required</th><th>Description</th></tr></thead><tbody><tr><td>did</td><td>path</td><td>string</td><td>true</td><td>The ID of the credential (as a full URL-encoded URI).</td></tr></tbody></table>
 
-> DELETE /credentials/{id} REQUEST
+### Responses <a href="#delete-credential-responses" id="delete-credential-responses"></a>
 
-```shell
+<table data-full-width="true"><thead><tr><th width="108">Status</th><th width="171">Meaning</th><th width="304">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and credential will be deleted.</td><td></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The request was unsuccessful, because the credential was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+
+<details>
+
+<summary>DELETE /credentials/{id} REQUEST CURL</summary>
+
+```bash
 curl --location --request DELETE https://api.dock.io/credentials/{id} \
   --header 'DOCK-API-TOKEN: API_KEY'
 
 ```
 
-### Responses <a href="#delete-credential-responses" id="delete-credential-responses"></a>
+</details>
 
-<table><thead><tr><th width="108">Status</th><th width="171">Meaning</th><th width="304">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and credential will be deleted.</td><td></td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The request was unsuccessful, because the credential was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<details>
 
-> 200 Response
+<summary>200 Response</summary>
 
-```json
+```
 { }
 ```
+
+</details>
 
 ## Get Credentials Metadata
 
@@ -329,21 +373,27 @@ When you issue a credential with us, persistent or not, we will store certain me
 
 ### Parameters <a href="#get-credential-parameters" id="get-credential-parameters"></a>
 
-<table><thead><tr><th width="116">Name</th><th width="96">In</th><th width="117">Type</th><th width="119">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
+<table data-full-width="true"><thead><tr><th width="116">Name</th><th width="96">In</th><th width="117">Type</th><th width="119">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
 
-> GET /credentials REQUEST
+### Responses <a href="#get-credential-responses" id="get-credential-responses"></a>
 
-```shell
+<table data-full-width="true"><thead><tr><th width="105">Status</th><th width="107">Meaning</th><th width="380">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return the credential metadata and its JSON contents.</td><td></td></tr></tbody></table>
+
+<details>
+
+<summary>GET /credentials REQUEST</summary>
+
+```bash
 curl --location --request GET 'https://api.dock.io/credentials' \
   --header 'DOCK-API-TOKEN: API_KEY' \
   --data-raw ''
 ```
 
-### Responses <a href="#get-credential-responses" id="get-credential-responses"></a>
+</details>
 
-<table><thead><tr><th width="105">Status</th><th width="107">Meaning</th><th width="380">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return the credential metadata and its JSON contents.</td><td></td></tr></tbody></table>
+<details>
 
-> 200 Response
+<summary>200 Response</summary>
 
 ```json
 [
@@ -360,3 +410,5 @@ curl --location --request GET 'https://api.dock.io/credentials' \
   }
 ]
 ```
+
+</details>
