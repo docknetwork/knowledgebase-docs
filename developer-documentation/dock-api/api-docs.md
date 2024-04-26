@@ -12,7 +12,7 @@ This is a schema for an API Error.
 
 #### Properties
 
-<table data-full-width="true"><thead><tr><th width="138">Name</th><th width="131">Type</th><th width="176">Required</th><th>Description</th></tr></thead><tbody><tr><td>status</td><td>integer</td><td>false</td><td>Status of the error.</td></tr><tr><td>type</td><td>string</td><td>false</td><td>Type of the error.</td></tr><tr><td>message</td><td>string</td><td>false</td><td>Message of the error.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="138">Name</th><th width="131">Type</th><th width="176">Required</th><th>Description</th></tr></thead><tbody><tr><td>status</td><td>integer</td><td>false</td><td>Status of the error.</td></tr><tr><td>type</td><td>string</td><td>false</td><td>Type of the error.</td></tr><tr><td>message</td><td>string</td><td>false</td><td>Message of the error.</td></tr></tbody></table>
 
 <details>
 
@@ -35,7 +35,7 @@ This is a schema for an API Error.
 
 ### Properties
 
-<table data-full-width="true"><thead><tr><th width="100">Name</th><th width="99">Type</th><th width="114">Required</th><th>Description</th></tr></thead><tbody><tr><td>Hex32</td><td>string</td><td>false</td><td>32 byte hex string. Ignoring higher base (base64) for simplicity.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="100">Name</th><th width="99">Type</th><th width="114">Required</th><th>Description</th></tr></thead><tbody><tr><td>Hex32</td><td>string</td><td>false</td><td>32 byte hex string. Ignoring higher base (base64) for simplicity.</td></tr></tbody></table>
 
 ```json
 "string"
@@ -47,7 +47,7 @@ Object containing unique id of the background task and associated data. This id 
 
 ### Properties
 
-<table data-full-width="true"><thead><tr><th width="110">Name</th><th width="130">Type</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td><a href="index.html.md#schemajobid">JobId</a></td><td>Unique id of the background task. This id can be used to query the job status.</td></tr><tr><td>data</td><td>object</td><td>Data of the object.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="110">Name</th><th width="130">Type</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td><a href="index.html.md#schemajobid">JobId</a></td><td>Unique id of the background task. This id can be used to query the job status.</td></tr><tr><td>data</td><td>object</td><td>Data of the object.</td></tr></tbody></table>
 
 ```json
 {
@@ -73,7 +73,7 @@ This is a schema used in Job operation to get a status of the job.
 
 #### Enumerated Values
 
-<table data-full-width="true"><thead><tr><th width="158">Property</th><th width="323">Value</th><th>Description</th></tr></thead><tbody><tr><td>JobStatus</td><td>todo <strong>or</strong> finalized <strong>or</strong> in_progress <strong>or</strong> error.</td><td>Job Status variants.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="158">Property</th><th width="323">Value</th><th>Description</th></tr></thead><tbody><tr><td>JobStatus</td><td>todo <strong>or</strong> finalized <strong>or</strong> in_progress <strong>or</strong> error.</td><td>Job Status variants.</td></tr></tbody></table>
 
 ```json
 "in_progress"
@@ -85,7 +85,7 @@ This is a schema used in Job operation to get description of the job including t
 
 ### Properties
 
-<table data-full-width="true"><thead><tr><th width="121">Name</th><th width="142">Type</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td><a href="index.html.md#schemajobid">JobId</a></td><td>Unique id of the background task. This id can be used to query the job status.</td></tr><tr><td>status</td><td><a href="index.html.md#schemajobstatus">JobStatus</a></td><td>Status of the job.</td></tr><tr><td>result</td><td>object</td><td>false</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="121">Name</th><th width="142">Type</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td><a href="index.html.md#schemajobid">JobId</a></td><td>Unique id of the background task. This id can be used to query the job status.</td></tr><tr><td>status</td><td><a href="index.html.md#schemajobstatus">JobStatus</a></td><td>Status of the job.</td></tr><tr><td>result</td><td>object</td><td>false</td></tr></tbody></table>
 
 ```json
 {
@@ -102,7 +102,7 @@ DID as fully qualified, e.g., `did:dock:`.
 
 ### Properties
 
-<table data-full-width="true"><thead><tr><th width="93">Name</th><th width="99">Type</th><th width="119">Required</th><th>Description</th></tr></thead><tbody><tr><td>DID</td><td>string</td><td>false</td><td>DID as fully qualified, e.g., <code>did:dock:</code>. You cannot specify your own DID, the DID value will be randomly generated.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="93">Name</th><th width="99">Type</th><th width="119">Required</th><th>Description</th></tr></thead><tbody><tr><td>DID</td><td>string</td><td>false</td><td>DID as fully qualified, e.g., <code>did:dock:</code>. You cannot specify your own DID, the DID value will be randomly generated.</td></tr></tbody></table>
 
 ```json
 "did:dock:xyz"
@@ -186,7 +186,7 @@ This is a schema that represents a credential format expected by API caller when
 
 ### Properties
 
-<table data-full-width="true"><thead><tr><th width="121">Name</th><th width="153">Type</th><th width="102">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>string(uri)</td><td>false</td><td>Credential ID. The default value is a creds.dock.io uri with random ID.</td></tr><tr><td>context</td><td>[string or object]</td><td>false</td><td>Credential context array of string URIs and/or embedded JSON-LD context objects. If no context parameter is supplied, we will auto generate contexts for you. If you do supply this parameter, you must ensure that all JSON-LD terms are defined. This is for advanced users.</td></tr><tr><td>type</td><td>[string]</td><td>false</td><td>Credential type. The default value is ['VerifiableCredential']</td></tr><tr><td>subject</td><td>object or [object]</td><td>true</td><td>Credential subject or subjects array.</td></tr><tr><td>schema</td><td>string</td><td>false</td><td>Schema ID returned by create schema route or a valid URI</td></tr><tr><td>issuer</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>Credential issuer. DID as fully qualified, e.g., <code>did:dock:</code>. If not supplied the credential will not be signed.</td></tr><tr><td>issuanceDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential was issued specified in RFC 3339 format. The issuanceDate will be automatically set if not provided.</td></tr><tr><td>expirationDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential expired is specified in RFC 3339 format. The default value of the expirationDate will be empty if the user does not provide it.</td></tr><tr><td>status</td><td>object or string</td><td>false</td><td>Revocation registry id or user supplied status object containg a Dock revocation registry identifier.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="121">Name</th><th width="153">Type</th><th width="102">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>string(uri)</td><td>false</td><td>Credential ID. The default value is a creds.dock.io uri with random ID.</td></tr><tr><td>context</td><td>[string or object]</td><td>false</td><td>Credential context array of string URIs and/or embedded JSON-LD context objects. If no context parameter is supplied, we will auto generate contexts for you. If you do supply this parameter, you must ensure that all JSON-LD terms are defined. This is for advanced users.</td></tr><tr><td>type</td><td>[string]</td><td>false</td><td>Credential type. The default value is ['VerifiableCredential']</td></tr><tr><td>subject</td><td>object or [object]</td><td>true</td><td>Credential subject or subjects array.</td></tr><tr><td>schema</td><td>string</td><td>false</td><td>Schema ID returned by create schema route or a valid URI</td></tr><tr><td>issuer</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>Credential issuer. DID as fully qualified, e.g., <code>did:dock:</code>. If not supplied the credential will not be signed.</td></tr><tr><td>issuanceDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential was issued specified in RFC 3339 format. The issuanceDate will be automatically set if not provided.</td></tr><tr><td>expirationDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential expired is specified in RFC 3339 format. The default value of the expirationDate will be empty if the user does not provide it.</td></tr><tr><td>status</td><td>object or string</td><td>false</td><td>Revocation registry id or user supplied status object containg a Dock revocation registry identifier.</td></tr></tbody></table>
 
 <details>
 
@@ -216,11 +216,11 @@ This is a schema that represents a Verifiable (signed) Presentation returned by 
 
 ### Properties
 
-<table data-full-width="true"><thead><tr><th width="144">Name</th><th width="163">Type</th><th width="121">Required</th><th>Description</th></tr></thead><tbody><tr><td>@context</td><td><a href="index.html.md#schemacontext">Context</a></td><td>true</td><td>JSON-LD context.</td></tr><tr><td>id</td><td>string(uri)</td><td>true</td><td>Verifiable (signed) presentation id.</td></tr><tr><td>type</td><td>string</td><td>true</td><td>Verifiable (signed) presentation type.</td></tr><tr><td>verifiableCredential</td><td><a href="index.html.md#schemaverifiablecredential">VerifiableCredential</a></td><td>true</td><td>Verifiable (signed) Credential returned by API. The current set of properties is almost complete.</td></tr><tr><td>proof</td><td>object</td><td>true</td><td>Proof of credential.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="144">Name</th><th width="163">Type</th><th width="121">Required</th><th>Description</th></tr></thead><tbody><tr><td>@context</td><td><a href="index.html.md#schemacontext">Context</a></td><td>true</td><td>JSON-LD context.</td></tr><tr><td>id</td><td>string(uri)</td><td>true</td><td>Verifiable (signed) presentation id.</td></tr><tr><td>type</td><td>string</td><td>true</td><td>Verifiable (signed) presentation type.</td></tr><tr><td>verifiableCredential</td><td><a href="index.html.md#schemaverifiablecredential">VerifiableCredential</a></td><td>true</td><td>Verifiable (signed) Credential returned by API. The current set of properties is almost complete.</td></tr><tr><td>proof</td><td>object</td><td>true</td><td>Proof of credential.</td></tr></tbody></table>
 
 ### Child Properties of Proof <a href="#proofchildpropertiespresentation" id="proofchildpropertiespresentation"></a>
 
-<table data-full-width="true"><thead><tr><th width="162">Name</th><th width="155">Type</th><th width="112">Required</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td><a href="index.html.md#schemasigtype">SigType</a></td><td>true</td><td>Type of signature.</td></tr><tr><td>proofPurpose</td><td><a href="index.html.md#schemaproofpurpose">ProofPurpose</a></td><td>true</td><td>Purpose of credential.</td></tr><tr><td>verificationMethod</td><td>string</td><td>true</td><td>Verification method.</td></tr><tr><td>created</td><td>string(date-time[RFC3339])</td><td>true</td><td>The date and time in GMT that the credential was created specified in RFC 3339 format.</td></tr><tr><td>proofValue</td><td>string</td><td>true</td><td>none</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="162">Name</th><th width="155">Type</th><th width="112">Required</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td><a href="index.html.md#schemasigtype">SigType</a></td><td>true</td><td>Type of signature.</td></tr><tr><td>proofPurpose</td><td><a href="index.html.md#schemaproofpurpose">ProofPurpose</a></td><td>true</td><td>Purpose of credential.</td></tr><tr><td>verificationMethod</td><td>string</td><td>true</td><td>Verification method.</td></tr><tr><td>created</td><td>string(date-time[RFC3339])</td><td>true</td><td>The date and time in GMT that the credential was created specified in RFC 3339 format.</td></tr><tr><td>proofValue</td><td>string</td><td>true</td><td>none</td></tr></tbody></table>
 
 <details>
 
@@ -274,11 +274,11 @@ This is a schema that represents a verifiable (signed) Credential returned by AP
 
 ### Properties
 
-<table data-full-width="true"><thead><tr><th width="155">Name</th><th width="127">Type</th><th width="107">Required</th><th>Description</th></tr></thead><tbody><tr><td>@context</td><td><a href="index.html.md#schemacontext">Context</a></td><td>false</td><td>JSON-LD context.</td></tr><tr><td>id</td><td>string(uri)</td><td>false</td><td>Credential id.</td></tr><tr><td>type</td><td>[string]</td><td>false</td><td>Credential type.</td></tr><tr><td>credentialSubject</td><td>any</td><td>false</td><td>Credential subject.</td></tr><tr><td>issuer</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>Credential issuer or DID as fully qualified, e.g., <code>did:dock:</code>.</td></tr><tr><td>issuanceDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential was issued specified in RFC 3339 format. The issuanceDate will be automatically set if not provided.</td></tr><tr><td>expirationDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential expired is specified in RFC 3339 format. The default value of the expirationDate will be empty if the user does not provide it.</td></tr><tr><td>credentialStatus</td><td>any</td><td>false</td><td>Revocation registry id or user supplied status object.</td></tr><tr><td>proof</td><td>object</td><td>false</td><td>Proof of credential.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="155">Name</th><th width="127">Type</th><th width="107">Required</th><th>Description</th></tr></thead><tbody><tr><td>@context</td><td><a href="index.html.md#schemacontext">Context</a></td><td>false</td><td>JSON-LD context.</td></tr><tr><td>id</td><td>string(uri)</td><td>false</td><td>Credential id.</td></tr><tr><td>type</td><td>[string]</td><td>false</td><td>Credential type.</td></tr><tr><td>credentialSubject</td><td>any</td><td>false</td><td>Credential subject.</td></tr><tr><td>issuer</td><td><a href="index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>Credential issuer or DID as fully qualified, e.g., <code>did:dock:</code>.</td></tr><tr><td>issuanceDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential was issued specified in RFC 3339 format. The issuanceDate will be automatically set if not provided.</td></tr><tr><td>expirationDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential expired is specified in RFC 3339 format. The default value of the expirationDate will be empty if the user does not provide it.</td></tr><tr><td>credentialStatus</td><td>any</td><td>false</td><td>Revocation registry id or user supplied status object.</td></tr><tr><td>proof</td><td>object</td><td>false</td><td>Proof of credential.</td></tr></tbody></table>
 
 ### Child Properties of Proof <a href="#proofchildpropertiescredentials" id="proofchildpropertiescredentials"></a>
 
-<table data-full-width="true"><thead><tr><th width="164">Name</th><th width="151">Type</th><th width="129">Required</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td><a href="index.html.md#schemasigtype">SigType</a></td><td>false</td><td>Type of signature.</td></tr><tr><td>proofPurpose</td><td><a href="index.html.md#schemaproofpurpose">ProofPurpose</a></td><td>false</td><td>Purpose of credential.</td></tr><tr><td>verificationMethod</td><td>string</td><td>false</td><td>Verification method.</td></tr><tr><td>created</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential was created specified in RFC 3339 format.</td></tr><tr><td>proofValue</td><td>string</td><td>false</td><td>Value of credential.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="164">Name</th><th width="151">Type</th><th width="129">Required</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td><a href="index.html.md#schemasigtype">SigType</a></td><td>false</td><td>Type of signature.</td></tr><tr><td>proofPurpose</td><td><a href="index.html.md#schemaproofpurpose">ProofPurpose</a></td><td>false</td><td>Purpose of credential.</td></tr><tr><td>verificationMethod</td><td>string</td><td>false</td><td>Verification method.</td></tr><tr><td>created</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential was created specified in RFC 3339 format.</td></tr><tr><td>proofValue</td><td>string</td><td>false</td><td>Value of credential.</td></tr></tbody></table>
 
 <details>
 
@@ -330,7 +330,7 @@ This is a schema that represents a Revocation registry used in Revocation or Unr
 
 ### Properties
 
-<table data-full-width="true"><thead><tr><th width="128">Name</th><th width="115">Type</th><th width="112">Required</th><th>Description</th></tr></thead><tbody><tr><td>addOnly</td><td>boolean</td><td>false</td><td>If the <code>addOnly</code> value is true, they cannot unrevoke and delete the registry. The default value for this is <code>false</code>.</td></tr><tr><td>policy</td><td>[<a href="index.html.md#schemadiddock">DIDDock</a>]</td><td>false</td><td>Only one policy supported as of now called <code>OneOf</code>.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="128">Name</th><th width="115">Type</th><th width="112">Required</th><th>Description</th></tr></thead><tbody><tr><td>addOnly</td><td>boolean</td><td>false</td><td>If the <code>addOnly</code> value is true, they cannot unrevoke and delete the registry. The default value for this is <code>false</code>.</td></tr><tr><td>policy</td><td>[<a href="index.html.md#schemadiddock">DIDDock</a>]</td><td>false</td><td>Only one policy supported as of now called <code>OneOf</code>.</td></tr></tbody></table>
 
 ```json
 {

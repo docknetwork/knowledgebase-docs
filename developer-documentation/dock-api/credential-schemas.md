@@ -14,11 +14,11 @@ Schemas are used to describe the structure of credentials, specifically the cred
 
 ### Parameters <a href="#create-schema-parameters" id="create-schema-parameters"></a>
 
-<table data-full-width="true"><thead><tr><th width="109">Name</th><th width="82">In</th><th width="130">Type</th><th width="139">Required</th><th>Description</th></tr></thead><tbody><tr><td>body</td><td>body</td><td>object</td><td>true</td><td>JSON-schema.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="109">Name</th><th width="82">In</th><th width="130">Type</th><th width="139">Required</th><th>Description</th></tr></thead><tbody><tr><td>body</td><td>body</td><td>object</td><td>true</td><td>JSON-schema.</td></tr></tbody></table>
 
 ### Responses <a href="#create-schema-responses" id="create-schema-responses"></a>
 
-<table data-full-width="true"><thead><tr><th width="133">Status</th><th width="177">Meaning</th><th width="270">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will try to create schema.</td><td><a href="index.html.md#schemajobid">JobId</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid params, e.g., size not supported or not JSON.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="133">Status</th><th width="177">Meaning</th><th width="270">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will try to create schema.</td><td><a href="index.html.md#schemajobid">JobId</a></td></tr><tr><td>400</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.1">Bad Request</a></td><td>The request was unsuccessful, because of invalid params, e.g., size not supported or not JSON.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
 <details>
 
@@ -137,11 +137,11 @@ Return a list of all schemas created by the authenticated user.
 
 ### Parameters <a href="#list-schemas-parameters" id="list-schemas-parameters"></a>
 
-<table data-full-width="true"><thead><tr><th width="121">Name</th><th width="102">In</th><th width="109">Type</th><th width="124">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="121">Name</th><th width="102">In</th><th width="109">Type</th><th width="124">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
 
 ### Responses <a href="#list-schemas-responses" id="list-schemas-responses"></a>
 
-<table data-full-width="true"><thead><tr><th width="110">Status</th><th width="177">Meaning</th><th width="302">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return all schemas created by the user.</td><td>Inline</td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="110">Status</th><th width="177">Meaning</th><th width="302">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and will return all schemas created by the user.</td><td>Inline</td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
 <details>
 
@@ -199,7 +199,7 @@ Reading a Schema from the Dock chain can easily be achieved by using the `get` m
 
 ### Parameters <a href="#get-schema-parameters" id="get-schema-parameters"></a>
 
-<table data-full-width="true"><thead><tr><th width="132">Name</th><th width="100">In</th><th width="111">Type</th><th width="113">Required</th><th>Description</th></tr></thead><tbody><tr><td>schemaId</td><td>path</td><td>String</td><td>true</td><td>A URL encoded schema id.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="132">Name</th><th width="100">In</th><th width="111">Type</th><th width="113">Required</th><th>Description</th></tr></thead><tbody><tr><td>schemaId</td><td>path</td><td>String</td><td>true</td><td>A URL encoded schema id.</td></tr></tbody></table>
 
 <details>
 
@@ -216,7 +216,7 @@ curl --location --request GET https://api.dock.io/schemas/{schemaId} \
 
 ### Responses <a href="#get-schema-responses" id="get-schema-responses"></a>
 
-<table data-full-width="true"><thead><tr><th width="114">Status</th><th width="178">Meaning</th><th width="297">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the requested Schema.</td><td>Inline</td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The request was unsuccessful, because the schema was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="114">Status</th><th width="178">Meaning</th><th width="297">Description</th><th>Schema</th></tr></thead><tbody><tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>The request was successful and returns the requested Schema.</td><td>Inline</td></tr><tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>The request was unsuccessful, because the schema was not found.</td><td><a href="index.html.md#schemaerror">Error</a></td></tr><tr><td>402</td><td><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402">Payment required</a></td><td>Transaction limit reached or upgrade required to proceed</td><td><a href="index.html.md#schemaerror">Error</a></td></tr></tbody></table>
 
 <details>
 

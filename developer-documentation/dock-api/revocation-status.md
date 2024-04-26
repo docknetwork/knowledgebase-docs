@@ -8,7 +8,7 @@ To check if an id is revoked or not, you can check its status with the registry 
 
 ### Parameters <a href="#get-revocation-status-parameters" id="get-revocation-status-parameters"></a>
 
-<table data-full-width="true"><thead><tr><th width="118">Name</th><th width="106">In</th><th width="117">Type</th><th width="130">Required</th><th>Description</th></tr></thead><tbody><tr><td>regId</td><td>path</td><td><a href="index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr><tr><td>revId</td><td>path</td><td><a href="index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Credential revocation id.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="118">Name</th><th width="106">In</th><th width="117">Type</th><th width="130">Required</th><th>Description</th></tr></thead><tbody><tr><td>regId</td><td>path</td><td><a href="index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr><tr><td>revId</td><td>path</td><td><a href="index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Credential revocation id.</td></tr></tbody></table>
 
 ### Responses <a href="#get-revocation-status-responses" id="get-revocation-status-responses"></a>
 
