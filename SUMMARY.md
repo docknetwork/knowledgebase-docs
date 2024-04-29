@@ -23,6 +23,8 @@
     * [Ecosystem set up](dock-certs/ecosystem-tools/ecosystem-set-up.md)
     * [Ecosystem example](dock-certs/ecosystem-tools/ecosystem-example.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes/README.md)
+    * [Release Notes v1.30.0 Apr 24, 2024](dock-certs/dock-certs-release-notes/release-notes-v1.30.0-apr-24-2024.md)
+    * [Release Notes v1.29.0 Apr 18, 2024](dock-certs/dock-certs-release-notes/release-notes-v1.29.0-apr-18-2024.md)
     * [Release Notes v1.28.0 Apr 14, 2024](dock-certs/dock-certs-release-notes/release-notes-v1.28.0-apr-14-2024.md)
     * [Release Notes v1.27.0 Apr 04, 2024](dock-certs/dock-certs-release-notes/release-notes-v1.27.0-apr-04-2024.md)
     * [Release Notes v1.26.1 Mar 22, 2024](dock-certs/dock-certs-release-notes/release-notes-v1.26.1-mar-22-2024.md)
