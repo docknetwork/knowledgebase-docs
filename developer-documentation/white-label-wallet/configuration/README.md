@@ -33,7 +33,3 @@ For example:
 "companyName": "Cool",
 "companyNamePossessive": "Cool's"
 ```
-
-##
-
-##
