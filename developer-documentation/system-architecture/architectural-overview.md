@@ -3,6 +3,13 @@
 ### Components
 
 * Hosted in AWS
+  * API and Certs deployments are in us-west-1 (Northern California) region
+    * We run validator nodes in
+      * us-west-1 N California
+      * us-east-1 N Virginia
+      * us-east-2 Ohio
+      * eu-central-2 Zurich
+      * eu-west-2 London
 * Certs is in Vercel
 * Blockchain
 
