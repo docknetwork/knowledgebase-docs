@@ -2,16 +2,24 @@
 
 ### Components
 
-* Hosted in AWS
-  * API and Certs deployments are in us-west-1 (Northern California) region
-    * We run validator nodes in
-      * us-west-1 N California
-      * us-east-1 N Virginia
-      * us-east-2 Ohio
-      * eu-central-2 Zurich
-      * eu-west-2 London
-* Certs is in Vercel
+* API
+  * AWS
+    * us-west-1 (Northern California)
+* Certs
+  * Vercel
+    * us-west-1 (Northern California)
+* Relay Service and EDV
+  * Vercel
+    * us-west-1 (Northern California)
+  * MongoDB
+    * us-west-1 (Northern California)
 * Blockchain
+  * AWS
+    * us-west-1 (Northern California)
+    * us-east-1 (North Virginia)
+    * us-east-2 (Ohio)
+    * eu-central-2 (Zurich)
+    * eu-west-2 (London)
 
 ### Dock network diagram
 
