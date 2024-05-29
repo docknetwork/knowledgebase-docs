@@ -20,7 +20,7 @@ It tracks all revocation entries in a single data type.
 
 The blockchain transaction to revoke multiple credentials at once is less expensive than the Dock Revocation Registry.
 
-Supports revocation and suspension flags equivalent, which allows specifying whether an id once added to the registry can be removed (leading to undoing the revocation) or not. Similar to the replay protection mechanism for DIDs, for each registry, the last modified block number is kept which is updated each time a credential is revoked or unrevoked.
+Supports revocation and suspension flags, which allows specifying whether an id once added to the registry can be removed (leading to undoing the revocation) or not.
 
 ## Dock Revocation Registry
 
@@ -42,14 +42,14 @@ We use [VB and KB universal types](https://github.com/docknetwork/crypto/tree/ma
 
 * Credential identifier
 * Witness - additional information provided to the credential holder.The witness is issued to the Holder during the initial issuance process and needs to be re-issued or updated after each revocation process.
-* Accumulator - one-way function that sums a large set of items into a single accumulator value. The membership of an included item can be proofed using the accumulator, the item itself, and a witness file.
-* Update transactions
+* Accumulator - one-way function that sums a large set of items into a single accumulator value. The membership of an included item can be proved using the accumulator, the item itself, and a witness. [Read more](https://github.com/docknetwork/crypto-wasm-ts/?tab=readme-ov-file#accumulator)&#x20;
+* Update transactions - contain the additions, removals and witness update polynomial for the update.
 
 #### Anonymous revocation process
 
 * Issuer uses the credential identifier of an issued credential to generate an accumulator that gets stored on the blockchain.
-* Issuer puts an update transaction on the blockchain that updates the accumulator and that the holder can use to update their witness. The most recent accumulator is present in the blockchain state and updates are stored in “calldata” which can be fetched with blockchain events.
 * Issuer provides the holder with the credential and the witness.
+* During revocation, Issuer puts an update transaction on the blockchain that updates the accumulator and that the holder can use to update their witness. The most recent accumulator is present in the blockchain state and updates are stored in “calldata” which can be fetched with blockchain events.
 * Holder uses the witness, accumulator, and the updates to generate an updated witness which is then used to create the proof of non-revocation by showing that their credential identifier is included in the accumulator.
 
 #### Additional resources
