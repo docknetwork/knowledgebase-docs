@@ -25,7 +25,9 @@
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-05-29 at 15.38.23.png" alt=""><figcaption></figcaption></figure>
 
-### Storage Details
+### Data Storage Details
+
+Dock strives to minimize the data it stores and works to follow SSI best practices of keeping private data with the individual it belongs to. Below we outline what data is used each component of our system.
 
 Dock API:
 
