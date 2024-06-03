@@ -42,5 +42,5 @@ This JSON output contains the details of the ecosystems associated with the give
 ## Integration Tests
 For more examples and usage, please refer to the integration test at:
 
-Test File Path: integration-tests/ecosystem-tools.test.ts
+Test File Path: https://github.com/docknetwork/react-native-sdk/blob/master/integration-tests/ecosystem-tools.test.ts
 This test file provides comprehensive examples on how to interact with ecosystem tools effectively.
