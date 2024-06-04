@@ -47,7 +47,7 @@ Non-anonymous
 
 Anonymous
 
-* BBS+ transitioning to BBS2023
+* BBS2023
 * PS sigs
 
 KVAC
