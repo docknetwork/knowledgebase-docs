@@ -1,6 +1,6 @@
 # Wallet SDK
 
-The [Wallet SDK](https://github.com/docknetwork/wallet-sdk-demo) enables you to build a Verifiable Credentials wallet inside your app and allows your users to receive, store, and manage their DOCK tokens too. This was built for native applications with added support for Polkadot-JS.&#x20;
+The [Wallet SDK](https://github.com/docknetwork/react-native-sdk) enables you to build a Verifiable Credentials wallet inside your app and allows your users to receive, store, and manage their DOCK tokens too. This was built for native applications with added support for Polkadot-JS.&#x20;
 
 For using the wallet-sdk, all you need to do is wrap your app in a `WalletSDKProvider` and start building your wallet.
 
@@ -12,7 +12,7 @@ yarn add @docknetwork/wallet-sdk-react-native
 
 ```
 **There are some scripts and additional dependencies required.**
-Please check our [example repo](https://github.com/docknetwork/wallet-sdk-demo) for detailed steps. 
+Please check our [example repo](https://github.com/docknetwork/wallet-sdk-examples/tree/main/react-native-example) for detailed steps. 
 
 ## React Native Example
 The following example will create a wallet and allow the user to add accounts on it. Displaying the count of documents added to the wallet.
