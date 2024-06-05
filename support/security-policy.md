@@ -26,6 +26,13 @@ Other events that impact system security.
 
 ## How We Communicate About Security Incidents
 
-We will proactively notify our customers about High Severity incidents.
+Our communication about security incidents will be based on the severity of the incident.
 
-We will include information about other incidents in our normal customer communications.
+Security Level High:\
+We will proactively notify impacted customers within 72 hours of identification.
+
+Security Level Medium:\
+We will include information about the security concern in the release notes of the product release that addresses the concern.
+
+Security Level Low:\
+No disclosure may be necessary, so communication will be adapted to the specific incident.
