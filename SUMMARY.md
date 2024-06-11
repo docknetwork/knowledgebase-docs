@@ -47,7 +47,7 @@
 * [📄 Developer Documentation](developer-documentation/README.md)
   * [System Architecture](developer-documentation/system-architecture/README.md)
     * [Architectural Overview](developer-documentation/system-architecture/architectural-overview.md)
-    * [Key Standards](developer-documentation/system-architecture/key-standards.md)
+    * [Supported Standards](developer-documentation/system-architecture/key-standards.md)
     * [Revocation](developer-documentation/system-architecture/revocation.md)
   * [The Dock Certs API](developer-documentation/dock-api/README.md)
     * [Example Use Case](developer-documentation/dock-api/example-use-case.md)
