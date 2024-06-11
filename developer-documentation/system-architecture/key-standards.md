@@ -1,6 +1,6 @@
 # Supported Standards
 
-The Dock Certs Platform is built on W3C open standards. This ensures that users can store their Credentials on any digital wallet that adheres to these standards and that any stakeholder, wherever they are in the world, can verify the authenticity of the data as long as their verification system adheres to these standards.
+The Dock Certs Platform is built on W3C open standards. This ensures that users can store their Credentials on any digital wallet that adheres to these standards and that any stakeholder, wherever they are in the world, can verify the authenticity of the data as long as their verification system adheres to these standards. If there is a standard for which you would like further clarification or support, please [contact us](../../support/).
 
 ## Standards Bodies
 
