@@ -20,6 +20,8 @@ W3C JSON-LD with MAC for KVAC
 
 Our supported revocation approaches are documented here:  [revocation.md](revocation.md "mention")
 
+Credentials are stored in our wallet SDK using [the W3C Universal Wallet 2020 specification](https://w3c-ccg.github.io/universal-wallet-interop-spec/), as implemented in [our open source Universal Wallet library](https://github.com/docknetwork/universal-wallet).
+
 ## Exchange Protocols
 
 ### Issuance
