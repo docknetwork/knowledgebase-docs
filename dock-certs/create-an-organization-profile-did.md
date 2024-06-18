@@ -24,6 +24,10 @@ Fill in the Public Name, add the Logo and Public Description you can leave the D
 
 </div>
 
+{% hint style="info" %}
+The Logo image should not exeed 1MB in size. Accepted formats: 'jpeg', 'jpg', 'png', 'bmp'. Logo image can be square or round it will be optimized on display.
+{% endhint %}
+
 All of your profiles (DIDs) will be listed on this page.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-04-18 at 16.33.22.png" alt=""><figcaption></figcaption></figure>
