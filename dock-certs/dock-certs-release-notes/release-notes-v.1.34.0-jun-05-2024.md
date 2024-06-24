@@ -2,11 +2,9 @@
 
 ### **Overview:**
 
-Certs v1.34.0 introduces several enhancements and bug fixes aimed at improving user experience and system functionality.
+Certs v1.34.0 introduces several bug fixes aimed at improving user experience and system functionality related to ecosystem tools.
 
-### **Story:**
 
-* **DCKA-2330:** Implemented the ability to delete user data from Captains Quarters (CQ) without logging into the user account. This feature enables customer success representatives to efficiently manage user data deletion requests while minimizing the potential for errors. Safeguards have been implemented to prevent accidental deletions, and deleted data is marked for irreversible deletion after 48 hours.
 
 ### **Bug Fixes:**
 
