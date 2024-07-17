@@ -88,7 +88,7 @@
     * [Publishing in App Stores](developer-documentation/white-label-wallet/publishing-in-app-stores.md)
       * [Android Build Testing and Publishing](developer-documentation/white-label-wallet/publishing-in-app-stores/android-build-testing-and-publishing.md)
       * [iOS Build Testing and Publishing](developer-documentation/white-label-wallet/publishing-in-app-stores/ios-build-testing-and-publishing.md)
-  * [Wallet SDK](developer-documentation/wallet-sdk.md)
+  * [Wallet SDK](developer-documentation/wallet-sdk/README.md)
     * [Biometric Plugin](developer-documentation/wallet-sdk/biometric-plugin.md)
     * [Ecosystem Tools](developer-documentation/wallet-sdk/ecosystem-tools.md)
 * [🪙 DOCK Token](dock-token/README.md)
