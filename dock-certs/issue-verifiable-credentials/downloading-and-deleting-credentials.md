@@ -16,8 +16,7 @@ If you don’t want to see a certain Verifiable Credentials in your account, sel
 
 If the credential is not revocable, then the recipients will still have the credential in their wallet and be able to present it to verifiers because they have full ownership of it. Only credential holders will be able to delete the credential if they chose to.
 
-If you wish to revoke the credential before deleting it see this [article.](revoking-credentials.md)
+If you wish to revoke the credential before deleting it see this [article.](../revoking-credentials.md)
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797888254/e8fbbc3e7be024a587d7d93d/63e69f45b5c87181fe442538_14-digital+credential+platform+delete+credential+from+account+view.jpg" alt=""><figcaption></figcaption></figure>
 
-### &#x20;<a href="#h_5ef77bc181" id="h_5ef77bc181"></a>

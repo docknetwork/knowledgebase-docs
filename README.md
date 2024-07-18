@@ -4,7 +4,7 @@
 
 ## Products
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Dock API</strong></td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.17.28.png">Screenshot 2024-01-30 at 11.17.28.png</a></td></tr><tr><td><strong>Dock</strong> <strong>Certs</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.12.06.png">Screenshot 2024-01-30 at 11.12.06.png</a></td></tr><tr><td><strong>Dock Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.16.14.png">Screenshot 2024-01-30 at 11.16.14.png</a></td></tr><tr><td><strong>Dock SDK</strong></td><td><a href="https://github.com/docknetwork/sdk">https://github.com/docknetwork/sdk</a></td><td><a href=".gitbook/assets/Screenshot 2024-02-05 at 14.32.21.png">Screenshot 2024-02-05 at 14.32.21.png</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td><strong>Dock API</strong></td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/documentation images 02 (1).jpg">documentation images 02 (1).jpg</a></td></tr><tr><td><strong>Dock</strong> <strong>Certs</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/documentation images 07 (1).jpg">documentation images 07 (1).jpg</a></td></tr><tr><td><strong>Dock Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td><td><a href=".gitbook/assets/documentation images 03 (1).jpg">documentation images 03 (1).jpg</a></td></tr><tr><td><strong>Dock SDK</strong></td><td><a href="https://github.com/docknetwork/sdk">https://github.com/docknetwork/sdk</a></td><td><a href=".gitbook/assets/documentation images 01 (1).jpg">documentation images 01 (1).jpg</a></td></tr></tbody></table>
 
 [Dock ​Certs API ](developer-documentation/dock-api/)Dock’s API easily integrates with your system and data sources, simplifying the creation, verification and management of Verifiable Credentials. No blockchain or cryptography knowledge is required.
 
@@ -12,7 +12,7 @@
 
 [ID Wallet](https://www.dock.io/feature/identity-wallet) SDK and White Label: Build ID Wallet capabilities inside your existing app with Dock’s powerful Wallet SDK, enabling users to effortlessly store, manage and share their Verifiable Credentials without having to download an extra app. If you don’t have an existing app, Dock’s White Label ID Wallet is the best option when development speed is a priority. Try the [Dock Wallet](https://www.dock.io/dock-wallet-app) for free.
 
-[Dock SDK ](https://github.com/docknetwork/sdk)contains a Javascript library and tooling to interact for working with Verifiable Credentials, DIDs, Claim Deduction and more. Built with PolkadotJS, for use with the [Dock Substrate Node](https://github.com/docknetwork/dock-substrate) or our public main/test networks.&#x20;
+[Dock SDK ](https://github.com/docknetwork/sdk)contains a Javascript library and tooling to interact for working with Verifiable Credentials, DIDs, Claim Deduction and more. Built with PolkadotJS, for use with the [Dock Substrate Node](https://github.com/docknetwork/dock-substrate) or our public main/test networks.
 
 ## **What can you do with Dock?**
 
@@ -64,7 +64,7 @@ The Dock blockchain acts as an immutable registry of all credential issuers. Thi
 
 </details>
 
-## Interoperability&#x20;
+## Interoperability
 
 Dock believes that credentials are most useful when they are interoperable across service providers. Our W3C compliant credential format is designed for maximum interoperability. Our anonymous credential format adheres to many W3C standards, but are designed for maximum privacy protection. We also leverage standards from OpenID, IETF, DIF, and related organizations.
 
@@ -72,7 +72,4 @@ Dock believes that credentials are most useful when they are interoperable acros
 
 Begin your journey with digital identity by signing up and start issuing verifiable credentials.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Sign up </td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.12.06 (1).png">Screenshot 2024-01-30 at 11.12.06 (1).png</a></td></tr><tr><td>Issue Verifiable Credentials</td><td><a href="dock-certs/issue-verifiable-credentials.md">issue-verifiable-credentials.md</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-29 at 15.35.37.png">Screenshot 2024-01-29 at 15.35.37.png</a></td></tr><tr><td>See API docs</td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/Screenshot 2024-01-30 at 11.17.28.png">Screenshot 2024-01-30 at 11.17.28.png</a></td></tr></tbody></table>
-
-
-
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Sign up</td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/documentation images 06 (1).jpg">documentation images 06 (1).jpg</a></td></tr><tr><td>Issue Verifiable Credentials</td><td><a href="dock-certs/issue-verifiable-credentials/">issue-verifiable-credentials</a></td><td><a href=".gitbook/assets/documentation images 05 (1).jpg">documentation images 05 (1).jpg</a></td></tr><tr><td>See API docs</td><td><a href="developer-documentation/dock-api/">dock-api</a></td><td><a href=".gitbook/assets/documentation images 04 (1).jpg">documentation images 04 (1).jpg</a></td></tr></tbody></table>

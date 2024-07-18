@@ -52,7 +52,11 @@ To assign a credential schema to participants you will need to first [create the
 
 You will be able to select from your schemas from a dropdown or enter schema URL and assign it to ecosystem participants.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-03-21 at 17.04.20.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-07-16 at 15.48.02.png" alt="" width="375"><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+You can choose to add a verification price for your schema, which will set a fee for each verification of credential using the selected schema. [Learn more about verification prices](../monetizing-credentials/)
+{% endhint %}
 
 Credential schemas can have Restricted or Public verifiability. If the schema is assigned to at least one participant that can verify the schema, the verification will restricted to only those participants. If there are no assigned verifiers the schema will be publicly verifiable.
 
@@ -68,4 +72,4 @@ Ecosystem branding will be visible in the wallet once a credential is issued by 
 
 Ecosystem administrator will be able to add verification templates that will be available for all ecosystem participants.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-03-21 at 17.13.32.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-07-18 at 14.46.28.png" alt=""><figcaption></figcaption></figure>

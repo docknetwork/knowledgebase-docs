@@ -8,13 +8,13 @@ In the Credentials menu, click Issue credentials.
 
 ### Select a credential schema <a href="#h_e6f35266ad" id="h_e6f35266ad"></a>
 
-Select a pre-made credential schema by clicking on it's name or [Create your own schema](create-a-schema.md). You can click on Preview to see what attributes are included in the template.
+Select a pre-made credential schema by clicking on it's name or [Create your own schema](../create-a-schema.md). You can click on Preview to see what attributes are included in the template.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40 (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Select a design <a href="#h_662fe7eaa5" id="h_662fe7eaa5"></a>
 
-Select a design or [create a new one](create-a-design.md) for your credentials. Alternatively, you can proceed without a design.
+Select a design or [create a new one](../create-a-design.md) for your credentials. Alternatively, you can proceed without a design.
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797670108/d8f1948a00a9b8d934c5b070/Screenshot+2023-08-01+at+14.50.40.png" alt=""><figcaption></figcaption></figure>
 
@@ -24,7 +24,7 @@ If you have many credentials to issue, you can issue them in bulk. To do this, s
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797670167/d0dbab0c2d32c4b8fb42882a/Screenshot+2023-08-01+at+14.51.00.png" alt=""><figcaption></figcaption></figure>
 
-Download the sample CSV template and fill in the details needed for your credential template. Upload the completed .csv file back to Dock Certs. [Read how to correctly format the Spreadsheet for CSV upload.](issue-verifiable-credentials.md#formatting-the-csv-file-for-recipient-upload)
+Download the sample CSV template and fill in the details needed for your credential template. Upload the completed .csv file back to Dock Certs. [Read how to correctly format the Spreadsheet for CSV upload.](./#formatting-the-csv-file-for-recipient-upload)
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797695179/a28c99740299645f876ce8be/6356f7181e5260685afe7bd9_9-Download+CSV.png" alt=""><figcaption></figcaption></figure>
 
@@ -48,13 +48,13 @@ Fill in all other attributes that need to be included in the credential _e.g. Su
 
 You can download the CSV sample file to use as a base for you recipient data upload. The sample file has only 3 collumns with the _name_, _did_ and _date_ attributes.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-29 at 17.22.04.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-01-29 at 17.22.04.png" alt=""><figcaption></figcaption></figure>
 
 You will need to add columns and remove the ones you do not have in your credential schema.
 
 When uploading a file you will be able to select a charset specification. UTF-8 will bet the choice for most users. If your dataset contains special characters you might need to choose a different charset, based on the one used to encode your data file.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-03-21 at 16.19.02.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-03-21 at 16.19.02.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you do not know the holders dids you do not have to use it for the import, you can add emails, for the email distribution or distribute credentials manually.
@@ -62,7 +62,7 @@ If you do not know the holders dids you do not have to use it for the import, yo
 
 You will be asked to match the columns on the csv file to the credential fields. If there are any required fields on the credential schema they must be filled in, otherwise the import will not be successful.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-29 at 17.29.15.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-01-29 at 17.29.15.png" alt=""><figcaption></figcaption></figure>
 
 ### Expire credential <a href="#h_c9b588481e" id="h_c9b588481e"></a>
 
@@ -74,7 +74,7 @@ If you need the credential to expire, turn on the expiration toggle and enter th
 
 After you have added your credential recipients you will be able to select the credential settings. First select which Organization Profile (DID) you want to use to issue the credentials.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-25 at 16.27.06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-01-25 at 16.27.06.png" alt=""><figcaption></figcaption></figure>
 
 You have the options to:
 
@@ -82,7 +82,7 @@ You have the options to:
 * **Generate PDF:** If you choose to persist the credentials, the PDFs will contain a QR code the recipient can scan to view and store their credential in their phone wallet app.
 * **Credential revocation:** By choosing this you leave an option for the credential to be revoked to invalid state at any time. If you leave this option unchecked, the credential can never be revoked and will always be verifiable.
 * **Anchor credentials:** This adds a hash of the credentials you issue on the Dock blockchain that can be referenced later to verify when and who created it.
-* **Zero-Knowledge Proof:** Selecting this option will issue your credential with a Dock BBS+ signing scheme. This allows credential holders to share specific data rather than show the whole credential to enhance their privacy.
+* **Zero-Knowledge Proof:** Selecting this option will issue your credential with a Dock BBS+ signing scheme. This allows credential holders to share specific data rather than show the whole credential to enhance their privacy. [It must be enabled for paid verifications.](../monetizing-credentials/setting-up-verification-fees.md)
 
 {% hint style="info" %}
 Persisting is a good option for issuers if they want to securely store the credentials as a backup. It encrypts the credentials using Libsodium crypto secretbox Salsa20/Poly1305 algorithm and stores them on our servers that are located in the US and are powered by Amazon Web Services (AWS). Because the credential information is encrypted, Dock can’t access the information to ensure data privacy and security. ​
