@@ -29,8 +29,7 @@ _**(nominators only)**_
 _**(stakers and validators)**_
 
 1. Go to the [Account actions](https://fe.dock.io/#/staking/actions) page, select 3-dots for your stake and select the **Unbond funds** option.
-2. On the modal that opens, select the amount you want to unbond. Note that it will take 7 days for the funds to unbond.\
-
+2. On the modal that opens, select the amount you want to unbond. Note that it will take 7 days for the funds to unbond.
 
 <figure><img src="../../.gitbook/assets/1 (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -42,15 +41,13 @@ _**(stakers and validators)**_
 
 </div>
 
-**Tip:** Hover over the clock icon to see exactly how long until your stake will be unbonded as shown below.\
-
+**Tip:** Hover over the clock icon to see exactly how long until your stake will be unbonded as shown below.
 
 ![](<../../.gitbook/assets/1 (4).png>)
 
 \
 \
-4\. Withdraw the amount and transfer it to another of your stash accounts to stake a new set of validators. Each stash account can only stake for one set of validators.\
-
+4\. Withdraw the amount and transfer it to another of your stash accounts to stake a new set of validators. Each stash account can only stake for one set of validators.
 
 {% hint style="warning" %}
 **Note to validators:** Redistributing your stake to other validators may affect your chances of being selected as a validator as other candidates may out-stake you for the validator spot.

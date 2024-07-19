@@ -4,7 +4,7 @@ The following describes how to stop nominating or validating and retrieve your t
 
 ### Step 1: Stop Nominating
 
-On the [Dock-JS Apps](https://fe.dock.io/#/staking) navigate to the **Staking** tab and go to the on the [**Account Actions**](https://fe.dock.io/#/staking/actions) tab and  click **Stop Nominating** or **Stop Validating** (depending on your role) on the account you'd like to stop nominating. This will "chill" the tokens.
+On the [Dock-JS Apps](https://fe.dock.io/#/staking) navigate to the **Staking** tab and go to the on the [**Account Actions**](https://fe.dock.io/#/staking/actions) tab and click **Stop Nominating** or **Stop Validating** (depending on your role) on the account you'd like to stop nominating. This will "chill" the tokens.
 
 ![](https://lh5.googleusercontent.com/Ll1N\_v8iNCIqI\_lD4\_uYz-j\_Voec0ehyIkxlUgVBFrlbwX5Dw4gwlF6V5WCWoMtGTheveTpo-bjiyaS3aG9SmcXMdXFB73PqDU6\_kc0rS7ZxoDAqxgilpdQXP1h5CqvFcbVE8rZG)
 
@@ -24,7 +24,7 @@ If successful, your balance will show as "unbonding" with an indicator of how ma
 
 ### 3. Withdraw unbonded tokens
 
-You can check the amount of time remaining until you can  withdraw your stake in the [Accounts](https://fe.dock.io/#/accounts) page by expanding your account balance. There is a tiny icon beside the word "unbonding" that will eventually become an unlock icon once your tokens are available to withdraw. Click that icon directly to submit the withdraw transaction which, once complete, will increase your transferable balance by the amount of tokens you've just fully unbonded.
+You can check the amount of time remaining until you can withdraw your stake in the [Accounts](https://fe.dock.io/#/accounts) page by expanding your account balance. There is a tiny icon beside the word "unbonding" that will eventually become an unlock icon once your tokens are available to withdraw. Click that icon directly to submit the withdraw transaction which, once complete, will increase your transferable balance by the amount of tokens you've just fully unbonded.
 
 <figure><img src="../../.gitbook/assets/unbond.png" alt=""><figcaption></figcaption></figure>
 
@@ -36,4 +36,4 @@ In order to do this you will need to manually issue an extrinsic by going to the
 
 ![](https://lh4.googleusercontent.com/YGvNYTHQQxfIPiVESy88gQTlTSvLz7ZpAmKG9bMU-Ce2bjXXUxE0BDhOYGxAUmi8Q0sOSc\_PipvCpu6EVAKPTQroVIBzKchH7iEck5VU7tSPHT9tg4CFT7Dw2lTckHE9FpNHzUxI)
 
-Confirm the transaction in the next pop-up. Once the transaction is processed, your tokens will be rebonded again and you can start staking with them.\
+Confirm the transaction in the next pop-up. Once the transaction is processed, your tokens will be rebonded again and you can start staking with them.

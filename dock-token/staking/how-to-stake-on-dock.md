@@ -1,6 +1,6 @@
 # How to stake on Dock
 
-Token holders play an important role on the Dock network by selecting validators to run and secure the Dock network and, as a result, are eligible to receive token rewards. Follow the steps below to participate as a staker on Dock.&#x20;
+Token holders play an important role on the Dock network by selecting validators to run and secure the Dock network and, as a result, are eligible to receive token rewards. Follow the steps below to participate as a staker on Dock.
 
 {% embed url="https://youtu.be/ABK8kH8D8A8" %}
 Staking on Dock
@@ -32,4 +32,4 @@ Assuming at least one of the validators you selected is in the active validator 
 
 ### Step 3: Stop staking
 
-If you decide to stop staking one or more validators, you will need to unbond your tokens. You may need to do this if for example you want to change which validators you are staking or if you want to withdraw your tokens. Detailed instructions about how to unbond are available [here](how-to-unbond-and-rebond.md) .\
+If you decide to stop staking one or more validators, you will need to unbond your tokens. You may need to do this if for example you want to change which validators you are staking or if you want to withdraw your tokens. Detailed instructions about how to unbond are available [here](how-to-unbond-and-rebond.md) .
