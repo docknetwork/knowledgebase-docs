@@ -4,8 +4,6 @@
 
 Dock has created a unique, patent-pending feature that allows setting a verification fee on credentials and introduces a new revenue stream that ecosystem administrator can leverage to motivate issuers to join their ecosystem. It converts credential issuance from expense to profit and is an important step in accelerating adoption of verifiable credentials by creating value for participating parties.&#x20;
 
-_\*Patent pending_
-
 ### How does it work?
 
 Dock's unprecedented technology utilises KVAC (Keyed Verification Anonymous Credential) to lock the credential making sure, that it can only be verified that a payment has been made.&#x20;
