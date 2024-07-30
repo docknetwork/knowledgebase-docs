@@ -1,6 +1,6 @@
 # Supported Standards
 
-The Dock Certs Platform is built on W3C open standards. This ensures that users can store their Credentials on any digital wallet that adheres to these standards and that any stakeholder, wherever they are in the world, can verify the authenticity of the data as long as their verification system adheres to these standards. If there is a standard for which you would like further clarification or support, please [contact us](../../support/).
+The Dock Certs Platform is built on W3C open standards. This ensures that users can store their Credentials on any digital wallet that adheres to these standards and that any stakeholder, wherever they are in the world, can verify the authenticity of the data as long as their verification system adheres to these standards. If there is a standard for which you would like further clarification or support, please [contact us](../../../support/).
 
 ## Standards Bodies
 
@@ -14,6 +14,16 @@ The Dock Certs Platform is built on W3C open standards. This ensures that users 
 Dock Supports the following open standards:
 
 <table><thead><tr><th width="180">Technology</th><th width="367">Open Standard</th><th>Standard Body</th></tr></thead><tbody><tr><td>Data model</td><td><a href="https://www.w3.org/TR/2022/REC-vc-data-model-20220303/">W3C Verifiable Credentials (VCs) Data Model v1.1</a></td><td>W3C</td></tr><tr><td>Credential format</td><td><a href="https://www.w3.org/TR/vc-data-model/#json-ld">W3C JSON-LD with JWT</a><br><a href="https://github.com/docknetwork/crypto-wasm-ts/tree/master/src/anonymous-credentials">W3C JSON-LD with BBS2023 for </a><a href="https://github.com/docknetwork/crypto-wasm-ts/tree/master/src/anonymous-credentials">Anonymous Credentials</a><br><a href="https://github.com/docknetwork/crypto-wasm-ts/tree/master/src/accumulator">W3C JSON-LD with MAC for KVAC paid verifications</a></td><td>W3C<br>IETF</td></tr><tr><td>Decentralized Identifier</td><td><p><a href="https://github.com/docknetwork/dock-did-driver/blob/master/Dock%20DID%20method%20specification.md">DID:dock</a></p><p><a href="https://w3c-ccg.github.io/did-method-key/">DID:key</a></p><p><a href="https://github.com/0xPolygonID/did-polygonid/blob/main/did-polygonid-method.md">DID:polygonid</a></p></td><td>W3C</td></tr><tr><td>Credential Issuance</td><td><a href="https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html">OpenID for Verifiable Credential Issuance (OID4VCI) v1.0 Draft 6</a><br><a href="https://devs.polygonid.com/docs/wallet/wallet-sdk/polygonid-sdk/iden3comm/overview/">Iden3Comm</a> for did:polygon</td><td>OIDF</td></tr><tr><td>Presentation</td><td>Default presentation exchange from <a href="https://identity.foundation/waci-didcomm/">DIF Wallet and Credential Interaction (WACI) v1.0 Draft</a> over <a href="https://identity.foundation/didcomm-messaging/spec/v2.1">DIDComm Messaging v2.1</a><br>Partial support for <a href="https://openid.net/specs/openid-4-verifiable-presentations-1_0.html">OpenID for Verifiable Presentations (OID4VP) v1.0 Draft 18</a><br><a href="https://devs.polygonid.com/docs/wallet/wallet-sdk/polygonid-sdk/iden3comm/overview/">Iden3Comm</a> for did:polygon</td><td>DIF<br>OIDF</td></tr><tr><td>Revocation</td><td><a href="https://www.w3.org/TR/vc-status-list/">Verifiable Credential Status List</a></td><td>W3C</td></tr><tr><td>Credential Wallet</td><td>Credentials are stored in our wallet SDK using <a href="https://w3c-ccg.github.io/universal-wallet-interop-spec/">the W3C Universal Wallet 2020 specification</a>, as implemented in <a href="https://github.com/docknetwork/universal-wallet">our open source Universal Wallet library</a>.</td><td>W3C</td></tr></tbody></table>
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-07-30 at 14.41.32.png" alt=""><figcaption></figcaption></figure>
+
+## Key Standards During Issuance
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-07-30 at 14.39.44.png" alt=""><figcaption></figcaption></figure>
+
+## Key Standards During Verification
+
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-07-30 at 14.40.39.png" alt=""><figcaption></figcaption></figure>
 
 ## Interoperability <a href="#interoperability" id="interoperability"></a>
 
