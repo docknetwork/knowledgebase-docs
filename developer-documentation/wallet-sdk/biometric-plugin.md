@@ -96,6 +96,19 @@ At the time of verification, the verifier can request the biometric check creden
 
 The biometric ID should not contain the user's actual biometric information. When enrolling a holder in the biometric service, it might be useful to issue an enrolment credential containing the biometric template, the generated biometric ID and any other needed information to identify a returning user. This credential can be verified to get the user's information before checking their biometric. By storing this information with the holder, it avoids the biometric service having to store that PII outside of the control of the holder. The holder should only share a biometric enrollment credential with the biometric service that issued it.
 
+## Using the Biometric Service Plugin
+
+* Create a Dock API key
+* Wrap the Dock API in your mobile API (which is usually protected with an app username / password)
+* When a specific install does a biometric check, call your mobile API to issue a biometric credential
+  * The biometric binding nested attributes in the primary credential should include the ecosystem and biometric issuer alongside the biometric ID
+  * Your mobile API calls the Dock API to do issuance to the DID
+    * In order to use the ecosystem definition of the credentials, the Dock API should be used to query the ecosystem that is found in the credential for the “\*biometric check” schema
+    * Mobile API should include the DID that the credential is pushed to
+    * This allows the biometric check credential to be managed in the ecosystem where other participants can rely on it and VPI can be enforced
+* Biometric Service Plugin monitors credentials received. When a new biometric check credential is received, old ones can be deleted from wallet storage.
+* If biometric data should not leave the device, then the biometric service provider plugin can do a local verification of the biometric enrollment credential using the credential SDK. The biometric enrollment credential is managed independent from the ecosystem, as it should only be verified by the biometric provider.
+
 ## Adding a custom biometric provider
 
 Adding a custom biometric provider will require the development of the plugin following the interface defined at [packages/react-native/lib/default-biometrics-plugin.ts](https://github.com/docknetwork/react-native-sdk/blob/master/packages/react-native/lib/default-biometrics-plugin.ts). The plugin should implement the following methods:
