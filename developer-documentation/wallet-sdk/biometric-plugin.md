@@ -98,7 +98,7 @@ The biometric ID should not contain the user's actual biometric information. Whe
 
 ## Using the Biometric Service Plugin
 
-* Create a Dock API key
+* Create a [Dock API key](../../dock-certs/creating-api-keys-and-webhook-endpoints.md)
 * Wrap the Dock API in your mobile API (which is usually protected with an app username / password)
 * When a specific install does a biometric check, call your mobile API to issue a biometric credential
   * The biometric binding nested attributes in the primary credential should include the ecosystem and biometric issuer alongside the biometric ID
