@@ -4,6 +4,7 @@
   * [Decentralized identity explained](dock-overview/decentralized-identity-explained.md)
   * [Roadmap](dock-overview/roadmap.md)
   * [Subscription Plans & Billing](dock-overview/subscription-plans-and-billing.md)
+  * [Biometric-Bound Credentials](readme/biometric-bound-credentials.md)
 * [🗳️ Dock Certs](dock-certs/README.md)
   * [Create an Organization Profile (DID)](dock-certs/create-an-organization-profile-did.md)
   * [Issue Verifiable Credentials](dock-certs/issue-verifiable-credentials/README.md)
