@@ -120,41 +120,16 @@ Verifier checks that the biometric verification credential is from a trusted bio
 
 ### Privacy concerns and suggested solutions
 
-<details>
-
-<summary>How to store the enrollment template in a privacy preserving manner?</summary>
+**How to store the enrollment template in a privacy preserving manner?**
 
 Identity Wallet Approach: Have the identity subject hold a tamper-proof verifiable credential issued by the biometric service provider.
 
 Issuer-Verifier Approach:  Depends on the specific biometric service used.
 
-</details>
-
-<details>
-
-<summary>How to bind a credential to a biometric template without correlation by the verifier?</summary>
+**How to bind a credential to a biometric template without correlation by the verifier?**
 
 The verifier checks a Zero-Knowledge Proof (ZKP) comparing the biometric binding attributes of the primary credential with the biometric verification credential without disclosing the binding attributes.
 
-</details>
-
-<details>
-
-<summary>How to bind a credential to a biometric template without correlation by the issuer?</summary>
+**How to bind a credential to a biometric template without correlation by the issuer?**
 
 &#x20;Use blind signatures to not disclose the actual binding attribute.
-
-</details>
-
-
-
-
-
-
-
-
-
-
-
-
-
