@@ -6,8 +6,6 @@ description: >-
 
 # The Dock Certs API
 
-[See the API documentation](https://docs.api.dock.io/#the-dock-certs-api)
-
 The Dock Certs API allows you to issue, verify and revoke verifiable credentials, manage DIDs and interact with the Dock blockchain. Dock integrates industry-leading World Wide Web Consortium (W3C) and VCDM standards, allowing it to interoperate with other open source technologies. We provide a range of open-source software on [GitHub](https://github.com/docknetwork) that can be used alongside the API. Primary features include:
 
 * Easily issue, verify, manage, and revoke/unrevoke verifiable credentials.
