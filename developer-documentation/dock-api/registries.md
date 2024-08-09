@@ -7,7 +7,7 @@ There can be multiple registries on the chain, and each registry has a unique id
 For a detailed example of the registry workflow. Please refer [here](https://github.com/docknetwork/dock-api-js/blob/main/workflows/registryFlow.js).
 
 {% hint style="info" %}
-If you want to revoke BBS+ credentials, you must create a registry with type \`DockVBAccumulator2022\`. For revoking other credentials, you can use \`StatusList2021Entry\` or \`CredentialStatusList2017\`.
+If you want to revoke ZKP credentials, you must create a registry with type \`DockVBAccumulator2022\`. For revoking other credentials, you can use \`StatusList2021Entry\` or \`CredentialStatusList2017\`.
 {% endhint %}
 
 ## Endpoints
@@ -25,17 +25,17 @@ To create a registry, you have to create a `policy` object for which a DID is ne
 Choosing the right revocation registry is essential. Here's a simplified overview of the available options:
 
 * CredentialStatusList2017
-  * Only supports non-BBS+ credentials.
+  * Only supports non-ZKP credentials.
   * Individual Tracking: Each entry is tracked separately, which means more ledger space is used for multiple entries.
   * This registry is cost-effective for a single entry. However, managing several entries can be more expensive.
   * Implements add-only policies.
 * StatusList2021Entry
-  * Only supports non-BBS+ credentials.
+  * Only supports non-ZKP credentials.
   * Recommended for most users.
   * Collective Tracking: Manages all revocation entries together, making it less costly to revoke multiple credentials simultaneously.
   * W3C Compliant.
 * DockVBAccumulator2022
-  * Only supports BBS+ credentials.
+  * Only supports ZKP credentials.
   * Utilizes an on-ledger accumulator for enhanced privacy.
   * Offers more privacy than the W3C Status List 2021.
 
