@@ -1,10 +1,12 @@
-# Release Notes v.1.36.0 Jul 11, 2024
+# Release Notes July 2024
 
-#### Story
+## v.1.36.0 July 11
+
+### Story
 
 * **\[DCKA-2059]** - Improved the visibility of custom attributes in verification templates. Custom attributes are now instantly visible under the "custom attribute" heading and sorted alphabetically upon selection.
 
-#### Tasks
+### Tasks
 
 * **\[DCKA-2253]** - Moved onboarding submission logic to the API, allowing Certs session tokens for authorization.
 * **\[DCKA-2486]** - Updated UX for setting prices per schema in an ecosystem to align with current VPI design.
@@ -36,7 +38,7 @@
 * **\[DCKA-2694]** - Added basic ecosystem list and editing functionality to Dock CQ.
 * **\[DCKA-2699]** - Switched to Vitest for end-to-end testing to improve test performance and reliability.
 
-#### Bug Fixes
+### Bug Fixes
 
 * **\[DCKA-2698]** - Fixed an issue where team invitations were not working after sign-up. Invited users can now successfully join the team after completing the sign-up process.
 * **\[DCKA-2584]** - Fixed credential status to include statusPurpose properties, ensuring compatibility and proper functioning.

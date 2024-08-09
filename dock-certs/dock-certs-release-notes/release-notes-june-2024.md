@@ -1,4 +1,6 @@
-# Release Notes v.1.35.0 Jun 12, 2024
+# Release Notes June 2024
+
+## v.1.35.0 June 12
 
 ### Story
 
@@ -31,3 +33,19 @@
 * **\[DCKA-2637]** - Fixed issues with updating participant information where logo/info URL fields were unnecessarily required.
 * **\[DCKA-2640]** - Addressed issues preventing schema assignment for certain combinations.
 * **\[DCKA-2642]** - Ensured newly created verification templates are displayed at the top of the list.
+
+## v.1.34.0 June 05
+
+### **Overview:**
+
+Certs v1.34.0 introduces several bug fixes aimed at improving user experience and system functionality related to ecosystem tools.
+
+### **Bug Fixes:**
+
+* **DCKA-2599:** Addressed issues with the ecosystem invitation API, including resolving errors related to missing participant details and ensuring consistency between the provided name and organization profile. Additionally, improvements were made to the handling of authentication tokens and documentation clarity.
+* **DCKA-2601:** Fixed an issue where assigning a schema to a participant would cause the form to become unresponsive, ensuring smooth operation and usability.
+
+**Task:**
+
+* **DCKA-2529:** Created a staging relay service to facilitate load testing and ensure system reliability under various conditions.
+* **DCKA-2596:** Enhanced the user interface by hiding back and next buttons and the stepper when only one credential is requested, reducing visual clutter and improving usability.
