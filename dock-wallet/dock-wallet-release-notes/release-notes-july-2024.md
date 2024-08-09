@@ -1,4 +1,6 @@
-# Release Notes v.1.1.0 Jul 04, 2024
+# Release Notes July 2024
+
+## v.1.1.0 July 4
 
 ### Story
 

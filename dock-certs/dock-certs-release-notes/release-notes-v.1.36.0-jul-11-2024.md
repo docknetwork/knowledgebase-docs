@@ -2,33 +2,7 @@
 
 #### Story
 
-* **\[DCKA-1849]** - Removed direct DB access for webhooks and moved logic/queries to the API, exposing endpoints for webhook management.
 * **\[DCKA-2059]** - Improved the visibility of custom attributes in verification templates. Custom attributes are now instantly visible under the "custom attribute" heading and sorted alphabetically upon selection.
-
-#### Customer Support
-
-* **\[DCKA-2698]** - Fixed an issue where team invitations were not working after sign-up. Invited users can now successfully join the team after completing the sign-up process.
-
-#### Bug Fixes
-
-* **\[DCKA-2584]** - Fixed credential status to include statusPurpose properties, ensuring compatibility and proper functioning.
-* **\[DCKA-2638]** - Reduced the clickable area when assigning fees to avoid unintended selection.
-* **\[DCKA-2644]** - Updated Certs links to developer documentation to point to the new docs portal.
-* **\[DCKA-2646]** - Enabled verifiers to change the DID on verification templates, fixing issues with incorrect DID handling.
-* **\[DCKA-2650]** - Ensured attributes appear correctly when creating verification templates.
-* **\[DCKA-2655]** - Updated empty table text for verification templates in ecosystems, clarifying that participants cannot add templates.
-* **\[DCKA-2657]** - Fixed an issue where credentials issued outside an ecosystem incorrectly showed as ecosystem-bound.
-* **\[DCKA-2669]** - Addressed issues with the "Open in Wallet" link not working when no wallet is installed on Android devices.
-* **\[DCKA-2672]** - Corrected the participant count for ecosystem schemas.
-* **\[DCKA-2677]** - Fixed the date order of ecosystem-assigned verification templates.
-* **\[DCKA-2678]** - Included KVAC verifications in the ecosystem report to ensure accurate billing.
-* **\[DCKA-2680]** - Resolved schema removal issues in verification templates.
-* **\[DCKA-2682]** - Enabled ecosystem admins to delete verification templates.
-* **\[DCKA-2687]** - Addressed issues with saving verification templates without storing the DID.
-* **\[DCKA-2688]** - Fixed onboarding issues for new users in Certs production.
-* **\[DCKA-2701]** - Removed additional error notifications when deleting ecosystems.
-* **\[DCKA-2703]** - Fixed the duplicate display of DID missing error messages.
-* **\[DCKA-2705]** - Resolved errors when issuing VPI credentials with assigned prices.
 
 #### Tasks
 
@@ -61,3 +35,25 @@
 * **\[DCKA-2693]** - Enforced a minimum platform fee for ecosystem-bound credential verification to ensure revenue.
 * **\[DCKA-2694]** - Added basic ecosystem list and editing functionality to Dock CQ.
 * **\[DCKA-2699]** - Switched to Vitest for end-to-end testing to improve test performance and reliability.
+
+#### Bug Fixes
+
+* **\[DCKA-2698]** - Fixed an issue where team invitations were not working after sign-up. Invited users can now successfully join the team after completing the sign-up process.
+* **\[DCKA-2584]** - Fixed credential status to include statusPurpose properties, ensuring compatibility and proper functioning.
+* **\[DCKA-2638]** - Reduced the clickable area when assigning fees to avoid unintended selection.
+* **\[DCKA-2644]** - Updated Certs links to developer documentation to point to the new docs portal.
+* **\[DCKA-2646]** - Enabled verifiers to change the DID on verification templates, fixing issues with incorrect DID handling.
+* **\[DCKA-2650]** - Ensured attributes appear correctly when creating verification templates.
+* **\[DCKA-2655]** - Updated empty table text for verification templates in ecosystems, clarifying that participants cannot add templates.
+* **\[DCKA-2657]** - Fixed an issue where credentials issued outside an ecosystem incorrectly showed as ecosystem-bound.
+* **\[DCKA-2669]** - Addressed issues with the "Open in Wallet" link not working when no wallet is installed on Android devices.
+* **\[DCKA-2672]** - Corrected the participant count for ecosystem schemas.
+* **\[DCKA-2677]** - Fixed the date order of ecosystem-assigned verification templates.
+* **\[DCKA-2678]** - Included KVAC verifications in the ecosystem report to ensure accurate billing.
+* **\[DCKA-2680]** - Resolved schema removal issues in verification templates.
+* **\[DCKA-2682]** - Enabled ecosystem admins to delete verification templates.
+* **\[DCKA-2687]** - Addressed issues with saving verification templates without storing the DID.
+* **\[DCKA-2688]** - Fixed onboarding issues for new users in Certs production.
+* **\[DCKA-2701]** - Removed additional error notifications when deleting ecosystems.
+* **\[DCKA-2703]** - Fixed the duplicate display of DID missing error messages.
+* **\[DCKA-2705]** - Resolved errors when issuing VPI credentials with assigned prices.

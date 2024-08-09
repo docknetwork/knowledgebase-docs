@@ -2,9 +2,16 @@
 
 ### Story
 
-* **\[DCKA-1327]** - Added a "Test mode" option in Settings. Users can now enable Test mode via a toggle, which will display a badge on the top bar and a "Test mode" label on the credential card.
 * **\[DCKA-1765]** - Migrated push notification service from Firebase Legacy HTTP Protocol to the more secure and scalable HTTP v1 API, in line with Google's recommendations. This ensures continued functionality post-June 20, 2024, when the legacy APIs are discontinued.
 * **\[DCKA-2597]** - Implemented notifications for issuers when issuing "Ecosystem Bound" credentials, clarifying usage restrictions and pricing terms within ecosystems.
+
+### Task
+
+* **\[DCKA-2488]** - Implemented a paid verification reporting service. Ecosystem administrators can now download a CSV report of verifications for billing purposes.
+* **\[DCKA-2490]** - Integrated KVAC during proof presentation verification, ensuring that verifiers pay for credential verification and differentiating between valid, revoked, and fraudulent credentials.
+* **\[DCKA-2496]** - Displayed the list price per schema to ecosystem participants.
+* **\[DCKA-2510]** - Enabled verifiers to build verification templates using KVAC/locked schemas, showing any associated costs.
+* **\[DCKA-2588]** - Included the verifier DID in verification templates with paid credentials.
 
 ### Bug Fixes
 
@@ -24,13 +31,3 @@
 * **\[DCKA-2637]** - Fixed issues with updating participant information where logo/info URL fields were unnecessarily required.
 * **\[DCKA-2640]** - Addressed issues preventing schema assignment for certain combinations.
 * **\[DCKA-2642]** - Ensured newly created verification templates are displayed at the top of the list.
-
-### Task
-
-* **\[DCKA-2412]** - Investigated Stripe Connect integration to determine its feasibility for our needs. A proof of concept was designed, evaluating integration difficulty, supported currencies, user experience, and various other aspects of the payment process.
-* **\[DCKA-2488]** - Implemented a paid verification reporting service. Ecosystem administrators can now download a CSV report of verifications for billing purposes.
-* **\[DCKA-2490]** - Integrated KVAC during proof presentation verification, ensuring that verifiers pay for credential verification and differentiating between valid, revoked, and fraudulent credentials.
-* **\[DCKA-2496]** - Displayed the list price per schema to ecosystem participants.
-* **\[DCKA-2510]** - Enabled verifiers to build verification templates using KVAC/locked schemas, showing any associated costs.
-* **\[DCKA-2541]** - Auto-generated the OpenAPI YAML file for better API documentation.
-* **\[DCKA-2588]** - Included the verifier DID in verification templates with paid credentials.
