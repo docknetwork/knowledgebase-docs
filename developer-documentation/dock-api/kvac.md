@@ -140,7 +140,7 @@ This endpoint issues a KVAC credential based on the specified schema and issuer 
 }
 ```
 
-### 5. Create Proof Template and Request
+### 5. Create Proof Template
 
 Create a proof template using the schema with a price associated and request for verification.
 
@@ -171,6 +171,24 @@ This endpoint creates a proof template specifying the requirements for verifying
 }
 ```
 
+### 6. Add the Proof Template to the Trust Registry
+
+Add the proof template to the trust registry to enable it being used by other participants.
+
+**POST /trust-registries/{trust_registry_id}/proof-templates**
+This endpoint adds a proof template to the trust registry, enabling it to be used for verification.
+
+**Body:**
+```json
+{
+  "id": "proof_template_id",
+}
+```
+
+### 7. Create Proof Request
+
+Create a proof request based on the proof template to verify the credential.
+
 **POST /proof-templates/{template_id}/request**
 This endpoint creates a proof request based on the specified proof template, which can then be used to verify a credential.
 
@@ -186,10 +204,10 @@ This endpoint creates a proof request based on the specified proof template, whi
 **Errors:**
 - If using a did that is part of the trust registry but is not assigned as a verifier for that schema the verification process on step 6 will fail with the following error message: `Presentation could not be verified: Error: Verifier DID does not have permission to verify this credential`
 - If using a did that is not part of the trust registry the verification process on step 6 will fail with the following message: `Presentation could not be verified: Error: This credential can only be verified by participants in the ${trust_registry_name} ecosystem. You can learn about the ecosystem by visiting this website: ${trust_registry_url}`
-### 6. Verify Presentation
+### 8. Verify Presentation
 
 Using the [Dock Wallet](https://docs.dock.io/dock-wallet), scan the QR code received and follow the process to submit the verification.
-### 7. Retrieve Trust Registry Reports
+### 9. Retrieve Trust Registry Reports
 
 Fetch and verify trust registry reports to ensure proper billing and tracking.
 
