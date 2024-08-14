@@ -64,32 +64,29 @@
 
 ### Story
 
-* **DCKA-2603** Indicate Last Block for Accumulator Update When Sharing Witness. Credential will indicate last block where accumulator was updated when sharing the witness.
+* **\[DCKA-2603]** Indicate Last Block for Accumulator Update When Sharing Witness. Credential will indicate last block where accumulator was updated when sharing the witness.
 
 ### Bug fixes
 
-**DCKA-2651** Members and administrators of a team that has a paid plan will  be able to see that another team has a paid plan enabled and also how many credentials are left on that plan.
-
-**DCKA-2666** Users can join more than 2 teams.
-
-**DCKA-2721 DCKA-2728** Fixed errors that occurred when verifying a KVAC credential.
-
-**DCKA-2724** Fixed the verification template issues when adding schema specific attributes.
-
-**DCKA-2727** Fixed the credential schema view, that sometimes did not load completely. \
-
+* **\[DCKA-2651]** Members and administrators of a team that has a paid plan will  be able to see that another team has a paid plan enabled and also how many credentials are left on that plan.
+* **\[DCKA-2666]** Users can join more than 2 teams.
+* **\[DCKA-2721] \[DCKA-2728]** Fixed errors that occurred when verifying a KVAC credential.
+* **\[DCKA-2724** ]Fixed the verification template issues when adding schema specific attributes.
+* **\[DCKA-2727]** Fixed the credential schema view, that sometimes did not load completely.&#x20;
 
 ### Task
 
-**DCKA-2252** Created API endpoints to create keys and manage them, allow using a certs session token to access these API routes.
+* **\[DCKA-2252]** Created API endpoints to create keys and manage them, allow using a certs session token to access these API routes.
+* **\[DCKA-2630]** Added cypress tests for onboarding flow
+* **\[DCKA-2675]** "My Plan: Free trial" shows the expiration date
+* **\[DCKA-2696]** Stress tested add batch-did relay service&#x20;
+* **\[DCKA-2718]** Disabled the possibility for new users to sign up using non-work emails
+* **\[DCKA-2738]** \[Dock API] Fixed race condition when creating credential immediately after creating a DID.
 
-**DCKA-2630** Added cypress tests for onboarding flow
+## v1.37.1 July 30
 
-**DCKA-2675** "My Plan: Free trial" shows the expiration date
+### Bug fixes
 
-**DCKA-2696** Stress tested add batch-did relay service&#x20;
-
-**DCKA-2718** Disabled the possibility for new users to sign up using non-work emails
-
-**DCKA-2738** \[Dock API] Fixed race condition when creating credential immediately after creating a DID.
-
+* **\[DCKA-2749]** Fixed a bug where users where being logged out after sending the invite links.
+* **\[DCKA-2739]** Added a better error message if user tries to sign proof request with polygon DID.
+* **\[DCKA-2745]** Fixed a bug where ecosystem showed wrong convener name and logo&#x20;
