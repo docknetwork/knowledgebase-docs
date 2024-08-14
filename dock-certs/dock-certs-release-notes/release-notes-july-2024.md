@@ -59,3 +59,37 @@
 * **\[DCKA-2701]** - Removed additional error notifications when deleting ecosystems.
 * **\[DCKA-2703]** - Fixed the duplicate display of DID missing error messages.
 * **\[DCKA-2705]** - Resolved errors when issuing VPI credentials with assigned prices.
+
+## v1.37.0 July 24
+
+### Story
+
+* **DCKA-2603** Indicate Last Block for Accumulator Update When Sharing Witness. Credential will indicate last block where accumulator was updated when sharing the witness.
+
+### Bug fixes
+
+**DCKA-2651** Members and administrators of a team that has a paid plan will  be able to see that another team has a paid plan enabled and also how many credentials are left on that plan.
+
+**DCKA-2666** Users can join more than 2 teams.
+
+**DCKA-2721 DCKA-2728** Fixed errors that occurred when verifying a KVAC credential.
+
+**DCKA-2724** Fixed the verification template issues when adding schema specific attributes.
+
+**DCKA-2727** Fixed the credential schema view, that sometimes did not load completely. \
+
+
+### Task
+
+**DCKA-2252** Created API endpoints to create keys and manage them, allow using a certs session token to access these API routes.
+
+**DCKA-2630** Added cypress tests for onboarding flow
+
+**DCKA-2675** "My Plan: Free trial" shows the expiration date
+
+**DCKA-2696** Stress tested add batch-did relay service&#x20;
+
+**DCKA-2718** Disabled the possibility for new users to sign up using non-work emails
+
+**DCKA-2738** \[Dock API] Fixed race condition when creating credential immediately after creating a DID.
+
