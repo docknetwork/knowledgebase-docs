@@ -63,6 +63,7 @@
     * [Anchors](developer-documentation/dock-api/anchors.md)
     * [Jobs](developer-documentation/dock-api/jobs.md)
     * [Verify](developer-documentation/dock-api/verify.md)
+    * [KVAC Algorithm Integration Guide for Issuing Paid Credentials](developer-documentation/dock-api/kvac.md)
     * [Sub-Accounts](developer-documentation/dock-api/sub-accounts.md)
     * [Messaging](developer-documentation/dock-api/messaging.md)
     * [Schemas](developer-documentation/dock-api/api-docs.md)
