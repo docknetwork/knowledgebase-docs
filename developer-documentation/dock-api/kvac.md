@@ -1,33 +1,35 @@
-# KVAC Algorithm Integration Guide for Issuing Paid Credentials
+# Issuing Paid Credentials (KVAC Algorithm Integration)
 
 This guide provides step-by-step instructions for implementing the KVAC algorithm to issue and verify paid credentials using a series of API endpoints. Follow these instructions to integrate KVAC into your system effectively.
 
 ## Prerequisites
 
 Before starting, ensure you have:
-- DIDs for issuer (`did:dock:issuer`) and verifier (`did:dock:verifier`)
-- A trust registry (`trust_registry_id`)
-- A schema (`http://example.org/schema/kvac`)
+
+* DIDs for issuer (`did:dock:issuer`) and verifier (`did:dock:verifier`)
+* A trust registry (`trust_registry_id`)
+* A schema (`http://example.org/schema/kvac`)
 
 ## Step-by-Step Guide
+
 ### 1. Invite Participants to Trust Registry (issuer and verifier)
 
 Invite issuers and verifiers to the trust registry and assign them the schema that will be used in the `KVAC` credential.
 
-**POST /trust-registries/{trust_registry_id}/participants**
-This endpoint invites a participant to the trust registry with specified schemas they are allowed to issue or verify. Will be called by the trust registry convenor.
+**POST /trust-registries/{trust\_registry\_id}/participants** This endpoint invites a participant to the trust registry with specified schemas they are allowed to issue or verify. Will be called by the trust registry convenor.
 
 **Body:**
+
 ```json
 {
   "issuerSchemas": ["http://example.org/schema/kvac"]
 }
 ```
 
-**POST /trust-registries/invitations/accept**
-This endpoint accepts an invitation to join a trust registry using a provided token. Will be called by a trust registry future member.
+**POST /trust-registries/invitations/accept** This endpoint accepts an invitation to join a trust registry using a provided token. Will be called by a trust registry future member.
 
 **Body:**
+
 ```json
 {
   "did": "did:dock:issuer",
@@ -36,20 +38,20 @@ This endpoint accepts an invitation to join a trust registry using a provided to
 }
 ```
 
-**POST /trust-registries/{trust_registry_id}/participants**
-This endpoint invites a participant to the trust registry with specified schemas they are allowed to issue or verify. Will be called by the trust registry convenor.
+**POST /trust-registries/{trust\_registry\_id}/participants** This endpoint invites a participant to the trust registry with specified schemas they are allowed to issue or verify. Will be called by the trust registry convenor.
 
 **Body:**
+
 ```json
 {
   "verifierSchemas": ["http://example.org/schema/kvac"]
 }
-  ```
+```
 
-**POST /trust-registries/invitations/accept**
-This endpoint accepts an invitation to join a trust registry using a provided token. Will be called by a trust registry future member.
+**POST /trust-registries/invitations/accept** This endpoint accepts an invitation to join a trust registry using a provided token. Will be called by a trust registry future member.
 
 **Body:**
+
 ```json
 {
   "did": "did:dock:verifier",
@@ -62,10 +64,10 @@ This endpoint accepts an invitation to join a trust registry using a provided to
 
 Assign a price to the schema in the trust registry. Prices are specified in "digits" to support fractional cents, where 1 cent is represented as 1,000,000 digits. This ensures precision in transactions and avoids issues related to floating-point arithmetic.
 
-**POST /trust-registries/{trust_registry_id}/schemas/{schema_id}/price**
-This endpoint assigns a price to a schema within the trust registry, enabling it to be used for paid credentials.
+**POST /trust-registries/{trust\_registry\_id}/schemas/{schema\_id}/price** This endpoint assigns a price to a schema within the trust registry, enabling it to be used for paid credentials.
 
 **Body:**
+
 ```json
 {
   "currency": "USD",
@@ -77,10 +79,10 @@ This endpoint assigns a price to a schema within the trust registry, enabling it
 
 Retrieve and verify the list of schemas with their assigned prices.
 
-**GET /trust-registries/{trust_registry_id}/schemas**
-This endpoint retrieves all schemas within a trust registry, including the prices assigned to each schema.
+**GET /trust-registries/{trust\_registry\_id}/schemas** This endpoint retrieves all schemas within a trust registry, including the prices assigned to each schema.
 
 **Response:**
+
 ```json
 [
   {
@@ -98,30 +100,15 @@ This endpoint retrieves all schemas within a trust registry, including the price
   }
 ]
 ```
-If you want to check only one schema's price:
-**GET /trust-registries/{trust_registry_id}/schemas/{schema_id}/price**
-This endpoint retrieves the price assigned to a specific schema from a specific trust registry.
-
-**Response:**
-```json
-{
-	"digits": 1000000,
-	"currency": "USD",
-	"trustRegistryId": "trust_registry_id",
-	"trustRegistryMetadata": {
-	  ...
-	}
-}
-```
 
 ### 4. Issue Credentials
 
 Issue credentials using the schemas. The credential must be a KVAC credential to enable paid credentials. The use of the `bbdt16` algorithm is required to enable KVAC and paid credentials.
 
-**POST /credentials**
-This endpoint issues a KVAC credential based on the specified schema and issuer details.
+**POST /credentials** This endpoint issues a KVAC credential based on the specified schema and issuer details.
 
 **Body:**
+
 ```json
 {
   "algorithm": "bbdt16",
@@ -144,10 +131,10 @@ This endpoint issues a KVAC credential based on the specified schema and issuer 
 
 Create a proof template using the schema with a price associated and request for verification.
 
-**POST /proof-templates**
-This endpoint creates a proof template specifying the requirements for verifying a credential.
+**POST /proof-templates** This endpoint creates a proof template specifying the requirements for verifying a credential.
 
 **Body:**
+
 ```json
 {
   "name": "KVAC Proof Template",
@@ -175,10 +162,10 @@ This endpoint creates a proof template specifying the requirements for verifying
 
 Add the proof template to the trust registry to enable it being used by other participants.
 
-**POST /trust-registries/{trust_registry_id}/proof-templates**
-This endpoint adds a proof template to the trust registry, enabling it to be used for verification.
+**POST /trust-registries/{trust\_registry\_id}/proof-templates** This endpoint adds a proof template to the trust registry, enabling it to be used for verification.
 
 **Body:**
+
 ```json
 {
   "id": "proof_template_id",
@@ -189,10 +176,10 @@ This endpoint adds a proof template to the trust registry, enabling it to be use
 
 Create a proof request based on the proof template to verify the credential.
 
-**POST /proof-templates/{template_id}/request**
-This endpoint creates a proof request based on the specified proof template, which can then be used to verify a credential.
+**POST /proof-templates/{template\_id}/request** This endpoint creates a proof request based on the specified proof template, which can then be used to verify a credential.
 
 **Body:**
+
 ```json
 {
   "did": "did:dock:verifier"
@@ -202,19 +189,22 @@ This endpoint creates a proof request based on the specified proof template, whi
 **Note:** Verifier DID is required when using paid schemas.
 
 **Errors:**
-- If using a did that is part of the trust registry but is not assigned as a verifier for that schema the verification process on step 6 will fail with the following error message: `Presentation could not be verified: Error: Verifier DID does not have permission to verify this credential`
-- If using a did that is not part of the trust registry the verification process on step 6 will fail with the following message: `Presentation could not be verified: Error: This credential can only be verified by participants in the ${trust_registry_name} ecosystem. You can learn about the ecosystem by visiting this website: ${trust_registry_url}`
+
+* If using a did that is part of the trust registry but is not assigned as a verifier for that schema the verification process on step 6 will fail with the following error message: `Presentation could not be verified: Error: Verifier DID does not have permission to verify this credential`
+* If using a did that is not part of the trust registry the verification process on step 6 will fail with the following message: `Presentation could not be verified: Error: This credential can only be verified by participants in the ${trust_registry_name} ecosystem. You can learn about the ecosystem by visiting this website: ${trust_registry_url}`
+
 ### 8. Verify Presentation
 
 Using the [Dock Wallet](https://docs.dock.io/dock-wallet), scan the QR code received and follow the process to submit the verification.
+
 ### 9. Retrieve Trust Registry Reports
 
 Fetch and verify trust registry reports to ensure proper billing and tracking.
 
-**GET /trust-registries/{trust_registry_id}/reports** 
-This endpoint retrieves reports from the trust registry, detailing verifications, fees, and other relevant information for auditing purposes.
+**GET /trust-registries/{trust\_registry\_id}/reports** This endpoint retrieves reports from the trust registry, detailing verifications, fees, and other relevant information for auditing purposes.
 
 **Response:**
+
 ```json
 [
   {
@@ -229,4 +219,28 @@ This endpoint retrieves reports from the trust registry, detailing verifications
     "created": "2024-08-08T08:53:50.524Z"
   }
 ]
+```
+
+### 10. Assigning additional schemas to participants
+
+Add new schemas  to the Ecosystem by assigning them to each participant.
+
+**PATCH/trust-registries/{registryId}/participants/{participantId}** This endpoint allows updating the Trust Registry participant.
+
+```json
+{
+  "name": "string",
+  "logoUrl": "string",
+  "infoUrl": "string",
+  "status": "string",
+  "suspendedAt": "string",
+  "issuerSchemas": [
+    "http://example.org/schema/kvac2",
+    "http://example.org/schema/kvac3"
+  ],
+  "verifierSchemas": [
+    "http://example.org/schema/kvac2",
+    "http://example.org/schema/kvac3"
+  ]
+}
 ```
