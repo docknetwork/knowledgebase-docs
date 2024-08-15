@@ -16,3 +16,22 @@
 ### Task
 
 * **\[DCKM-540]** - Upgraded the SDK to version 8.6.0, incorporating the latest features and improvements for enhanced performance and security.
+
+## v.1.1.1 July 18
+
+### Bug fixes
+
+* **\[DCKM-553]** Fixed wallet crashing when trying to do proof request with new credentials.
+
+## v.1.1.2 July 25
+
+#### Bug
+
+* **\[DCKM-483]** Revoked credentials status does not remain as Revoked if the same credential gets unrevoked in Dock Certs.
+* **\[DCKM-550]** Fixed the wallet backup creation.
+
+#### Task
+
+* **\[DCKM-541]** Excluded credentials from presentation selection if those credentials do not satisfy the range proof in the verification request.
+* **\[DCKM-544]** Added support for Android 14 (API level 34).
+* **\[DCKM-558]** Credential status will be refreshed before preparing a proof response, to avoid displaying credentials with the invalid status.

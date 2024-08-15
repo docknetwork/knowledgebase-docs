@@ -37,6 +37,7 @@
 * [📳 Dock Wallet](dock-wallet/README.md)
   * [Create and Manage DIDs in the Dock Wallet](dock-wallet/create-and-manage-dids-from-the-dock-wallet.md)
   * [Dock Wallet Release Notes](dock-wallet/dock-wallet-release-notes/README.md)
+    * [Release Notes August 2024](dock-wallet/dock-wallet-release-notes/release-notes-august-2024.md)
     * [Release Notes July 2024](dock-wallet/dock-wallet-release-notes/release-notes-july-2024.md)
     * [Release Notes June 2024](dock-wallet/dock-wallet-release-notes/release-notes-june-2024.md)
     * [Release Notes May 2024](dock-wallet/dock-wallet-release-notes/release-notes-v.0.4.27-may-30-2024.md)
