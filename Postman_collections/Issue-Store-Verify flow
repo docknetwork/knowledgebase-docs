@@ -1,0 +1,280 @@
+{
+	"info": {
+		"_postman_id": "f3832a20-fbb3-4c68-becf-8637c0e2dc17",
+		"name": "Sample Issue-Store-Verify",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36302582"
+	},
+	"item": [
+		{
+			"name": "Create DID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"did\", jsonData.data.did);",
+							"postman.setEnvironmentVariable(\"jobId\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"type\": \"dock\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/dids?=&=",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"dids"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updade DID name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"did\":\"did:dock:5CfsgqHioKCHNddVK9Y2Lu8fHQpvXh3nc9xVjLZNDqk1ZJ9z\",\n    \"name\": \"VPI test administrator\",\n    \"logo\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/profiles",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"profiles"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a schema",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"$schema\": \"http://json-schema.org/schema\",\n      \"name\": \"VPI test schema\",\n      \"description\": \"describing VPI test schema\",\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"string\"\n        },\n        \"emailAddress\": {\n          \"type\": \"string\",\n          \"format\": \"email\"\n        },\n        \"alumniOf\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"emailAddress\",\n        \"alumniOf\"\n      ],\n      \"additionalProperties\": false\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/schemas",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"schemas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "issue credential",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"anchor\": false,\n  \"recipientEmail\":\"agne@dock.io\",\n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"VPI test credential\",\n    \"description\": \"describing vpi test credential\",\n    \"schema\": \"https://schema.dock.io/VPITestSchema-V1-1723546475527.json\",\n    \"type\": [\n      \"VPITestSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"agelzinyte@gmail.com\",\n        \"emailAddress\":\"agelzinyte@gmail.com\",\n        \"alumniOf\":\"University of Vilnius\"\n    },\n    \"issuer\": \"did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx\",\n    \"issuanceDate\": \"2024-08-13T11:03:35.610Z\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/credentials",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"credentials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a proof template",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Postman proof request June 18\",\n  \"nonce\": \"1234567890\",\n  \"request\": {\n    \"name\": \"test request\",\n    \"purpose\": \"my purpose\",\n    \"input_descriptors\": [\n      {\n        \"id\": \"Credential 1\",\n        \"name\": \"test request\",\n        \"purpose\": \"my purpose\",\n        \"constraints\": {\n          \"fields\": [\n            {\n                \"path\": [\n                    \"$.credentialSubject.alumniOf\"\n                ]\n            },\n            {\n            \"path\": [\n                \"$.credentialSubject.dateIssued\"\n                ],\n                \"optional\": true\n            },\n            {\n                \"path\": [\n                        \"$.credentialSchema.id\"\n                ],\n                \"filter\": {\n                    \"const\": \"https://schema.dock.io/PostmanTestSchemaJune18-V1-1718711073065.json\"\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/proof-templates",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"proof-templates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a proof request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/proof-templates/3053a47d-0725-4c9b-bc87-2fa14deee62a/request",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"proof-templates",
+						"3053a47d-0725-4c9b-bc87-2fa14deee62a",
+						"request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get proof request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/proof-templates",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"proof-templates"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{ApiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "DOCK-API-TOKEN",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ApiKey",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "BaseUrl",
+			"value": "https://api-testnet.dock.io",
+			"type": "string"
+		}
+	]
+}
