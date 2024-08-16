@@ -1,6 +1,10 @@
 # Issue Store Verify Sample flow
 
-This flow refers to Postman, but the general steps are the same however you use the API. The Issue Store Verify collection includes the scripts that automatically propagate results into the next request bodies when you follow the below steps. To issue a credential and or a presentation on the holder's behalf, the following steps are required:
+This flow refers to Postman, but the general steps are the same however you use the API. The Issue Store Verify collection includes the scripts that automatically propagate results into the next request bodies when you follow the below steps.&#x20;
+
+Download the sample collection [here](../../../Postman\_collections/Issue-Store-Verify%20flow).
+
+To issue a credential and or a presentation on the holder's behalf, the following steps are required:
 
 ## 1. Create a DID
 
@@ -451,7 +455,7 @@ The proof request is one time use so that the information from the credential ca
 If there is a need to have a static QR code for multiple verification, a small service can be created to make proof requests from the verification template as and when needed.
 {% endhint %}
 
-### 6. Verify the Presentation
+## 6. Verify the Presentation
 
 Scan the QR code from the proof presentation using your wallet to verify the credential.
 

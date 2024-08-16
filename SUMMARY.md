@@ -53,6 +53,7 @@
     * [Webhooks](developer-documentation/dock-api/webhooks.md)
     * [Sample Postman Collections](developer-documentation/dock-api/dock-postman-collection/README.md)
       * [Issue Store Verify Sample flow](developer-documentation/dock-api/dock-postman-collection/issue-store-verify-sample-flow.md)
+      * [Issue KVAC credentials](developer-documentation/dock-api/dock-postman-collection/issue-kvac-credentials.md)
     * [Dock Swagger UI](developer-documentation/dock-api/dock-swagger-ui.md)
     * [DIDs](developer-documentation/dock-api/dids.md)
     * [Profiles](developer-documentation/dock-api/profiles.md)
