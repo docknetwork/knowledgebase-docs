@@ -137,7 +137,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"anchor\": false,\n  \"recipientEmail\":\"agne@dock.io\",\n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"VPI test credential\",\n    \"description\": \"describing vpi test credential\",\n    \"schema\": \"https://schema.dock.io/VPITestSchema-V1-1723546475527.json\",\n    \"type\": [\n      \"VPITestSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"agelzinyte@gmail.com\",\n        \"emailAddress\":\"agelzinyte@gmail.com\",\n        \"alumniOf\":\"University of Vilnius\"\n    },\n    \"issuer\": \"did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx\",\n    \"issuanceDate\": \"2024-08-13T11:03:35.610Z\"\n  }\n}",
+					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"anchor\": false,\n  \"recipientEmail\":\"agne@dock.io\",\n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"VPI test credential\",\n    \"description\": \"describing vpi test credential\",\n    \"schema\": \"https://schema.dock.io/VPITestSchema-V1-1723546475527.json\",\n    \"type\": [\n      \"VPITestSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"agne@dock.io\",\n        \"emailAddress\":\"agne@dock.io\",\n        \"alumniOf\":\"University of Vilnius\"\n    },\n    \"issuer\": \"did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx\",\n    \"issuanceDate\": \"2024-08-13T11:03:35.610Z\"\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
