@@ -105,5 +105,3 @@ If you do not have or want to use DIDs or email for credential distribution you 
 Once the credential has been issued, it’s important that you download the credentials especially if you didn’t persist them otherwise you can’t get them back.
 
 ![](https://downloads.intercomcdn.com/i/o/797754454/75bc4cbf24590fcd6ec79e6c/Screenshot+2023-08-01+at+16.18.34.png)
-
-## &#x20;<a href="#h_655a2ecaf5" id="h_655a2ecaf5"></a>
