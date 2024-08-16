@@ -24,15 +24,23 @@ Optionally, you can choose a **Verifier DID** which will be shown to the holder 
 
 The verifier can choose which credential details the holder is required to share  for the credential to be accepted.  Each attribute will be either required for verification and if not present will return an invalid verification or optional which means that the holder can choose if they want to share that information or not.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-04-18 at 16.20.04.png" alt=""><figcaption></figcaption></figure>
+When creating a template you can choose a specific schema and those attributes will be available for selection in the drop down boxes.
+
+You can combine verifying multiple credentials in one verification template by adding a credential and selecting schema and attributes.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-08-16 at 16.09.39.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-The list will have only the attributes that are included in the credential schemas. If you want to include another attribute to the verification template you need to choose Custom Attribute and type in the name of the attribute.&#x20;
+The list will have only the attributes that are included in the credential schemas. If you want to include an attribute that is not on the schemas owned by that account it can be typed in instead of the listed attributes.
 {% endhint %}
 
 When verifying Zero Knowledge Proof credentials, you can use range proof verification conditions, that will verify the credential without disclosing the actual value of an attribute. For example, if you want to verify that the credential holder is older than 18 you can choose attribute Age and condition is greater than 18.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 15.11.23.png" alt=""><figcaption></figcaption></figure>
+
+If the verification template contains a paid schema a notification on the bottom will appear.
+
+<figure><img src="../.gitbook/assets/Screenshot 2024-08-16 at 16.16.17.png" alt=""><figcaption></figcaption></figure>
 
 Last step for a verification request is to click Request, which will generate a QR code. Every time a new request is made, it generates a new QR code.\
 ​
