@@ -66,6 +66,7 @@
     * [Jobs](developer-documentation/dock-api/jobs.md)
     * [Verify](developer-documentation/dock-api/verify.md)
     * [Issuing Paid Credentials (KVAC Algorithm Integration)](developer-documentation/dock-api/kvac.md)
+    * [Trust Registry Integration Guide](developer-documentation/dock-api/trust-registries.md)
     * [Sub-Accounts](developer-documentation/dock-api/sub-accounts.md)
     * [Messaging](developer-documentation/dock-api/messaging.md)
     * [Schemas](developer-documentation/dock-api/api-docs.md)
