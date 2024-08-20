@@ -10,7 +10,7 @@ Dock's unprecedented technology utilises KVAC (Keyed Verification Anonymous Cred
 
 Ecosystem administrator sets a price for each schema and assigns it to participating issuers and verifiers.&#x20;
 
-When a verifier is trying to verify a credential, they will be notified that this verification requires a fee. During the verification issuer provides an additional secret for the specific credential schema in order to unlock it. This is all done automatically within seconds during the verification process.&#x20;
+When a verifier is trying to verify a credential, they will be notified that this verification requires a fee. In order to complete the verification issuer provides an additional secret for the specific credential schema in order to unlock it. This is all done automatically within seconds during the verification process.&#x20;
 
 {% hint style="info" %}
 Holder privacy is a key consideration in our design. The verifier doesn't share any holder-identifying data  with the issuer when asking for verification. Only 2 random looking data items are shared with the issuer and issuer verifies a relationship between them e.g. verifier shares a pair of items (A, B) with the issuer and asks to check whether A equals B \* issuer-secret-key. Here A is the MAC from holder's credential but randomized so issuer can't identify it.
