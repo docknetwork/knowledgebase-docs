@@ -13,7 +13,7 @@ A trust registry is an on-chain list that contains information on who is authori
 
 By having an  trust registry, credential verifiers do not need to manage a list of valid issuers and holders know which verifiers they can trust to share their credentials with. They only need to trust one Ecosystem administrator.
 
-
+<figure><img src="../../../.gitbook/assets/Sales Demo v2.png" alt=""><figcaption></figcaption></figure>
 
 
 
