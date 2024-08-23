@@ -6,7 +6,7 @@ Dock has created a unique feature that allows setting a verification fee on cred
 
 ### How does it work?
 
-Dock's unprecedented technology utilises KVAC (Keyed Verification Anonymous Credential) to lock the credential making sure, that it can only be verified that a payment has been made.&#x20;
+Dock's unprecedented technology based on KVAC (Keyed Verification Anonymous Credential) to lock the credential making sure, that it can only be verified that a payment has been made.&#x20;
 
 Ecosystem administrator sets a price for each schema and assigns it to participating issuers and verifiers.&#x20;
 
