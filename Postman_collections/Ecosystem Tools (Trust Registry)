@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "cee7306f-732b-4c38-84ea-6c5e9a7cca6a",
+		"name": "Trust Registry",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36302582"
+	},
+	"item": [
+		{
+			"name": "Create a Trust Registry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Postman Testing Trust Registry\",\n  \"description\": \"I am creating this to test the ecosystems api guide\",\n  \"logoUrl\": \"https://logo.com/registry\",\n  \"ecosystemUrl\": \"https://myecosystem.com\",\n  \"governanceFramework\": \"Anarchy rules in this ecossytem\",\n  \"governanceFrameworkVersion\": \"1.0.0\",\n  \"convener\": \"did:dock:5HCXuyBhXRiZxSmyLG2j6NhoeqL4dYHV9EGwLE2FKJVUmXL4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invite participant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"verifierSchemas\": [\"https://schema.dock.io/KYC-V1-1724068086299.json\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/participants",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept invite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"did\": \"did:dock:5HG6mthmkXVp61HAhthrHiDESWAGSdheKSQ6JM2sbK1JGv1s\",\n  \"infoUrl\": \"\",\n  \"token\":\"eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjB4ZmQwZDllN2Y1NmRmY2MwZTA2NzMxY2U4YTZiMWUzZWE0MGY1ZTJiMDhlY2U0OWQ0NmY4MmU3MTNjOWI0NDg2OCIsImlzVGVzdG1vZGUiOnRydWUsIm5vbmNlIjo0NDUxLCJ2ZXJpZmllclNjaGVtYXMiOlsiaHR0cHM6Ly9zY2hlbWEuZG9jay5pby9LWUMtVjEtMTcyNDA2ODA4NjI5OS5qc29uIl0sImlhdCI6MTcyNDA2ODQxOSwiZXhwIjoxNzI0NjczMjE5fQ.WUJk94zTVtSJRxNPQzWoHw4jCuKz7OWy2aP8ByoHKQNQ6r6lFq4DqjBNiE8mH34IxD_8PpZZ4PN8KUFdbyEoGg\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/invitations/accept",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"invitations",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Trust Registry Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Trust Registry Metadata",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Updated Name for Postman test trust registry\",\n  \"description\": \"This is very easy to do\",\n  \"logoUrl\": \"https://logo.com/updated\",\n  \"ecosystemUrl\": \"https://updatedecosystem.com\",\n  \"governanceFramework\": \"This is a markdown document describing my framework version two!\",\n  \"governanceFrameworkVersion\": \"2.0.0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Participants data",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"infoUrl\": \"https://issue_all_day.com\",\n  \"description\":\"Issuing gives me meaning in life\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/participants/48d91601-d976-4299-8339-b82ccc7782c3/info",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"participants",
+						"48d91601-d976-4299-8339-b82ccc7782c3",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Suspend/Unsuspend Participants",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"infoUrl\": \"https://verify.com\",\n  \"description\": \"A very nice and respectable verifier\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/participants/6200c6bd-4dc6-4429-b0c8-ac94c5713316/info",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"participants",
+						"6200c6bd-4dc6-4429-b0c8-ac94c5713316",
+						"info"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all participants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/participants",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Schemas to Participants",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"issuerSchemas\": [\"https://schema.com/issuer\",\"https://schema.dock.io/BachelorOfArts-V2-1717755874209.json\",\"https://schema.dock.io/BachelorOfComputerScience-V2-1717755847606.json\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/participants/48d91601-d976-4299-8339-b82ccc7782c3",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"participants",
+						"48d91601-d976-4299-8339-b82ccc7782c3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Trust Registry Schemas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/schemas",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"schemas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Proof Templates to the Trust Registry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": \"509aa246-bf91-4874-88e7-7db1d2ba546d\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/proof-templates",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"proof-templates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve Proof Templates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/proof-templates",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"proof-templates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Trust Registry Participant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/participants/3da1b1c2-78f9-4368-88d1-58382b5e9a05",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"participants",
+						"3da1b1c2-78f9-4368-88d1-58382b5e9a05"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Trust Registry Proof Template",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/proof-templates/509aa246-bf91-4874-88e7-7db1d2ba546d",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"proof-templates",
+						"509aa246-bf91-4874-88e7-7db1d2ba546d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Trust Registry",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{ApiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "DOCK-API-TOKEN",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ApiKey",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "BaseUrl",
+			"value": "https://api-testnet.dock.io",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string"
+		}
+	]
+}
