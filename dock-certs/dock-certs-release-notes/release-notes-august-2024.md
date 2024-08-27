@@ -1,5 +1,23 @@
 # Release Notes August 2024
 
+## v1.39.0 August 20
+
+### Bug fixes
+
+* **\[DCKA-2735]** Fixed a logo issue in the ecosystem participants list, when  a schema was assigned to the same DIDs in two different ecosystems.
+* **\[DCKA-2796]** Fixed a bug that did not allow users to login with their @gmail accounts.
+* **\[DCKA-2797]** Added consistent restrictions to DIDs profile and trust registry profile logos.
+
+### Tasks
+
+**\[DCKA-2771] \[DCKA-2773] \[DCKA-2787] \[DCKA-2794]** Added OID4VCI API routes to authorize and issue credentials; create a credential offer; create a verification template, submit verification proof and presentation.
+
+**\[DCKA-2790]** Submit webhook on proof request received from the holder.
+
+**\[DCKA-2791]** Support JWT-VC verification and fix schema validation.
+
+**\[DCKA-2793]** Support for default JWT paths in the builder in Dock Certs.
+
 ## v.1.38.0 August 07
 
 ### Story
