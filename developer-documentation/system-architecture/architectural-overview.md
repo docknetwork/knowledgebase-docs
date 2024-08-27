@@ -13,7 +13,7 @@
     * us-west-1 (Northern California)
   * MongoDB
     * us-west-1 (Northern California)
-* Blockchain
+* Blockchain (Dock owned validators)
   * AWS
     * us-west-1 (Northern California)
     * us-east-1 (North Virginia)
