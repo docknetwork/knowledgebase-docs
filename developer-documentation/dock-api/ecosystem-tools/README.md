@@ -7,7 +7,7 @@ How can a verifier be sure that the credential came from an authorized issuer? A
 ## What is an Ecosystem?
 
 \
-Ecosystem is a network of trusted digital identity issuers and verifiers. It uses a trust registry an on-chain list that contains information on who is authorized and trusted to issue or verify credentials in a particular ecosystem and which credential schemas they can issue and verify.&#x20;
+Ecosystem is a network of trusted digital identity issuers and verifiers. It uses a **trust registry,** an on-chain list, that contains information on who is authorized and trusted to issue or verify credentials in a particular ecosystem and which credential schemas they can issue and verify.&#x20;
 
 Ecosystems are governed by trust frameworks, a set of operating rules that participants of the ecosystem must follow.
 
