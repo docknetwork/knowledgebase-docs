@@ -1,8 +1,11 @@
 # Release Notes August 2024
 
-## v1.1.3 August 8
+## v1.2.0 August 28
 
-#### Task
+* \[DCKM-579]  Adding the ability to import OID4VC credentials for the wallet holders.
+* \[DCKM-583]  Added a loading screen and better feedback for OID4VC issuance flow
+
+## v1.1.3 August 8
 
 * **\[DCKM-418]** Performed refactoring on ShareBBSCredentialScreen
 * **\[DCKM-493]** Benchmarked performance of React webview in Flutter

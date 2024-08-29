@@ -37,3 +37,7 @@ Go to Plan & Billing and click Manage Billing.
 <figure><img src="../.gitbook/assets/Screenshot 2024-04-11 at 16.52.47.png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to Stripe interface where you can cancel your plan.
+
+## Business continuity
+
+To ensure business continuity  in the event Dock closes its operations or is no longer able to service the customer, Dock will ensure that the private keys are delivered to the customer in a secure manner. Dock will also provide comprehensive documentation on how to continue using the DIDs for credential issuance and procedures for revoking any outstanding credentials if needed.

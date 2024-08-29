@@ -82,6 +82,8 @@ Billing report data can be selected for a specific date range and will include i
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-07-18 at 15.31.42.png" alt=""><figcaption></figcaption></figure>
 
+Billing report includes all verifications where a credential was submited for verification e.g if a verification request was made, but no credential was presented it will not be included, however if an invalid credential is presented and verification fails it will be included in the billing report.&#x20;
+
 {% hint style="info" %}
 Ecosystem administrators take responsibility for charge-backs and disputes.&#x20;
 {% endhint %}
