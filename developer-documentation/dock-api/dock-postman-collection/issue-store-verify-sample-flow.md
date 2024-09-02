@@ -203,7 +203,8 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
     },
     "issuer": "did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx",
     "issuanceDate": "2024-08-13T11:03:35.610Z"
-  }
+   }
+}
 ```
 
 </details>
