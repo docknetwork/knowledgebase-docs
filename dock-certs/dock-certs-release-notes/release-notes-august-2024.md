@@ -1,5 +1,16 @@
 # Release Notes August 2024
 
+## v1.40.0 August 29
+
+### Bug fixes
+
+* **\[DCKA-2807]** Fixed the issue where holders were unable to submit data for requested attributes during credential issuance.
+
+### Tasks
+
+* **\[DCKA-2732]** Added a button to delete a schema from an ecosystem table in the UI.
+* **\[DCKA-2788]** Billing report of monetizable verifications include the id of verification template used.
+
 ## v1.39.0 August 20
 
 ### Bug fixes
