@@ -27,6 +27,7 @@
   * [Transaction History](dock-certs/transaction-history.md)
   * [Custom branded distribution emails](dock-certs/custom-branded-distribution-emails.md)
   * [Dock Certs Release Notes](dock-certs/dock-certs-release-notes/README.md)
+    * [Release Notes September 2024](dock-certs/dock-certs-release-notes/release-notes-september-2024.md)
     * [Release Notes August 2024](dock-certs/dock-certs-release-notes/release-notes-august-2024.md)
     * [Release Notes July 2024](dock-certs/dock-certs-release-notes/release-notes-july-2024.md)
     * [Release Notes June 2024](dock-certs/dock-certs-release-notes/release-notes-june-2024.md)
