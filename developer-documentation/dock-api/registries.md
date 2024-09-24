@@ -7,7 +7,7 @@ There can be multiple registries on the chain, and each registry has a unique id
 For a detailed example of the registry workflow. Please refer [here](https://github.com/docknetwork/dock-api-js/blob/main/workflows/registryFlow.js).
 
 {% hint style="info" %}
-If you want to revoke ZKP credentials, you must create a registry with type \`DockVBAccumulator2022\`. For revoking other credentials, you can use \`StatusList2021Entry\` or \`CredentialStatusList2017\`.
+If you want to revoke ZKP credentials, you must create a registry with type \`DockVBAccumulator2022\`. For revoking other credentials, you can use \`StatusList2021Entry\`.
 {% endhint %}
 
 ## Endpoints
@@ -24,11 +24,6 @@ To create a registry, you have to create a `policy` object for which a DID is ne
 
 Choosing the right revocation registry is essential. Here's a simplified overview of the available options:
 
-* CredentialStatusList2017
-  * Only supports non-ZKP credentials.
-  * Individual Tracking: Each entry is tracked separately, which means more ledger space is used for multiple entries.
-  * This registry is cost-effective for a single entry. However, managing several entries can be more expensive.
-  * Implements add-only policies.
 * StatusList2021Entry
   * Only supports non-ZKP credentials.
   * Recommended for most users.
@@ -39,13 +34,22 @@ Choosing the right revocation registry is essential. Here's a simplified overvie
   * Utilizes an on-ledger accumulator for enhanced privacy.
   * Offers more privacy than the W3C Status List 2021.
 
+Deprecated
+
+CredentialStatusList2017
+
+* Only supports non-ZKP credentials.
+* Individual Tracking: Each entry is tracked separately, which means more ledger space is used for multiple entries.
+* This registry is cost-effective for a single entry. However, managing several entries can be more expensive.
+* Implements add-only policies.
+
 ### Parameters <a href="#create-registry-parameters" id="create-registry-parameters"></a>
 
 <table data-full-width="false"><thead><tr><th width="119">Name</th><th width="82">In</th><th width="118">Type</th><th width="117">Required</th><th>Description</th></tr></thead><tbody><tr><td>addOnly</td><td>body</td><td>boolean</td><td>false</td><td>True/false options. The default value is "false".</td></tr><tr><td>policy</td><td>body</td><td>[<a href="index.html.md#schemadiddock">DIDDock</a>]</td><td>true</td><td>The DIDs which control this registry. You must own a DID listed here to use the registry. Only one policy supported as of now: <code>OneOf</code> DID in list.</td></tr><tr><td>type</td><td>body</td><td>string</td><td>false</td><td>Specifies which type of registry to create. Defaults to <code>StatusList2021Entry</code>.</td></tr></tbody></table>
 
 ### Enumerated Values
 
-<table data-full-width="false"><thead><tr><th width="160">Parameter</th><th width="294">Value</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>StatusList2021Entry <strong>or</strong> CredentialStatusList2017 <strong>or</strong> DockVBAccumulator2022</td><td>The type used in registry creation.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="160">Parameter</th><th width="294">Value</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td>StatusList2021Entry <strong>or</strong> DockVBAccumulator2022</td><td>The type used in registry creation.</td></tr></tbody></table>
 
 ### Responses <a href="#create-registry-responses" id="create-registry-responses"></a>
 
@@ -61,7 +65,7 @@ Choosing the right revocation registry is essential. Here's a simplified overvie
   "policy": [
     "did:dock:xyz"
   ],
-  "type": "CredentialStatusList2017"
+  "type": "StatusList2021Entry"
 }
 ```
 
@@ -80,7 +84,7 @@ curl --location --request POST https://api.dock.io/registries/ \
   "policy": [
     "did:dock:xyz"
   ],
-  "type": "CredentialStatusList2017"
+  "type": "StatusList2021Entry"
 }'
 
 
@@ -104,7 +108,7 @@ curl --location --request POST https://api.dock.io/registries/ \
       ],
       "addOnly": false
     },
-    "type": "CredentialStatusList2017",
+    "type": "StatusList2021Entry",
   }
 }
 ```
@@ -158,7 +162,7 @@ curl --location --request GET https://api.dock.io/registries/ \
       ],
       "addOnly": false
     },
-    "registry_type": "CredentialStatusList2017",
+    "registry_type": "StatusList2021Entry",
     "created_at": "2021-11-25T12:20:51.773Z"
   }
 ]
@@ -206,7 +210,7 @@ curl --location --request GET https://api.dock.io/registries/{id} \
     ],
     "addOnly": false
   },
-  "registry_type": "CredentialStatusList2017",
+  "registry_type": "StatusList2021Entry",
   "created_at": "2021-11-25T12:20:51.773Z",
   "job_id": "930"
 }
