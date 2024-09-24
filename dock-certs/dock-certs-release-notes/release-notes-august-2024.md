@@ -31,6 +31,8 @@
 
 ## v.1.38.0 August 07
 
+This release includes updated support for the OpenID4VC implementors draft (both issuance and presentation). To test this, we added a page to our bank demo [https://bank-demo.dock.io/openid](https://bank-demo.dock.io/openid) that uses OpenID rather than our default DIDComm credential exchange. We confirmed that we can issue into the Mattr Wallet and the Sphereon wallet, but those wallets don't seem to have support for OID4VP. We'll publish additional guidance after we complete more interoperability testing.
+
 ### Story
 
 **\[DCKA-2495]** Added monetizable credential functionality to the bank demo&#x20;
