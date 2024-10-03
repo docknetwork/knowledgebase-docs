@@ -1,4 +1,3 @@
 # Dock Token Migration
 
-Dock has officially completed the ERC20 token migration as of March 31, 2021. During the migration, Dock tokens were migrated from the original ERC20 token (which has now been deprecated) to a native DOCK token that is running on the Dock mainnet blockchain. Learn more about the token migration in our [blog post](https://blog.dock.io/the-dock-token-migration-is-now-complete/).
-
+The Dock network will be migrating its functionality and all tokens to the cheqd blockchain. This migration will allow Dock to leverage cheqd’s advanced infrastructure and bring enhanced value to both ecosystems. Existing $DOCK tokens will be converted into $CHEQ tokens, ensuring a smooth transition for all token holders. Further details about the migration process, token swap ratio, and key dates will be shared as we get closer to the migration. Official announcements is [available here](https://www.dock.io/post/dock-and-cheqd-form-alliance-to-accelerate-global-adoption-of-decentralized-id).
