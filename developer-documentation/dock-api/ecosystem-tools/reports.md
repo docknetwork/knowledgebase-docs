@@ -1,5 +1,5 @@
 # Reports
 
-{% swagger src="../../../.gitbook/assets/openapi.yaml" path="/trust-registries/{registryId}/reports" method="get" %}
-[openapi.yaml](../../../.gitbook/assets/openapi.yaml)
+{% swagger src="../../../.gitbook/assets/openapi (1).yaml" path="/trust-registries/{registryId}/reports" method="get" %}
+[openapi (1).yaml](<../../../.gitbook/assets/openapi (1).yaml>)
 {% endswagger %}
