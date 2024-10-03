@@ -51,7 +51,6 @@
   * [Interoperability](developer-documentation/interoperability/README.md)
     * [OpenID for Verifiable Credentials (OID4VC)](developer-documentation/interoperability/openid-for-verifiable-credentials-oid4vc/README.md)
       * [OpenID Issuance and Verification Integration Guide](developer-documentation/interoperability/openid-for-verifiable-credentials-oid4vc/openid-issuance-and-verification-integration-guide.md)
-      * [OpenID Verification Guide](developer-documentation/interoperability/openid-for-verifiable-credentials-oid4vc/openid-verification-guide.md)
     * [mDL - Mobile Drivers License](developer-documentation/interoperability/mdl-mobile-drivers-license.md)
   * [The Dock Certs API](developer-documentation/dock-api/README.md)
     * [Example Use Case](developer-documentation/dock-api/example-use-case.md)

@@ -10,7 +10,7 @@ Before starting, ensure you have:
 * **Verifier DID** (`did:dock:verifier`): The did for the credential verifier.
 * **Holder DID** (`did:key:holder`): The DID for the credential holder.
 
-Download and use our [Postman Collections](https://github.com/docknetwork/knowledgebase-docs/tree/main/Postman\_collections) to experiment with OID4VC flow.
+Download and use our [Postman Collections](../../../Postman\_collections/OID4VC%20and%20OID4VP%20testing) to experiment with OpenID standards based credentials.
 
 ## Set Up an OID4VCI Issuer
 
@@ -204,3 +204,72 @@ This endpoint creates a new proof request that the verifier can use to request c
 ```
 {% endtab %}
 {% endtabs %}
+
+### Get the request url for the OID4VP
+
+This step generates a request URL that can be shared with the holder. The holder can use this URL to present the requested credentials through their wallet.
+
+<mark style="color:green;">`POST`</mark> /openid/vp/{proofRequestId}/request-url
+
+This endpoint generates a request URL based on the proof request ID. The withRequestURI parameter determines whether the URL includes the request\_uri.
+
+**Request/Response**
+
+{% tabs %}
+{% tab title="Body" %}
+```json
+  {
+      "withRequestURI": true
+  }
+```
+{% endtab %}
+
+{% tab title="Response" %}
+```json
+{
+    "url": "openid://?client_id=...&request_uri=..."
+}
+```
+{% endtab %}
+{% endtabs %}
+
+### Verify Presentation
+
+Using the [Dock Wallet](https://docs.dock.io/dock-wallet) or any OID4VP Wallet, scan the QR code received and follow the process to verify the credential.
+
+### Check proof request status
+
+This step involves checking the status of a specific proof request to see if it has been fulfilled, and to retrieve any relevant information associated with the request.
+
+<mark style="color:green;">`GET`</mark> /proof-requests/{proofRequestId}
+
+This endpoint retrieves the status and details of the specified proof request, including whether the requested credentials have been presented and verified
+
+**Request/Response**
+
+{% tabs %}
+{% tab title="Response" %}
+```json
+{
+    "id": "{proofRequestId}",
+    "name": "OID4VP Proof request",
+    "nonce": "...",
+    "did": "did:dock:verifier",
+    "verified": true,
+    "created": "...",
+    "updated": "...",
+    "signature": "...",
+    "presentation": {
+	    "holder": "did:dock:holder"
+	    ...
+    },
+    "response_url": "...",
+    "type": "proof-request",
+    "qr": "...",
+    "request": {...},
+    "types": ["jsonld"]
+}
+```
+{% endtab %}
+{% endtabs %}
+
