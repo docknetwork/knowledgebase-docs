@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "49805496-d5cf-426d-8745-e0a28e8d0a58",
+		"name": "OID4VC & OID4VP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36302582"
+	},
+	"item": [
+		{
+			"name": "list of openid issuers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/openid/issuers",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"openid",
+						"issuers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add issuer to openid",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"claimMap\": {\n      \"name\": \"name\"\n    },\n    \"credentialOptions\": {\n      \"credential\": {\n        \"type\": [\"UniversityDegreeCredential\"],\n        \"context\": [\"https://www.w3.org/2018/credentials/examples/v1\"],\n        \"subject\": {\n          \"alumniOf\": \"Dock University\",\n          \"degree\": \"Credential Science\"\n          // name will be added by claims flow\n        },\n        \"expirationDate\": \"2099-08-24T14:15:22Z\",\n        \"issuer\": \"did:dock:issuer\"\n      }\n    },\n    \"authProvider\": {\n      \"url\": \"https://creds.dock.io/claims\",\n      \"scope\": [\"openid\"],\n      \"clientId\": \"eyAic2NoZW1hIjogImh0dHBzOi8vZG9ja25ldHdvcmsuZ2l0aHViLmlvL3ZjLXNjaGVtYXMvYmFzaWMtY3JlZGVudGlhbC5qc29uIiwgImNsYWltcyI6IFsibmFtZSJdIH0=\",\n      \"clientSecret\": \"gpO2IVK+OALL8W+DcFlIfFhJtNA=\"\n    },\n    \"singleUse\": false\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/openid/issuers",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"openid",
+						"issuers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add issuer to openid (no auth)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"credentialOptions\": {\n      \"credential\": {\n        \"type\": [\"UniversityDegreeCredential\"],\n        \"context\": [\"https://www.w3.org/2018/credentials/examples/v1\"],\n        \"subject\": {\n          \"alumniOf\": \"Dock University\",\n          \"degree\": \"Credential Science\"\n          // name will be added by claims flow\n        },\n        \"expirationDate\": \"2099-08-24T14:15:22Z\",\n        \"issuer\": \"did:dock:5HCXuyBhXRiZxSmyLG2j6NhoeqL4dYHV9EGwLE2FKJVUmXL4\"\n      }\n    },\n    \"singleUse\": false\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/openid/issuers",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"openid",
+						"issuers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check the OpenID Issuer Configuration",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/openid/issuers/f88bb6e8-c4cc-4a04-8f64-30f9ba174e62/.well-known/openid-configuration",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"openid",
+						"issuers",
+						"f88bb6e8-c4cc-4a04-8f64-30f9ba174e62",
+						".well-known",
+						"openid-configuration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Credential Offers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"f88bb6e8-c4cc-4a04-8f64-30f9ba174e62\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/openid/credential-offers",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"openid",
+						"credential-offers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Proof Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"did\": \"did:dock:5HCXuyBhXRiZxSmyLG2j6NhoeqL4dYHV9EGwLE2FKJVUmXL4\",\n\t  \"name\": \"OID4VP Proof request 2\",\n\t  \"request\": {\n\t\t\"name\": \"OID4VP test proof request\",\n\t\t\"purpose\": \"To present a test credential using OID4VPI\",\n\t\t\"input_descriptors\": [\n\t\t  {\n\t\t\t\"id\": \"Dock Credential\",\n\t\t\t\"name\": \"OID4VP test proof request\",\n\t\t\t\"purpose\": \"To present a test credential using OID4VP\",\n\t\t\t\"constraints\": {\n\t\t\t  \"fields\": [\n\t\t\t\t{\n\t\t\t\t  \"path\": [\n\t\t\t\t\t\"$.credentialSubject.name\"\n\t\t\t\t  ]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t  \"path\": [\n\t\t\t\t\t\"$.type\",\n\t\t\t\t\t\"$.vc.type\"\n\t\t\t\t  ],\n\t\t\t\t  \"filter\": {\n\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\"contains\": {\n\t\t\t\t\t  \"const\": \"UniversityDegreeCredential\"\n\t\t\t\t\t}\n\t\t\t\t  }\n\t\t\t\t}\n\t\t\t  ]\n\t\t\t}\n\t\t  }\n\t\t]\n\t  }\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/proof-requests",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"proof-requests"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the request url for the OID4VP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n      \"withRequestURI\": true\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/openid/vp/beb248c8-fe36-483d-b862-fef1f3c273b1/request-url",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"openid",
+						"vp",
+						"beb248c8-fe36-483d-b862-fef1f3c273b1",
+						"request-url"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check proof request status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/proof-requests/beb248c8-fe36-483d-b862-fef1f3c273b1",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"proof-requests",
+						"beb248c8-fe36-483d-b862-fef1f3c273b1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{ApiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "DOCK-API-TOKEN",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ApiKey",
+			"value": "eyJzY29wZXMiOlsidGVzdCIsImFsbCJdLCJzdWIiOiIxNDY1MCIsInNlbGVjdGVkVGVhbUlkIjowLCJjcmVhdG9ySWQiOiIxNDY1MCIsImlhdCI6MTcyNDA2NzUzOCwiZXhwIjo0ODAzMzYzNTM4fQ.z67U4c2av7pFzlEdb0vYDKkDadwuDtk19W9bw3gXxPr6sR0ewvqDkFiFBFZt4dwDv3JtjkuDFwFO8G7lQmjWLQ",
+			"type": "string"
+		},
+		{
+			"key": "BaseUrl",
+			"value": "https://api-testnet.dock.io",
+			"type": "string"
+		}
+	]
+}
