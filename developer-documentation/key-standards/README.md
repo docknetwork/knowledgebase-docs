@@ -25,10 +25,6 @@ Dock Supports the following open standards:
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-08-06 at 16.12.07.png" alt=""><figcaption></figcaption></figure>
 
-## Interoperability <a href="#interoperability" id="interoperability"></a>
-
-Dock believes that credentials are most useful when they are interoperable across service providers. Our W3C compliant credential format is designed for maximum interoperability. Our anonymous credential format adheres to many W3C standards, but are designed for maximum privacy protection. We also leverage standards from OpenID, IETF, DIF, and related organizations.
-
 ## Signature Formats
 
 Dock supports following signature formats
@@ -46,3 +42,7 @@ Other data is stored on RDS and S3 using AWS's default encryption.
 #### Encryption in transit
 
 Queued messages are encrypted per the DIDComm Message packing
+
+## Interoperability
+
+Dock believes that credentials are most useful when they are interoperable across service providers. Our W3C compliant credential format is designed for maximum interoperability. Our anonymous credential format adheres to many W3C standards, but are designed for maximum privacy protection. We also leverage standards from OpenID, IETF, DIF, and related organizations.
