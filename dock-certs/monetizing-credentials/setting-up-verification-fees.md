@@ -1,4 +1,4 @@
-# Setting up verification fees
+# Setting up monetizable credentials
 
 This is a detailed guide on how to monetize your credentials using Dock.
 
@@ -78,9 +78,11 @@ All payments are  managed by the ecosystem administrator. Dock provides a billin
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-07-18 at 15.28.00.png" alt="" width="375"><figcaption></figcaption></figure>
 
-Billing report data can be selected for a specific date range and will include information about the date of verification, schema that was verified, verification ID, DIDs of Issuer and Verifier and verification and platform fees.
+Billing report data can be selected for a specific date range and will include information about the date of verification, schema that was verified, verification ID, DIDs of Issuer and Verifier, whether the verification was successful and verification and platform fees.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-07-18 at 15.31.42.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-10-08 at 14.47.48.png" alt=""><figcaption></figcaption></figure>
+
+
 
 Billing report includes all verifications where a credential was submited for verification e.g if a verification request was made, but no credential was presented it will not be included, however if an invalid credential is presented and verification fails it will be included in the billing report.&#x20;
 

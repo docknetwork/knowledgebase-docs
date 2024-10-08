@@ -22,7 +22,7 @@
     * [Ecosystem set up](dock-certs/ecosystem-tools/ecosystem-set-up.md)
     * [Ecosystem example](dock-certs/ecosystem-tools/ecosystem-example.md)
   * [Monetizing Credentials](dock-certs/monetizing-credentials/README.md)
-    * [Setting up verification fees](dock-certs/monetizing-credentials/setting-up-verification-fees.md)
+    * [Setting up monetizable credentials](dock-certs/monetizing-credentials/setting-up-verification-fees.md)
   * [Creating API keys and Webhook endpoints](dock-certs/creating-api-keys-and-webhook-endpoints.md)
   * [Transaction History](dock-certs/transaction-history.md)
   * [Custom branded distribution emails](dock-certs/custom-branded-distribution-emails.md)
