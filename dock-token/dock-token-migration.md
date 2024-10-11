@@ -1,3 +1,0 @@
-# Dock Token Migration
-
-The Dock network will be migrating its functionality and all tokens to the cheqd blockchain. This migration will allow Dock to leverage cheqd’s advanced infrastructure and bring enhanced value to both ecosystems. Existing $DOCK tokens will be converted into $CHEQ tokens, ensuring a smooth transition for all token holders. Further details about the migration process and key dates will be shared as we get closer to the migration. Official announcements is [available here](https://www.dock.io/post/dock-and-cheqd-form-alliance-to-accelerate-global-adoption-of-decentralized-id).
