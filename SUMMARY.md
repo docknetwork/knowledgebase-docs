@@ -95,7 +95,7 @@
     * [Biometric Plugin](developer-documentation/wallet-sdk/biometric-plugin.md)
     * [Ecosystem Tools](developer-documentation/wallet-sdk/ecosystem-tools.md)
 * [🪙 DOCK Token](dock-token/README.md)
-  * [Dock Token Migration](dock-token/dock-token-migration/README.md)
+  * [Dock Token Migration](dock-token/dock-token-migration.md)
     * [Adding account to the Dock browser wallet](dock-token/dock-token-migration/adding-account-to-the-dock-browser-wallet.md)
   * [Token Utility](dock-token/token-utility.md)
   * [Emission Rewards](dock-token/emission-rewards.md)
