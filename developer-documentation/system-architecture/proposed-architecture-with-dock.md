@@ -19,7 +19,5 @@
 
 ## Integration with Customer Systems
 
-![](<../../.gitbook/assets/Screenshot 2024-10-16 at 15.56.49.png>)\
-\
-
+<figure><img src="../../.gitbook/assets/Screenshot 2024-10-16 at 15.56.49.png" alt=""><figcaption></figcaption></figure>
 
