@@ -47,6 +47,7 @@
 * [📄 Developer Documentation](developer-documentation/README.md)
   * [System Architecture](developer-documentation/system-architecture/README.md)
     * [Architectural Overview](developer-documentation/system-architecture/architectural-overview.md)
+    * [Proposed Architecture with Dock](developer-documentation/system-architecture/proposed-architecture-with-dock.md)
     * [Revocation](developer-documentation/system-architecture/revocation.md)
   * [Supported Standards](developer-documentation/key-standards/README.md)
     * [Interoperability with OpenID](developer-documentation/key-standards/interoperability-with-openid/README.md)
