@@ -1,26 +1,22 @@
-# Wallet SDK
+# Dock Wallet SDK
 
-The [Wallet SDK](https://github.com/docknetwork/react-native-sdk) enables you to build a Verifiable Credentials wallet inside your app and allows your users to receive, store, and manage their DOCK tokens too. This was built for native applications with added support for Polkadot-JS.
+Using [polkadot-js](https://polkadot.js.org/) libraries in React Native is a challenge, due to a lack of WebAssembly support.
 
-{% hint style="info" %}
-Dock Mobile SDK supports devices that have  Android 8.1 or higher and iOS 11 or higher.
-{% endhint %}
+The Dock Wallet SDK handles all the Polkadot Web Assembly in a WebView, sending messages to the React Native thread through a JSON RPC layer.
 
-For using the wallet-sdk, all you need to do is wrap your app in a `WalletSDKProvider` and start building your wallet.
+All you need to do is wrap your app in a `WalletSDKProvider` and start building your Polkadot wallet.
 
 ## Installation
-
 ```js
 yarn add @docknetwork/wallet-sdk-core
 yarn add @docknetwork/wallet-sdk-transactions
 yarn add @docknetwork/wallet-sdk-react-native
 
 ```
-
-**There are some scripts and additional dependencies required.** Please check our [example repo](https://github.com/docknetwork/wallet-sdk-examples/tree/main/react-native-example) for detailed steps.
+**There are some scripts and additional dependencies required.**
+Please check our [example repo](https://github.com/docknetwork/wallet-sdk-demo) for detailed steps. 
 
 ## React Native Example
-
 The following example will create a wallet and allow the user to add accounts on it. Displaying the count of documents added to the wallet.
 
 Notice that the account documents are accessible through the `documents` object, and for each account created multiple documents will be added to the wallet.
@@ -122,3 +118,18 @@ console.log('Transaction hash', fee);
 // result: Transaction hash 0x1c1c5ca40acafb830460dccb492be4ac7181e9d700ab78853df052e478e8b2a9
 
 ```
+
+## Running on nodejs
+
+Check the following repository for nodejs project examples.
+
+https://github.com/docknetwork/wallet-sdk-examples
+
+
+## Docs
+
+https://docknetwork.github.io/react-native-sdk/
+
+## Features
+- [Biometric Plugin](docs/biometric-plugin.md)
+- [Ecosystem Tools](docs/ecosystem-tools.md)
