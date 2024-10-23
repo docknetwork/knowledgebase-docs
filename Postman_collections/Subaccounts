@@ -1,0 +1,275 @@
+{
+	"info": {
+		"_postman_id": "cf2712cf-cc24-4197-a85d-a10c10ef384d",
+		"name": "Subaccounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36302582"
+	},
+	"item": [
+		{
+			"name": "Create subaccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Agnes Third Subaccount\",\n  \"image\": \"string\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/subaccounts",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"subaccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get subaccounts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/subaccounts",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"subaccounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create API key for subaccount",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{BaseUrl}}/subaccounts/17361/keys",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"subaccounts",
+						"17361",
+						"keys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create DID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"did\", jsonData.data.did);",
+							"postman.setEnvironmentVariable(\"jobId\", jsonData.id);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"type\": \"dock\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/dids?=&=",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"dids"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updade DID name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"did\":\"did:dock:5G1wx3FDBmFzqcuRKcdEQuH9PATF8r2H6kpsdwsvZP9uE9JJ\",\n    \"name\": \"Second DID of Agnes First Subaccount\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/profiles",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"profiles"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invite participant to ecosystem",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"verifierSchemas\": [\"https://schema.dock.io/BachelorOfArts-V2-1717755874209.json\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/0xd7153f24648da1213d12879cd6c8ef3182e8d830b9a22c2ccd97a168593f93ad/participants",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"0xd7153f24648da1213d12879cd6c8ef3182e8d830b9a22c2ccd97a168593f93ad",
+						"participants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accept ecosystem invite",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"did\": \"did:dock:5G1wx3FDBmFzqcuRKcdEQuH9PATF8r2H6kpsdwsvZP9uE9JJ\",\n  \"infoUrl\":\"\",\n  \"token\":\"eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjB4ZDcxNTNmMjQ2NDhkYTEyMTNkMTI4NzljZDZjOGVmMzE4MmU4ZDgzMGI5YTIyYzJjY2Q5N2ExNjg1OTNmOTNhZCIsImlzVGVzdG1vZGUiOnRydWUsIm5vbmNlIjo2NzExLCJ2ZXJpZmllclNjaGVtYXMiOlsiaHR0cHM6Ly9zY2hlbWEuZG9jay5pby9CYWNoZWxvck9mQXJ0cy1WMi0xNzE3NzU1ODc0MjA5Lmpzb24iXSwiaWF0IjoxNzI5NjkwNDU3LCJleHAiOjE3MzAyOTUyNTd9.BW9YXiOoPa6jWvnfWckIeiWi0qxBCvoc8-OLQ9ByVj3EBdHnh930gWS51aEbpPsA0OjIDYu5WxabMi2dxYhDog\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/trust-registries/invitations/accept",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"trust-registries",
+						"invitations",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "{{ApiKey}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "DOCK-API-TOKEN",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ApiKey",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "BaseUrl",
+			"value": "https://api-testnet.dock.io",
+			"type": "string"
+		}
+	]
+}
