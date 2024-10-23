@@ -10,7 +10,7 @@ In order to easier manage sub-account assets [Ecosystem Tools](ecosystem-tools/)
 
 ### Sample Subaccount Postman Collection
 
-Download the collection here.
+Download the collection [here](../../Postman\_collections/Subaccounts).
 
 This Postman collection shows a simple example of sub-account set up in 5 steps:
 
