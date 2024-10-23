@@ -12,7 +12,7 @@ The Dock network will be migrating its functionality and all tokens to the cheqd
 
 Before starting the migration the process make sure you have a wallet that can hold $CHEQ. If you do not, [see instructions on how to set one up.](https://docs.cheqd.io/product/network/wallets)
 
-{% hint style="info" %}
+{% hint style="success" %}
 Keplr wallet has a browser extension and will allow connecting it during the migration.&#x20;
 {% endhint %}
 
