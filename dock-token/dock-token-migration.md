@@ -25,6 +25,7 @@ To migrate your $DOCK tokens
 1. Select your Dock account. If it isn't yet added, then follow [these instructions.](https://docs.dock.io/dock-token/dock-token-migration/adding-account-to-the-dock-browser-wallet)
 2. Connect Keplr or enter your cheqd account manually. Connecting Keplr will allow us to confirm that the tokens are going to the cheqd account that you control. If you cannot see your Keplr accounts in the dropdown [see how to set up your Keplr wallet for cheqd.](https://docs.cheqd.io/product/network/wallets/keplr-setup)
 3. Accep T\&Cs and click Submit
+4. Authorize the transaction by entering your account password. Click **Sign & Submit**
 
 The entire amount of the account will be migrated at once. After the migration request is submitted your $DOCK tokens will be burnt and you will be sent the converted CHEQD amount with **Swap Ratio:** 18.5178 $DOCK to 1 $CHEQ. The migration will take up to 1-2 business days to complete, after that the converted $CHEQ amount will be available in the indicated cheqd wallet.
 
