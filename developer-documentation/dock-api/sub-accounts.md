@@ -8,31 +8,31 @@ When using a sub-account the parent account will set up separate API keys for ea
 
 In order to easier manage sub-account assets [Ecosystem Tools](ecosystem-tools/) can be used.
 
-### Sample Subaccount Postman Collection
+### Sample sub-account Postman collection
 
 Download the collection [here](../../Postman\_collections/Subaccounts).
 
 This Postman collection shows a simple example of sub-account set up in 5 steps:
 
-1. Creating a subaccount
-2. Creating an API key for a subaccount
-3. Creating a DID for the subaccount
-4. Inviting subaccount as a participant in an already existing ecosystem
+1. Creating a sub-account
+2. Creating an API key for a sub-account
+3. Creating a DID for the sub-account
+4. Inviting sub-account as a participant in an already existing ecosystem
 5. Accepting the invite
 
-## Create Sub-account
+## Create sub-account
 
 {% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/subaccounts" method="post" %}
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
 {% endswagger %}
 
-## List Sub-Accounts
+## List sub-accounts
 
 {% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/subaccounts" method="get" %}
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
 {% endswagger %}
 
-## Get Sub-Account by ID
+## Get sub-account by ID
 
 {% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/subaccounts/{id}" method="get" %}
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
@@ -50,7 +50,7 @@ This Postman collection shows a simple example of sub-account set up in 5 steps:
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
 {% endswagger %}
 
-## Get Sub-Account Usage
+## Get sub-account usage
 
 Get details about the activity that this sub-account has performed in the system.
 
@@ -58,21 +58,21 @@ Get details about the activity that this sub-account has performed in the system
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
 {% endswagger %}
 
-## Create Sub-Account API Key
+## Create sub-account API key
 
-Creates an API key for a subaccount. In order for activity to be associated with the given sub-account an API key needs to be created for that sub-account and then that key must be used for all transactions related to that sub-account.
+Creates an API key for a sub-account. In order for activity to be associated with the given sub-account an API key needs to be created for that sub-account and then that key must be used for all transactions related to that sub-account.
 
 {% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/subaccounts/{id}/keys" method="post" %}
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
 {% endswagger %}
 
-## List Sub-Account API Keys
+## List sub-account API keys
 
 {% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/subaccounts/{id}/keys" method="get" %}
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
 {% endswagger %}
 
-## Delete a Sub-Account API Key
+## Delete a sub-account API key
 
 Delete the specified API key for the given sub-account.
 
