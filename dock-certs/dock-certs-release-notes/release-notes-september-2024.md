@@ -1,6 +1,6 @@
 # Release Notes September 2024
 
-## v1.42.0 September 30
+## v1.43.0 September 30
 
 ### Bug fixes
 
