@@ -310,20 +310,6 @@ This is a schema that represents a verifiable (signed) Credential returned by AP
 
 </details>
 
-## Anchor
-
-An anchor, either a batched or single is the information that constitutes the credentials' proof of existence. The schema includes anchor, type (single, batch), block hash, block number and accompanying data (root, proofs) if any. It depends if the anchor was created using API or not.
-
-```json
-{
-  "type": "single/batch",
-  "proofs": [],
-  "blockHash": "string",
-  "root": "string",
-  "created_at": "YYYY-"
-}
-```
-
 ## Registry <a href="#tocs_registry" id="tocs_registry"></a>
 
 This is a schema that represents a Revocation registry used in Revocation or Unrevocation.

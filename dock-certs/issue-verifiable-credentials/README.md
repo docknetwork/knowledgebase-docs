@@ -81,7 +81,7 @@ You have the options to:
 * **Persist credential:** This option will encrypt the credential by providing a password to access it and store it on Dock’s servers. The credential can be accessed and verified by a URL or QR Code. The recipient can scan the QR Code to import the credential into a wallet app. The credential can be deleted from Dock’s cloud whenever you decide.
 * **Generate PDF:** If you choose to persist the credentials, the PDFs will contain a QR code the recipient can scan to view and store their credential in their phone wallet app.
 * **Credential revocation:** By choosing this you leave an option for the credential to be revoked to invalid state at any time. If you leave this option unchecked, the credential can never be revoked and will always be verifiable.
-* **Anchor credentials:** This adds a hash of the credentials you issue on the Dock blockchain that can be referenced later to verify when and who created it.
+* **\[Deprecating] Anchor credentials:** This adds a hash of the credentials you issue on the Dock blockchain that can be referenced later to verify when and who created it.
 * **Zero-Knowledge Proof:** Selecting this option will issue your credential with a Dock BBS2023 signing scheme. This allows credential holders to share specific data rather than show the whole credential to enhance their privacy. [It must be enabled for paid verifications.](../monetizing-credentials/setting-up-verification-fees.md)
 
 {% hint style="info" %}

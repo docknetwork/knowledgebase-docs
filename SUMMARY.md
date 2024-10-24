@@ -84,7 +84,6 @@
     * [Registries](developer-documentation/dock-api/registries.md)
     * [Revocation Status](developer-documentation/dock-api/revocation-status.md)
     * [Credential Schemas](developer-documentation/dock-api/credential-schemas.md)
-    * [Anchors](developer-documentation/dock-api/anchors.md)
     * [Jobs](developer-documentation/dock-api/jobs.md)
     * [Verify](developer-documentation/dock-api/verify.md)
     * [Ecosystem Tools](developer-documentation/dock-api/ecosystem-tools/README.md)

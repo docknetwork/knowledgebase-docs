@@ -18,30 +18,6 @@ You can subcribe to all events by clicking **Receive All** next to **Endpoint Ev
 
 You can configure the following events to trigger the HTTP request to send the data to your application.
 
-### anchor\_create
-
-This event indicates an anchor has been created. It will fire when an anchor has been created.
-
-<details>
-
-<summary>SAMPLE JSON PAYLOAD</summary>
-
-```json
-{
-  "token": "4A_Z0fYD19q1qKZ03qAfB0zTu8XYuLPpGk0oHfP8OrvGGDi5Jz8C86F6EVz8Wd2c",
-  "event": "anchor_create",
-  "data": {
-    "status": "finalized",
-    "encodedTx": "0x90040f008082f112f7575ff922ffa2290c9b11e071cc45a79b3cc1d3de66d0be819fe7e808",
-    "result": {
-      "InBlock": "0xbaf1bfcc5b629b775a4d03c9baa0b0d6d7197fe1ab1805993d38da3447661c76"
-    }
-  }
-}
-```
-
-</details>
-
 ### credential\_create
 
 This event indicates a credential has been created. It will fire when a credential has been created.
