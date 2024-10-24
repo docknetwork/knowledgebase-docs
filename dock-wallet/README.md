@@ -24,7 +24,7 @@ With White Label ID wallet you will be able to:
 * Manage your own App Store profile and relationships with users.
 * Put users in control of their data
 
-See the technical implementation steps [here](../developer-documentation/white-label-wallet/).
+See the technical implementation steps [here](white-label-wallet/).
 
 ### Dock’s Wallet React Native SDK
 
