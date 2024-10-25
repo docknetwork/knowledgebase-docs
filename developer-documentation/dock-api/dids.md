@@ -16,7 +16,7 @@ Currently a DID can have only one key at a time as a controller, soon we will su
 
 A DID, a public key, and a controller are required to create a new DID. The controller is both the owner of the public key and a DID. The DID can be created using an auto-generated keypair, and the controller will be the same as the DID unless otherwise specified. The DID and public key have no cryptographic relation.
 
-It is important to have a public key of one of its three supported types. Dock supports `ed25519`type of public key.
+It is important to have a public key types that is supported by Dock, the supported type of public key is `ed25519.`
 
 {% hint style="info" %}
 When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
