@@ -1,6 +1,5 @@
 ---
 description: This document explains how we audit the systems scalability.
-hidden: true
 ---
 
 # System Scalability
@@ -24,7 +23,6 @@ We regularly test our platform to ensure we can meet our performance benchmarks.
   * Average: 200 ms
   * 95% Percentile: 300 ms
   * Maximum: 3000 ms
-* **HTTP Failures:** < 0.1%
 
 ### Issue non anonymous credential
 
@@ -33,7 +31,6 @@ We regularly test our platform to ensure we can meet our performance benchmarks.
   * Average: 110 ms
   * 95% Percentile: 140 ms
   * Maximum: 1200 ms &#x20;
-* **HTTP Failures:** < 0.1%
 
 ### Issue anonymous credential
 
@@ -42,7 +39,6 @@ We regularly test our platform to ensure we can meet our performance benchmarks.
   * Average: 3 seconds
   * 95% Percentile: 6 seconds
   * Maximum: 23 seconds
-* **HTTP Failures:** < 10%
 
 ### Verify credential
 
@@ -51,13 +47,10 @@ We regularly test our platform to ensure we can meet our performance benchmarks.
   * Average: 240 ms
   * 95% Percentile: 260 ms
   * Maximum: 1240 ms
-* **HTTP Failures:** < 0.1%
 
 
 
 {% hint style="info" %}
 **95% Percentile Response Time**: Indicates that 95% of the requests were served within this time.
-
-**Performance Testing Parameters**: Tests involved a maximum of 100 Virtual Users (VUs) for a duration of 6 minutes and 30 seconds with a 1-minute ramp-up period.
 {% endhint %}
 

@@ -26,6 +26,28 @@ When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
 {% endswagger %}
 
+## List DIDs
+
+Return a list of all DIDs that your user account controls as fully resolved DID documents.
+
+{% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/dids" method="get" %}
+[openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
+{% endswagger %}
+
+## Return ecosystems that DID participates in <a href="#list-dids-parameters" id="list-dids-parameters"></a>
+
+{% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/dids/{did}/ecosystems" method="get" %}
+[openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
+{% endswagger %}
+
+## Export DID
+
+Exports the DID document and keys as an encrypted Universal Wallet JSON-LD document
+
+{% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/dids/{did}/export" method="post" %}
+[openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
+{% endswagger %}
+
 ## Get DID
 
 When a DID is provided in the path, the API will attempt to resolve that DID into a [DID document](https://www.w3.org/TR/did-core/#dfn-did-documents). This document contains the public keys and more information relating to that DID, check [the identity foundation did configuration](https://identity.foundation/.well-known/resources/did-configuration/) document to learn more.
@@ -41,22 +63,6 @@ The API supports resolving many DID methods, some examples are:
 
 
 
-## List DIDs
-
-Return a list of all DIDs that your user account controls as fully resolved DID documents.
-
-{% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/dids" method="get" %}
-[openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
-{% endswagger %}
-
-## Return ecosystems that DID participates in <a href="#list-dids-parameters" id="list-dids-parameters"></a>
-
-{% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/dids/{did}/ecosystems" method="get" %}
-[openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
-{% endswagger %}
-
-
-
 ## Delete DID <a href="#list-dids-parameters" id="list-dids-parameters"></a>
 
 Deletes a DID and its metadata from the blockchain and our platform. This will also delete the associated keypair from the key management system meaning that you cannot sign messages or credentials with it after this operation. The DID will no longer be able to be resolved. This operation is not reversible.
@@ -65,10 +71,3 @@ Deletes a DID and its metadata from the blockchain and our platform. This will a
 [openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
 {% endswagger %}
 
-## Export DID
-
-Exports the DID document and keys as an encrypted Universal Wallet JSON-LD document
-
-{% swagger src="../../.gitbook/assets/openapi (1) (1).yaml" path="/dids/{did}/export" method="post" %}
-[openapi (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1).yaml>)
-{% endswagger %}
