@@ -6,12 +6,6 @@ DIDs in Dock are created by choosing a 32-byte unique (on Dock chain) identifier
 
 For a detailed example of the DIDs workflow. Please refer [here](https://github.com/docknetwork/dock-api-js/blob/main/workflows/didFlow.js).
 
-{% hint style="info" %}
-Currently a DID can have only one key at a time as a controller, soon we will support multiple keys per DID.
-{% endhint %}
-
-
-
 ## Create DID
 
 A DID, a public key, and a controller are required to create a new DID. The controller is both the owner of the public key and a DID. The DID can be created using an auto-generated keypair, and the controller will be the same as the DID unless otherwise specified. The DID and public key have no cryptographic relation.
