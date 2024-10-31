@@ -10,10 +10,10 @@ The Dock network will be migrating its functionality and all tokens to the cheqd
 
 ## Instructions for $DOCK token holders
 
-Before starting the migration the process make sure you have a wallet that can hold $CHEQ. If you do not, [see instructions on how to set one up.](https://docs.cheqd.io/product/network/wallets)
+Before starting the migration the process make sure you have a wallet that can hold $CHEQ. If you do not, [see instructions on how to set one up.](https://docs.cheqd.io/product/network/wallets/setup-leap-wallet)
 
-{% hint style="success" %}
-Keplr wallet has a browser extension and will allow connecting it during the migration.&#x20;
+{% hint style="info" %}
+We recommend using Leap wallet, because it has full support on desktop, browser and mobile, but you can also use a [Keplr wallet](https://docs.cheqd.io/product/network/wallets/keplr-setup) if you already have one.&#x20;
 {% endhint %}
 
 Migration can only be done from the [Dock browser-based wallet](https://docs.dock.io/dock-token/wallets-and-account-creation#dock-polkadot-js-app). <mark style="background-color:red;">ADD A LINK TO THE MIGRATION PAGE</mark>
@@ -23,7 +23,7 @@ Token holders that use Dock Wallet App or Nova Wallet can add their accounts to 
 To migrate your $DOCK tokens
 
 1. Select your Dock account. If it isn't yet added, then follow [these instructions.](https://docs.dock.io/dock-token/dock-token-migration/adding-account-to-the-dock-browser-wallet)
-2. Connect Keplr or enter your cheqd account manually. Connecting Keplr will allow us to confirm that the tokens are going to the cheqd account that you control. If you cannot see your Keplr accounts in the dropdown [see how to set up your Keplr wallet for cheqd.](https://docs.cheqd.io/product/network/wallets/keplr-setup)
+2. Connect your cheqd wallet or enter your cheqd account manually. Connecting a Leap wallet will allow us to confirm that the tokens are going to the cheqd account that you control.&#x20;
 3. Accep T\&Cs and click Submit
 4. Authorize the transaction by entering your account password. Click **Sign & Submit**
 
