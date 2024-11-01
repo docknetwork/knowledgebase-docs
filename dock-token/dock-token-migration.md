@@ -27,6 +27,10 @@ To migrate your $DOCK tokens
 3. Accep T\&Cs and click Submit
 4. Authorize the transaction by entering your account password. Click **Sign & Submit**
 
+{% hint style="warning" %}
+If the account has **locked or staked** funds they will need to be [unbonded](https://docs.dock.io/dock-token/staking/how-to-unbond-and-rebond) to migrate.
+{% endhint %}
+
 The entire amount of the account will be migrated at once. After the migration request is submitted your $DOCK tokens will be burnt and you will be sent the converted CHEQD amount with **Swap Ratio:** 18.5178 $DOCK to 1 $CHEQ. The migration will take up to 1-2 business days to complete, after that the converted $CHEQ amount will be available in the indicated cheqd wallet.
 
 The migration service will only be available until **February 28, 2025.**

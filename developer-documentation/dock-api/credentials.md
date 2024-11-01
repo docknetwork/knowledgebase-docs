@@ -32,15 +32,15 @@ By default, Dock does not store the credential contents at all - only minimal cr
 
 For a detailed example of the credential workflow. Please refer [here](https://github.com/docknetwork/dock-api-js/blob/main/workflows/credentialsFlow.js).
 
-### Zero Knowledge Proofs (ZKP) <a href="#zero-knowledge-proofs" id="zero-knowledge-proofs"></a>
+#### Zero Knowledge Proofs (ZKP) <a href="#zero-knowledge-proofs" id="zero-knowledge-proofs"></a>
 
 Dock credentials support [anonymous credentials](https://blog.dock.io/anonymous-credentials/) using Zero Knowledge Proofs and [Selective Disclosure](https://www.dock.io/post/selective-disclosure) by using the BBS2023 signing algorithm when issuing the credential. To enable this functionality, simply set the `algorithm` field in the request to `dockbbs`.
 
-### Credential Distribution <a href="#credential-distribution" id="credential-distribution"></a>
+#### Credential Distribution <a href="#credential-distribution" id="credential-distribution"></a>
 
 Dock's API has built in credential distribution on issuance, allowing you to send credentials directly to a holder's email and/or Dock-compatible wallet. You can achieve this by supplying the `recipientEmail` field and `distribute: true` in your request. For DID distribution, simply set the `credentialSubject.id` property to the holder's DID.
 
-### Revocation <a href="#credential-issuance-revocation" id="credential-issuance-revocation"></a>
+#### Revocation <a href="#credential-issuance-revocation" id="credential-issuance-revocation"></a>
 
 In order to support revocation the credential must be linked to a [revocation registry](registries.md) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](index.html.md#schemacredential) body to the `registry.id` value.
 
