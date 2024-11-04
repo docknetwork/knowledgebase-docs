@@ -22,61 +22,70 @@ This Postman collection shows a simple example of sub-account set up in 5 steps:
 
 ## Create sub-account
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts" method="post" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts" method="post" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
 ## List sub-accounts
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts" method="get" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts" method="get" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
 ## Get sub-account by ID
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts/{id}" method="get" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}" method="get" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
 ## Update the specified sub-account
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts/{id}" method="patch" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}" method="patch" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Deletes the specified sub-account
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts/{id}" method="delete" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}" method="delete" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Get sub-account usage
 
 Get details about the activity that this sub-account has performed in the system.
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts/{id}/usage" method="get" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}/usage" method="get" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Create sub-account API key
 
 Creates an API key for a sub-account. In order for activity to be associated with the given sub-account an API key needs to be created for that sub-account and then that key must be used for all transactions related to that sub-account.
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts/{id}/keys" method="post" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}/keys" method="post" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## List sub-account API keys
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts/{id}/keys" method="get" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}/keys" method="get" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Delete a sub-account API key
 
 Delete the specified API key for the given sub-account.
 
-{% swagger src="../../.gitbook/assets/openapi (1) (1) (1).yaml" path="/subaccounts/{id}/keys/{keyId}" method="delete" %}
-[openapi (1) (1) (1).yaml](<../../.gitbook/assets/openapi (1) (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}/keys/{keyId}" method="delete" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
-
