@@ -2,8 +2,6 @@
 
 ## Wallet 1.3.0 (build 760) September 19
 
-## Release notes - Dock Mobile - Wallet 1.3.0 (build 760)
-
 #### New Features
 
 DCKM-582 Enabled holders to present Open ID format credentials.
