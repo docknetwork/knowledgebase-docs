@@ -1,6 +1,12 @@
-# Downloading and Deleting Credentials
+# Filtering, downloading and deleting credentials
 
-### Downloading Credentials <a href="#h_5ef77bc181" id="h_5ef77bc181"></a>
+### Filtering credentials <a href="#h_5ef77bc181" id="h_5ef77bc181"></a>
+
+For easier management of the credentials issuers can filter the credential view table by Credential ID, Issue date (use YYYY-MM-DD format), Type (schema used) or subject reference.&#x20;
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-04 at 16.45.20.png" alt=""><figcaption></figcaption></figure>
+
+### Downloading credentials <a href="#h_5ef77bc181" id="h_5ef77bc181"></a>
 
 If you need to download an already issued credential you can do it by selecting credential you want to download and clicking Download.
 
