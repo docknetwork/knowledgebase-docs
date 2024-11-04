@@ -1,17 +1,18 @@
 # Creating a Trust Registry
 
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries" method="post" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries" method="post" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries" method="get" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries" method="get" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/{registryId}/public" method="get" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/{registryId}/public" method="get" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/{registryId}" method="get" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/{registryId}" method="get" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
+

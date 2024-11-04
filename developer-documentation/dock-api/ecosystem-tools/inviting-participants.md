@@ -1,31 +1,34 @@
 # Inviting participants
 
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/{registryId}/participants" method="post" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
-{% endswagger %}
-
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/{registryId}/participants/{participantId}" method="get" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
-{% endswagger %}
-
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/{registryId}/participants/{participantId}" method="patch" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
-{% endswagger %}
-
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/invitations/accept" method="post" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/{registryId}/participants" method="post" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
 
 
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/invitations/decline" method="post" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/{registryId}/participants" method="get" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/invitations/snooze" method="post" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/{registryId}/participants/{participantId}" method="patch" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
 
-{% swagger src="../../../.gitbook/assets/openapi (1) (1).yaml" path="/trust-registries/{registryId}/participants/{participantId}" method="delete" %}
-[openapi (1) (1).yaml](<../../../.gitbook/assets/openapi (1) (1).yaml>)
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/invitations/accept" method="post" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
 {% endswagger %}
+
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/invitations/decline" method="post" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% endswagger %}
+
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/invitations/snooze" method="post" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% endswagger %}
+
+
+
+{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/trust-registries/{registryId}/participants/{participantId}" method="delete" %}
+[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% endswagger %}
+
