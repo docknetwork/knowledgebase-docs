@@ -33,11 +33,11 @@ If the account has **locked or staked** funds they will need to be [unbonded](ht
 
 The entire amount of the account will be migrated at once. After the migration request is submitted your $DOCK tokens will be burnt and you will be sent the converted CHEQD amount with **Swap Ratio:** 18.5178 $DOCK to 1 $CHEQ. The migration will take up to 1-2 business days to complete, after that the converted $CHEQ amount will be available in the indicated cheqd wallet.
 
-The migration service will only be available until **February 28, 2025.**
+The migration service will only be available until **March 15, 2025.**
 
 Please follow these instructions carefully and contact our team with any questions at [support@dock.io](mailto:support@dock.io).
 
 {% hint style="warning" %}
-If you need any transaction reports from Dock blockchain for tax purposes, make sure to download them from our [Subscan blockchain explorer](https://dock.subscan.io/) before February 28, 2025.
+If you need any transaction reports from Dock blockchain for tax purposes, make sure to download them from our [Subscan blockchain explorer](https://dock.subscan.io/) before March 15, 2025.
 {% endhint %}
 
