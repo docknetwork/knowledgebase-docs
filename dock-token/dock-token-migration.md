@@ -6,8 +6,6 @@ hidden: true
 
 The Dock network will be migrating its functionality and all tokens to the cheqd blockchain. This migration will allow Dock to leverage cheqd’s advanced infrastructure and bring enhanced value to both ecosystems. Existing $DOCK tokens will be converted into $CHEQ tokens, ensuring a smooth transition for all token holders. Official announcements is [available here](https://www.dock.io/post/dock-and-cheqd-form-alliance-to-accelerate-global-adoption-of-decentralized-id).
 
-{% embed url="https://youtu.be/oCfIC2rqwT4" %}
-
 
 
 [Migration Tems and Conditions can be found here](dock-token-migration/migration-terms-and-conditions.md).
@@ -44,6 +42,8 @@ The entire amount of the account will be migrated at once. After the migration r
 The migration service will only be available until **March 15, 2025.**
 
 Please follow these instructions carefully and contact our team with any questions at [support@dock.io](mailto:support@dock.io).
+
+{% embed url="https://youtu.be/oCfIC2rqwT4" %}
 
 {% hint style="warning" %}
 If you need any transaction reports from Dock blockchain for tax purposes, make sure to download them from our [Subscan blockchain explorer](https://dock.subscan.io/) before March 15, 2025.
