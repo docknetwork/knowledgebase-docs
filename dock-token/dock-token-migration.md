@@ -20,6 +20,10 @@ Migration can only be done from the [Dock browser-based wallet](https://docs.doc
 
 Token holders that use Dock Wallet App or Nova Wallet can add their accounts to the browser wallet by [following these steps.](dock-token-migration/adding-account-to-the-dock-browser-wallet.md)
 
+{% hint style="warning" %}
+Token migration can be done only from an address you own, if you have $DOCK tokens in an exchange you will need to withdraw them to your Dock wallet. See how to create a new [Dock wallet account](https://docs.dock.io/dock-token/wallets-and-account-creation#to-create-a-new-account).
+{% endhint %}
+
 To migrate your $DOCK tokens
 
 1. Select your Dock account. If it isn't yet added, then follow [these instructions.](https://docs.dock.io/dock-token/dock-token-migration/adding-account-to-the-dock-browser-wallet)
