@@ -6,8 +6,6 @@ hidden: true
 
 The Dock network will be migrating its functionality and all tokens to the cheqd blockchain. This migration will allow Dock to leverage cheqd’s advanced infrastructure and bring enhanced value to both ecosystems. Existing $DOCK tokens will be converted into $CHEQ tokens, ensuring a smooth transition for all token holders. Official announcements is [available here](https://www.dock.io/post/dock-and-cheqd-form-alliance-to-accelerate-global-adoption-of-decentralized-id).
 
-
-
 [Migration Tems and Conditions can be found here](dock-token-migration/migration-terms-and-conditions.md).
 
 ## Instructions for $DOCK token holders
@@ -24,6 +22,8 @@ Token holders that use Dock Wallet App or Nova Wallet can add their accounts to 
 
 {% hint style="warning" %}
 Token migration can be done only from an address you own, if you have $DOCK tokens in an exchange you will need to withdraw them to your Dock wallet. See how to create a new [Dock wallet account](https://docs.dock.io/dock-token/wallets-and-account-creation#to-create-a-new-account).
+
+We are working with exchanges to enable the migration to be done on behalf of users and we will publish a list of participating exchanges as soon as it is available.
 {% endhint %}
 
 To migrate your $DOCK tokens
