@@ -10,10 +10,10 @@ The Dock network will be migrating its functionality and all tokens to the cheqd
 
 ## Instructions for $DOCK token holders
 
-Before starting the migration the process make sure you have a wallet that can hold $CHEQ. If you do not, [see instructions on how to set one up.](https://docs.cheqd.io/product/network/wallets/setup-leap-wallet)
+Before starting the migration process, make sure you have a wallet that can hold $CHEQ. If you do not, [see instructions on how to set one up.](https://docs.cheqd.io/product/network/wallets/setup-leap-wallet)
 
 {% hint style="info" %}
-We recommend using Leap wallet, because it has full support on desktop, browser and mobile, but you can also use a Keplr wallet if you already have one.&#x20;
+We recommend using Leap wallet because it has full support on desktop, browser and mobile, but you can also use a Keplr wallet if you already have one.&#x20;
 {% endhint %}
 
 Migration can only be done from the [Dock browser-based wallet](https://docs.dock.io/dock-token/wallets-and-account-creation#dock-polkadot-js-app). <mark style="background-color:red;">ADD A LINK TO THE MIGRATION PAGE</mark>
@@ -21,9 +21,9 @@ Migration can only be done from the [Dock browser-based wallet](https://docs.doc
 Token holders that use Dock Wallet App or Nova Wallet can add their accounts to the browser wallet by [following these steps.](dock-token-migration/adding-account-to-the-dock-browser-wallet.md)
 
 {% hint style="warning" %}
-Token migration can be done only from an address you own, if you have $DOCK tokens in an exchange you will need to withdraw them to your Dock wallet. See how to create a new [Dock wallet account](https://docs.dock.io/dock-token/wallets-and-account-creation#to-create-a-new-account).
+Token migration can be done only from an address you control. We are working with exchanges to enable automatic migration for their users. We will publish a list of participating exchanges as soon as it is available.
 
-We are working with exchanges to enable the migration to be done on behalf of users and we will publish a list of participating exchanges as soon as it is available.
+If you have $DOCK tokens in an exchange and want to migrate immediately, you should withdraw those tokens to your Dock wallet. See how to create a new [Dock wallet account](https://docs.dock.io/dock-token/wallets-and-account-creation#to-create-a-new-account).
 {% endhint %}
 
 To migrate your $DOCK tokens
