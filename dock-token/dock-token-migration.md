@@ -10,10 +10,10 @@ The Dock network will be migrating its functionality and all tokens to the cheqd
 
 ## Instructions for $DOCK token holders
 
-Before starting the migration the process make sure you have a wallet that can hold $CHEQ. If you do not, [see instructions on how to set one up.](https://docs.cheqd.io/product/network/wallets/setup-leap-wallet)
+Before starting the migration process, make sure you have a wallet that can hold $CHEQ. If you do not, [see instructions on how to set one up.](https://docs.cheqd.io/product/network/wallets/setup-leap-wallet)
 
 {% hint style="info" %}
-We recommend using Leap wallet, because it has full support on desktop, browser and mobile, but you can also use a Keplr wallet if you already have one.&#x20;
+We recommend using Leap wallet because it has full support on desktop, browser and mobile, but you can also use a Keplr wallet if you already have one.&#x20;
 {% endhint %}
 
 Migration can only be done from the [Dock browser-based wallet](https://docs.dock.io/dock-token/wallets-and-account-creation#dock-polkadot-js-app). <mark style="background-color:red;">ADD A LINK TO THE MIGRATION PAGE</mark>

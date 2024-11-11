@@ -17,31 +17,18 @@ References to "Cheqd" in this Agreement are to the Cheqd network, which oversees
 
 #### Migration Process Overview
 
-The token migration process allows you to exchange Dock tokens, native to the Substrate-based Dock blockchain, for Cheqd tokens. The following steps summarize the token migration process:
-
-\
+The token migration process allows you to exchange Dock tokens, native to the Substrate-based Dock blockchain, for Cheqd tokens. The following steps summarize the token migration process:\
 
 
 1. Access the Migration Application available at www.fe.dock.io and choose the Dock account holding your DOCK tokens.
+2. Connect your Cheqd account either via Leap/Keplr wallet or by manually entering your Cheqd account details.\
 
-\
-
-
-2. Connect your Cheqd account either via Keplr wallet or by manually entering your Cheqd account details.
-
-\
-
-
-3. Carefully read the terms and conditions of the migration, then click Submit to finalize your request.
-
-\
-
+3. Carefully read the terms and conditions of the migration, then click Submit to finalize your request.\
 
 4. Once your migration request is submitted, your DOCK tokens will be permanently burned. You will then receive the equivalent amount of CHEQ tokens, calculated based on the Swap Ratio. It may take up to a few days to receive the CHEQ tokens in your Cheqd account.
 
 By participating in the Migration Application or using the Site or Services (as defined below), you agree to the terms of this Agreement. Dock reserves the right to update or modify this Agreement at its sole discretion, and such changes will be effective as specified in Section 3 below.
 
-\
 
 
 ### 1. Use of Services
