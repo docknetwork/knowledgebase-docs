@@ -1,7 +1,3 @@
----
-hidden: true
----
-
 # Dock Token Migration
 
 The Dock network will be migrating its functionality and all tokens to the cheqd blockchain. This migration will allow Dock to leverage cheqd’s advanced infrastructure and bring enhanced value to both ecosystems. Existing $DOCK tokens will be converted into $CHEQ tokens, ensuring a smooth transition for all token holders. Official announcements is [available here](https://www.dock.io/post/dock-and-cheqd-form-alliance-to-accelerate-global-adoption-of-decentralized-id).
@@ -16,7 +12,7 @@ Before starting the migration process, make sure you have a wallet that can hold
 We recommend using Leap wallet because it has full support on desktop, browser and mobile, but you can also use a Keplr wallet if you already have one.&#x20;
 {% endhint %}
 
-Migration can only be done from the [Dock browser-based wallet](https://docs.dock.io/dock-token/wallets-and-account-creation#dock-polkadot-js-app). <mark style="background-color:red;">ADD A LINK TO THE MIGRATION PAGE</mark>
+Migration can only be done from the [Dock browser-based wallet](https://fe.dock.io/#/migration).&#x20;
 
 Token holders that use Dock Wallet App or Nova Wallet can add their accounts to the browser wallet by [following these steps.](dock-token-migration/adding-account-to-the-dock-browser-wallet.md)
 
