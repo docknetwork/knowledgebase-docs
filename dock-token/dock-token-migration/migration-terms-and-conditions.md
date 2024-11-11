@@ -10,7 +10,7 @@ Please read these Terms of Service (this “Agreement”) carefully. By requesti
 
 This Agreement is between you (the “User” and collectively with others using the Migration Application, the “Users”) and the Dock Association, an Association organized under the Laws of Switzerland (“Association”, “Dock”, or “we,” “our” or “us” and together with you, the “Parties”). This agreement governs your use of (including any access to) Dock’s website, currently located at www.dock.io, web applications including the migration portal provided at www.fe.dock.io, decentralized applications, and other related services (collectively referred to as the “Site”).&#x20;
 
-References to "Cheqd" in this Agreement are to the Cheqd network, which oversees the Cheqd network and the CHEQ token, with its website at [https://cheqd.io](https://cheqd.io).
+References to "Cheqd" in this Agreement are to the Cheqd Foundation, which oversees the Cheqd network and the CHEQ token, with its website at [https://cheqd.io](https://cheqd.io).
 
 \
 
@@ -73,7 +73,7 @@ This Agreement may be discretionarily modified or replaced at any time, unless s
 
 #### 4.1 No Representation or Warranty
 
-WE MAKE AND EXPRESSLY DISCLAIM ALL REPRESENTATIONS AND WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AND WITH RESPECT TO THE SERVICES AND THE CODE PROPRIETARY OR OPEN SOURCE, WE SPECIFICALLY DO NOT REPRESENT AND WARRANT AND EXPRESSLY DISCLAIM ANY REPRESENTATION OR WARRANTY, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION, ANY REPRESENTATIONS OR WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, USAGE, SECURITY, SUITABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR AS TO THE WORKMANSHIP OR TECHNICAL CODING THEREOF, OR THE ABSENCE OF ANY DEFECTS THEREIN, WHETHER LATENT OR PATENT. WE DO NOT REPRESENT OR WARRANT THAT THE SERVICES, CODE AND ANY RELATED INFORMATION ARE ACCURATE, COMPLETE, RELIABLE, CURRENT OR ERROR-FREE.
+WE EXPRESSLY DISCLAIM ALL REPRESENTATIONS AND WARRANTIES, EXPRESS, IMPLIED OR STATUTORY, AND WITH RESPECT TO THE SERVICES AND THE CODE PROPRIETARY OR OPEN SOURCE, WE SPECIFICALLY DO NOT REPRESENT AND WARRANT AND EXPRESSLY DISCLAIM ANY REPRESENTATION OR WARRANTY, EXPRESS, IMPLIED OR STATUTORY, INCLUDING WITHOUT LIMITATION, ANY REPRESENTATIONS OR WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, USAGE, SECURITY, SUITABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR AS TO THE WORKMANSHIP OR TECHNICAL CODING THEREOF, OR THE ABSENCE OF ANY DEFECTS THEREIN, WHETHER LATENT OR PATENT. WE DO NOT REPRESENT OR WARRANT THAT THE SERVICES, CODE AND ANY RELATED INFORMATION ARE ACCURATE, COMPLETE, RELIABLE, CURRENT OR ERROR-FREE.
 
 #### 4.2 Assumption of Risks of Cryptographic Systems and Currencies
 
