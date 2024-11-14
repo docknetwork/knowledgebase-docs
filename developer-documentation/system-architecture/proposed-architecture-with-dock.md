@@ -21,3 +21,7 @@
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-10-16 at 15.56.49.png" alt=""><figcaption></figcaption></figure>
 
+## Credential request flow
+
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-14 at 15.36.26.png" alt=""><figcaption></figcaption></figure>
+
