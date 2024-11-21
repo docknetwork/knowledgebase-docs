@@ -25,7 +25,8 @@ To migrate your $DOCK tokens
 1. Select your Dock account. If it isn't yet added, then follow [these instructions.](https://docs.dock.io/dock-token/dock-token-migration/adding-account-to-the-dock-browser-wallet)
 2. Connect your cheqd wallet or enter your cheqd account manually. Connecting a Leap wallet will allow us to confirm that the tokens are going to the cheqd account that you control.&#x20;
 3. Accep T\&Cs and click Submit
-4. Authorize the transaction by entering your account password. Click **Sign & Submit**
+4. Authorize the transaction by entering your account password. A small chain fee will be applied to the submission (approximately \~0.44669 DOCK, depends on the congestion of the network)
+5. Click **Sign & Submit**
 
 {% hint style="warning" %}
 If the account has **locked or staked** funds they will need to be [unbonded](https://docs.dock.io/dock-token/staking/how-to-unbond-and-rebond) to migrate.
