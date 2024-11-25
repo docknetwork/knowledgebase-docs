@@ -16,8 +16,12 @@ Migration can only be done from the [Dock browser-based wallet](https://fe.dock.
 
 Token holders that use Dock Wallet App or Nova Wallet can add their accounts to the browser wallet by [following these steps.](dock-token-migration/adding-account-to-the-dock-browser-wallet.md)
 
+{% hint style="info" %}
+KuCoin will support the migration of DOCK tokens to CHEQ. If you’re holding your DOCK tokens on KuCoin, you don’t need to do a thing—KuCoin will handle the migration for you. [Learn more](https://www.kucoin.com/announcement/en-kucoin-will-support-the-token-merger-of-dock-and-cheqd-20241122?utm_source=TwitterContent)
+{% endhint %}
+
 {% hint style="warning" %}
-If your $DOCK tokens are currently on an exchange, you’ll need to withdraw them to a Dock wallet to complete the token migration, as it can only be done from an address you own. [Follow our guide on creating a Dock wallet account to get started](https://docs.dock.io/dock-token/wallets-and-account-creation#to-create-a-new-account). We are actively working with exchanges to allow them to handle the migration on behalf of users, and we’ll publish a list of participating exchanges as soon as it’s available.
+If your $DOCK tokens are currently on another exchange, you’ll need to withdraw them to a Dock wallet to complete the token migration, as it can only be done from an address you own. [Follow our guide on creating a Dock wallet account to get started](https://docs.dock.io/dock-token/wallets-and-account-creation#to-create-a-new-account). We are actively working with other exchanges to allow them to handle the migration on behalf of users, and we’ll publish a list of participating exchanges as soon as it’s available.
 {% endhint %}
 
 To migrate your $DOCK tokens
