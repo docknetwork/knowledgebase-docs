@@ -1,5 +1,13 @@
 # Release Notes 2024Q4
 
+## Wallet 1.4.2 & Wallet 1.4.1 November 11&18
+
+### New features and updates
+
+DCKW-607 Updated the wallet notification functionality, when a notification is clicked, the user will be taken to the specific credential detail screen.
+
+DCKW-644 Added a prompt to turn on notifications for those users that don't have them enabled.&#x20;
+
 ## Wallet 1.4.0 November 1
 
 ### New features and updates
