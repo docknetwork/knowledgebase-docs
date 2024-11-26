@@ -6,9 +6,11 @@ To create an API key, under the Developer menu item, click API Keys. Then select
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797819200/25c4a4a749aab0b66e47328a/63e6a016405ede44f43e8dd0_15-digital+credential+platform+api+keys.jpg" alt=""><figcaption></figcaption></figure>
 
-Under Whitelisted IP’s, you have the option to add additional security by configuring IP's that are allowed to access your services.
+Under Whitelisted IP’s, you have the option to add additional security by configuring IP's that are allowed to access your services
 
-[![](https://downloads.intercomcdn.com/i/o/797820670/bc688402a01cb95c26b121c5/6356fb8c3be0dfc3ddd1a0de\_2-API+key+created.png)](https://downloads.intercomcdn.com/i/o/797820670/bc688402a01cb95c26b121c5/6356fb8c3be0dfc3ddd1a0de\_2-API+key+created.png)
+<div align="left"><figure><img src="../.gitbook/assets/Screenshot 2024-11-26 at 16.30.36.png" alt="" width="375"><figcaption></figcaption></figure></div>
+
+
 
 {% hint style="warning" %}
 Keep your API key safe, for security reasons it will not be shown again. Please do not share this key. If you forget your API key, you will need to delete the existing key and create a new one.
@@ -24,4 +26,4 @@ You can add or modify webhook endpoints that will send events when issuing or wh
 
 Fill in the Webhook details and click Create Webhook.
 
-[![](https://downloads.intercomcdn.com/i/o/797831076/f27e685f76d0e00a209759cd/6356fc0a5432fa812b8eaea6\_2-Webhook+details.png)](https://downloads.intercomcdn.com/i/o/797831076/f27e685f76d0e00a209759cd/6356fc0a5432fa812b8eaea6\_2-Webhook+details.png)
+[![](https://downloads.intercomcdn.com/i/o/797831076/f27e685f76d0e00a209759cd/6356fc0a5432fa812b8eaea6_2-Webhook+details.png)](https://downloads.intercomcdn.com/i/o/797831076/f27e685f76d0e00a209759cd/6356fc0a5432fa812b8eaea6_2-Webhook+details.png)
