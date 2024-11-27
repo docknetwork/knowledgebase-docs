@@ -1,8 +1,26 @@
-# 📳 Dock Wallet
+# 📳 Credential Wallet
 
-Embodying the core principles of privacy, Dock's ID Wallet technology is inherently engineered to safeguard your users' data.
+Dock’s Credential Wallet technology provides a secure, flexible solution for managing and sharing verifiable credentials across platforms. With the ability to store tamper-proof credentials, the wallet ensures that users can easily share their information for verification, while maintaining full control over their data.&#x20;
 
-[Dock Wallet ](https://www.dock.io/feature/identity-wallet)allows users to import their digital Verifiable Credentials and share them for verification. To see the full capabilities of the Dock wallet, you can download it from an app store:
+To help businesses integrate the wallet, Dock offers several flexible deployment options:
+
+### Mobile wallet SDK
+
+Dock’s mobile SDK allows you to quickly embed the wallet into your app or your clients’ apps. The SDK is built with a modular feature set, so you can activate only the functionalities you need, making it adaptable to various use cases. With secure, local data storage, users maintain full control of their credentials while ensuring privacy and compliance with data protection standards. This is the best option when you want to maximize user control of their data, which is important for knowledgeable users.
+
+You can see the technical implementation steps [here](../developer-documentation/wallet-sdk/).
+
+### Cloud wallet
+
+Dock also offers a cloud-based wallet for those who want to reduce barriers to adoption by a non-technical user. The cloud wallet provides secure, encrypted storage of credentials, allowing users to access their digital IDs anytime, anywhere. This solution is ideal for organizations that require scalable, cloud-based credential management.
+
+Read more about the [Cloud wallet](../developer-documentation/wallet-sdk/cloud-wallet.md).
+
+### White-label wallet
+
+When development speed is a priority , Dock offers a white-label wallet solution. If you don’t have an existing app, Dock’s White Label Wallet is the best option. It’s a ready-made, tested solution that saves you the time and money of building a wallet from scratch. Dock takes care of automatic wallet updates making it is easier to maintain.
+
+To see the full capabilities of the Dock mobile wallet, you can download it from an app store:
 
 * iOS users: Download from the the [App store](https://apps.apple.com/us/app/dock-wallet/id1565227368)
 * Android users: Download from the [Google Play store](https://play.google.com/store/apps/details?id=com.dockapp)
@@ -10,10 +28,6 @@ Embodying the core principles of privacy, Dock's ID Wallet technology is inheren
 {% hint style="info" %}
 Dock Wallet supports devices that have  Android 8.1 or higher and iOS 11 or higher.
 {% endhint %}
-
-### White Label ID Wallet
-
-If you don’t have an existing app, Dock’s White Label ID Wallet is the best option when development speed is a priority. It’s a ready-made, tested solution that saves you the time and money of building a wallet from scratch. Dock takes care of automatic wallet updates making it is easier to maintain.
 
 <table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/64d56c2d933df9ceec8f9b50_white label mockup 01.png" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2dca022c113851b25f_white label mockup 02.webp" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2d550809f0b632e773_white label mockup 03 (1).webp" alt=""></td><td></td></tr></tbody></table>
 
@@ -24,8 +38,4 @@ With White Label ID wallet you will be able to:
 * Manage your own App Store profile and relationships with users.
 * Put users in control of their data
 
-See the technical implementation steps [here](white-label-wallet/).
-
-### Dock’s Wallet React Native SDK
-
-Build ID Wallet capabilities inside your existing app with Dock’s Wallet SDK, enabling users to effortlessly store, manage and share their Reusable Digital ID credentials without having to download an extra app.
+You can see the technical implementation steps [here](white-label-wallet/).

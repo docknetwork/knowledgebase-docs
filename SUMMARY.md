@@ -37,7 +37,7 @@
     * [Release Notes April 2024](dock-certs/dock-certs-release-notes/release-notes-v1.30.0-apr-24-2024.md)
     * [Release Notes March 2024](dock-certs/dock-certs-release-notes/release-notes-v1.26.1-mar-22-2024.md)
     * [Release Notes February 2024](dock-certs/dock-certs-release-notes/release-notes-v1.24.0-feb-22-2024.md)
-* [📳 Dock Wallet](dock-wallet/README.md)
+* [📳 Credential Wallet](dock-wallet/README.md)
   * [Create and Manage DIDs in the Dock Wallet](dock-wallet/create-and-manage-dids-from-the-dock-wallet.md)
   * [Dock Wallet Release Notes](dock-wallet/dock-wallet-release-notes/README.md)
     * [Release Notes 2024Q4](dock-wallet/dock-wallet-release-notes/release-notes-2024q4.md)
