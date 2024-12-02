@@ -332,3 +332,24 @@ This event indicates a schema has been created. It will fire when a schema has b
 ```
 
 </details>
+
+### proof\_submitted
+
+This event indicates that a proof has been submitted. Minimal data is included in the event but the details can be retrieved using the proof_request API.
+
+<details>
+
+<summary>SAMPLE JSON PAYLOAD</summary>
+
+```json
+{
+  "token": "15f2irRkZFz1tjOjGdA0cGh66abwd4ckC8pR2suxVIPt97yc_zDTQIiNkT20JqAm",
+  "event": "proof_submitted",
+  "data": {
+    "id": "7fbbe582-66d6-4fbc-92f3-c13d9cf7975a",
+    "verified": true
+  }
+}
+```
+
+</details>
