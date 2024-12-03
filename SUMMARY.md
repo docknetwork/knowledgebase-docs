@@ -88,7 +88,7 @@
     * [DIDs](developer-documentation/dock-api/dids.md)
     * [Profiles](developer-documentation/dock-api/profiles.md)
     * [Credentials](developer-documentation/dock-api/credentials.md)
-    * [Proofs](developer-documentation/dock-api/page/README.md)
+    * [Proofs](developer-documentation/dock-api/page.md)
       * [Proof templates](developer-documentation/dock-api/page/proof-templates.md)
       * [Proof requests](developer-documentation/dock-api/page/proof-requests.md)
       * [Other proof endpoints](developer-documentation/dock-api/page/other-proof-endpoints.md)

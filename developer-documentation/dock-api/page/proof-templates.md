@@ -2,6 +2,8 @@
 
 To verify a credential verifier will need to create a proof template and generate a proof request to which the holder wallet will provide the verifiable presentation. Verifiable presentations can not be done via the API, the [credential SDK](https://github.com/docknetwork/sdk) is needed to create a presentation.&#x20;
 
+When working with proof requests you will often want to request the same information from holders. To make this easier you can create proof request templates to define the contents of the proof requests to be re-used.
+
 ## Create a proof template <a href="#create-proof-request" id="create-proof-request"></a>
 
 {% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/proof-templates" method="post" %}
