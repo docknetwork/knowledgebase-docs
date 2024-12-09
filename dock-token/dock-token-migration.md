@@ -17,7 +17,8 @@ Migration can only be done from the [Dock browser-based wallet](https://fe.dock.
 Token holders that use Dock Wallet App or Nova Wallet can add their accounts to the browser wallet by [following these steps.](dock-token-migration/adding-account-to-the-dock-browser-wallet.md)
 
 {% hint style="info" %}
-KuCoin will support the migration of DOCK tokens to CHEQ. If you’re holding your DOCK tokens on KuCoin, you don’t need to do a thing—KuCoin will handle the migration for you. [Learn more](https://www.kucoin.com/announcement/en-kucoin-will-support-the-token-merger-of-dock-and-cheqd-20241122?utm_source=TwitterContent)
+KuCoin will support the migration of DOCK tokens to CHEQ. If you’re holding your DOCK tokens on KuCoin, you don’t need to do a thing—KuCoin will handle the migration for you. [Learn more](https://www.kucoin.com/announcement/en-kucoin-will-support-the-token-merger-of-dock-and-cheqd-20241122?utm_source=TwitterContent)\
+Gate.io will support the migration of DOCK tokens to CHEQ. If you’re holding your DOCK tokens on Gate.io, you don’t need to do a thing—Gate.io will handle the migration for you. [Learn more](https://www.gate.io/announcements/article/41036)
 {% endhint %}
 
 {% hint style="warning" %}
