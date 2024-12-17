@@ -15,7 +15,7 @@ Trust registries are governed by trust frameworks, a set of operating rules that
 
 ## Why use a trust registry
 
-By having a trust registry, credential verifiers do not need to manage a list of valid issuers and holders know which verifiers they can trust to share their credentials with. They only need to trust one Ecosystem administrator. [Ecosystem Tools](../../../dock-certs/ecosystem-tools/) exemplifies the power of trust registries in creating a network of trusted digital identity issuers and verifiers.&#x20;
+By having a trust registry, credential verifiers do not need to manage a list of valid issuers and holders know which verifiers they can trust to share their credentials with. They only need to trust one Ecosystem administrator. [Ecosystem Tools](../../../truvera-workspace/ecosystem-tools/) exemplifies the power of trust registries in creating a network of trusted digital identity issuers and verifiers.&#x20;
 
 Trust registry contains the following information:
 

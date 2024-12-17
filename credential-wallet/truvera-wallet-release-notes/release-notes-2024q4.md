@@ -1,5 +1,21 @@
 # Release Notes 2024Q4
 
+## Wallet 1.4.3 December 9
+
+### New features and updates
+
+DCKW-635 Upgraded the wallet to accept the updated credential SDK that splits credentials and blockchain functionalities.
+
+### Bug fixes
+
+DCKW-653 Fixed verification error messaging for when "Unexpected error" appeared when verifying a ZKP credential.
+
+DCKW-656 Fixed the not working Decline button.
+
+DCKW-672 Fixed issues with installing npm
+
+DCKW-675 Fixed verification error "Subject required"
+
 ## Wallet 1.4.2 & Wallet 1.4.1 November 11&18
 
 ### New features and updates

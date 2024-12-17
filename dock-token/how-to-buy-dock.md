@@ -1,10 +1,14 @@
+---
+hidden: true
+---
+
 # How to Buy DOCK
 
 There are different ways to buy DOCK token, you can use crypto exchanges and buy DOCK with other cryptocurrencies or use Transak and buy DOCK using fiat.
 
 ### Crypto Exchanges
 
-DOCK token is available on the world’s leading cryptocurrency exchanges like [Kucoin](https://trade.kucoin.com/DOCK-BTC), and [Gate](https://www.gate.io/trade/DOCK\_USDT). You can register on their platforms and buy DOCK with leading base cryptocurrencies including USDT or BTC.
+DOCK token is available on the world’s leading cryptocurrency exchanges like [Kucoin](https://trade.kucoin.com/DOCK-BTC), and [Gate](https://www.gate.io/trade/DOCK_USDT). You can register on their platforms and buy DOCK with leading base cryptocurrencies including USDT or BTC.
 
 {% hint style="info" %}
 You can find the full list of the exchanges with pairs and token price [here](https://coinmarketcap.com/currencies/dock/#Markets).

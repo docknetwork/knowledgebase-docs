@@ -16,7 +16,7 @@ Under Whitelisted IP’s, you have the option to add additional security by conf
 Keep your API key safe, for security reasons it will not be shown again. Please do not share this key. If you forget your API key, you will need to delete the existing key and create a new one.
 {% endhint %}
 
-For more information about API [See API documentation](../developer-documentation/dock-api/)
+For more information about API [See API documentation](../developer-documentation/truvera-api/)
 
 ## Webhooks Endpoints <a href="#h_fae99467a4" id="h_fae99467a4"></a>
 

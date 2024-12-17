@@ -1,6 +1,10 @@
+---
+hidden: true
+---
+
 # Emission Rewards
 
-The tokens released each year as emission rewards are fewer than the previous year and the total supply is expected to be in circulation within around 25 years. Each year, the network releases at most 25% of the remaining supply.&#x20;
+The tokens released each year as emission rewards are fewer than the previous year and the total supply is expected to be in circulation within around 25 years. Each year, the network releases at most 25% of the remaining supply.
 
 | Year | Tokens released | Tokens remaining to be released | Total Issuance |
 | ---- | --------------- | ------------------------------- | -------------- |
@@ -14,10 +18,9 @@ The tokens released each year as emission rewards are fewer than the previous ye
 | 2040 | 154,978         | 464,934                         | 999,535,066    |
 | 2045 | 36,777          | 110,331                         | 999,889,669    |
 
-The supply is adjusted such that if more than 40% of the circulating supply is staked, the emissions start to decrease each era. Thus, token holders will see more value in keeping the system liquid and encouraging apps to transact. If the staked tokens are less than 40% of the circulating supply, then the network increases the emission rate for each era until the staked tokens reach 40%. For example, the emission rewards when 30% of total supply is staked will be more than when 20% of total supply is staked which will be more than when 10% of total supply is staked; but all of these rewards will be less than those at 40% stake. This ensures that there is enough security in the network.&#x20;
+The supply is adjusted such that if more than 40% of the circulating supply is staked, the emissions start to decrease each era. Thus, token holders will see more value in keeping the system liquid and encouraging apps to transact. If the staked tokens are less than 40% of the circulating supply, then the network increases the emission rate for each era until the staked tokens reach 40%. For example, the emission rewards when 30% of total supply is staked will be more than when 20% of total supply is staked which will be more than when 10% of total supply is staked; but all of these rewards will be less than those at 40% stake. This ensures that there is enough security in the network.
 
-The rewards for each era consist of the transaction fees collected in the era and the emission in the era. The rewards are distributed among the Treasury and the validators. The Treasury receives 50% of the rewards and the validators get 50%. Among the validators, the rewards are distributed based on their performance in that era. The network keeps track of the contributions of each validator in the era. For each validator, the network gives rewards proportional to their performance which are then distributed to the nominators in proportion to their stake after deducting commission. For instance, if a validator is expected to receive 100 tokens in an era with a 5% commission and 3 nominators with 35%, 30%, and 20% stake each, the network would give 15 tokens (10+5) to the validator and 35, 30 and 20 tokens to each of the nominators.\
-
+The rewards for each era consist of the transaction fees collected in the era and the emission in the era. The rewards are distributed among the Treasury and the validators. The Treasury receives 50% of the rewards and the validators get 50%. Among the validators, the rewards are distributed based on their performance in that era. The network keeps track of the contributions of each validator in the era. For each validator, the network gives rewards proportional to their performance which are then distributed to the nominators in proportion to their stake after deducting commission. For instance, if a validator is expected to receive 100 tokens in an era with a 5% commission and 3 nominators with 35%, 30%, and 20% stake each, the network would give 15 tokens (10+5) to the validator and 35, 30 and 20 tokens to each of the nominators.\\
 
 #### **Key points:**
 

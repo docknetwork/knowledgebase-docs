@@ -42,7 +42,7 @@ Dock's API has built in credential distribution on issuance, allowing you to sen
 
 #### Revocation <a href="#credential-issuance-revocation" id="credential-issuance-revocation"></a>
 
-In order to support revocation the credential must be linked to a [revocation registry](registries.md) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](index.html.md#schemacredential) body to the `registry.id` value.
+In order to support revocation the credential must be linked to a [revocation registry](registries.md) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](../dock-api/index.html.md#schemacredential) body to the `registry.id` value.
 
 {% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/credentials" method="post" %}
 [https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)

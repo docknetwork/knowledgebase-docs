@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Token Utility
 
 The Dock utility token (DOCK) plays a key role in aligning incentives across all of the Dock network’s participants including issuers, validators, token holders, and the Dock Association, and ensures collaboration and growth. The Dock token provides three main utilities in the network:
