@@ -87,7 +87,7 @@
       * [Issue monetizable credentials](developer-documentation/truvera-api/dock-postman-collection/issue-kvac-credentials.md)
       * [Creat sub-accounts](developer-documentation/truvera-api/dock-postman-collection/creat-sub-accounts.md)
       * [Issue OpenID credentials](developer-documentation/truvera-api/dock-postman-collection/issue-openid-credentials.md)
-    * [Dock Swagger UI](developer-documentation/truvera-api/dock-swagger-ui.md)
+    * [Truvera Swagger UI](developer-documentation/truvera-api/truvera-swagger-ui.md)
     * [DIDs](developer-documentation/truvera-api/dids.md)
     * [Profiles](developer-documentation/truvera-api/profiles.md)
     * [Credentials](developer-documentation/truvera-api/credentials.md)
