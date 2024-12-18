@@ -67,6 +67,7 @@
     * [Cloud Wallet](credential-wallet/wallet-sdk/cloud-wallet.md)
     * [Biometric Plugin](credential-wallet/wallet-sdk/biometric-plugin.md)
     * [Ecosystem Tools](credential-wallet/wallet-sdk/ecosystem-tools.md)
+  * [Download Truvera Wallet](credential-wallet/download-truvera-wallet.md)
 * [📄 Developer Documentation](developer-documentation/README.md)
   * [System Architecture](developer-documentation/system-architecture/README.md)
     * [Architectural Overview](developer-documentation/system-architecture/architectural-overview.md)
