@@ -14,7 +14,7 @@ In a typical verification process, there are three main parties:
 
 Click on Verification in the left menu and select Create verification template
 
-<figure><img src="../.gitbook/assets/63dd39a9db4a3e2a50cf9e20_1-Create a verification template .png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 15.51.09.png" alt=""><figcaption></figcaption></figure>
 
 First, type in the **Template Title** and **Template Purpose**, which the holder will be able to see.
 
@@ -51,11 +51,7 @@ Last step for a verification request is to click Request, which will generate a 
 
 First step for the holder is to **Scan** the QR code with their wallet and select the credential(s) that contain the information the verifier is requesting.
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/63dc147a07bea77af71f759a_1-select Verifiable Credentials.png" alt="" width="203"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/63dc147a07bea77af71f759a_1-select Verifiable Credentials.png" alt="" width="203"><figcaption></figcaption></figure></div>
 
 {% hint style="info" %}
 If the credentials were issued with Zero Knowledge Proof signatures the holder will be able to choose which details on the credentials to share with the verifier.
@@ -67,36 +63,28 @@ If the credentials are valid and the verification is successful, this is what th
 
 To see a log of all your verification requests, go to Verification and click on **History**.
 
-<figure><img src="https://downloads.intercomcdn.com/i/o/801948701/e62394c921696d957bcd9fde/63dc17caa81c505860578114_7-select+history.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 16.38.05.png" alt=""><figcaption></figcaption></figure>
 
 When the credentials are valid it will show up as “Verified” under Status. The verifier won’t get a notification if the credential is invalid because Dock’s tools won’t let the holder submit invalid credentials.
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-25 at 17.59.50.png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/Screenshot 2024-01-25 at 17.59.50.png" alt="" width="375"><figcaption></figcaption></figure></div>
 
 {% hint style="warning" %}
-Verification request templates can only be created in Dock Certs, not the wallet. These templates can be important into the wallet from Dock Certs for wallet-to-wallet verification.
+Verification request templates can only be created in Truvera Workspace, not the wallet. These templates can be important into the wallet from Truvera Workspace for wallet-to-wallet verification.
 {% endhint %}
 
 ## Wallet-to-Wallet Verification <a href="#h_9833d67c15" id="h_9833d67c15"></a>
 
-After creating the verification request in Dock Certs it can be imported in to the wallet for a wallet-to-wallet verification.
+After creating the verification request in Truvera Workspace it can be imported in to the wallet for a wallet-to-wallet verification.
 
 Go to **Settings** and choose **Credential Verifier**.
 
-<div align="left">
+<div align="left"><figure><img src="https://downloads.intercomcdn.com/i/o/801963474/f0e42a69cd04be5cb000afa0/Screenshot_20230807_140939_DockApp.jpg" alt="" width="188"><figcaption></figcaption></figure></div>
 
-<figure><img src="https://downloads.intercomcdn.com/i/o/801963474/f0e42a69cd04be5cb000afa0/Screenshot_20230807_140939_DockApp.jpg" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
-
-Click Import via QR code and scan the verification template QR code generated in Dock Certs. [See how to create a verification template here.](verify-credentials.md#h\_4638f9252a)
+Click Import via QR code and scan the verification template QR code generated in Truvera Workspace. [See how to create a verification template here.](verify-credentials.md#h_4638f9252a)
 
 After the Verification template is imported you can share it with the holder to present and verify their credential.
 
-![](https://downloads.intercomcdn.com/i/o/801966471/8b2b8552b1276fc19e7bc89d/Screenshot\_20230807\_141402\_DockApp.jpg)
+![](https://downloads.intercomcdn.com/i/o/801966471/8b2b8552b1276fc19e7bc89d/Screenshot_20230807_141402_DockApp.jpg)
 
-Holder will scan this QR code with their Dock Wallet and follow the [verification steps for the holder](verify-credentials.md#h\_551a4bc680).
+Holder will scan this QR code with their Truvera Wallet and follow the [verification steps for the holder](verify-credentials.md#h_551a4bc680).
