@@ -23,23 +23,18 @@ Blockchain acts as an immutable registry containing the Decentralized Identifier
 {% tabs %}
 {% tab title="What goes on chain?" %}
 * Issuers' Decentralized Identifiers (DIDs) and associated Public Keys
-* Credential Schemas
 * Revocation Registries
 {% endtab %}
 
 {% tab title="What does not go on chain?" %}
 * Personally identifiable information
-* Verifiable Credentials. Credentials are stored on the users' devices (e.g. their Wallets)
+* Verifiable Credentials. Credentials are stored on the users' devices (e.g. their wallets)
 {% endtab %}
 {% endtabs %}
-
-{% embed url="https://youtu.be/XIE4KoE_sLo" fullWidth="false" %}
 
 ### **Decentralized Identifiers (DIDs)**
 
 Decentralized identifiers (DIDs) are unique identifiers that are associated with a digital identity. DIDs are made up of a string of letters and numbers that can be stored on the blockchain and can be used to authenticate that identity.
-
-{% embed url="https://youtu.be/zaYYQLDnS6s" %}
 
 Here’s an example of a Dock DID:
 
@@ -52,8 +47,6 @@ Whenever an organization issues someone a Verifiable Credential, their public DI
 ### Verifiable Credentials
 
 Digital credentials that conform to the [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/) developed by the World Wide Web Consortium (W3C) can be referred to as Verifiable Credentials. This standard is a “specification \[that] provides a standard way to express credentials on the Web in a way that is cryptographically secure, privacy-respecting, and machine-verifiable.”
-
-{% embed url="https://youtu.be/L3wbfHpwthA" %}
 
 **Benefits of Verifiable Credentials:**
 
