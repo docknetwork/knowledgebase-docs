@@ -26,7 +26,7 @@ Relying parties use open standards to verify credentials issued by their trusted
 
 **Biometric-bound Credential** - the same person who received the credential at issuance presented the credential for verification.
 
-Dock suggests 2 possible approaches on how to implement biometric-bound credentials and address these concerns.
+We suggests 2 possible approaches on how to implement biometric-bound credentials and address these concerns.
 
 ## How to implement biometric-bound credentials?
 
@@ -34,13 +34,15 @@ Dock suggests 2 possible approaches on how to implement biometric-bound credenti
 
 In this model the issuer and verifier agree on a common provider of biometrics.&#x20;
 
-Issuer requires holder to enroll in the biometric service and provide a biometric sample through the service before the issuer will issue a credential.&#x20;
+Issuer requires holder to  in the biometric service and provide a biometric sample through the service before the issuer will issue a credential.&#x20;
 
 The issued credential contains a link to the biometric template.&#x20;
 
 At time of verification, verifier requires holder to provide a biometric sample through the same service and checks that it matches the template linked in the credential.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-08-01 at 15.40.03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.24.35.png" alt=""><figcaption></figcaption></figure>
+
+
 
 | Pros                                                              | Cons                                                                        |
 | ----------------------------------------------------------------- | --------------------------------------------------------------------------- |
@@ -68,7 +70,7 @@ Wallet detects the request, processes biometric, and provides compound proof to 
 Primary credential: the credential which contains the attributes of interest to the verifier in addition to the biometric binding attributes
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-08-01 at 16.07.38.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.22.20.png" alt=""><figcaption></figcaption></figure>
 
 #### Biometric Enrollment
 
