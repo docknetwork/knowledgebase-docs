@@ -6,15 +6,15 @@
 
 <table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Truvera API</strong></td><td><a href="developer-documentation/truvera-api/">truvera-api</a></td></tr><tr><td><strong>Truvera Workspace</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td></tr><tr><td><strong>Truvera Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td></tr><tr><td><strong>Truvera Wallet SDK</strong></td><td><a href="https://github.com/docknetwork/sdk">https://github.com/docknetwork/sdk</a></td></tr></tbody></table>
 
-[Dock ​Certs API ](developer-documentation/truvera-api/)Dock’s API easily integrates with your system and data sources, simplifying the creation, verification and management of Verifiable Credentials. No blockchain or cryptography knowledge is required.
+[Truvera API](developer-documentation/truvera-api/) easily integrates with your system and data sources, simplifying the creation, verification and management of Verifiable Credentials. No blockchain or cryptography knowledge is required.&#x20;
 
-[Dock Certs Web App](https://certs.dock.io/): A user-friendly platform​ that enables you to issue, verify, manage, and revoke fraud-proof Verifiable Credentials as well create and manage Decentralized Identifiers (DIDs).
+[Truvera Workspace](https://truvera.io/): A user-friendly platform​ that enables you to issue, verify, manage, and revoke fraud-proof Verifiable Credentials as well create and manage Decentralized Identifiers (DIDs).
 
-[ID Wallet](https://www.dock.io/feature/identity-wallet) SDK and White Label: Build ID Wallet capabilities inside your existing app with Dock’s powerful Wallet SDK, enabling users to effortlessly store, manage and share their Verifiable Credentials without having to download an extra app. If you don’t have an existing app, Dock’s White Label ID Wallet is the best option when development speed is a priority. Try the [Dock Wallet](https://www.dock.io/dock-wallet-app) for free.
+[Credential Wallet ](https://www.dock.io/feature/identity-wallet)SDK and white label: Build credential wallet capabilities inside your existing app with Truvera's powerful Wallet SDK, enabling users to effortlessly store, manage and share their verifiable credentials without having to download an extra app. If you don’t have an existing app, Truvera's white label credential wallet is the best option when development speed is a priority. Try the [Truvera Wallet](credential-wallet/) for free.
 
-[Dock SDK ](https://github.com/docknetwork/sdk)contains a Javascript library and tooling to interact for working with Verifiable Credentials, DIDs, Claim Deduction and more. Built with PolkadotJS, for use with the [Dock Substrate Node](https://github.com/docknetwork/dock-substrate) or our public main/test networks.
+[Truvera's Credential SDK ](https://github.com/docknetwork/sdk)contains a Javascript library and tooling to interact for working with Verifiable Credentials, DIDs, Claim Deduction and more. Built with PolkadotJS, it is an open source library that powers Truvera's SaaS API.&#x20;
 
-## **What can you do with Dock?**
+## **What can you do with Truvera?**
 
 <details>
 
@@ -36,7 +36,7 @@ Issue credentials that are reusable, verifiable and secure against fraud. Protec
 
 <summary>Instantly verify credentials</summary>
 
-Create Verification Requests and send Verification QR Codes to your users. They’ll scan them with their Digital ID Wallet app and you’ll receive instant confirmation of the credentials’ authenticity.
+Create Verification Requests and send Verification QR Codes to your users. They’ll scan them with their wallet app and you’ll receive instant confirmation of the credentials’ authenticity.
 
 </details>
 
@@ -44,7 +44,7 @@ Create Verification Requests and send Verification QR Codes to your users. They�
 
 <summary>Launch your Digital ID Ecosystem</summary>
 
-Dock’s user-friendly web dashboard and API allow you to invite and manage trusted issuers and verifiers. Simplify the process of identifying which issuers and verifiers are trustworthy within a particular ecosystem.
+Truvera's user-friendly workspace and API allow you to invite and manage trusted issuers and verifiers. Simplify the process of identifying which issuers and verifiers are trustworthy within a particular ecosystem.
 
 </details>
 
@@ -52,7 +52,7 @@ Dock’s user-friendly web dashboard and API allow you to invite and manage trus
 
 <summary>Embed an ID Wallet into your app</summary>
 
-Build ID wallet capabilities inside your existing app with Dock’s powerful Wallet SDK. Users can manage and share their Verifiable Credentials without having to download an extra app.
+Build ID wallet capabilities inside your existing app with Truvera's Wallet SDK. Users can manage and share their verifiable credentials without having to download an extra app.
 
 </details>
 
@@ -66,10 +66,10 @@ The Dock blockchain acts as an immutable registry of all credential issuers. Thi
 
 ## Interoperability
 
-Dock believes that credentials are most useful when they are interoperable across service providers. Our W3C compliant credential format is designed for maximum interoperability. Our anonymous credential format adheres to many W3C standards, but are designed for maximum privacy protection. We also leverage standards from OpenID, IETF, DIF, and related organizations.
+We believe that credentials are most useful when they are interoperable across service providers. Our W3C compliant credential format is designed for maximum interoperability. Our anonymous credential format adheres to many W3C standards, but are designed for maximum privacy protection. We also leverage standards from OpenID, IETF, DIF, and related organizations. [Read more about our supported standards.](developer-documentation/key-standards/)
 
 ## Get Started
 
 Begin your journey with digital identity by signing up and start issuing verifiable credentials.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td>Sign up</td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td><td><a href=".gitbook/assets/documentation images 06 (1).jpg">documentation images 06 (1).jpg</a></td></tr><tr><td>Issue Verifiable Credentials</td><td><a href="workspace/issue-verifiable-credentials/">issue-verifiable-credentials</a></td><td><a href=".gitbook/assets/documentation images 05 (1).jpg">documentation images 05 (1).jpg</a></td></tr><tr><td>See API docs</td><td><a href="developer-documentation/truvera-api/">truvera-api</a></td><td><a href=".gitbook/assets/documentation images 04 (1).jpg">documentation images 04 (1).jpg</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Sign up</td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td></tr><tr><td>Issue Verifiable Credentials</td><td><a href="workspace/issue-verifiable-credentials/">issue-verifiable-credentials</a></td></tr><tr><td>See API docs</td><td><a href="developer-documentation/truvera-api/">truvera-api</a></td></tr></tbody></table>
