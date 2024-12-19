@@ -4,7 +4,7 @@ Issuing Credentials
 
 In the Credentials menu, click Issue credentials.
 
-<figure><img src="https://downloads.intercomcdn.com/i/o/797669904/4c77143e4d9f9ce6f4f345fc/Screenshot+2023-08-01+at+14.47.45.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-12-19 at 14.42.59.png" alt=""><figcaption></figcaption></figure>
 
 ### Select a credential schema <a href="#h_e6f35266ad" id="h_e6f35266ad"></a>
 
@@ -24,7 +24,7 @@ If you have many credentials to issue, you can issue them in bulk. To do this, s
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797670167/d0dbab0c2d32c4b8fb42882a/Screenshot+2023-08-01+at+14.51.00.png" alt=""><figcaption></figcaption></figure>
 
-Download the sample CSV template and fill in the details needed for your credential template. Upload the completed .csv file back to Dock Certs. [Read how to correctly format the Spreadsheet for CSV upload.](./#formatting-the-csv-file-for-recipient-upload)
+Download the sample CSV template and fill in the details needed for your credential template. Upload the completed .csv file back to Truvera. [Read how to correctly format the Spreadsheet for CSV upload.](./#formatting-the-csv-file-for-recipient-upload)
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797695179/a28c99740299645f876ce8be/6356f7181e5260685afe7bd9_9-Download+CSV.png" alt=""><figcaption></figcaption></figure>
 
@@ -36,11 +36,11 @@ You can distribute your credentials by email or directly to their wallet through
 
 To send the credential by email, fill in their email in the **Recipient Email** field.
 
-![](https://downloads.intercomcdn.com/i/o/797721246/2840f531c2020bf9df3a117c/64744417375359ce3af2c7ea\_1-email+distribution.png)
+![](https://downloads.intercomcdn.com/i/o/797721246/2840f531c2020bf9df3a117c/64744417375359ce3af2c7ea_1-email+distribution.png)
 
 To send the credential directly to the holders wallet fill in their DID in the Subject ID (Recipient ID) field.
 
-![](https://downloads.intercomcdn.com/i/o/797721371/4e40e894e866ea0da0b1d5f0/647443c237f7aab507122ff3\_2-DID+distribution.png)
+![](https://downloads.intercomcdn.com/i/o/797721371/4e40e894e866ea0da0b1d5f0/647443c237f7aab507122ff3_2-DID+distribution.png)
 
 Fill in all other attributes that need to be included in the credential _e.g. Subject name, Credential Title etc._
 
@@ -74,14 +74,15 @@ If you need the credential to expire, turn on the expiration toggle and enter th
 
 After you have added your credential recipients you will be able to select the credential settings. First select which Organization Profile (DID) you want to use to issue the credentials.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-01-25 at 16.27.06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-12-19 at 14.47.24.png" alt=""><figcaption></figcaption></figure>
+
+
 
 You have the options to:
 
 * **Persist credential:** This option will encrypt the credential by providing a password to access it and store it on Dock’s servers. The credential can be accessed and verified by a URL or QR Code. The recipient can scan the QR Code to import the credential into a wallet app. The credential can be deleted from Dock’s cloud whenever you decide.
 * **Generate PDF:** If you choose to persist the credentials, the PDFs will contain a QR code the recipient can scan to view and store their credential in their phone wallet app.
 * **Credential revocation:** By choosing this you leave an option for the credential to be revoked to invalid state at any time. If you leave this option unchecked, the credential can never be revoked and will always be verifiable.
-* **\[Deprecating] Anchor credentials:** This adds a hash of the credentials you issue on the Dock blockchain that can be referenced later to verify when and who created it.
 * **Zero-Knowledge Proof:** Selecting this option will issue your credential with a Dock BBS2023 signing scheme. This allows credential holders to share specific data rather than show the whole credential to enhance their privacy. [It must be enabled for paid verifications.](../monetizing-credentials/setting-up-verification-fees.md)
 
 {% hint style="info" %}
