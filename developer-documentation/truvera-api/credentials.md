@@ -1,6 +1,6 @@
 # Credentials
 
-You can create and sign Verifiable Credentials on Dock Certs and its API. By default, Dock does not store the credential - only its metadata. You can choose to persist a credential, in which case we will encrypt and store the credential for later retrieval using a password. Verifiable Credentials are cryptographically secure and tamper-proof. Once issued, they cannot be edited.
+You can create and sign Verifiable Credentials using Truvera API. By default, Dock does not store the credential - only its metadata. You can choose to persist a credential, in which case we will encrypt and store the credential for later retrieval using a password. Verifiable Credentials are cryptographically secure and tamper-proof. Once issued, they cannot be edited.
 
 ## Issue Credential <a href="#issue-credentials" id="issue-credentials"></a>
 
