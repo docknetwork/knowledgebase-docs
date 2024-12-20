@@ -4,7 +4,9 @@ Truvera is designed to balance the requirements of user convenience with privacy
 
 The Truvera platform is intended to be deployed within a user-facing identity solution configured by a customer of Dock Labs or one of our integration partners. The security and privacy characteristics of the delivered solution might be different from the characteristics of the Truvera platform documented here. We attempt to call out relevant security considerations in the discussion below.
 
-Truvera Workspace and API Organizations use Truvera’s API to set up their identity solution and interact with credentials. In order to make the system easy to use, Truvera stores the organization’s information in the system database. Data which is intended to be private, such as the private keys used to establish ownership of Decentralized IDentifiers (DIDs) and for signing, is encrypted on a per-row basis for each organization. Other data in the database includes presentation templates, PDF designs, verification templates, ecosystem membership, and activity logs. Data which is intended to be public, such as schemas and organization profile logos, is stored in AWS S3 with a public URL. Organizations can set up subaccounts to track the solution information of their customers. There is no way for an organization to access the information of a different organization. Depending on the DID method selected when setting up an organization profile, organization DIDs, revocation registries, and ecosystem information also may be stored on an external blockchain for public access (see below).
+## Truvera Workspace and API
+
+Organizations use Truvera’s API to set up their identity solution and interact with credentials. In order to make the system easy to use, Truvera stores the organization’s information in the system database. Data which is intended to be private, such as the private keys used to establish ownership of Decentralized IDentifiers (DIDs) and for signing, is encrypted on a per-row basis for each organization. Other data in the database includes presentation templates, PDF designs, verification templates, ecosystem membership, and activity logs. Data which is intended to be public, such as schemas and organization profile logos, is stored in AWS S3 with a public URL. Organizations can set up subaccounts to track the solution information of their customers. There is no way for an organization to access the information of a different organization. Depending on the DID method selected when setting up an organization profile, organization DIDs, revocation registries, and ecosystem information also may be stored on an external blockchain for public access (see below).
 
 Organizations use the API or Truvera Workspace to submit credentials for issuance. These credentials often contain PII of the credential holder. This information is deleted immediately after processing.
 
@@ -14,7 +16,9 @@ Organization information is accessible in two ways: 1) through a Truvera Workspa
 
 The Truvera Workspace uses Firebase and Google Analytics to track anonymized user activity so that we can improve the service for all users.
 
-Truvera Credential Wallets Credential holders store their credentials in a Truvera Credential Wallet built with the Truvera Wallet SDK. There are two options for storing credentials: on-device or in the cloud.
+## Truvera Credential Wallets
+
+Credential holders store their credentials in a Truvera Credential Wallet built with the Truvera Wallet SDK. There are two options for storing credentials: on-device or in the cloud.
 
 On-device storage keeps all credential data in an Encrypted Data Vault (EDV). This is usually used in mobile applications, as persistent browser storage can be challenging to configure. Though the process for unlocking the wallet can be customized, mobile applications that use on-device storage will generally put the key for the wallet in the mobile operating system’s keystore. Dock Labs does not have access to the encryption keys or credential data.
 
@@ -28,7 +32,9 @@ Other wallet information may be stored unencrypted in the wallet database, such 
 
 Truvera’s white label wallets use Firebase and Google Analytics to track anonymized user activity so that we can improve the service for all users.
 
-General Considerations The SaaS components of the Truvera platform are hosted in the United States (AWS Northern California Availability Zone). European data is processed under the terms of the US-EU Data Sharing Standard Contractual Clauses which are incorporated into our MSA.
+## General Considerations&#x20;
+
+The SaaS components of the Truvera platform are hosted in the United States (AWS Northern California Availability Zone). European data is processed under the terms of the US-EU Data Sharing Standard Contractual Clauses which are incorporated into our MSA.
 
 Logging for our production systems does not contain PII of any kind. Logging on our public test systems may contain customer information when an error is reported, so we encourage customers not to use real PII when issuing test credentials. We perform internal audits to ensure that our practices conform with this policy.
 
@@ -36,6 +42,6 @@ The above mentioned data storage is preserved in nightly encrypted backups for d
 
 As noted above, some data is stored on a blockchain in order to provide our customers assurance that their identity solution is not locked-in to our services. The specifics of blockchain storage will depend on the DID method selected. Our default blockchain is did:cheqd, which is a Cosmos based proof-of-stake network with a globally diverse set of validators. Information about organizations may be stored on a blockchain, such as organization DIDs, ecosystem information such as the participating organizations, and revocation registries.
 
-Holder information is never stored on a blockchain, with the exception of credential revocation status which is stored in a privacy preserving manner. Revocation registries based on the W3C Bitstring Status List are used in many solutions, though they allow some types of verifier correlation. We also support an accumulator based revocation registry with improved privacy characteristics. You can learn more \[in the relevant documentation].
+Holder information is never stored on a blockchain, with the exception of credential revocation status which is stored in a privacy preserving manner. Revocation registries based on the W3C Bitstring Status List are used in many solutions, though they allow some types of verifier correlation. We also support an accumulator based revocation registry with improved privacy characteristics. You can learn more [in the relevant documentation](revocation.md).
 
 The Truvera system will continue to evolve to give our customers more control over how their data is stored and processed. If you have any questions about how we process data, please contact our support team.
