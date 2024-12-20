@@ -1,6 +1,6 @@
 # How Data is Processed and Stored
 
-Truvera is designed to balance the requirements of user convenience with privacy and security. This document explains how we make those trade-offs in each part of the platform. This document does not replace the \[Dock Labs Master Services Agreement] or \[Data Processing Agreement], but provides additional insight into our architecture and practices.
+Truvera is designed to balance the requirements of user convenience with privacy and security. This document explains how we make those trade-offs in each part of the platform. This document does not replace the [Dock Labs Master Services Agreement](https://www.dock.io/master-services-agreement) or Data Processing Agreement, but provides additional insight into our architecture and practices.
 
 The Truvera platform is intended to be deployed within a user-facing identity solution configured by a customer of Dock Labs or one of our integration partners. The security and privacy characteristics of the delivered solution might be different from the characteristics of the Truvera platform documented here. We attempt to call out relevant security considerations in the discussion below.
 
