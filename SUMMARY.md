@@ -74,6 +74,7 @@
     * [Proposed Architecture with Dock](developer-documentation/system-architecture/proposed-architecture-with-dock.md)
     * [Revocation](developer-documentation/system-architecture/revocation.md)
     * [System Scalability](developer-documentation/system-architecture/system-scalability.md)
+    * [Security Policies](developer-documentation/system-architecture/security-policies.md)
   * [Supported Standards](developer-documentation/key-standards/README.md)
     * [Interoperability with OpenID](developer-documentation/key-standards/interoperability-with-openid/README.md)
       * [OpenID Issuance and Verification Integration Guide](developer-documentation/key-standards/interoperability-with-openid/openid-issuance-and-verification-integration-guide.md)
