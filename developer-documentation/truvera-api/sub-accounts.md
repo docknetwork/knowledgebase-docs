@@ -10,7 +10,7 @@ In order to easier manage sub-account assets [Ecosystem Tools](ecosystem-tools/)
 
 ### Sample sub-account Postman collection
 
-Download the collection [here](../../Postman\_collections/Subaccounts).
+Download the collection [here](../../Postman_collections/Subaccounts).
 
 This Postman collection shows a simple example of sub-account set up in 5 steps:
 
@@ -22,34 +22,32 @@ This Postman collection shows a simple example of sub-account set up in 5 steps:
 
 ## Create sub-account
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts" method="post" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts" method="post" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
 
 ## List sub-accounts
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts" method="get" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts" method="get" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
 
 ## Get sub-account by ID
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}" method="get" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts/{id}" method="get" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
 
 ## Update the specified sub-account
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}" method="patch" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts/{id}" method="patch" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
-
-
 
 ## Deletes the specified sub-account
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}" method="delete" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts/{id}" method="delete" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
 
 
@@ -58,34 +56,29 @@ This Postman collection shows a simple example of sub-account set up in 5 steps:
 
 Get details about the activity that this sub-account has performed in the system.
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}/usage" method="get" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts/{id}/usage" method="get" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
-
-
 
 ## Create sub-account API key
 
 Creates an API key for a sub-account. In order for activity to be associated with the given sub-account an API key needs to be created for that sub-account and then that key must be used for all transactions related to that sub-account.
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}/keys" method="post" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts/{id}/keys" method="post" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
-
-
 
 ## List sub-account API keys
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}/keys" method="get" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts/{id}/keys" method="get" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
-
-
 
 ## Delete a sub-account API key
 
 Delete the specified API key for the given sub-account.
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/subaccounts/{id}/keys/{keyId}" method="delete" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts/{id}/keys/{keyId}" method="delete" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
+
