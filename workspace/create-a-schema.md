@@ -50,7 +50,7 @@ The **Issue Date** and **Expiration Date** are default attributes that will appe
 
 ### Add Credential Attributes by importing an existing credential schema <a href="#h_b163952b0c" id="h_b163952b0c"></a>
 
-You can import an existing credential schema into Dock.
+You can import an existing credential schema into Truvera.
 
 Paste the schema URL or JSON in the Schema Import pop up and select Import Schema
 
@@ -60,9 +60,9 @@ Double check to make sure that the correct data format is selected for each data
 
 ### Edit a Credential Schema <a href="#h_4521818d05" id="h_4521818d05"></a>
 
-Go to the schema you want to edit, click on the three dots, and select Copy and edit.
+Go to the schema you want to edit, click on the three dots, and select Duplicate.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.16.47.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-23 at 13.58.24.png" alt=""><figcaption></figcaption></figure>
 
 Update the schema Name so you can tell the difference between this updated version and the original one. Once you’ve made all of your edits, go to the top of the page and select Publish.
 
@@ -70,10 +70,11 @@ Update the schema Name so you can tell the difference between this updated versi
 
 To see the attributes included in a particular schema your can click on the three dots of the credential you want to view, and click **View schema**.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.19.11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-23 at 13.58.24 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Delete a Credential Schema <a href="#h_b89d37d495" id="h_b89d37d495"></a>
 
 Go to Schemas, click on the three dots of the schema you want to delete, and click **Delete schema**.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 16.19.11 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-23 at 13.58.24 (2).png" alt=""><figcaption></figcaption></figure>
+

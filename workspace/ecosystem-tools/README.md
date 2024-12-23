@@ -17,11 +17,11 @@ Ecosystems are governed by trust frameworks, a set of operating rules that parti
 
 A trust ecosystem helps organizations to simplify everyday interactions and have confidence to allow other organizations or people to interact and share fraud-proof and digitally verifiable data.
 
-Governing Authority could register as an Ecosystem Admin in Dock Certs where they can establish a Trusted Brand, communicate rules for participation in a Governance Framework, and administer the ecosystem.
+Governing Authority could register as an Ecosystem Admin in Truvera Workspace where they can establish a Trusted Brand, communicate rules for participation in a Governance Framework, and administer the ecosystem.
 
 By having an on-chain trust registry, credential verifiers do not need to manage a list of valid issuers and holders know which verifiers they can trust to share their credentials with. They only need to trust one Ecosystem administrator.
 
 {% hint style="info" %}
-Ecosystem Tools is an add-on feature. If you want it enabled for your account please contact support@dock.io
+Ecosystem Tools is an add-on feature. If you want it enabled for your account please contact support@truvera.io
 {% endhint %}
 

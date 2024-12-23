@@ -2,7 +2,7 @@
 
 To invite a new member to your team click on your account picture on the top right corner and select Team Settings.
 
-<figure><img src="https://downloads.intercomcdn.com/i/o/817001184/c06b9c135928b951c74dd48c/Screenshot+2023-08-28+at+14.20.11.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-12-23 at 14.04.13.png" alt=""><figcaption></figcaption></figure>
 
 Click Invite team members.
 

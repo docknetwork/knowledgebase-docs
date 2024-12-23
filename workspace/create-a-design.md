@@ -1,9 +1,5 @@
 # Create a Design
 
-## Video tutorial <a href="#h_05a8c37fff" id="h_05a8c37fff"></a>
-
-{% embed url="https://www.youtube.com/embed/BotZiSMJOcU?rel=0" %}
-
 ## Create a new design <a href="#h_314866d147" id="h_314866d147"></a>
 
 Select Designs and click Create Design
@@ -32,11 +28,7 @@ You can add images, QR Code, Text fields and HTML Blocks to customise your crede
 
 Select **Elements** and choose the elements you need. Once they are placed on the design template drag\&drop them in the desired location.
 
-<div align="left">
-
-<figure><img src="../.gitbook/assets/Screenshot 2024-01-26 at 15.12.58.png" alt="" width="165"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../.gitbook/assets/Screenshot 2024-01-26 at 15.12.58.png" alt="" width="165"><figcaption></figcaption></figure></div>
 
 ## Add Certificate Attributes <a href="#h_29f46e8321" id="h_29f46e8321"></a>
 
@@ -50,7 +42,7 @@ Subject refers to the recipient or item that the credential is being issued to.
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/802018834/43b0570ceff840b6068c0841/Screenshot+2023-08-07+at+15.20.49.png" alt=""><figcaption></figcaption></figure>
 
-If you want your organization’s logo (Issuer Logo) and description (Issuer Description) to appear on your credential, you have to fill out those details in your Organization Profile (DIDs).
+If you want your organization’s logo (Issuer Logo) and description (Issuer Description) to appear on your credential, you have to fill out those details in your [Organization Profile (DIDs).](create-an-organization-profile-did.md)
 
 ## Other Settings <a href="#h_0097b6e872" id="h_0097b6e872"></a>
 
@@ -58,4 +50,4 @@ You can use your brand color for the design background. Chose it by changing the
 
 You can also add a custom background image. To add a background image for your design go to Setup and click **Add Background Image.**
 
-![](https://downloads.intercomcdn.com/i/o/802013789/e81df52148283faac0becc4c/63570d9f5432fa87e8a12f21\_5-Add+background+image.png)
+![](https://downloads.intercomcdn.com/i/o/802013789/e81df52148283faac0becc4c/63570d9f5432fa87e8a12f21_5-Add+background+image.png)
