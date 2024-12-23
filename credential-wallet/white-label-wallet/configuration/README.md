@@ -10,7 +10,7 @@ First clone the GitHub repository to add the source code to your machine.
 
 Open the code editor and now you can go through the documentation in [README.md](http://readme.md/) and start making changes on the repository.
 
-To make changes follow the instructions below and then submit a pull request (PR) to this repository to be reviewed by the Dock team. Once the changes are accepted a new release will be generated.
+To make changes follow the instructions below and then submit a pull request (PR) to this repository to be reviewed by the Truvera team. Once the changes are accepted a new release will be generated.
 
 ### Set the Application's Display Name & Package Id
 
