@@ -21,9 +21,9 @@
     * eu-central-2 (Zurich)
     * eu-west-2 (London)
 
-### Dock network diagram
+### Truvera network diagram
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-05-29 at 15.38.23.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-12-23 at 13.17.00.png" alt=""><figcaption></figcaption></figure>
 
 ### Data Storage Details
 
