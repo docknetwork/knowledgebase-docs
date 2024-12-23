@@ -1,6 +1,6 @@
 # Setting up monetizable credentials
 
-This is a detailed guide on how to monetize your credentials using Dock.
+This is a detailed guide on how to monetize your credentials using Truvera.
 
 ### Creating an ecosystem
 
@@ -21,7 +21,7 @@ First a schema needs to be [created](../create-a-schema.md) and then [assigned t
 Verification fee will be displayed to all ecosystem participants. Verification fee is displayed in USD, but ecosystem administrators can transact with their ecosystem participants in their preferred currency.&#x20;
 
 {% hint style="warning" %}
-Dock will charge a percentage of the Verification fee as a platform commission. For each verification where that commission is too low, we will charge a minimum platform fee.&#x20;
+Truvera will charge a percentage of the Verification fee as a platform commission. For each verification where that commission is too low, we will charge a minimum platform fee.&#x20;
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-07-16 at 16.14.08.png" alt=""><figcaption></figcaption></figure>
@@ -30,7 +30,7 @@ Dock will charge a percentage of the Verification fee as a platform commission. 
 The systems supports tracking fees in fractions of a cent to six decimal places.
 {% endhint %}
 
-### Issueing credentials&#x20;
+### Issuing credentials&#x20;
 
 The process of issuing credentials will be the same. [See step by step instructions.](setting-up-verification-fees.md#issue-credentials)
 
@@ -42,13 +42,9 @@ The issuer will see a message showing that the credential can only be verified b
 Zero-Knowledge Proof type of credential is mandatory for paid verification and will be selected by default.
 {% endhint %}
 
-For the holders monetizable credentials will look almost the same as regular credentials, they will be able to see an Ecosystem Bound badge in the credential settings withthe explantion, that this credential was issued within a specific ecosystem and is sharable only with verifiers authorized by that ecosystem.
+For the holders monetizable credentials will look almost the same as regular credentials, they will be able to see an Ecosystem Bound badge in the credential settings with the explanation, that this credential was issued within a specific ecosystem and is sharable only with verifiers authorized by that ecosystem.
 
-<div align="left">
-
-<figure><img src="../../.gitbook/assets/1721302321937.jpeg" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
+<div align="left"><figure><img src="../../.gitbook/assets/1721302321937.jpeg" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### Creating a verification template and assigning it
 
@@ -74,7 +70,7 @@ When the holder has the same information in monetizable credentials from two dif
 
 ### Getting the billing report&#x20;
 
-All payments are  managed by the ecosystem administrator. Dock provides a billing report that can be downloaded by the ecosystem administrator.
+All payments are  managed by the ecosystem administrator. Truvera provides a billing report that can be downloaded by the ecosystem administrator.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-07-18 at 15.28.00.png" alt="" width="375"><figcaption></figcaption></figure>
 
@@ -82,9 +78,7 @@ Billing report data can be selected for a specific date range and will include i
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-10-08 at 14.47.48.png" alt=""><figcaption></figcaption></figure>
 
-
-
-Billing report includes all verifications where a credential was submited for verification e.g if a verification request was made, but no credential was presented it will not be included, however if an invalid credential is presented and verification fails it will be included in the billing report.&#x20;
+Billing report includes all verifications where a credential was submitted for verification e.g if a verification request was made, but no credential was presented it will not be included, however if an invalid credential is presented and verification fails it will be included in the billing report.&#x20;
 
 {% hint style="info" %}
 Ecosystem administrators take responsibility for charge-backs and disputes.&#x20;
