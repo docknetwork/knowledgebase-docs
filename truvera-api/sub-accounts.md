@@ -1,8 +1,6 @@
 # Sub-accounts
 
-Sub-accounts are a feature of the Dock Certs API that allows Dock enterprise customers to segregate their data within Dock's platform based on their own customers. Each sub-account can have its own keys, organization profiles, credential designs and verification templates conviently organized to help with tracking and auditing of the activity performed by each.
-
-<figure><img src="../../.gitbook/assets/sub-accounts-cdf773cc.png" alt=""><figcaption></figcaption></figure>
+Sub-accounts are a feature of the Truvera API that allows Truvera's enterprise customers to segregate their data within the Truvera platform based on their own customers. Each sub-account can have its own keys, organization profiles, credential designs and verification templates conveniently organized to help with tracking and auditing of the activity performed by each.
 
 When using a sub-account the parent account will set up separate API keys for each sub-account and then use the sub-account specific API key for the transactions associated with that sub-account.&#x20;
 
@@ -10,7 +8,7 @@ In order to easier manage sub-account assets [Ecosystem Tools](ecosystem-tools/)
 
 ### Sample sub-account Postman collection
 
-Download the collection [here](../../Postman_collections/Subaccounts).
+Download the collection [here](../Postman_collections/Subaccounts).
 
 This Postman collection shows a simple example of sub-account set up in 5 steps:
 
