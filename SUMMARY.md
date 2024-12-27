@@ -73,6 +73,7 @@
     * [Trust Registry Integration Guide](truvera-api/ecosystem-tools/trust-registries.md)
     * [Creating a Trust Registry](truvera-api/ecosystem-tools/creating-a-trust-registry.md)
     * [Inviting participants](truvera-api/ecosystem-tools/inviting-participants.md)
+    * [Verifiers and Public info](truvera-api/ecosystem-tools/verifiers-and-public-info.md)
     * [Trust Registry Schemas](truvera-api/ecosystem-tools/trust-registry-schemas.md)
     * [Trust Registry Proof Templates](truvera-api/ecosystem-tools/trust-registry-proof-templates.md)
     * [Reports](truvera-api/ecosystem-tools/reports.md)
