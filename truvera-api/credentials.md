@@ -1,6 +1,6 @@
 # Credentials
 
-You can create and sign Verifiable Credentials using Truvera API. By default, Dock does not store the credential - only its metadata. You can choose to persist a credential, in which case we will encrypt and store the credential for later retrieval using a password. Verifiable Credentials are cryptographically secure and tamper-proof. Once issued, they cannot be edited.
+You can create and sign Verifiable Credentials using Truvera API. By default, Truvera does not store the credential - only its metadata. You can choose to persist a credential, in which case we will encrypt and store the credential for later retrieval using a password. Verifiable Credentials are cryptographically secure and tamper-proof. Once issued, they cannot be edited.
 
 ## Issue Credential <a href="#issue-credentials" id="issue-credentials"></a>
 
@@ -13,7 +13,7 @@ The `https://www.w3.org/2018/credentials/v1` context URI is always required and 
 To sign a credential, an `issuer` must be supplied as either a fully qualified DID string or an object with at least an `id` property which is a fully qualified DID. (e.g: `did:dock:xyz`)
 
 {% hint style="warning" %}
-The `issuer` property **must** be a DID that you control with Dock Certs.
+The `issuer` property **must** be a DID that you control with your Truvera account.
 {% endhint %}
 
 {% hint style="info" %}
@@ -23,22 +23,20 @@ For Polygon ID credentials:
 * Polygon ID credentials **do not** support designs at this point so `template` field should be omitted.
 {% endhint %}
 
-By default, Dock does not store the credential contents at all - only minimal credential metadata. You can choose to set the `persist` value to `true` and provide a `password` string which will store the credential contents encrypted on our platform. The following metadata is stored on each issuance:
+By default, Truvera does not store the credential contents at all - only minimal credential metadata. You can choose to set the `persist` value to `true` and provide a `password` string which will store the credential contents encrypted on our platform. The following metadata is stored on each issuance:
 
 * Credential ID property
 * Credential size in bytes
 * Issuer DID
 * Issuance date
 
-For a detailed example of the credential workflow. Please refer [here](https://github.com/docknetwork/dock-api-js/blob/main/workflows/credentialsFlow.js).
-
 #### Zero Knowledge Proofs (ZKP) <a href="#zero-knowledge-proofs" id="zero-knowledge-proofs"></a>
 
-Dock credentials support [anonymous credentials](https://blog.dock.io/anonymous-credentials/) using Zero Knowledge Proofs and [Selective Disclosure](https://www.dock.io/post/selective-disclosure) by using the BBS2023 signing algorithm when issuing the credential. To enable this functionality, simply set the `algorithm` field in the request to `dockbbs`.
+Truvera credentials support [anonymous credentials](https://blog.dock.io/anonymous-credentials/) using Zero Knowledge Proofs and [Selective Disclosure](https://www.dock.io/post/selective-disclosure) by using the BBS2023 signing algorithm when issuing the credential. To enable this functionality, simply set the `algorithm` field in the request to `dockbbs`.
 
 #### Credential Distribution <a href="#credential-distribution" id="credential-distribution"></a>
 
-Dock's API has built in credential distribution on issuance, allowing you to send credentials directly to a holder's email and/or Dock-compatible wallet. You can achieve this by supplying the `recipientEmail` field and `distribute: true` in your request. For DID distribution, simply set the `credentialSubject.id` property to the holder's DID.
+Truvera's API has built in credential distribution on issuance, allowing you to send credentials directly to a holder's email and/or Truvera-compatible wallet. You can achieve this by supplying the `recipientEmail` field and `distribute: true` in your request. For DID distribution, simply set the `credentialSubject.id` property to the holder's DID.
 
 #### Revocation <a href="#credential-issuance-revocation" id="credential-issuance-revocation"></a>
 

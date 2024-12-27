@@ -1,10 +1,10 @@
-# Proofs
+# Presentations
 
 To verify a credential verifier will need to create a proof template and generate a proof request to which the holder wallet will provide the verifiable presentation. Verifiable presentations can not be done via the API, the [credential SDK](https://github.com/docknetwork/sdk) is needed to create a presentation.&#x20;
 
 Our system supports the [DIF Presentation Exchange (PEX)](https://identity.foundation/presentation-exchange/) syntax for querying and filtering credentials.
 
-See the https://identity.foundation/presentation-exchange/#input-descriptor-extensions for more examples, but a few common use cases are:
+See the [https://identity.foundation/presentation-exchange/#input-descriptor-extensions](https://identity.foundation/presentation-exchange/#input-descriptor-extensions) for more examples, but a few common use cases are:
 
 #### Require a numeric attribute to be within a range
 

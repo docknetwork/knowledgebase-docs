@@ -6,43 +6,57 @@ When working with proof requests you will often want to request the same informa
 
 ## Create a proof template <a href="#create-proof-request" id="create-proof-request"></a>
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/proof-templates" method="post" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates" method="post" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Get proof templates <a href="#create-proof-request" id="create-proof-request"></a>
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/proof-templates" method="get" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates" method="get" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Get details of a specific proof template
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/proof-templates/{id}" method="get" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="get" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Update a proof template
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/proof-templates/{id}" method="patch" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="patch" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Get proof requests from template
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/proof-templates/{id}/history" method="get" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}/history" method="get" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Delete history for proof template
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/proof-templates/{id}/history" method="delete" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}/history" method="delete" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
+
+
 
 ## Delete a proof template
 
-{% swagger src="https://swagger.api.dock.io/openapi.yaml" path="/proof-templates/{id}" method="delete" %}
-[https://swagger.api.dock.io/openapi.yaml](https://swagger.api.dock.io/openapi.yaml)
+{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="delete" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endswagger %}
+
+
 
