@@ -1,6 +1,6 @@
-# 🗳️ Truvera Workspace
+# 💼 Truvera Workspace
 
-[Truvera](https://truvera.io/) is a user-friendly, no-code platform that enable organizations to issue, verify, manage, and revoke verifiable credentials efficiently and securely. It can be used as a standalone SaaS platform to issue credential using the UI or as an example of a verifiable credentials platform for more experienced developers planning to build their own solution using our [API](../developer-documentation/truvera-api/).
+[Truvera](https://truvera.io/) is a user-friendly, no-code platform that enable organizations to issue, verify, manage, and revoke verifiable credentials efficiently and securely. It can be used as a standalone SaaS platform to issue credential using the UI or as an example of a verifiable credentials platform for more experienced developers planning to build their own solution using our [API](../truvera-api/).
 
 To sign up visit [https://truvera.io/](https://truvera.io/) and enter your email or use Google, Github or Web3ID to sign in.
 

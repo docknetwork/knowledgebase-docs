@@ -42,7 +42,7 @@ Dock's API has built in credential distribution on issuance, allowing you to sen
 
 #### Revocation <a href="#credential-issuance-revocation" id="credential-issuance-revocation"></a>
 
-In order to support revocation the credential must be linked to a [revocation registry](registries.md) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](../dock-api/index.html.md#schemacredential) body to the `registry.id` value.
+In order to support revocation the credential must be linked to a [revocation registry](registries.md) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](../developer-documentation/dock-api/index.html.md#schemacredential) body to the `registry.id` value.
 
 {% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
@@ -82,8 +82,8 @@ Typically, once the request has been created, you would show the holder the QR U
 
 Lists all created request claims that are open (the holders have not submitted the requested information).
 
-{% swagger src="../../.gitbook/assets/openapi (1).yaml" path="/credentials/request-claims" method="get" %}
-[openapi (1).yaml](<../../.gitbook/assets/openapi (1).yaml>)
+{% swagger src="../.gitbook/assets/openapi (1).yaml" path="/credentials/request-claims" method="get" %}
+[openapi (1).yaml](<../.gitbook/assets/openapi (1).yaml>)
 {% endswagger %}
 
 

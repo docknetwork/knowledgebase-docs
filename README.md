@@ -4,9 +4,9 @@
 
 ## Products
 
-<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Truvera API</strong></td><td><a href="developer-documentation/truvera-api/">truvera-api</a></td></tr><tr><td><strong>Truvera Workspace</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td></tr><tr><td><strong>Truvera Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td></tr><tr><td><strong>Truvera Wallet SDK</strong></td><td><a href="https://github.com/docknetwork/sdk">https://github.com/docknetwork/sdk</a></td></tr></tbody></table>
+<table data-card-size="large" data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td><strong>Truvera API</strong></td><td><a href="truvera-api/">truvera-api</a></td></tr><tr><td><strong>Truvera Workspace</strong></td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td></tr><tr><td><strong>Truvera Wallet</strong></td><td><a href="https://www.dock.io/dock-wallet-app">https://www.dock.io/dock-wallet-app</a></td></tr><tr><td><strong>Truvera Wallet SDK</strong></td><td><a href="https://github.com/docknetwork/sdk">https://github.com/docknetwork/sdk</a></td></tr></tbody></table>
 
-[Truvera API](developer-documentation/truvera-api/) easily integrates with your system and data sources, simplifying the creation, verification and management of Verifiable Credentials. No blockchain or cryptography knowledge is required.&#x20;
+[Truvera API](truvera-api/) easily integrates with your system and data sources, simplifying the creation, verification and management of Verifiable Credentials. No blockchain or cryptography knowledge is required.&#x20;
 
 [Truvera Workspace](https://truvera.io/): A user-friendly platform​ that enables you to issue, verify, manage, and revoke fraud-proof Verifiable Credentials as well create and manage Decentralized Identifiers (DIDs).
 
@@ -66,10 +66,10 @@ The Dock blockchain acts as an immutable registry of all credential issuers. Thi
 
 ## Interoperability
 
-We believe that credentials are most useful when they are interoperable across service providers. Our W3C compliant credential format is designed for maximum interoperability. Our anonymous credential format adheres to many W3C standards, but are designed for maximum privacy protection. We also leverage standards from OpenID, IETF, DIF, and related organizations. [Read more about our supported standards.](developer-documentation/key-standards/)
+We believe that credentials are most useful when they are interoperable across service providers. Our W3C compliant credential format is designed for maximum interoperability. Our anonymous credential format adheres to many W3C standards, but are designed for maximum privacy protection. We also leverage standards from OpenID, IETF, DIF, and related organizations. [Read more about our supported standards.](key-standards/)
 
 ## Get Started
 
 Begin your journey with digital identity by signing up and start issuing verifiable credentials.
 
-<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Sign up</td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td></tr><tr><td>Issue Verifiable Credentials</td><td><a href="workspace/issue-verifiable-credentials/">issue-verifiable-credentials</a></td></tr><tr><td>See API docs</td><td><a href="developer-documentation/truvera-api/">truvera-api</a></td></tr></tbody></table>
+<table data-view="cards"><thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead><tbody><tr><td>Sign up</td><td><a href="https://certs.dock.io/">https://certs.dock.io/</a></td></tr><tr><td>Issue Verifiable Credentials</td><td><a href="workspace/issue-verifiable-credentials/">issue-verifiable-credentials</a></td></tr><tr><td>See API docs</td><td><a href="truvera-api/">truvera-api</a></td></tr></tbody></table>

@@ -26,7 +26,7 @@ Next step will allow you to set your Governance Framework document, that is used
 
 After the ecosystem is set up you can start inviting participants. Ecosystem participants can be Issuers, Verifiers or both depending on their role in your ecosystem. You will be able to assign credential schemas based on the role of the participant.
 
-Ecosystem participants can have and manage their own Truvera accounts, but we also enable our customers to create ecosystems where the participant accounts are managed and paid for by them. Using [Sub-accounts](../../developer-documentation/truvera-api/sub-accounts.md) allows creation of additional Truvera accounts and inviting them to participate in the ecosystem using the API.&#x20;
+Ecosystem participants can have and manage their own Truvera accounts, but we also enable our customers to create ecosystems where the participant accounts are managed and paid for by them. Using [Sub-accounts](../../truvera-api/sub-accounts.md) allows creation of additional Truvera accounts and inviting them to participate in the ecosystem using the API.&#x20;
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-02-09 at 16.41.36.png" alt=""><figcaption></figcaption></figure>
 
