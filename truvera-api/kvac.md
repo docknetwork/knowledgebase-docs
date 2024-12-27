@@ -2,7 +2,7 @@
 
 This guide provides step-by-step instructions for implementing the KVAC algorithm to issue and verify paid credentials using a series of API endpoints. Follow these instructions to integrate KVAC into your system effectively.
 
-Download a sample Postman collection [here](../../Postman\_collections/Issuing%20KVAC%20credentials).
+Download a sample Postman collection [here](../Postman_collections/Issuing%20KVAC%20credentials).
 
 ## Prerequisites
 
@@ -197,7 +197,7 @@ Create a proof request based on the proof template to verify the credential.
 
 ### 8. Verify Presentation
 
-Using the [Dock Wallet](https://docs.dock.io/dock-wallet), scan the QR code received and follow the process to submit the verification.
+Using the [Truvera Wallet](../credential-wallet/download-truvera-wallet.md), scan the QR code received and follow the process to submit the verification.
 
 ### 9. Retrieve Trust Registry Reports
 
