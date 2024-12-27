@@ -6,7 +6,7 @@ description: This document explains how we audit the systems scalability.
 
 ## Architecture
 
-Dock's SaaS systems are engineered for scalability using tools from Amazon AWS and MongoDB Atlas.
+Truvera's SaaS systems are engineered for scalability using tools from Amazon AWS and MongoDB Atlas.
 
 ## Service Level Agreements
 

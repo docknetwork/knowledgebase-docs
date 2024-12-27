@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-You must first have an account and acquire your credentials (API keys) before accessing the Dock Certs API. You can register an account and generate a key in your [Dock Certs](https://certs.dock.io/) dashboard.
+You must have an account and acquire your credentials (API keys) before accessing the Truvera API. You can register an account and generate a key in your [Truvera Workspace](https://truvera.io/keys) dashboard.
 
 {% hint style="warning" %}
 Keep in mind that your API keys should be kept private, so keep them safe! Do not post your private API keys on GitHub, in client-side code, or anywhere else that is publicly available.
@@ -10,10 +10,12 @@ Keep in mind that your API keys should be kept private, so keep them safe! Do no
 
 ## Endpoints
 
-Dock Certs provides two endpoints based on which mode was selected when creating your API key. By default, the API keys are created for production. You can switch to **test mode** in [Dock Certs](https://certs.dock.io/) by clicking the **test mode** toggle in the top right next to your avatar icon. Once in **test mode** you will see only testnet transactions, API keys, webhooks etc. You can then create an API key from the [Dock Certs dashboard](https://certs.dock.io/keys). It should be noted that in **test mode** your used transaction count **will not increase or hit monthly limits** allowing for sandboxing on our test network.
+Truvera provides two endpoints based on which mode was selected when creating your API key. By default trial users only have access to Test data. Paid subscribers can create to production API keys by switching the **test mode** toggle in Truvera Workspace in the top right next to your avatar icon. Once in **test mode** you will see only testnet transactions, API keys, webhooks etc.&#x20;
 
-* For production mode, use the endpoint: [https://api.dock.io](https://api.dock.io)
-* For test mode, use the endpoint: [https://api-testnet.dock.io](https://api-testnet.dock.io)
+It should be noted that in **test mode** your used transaction count **will not increase or hit monthly limits** allowing for sandboxing on our test network.
+
+* For production mode, use the endpoint: [https://api.truvera.io](https://api.truvera.io)
+* For test mode, use the endpoint: [https://api-testnet.truvera.io](https://api-testnet.truvera.io)
 
 {% hint style="warning" %}
 Any transaction you perform in **test mode** cannot be used for **production**. This means that, for example, any DID created in **test mode** will not work for issuing or verification in **production**.
@@ -25,17 +27,17 @@ Any transaction you perform in **test mode** cannot be used for **production**. 
 
 ## Authentication
 
-Dock Certs uses API keys to authenticate requests. You can obtain an API Key by signing into [Dock Certs](https://certs.dock.io). Once a key has been generated, it should be included in **all** request headers as below:
+Truvera uses API keys to authenticate requests. You can obtain an API Key by signing into [Truvera Workspace](https://truvera.io/). Once a key has been generated, it should be included in **all** request headers as below:
 
 * API Key (accessToken)
-  * Name: **DOCK-API-TOKEN**
+  * Name: **TRUVERA-API-TOKEN**
   * OR HTTP Bearer Authorization
 
 When you generate an API key, you may include a list of whitelisted IP's that can use with that key.
 
 ## Architecture Style
 
-Dock Certs is built using a [REST](https://en.wikipedia.org/wiki/Representational\_state\_transfer) architecture. Our API uses standard HTTP response codes, authentication, delivers JSON-encoded responses, accepts form-encoded request bodies, and accepts form-encoded request bodies.
+Truvera is built using a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) architecture. Our API uses standard HTTP response codes, authentication, delivers JSON-encoded responses, accepts form-encoded request bodies, and accepts form-encoded request bodies.
 
 HTTPS is required for all API requests. Requests performed via plain HTTP will be rejected. API requests that do not include authentication will also fail. JSON requests should typically be encoded as UTF-8.
 
@@ -43,11 +45,11 @@ HTTPS is required for all API requests. Requests performed via plain HTTP will b
 
 ## Rate Limits
 
-We allow you to make up to 200 requests in a 2 minute window (avg 100 reqs/min or 1.6 reqs/second). If you exceed beyond that, you will receive a 429 Too Many Requests response and have to wait up to a minute for the next request depending on when you hit the limit. If you require higher rate limits, please [contact us](../../support/).
+We allow you to make up to 200 requests in a 2 minute window (avg 100 reqs/min or 1.6 reqs/second). If you exceed beyond that, you will receive a 429 Too Many Requests response and have to wait up to a minute for the next request depending on when you hit the limit. If you require higher rate limits, please [contact us](../support/).
 
 ## Error Handling
 
-The Dock Certs API uses standard HTTP response codes to indicate if an API request was successful or unsuccessful.
+The Truvera API uses standard HTTP response codes to indicate if an API request was successful or unsuccessful.
 
 The table below shows the most frequent HTTP error messages:
 
@@ -55,6 +57,6 @@ The table below shows the most frequent HTTP error messages:
 
 ## Terminology
 
-It is important to fully understand all the terminologies within the Dock ecosystem. The following are common terminologies within our ecosystem:
+It is important to fully understand all the terminologies within the Truvera ecosystem. The following are common terminologies within our ecosystem:
 
 <table><thead><tr><th width="140">Terminology</th><th>Description</th></tr></thead><tbody><tr><td>DID</td><td>DID stands for Decentralized Identifier. It is a new type of identifier that enables verifiable, decentralized digital identity. A DID refers to any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) as determined by the controller of the DID. For more information, please refer <a href="https://docknetwork.github.io/sdk/tutorials/concepts_did.html">here</a>.</td></tr><tr><td>Data Schema</td><td>The structure that describes the logical view of the data. It is useful to enforce a specific structure on a collection of data like a Verifiable Credential.</td></tr><tr><td>Registries</td><td>A process to verify credentials in such a way that each verified credential has its own unique number. This process references a credential definition and specifies how revocation of that credential type will be handled.</td></tr><tr><td>Schema</td><td>The structure of credentials which are shareable among issuers as they do not contain any cryptographic material and thus are created less frequently.</td></tr><tr><td>Blob</td><td>Blob stands for Binary Large OBject. It is a collection of binary data stored as a single entity. The schemas are identified and retrieved by their unique blob id, which is a 32-byte long hex string.</td></tr><tr><td>DID Resolver</td><td>The tool that initiates the process of learning the DID document.</td></tr></tbody></table>

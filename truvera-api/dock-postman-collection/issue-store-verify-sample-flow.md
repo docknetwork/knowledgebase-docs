@@ -2,7 +2,7 @@
 
 This flow refers to Postman, but the general steps are the same however you use the API. The Issue Store Verify collection includes the scripts that automatically propagate results into the next request bodies when you follow the below steps.&#x20;
 
-Download the sample collection [here](../../../Postman\_collections/Issue-Store-Verify%20flow).
+Download the sample collection [here](../../Postman_collections/Issue-Store-Verify%20flow).
 
 To issue a credential and or a presentation on the holder's behalf, the following steps are required:
 
@@ -10,7 +10,7 @@ To issue a credential and or a presentation on the holder's behalf, the followin
 
 To create a new DID to issue with, go to **Create DID** and click **Send**. The `id` property denotes a job ID in the system that you can use to query for blockchain transaction status.
 
-The Dock API supports `did:dock`, `did:polygonid` and `did:key` method creation.
+The Truvera API supports `did:dock`, `did:polygonid` and `did:key` method creation.
 
 <details>
 
@@ -186,7 +186,7 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
   "persist": true,
   "password": "1234",
   "anchor": false,
-  "recipientEmail":"agne@dock.io",
+  "recipientEmail":"agne@truvera.io",
   "distribute": true,
   "format": "jsonld",
   "credential": {
@@ -197,8 +197,8 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
       "VPITestSchema"
     ],
     "subject": {
-        "id":"agne@dock.io",
-        "emailAddress":"agne@dock.io",
+        "id":"agne@truvera.io",
+        "emailAddress":"agne@truvera.io",
         "alumniOf":"University of Vilnius"
     },
     "issuer": "did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx",
@@ -232,8 +232,8 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
         "VPITestSchema"
     ],
     "credentialSubject": {
-        "id": "agelzinyte@gmail.com",
-        "emailAddress": "agelzinyte@gmail.com",
+        "id": "agne@truvera.io",
+        "emailAddress": "agne@truvera.io",
         "alumniOf": "University of Vilnius"
     },
     "issuanceDate": "2024-08-13T11:03:35.610Z",
@@ -259,36 +259,17 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
 
 </details>
 
-## 5. Verify the Signed Credential
 
-To verify if the credential's cryptographic proof, revocation status and more go to **Verify Signed Credential** and click **Send**.
 
-<details>
+## 5. Import the credential into the wallet
 
-<summary>CREDENTIAL VERIFIED - 200 Response</summary>
+[Download Truvera wallet ](../../credential-wallet/download-truvera-wallet.md)and click on the email link that was sent when issuing the credential. If not using the email distribution download the json of the credential an import it to the wallet using the json import option.
 
-```json
-{
-    "verified": true,
-    "results": [ ... ]
-}
-```
+<div align="left"><figure><img src="../../.gitbook/assets/1723811020918.jpeg" alt="" width="188"><figcaption></figcaption></figure></div>
 
-</details>
+## 5. Create a proof template
 
-## 6. Import the credential into the wallet
-
-[Download Dock wallet ](https://www.dock.io/dock-wallet-app)and click on the email link that was sent when issuing the credential. If not using the email distribution download the json of the credential an import it to the wallet using the json import option.
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/1723811020918.jpeg" alt="" width="188"><figcaption></figcaption></figure>
-
-</div>
-
-## 5. Create a verification/proof template
-
-To verify a credential you will need a verification template, that will indicate which attributes need to be fullfilled for successfull verification. Verification templates can be reused.
+To verify a credential you will need a verification template, that will indicate which attributes need to be fulfilled for successful verification. Verification templates can be reused.
 
 <details>
 
@@ -388,7 +369,7 @@ To verify a credential you will need a verification template, that will indicate
 
 </details>
 
-## 6. Create a verification/proof presentation
+## 6. Create a proof presentation
 
 Using the verification template created in the previous step in the endpoint **POST/proof-templates/{id}/** request a single use verification or proof presentation will be created.&#x20;
 
@@ -456,7 +437,7 @@ The proof request is one time use so that the information from the credential ca
 If there is a need to have a static QR code for multiple verification, a small service can be created to make proof requests from the verification template as and when needed.
 {% endhint %}
 
-## 6. Verify the Presentation
+## 7. Verify the Presentation
 
 Scan the QR code from the proof presentation using your wallet to verify the credential.
 

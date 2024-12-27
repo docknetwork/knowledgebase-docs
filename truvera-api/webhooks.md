@@ -1,18 +1,18 @@
 # Webhooks
 
-We provide webhooks for asynchronous integration with the API. You can configure a webhook to receive notifications whenever events occur within the API (see below for the list of published events). To use our webhook, you need to set the webhook URL that acts as a receiver receiving the information whenever an event happens. You also need to select **at least one** of the webhook events from Dock Certs to trigger the data exchange.
+We provide webhooks for asynchronous integration with the API. You can configure a webhook to receive notifications whenever events occur within the API (see below for the list of published events). To use our webhook, you need to set the webhook URL that acts as a receiver receiving the information whenever an event happens. You also need to select **at least one** of the webhook events from Truvera Workspace to trigger the data exchange.
 
 ## How to Setup Webhook
 
 To setup webhook, simply follow the steps below:
 
-* Go to **Webhooks** in Dock Certs.
+* Go to **Webhooks** in Truvera Workspace.
 * Click **Add Endpoint**.
 * Fill in the **Endpoint URL** and select **Endpoint Events** for the webhook events.
 * Click **Create Webhook**.
-* Once the webhook is created you will see a secret token. This token is sent in the webook POST request for you to validate that the webhook came from Dock.
+* Once the webhook is created you will see a secret token. This token is sent in the webook POST request for you to validate that the webhook came from Truvera.
 
-You can subcribe to all events by clicking **Receive All** next to **Endpoint Events**
+You can subscribe to all events by clicking **Receive All** next to **Endpoint Events**
 
 ## Webhook Events
 
@@ -335,7 +335,7 @@ This event indicates a schema has been created. It will fire when a schema has b
 
 ### proof\_submitted
 
-This event indicates that a proof has been submitted. Minimal data is included in the event but the details can be retrieved using the proof_request API.
+This event indicates that a proof has been submitted. Minimal data is included in the event but the details can be retrieved using the proof\_request API.
 
 <details>
 
