@@ -10,7 +10,7 @@ Before starting, ensure you have:
 * **Verifier DID** (`did:dock:verifier`): The did for the credential verifier.
 * **Holder DID** (`did:key:holder`): The DID for the credential holder.
 
-Download and use our [Postman Collections](../../../Postman\_collections/OID4VC%20and%20OID4VP%20testing) to experiment with OpenID standards based credentials.
+Download and use our [Postman Collections](../../Postman_collections/OID4VC%20and%20OID4VP%20testing) to experiment with OpenID standards based credentials.
 
 ## Set Up an OID4VCI Issuer
 
@@ -18,7 +18,7 @@ Create an OID4VCI issuer with the necessary configurations, including claim mapp
 
 <mark style="color:green;">`POST`</mark> /openid/issuers
 
-This endpoint creates an OID4VCI issuer. "authProvider" and "claimMap" are supplied as part of the [Authorization Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-authorization-code-flow). It can be omitted for the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1\_0.html#name-pre-authorized-code-flow).
+This endpoint creates an OID4VCI issuer. "authProvider" and "claimMap" are supplied as part of the [Authorization Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-authorization-code-flow). It can be omitted for the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-pre-authorized-code-flow).
 
 **Request/Response**
 
@@ -34,7 +34,7 @@ This endpoint creates an OID4VCI issuer. "authProvider" and "claimMap" are suppl
         "type": ["UniversityDegreeCredential"],
         "context": ["https://www.w3.org/2018/credentials/examples/v1"],
         "subject": {
-          "alumniOf": "Dock University",
+          "alumniOf": "Truvera University",
           "degree": "Credential Science"
           // name will be added by claims flow
         },
@@ -127,7 +127,7 @@ This endpoint creates a credential offer linked to the OpenID issuer.
 
 ## Retrieve and Store Credentials
 
-Using the [Dock Wallet ](https://docs.dock.io/dock-wallet)or any OID4VCI Wallet, scan the QR code received and follow the process to receive the credential.
+Using the [Truvera Wallet ](../../credential-wallet/)or any OID4VCI Wallet, scan the QR code received and follow the process to receive the credential.
 
 ## Verify Credentials
 
@@ -152,7 +152,7 @@ This endpoint creates a new proof request that the verifier can use to request c
 		"purpose": "To present a test credential using OID4VPI",
 		"input_descriptors": [
 		  {
-			"id": "Dock Credential",
+			"id": "Truvera Credential",
 			"name": "OID4VP test proof request",
 			"purpose": "To present a test credential using OID4VP",
 			"constraints": {
@@ -235,7 +235,7 @@ This endpoint generates a request URL based on the proof request ID. The withReq
 
 ### Verify Presentation
 
-Using the [Dock Wallet](https://docs.dock.io/dock-wallet) or any OID4VP Wallet, scan the QR code received and follow the process to verify the credential.
+Using the [Truvera Wallet ](../../credential-wallet/)or any OID4VP Wallet, scan the QR code received and follow the process to verify the credential.
 
 ### Check proof request status
 
