@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Governance
 
 The Dock Governance Framework describes the combination of off-chain and on-chain rules that enable the Dock Association (a Swiss non-profit) to manage the ongoing development of the network in conjunction with Dock token holders. This effort is completed with the assistance of two entities, the Association Council and the Technical Committee. The Council is the governing body of the network, responsible for reviewing and voting on any proposals from the community. The Technical Committee helps maintain the network and can fast-track the implementation of any urgent proposals.
@@ -13,4 +17,3 @@ In summary, Dock’s governance framework manages:
 * Adding, removing or updating network functionality.
 * Introducing and/or changing rewards and punishments for different actors in the network.
 * Allocation of financial reserves for the network .i.e. the treasury.
-

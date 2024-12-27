@@ -2,7 +2,7 @@
 
 ## How We Process Vulnerability Reports
 
-We address security concerns as a high priority, whether they are raised by our customers or reported by third parties. In order to limit the possibility that a concern could be exploited, we ask to be provided the opportunity to address security concerns before they are reported publicly. Security concerns can be privately reported to us through the Intercom support button in the bottom-right corner of Dock Certs, or by sending an email to [security@dock.io](mailto:security@dock.io).
+We address security concerns as a high priority, whether they are raised by our customers or reported by third parties. In order to limit the possibility that a concern could be exploited, we ask to be provided the opportunity to address security concerns before they are reported publicly. Security concerns can be privately reported to us through the Intercom support button in the bottom-right corner of Dock Certs, or by sending an email to security@truvera.io.
 
 Our open source code bases are available for public inspection, and we love pull requests! Upon receiving a security report, we will:
 
