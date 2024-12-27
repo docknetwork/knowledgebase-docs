@@ -1,6 +1,6 @@
 # Configuration
 
-You will be invited to a dedicated Github repository, which will contain the files needed to customize, build and sign a white label build of the Dock Wallet to be distributed in the Apple and Google Play stores.
+You will be invited to a dedicated Github repository, which will contain the files needed to customize, build and sign a white label build of the Truvera Wallet to be distributed in the Apple and Google Play stores.
 
 ## General Setup
 
@@ -8,9 +8,9 @@ First clone the GitHub repository to add the source code to your machine.
 
 <figure><img src="../../../.gitbook/assets/Screenshot 2023-09-01 at 17.25.08 (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-Open the code editor and now you can go through the documentation in [README.md](http://readme.md/) and start making changes on the repository.
+First step is to to go through the documentation in [README.md](http://readme.md/).&#x20;
 
-To make changes follow the instructions below and then submit a pull request (PR) to this repository to be reviewed by the Truvera team. Once the changes are accepted a new release will be generated.
+To make changes follow the instructions below and submit a pull request (PR) to this repository to be reviewed by the Truvera team. Once the changes are accepted a new release will be generated.
 
 ### Set the Application's Display Name & Package Id
 
@@ -27,7 +27,7 @@ In ../app.json set the following fields
 "companyNamePossessive": <your application package name>
 
 For example:
-"name": "DockApp",
+"name": "TruveraApp",
 "displayName": "Cool Wallet",
 "packageId": "com.coolwallet.app",
 "companyName": "Cool",

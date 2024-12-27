@@ -3,11 +3,11 @@
 ## Configuration phase
 
 1. When the customizations are done and repository updated create a Pull Request (PR)
-2. Dock will review and merge the PR into the master branch. That will trigger a new build. This will usually take \~1 business day.
+2. Truvera will review and merge the PR into the master branch. That will trigger a new build. This will usually take \~1-2 business days.
 3. A new release will be created in the distribution repository
 
 * release name will be: wallet-version + wallet-build-number e.g: **v0.4.5\_build-523**
-* If only minor changes are made on the whitelabel wallet they will be uploaded to an existing release instead of creating a new one to keep consistency with Dock Wallet.
+* If only minor changes are made on the whitelabel wallet they will be uploaded to an existing release instead of creating a new one to keep consistency with the Truvera Wallet.
 
 4. Assets will be uploaded to the release in the ../releases
 
@@ -23,13 +23,6 @@
 
 1. Download the .aab file from the release
 2. Create a new internal testing release
-
-<div align="left">
-
-<figure><img src="../../../.gitbook/assets/GooglePlay_Internal_Testing.png" alt="" width="375"><figcaption></figcaption></figure>
-
-</div>
-
 3. Upload the .aab file
 4. The app will be reviewed by Google
 5. After the review you can add internal testers (email address) that will be able to download the app from the stores.
