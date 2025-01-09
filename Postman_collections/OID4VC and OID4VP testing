@@ -240,7 +240,7 @@
 	"variable": [
 		{
 			"key": "ApiKey",
-			"value": "eyJzY29wZXMiOlsidGVzdCIsImFsbCJdLCJzdWIiOiIxNDY1MCIsInNlbGVjdGVkVGVhbUlkIjowLCJjcmVhdG9ySWQiOiIxNDY1MCIsImlhdCI6MTcyNDA2NzUzOCwiZXhwIjo0ODAzMzYzNTM4fQ.z67U4c2av7pFzlEdb0vYDKkDadwuDtk19W9bw3gXxPr6sR0ewvqDkFiFBFZt4dwDv3JtjkuDFwFO8G7lQmjWLQ",
+			"value": "",
 			"type": "string"
 		},
 		{
