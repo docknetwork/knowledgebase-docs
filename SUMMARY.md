@@ -27,6 +27,7 @@
   * [Transaction History](workspace/transaction-history.md)
   * [Custom branded distribution emails](workspace/custom-branded-distribution-emails.md)
   * [Truvera Workspace Release Notes](workspace/truvera-workspace-release-notes/README.md)
+    * [Service Downtime: Test Data Migration on January 22](workspace/truvera-workspace-release-notes/service-downtime-test-data-migration-on-january-22.md)
     * [Release Notes December 2024](workspace/truvera-workspace-release-notes/release-notes-december-2024.md)
     * [Release Notes November 2024](workspace/truvera-workspace-release-notes/release-notes-november-2024.md)
     * [2024 Release notes](workspace/truvera-workspace-release-notes/2024-release-notes/README.md)
