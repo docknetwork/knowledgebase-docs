@@ -83,6 +83,10 @@ The biometric service issues a credential that generally contains at least the f
 1. An attribute that contains the enrollment template - the reference biometric sample that is stored during enrollment to which future biometric samples are compared
 2. Attributes that can be embedded in primary credentials to bind them to valid biometric verification credentials issued to the same holder
 
+{% hint style="info" %}
+Biometric data needs to be converted to a text based format so it can be embedded in JSON. The most popular method is to use "Base64" encoding.
+{% endhint %}
+
 A sufficiently privacy preserving biometric template can be embedded directly in the primary credential, avoiding the need for an enrollment credential.
 
 The biometric enrollment and initial verification credentials may be issued using the same biometric sample to avoid an additional sample being taken from the holder.
