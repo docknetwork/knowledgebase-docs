@@ -1,4 +1,4 @@
-# Issue Store Verify Sample flow
+# Issue-Store-Verify sample flow
 
 This flow refers to Postman, but the general steps are the same however you use the API. The Issue Store Verify collection includes the scripts that automatically propagate results into the next request bodies when you follow the below steps.&#x20;
 
@@ -10,7 +10,7 @@ To issue a credential and or a presentation on the holder's behalf, the followin
 
 To create a new DID to issue with, go to **Create DID** and click **Send**. The `id` property denotes a job ID in the system that you can use to query for blockchain transaction status.
 
-The Truvera API supports `did:dock`, `did:polygonid` and `did:key` method creation.
+The Truvera API supports `did:cheqd` , `did:dock`, `did:polygonid` and `did:key` method creation.
 
 <details>
 
@@ -18,7 +18,7 @@ The Truvera API supports `did:dock`, `did:polygonid` and `did:key` method creati
 
 ```json
 {
-"type": "dock"
+"type": "cheqd"
 }
 ```
 
@@ -30,12 +30,12 @@ The Truvera API supports `did:dock`, `did:polygonid` and `did:key` method creati
 
 ```json
 {
-    "did": "did:dock:5CvswSAkWbyn6iQdRtMiD8tUAQmpXBghPVs9JqK5cJTiAhJk",
-    "controller": "did:dock:5CvswSAkWbyn6iQdRtMiD8tUAQmpXBghPVs9JqK5cJTiAhJk",
+    "did": "did:cheqd:5CvswSAkWbyn6iQdRtMiD8tUAQmpXBghPVs9JqK5cJTiAhJk",
+    "controller": "did:cheqd:5CvswSAkWbyn6iQdRtMiD8tUAQmpXBghPVs9JqK5cJTiAhJk",
     "id": "23677",
     "data": {
-        "did": "did:dock:5CvswSAkWbyn6iQdRtMiD8tUAQmpXBghPVs9JqK5cJTiAhJk",
-        "controller": "did:dock:5CvswSAkWbyn6iQdRtMiD8tUAQmpXBghPVs9JqK5cJTiAhJk"
+        "did": "did:cheqd:5CvswSAkWbyn6iQdRtMiD8tUAQmpXBghPVs9JqK5cJTiAhJk",
+        "controller": "did:cheqd:5CvswSAkWbyn6iQdRtMiD8tUAQmpXBghPVs9JqK5cJTiAhJk"
     }
 }
 ```
@@ -43,7 +43,7 @@ The Truvera API supports `did:dock`, `did:polygonid` and `did:key` method creati
 </details>
 
 {% hint style="info" %}
-Creating a Dock DID submits a transaction to the blockchain, this could take some time to process. Please hit the \`/jobs\` endpoint to check the status of the job to see if it's finalized or not.
+Creating a cheqd DID submits a transaction to the blockchain, this could take some time to process.&#x20;
 {% endhint %}
 
 {% hint style="info" %}
@@ -60,7 +60,7 @@ To add information about your Organization to the DID, e.g. name and logo, you w
 
 ```json
 {
-    "did":"did:dock:5CfsgqHioKCHNddVK9Y2Lu8fHQpvXh3nc9xVjLZNDqk1ZJ9z",
+    "did":"did:cheqd:5CfsgqHioKCHNddVK9Y2Lu8fHQpvXh3nc9xVjLZNDqk1ZJ9z",
     "name": "Postman Test",
     "logo":""
 }
@@ -74,7 +74,7 @@ To add information about your Organization to the DID, e.g. name and logo, you w
 
 ```json
 {
-    "did": "did:dock:5CfsgqHioKCHNddVK9Y2Lu8fHQpvXh3nc9xVjLZNDqk1ZJ9z",
+    "did": "did:cheqd:5CfsgqHioKCHNddVK9Y2Lu8fHQpvXh3nc9xVjLZNDqk1ZJ9z",
     "name": "Postman Test",
     "logo": ""
 }
@@ -97,8 +97,8 @@ To issue a credential you will need to set a schema that will define which attri
 ```json
 {
       "$schema": "http://json-schema.org/schema",
-      "name": "Postman test schema",
-      "description": "describing Postman test schema",
+      "name": "My Sample schema",
+      "description": "description of my schema",
       "type": "object",
       "properties": {
         "id": {
@@ -108,13 +108,17 @@ To issue a credential you will need to set a schema that will define which attri
           "type": "string",
           "format": "email"
         },
-        "alumniOf": {
+        "textAttribute": {
           "type": "string"
+        },
+        "numberAttribute": {
+          "type": "number"
         }
-      },
+    },
       "required": [
         "emailAddress",
-        "alumniOf"
+        "textAttribute",
+        "numberAttribute"
       ],
       "additionalProperties": false
     }
@@ -132,8 +136,8 @@ To issue a credential you will need to set a schema that will define which attri
     "data": {
         "schema": {
             "$schema": "http://json-schema.org/schema",
-            "name": "Postman test schema",
-            "description": "describing VPI test schema",
+            "name": "My Sample schema",
+            "description": "description of my schema",
             "type": "object",
             "properties": {
                 "id": {
@@ -143,27 +147,31 @@ To issue a credential you will need to set a schema that will define which attri
                     "type": "string",
                     "format": "email"
                 },
-                "alumniOf": {
+                "textAttribute": {
                     "type": "string"
+                },
+                "numberAttribute": {
+                    "type": "number"
                 }
             },
             "required": [
                 "emailAddress",
-                "alumniOf"
+                "textAttribute",
+                "numberAttribute"
             ],
             "additionalProperties": false,
             "$metadata": {
                 "version": 1,
                 "uris": {
-                    "jsonSchema": "https://schema.dock.io/PostmanTestSchema-V1-1723810163796.json",
-                    "jsonLdContext": "https://schema.dock.io/PostmanTestSchema-V1723810163796.json-ld"
+                    "jsonSchema": "https://schema.truvera.io/MySampleSchema-V1-1737454702610.json",
+                    "jsonLdContext": "https://schema.truvera.io/MySampleSchema-V1737454702610.json-ld"
                 }
             },
-            "$id": "https://schema.dock.io/PostmanTestSchema-V1-1723810163796.json"
+            "$id": "https://schema.truvera.io/MySampleSchema-V1-1737454702610.json"
         },
-        "id": "https://schema.dock.io/PostmanTestSchema-V1-1723810163796.json",
-        "uri": "https://schema.dock.io/PostmanTestSchema-V1-1723810163796.json",
-        "created": "2024-08-16T12:09:23.911Z",
+        "id": "https://schema.truvera.io/MySampleSchema-V1-1737454702610.json",
+        "uri": "https://schema.truvera.io/MySampleSchema-V1-1737454702610.json",
+        "created": "2025-01-21T10:18:22.707Z",
         "isOwner": true,
         "ownerName": "",
         "ownerLogo": ""
@@ -181,31 +189,33 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
 
 <summary>Body</summary>
 
-```json
+````json
 {
   "persist": true,
   "password": "1234",
-  "anchor": false,
+  "algorithm": "dockbbs",
   "recipientEmail":"agne@truvera.io",
   "distribute": true,
   "format": "jsonld",
   "credential": {
-    "name": "VPI test credential",
-    "description": "describing vpi test credential",
-    "schema": "https://schema.dock.io/VPITestSchema-V1-1723546475527.json",
+    "name": "My test credential",
+    "description": "describing my test credential",
+    "schema": "https://schema.truvera.io/MySampleSchema-V1-1736946620866.json",
     "type": [
-      "VPITestSchema"
+      "SampleSchema"
     ],
     "subject": {
-        "id":"agne@truvera.io",
-        "emailAddress":"agne@truvera.io",
-        "alumniOf":"University of Vilnius"
+        "id":"1234",
+        "emailAddress":"myemail@address.com",
+        "textAttribute":"Some text",
+        "numberAttribute":1
     },
-    "issuer": "did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx",
-    "issuanceDate": "2024-08-13T11:03:35.610Z"
-   }
+    "issuer": "did:cheqd:testnet:64b9e235-7267-4ca3-a643-8123292466c6",
+    "issuanceDate": "2025-01-21T11:03:35.610Z"
+  }
 }
 ```
+````
 
 </details>
 
@@ -217,42 +227,53 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
 {
     "@context": [
         "https://www.w3.org/2018/credentials/v1",
-        {
-            "VPITestSchema": "dk:VPITestSchema",
-            "alumniOf": "dk:alumniOf",
-            "description": "http://schema.org/description",
-            "dk": "https://ld.dock.io/credentials#",
-            "emailAddress": "dk:emailAddress",
-            "name": "dk:name"
-        }
+        "https://ld.dock.io/credentials/extensions-v1",
+        "https://ld.dock.io/security/bbs23/v1",
+        "https://schema.truvera.io/MySampleSchema-V1736946620866.json-ld"
     ],
-    "id": "https://creds-testnet.dock.io/43800063042edf33e7092653e487aeb795e528d24664be5ea641b62f279dc69d",
+    "id": "https://creds-testnet.truvera.io/649587d77d648a56c9be7a43668a6c4c44dfa7eee6fbfd9188cbf293616457a3",
     "type": [
         "VerifiableCredential",
-        "VPITestSchema"
+        "SampleSchema"
     ],
     "credentialSubject": {
-        "id": "agne@truvera.io",
-        "emailAddress": "agne@truvera.io",
-        "alumniOf": "University of Vilnius"
+        "id": "1234",
+        "emailAddress": "myemail@address.com",
+        "textAttribute": "Some text",
+        "numberAttribute": 1
     },
-    "issuanceDate": "2024-08-13T11:03:35.610Z",
+    "issuanceDate": "2025-01-21T11:03:35.610Z",
     "issuer": {
-        "name": "VPI test issuer",
-        "id": "did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx"
+        "name": "My new DID",
+        "logo": "https://placehold.co/400",
+        "id": "did:cheqd:testnet:64b9e235-7267-4ca3-a643-8123292466c6"
     },
     "credentialSchema": {
-        "id": "https://schema.dock.io/VPITestSchema-V1-1723546475527.json",
-        "type": "JsonSchemaValidator2018"
+        "id": "https://schema.truvera.io/MySampleSchema-V1-1736946620866.json",
+        "type": "JsonSchemaValidator2018",
+        "details": "{\"jsonSchema\":{\"$id\":\"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\"$schema\":\"http://json-schema.org/schema\",\"description\":\"description of my schema\",\"name\":\"My Sample schema\",\"properties\":{\"@context\":{\"type\":\"string\"},\"credentialSchema\":{\"properties\":{\"details\":{\"type\":\"string\"},\"id\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"version\":{\"type\":\"string\"}},\"type\":\"object\"},\"credentialSubject\":{\"additionalProperties\":false,\"properties\":{\"emailAddress\":{\"format\":\"email\",\"type\":\"string\"},\"id\":{\"type\":\"string\"},\"numberAttribute\":{\"type\":\"number\"},\"textAttribute\":{\"type\":\"string\"}},\"required\":[\"emailAddress\",\"textAttribute\",\"numberAttribute\"],\"type\":\"object\"},\"cryptoVersion\":{\"type\":\"string\"},\"description\":{\"type\":\"string\"},\"id\":{\"type\":\"string\"},\"issuanceDate\":{\"format\":\"date-time\",\"type\":\"string\"},\"issuer\":{\"properties\":{\"id\":{\"type\":\"string\"},\"logo\":{\"type\":\"string\"},\"name\":{\"type\":\"string\"}},\"type\":\"object\"},\"name\":{\"type\":\"string\"},\"proof\":{\"properties\":{\"@context\":{\"items\":[{\"properties\":{\"proof\":{\"properties\":{\"@container\":{\"type\":\"string\"},\"@id\":{\"type\":\"string\"},\"@type\":{\"type\":\"string\"}},\"type\":\"object\"},\"sec\":{\"type\":\"string\"}},\"type\":\"object\"},{\"type\":\"string\"}],\"type\":\"array\"},\"created\":{\"format\":\"date-time\",\"type\":\"string\"},\"proofPurpose\":{\"type\":\"string\"},\"type\":{\"type\":\"string\"},\"verificationMethod\":{\"type\":\"string\"}},\"type\":\"object\"},\"type\":{\"type\":\"string\"}},\"type\":\"object\"},\"parsingOptions\":{\"defaultDecimalPlaces\":4,\"defaultMinimumDate\":-17592186044415,\"defaultMinimumInteger\":-4294967295,\"useDefaults\":true}}",
+        "version": "0.4.0"
     },
-    "name": "VPI test credential",
-    "description": "describing vpi test credential",
+    "name": "My test credential",
+    "description": "describing my test credential",
+    "cryptoVersion": "0.6.0",
     "proof": {
-        "type": "Ed25519Signature2018",
-        "created": "2024-08-16T12:14:55Z",
-        "verificationMethod": "did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx#keys-1",
+        "@context": [
+            {
+                "sec": "https://w3id.org/security#",
+                "proof": {
+                    "@id": "sec:proof",
+                    "@type": "@id",
+                    "@container": "@graph"
+                }
+            },
+            "https://ld.dock.io/security/bbs23/v1"
+        ],
+        "type": "Bls12381BBSSignatureDock2023",
+        "created": "2025-01-21T13:04:29Z",
+        "verificationMethod": "did:cheqd:testnet:64b9e235-7267-4ca3-a643-8123292466c6#keys-2",
         "proofPurpose": "assertionMethod",
-        "jws": "eyJhbGciOiJFZERTQSIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..IbZADG6nhKe7lSHUuQ4OyEAToeGybN7nYl2Pp8rsUzc-oVAKYzBzZX2gMM8Bj4Np1cNK9WvpjlyRWjgVviz_Bg"
+        "proofValue": "z2qWh3aNTysCYP8f41cj9jouGMHTKnag3vP4rfUJwXpQsnhjHgR6VfXYsj5TZAhNpG2jpkA4xTh1pDJjdsVgMdoXo8rdgAaNL5ovY36UqpsAC7V"
     }
 }
 ```
@@ -277,36 +298,46 @@ To verify a credential you will need a verification template, that will indicate
 
 ```json
 {
-  "name": "Postman proof request",
-  "nonce": "1234567890",
+  "name": "My Sample Proof Template",
   "request": {
-    "name": "test request",
-    "purpose": "my purpose",
+    "name": "sample proof template",
+    "purpose": "test my sample proof template",
     "input_descriptors": [
       {
         "id": "Credential 1",
-        "name": "test request",
-        "purpose": "my purpose",
-        "constraints": {
-          "fields": [
-            {
+            "name": "Verify Sample credential",
+            "purpose": "verify sample credential",
+            "constraints": {
+            "fields": [
+                {
                 "path": [
-                    "$.credentialSubject.alumniOf"
-                ]
-            },
-            {
-            "path": [
-                "$.credentialSubject.dateIssued"
+                    "$.credentialSubject.emailAddress"
                 ],
-                "optional": true
+                "optional": false
             },
             {
                 "path": [
-                        "$.credentialSchema.id"
+                    "$.credentialSubject.numberAttribute"
                 ],
                 "filter": {
-                    "const": "https://schema.dock.io/PostmanTestSchemaJune18-V1-1718711073065.json"
-              }
+                    "type": "number",
+                    "exclusiveMinimum": 0
+                },
+                "optional": false,
+                "predicate": "required"
+            },
+            {
+                "path": [
+                    "$.credentialSchema.id"
+                ],
+                "filter": {
+                    "const": "https://schema.truvera.io/MySampleSchema-V1-1736946620866.json"
+                }
+            },
+            {
+                "path": [
+                    "$.credentialSubject.textAttribute"
+                ]
             }
           ]
         }
@@ -324,54 +355,68 @@ To verify a credential you will need a verification template, that will indicate
 
 ```json
 {
-    "id": "acbff85d-a556-4832-b118-2194c51d3401",
+    "id": "6cc6abd6-d47e-46c4-9ba1-3677a904237b",
     "did": "",
-    "name": "Postman proof request",
-    "created": "2024-08-16T12:28:00.638Z",
-    "updated": "2024-08-16T12:28:00.638Z",
+    "name": "My Sample Proof Template",
+    "created": "2025-01-21T13:05:50.319Z",
+    "updated": "2025-01-21T13:05:50.319Z",
     "request": {
-        "name": "test request",
-        "purpose": "my purpose",
+        "name": "sample proof template",
+        "purpose": "test my sample proof template",
         "input_descriptors": [
             {
                 "id": "Credential 1",
-                "name": "test request",
-                "purpose": "my purpose",
+                "name": "Verify Sample credential",
+                "purpose": "verify sample credential",
                 "constraints": {
                     "fields": [
                         {
                             "path": [
-                                "$.credentialSubject.alumniOf"
-                            ]
+                                "$.credentialSubject.emailAddress"
+                            ],
+                            "optional": false
                         },
                         {
                             "path": [
-                                "$.credentialSubject.dateIssued"
+                                "$.credentialSubject.numberAttribute"
                             ],
-                            "optional": true
+                            "filter": {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                            },
+                            "optional": false,
+                            "predicate": "required"
                         },
                         {
                             "path": [
                                 "$.credentialSchema.id"
                             ],
                             "filter": {
-                                "const": "https://schema.dock.io/PostmanTestSchemaJune18-V1-1718711073065.json"
+                                "const": "https://schema.truvera.io/MySampleSchema-V1-1736946620866.json"
                             }
+                        },
+                        {
+                            "path": [
+                                "$.credentialSubject.textAttribute"
+                            ]
                         }
                     ]
                 }
             }
         ]
     },
-    "totalRequests": 0
+    "totalRequests": 0,
+    "types": [
+        "jsonld"
+    ]
 }
 ```
 
 </details>
 
-## 6. Create a proof presentation
+## 6. Create a proof request
 
-Using the verification template created in the previous step in the endpoint **POST/proof-templates/{id}/** request a single use verification or proof presentation will be created.&#x20;
+Using the verification template created in the previous step in the endpoint **POST/proof-templates/{id}/** request a single use proof request will be created.&#x20;
 
 <details>
 
@@ -379,53 +424,67 @@ Using the verification template created in the previous step in the endpoint **P
 
 ```json
 {
-    "id": "806be681-494c-4483-bf49-e1aee96473d9",
-    "name": "Postman proof request",
-    "nonce": "f3db4810cd8bf8df17bb04ace82dee36",
+    "id": "86189366-c2a5-452e-b512-e052e26c84c1",
+    "name": "My Sample Proof Template",
+    "nonce": "6ef48e6c5f7a6f57eb92ab193f03fc8f",
     "did": "",
     "verified": false,
-    "created": "2024-08-16T12:33:32.867Z",
-    "updated": "2024-08-16T12:33:32.867Z",
+    "created": "2025-01-21T13:06:59.139Z",
+    "updated": "2025-01-21T13:06:59.139Z",
     "signature": null,
     "presentation": {},
-    "response_url": "https://api-testnet.dock.io/proof-requests/806be681-494c-4483-bf49-e1aee96473d9/send-presentation",
+    "response_url": "https://api-testnet.truvera.io/proof-requests/86189366-c2a5-452e-b512-e052e26c84c1/send-presentation",
     "type": "proof-request",
-    "qr": "https://creds-testnet.dock.io/proof/806be681-494c-4483-bf49-e1aee96473d9",
+    "qr": "https://creds-testnet.truvera.io/proof/86189366-c2a5-452e-b512-e052e26c84c1",
     "request": {
-        "name": "test request",
-        "purpose": "my purpose",
+        "name": "sample proof template",
+        "purpose": "test my sample proof template",
         "input_descriptors": [
             {
                 "id": "Credential 1",
-                "name": "test request",
-                "purpose": "my purpose",
+                "name": "Verify Sample credential",
+                "purpose": "verify sample credential",
                 "constraints": {
                     "fields": [
                         {
                             "path": [
-                                "$.credentialSubject.alumniOf"
-                            ]
+                                "$.credentialSubject.emailAddress"
+                            ],
+                            "optional": false
                         },
                         {
                             "path": [
-                                "$.credentialSubject.dateIssued"
+                                "$.credentialSubject.numberAttribute"
                             ],
-                            "optional": true
+                            "filter": {
+                                "type": "number",
+                                "exclusiveMinimum": 0
+                            },
+                            "optional": false,
+                            "predicate": "required"
                         },
                         {
                             "path": [
                                 "$.credentialSchema.id"
                             ],
                             "filter": {
-                                "const": "https://schema.dock.io/PostmanTestSchemaJune18-V1-1718711073065.json"
+                                "const": "https://schema.truvera.io/MySampleSchema-V1-1736946620866.json"
                             }
+                        },
+                        {
+                            "path": [
+                                "$.credentialSubject.textAttribute"
+                            ]
                         }
                     ]
                 }
             }
         ],
-        "id": "806be681-494c-4483-bf49-e1aee96473d9"
-    }
+        "id": "86189366-c2a5-452e-b512-e052e26c84c1"
+    },
+    "types": [
+        "jsonld"
+    ]
 }
 ```
 
