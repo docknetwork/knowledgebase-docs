@@ -1,10 +1,10 @@
-# Service Downtime: Test Data Migration on January 22
+# Service Downtime: Test Data Migration on January 28
 
 Please be informed  about a planned test data migration as we transition from the Dock blockchain to the cheqd blockchain. While we work on this upgrade, there may be a brief disruption to our services.
 
 Migration Window:\
 \
-🗓 Date: January 22, 2025\
+🗓 Date: January 28, 2025\
 ⏰ Time: 19:00 UTC – 22:00 UTC
 
 What This Means for You:
