@@ -31,7 +31,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"claimMap\": {\n      \"name\": \"name\"\n    },\n    \"credentialOptions\": {\n      \"credential\": {\n        \"type\": [\"UniversityDegreeCredential\"],\n        \"context\": [\"https://www.w3.org/2018/credentials/examples/v1\"],\n        \"subject\": {\n          \"alumniOf\": \"Dock University\",\n          \"degree\": \"Credential Science\"\n          // name will be added by claims flow\n        },\n        \"expirationDate\": \"2099-08-24T14:15:22Z\",\n        \"issuer\": \"did:dock:issuer\"\n      }\n    },\n    \"authProvider\": {\n      \"url\": \"https://creds.dock.io/claims\",\n      \"scope\": [\"openid\"],\n      \"clientId\": \"eyAic2NoZW1hIjogImh0dHBzOi8vZG9ja25ldHdvcmsuZ2l0aHViLmlvL3ZjLXNjaGVtYXMvYmFzaWMtY3JlZGVudGlhbC5qc29uIiwgImNsYWltcyI6IFsibmFtZSJdIH0=\",\n      \"clientSecret\": \"gpO2IVK+OALL8W+DcFlIfFhJtNA=\"\n    },\n    \"singleUse\": false\n  }",
+					"raw": "{\n    \"claimMap\": {\n      \"name\": \"name\"\n    },\n    \"credentialOptions\": {\n      \"credential\": {\n        \"type\": [\"UniversityDegreeCredential\"],\n        \"context\": [\"https://www.w3.org/2018/credentials/examples/v1\"],\n        \"subject\": {\n          \"alumniOf\": \"Truvera University\",\n          \"degree\": \"Credential Science\"\n          // name will be added by claims flow\n        },\n        \"expirationDate\": \"2099-08-24T14:15:22Z\",\n        \"issuer\": \"did:chedq:issuer\"\n      }\n    },\n    \"authProvider\": {\n      \"url\": \"https://creds.dock.io/claims\",\n      \"scope\": [\"openid\"],\n      \"clientId\": \"eyAic2NoZW1hIjogImh0dHBzOi8vZG9ja25ldHdvcmsuZ2l0aHViLmlvL3ZjLXNjaGVtYXMvYmFzaWMtY3JlZGVudGlhbC5qc29uIiwgImNsYWltcyI6IFsibmFtZSJdIH0=\",\n      \"clientSecret\": \"gpO2IVK+OALL8W+DcFlIfFhJtNA=\"\n    },\n    \"singleUse\": false\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -58,7 +58,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"credentialOptions\": {\n      \"credential\": {\n        \"type\": [\"UniversityDegreeCredential\"],\n        \"context\": [\"https://www.w3.org/2018/credentials/examples/v1\"],\n        \"subject\": {\n          \"alumniOf\": \"Dock University\",\n          \"degree\": \"Credential Science\"\n          // name will be added by claims flow\n        },\n        \"expirationDate\": \"2099-08-24T14:15:22Z\",\n        \"issuer\": \"did:dock:5HCXuyBhXRiZxSmyLG2j6NhoeqL4dYHV9EGwLE2FKJVUmXL4\"\n      }\n    },\n    \"singleUse\": false\n  }",
+					"raw": "{\n    \"credentialOptions\": {\n      \"credential\": {\n        \"type\": [\"UniversityDegreeCredential\"],\n        \"context\": [\"https://www.w3.org/2018/credentials/examples/v1\"],\n        \"subject\": {\n          \"alumniOf\": \"Truvera University\",\n          \"degree\": \"Credential Science\"\n          // name will be added by claims flow\n        },\n        \"expirationDate\": \"2099-08-24T14:15:22Z\",\n        \"issuer\": \"did:cheqd:testnet:64b9e235-7267-4ca3-a643-8123292466c6\"\n      }\n    },\n    \"singleUse\": false\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -133,7 +133,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"did\": \"did:dock:5HCXuyBhXRiZxSmyLG2j6NhoeqL4dYHV9EGwLE2FKJVUmXL4\",\n\t  \"name\": \"OID4VP Proof request 2\",\n\t  \"request\": {\n\t\t\"name\": \"OID4VP test proof request\",\n\t\t\"purpose\": \"To present a test credential using OID4VPI\",\n\t\t\"input_descriptors\": [\n\t\t  {\n\t\t\t\"id\": \"Dock Credential\",\n\t\t\t\"name\": \"OID4VP test proof request\",\n\t\t\t\"purpose\": \"To present a test credential using OID4VP\",\n\t\t\t\"constraints\": {\n\t\t\t  \"fields\": [\n\t\t\t\t{\n\t\t\t\t  \"path\": [\n\t\t\t\t\t\"$.credentialSubject.name\"\n\t\t\t\t  ]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t  \"path\": [\n\t\t\t\t\t\"$.type\",\n\t\t\t\t\t\"$.vc.type\"\n\t\t\t\t  ],\n\t\t\t\t  \"filter\": {\n\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\"contains\": {\n\t\t\t\t\t  \"const\": \"UniversityDegreeCredential\"\n\t\t\t\t\t}\n\t\t\t\t  }\n\t\t\t\t}\n\t\t\t  ]\n\t\t\t}\n\t\t  }\n\t\t]\n\t  }\n  }",
+					"raw": "{\n      \"did\": \"did:cheqd:5HCXuyBhXRiZxSmyLG2j6NhoeqL4dYHV9EGwLE2FKJVUmXL4\",\n\t  \"name\": \"OID4VP Proof request 2\",\n\t  \"request\": {\n\t\t\"name\": \"OID4VP test proof request\",\n\t\t\"purpose\": \"To present a test credential using OID4VPI\",\n\t\t\"input_descriptors\": [\n\t\t  {\n\t\t\t\"id\": \"Truvera Credential\",\n\t\t\t\"name\": \"OID4VP test proof request\",\n\t\t\t\"purpose\": \"To present a test credential using OID4VP\",\n\t\t\t\"constraints\": {\n\t\t\t  \"fields\": [\n\t\t\t\t{\n\t\t\t\t  \"path\": [\n\t\t\t\t\t\"$.credentialSubject.name\"\n\t\t\t\t  ]\n\t\t\t\t},\n\t\t\t\t{\n\t\t\t\t  \"path\": [\n\t\t\t\t\t\"$.type\",\n\t\t\t\t\t\"$.vc.type\"\n\t\t\t\t  ],\n\t\t\t\t  \"filter\": {\n\t\t\t\t\t\"type\": \"array\",\n\t\t\t\t\t\"contains\": {\n\t\t\t\t\t  \"const\": \"UniversityDegreeCredential\"\n\t\t\t\t\t}\n\t\t\t\t  }\n\t\t\t\t}\n\t\t\t  ]\n\t\t\t}\n\t\t  }\n\t\t]\n\t  }\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -201,16 +201,11 @@
 		}
 	],
 	"auth": {
-		"type": "apikey",
-		"apikey": [
+		"type": "bearer",
+		"bearer": [
 			{
-				"key": "value",
-				"value": "{{ApiKey}}",
-				"type": "string"
-			},
-			{
-				"key": "key",
-				"value": "DOCK-API-TOKEN",
+				"key": "token",
+				"value": "{{Bearier}}",
 				"type": "string"
 			}
 		]
@@ -238,11 +233,6 @@
 		}
 	],
 	"variable": [
-		{
-			"key": "ApiKey",
-			"value": "",
-			"type": "string"
-		},
 		{
 			"key": "BaseUrl",
 			"value": "https://api-testnet.dock.io",
