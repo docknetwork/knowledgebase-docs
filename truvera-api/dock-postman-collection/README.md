@@ -1,4 +1,4 @@
-# Sample Postman Collections
+# Sample Postman collections
 
 Download and use our [Postman Collections](https://github.com/docknetwork/knowledgebase-docs/tree/main/Postman_collections) to experiment with basic API flows:
 
@@ -9,6 +9,6 @@ Download and use our [Postman Collections](https://github.com/docknetwork/knowle
 * In your new Postman environment, you need to create two new `ApiKey` and `BaseUrl` variables. Please refer [here](https://learning.postman.com/docs/sending-requests/variables/) for the instructions to set the new variables.
 * Login to [Truvera Workspace](https://truvera.io/).
 * In your Truvera Workspace dashboard, click **Create API key** on the keys page to generate the key, copy and save it (make sure the test mode toggle is on).
-* Set `ApiKey` initial and current values with the value that you generated in Truvera Workspace.
-* Set `BaseUrl` initial and current values with [https://api-testnet.truvera.io](https://api-testnet.truvera.io)
+* In your Postman create a new environment and add a secret `Bearer` variable with your API key as  values.
+* Set `BaseUrl` initial and current values to [https://api-testnet.truvera.io](https://api-testnet.truvera.io)
 
