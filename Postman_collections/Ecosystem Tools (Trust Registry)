@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"Postman Testing Trust Registry\",\n  \"description\": \"I am creating this to test the ecosystems api guide\",\n  \"logoUrl\": \"https://logo.com/registry\",\n  \"ecosystemUrl\": \"https://myecosystem.com\",\n  \"governanceFramework\": \"Anarchy rules in this ecossytem\",\n  \"governanceFrameworkVersion\": \"1.0.0\",\n  \"convener\": \"did:dock:5HCXuyBhXRiZxSmyLG2j6NhoeqL4dYHV9EGwLE2FKJVUmXL4\"\n}",
+					"raw": "{\n  \"name\": \"Creating an Ecosystem\",\n  \"description\": \"I am creating this to test the ecosystems api guide\",\n  \"logoUrl\": \"https://logo.com/registry\",\n  \"ecosystemUrl\": \"https://myecosystem.com\",\n  \"governanceFramework\": \"Anarchy rules in this ecosystem\",\n  \"governanceFrameworkVersion\": \"1.0.0\",\n  \"convener\": \"did:cheqd:testnet:9c9ac56c-472d-4ae4-b073-5c9a08d5a7f7\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -39,7 +39,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"verifierSchemas\": [\"https://schema.dock.io/KYC-V1-1724068086299.json\"]\n}",
+					"raw": "{\n  \"verifierSchemas\": [\"https://schema.truvera.io/MySampleSchema-V1-1737465503382.json\"]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -47,13 +47,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/trust-registries/0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868/participants",
+					"raw": "{{BaseUrl}}/trust-registries/0x2468befaf48b704e93ff668cd43427a7e0539ff5b49f8764e0480dac5a3bf3e3/participants",
 					"host": [
 						"{{BaseUrl}}"
 					],
 					"path": [
 						"trust-registries",
-						"0xfd0d9e7f56dfcc0e06731ce8a6b1e3ea40f5e2b08ece49d46f82e713c9b44868",
+						"0x2468befaf48b704e93ff668cd43427a7e0539ff5b49f8764e0480dac5a3bf3e3",
 						"participants"
 					]
 				}
@@ -67,7 +67,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"did\": \"did:dock:5HG6mthmkXVp61HAhthrHiDESWAGSdheKSQ6JM2sbK1JGv1s\",\n  \"infoUrl\": \"\",\n  \"token\":\"eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjB4ZmQwZDllN2Y1NmRmY2MwZTA2NzMxY2U4YTZiMWUzZWE0MGY1ZTJiMDhlY2U0OWQ0NmY4MmU3MTNjOWI0NDg2OCIsImlzVGVzdG1vZGUiOnRydWUsIm5vbmNlIjo0NDUxLCJ2ZXJpZmllclNjaGVtYXMiOlsiaHR0cHM6Ly9zY2hlbWEuZG9jay5pby9LWUMtVjEtMTcyNDA2ODA4NjI5OS5qc29uIl0sImlhdCI6MTcyNDA2ODQxOSwiZXhwIjoxNzI0NjczMjE5fQ.WUJk94zTVtSJRxNPQzWoHw4jCuKz7OWy2aP8ByoHKQNQ6r6lFq4DqjBNiE8mH34IxD_8PpZZ4PN8KUFdbyEoGg\"\n}",
+					"raw": "{\n  \"did\": \"did:cheqd:testnet:1c2c6efe-3c4b-4424-9175-f1e1057f2e71\",\n  \"infoUrl\": \"\",\n  \"token\":\"eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjB4ZmQwZDllN2Y1NmRmY2MwZTA2NzMxY2U4YTZiMWUzZWE0MGY1ZTJiMDhlY2U0OWQ0NmY4MmU3MTNjOWI0NDg2OCIsImlzVGVzdG1vZGUiOnRydWUsIm5vbmNlIjo0NDUxLCJ2ZXJpZmllclNjaGVtYXMiOlsiaHR0cHM6Ly9zY2hlbWEuZG9jay5pby9LWUMtVjEtMTcyNDA2ODA4NjI5OS5qc29uIl0sImlhdCI6MTcyNDA2ODQxOSwiZXhwIjoxNzI0NjczMjE5fQ.WUJk94zTVtSJRxNPQzWoHw4jCuKz7OWy2aP8ByoHKQNQ6r6lFq4DqjBNiE8mH34IxD_8PpZZ4PN8KUFdbyEoGg\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -113,7 +113,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"Updated Name for Postman test trust registry\",\n  \"description\": \"This is very easy to do\",\n  \"logoUrl\": \"https://logo.com/updated\",\n  \"ecosystemUrl\": \"https://updatedecosystem.com\",\n  \"governanceFramework\": \"This is a markdown document describing my framework version two!\",\n  \"governanceFrameworkVersion\": \"2.0.0\"\n}",
+					"raw": "{\n  \"name\": \"Updated Name for test ecpsystem\",\n  \"description\": \"This is very easy to do\",\n  \"logoUrl\": \"https://logo.com/updated\",\n  \"ecosystemUrl\": \"https://updatedecosystem.com\",\n  \"governanceFramework\": \"This is a markdown document describing my framework version two!\",\n  \"governanceFrameworkVersion\": \"2.0.0\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -367,16 +367,11 @@
 		}
 	],
 	"auth": {
-		"type": "apikey",
-		"apikey": [
+		"type": "bearer",
+		"bearer": [
 			{
-				"key": "value",
-				"value": "{{ApiKey}}",
-				"type": "string"
-			},
-			{
-				"key": "key",
-				"value": "DOCK-API-TOKEN",
+				"key": "token",
+				"value": "{{Bearier}}",
 				"type": "string"
 			}
 		]
@@ -401,22 +396,6 @@
 					""
 				]
 			}
-		}
-	],
-	"variable": [
-		{
-			"key": "ApiKey",
-			"value": "",
-			"type": "string"
-		},
-		{
-			"key": "BaseUrl",
-			"value": "https://api-testnet.dock.io",
-			"type": "string"
-		},
-		{
-			"value": "",
-			"type": "string"
 		}
 	]
 }
