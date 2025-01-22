@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"Agnes Third Subaccount\",\n  \"image\": \"string\"\n}",
+					"raw": "{\n  \"name\": \"My new subaccount\",\n  \"image\": \"string\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -135,7 +135,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"did\":\"did:dock:5G1wx3FDBmFzqcuRKcdEQuH9PATF8r2H6kpsdwsvZP9uE9JJ\",\n    \"name\": \"Second DID of Agnes First Subaccount\"\n}",
+					"raw": "{\n    \"did\":\"did:cheqd:5G1wx3FDBmFzqcuRKcdEQuH9PATF8r2H6kpsdwsvZP9uE9JJ\",\n    \"name\": \"First DID of my subaccount\",\n    \"logo\": \"https://placehold.co/400\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -173,7 +173,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"verifierSchemas\": [\"https://schema.dock.io/BachelorOfArts-V2-1717755874209.json\"]\n}",
+					"raw": "{\n  \"verifierSchemas\": [\"https://schema.truvera.io/MySampleSchema-V1-1737465503382.json\"]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -201,7 +201,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"did\": \"did:dock:5G1wx3FDBmFzqcuRKcdEQuH9PATF8r2H6kpsdwsvZP9uE9JJ\",\n  \"infoUrl\":\"\",\n  \"token\":\"eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjB4ZDcxNTNmMjQ2NDhkYTEyMTNkMTI4NzljZDZjOGVmMzE4MmU4ZDgzMGI5YTIyYzJjY2Q5N2ExNjg1OTNmOTNhZCIsImlzVGVzdG1vZGUiOnRydWUsIm5vbmNlIjo2NzExLCJ2ZXJpZmllclNjaGVtYXMiOlsiaHR0cHM6Ly9zY2hlbWEuZG9jay5pby9CYWNoZWxvck9mQXJ0cy1WMi0xNzE3NzU1ODc0MjA5Lmpzb24iXSwiaWF0IjoxNzI5NjkwNDU3LCJleHAiOjE3MzAyOTUyNTd9.BW9YXiOoPa6jWvnfWckIeiWi0qxBCvoc8-OLQ9ByVj3EBdHnh930gWS51aEbpPsA0OjIDYu5WxabMi2dxYhDog\"\n}",
+					"raw": "{\n  \"did\": \"did:cheqd:5G1wx3FDBmFzqcuRKcdEQuH9PATF8r2H6kpsdwsvZP9uE9JJ\",\n  \"infoUrl\":\"\",\n  \"token\":\"eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjB4ZDcxNTNmMjQ2NDhkYTEyMTNkMTI4NzljZDZjOGVmMzE4MmU4ZDgzMGI5YTIyYzJjY2Q5N2ExNjg1OTNmOTNhZCIsImlzVGVzdG1vZGUiOnRydWUsIm5vbmNlIjo2NzExLCJ2ZXJpZmllclNjaGVtYXMiOlsiaHR0cHM6Ly9zY2hlbWEuZG9jay5pby9CYWNoZWxvck9mQXJ0cy1WMi0xNzE3NzU1ODc0MjA5Lmpzb24iXSwiaWF0IjoxNzI5NjkwNDU3LCJleHAiOjE3MzAyOTUyNTd9.BW9YXiOoPa6jWvnfWckIeiWi0qxBCvoc8-OLQ9ByVj3EBdHnh930gWS51aEbpPsA0OjIDYu5WxabMi2dxYhDog\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -224,16 +224,11 @@
 		}
 	],
 	"auth": {
-		"type": "apikey",
-		"apikey": [
+		"type": "bearer",
+		"bearer": [
 			{
-				"key": "value",
-				"value": "{{ApiKey}}",
-				"type": "string"
-			},
-			{
-				"key": "key",
-				"value": "DOCK-API-TOKEN",
+				"key": "token",
+				"value": "{{Bearier}}",
 				"type": "string"
 			}
 		]
@@ -261,11 +256,6 @@
 		}
 	],
 	"variable": [
-		{
-			"key": "ApiKey",
-			"value": "",
-			"type": "string"
-		},
 		{
 			"key": "BaseUrl",
 			"value": "https://api-testnet.dock.io",
