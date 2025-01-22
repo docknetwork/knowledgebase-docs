@@ -37,7 +37,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"type\": \"dock\"\n}",
+					"raw": "{\n\"type\": \"cheqd\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -45,22 +45,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/dids?=&=",
+					"raw": "{{BaseUrl}}/dids",
 					"host": [
 						"{{BaseUrl}}"
 					],
 					"path": [
 						"dids"
-					],
-					"query": [
-						{
-							"key": "",
-							"value": ""
-						},
-						{
-							"key": "",
-							"value": ""
-						}
 					]
 				}
 			},
@@ -73,7 +63,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"did\":\"did:dock:5CfsgqHioKCHNddVK9Y2Lu8fHQpvXh3nc9xVjLZNDqk1ZJ9z\",\n    \"name\": \"VPI test administrator\",\n    \"logo\":\"\"\n}",
+					"raw": "{\n    \"did\":\"did:cheqd:testnet:64b9e235-7267-4ca3-a643-8123292466c6\",\n    \"name\": \"My new DID\",\n    \"logo\":\"https://placehold.co/400\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -111,7 +101,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"$schema\": \"http://json-schema.org/schema\",\n      \"name\": \"VPI test schema\",\n      \"description\": \"describing VPI test schema\",\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"string\"\n        },\n        \"emailAddress\": {\n          \"type\": \"string\",\n          \"format\": \"email\"\n        },\n        \"alumniOf\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"emailAddress\",\n        \"alumniOf\"\n      ],\n      \"additionalProperties\": false\n    }",
+					"raw": "{\n      \"$schema\": \"http://json-schema.org/schema\",\n      \"name\": \"My Sample schema\",\n      \"description\": \"description of my schema\",\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"string\"\n        },\n        \"emailAddress\": {\n          \"type\": \"string\",\n          \"format\": \"email\"\n        },\n        \"textAttribute\": {\n          \"type\": \"string\"\n        },\n        \"numberAttribute\": {\n          \"type\": \"number\"\n        }\n    },\n      \"required\": [\n        \"emailAddress\",\n        \"textAttribute\",\n        \"numberAttribute\"\n      ],\n      \"additionalProperties\": false\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -131,13 +121,39 @@
 			"response": []
 		},
 		{
-			"name": "issue credential",
+			"name": "Create revocation registry",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"anchor\": false,\n  \"recipientEmail\":\"agne@dock.io\",\n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"VPI test credential\",\n    \"description\": \"describing vpi test credential\",\n    \"schema\": \"https://schema.dock.io/VPITestSchema-V1-1723546475527.json\",\n    \"type\": [\n      \"VPITestSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"agne@dock.io\",\n        \"emailAddress\":\"agne@dock.io\",\n        \"alumniOf\":\"University of Vilnius\"\n    },\n    \"issuer\": \"did:dock:5DciJXakYFsCfpFzQzrHCdoRvRwi1gu2uUGJnys5Aj4cvWUx\",\n    \"issuanceDate\": \"2024-08-13T11:03:35.610Z\"\n  }\n}",
+					"raw": "{\n  \"addOnly\": true,\n  \"policy\": [\n    \"did:cheqd:testnet:1c2c6efe-3c4b-4424-9175-f1e1057f2e71\"\n  ],\n  \"type\": \"DockVBAccumulator2022\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrl}}/registries",
+					"host": [
+						"{{BaseUrl}}"
+					],
+					"path": [
+						"registries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Issue credential",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"algorithm\": \"dockbbs\",\n  \"recipientEmail\":\"agne@truvera.io\", \n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"schema\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n    \"type\": [\n      \"SampleSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"1234\",\n        \"emailAddress\":\"myemail@address.com\",\n        \"textAttribute\":\"Some text\",\n        \"numberAttribute\":1,\n        \"expirationDate\":\"2026-01-21\"\n    },\n    \"issuer\": \"did:cheqd:testnet:80c16286-a49e-4826-aaa4-18fa7f66d707\",\n    \"issuanceDate\": \"2025-01-21T11:03:35.610Z\",\n    \"status\":\"1d1a1d1e248c4b30b5a22ab5a74ea5d9e3ba1894ee8c45ebf7f56a45bdccf9c5\"\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -163,7 +179,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"Postman proof request June 18\",\n  \"nonce\": \"1234567890\",\n  \"request\": {\n    \"name\": \"test request\",\n    \"purpose\": \"my purpose\",\n    \"input_descriptors\": [\n      {\n        \"id\": \"Credential 1\",\n        \"name\": \"test request\",\n        \"purpose\": \"my purpose\",\n        \"constraints\": {\n          \"fields\": [\n            {\n                \"path\": [\n                    \"$.credentialSubject.alumniOf\"\n                ]\n            },\n            {\n            \"path\": [\n                \"$.credentialSubject.dateIssued\"\n                ],\n                \"optional\": true\n            },\n            {\n                \"path\": [\n                        \"$.credentialSchema.id\"\n                ],\n                \"filter\": {\n                    \"const\": \"https://schema.dock.io/PostmanTestSchemaJune18-V1-1718711073065.json\"\n              }\n            }\n          ]\n        }\n      }\n    ]\n  }\n}",
+					"raw": "{\n  \"name\": \"My Sample Proof Template\",\n  \"request\": {\n    \"name\": \"sample proof template\",\n    \"purpose\": \"test my sample proof template\",\n    \"input_descriptors\": [\n      {\n        \"id\": \"Credential 1\",\n            \"name\": \"Verify Sample credential\",\n            \"purpose\": \"verify sample credential\",\n            \"constraints\": {\n            \"fields\": [\n                {\n                \"path\": [\n                    \"$.credentialSubject.emailAddress\"\n                ],\n                \"optional\": false\n            },\n            {\n                \"path\": [\n                    \"$.credentialSubject.numberAttribute\"\n                ],\n                \"filter\": {\n                    \"type\": \"number\",\n                    \"exclusiveMinimum\": 0\n                },\n                \"optional\": false,\n                \"predicate\": \"required\"\n            },\n            {\n                \"path\": [\n                    \"$.credentialSchema.id\"\n                ],\n                \"filter\": {\n                    \"const\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\"\n                }\n            },\n            {\n                \"path\": [\n                    \"$.credentialSubject.textAttribute\"\n                ]\n            }\n          ]\n        }\n      }\n    ]\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -197,13 +213,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrl}}/proof-templates/3053a47d-0725-4c9b-bc87-2fa14deee62a/request",
+					"raw": "{{BaseUrl}}/proof-templates/6cc6abd6-d47e-46c4-9ba1-3677a904237b/request",
 					"host": [
 						"{{BaseUrl}}"
 					],
 					"path": [
 						"proof-templates",
-						"3053a47d-0725-4c9b-bc87-2fa14deee62a",
+						"6cc6abd6-d47e-46c4-9ba1-3677a904237b",
 						"request"
 					]
 				}
@@ -229,16 +245,11 @@
 		}
 	],
 	"auth": {
-		"type": "apikey",
-		"apikey": [
+		"type": "bearer",
+		"bearer": [
 			{
-				"key": "value",
-				"value": "{{ApiKey}}",
-				"type": "string"
-			},
-			{
-				"key": "key",
-				"value": "DOCK-API-TOKEN",
+				"key": "token",
+				"value": "{{Bearier}}",
 				"type": "string"
 			}
 		]
@@ -267,13 +278,8 @@
 	],
 	"variable": [
 		{
-			"key": "ApiKey",
-			"value": "",
-			"type": "string"
-		},
-		{
 			"key": "BaseUrl",
-			"value": "https://api-testnet.dock.io",
+			"value": "https://api-testnet.truvera.io",
 			"type": "string"
 		}
 	]
