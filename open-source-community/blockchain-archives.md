@@ -8,10 +8,9 @@ have been discontinued. However, historical archives for `account` and `transfer
 
 ## Archived Networks
 
-1. Proof of Authority - the original Substrate PoA network was retired in July 2021 when the network switched over 
-to the Proof of Stake consensus algorithm. 
-2. Proof of Stake - see [Subscan](https://dock.subscan.io)
-3. ERC20 Token - see [Etherscan](https://etherscan.io/token/0xe5dada80aa6477e85d09747f2842f7993d0df71c)
+1. ERC20 Token - see [Etherscan](https://etherscan.io/token/0xe5dada80aa6477e85d09747f2842f7993d0df71c) *(NOTE: migration from the ERC20 token to the Substrate based DOCK token began `December 2020`)*
+2. Proof of Authority - the original Substrate PoA network *(NOTE: was retired in `July 2021` when the network switched over to the Proof of Stake consensus algorithm)* 
+3. Proof of Stake - see [Subscan](https://dock.subscan.io)
 
 ## Searching the Archives
 
