@@ -150,6 +150,7 @@
     * [Trust Registry](open-source-community/blockchain-sdk/trust-registry/README.md)
       * [Trust Registry JSON-RPC API](open-source-community/trust-registry/JSON-RPC.md)
       * [Trust Registry SDK interaction](open-source-community/trust-registry/SDK.md)
+  * [Blockchain archives](open-source-community/blockchain-archives.md)
   * [Blockchain consensus](open-source-community/consensus.md)
   * [Governance](open-source-community/governance/README.md)
     * [Responsibilities](open-source-community/governance/responsibilities.md)
