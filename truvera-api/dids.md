@@ -2,7 +2,7 @@
 
 DID stands for Decentralized IDentifiers. DIDs are meant to be globally unique identifiers that allow their owner to prove cryptographic control over them. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides that it identifies.
 
-DIDs in Truvera are created by choosing a 32-byte unique identifier along with a public key. You can update and delete a DID as well as list all DIDs. DID is identified by a unique, random key.
+In Truvera, Decentralized Identifiers (DIDs) are created using the UUID v4 standard. This involves selecting a unique 128-bit identifier, typically represented as a 36-character hexadecimal string, along with an initial public key. Users have the flexibility to add and remove public keys associated with their DID document as needed. Additionally, the system supports various operations such as updating, deactivating, and listing all existing DIDs.
 
 For a detailed example of the DIDs workflow. Please refer [here](https://github.com/docknetwork/dock-api-js/blob/main/workflows/didFlow.js).
 
