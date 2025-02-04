@@ -1,4 +1,4 @@
-# Create an Organization Profile (DID)
+# Create an organization profile (DID)
 
 What is a DID?
 
@@ -12,7 +12,7 @@ To create your organization profiles (DIDs) , select Organization Profiles on th
 
 Fill in the Public Name, add the Logo and Public Description you can leave the DID Type to the default setting “dock” (learn more about different [DID Types](create-an-organization-profile-did.md#choosing-a-did-type)). Then select **Create Organization Profile**.
 
-<div align="left"><figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 14.13.24.png" alt="" width="188"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../.gitbook/assets/Screenshot 2025-02-04 at 13.59.21.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
 {% hint style="info" %}
 The Logo image should not exeed 1MB in size. Accepted formats: 'jpeg', 'jpg', 'png', 'bmp'. Logo image can be square or round it will be optimized on display.
@@ -30,7 +30,7 @@ Many different types of DIDs exist today, they all support the same basic functi
 
 Dock supports 3 types of DID methods did:key, did:dock and did:polygonid
 
-<table><thead><tr><th width="153">Method</th><th width="184">Storage</th><th>Keys</th></tr></thead><tbody><tr><td>did:key</td><td>Stored on the user’s device</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr><tr><td>did:dock</td><td>Stored on the Dock blockchain</td><td>Multiple key pairs can be attached to this DID type, keys can be rotated as needed</td></tr><tr><td>did:polygonid</td><td>Stored on the Polygon blockchain</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr></tbody></table>
+<table><thead><tr><th width="153">Method</th><th width="184">Storage</th><th>Keys</th></tr></thead><tbody><tr><td>did:key</td><td>Stored on the user’s device</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr><tr><td>did:cheqd</td><td>Stored on the cheqd blockchain</td><td>Multiple key pairs can be attached to this DID type, keys can be rotated as needed</td></tr><tr><td>did:polygonid</td><td>Stored on the Polygon blockchain</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr></tbody></table>
 
 ***
 

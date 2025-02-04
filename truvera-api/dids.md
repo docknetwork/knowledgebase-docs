@@ -56,8 +56,8 @@ When a DID is provided in the path, the API will attempt to resolve that DID int
 
 The API supports resolving many DID methods, some examples are:
 
-* `did:dock:5CEdyZkZnALDdCAp7crTRiaCq6KViprTM6kHUQCD8X6VqGPW` - resolves through the Dock blockchain
-* `did:key:z6MkjRagNiMu91DduvCvgEsqLZDVzrJzFrwahc4tXLt9DoHd` - the public key is embedded in the DID
+* did:cheqd:f48d2ace-4947-4cb7-8550-1cef3d63e651 - resolves through the cheqd blockchain
+* did:key:z6MkjRagNiMu91DduvCvgEsqLZDVzrJzFrwahc4tXLt9DoHd- the public key is embedded in the DID
 
 {% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
