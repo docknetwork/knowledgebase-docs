@@ -127,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"addOnly\": true,\n  \"policy\": [\n    \"did:cheqd:testnet:1c2c6efe-3c4b-4424-9175-f1e1057f2e71\"\n  ],\n  \"type\": \"DockVBAccumulator2022\"\n}",
+					"raw": "{\n  \"addOnly\": false,\n  \"policy\": [\n    \"did:cheqd:testnet:1c2c6efe-3c4b-4424-9175-f1e1057f2e71\"\n  ],\n  \"type\": \"DockVBAccumulator2022\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
