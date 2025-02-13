@@ -1,2 +1,6 @@
-# 💡 Solutions
+---
+icon: lightbulb-exclamation
+---
+
+# Solutions
 

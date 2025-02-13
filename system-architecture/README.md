@@ -1,4 +1,8 @@
-# 📊 System Architecture
+---
+icon: folder-tree
+---
+
+# System architecture
 
 ## Architectural Overview
 

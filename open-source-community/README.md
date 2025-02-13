@@ -1,2 +1,6 @@
-# 👥 Open Source Community
+---
+icon: people-group
+---
+
+# Open source community
 

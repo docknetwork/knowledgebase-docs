@@ -1,4 +1,8 @@
-# 💼 Truvera Workspace
+---
+icon: briefcase
+---
+
+# Truvera Workspace
 
 [Truvera](https://truvera.io/) is a user-friendly, no-code platform that enable organizations to issue, verify, manage, and revoke verifiable credentials efficiently and securely. It can be used as a standalone SaaS platform to issue credential using the UI or as an example of a verifiable credentials platform for more experienced developers planning to build their own solution using our [API](../truvera-api/).
 

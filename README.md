@@ -1,4 +1,8 @@
-# 🌐 Truvera overview
+---
+icon: globe
+---
+
+# Truvera overview
 
 [Dock Labs' digital identity platform Truvera ](https://truvera.io/)enables companies to turn verified ID data into trusted reusable digital ID credentials, instantly verify their authenticity and get paid when they are verified by third parties. It comprises an API, a Web App and an ID wallet. Dock Labs has been a leader in decentralized digital identity technology since 2017 and trusted by organizations in diverse sectors, including healthcare, finance, and education.
 

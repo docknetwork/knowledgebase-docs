@@ -1,4 +1,8 @@
-# 📳 Credential Wallet
+---
+icon: wallet
+---
+
+# Credential wallet
 
 Truvera's Credential Wallet technology provides a secure, flexible solution for managing and sharing verifiable credentials across platforms. With the ability to store tamper-proof credentials, the wallet ensures that users can easily share their information for verification, while maintaining full control over their data.&#x20;
 

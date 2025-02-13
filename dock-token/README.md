@@ -1,4 +1,8 @@
-# 🪙 DOCK Token
+---
+icon: coin
+---
+
+# DOCK token
 
 DOCK is the native token of Dock’s blockchain network that is used to transact, incentivize, and vote in its Verifiable Credentials and Decentralized Identifier ecosystem.
 
