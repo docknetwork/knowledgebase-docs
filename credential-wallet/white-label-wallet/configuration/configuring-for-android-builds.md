@@ -4,7 +4,7 @@ In order to generate the needed files and publish the wallet to the Google Play 
 
 ## Enable the Android build
 
-We allow white labeling both Android and iOS applications, but we suggest doing them one by one to make the PR review easier.
+We allow white labeling both Android and iOS applications.
 
 In the ../build-config.json file set `build-android: true`.
 

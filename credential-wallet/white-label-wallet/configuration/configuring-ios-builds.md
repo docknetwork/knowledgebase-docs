@@ -33,7 +33,7 @@ In the ../build-config.json file set `build-ios: true`.
 <figure><img src="../../../.gitbook/assets/Adding Container.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-&#x20;The identifier can look like iCloud.com.coolwallet
+The identifier can look like iCloud.com.coolwallet
 {% endhint %}
 
 ## Assign the iCloud Container to your App ID
@@ -56,7 +56,7 @@ _Note: any time you make a change to your App ID you need to re-run `fastlane ma
 ## Setup Firebase for your app
 
 1. Sign up for a [Firebase account](https://console.firebase.google.com). _Note: Android and iOS apps can share the same Firebase account_
-2. Register your app as iOS app. _You can find your Bundle Identifier here: https://developer.apple.com/account/resources/identifiers/list_&#x20;
+2. Register your app as iOS app. _You can find your Bundle Identifier here: https://developer.apple.com/account/resources/identifiers/list_
 
 <figure><img src="../../../.gitbook/assets/AppleDeveloperPortal-BundleIdentifier.png" alt=""><figcaption></figcaption></figure>
 
@@ -131,6 +131,7 @@ Set the following values in the ../packaging.config file.
 # MATCH_PASSWORD is the password you entered during the fastlane command
 MATCH_PASSWORD=<use the same password you used running fastlane>
 MATCH_REPOSITORY=<this repository name>
+FASTLANE_TEAM_ID=<UPDATE WITH YOUR TEAM ID>
 IOS_BUNDLE_ID=<generated on https://developer.apple.com/account/resources/identifiers/list>>
 ```
 
