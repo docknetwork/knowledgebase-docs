@@ -6,57 +6,67 @@ When working with proof requests you will often want to request the same informa
 
 ## Create a proof template <a href="#create-proof-request" id="create-proof-request"></a>
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates" method="post" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
 ## Get proof templates <a href="#create-proof-request" id="create-proof-request"></a>
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
 ## Get details of a specific proof template
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
 ## Update a proof template
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="patch" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="patch" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
 ## Get proof requests from template
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}/history" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}/history" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
-
-
-
-## Delete history for proof template
-
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}/history" method="delete" %}
-[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
 ## Delete a proof template
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="delete" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="delete" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
+
+
+
+## Delete history for proof template
+
+This endpoint provides an irreversible deletion of all of proof template's verification history data.&#x20;
+
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}/history" method="delete" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
+{% endopenapi %}
+
+
+
+## Delete a proof template
+
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}" method="delete" %}
+[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
+{% endopenapi %}
 
 
 
