@@ -1,4 +1,4 @@
-# Issue Verifiable Credentials
+# Issue verifiable credentials
 
 Issuing Credentials
 
@@ -16,21 +16,17 @@ Select a pre-made credential schema by clicking on it's name or [Create your own
 
 Select a design or [create a new one](../create-a-design.md) for your credentials. Alternatively, you can proceed without a design.
 
-<figure><img src="https://downloads.intercomcdn.com/i/o/797670108/d8f1948a00a9b8d934c5b070/Screenshot+2023-08-01+at+14.50.40.png" alt=""><figcaption></figcaption></figure>
-
 ### Add recipients <a href="#h_5fb66344c4" id="h_5fb66344c4"></a>
 
 If you have many credentials to issue, you can issue them in bulk. To do this, select **Import Spreadsheet.**
 
-<figure><img src="https://downloads.intercomcdn.com/i/o/797670167/d0dbab0c2d32c4b8fb42882a/Screenshot+2023-08-01+at+14.51.00.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://downloads.intercomcdn.com/i/o/797670167/d0dbab0c2d32c4b8fb42882a/Screenshot+2023-08-01+at+14.51.00.png" alt="" width="375"><figcaption></figcaption></figure>
 
 Download the sample CSV template and fill in the details needed for your credential template. Upload the completed .csv file back to Truvera. [Read how to correctly format the Spreadsheet for CSV upload.](./#formatting-the-csv-file-for-recipient-upload)
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797695179/a28c99740299645f876ce8be/6356f7181e5260685afe7bd9_9-Download+CSV.png" alt=""><figcaption></figcaption></figure>
 
 If you want to add recipients one by one, select Add Manually.
-
-<figure><img src="https://downloads.intercomcdn.com/i/o/797700428/213956fd1fef006ab1f9adba/Screenshot+2023-08-01+at+14.51.00.png" alt=""><figcaption></figcaption></figure>
 
 You can distribute your credentials by email or directly to their wallet through their DID.
 
@@ -39,8 +35,6 @@ To send the credential by email, fill in their email in the **Recipient Email** 
 ![](https://downloads.intercomcdn.com/i/o/797721246/2840f531c2020bf9df3a117c/64744417375359ce3af2c7ea_1-email+distribution.png)
 
 To send the credential directly to the holders wallet fill in their DID in the Subject ID (Recipient ID) field.
-
-![](https://downloads.intercomcdn.com/i/o/797721371/4e40e894e866ea0da0b1d5f0/647443c237f7aab507122ff3_2-DID+distribution.png)
 
 Fill in all other attributes that need to be included in the credential _e.g. Subject name, Credential Title etc._
 

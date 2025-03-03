@@ -42,25 +42,31 @@ Truvera's API has built in credential distribution on issuance, allowing you to 
 
 In order to support revocation the credential must be linked to a [revocation registry](registries.md) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](../developer-documentation/dock-api/index.html.md#schemacredential) body to the `registry.id` value.
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials" method="post" %}
+{% hint style="info" %}
+One time use credentials can be created, but automating the revocation based on tracking the  verification of the credential ID and revoking the credential associated with it.
+{% endhint %}
+
+
+
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ## List Credentials
 
 When you issue a credential with us, persistent or not, we will store certain metadata about the credential to make it easier for you to reference. You can pull a list of credential metadata using this route. To return the content of a persisted credential, you should use the `GET /credentials/{id}` route.
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ## Get credentials metadata and contents
 
 When a credential has been persisted on our systems, you can fetch the credential data by supplying a credential ID and the password used at issuance to encrypt the credential.
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials/{id}" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials/{id}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
@@ -70,9 +76,9 @@ Creates a request to gather certain claims and then issues the holder a credenti
 
 Typically, once the request has been created, you would show the holder the QR URL as an image or deep link for them to scan with a wallet and enter claims. After the holder submits the requested information the credential is automatically issued.
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials/request-claims" method="post" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials/request-claims" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
@@ -80,9 +86,9 @@ Typically, once the request has been created, you would show the holder the QR U
 
 Lists all created request claims that are open (the holders have not submitted the requested information).
 
-{% swagger src="../.gitbook/assets/openapi (1).yaml" path="/credentials/request-claims" method="get" %}
+{% openapi src="../.gitbook/assets/openapi (1).yaml" path="/credentials/request-claims" method="get" %}
 [openapi (1).yaml](<../.gitbook/assets/openapi (1).yaml>)
-{% endswagger %}
+{% endopenapi %}
 
 
 
@@ -90,9 +96,9 @@ Lists all created request claims that are open (the holders have not submitted t
 
 A credential can have its metadata deleted, and if persisted the contents will also be deleted. Deleting a credential will remove any reference to it and its contents from our systems. This action cannot be undone. This action will not revoke or invalidate the credential in any way.
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials/{id}" method="delete" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials/{id}" method="delete" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 

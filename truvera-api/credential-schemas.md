@@ -2,7 +2,7 @@
 
 Schemas are useful when enforcing a specific structure on a collection of data like a Verifiable Credential. Data Verification schemas, for example, are used to verify that the structure and contents of a Verifiable Credential conform to a published schema. On the other hand, Data Encoding schemas are used to map the contents of a Verifiable Credential to an alternative representation format, such as a binary format used in a zero-knowledge proof.
 
-
+Truvera credential schemas are using json schema format and should follow this structure [https://json-schema.org/understanding-json-schema/reference](https://json-schema.org/understanding-json-schema/reference)
 
 ## Create Schema
 
@@ -12,9 +12,9 @@ Schemas are used to describe the structure of credentials, specifically the cred
 
 <table data-full-width="false"><thead><tr><th width="109">Name</th><th width="82">In</th><th width="130">Type</th><th width="139">Required</th><th>Description</th></tr></thead><tbody><tr><td>body</td><td>body</td><td>object</td><td>true</td><td>JSON-schema.</td></tr></tbody></table>
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/schemas" method="post" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/schemas" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ## List Schemas
 
@@ -24,9 +24,9 @@ Return a list of all schemas created by the authenticated user.
 
 <table data-full-width="false"><thead><tr><th width="121">Name</th><th width="102">In</th><th width="109">Type</th><th width="124">Required</th><th>Description</th></tr></thead><tbody><tr><td>offset</td><td>query</td><td>integer</td><td>false</td><td>How many items to offset by for pagination</td></tr><tr><td>limit</td><td>query</td><td>integer</td><td>false</td><td>How many items to return at one time (max 64)</td></tr></tbody></table>
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/schemas" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/schemas" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
@@ -38,15 +38,15 @@ Reading a Schema from the blockchain can easily be achieved by using the `get` m
 
 <table data-full-width="false"><thead><tr><th width="132">Name</th><th width="100">In</th><th width="111">Type</th><th width="113">Required</th><th>Description</th></tr></thead><tbody><tr><td>schemaId</td><td>path</td><td>String</td><td>true</td><td>A URL encoded schema id.</td></tr></tbody></table>
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/schemas/{schemaId}" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/schemas/{schemaId}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ## Delete Schema
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/schemas/{schemaId}" method="delete" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/schemas/{schemaId}" method="delete" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
