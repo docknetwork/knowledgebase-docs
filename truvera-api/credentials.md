@@ -46,7 +46,9 @@ In order to support revocation the credential must be linked to a [revocation re
 One time use credentials can be created, but automating the revocation based on tracking the  verification of the credential ID and revoking the credential associated with it.
 {% endhint %}
 
+#### Attaching files&#x20;
 
+At the moment it is not possible to add a file to the credential itself. If a credential has to have a file associated with it, the file will need to be placed in public storage and the link to that location and a hash of the content should be added to the attributes of the credential.&#x20;
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/credentials" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
