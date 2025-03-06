@@ -38,6 +38,14 @@ For now, only one policy is supported which is that each registry is owned by a 
 
 We use [VB and KB universal types](https://github.com/docknetwork/crypto/tree/main/vb_accumulator) of accumulators for anonymous credential revocation. They have different properties, but both are bilinear map pairing based accumulators.
 
+Advantages over Status List 2021:
+
+- *Superior Cryptographic Verification:* Accumulators provide strong cryptographic guarantees of membership, unlike status lists which rely on simple lookups that lack the same mathematical security properties.
+- *Enhanced Privacy Through Zero-Knowledge:* Unlike status lists (such as W3C Status List 2021) which require disclosure of revocation IDs, accumulators enable proving non-revocation without disclosing which particular credential ID is being verified, allowing for anonymous credential revocation.
+- *Consistently Efficient Storage:* While status lists grow linearly with each new element added, accumulators maintain constant-size representations regardless of how many credentials are included, ensuring storage requirements remain minimal even at massive scale.
+- *Comprehensive Privacy Protection:* Accumulators offer fundamentally stronger privacy preservation than status lists, making them substantially better suited for applications where confidentiality of both membership and the specific credentials being verified is critical, particularly for anonymous credential systems.
+- *Witness-Based Verification:* Accumulators utilize a witness-based approach that allows holders to prove non-revocation without revealing their credential identifier, unlike status lists which require direct disclosure of the identifier being checked.
+
 #### Key terms
 
 * Credential identifier
