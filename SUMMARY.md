@@ -130,6 +130,7 @@
     * [Migration terms and conditions](dock-token/dock-token-migration/migration-terms-and-conditions.md)
     * [Adding account to the Dock browser wallet](dock-token/dock-token-migration/adding-account-to-the-dock-browser-wallet.md)
     * [Information for $CHEQ token holders](dock-token/dock-token-migration/information-for-usdcheq-token-holders.md)
+    * [Connecting Polkadot browser extension](dock-token/dock-token-migration/connecting-polkadot-browser-extension.md)
   * [Token Utility](dock-token/token-utility.md)
   * [Emission Rewards](dock-token/emission-rewards.md)
   * [How to Buy DOCK](dock-token/how-to-buy-dock.md)
