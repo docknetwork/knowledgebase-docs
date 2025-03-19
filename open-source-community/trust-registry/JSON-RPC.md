@@ -2,27 +2,27 @@
 
 ## Methods
 
-[trustRegistry_schemaMetadata](#method-trustregistry_schemametadata)
+[trustRegistry\_schemaMetadata](JSON-RPC.md#method-trustregistry_schemametadata)
 
-[trustRegistry_schemaIssuers](#method-trustregistry_schemaissuers)
+[trustRegistry\_schemaIssuers](JSON-RPC.md#method-trustregistry_schemaissuers)
 
-[trustRegistry_schemaVerifiers](#method-trustregistry_schemaverifiers)
+[trustRegistry\_schemaVerifiers](JSON-RPC.md#method-trustregistry_schemaverifiers)
 
-[trustRegistry_schemaMetadataInRegistry](#method-trustregistry_schemametadatainregistry)
+[trustRegistry\_schemaMetadataInRegistry](JSON-RPC.md#method-trustregistry_schemametadatainregistry)
 
-[trustRegistry_schemaIssuersInRegistry](#method-trustregistry_schemaissuersinregistry)
+[trustRegistry\_schemaIssuersInRegistry](JSON-RPC.md#method-trustregistry_schemaissuersinregistry)
 
-[trustRegistry_schemaVerifiersInRegistry](#method-trustregistry_schemaverifiersinregistry)
+[trustRegistry\_schemaVerifiersInRegistry](JSON-RPC.md#method-trustregistry_schemaverifiersinregistry)
 
-[trustRegistry_allRegistrySchemaMetadata](#method-trustregistry_allregistryschemaverifiers)
+[trustRegistry\_allRegistrySchemaMetadata](JSON-RPC.md#method-trustregistry_allregistryschemaverifiers)
 
-[trustRegistry_allRegistrySchemaIssuers](#method-trustregistry_allregistryschemaissuers)
+[trustRegistry\_allRegistrySchemaIssuers](JSON-RPC.md#method-trustregistry_allregistryschemaissuers)
 
-[trustRegistry_allRegistrySchemaVerifiers](#method-trustregistry_allregistryschemaverifiers)
+[trustRegistry\_allRegistrySchemaVerifiers](JSON-RPC.md#method-trustregistry_allregistryschemaverifiers)
 
-[trustRegistry_registriesInfoBy](#method-trustregistry_registriesinfoby)
+[trustRegistry\_registriesInfoBy](JSON-RPC.md#method-trustregistry_registriesinfoby)
 
-[trustRegistry_registrySchemaMetadataBy](#method-trustregistry_registryschemametadataby)
+[trustRegistry\_registrySchemaMetadataBy](JSON-RPC.md#method-trustregistry_registryschemametadataby)
 
 ## Method: `trustRegistry_schemaMetadata`
 
@@ -32,15 +32,15 @@ This method retrieves metadata for a trust registry schema identified by the pro
 
 ### Parameters
 
-- `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve metadata.
-- `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
+* `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve metadata.
+* `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
 ### Return Type
 
-`{ TrustRegistryId, AggregatedTrustRegistrySchemaMetadata }`
-Returns a dictionary where each key is a TrustRegistryId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema.
+`{ TrustRegistryId, AggregatedTrustRegistrySchemaMetadata }` Returns a dictionary where each key is a TrustRegistryId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -51,7 +51,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 {
   "0x46da29a5412d39c98f956ab6ae289311eec782d9f426110f41945bc64fe2c96c": {
@@ -142,15 +144,15 @@ This method retrieves information about the issuers of a trust registry schema i
 
 ### Parameters
 
-- `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve issuer information.
-- `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
+* `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve issuer information.
+* `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
 ### Return Type
 
-`{ TrustRegistryId, AggregatedTrustRegistrySchemaIssuers<T::T> }`
-Returns a dictionary where each key is a TrustRegistryId and the corresponding value is AggregatedTrustRegistrySchemaIssuers associated with that schema.
+`{ TrustRegistryId, AggregatedTrustRegistrySchemaIssuers<T::T> }` Returns a dictionary where each key is a TrustRegistryId and the corresponding value is AggregatedTrustRegistrySchemaIssuers associated with that schema.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -161,7 +163,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 {
   "0x46da29a5412d39c98f956ab6ae289311eec782d9f426110f41945bc64fe2c96c": [
@@ -227,15 +231,15 @@ This method retrieves information about the verifiers of a trust registry schema
 
 ### Parameters
 
-- `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve verifier information.
-- `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
+* `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve verifier information.
+* `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
 ### Return Type
 
-`{ TrustRegistryId, AggregatedTrustRegistrySchemaIssuers<T::T> }`
-Returns a dictionary where each key is a TrustRegistryId and the corresponding value is TrustRegistrySchemaVerifiers associated with that schema.
+`{ TrustRegistryId, AggregatedTrustRegistrySchemaIssuers<T::T> }` Returns a dictionary where each key is a TrustRegistryId and the corresponding value is TrustRegistrySchemaVerifiers associated with that schema.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -246,7 +250,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 {
   "0x46da29a5412d39c98f956ab6ae289311eec782d9f426110f41945bc64fe2c96c": [
@@ -281,16 +287,16 @@ This method retrieves metadata for a trust registry schema identified by the pro
 
 ### Parameters
 
-- `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve metadata.
-- `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema metadata.
-- `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
+* `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve metadata.
+* `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema metadata.
+* `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
 ### Return Type
 
-`Option<AggregatedTrustRegistrySchemaMetadata>`
-If the schema metadata is found within the specified registry, it returns AggregatedTrustRegistrySchemaMetadata; otherwise, it returns null.
+`Option<AggregatedTrustRegistrySchemaMetadata>` If the schema metadata is found within the specified registry, it returns AggregatedTrustRegistrySchemaMetadata; otherwise, it returns null.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -302,7 +308,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 {
   "issuers": [
@@ -350,16 +358,16 @@ This method retrieves information about the issuers of a trust registry schema i
 
 ### Parameters
 
-- `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve issuer information.
-- `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema issuers.
-- `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
+* `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve issuer information.
+* `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema issuers.
+* `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
 ### Return Type
 
-`Option<AggregatedTrustRegistrySchemaIssuers>`
-If the schema issuers are found within the specified registry, it returns AggregatedTrustRegistrySchemaIssuers; otherwise, it returns null.
+`Option<AggregatedTrustRegistrySchemaIssuers>` If the schema issuers are found within the specified registry, it returns AggregatedTrustRegistrySchemaIssuers; otherwise, it returns null.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -371,7 +379,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 [
   [
@@ -409,16 +419,16 @@ This method retrieves information about the verifiers of a trust registry schema
 
 ### Parameters
 
-- `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve issuer information.
-- `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema verifiers.
-- `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
+* `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve issuer information.
+* `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema verifiers.
+* `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
 ### Return Type
 
-`Option<TrustRegistrySchemaVerifiers>`
-If the schema issuers are found within the specified registry, it returns `TrustRegistrySchemaVerifiers`; otherwise, it returns null.
+`Option<TrustRegistrySchemaVerifiers>` If the schema issuers are found within the specified registry, it returns `TrustRegistrySchemaVerifiers`; otherwise, it returns null.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -430,7 +440,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 [
   {
@@ -450,15 +462,15 @@ This method retrieves metadata for all trust registry schemas within a specific 
 
 ### Parameters
 
-- `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
-- `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
+* `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
+* `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
 ### Return Type
 
-`{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaMetadata }`
-Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema within the specified registry.
+`{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaMetadata }` Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema within the specified registry.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -469,7 +481,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 {
   "0x9ef236a84164f99a80e832d6e3c212908f59ed0baa069898205db3762751235c": {
@@ -536,15 +550,15 @@ This method retrieves information about the issuers of all trust registry schema
 
 ### Parameters
 
-- `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema issuers.
-- `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
+* `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema issuers.
+* `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
 ### Return Type
 
-`{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaIssuers }`
-Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaIssuers associated with that schema within the specified registry.
+`{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaIssuers }` Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaIssuers associated with that schema within the specified registry.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -555,7 +569,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 {
   "0x9ef236a84164f99a80e832d6e3c212908f59ed0baa069898205db3762751235c": [
@@ -609,15 +625,15 @@ This method retrieves information about the verifiers of all trust registry sche
 
 ### Parameters
 
-- `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema verifiers.
-- `at`: `Option<BlockHash>` - Optional block hash to query the verifier information at a specific point in the blockchain.
+* `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema verifiers.
+* `at`: `Option<BlockHash>` - Optional block hash to query the verifier information at a specific point in the blockchain.
 
 ### Return Type
 
-`{ TrustRegistrySchemaId => TrustRegistrySchemaVerifiers }`
-Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is TrustRegistrySchemaVerifiers associated with that schema within the specified registry.
+`{ TrustRegistrySchemaId => TrustRegistrySchemaVerifiers }` Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is TrustRegistrySchemaVerifiers associated with that schema within the specified registry.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -628,7 +644,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 {
   "0x9ef236a84164f99a80e832d6e3c212908f59ed0baa069898205db3762751235c": [
@@ -651,15 +669,15 @@ This method retrieves information about trust registries based on specified crit
 
 ### Parameters
 
-- `by`: `QueryTrustRegistriesBy` - Specifies the criteria by which to query trust registries.
-- `at`: `Option<BlockHash>` - Optional block hash to query the information at a specific point in the blockchain.
+* `by`: `QueryTrustRegistriesBy` - Specifies the criteria by which to query trust registries.
+* `at`: `Option<BlockHash>` - Optional block hash to query the information at a specific point in the blockchain.
 
 ### Return Type
 
-`{ TrustRegistryId, TrustRegistryInfo }`
-Returns a dictionary where each key is a TrustRegistryId and the corresponding value is TrustRegistryInfo associated with that registry.
+`{ TrustRegistryId, TrustRegistryInfo }` Returns a dictionary where each key is a TrustRegistryId and the corresponding value is TrustRegistryInfo associated with that registry.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -670,7 +688,9 @@ curl -X POST -H "Content-Type: application/json" -d '{
     "id": 1
 }' http://localhost:9933
 ```
+
 ### Example response
+
 ```jsx
 {
   "0x12a6a092361a6b419f92a6a9625597c7938cab98963d659f3a9fb31f2ae7b8f1": {
@@ -726,16 +746,16 @@ This method retrieves metadata for trust registry schemas based on specified par
 
 ### Parameters
 
-- `by`: `QueryTrustRegistryBy` - Specifies the criteria by which to query the trust registry schemas.
-- `reg_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
-- `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
+* `by`: `QueryTrustRegistryBy` - Specifies the criteria by which to query the trust registry schemas.
+* `reg_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
+* `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
 ### Return Type
 
-`{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaMetadata }`
-Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema.
+`{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaMetadata }` Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -749,6 +769,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 ```
 
 ### Example request
+
 ```jsx
 {
   "0x9ef236a84164f99a80e832d6e3c212908f59ed0baa069898205db3762751235c": {
@@ -798,15 +819,15 @@ This method retrieves ids of trust registries based on specified parameters, and
 
 ### Parameters
 
-- `by`: `QueryTrustRegistriesBy` - Specifies the criteria by which to query the trust registry identifiers.
-- `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
+* `by`: `QueryTrustRegistriesBy` - Specifies the criteria by which to query the trust registry identifiers.
+* `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
 ### Return Type
 
-`[TrustRegistryId]`
-Returns an array where each value is a TrustRegistrySchemaId.
+`[TrustRegistryId]` Returns an array where each value is a TrustRegistrySchemaId.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -819,6 +840,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 ```
 
 ### Example response
+
 ```jsx
 [
   "0x12a6a092361a6b419f92a6a9625597c7938cab98963d659f3a9fb31f2ae7b8f1",
@@ -838,16 +860,16 @@ This method retrieves ids for trust registry schemas based on specified paramete
 
 ### Parameters
 
-- `by`: `QueryTrustRegistryBy` - Specifies the criteria by which to query the trust registry schemas.
-- `reg_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
-- `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
+* `by`: `QueryTrustRegistryBy` - Specifies the criteria by which to query the trust registry schemas.
+* `reg_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
+* `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
 ### Return Type
 
-`[TrustRegistrySchemaId]`
-Returns an array where each value is a TrustRegistrySchemaId.
+`[TrustRegistrySchemaId]` Returns an array where each value is a TrustRegistrySchemaId.
 
 ### Example request
+
 ```bash
 curl -X POST -H "Content-Type: application/json" -d '{
     "jsonrpc": "2.0",
@@ -861,6 +883,7 @@ curl -X POST -H "Content-Type: application/json" -d '{
 ```
 
 ### Example response
+
 ```jsx
 [
   "0x9ef236a84164f99a80e832d6e3c212908f59ed0baa069898205db3762751235c"

@@ -1,8 +1,12 @@
-# Dock Token Migration
+---
+hidden: true
+---
+
+# Dock token migration
 
 The Dock network will be migrating its functionality and all tokens to the cheqd blockchain. This migration will allow Dock to leverage cheqd’s advanced infrastructure and bring enhanced value to both ecosystems. Existing $DOCK tokens will be converted into $CHEQ tokens, ensuring a smooth transition for all token holders. Official announcements is [available here](https://www.dock.io/post/dock-and-cheqd-form-alliance-to-accelerate-global-adoption-of-decentralized-id).
 
-[Migration Tems and Conditions can be found here](dock-token-migration/migration-terms-and-conditions.md).
+[Migration Tems and Conditions can be found here](../migration-terms-and-conditions.md).
 
 ## Instructions for $DOCK token holders
 
@@ -14,7 +18,7 @@ If you have migrated your tokens to the Keplr wallet which is no longer suported
 
 Migration can only be done from the [Dock browser-based wallet](https://fe.dock.io/#/migration).&#x20;
 
-Token holders that use Dock Wallet App or Nova Wallet can add their accounts to the browser wallet by [following these steps.](dock-token-migration/adding-account-to-the-dock-browser-wallet.md)
+Token holders that use Dock Wallet App or Nova Wallet can add their accounts to the browser wallet by [following these steps.](adding-account-to-the-dock-browser-wallet.md)
 
 {% hint style="info" %}
 KuCoin will support the migration of DOCK tokens to CHEQ. If you’re holding your DOCK tokens on KuCoin, you don’t need to do a thing—KuCoin will handle the migration for you. [Learn more](https://www.kucoin.com/announcement/en-kucoin-will-support-the-token-merger-of-dock-and-cheqd-20241122?utm_source=TwitterContent)\

@@ -1,4 +1,8 @@
-# How to Store DOCK
+---
+hidden: true
+---
+
+# How to store DOCK
 
 DOCK token is supported by several wallets listed below.
 
@@ -24,7 +28,7 @@ Consider storing your account in a signer such as a browser extension, hardware 
 
 Go to [https://fe.dock.io/#/accounts](https://fe.dock.io/#/accounts) and check the top left corner that you are on Dock’s mainnet. If not, then click on the network name, click on **Live Networks > Dock**, and click **Switch**.
 
-<figure><img src="../.gitbook/assets/1 (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/1 (5).png" alt=""><figcaption></figcaption></figure>
 
 ### **To create a new account**
 
@@ -32,13 +36,13 @@ Click on **+ Add Account** and complete the name and password fields, then click
 
 **Important:** save the mnemonic seed in a safe, offline place. This is required to restore access to your account.
 
-<figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
 ### **To view your Dock token address**
 
 Go to the Accounts page and click on the name of the account. Your token address will appear on the right side of the page.
 
-<figure><img src="../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/3.png" alt=""><figcaption></figcaption></figure>
 
 ## Polkadot Browser Extension
 
@@ -49,15 +53,15 @@ Polkadot provides browser extension that manages accounts and allows signing of 
 
 **Important:** save the mnemonic seed in a safe, offline place. This is required to restore access to your account.
 
-<figure><img src="../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/8.png" alt=""><figcaption></figcaption></figure>
 
 3\. Next click on the three dots next to your account and select Dock PoS Mainnet in the dropdown.
 
-<figure><img src="../.gitbook/assets/extension.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/extension.png" alt=""><figcaption></figcaption></figure>
 
 4\. Once setup is complete, you will be able to view your account address in the browser extension app.
 
-<figure><img src="../.gitbook/assets/2021-08-17_14-39-34.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/2021-08-17_14-39-34.png" alt=""><figcaption></figcaption></figure>
 
 ## Ledger Nano S Hardware Wallet
 

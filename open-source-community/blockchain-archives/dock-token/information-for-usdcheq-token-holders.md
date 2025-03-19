@@ -1,5 +1,6 @@
 ---
 description: This page has helpful information for new $CHEQ token holders.
+hidden: true
 ---
 
 # Information for $CHEQ token holders
