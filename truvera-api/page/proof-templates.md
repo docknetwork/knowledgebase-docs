@@ -38,6 +38,10 @@ When working with proof requests you will often want to request the same informa
 
 ## Get proof requests from template
 
+{% hint style="info" %}
+Use the Verified  parameter when needing to get only those verifications that were succsessful.&#x20;
+{% endhint %}
+
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/proof-templates/{id}/history" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
