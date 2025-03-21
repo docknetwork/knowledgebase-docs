@@ -28,7 +28,7 @@
   * [Custom branded distribution emails](workspace/custom-branded-distribution-emails.md)
   * [Truvera Workspace release notes](workspace/truvera-workspace-release-notes/README.md)
     * [2025 Release notes](workspace/truvera-workspace-release-notes/2025-release-notes/README.md)
-      * [Release notes January 2025](workspace/truvera-workspace-release-notes/2025-release-notes/release-notes-january-2025.md)
+      * [Release notes Q1 2025](workspace/truvera-workspace-release-notes/2025-release-notes/release-notes-january-2025.md)
     * [2024 Release notes](workspace/truvera-workspace-release-notes/2024-release-notes/README.md)
       * [Release Notes February 2024](workspace/truvera-workspace-release-notes/2024-release-notes/release-notes-v1.24.0-feb-22-2024.md)
       * [Release Notes March 2024](workspace/truvera-workspace-release-notes/2024-release-notes/release-notes-v1.26.1-mar-22-2024.md)
