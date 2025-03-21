@@ -1,3 +1,7 @@
+---
+hidden: true
+---
+
 # Trust Registry
 
 Verifiable credentials have an advantage over physical documents, because they cannot be forged. However, there is still a fraud risk if a credential is issued by someone that has no authority to do so.
