@@ -1,4 +1,4 @@
-# Verify Credentials
+# Verify credentials
 
 Verification process
 
@@ -8,23 +8,27 @@ In a typical verification process, there are three main parties:
 2. **Holder:** Person or organization that holds the credential (e.g. degree, professional certificate, or identity document)
 3. **Verifier:** Party that checks that the credential is valid and authentic
 
-<figure><img src="https://downloads.intercomcdn.com/i/o/801931889/c9976b09a48fe6e88920e78a/631f7526f09bcf3b4b2e6209_3-certificate+fraud-issuer%2C+holder%2C+verifier.jpeg" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://downloads.intercomcdn.com/i/o/801931889/c9976b09a48fe6e88920e78a/631f7526f09bcf3b4b2e6209_3-certificate+fraud-issuer%2C+holder%2C+verifier.jpeg" alt="" width="563"><figcaption></figcaption></figure>
 
 ## Steps for the Verifier <a href="#h_4638f9252a" id="h_4638f9252a"></a>
 
-Click on Verification in the left menu and select Create verification template
+Click on Verification in the left menu and select Create verification template or choose a premade Indentify Verification or Drivers License Verification template.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 15.51.09.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2025-03-21 at 16.31.37.png" alt=""><figcaption></figcaption></figure>
 
-First, type in the **Template Title** and **Template Purpose**, which the holder will be able to see.
 
-Optionally, you can choose a **Verifier DID** which will be shown to the holder so that they can verify who you are.
+
+Add the **Template Title** and **Template Purpose**, which the holder will be able to see. Optionally, you can choose a **Verifier DID** which will be shown to the holder so that they know who is verifying their credential.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-01-19 at 15.00.55.png" alt=""><figcaption></figcaption></figure>
 
-The verifier can choose which credential details the holder is required to share  for the credential to be accepted.  Each attribute will be either required for verification and if not present will return an invalid verification or optional which means that the holder can choose if they want to share that information or not.
+When creating a template you can choose a specific credential schema and attributes included in that schema.
 
-When creating a template you can choose a specific schema and those attributes will be available for selection in the drop down boxes.
+If the **Optional** toggle is selected the holder can decide if they want to share that information or not. If the toggle is turned off the holder will have to share that information or the verification will fail.
+
+{% hint style="info" %}
+The information needs to present in the credential if the attribute is not marked as optional. E.g. if Expiration Date is not marked as Optional it will have to be present in a credential and any credential without an expiry date will fail the verification.
+{% endhint %}
 
 You can combine verifying multiple credentials in one verification template by adding a credential and selecting schema and attributes.
 
@@ -72,6 +76,8 @@ When the credentials are valid it will show up as “Verified” under Status. T
 {% hint style="warning" %}
 Verification request templates can only be created in Truvera Workspace, not the wallet. These templates can be important into the wallet from Truvera Workspace for wallet-to-wallet verification.
 {% endhint %}
+
+In order to reduce the data stored on the system we recommend deleting the verification template data after it is not needed anymore. Read more about [data retention policies](team-management/data-retention-policies.md).
 
 ## Wallet-to-Wallet Verification <a href="#h_9833d67c15" id="h_9833d67c15"></a>
 

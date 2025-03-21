@@ -10,7 +10,7 @@ To create your organization profiles (DIDs) , select Organization Profiles on th
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.36.38.png" alt=""><figcaption></figcaption></figure>
 
-Fill in the Public Name, add the Logo and Public Description you can leave the DID Type to the default setting “dock” (learn more about different [DID Types](create-an-organization-profile-did.md#choosing-a-did-type)). Then select **Create Organization Profile**.
+Fill in the Public Name, add the Logo and Public Description you can leave the DID Type to the default setting “cheqd” (learn more about different [DID Types](create-an-organization-profile-did.md#choosing-a-did-type)). Then select **Create Organization Profile**.
 
 <div align="left"><figure><img src="../.gitbook/assets/Screenshot 2025-02-04 at 13.59.21.png" alt="" width="188"><figcaption></figcaption></figure></div>
 
@@ -18,7 +18,7 @@ Fill in the Public Name, add the Logo and Public Description you can leave the D
 The Logo image should not exeed 1MB in size. Accepted formats: 'jpeg', 'jpg', 'png', 'bmp'. Logo image can be square or round it will be optimized on display.
 {% endhint %}
 
-All of your profiles (DIDs) will be listed on this page.&#x20;
+All of your Organization profiles (DIDs) will be listed on this page.&#x20;
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-04-18 at 16.33.22.png" alt=""><figcaption></figcaption></figure>
 
@@ -28,7 +28,7 @@ All of your profiles (DIDs) will be listed on this page.&#x20;
 
 Many different types of DIDs exist today, they all support the same basic functionality, but they differ in how a DID is created or where and how the DID document is stored and retrieved.These different types of DIDs are known as DID methods. The second part of the DID identifier format—between the first and second colons—is called the DID method name.
 
-Dock supports 3 types of DID methods did:key, did:dock and did:polygonid
+Truvera supports 3 types of DID methods did:key, did:cheqd and did:polygonid
 
 <table><thead><tr><th width="153">Method</th><th width="184">Storage</th><th>Keys</th></tr></thead><tbody><tr><td>did:key</td><td>Stored on the user’s device</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr><tr><td>did:cheqd</td><td>Stored on the cheqd blockchain</td><td>Multiple key pairs can be attached to this DID type, keys can be rotated as needed</td></tr><tr><td>did:polygonid</td><td>Stored on the Polygon blockchain</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr></tbody></table>
 
@@ -39,8 +39,6 @@ Dock supports 3 types of DID methods did:key, did:dock and did:polygonid
 Click on Organization Profiles in the menu, click on the three dots of the DID you want to edit, and select **Update DID**.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.39.13.png" alt=""><figcaption></figcaption></figure>
-
-
 
 Update the details and select **Update DID**.
 

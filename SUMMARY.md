@@ -17,6 +17,7 @@
     * [Inviting a team member](workspace/team-management/inviting-a-team-member.md)
     * [Removing a team member](workspace/team-management/removing-a-team-member.md)
     * [Changing team member roles](workspace/team-management/changing-team-member-roles.md)
+    * [Data retention policies](workspace/team-management/data-retention-policies.md)
   * [Revoking credentials](workspace/revoking-credentials.md)
   * [Ecosystem Tools](workspace/ecosystem-tools/README.md)
     * [Ecosystem set up](workspace/ecosystem-tools/ecosystem-set-up.md)
