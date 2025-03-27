@@ -4,8 +4,14 @@ icon: coin
 
 # DOCK token
 
-DOCK  was the native token of Dock’s blockchain network. The Dock network functionality and all tokens were migrated to the cheqd blockchain.
+Thank you for your interest in the Dock token. The Dock network has migrated its functionality and all tokens to the cheqd blockchain. The official migration window ended on March 15, 2025. This strategic move allows us to leverage enhanced capabilities and continue delivering innovative blockchain solutions.
 
-The $DOCK to $CHEQ migration officially closed on March 15th 2025 at 12:01 AM UTC.
+For more information on the merger please read our detailed [blog post. ](https://www.dock.io/post/dock-and-cheqd-form-alliance-to-accelerate-global-adoption-of-decentralized-id)
 
-If you have any questions about the token please reach out to the cheqd team on [Telegram](https://t.me/cheqd).
+### Get in Touch with cheqd
+
+We encourage you to stay connected with the cheqd community:
+
+Website: https://cheqd.io/
+
+Telegram Channel: https://t.me/cheqd
