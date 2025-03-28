@@ -11,3 +11,5 @@ OID4VCs consists of three use cases with OID protocols:
 Though it’s a distinct protocol, it uses patterns from [OpenID Connect Core](https://openid.net/specs/openid-connect-core-1_0-final.html). Credential issuance leverages the authorization code flow from oAuth for authenticating the user sufficient to authorize credential issuance and introduces a new “credential issuance” endpoint.&#x20;
 
 The OpenID4VC is a widely respected standard, that has a large community with lots of contributors. By supporting OpenID4VC Truvera allows customers to issue credentials into various digital wallets. It shows our strong commitment to interoperability and gives them the flexibility needed to build their products.
+
+[More information on OpenID4VC ](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html)
