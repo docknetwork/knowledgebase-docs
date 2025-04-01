@@ -33,7 +33,7 @@ Dock Supports the following open standards:
 
 Truvera supports following signature formats
 
-<table><thead><tr><th width="186">Credential type</th><th width="466">Signature formats</th></tr></thead><tbody><tr><td>Non-anonymous</td><td>ed25519 </td></tr><tr><td>Anonymous</td><td><p>BBS2023</p><p>PS sigs</p></td></tr><tr><td>Anonymous Ecosystem-Bound</td><td>BBDT16 as an algebraic MAC to build keyed anonymous credentials</td></tr></tbody></table>
+<table><thead><tr><th width="186">Credential variant</th><th width="466">Signature formats</th></tr></thead><tbody><tr><td>Standard signature</td><td>ed25519 </td></tr><tr><td>Anonymous</td><td>dockbbs23</td></tr><tr><td>Anonymous Ecosystem-Bound</td><td>BBDT16 as an algebraic MAC to build keyed anonymous credentials</td></tr><tr><td>EUDI</td><td>SD-JWT-VC</td></tr></tbody></table>
 
 ### Encryption
 
