@@ -1,4 +1,4 @@
-# Create a Schema
+# Create a schema
 
 ### Set up a Credential Schema <a href="#h_0bf8dff5dc" id="h_0bf8dff5dc"></a>
 
@@ -51,6 +51,10 @@ The **Issue Date** and **Expiration Date** are default attributes that will appe
 ### Add Credential Attributes by importing an existing credential schema <a href="#h_b163952b0c" id="h_b163952b0c"></a>
 
 You can import an existing credential schema into Truvera.
+
+{% hint style="success" %}
+This feature is very useful when needing to move schemas from test mode into production.
+{% endhint %}
 
 Paste the schema URL or JSON in the Schema Import pop up and select Import Schema
 
