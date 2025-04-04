@@ -1,5 +1,33 @@
 # Release notes Q1 2025
 
+## v1.60.0 April 3
+
+### Updates and new features
+
+DCKA-4779 Upon issuance of the credential there will be no download of the issued credential, credential needs to be distributed via email or DID during issuance or if persisted can be downloaded from the credential view.&#x20;
+
+DCKA-4802 Update API OID4VCI flows to support latest spec requirements
+
+### Bug fixes&#x20;
+
+DCKA-3089  Fixed an error where the verification template attribute field would change value if edited.&#x20;
+
+## v1.59.0 March 27
+
+### Updates and new features
+
+DCKA-2413 The auto generation of “subject reference ID” from the ID or Name to make it easy to for a human to identify credentials in Workspace is optional.
+
+## v1.58.0 March 24
+
+### Updates and new features
+
+DCKA-3043 Implemented SD-JWT support in the API for issuance and verification. Credentials can be distributed via OpenID and via DIDComm.
+
+DCKA-3048 Improved the credential variant selector SD-JWT variant in Truvera Workspace
+
+DCKA-4776 Move "plan and billing" item from left menu to the profile settings menu.
+
 ## v1.57.0 March 13
 
 ### Updates and new features
