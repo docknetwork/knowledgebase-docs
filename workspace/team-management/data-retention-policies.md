@@ -9,5 +9,11 @@ Every team can customize their data retention policies based on specific require
 
 These granular settings give you complete control over your data lifecycle while maintaining compliance with privacy regulations.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2025-03-21 at 19.10.51.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2025-04-07 at 14.22.52.png" alt=""><figcaption></figcaption></figure>
+
+There is an option to store subject reference ID, that shows up on the credential view table and can be useful for filtering the credentials. The storing of it is optional as it may contain PII and is not suitable for all use cases.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-04-07 at 14.27.12.png" alt=""><figcaption></figcaption></figure>
+
+
 

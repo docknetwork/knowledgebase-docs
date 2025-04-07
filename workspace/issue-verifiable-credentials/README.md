@@ -64,24 +64,34 @@ If you need the credential to expire, turn on the expiration toggle and enter th
 
 ![](https://downloads.intercomcdn.com/i/o/797671954/0a79de9246c232395c2825c1/Screenshot+2023-08-01+at+14.52.52.png)
 
-### Choose credential settings <a href="#h_e26a4957df" id="h_e26a4957df"></a>
+### Choose credential options  <a href="#h_e26a4957df" id="h_e26a4957df"></a>
 
-After you have added your credential recipients you will be able to select the credential settings. First select which Organization Profile (DID) you want to use to issue the credentials.
+After you have added your credential recipients you will be able to select the credential settings. You have the options to:
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-12-19 at 14.47.24.png" alt=""><figcaption></figcaption></figure>
-
-
-
-You have the options to:
-
-* **Persist credential:** This option will encrypt the credential by providing a password to access it and store it on Dock’s servers. The credential can be accessed and verified by a URL or QR Code. The recipient can scan the QR Code to import the credential into a wallet app. The credential can be deleted from Dock’s cloud whenever you decide.
-* **Generate PDF:** If you choose to persist the credentials, the PDFs will contain a QR code the recipient can scan to view and store their credential in their phone wallet app.
-* **Credential revocation:** By choosing this you leave an option for the credential to be revoked to invalid state at any time. If you leave this option unchecked, the credential can never be revoked and will always be verifiable.
-* **Zero-Knowledge Proof:** Selecting this option will issue your credential with a Dock BBS2023 signing scheme. This allows credential holders to share specific data rather than show the whole credential to enhance their privacy. [It must be enabled for paid verifications.](../monetizing-credentials/setting-up-verification-fees.md)
+**Persist credential:** This option will encrypt the credential by providing a password to access it and store it on Truvera's servers. The credential can be accessed and verified by a URL or QR Code. The recipient can scan the QR Code to import the credential into a wallet app. The credential can be deleted from Truvera's cloud whenever you decide.
 
 {% hint style="info" %}
-Persisting is a good option for issuers if they want to securely store the credentials as a backup. It encrypts the credentials using Libsodium crypto secretbox Salsa20/Poly1305 algorithm and stores them on our servers that are located in the US and are powered by Amazon Web Services (AWS). Because the credential information is encrypted, Dock can’t access the information to ensure data privacy and security. ​
+Persisting is a good option for issuers if they want to securely store the credentials as a backup. It encrypts the credentials using Libsodium crypto secretbox Salsa20/Poly1305 algorithm and stores them on our servers that are located in the US and are powered by Amazon Web Services (AWS). Because the credential information is encrypted, Truvera can’t access the information to ensure data privacy and security. ​
 {% endhint %}
+
+**Credential revocation:** By selecting Enable Revocation, you leave an option for the credential to be revoked to invalid state at any time. If you leave this option unchecked, the credential can never be revoked and will always be verifiable.
+
+Select which [Organization Profile (DID)](../create-an-organization-profile-did.md) you want to use to issue the credentials.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-04-07 at 13.50.43.png" alt=""><figcaption></figcaption></figure>
+
+### Choose credential variant <a href="#h_e26a4957df" id="h_e26a4957df"></a>
+
+Truvera offers a choice of 3 different credential variants that have distinct features and are best fit for different use cases.
+
+* **Standard Signature (ed25519)** - a more simple credential variant that is the best option for interoperability with other verifiable credential services.&#x20;
+* **Anonymous (dockbbs23)** - uses BBS+ to enable selective disclosure and zero knowledge proofs. Best for use cases where user data privacy is a top priority.
+* **EUDI (SD-JWT-VC) -** follows European identity standards for compliance and interoperability.
+
+\
+There is a 4th credential variant **Ecosystem-bound (BBDT16)** that is used for [Ecosystem bound credentials.](../monetizing-credentials/) It will get automatically selected when a price is assigned to a schema in an ecosystem.
+
+<figure><img src="../../.gitbook/assets/Screenshot 2025-04-07 at 14.11.14.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### Distribute credentials <a href="#h_22a510abcd" id="h_22a510abcd"></a>
 
@@ -91,12 +101,8 @@ If you have entered the holders DIDs to Subject ID the holder will receive the c
 
 If you have entered the email address, you will have an option to write a message and preview the email that is going to be sent to the receiver of the credential.
 
-<figure><img src="https://downloads.intercomcdn.com/i/o/797730898/839d62e93c6bb388f29eb493/Screenshot+2023-08-01+at+15.57.06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://downloads.intercomcdn.com/i/o/797730898/839d62e93c6bb388f29eb493/Screenshot+2023-08-01+at+15.57.06.png" alt="" width="375"><figcaption></figcaption></figure>
 
-If you do not have or want to use DIDs or email for credential distribution you can skip entering those details into the credential. System will notify you that there is no recipient data and credentials will have to be distributed manually.
+If you do not have or want to use DIDs for the credential distribution you will need to enter an email of the recipient or persist the credential.&#x20;
 
-![](https://downloads.intercomcdn.com/i/o/797753106/a79c8b3a06f8b9022db49223/Screenshot+2023-08-01+at+16.18.12.png)
-
-Once the credential has been issued, it’s important that you download the credentials especially if you didn’t persist them otherwise you can’t get them back.
-
-![](https://downloads.intercomcdn.com/i/o/797754454/75bc4cbf24590fcd6ec79e6c/Screenshot+2023-08-01+at+16.18.34.png)
+<figure><img src="../../.gitbook/assets/Screenshot 2025-04-07 at 14.16.32.png" alt="" width="375"><figcaption></figcaption></figure>
