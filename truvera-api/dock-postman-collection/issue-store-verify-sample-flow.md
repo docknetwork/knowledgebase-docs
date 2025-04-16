@@ -10,7 +10,7 @@ To issue a credential and or a presentation on the holder's behalf, the followin
 
 To create a new DID to issue with, go to **Create DID** and click **Send**. The `id` property denotes a job ID in the system that you can use to query for blockchain transaction status.
 
-The Truvera API supports `did:cheqd` , `did:dock`, `did:polygonid` and `did:key` method creation.
+The Truvera API supports `did:cheqd` and `did:key` method creation.
 
 <details>
 
