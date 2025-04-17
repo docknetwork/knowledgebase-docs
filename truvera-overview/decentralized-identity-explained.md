@@ -36,9 +36,9 @@ Blockchain acts as an immutable registry containing the Decentralized Identifier
 
 Decentralized identifiers (DIDs) are unique identifiers that are associated with a digital identity. DIDs are made up of a string of letters and numbers that can be stored on the blockchain and can be used to authenticate that identity.
 
-Here’s an example of a Dock DID:
+Here’s an example of a DID registered on the cheqd blockchain.
 
-<figure><img src="../.gitbook/assets/decentralized identifier example.jpeg" alt=""><figcaption></figcaption></figure>
+did:cheqd:mainnet:55e92747-1d14-4116-92eb-b1bcf45eb3f0
 
 Every DID that is created comes with a private and public key pair and some DID methods allow multiple key pairs.
 

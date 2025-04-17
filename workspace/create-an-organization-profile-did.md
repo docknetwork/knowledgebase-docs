@@ -28,9 +28,9 @@ All of your Organization profiles (DIDs) will be listed on this page.&#x20;
 
 Many different types of DIDs exist today, they all support the same basic functionality, but they differ in how a DID is created or where and how the DID document is stored and retrieved.These different types of DIDs are known as DID methods. The second part of the DID identifier format—between the first and second colons—is called the DID method name.
 
-Truvera supports 3 types of DID methods did:key, did:cheqd and did:polygonid
+Truvera supports 2 types of DID methods did:key and did:cheqd.
 
-<table><thead><tr><th width="153">Method</th><th width="184">Storage</th><th>Keys</th></tr></thead><tbody><tr><td>did:key</td><td>Stored on the user’s device</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr><tr><td>did:cheqd</td><td>Stored on the cheqd blockchain</td><td>Multiple key pairs can be attached to this DID type, keys can be rotated as needed</td></tr><tr><td>did:polygonid</td><td>Stored on the Polygon blockchain</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr></tbody></table>
+<table><thead><tr><th width="153">Method</th><th width="184">Storage</th><th>Keys</th></tr></thead><tbody><tr><td>did:key</td><td>Stored on the user’s device</td><td>Only one key pair is attached to this DID type, if your keys get exposed you will need to change the DID and all the credentials associated to it</td></tr><tr><td>did:cheqd</td><td>Stored on the cheqd blockchain</td><td>Multiple key pairs can be attached to this DID type, keys can be rotated as needed</td></tr></tbody></table>
 
 ***
 

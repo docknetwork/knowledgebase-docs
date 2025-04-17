@@ -46,10 +46,6 @@ The Truvera API supports `did:cheqd` and `did:key` method creation.
 Creating a cheqd DID submits a transaction to the blockchain, this could take some time to process.&#x20;
 {% endhint %}
 
-{% hint style="info" %}
-When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
-{% endhint %}
-
 ## 2. Update the DID
 
 To add information about your Organization to the DID, e.g. name and logo, you will need to update the DID profile.&#x20;

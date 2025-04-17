@@ -12,21 +12,17 @@ A DID, a public key, and a controller are required to create a new DID. The cont
 
 It is important to have a public key types that is supported by Truvera, the supported type of public key is `ed25519.`
 
-{% hint style="info" %}
-When creating a Polygon ID DID, be sure to set the \`keyType\` field to \`bjj\`.
-{% endhint %}
-
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/dids" method="post" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/dids" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ## List DIDs
 
 Return a list of all DIDs that your user account controls as fully resolved DID documents.
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/dids" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/dids" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
@@ -34,9 +30,9 @@ Return a list of all DIDs that your user account controls as fully resolved DID 
 
 ## Return ecosystems that DID participates in <a href="#list-dids-parameters" id="list-dids-parameters"></a>
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}/ecosystems" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}/ecosystems" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
@@ -44,9 +40,9 @@ Return a list of all DIDs that your user account controls as fully resolved DID 
 
 Exports the DID document and keys as an encrypted Universal Wallet JSON-LD document
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}/export" method="post" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}/export" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 
@@ -59,21 +55,21 @@ The API supports resolving many DID methods, some examples are:
 * did:cheqd:f48d2ace-4947-4cb7-8550-1cef3d63e651 - resolves through the cheqd blockchain
 * did:key:z6MkjRagNiMu91DduvCvgEsqLZDVzrJzFrwahc4tXLt9DoHd- the public key is embedded in the DID
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}/metadata" method="get" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}/metadata" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 ## Delete DID <a href="#list-dids-parameters" id="list-dids-parameters"></a>
 
 Deletes a DID and its metadata from the blockchain and our platform. This will also delete the associated keypair from the key management system meaning that you cannot sign messages or credentials with it after this operation. The DID will no longer be able to be resolved. This operation is not reversible.
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}" method="delete" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/dids/{did}" method="delete" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 

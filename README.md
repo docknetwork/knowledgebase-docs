@@ -24,7 +24,7 @@ icon: globe
 
 <summary>Create and manage decentralized identifiers (DIDs)</summary>
 
-Create DIDs on the Dock or Polygon Blockchain using `did:dock` or `did:polygonid` methods or a non-registry based DID using the `did:key` method.
+Create DIDs on the cheqd oblockchain using `did:cheqd` method or a non-registry based DID using the `did:key` method.
 
 </details>
 
@@ -57,14 +57,6 @@ Truvera's user-friendly workspace and API allow you to invite and manage trusted
 <summary>Embed an ID Wallet into your app</summary>
 
 Build ID wallet capabilities inside your existing app with Truvera's Wallet SDK. Users can manage and share their verifiable credentials without having to download an extra app.
-
-</details>
-
-<details>
-
-<summary>Utilize the Dock Blockchain</summary>
-
-The Dock blockchain acts as an immutable registry of all credential issuers. This ensures that Verifiable Credentials are always available for verification without ever needing to contact the issuers, and the list of trusted issuers and verifiers is reliable and auditable.
 
 </details>
 
