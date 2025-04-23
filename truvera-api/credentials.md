@@ -16,13 +16,6 @@ To sign a credential, an `issuer` must be supplied as either a fully qualified D
 The `issuer` property **must** be a DID that you control with your Truvera account.
 {% endhint %}
 
-{% hint style="info" %}
-For Polygon ID credentials:
-
-* In order to issue Polygon ID credentials, the issuer **must** be a `did:polygonid` issuer.
-* Polygon ID credentials **do not** support designs at this point so `template` field should be omitted.
-{% endhint %}
-
 By default, Truvera does not store the credential contents at all - only minimal credential metadata. You can choose to set the `persist` value to `true` and provide a `password` string which will store the credential contents encrypted on our platform. The following metadata is stored on each issuance:
 
 * Credential ID property
