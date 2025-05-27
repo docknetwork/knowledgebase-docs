@@ -39,6 +39,10 @@ In order to support revocation the credential must be linked to a [revocation re
 One time use credentials can be created, but automating the revocation based on tracking the  verification of the credential ID and revoking the credential associated with it.
 {% endhint %}
 
+#### Expiration
+
+An expiration date can be set when issuing a credential making the credential invalid after the assigned time. To check the expiration date for Zero Knowledge Proof credentials (using the dockbbs algorythm) the expiration date needs to be requested in the verification template otherwise due to the nature of zero knowledge proof it will not be disclosed automatically.
+
 #### Attaching files&#x20;
 
 At the moment it is not possible to add a file to the credential itself. If a credential has to have a file associated with it, the file will need to be placed in public storage and the link to that location and a hash of the content should be added to the attributes of the credential.&#x20;
