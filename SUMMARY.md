@@ -2,7 +2,6 @@
 
 * [Truvera overview](README.md)
   * [Decentralized identity explained](truvera-overview/decentralized-identity-explained.md)
-  * [Roadmap](truvera-overview/roadmap.md)
   * [Subscription plans & billing](truvera-overview/subscription-plans-and-billing.md)
 * [Solutions](solutions/README.md)
   * [Biometric-Bound Credentials](solutions/biometric-bound-credentials.md)
