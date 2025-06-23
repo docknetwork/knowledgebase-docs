@@ -31,7 +31,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"claimMap\": {\n      \"name\": \"name\"\n    },\n    \"credentialOptions\": {\n      \"credential\": {\n        \"type\": [\"UniversityDegreeCredential\"],\n        \"context\": [\"https://www.w3.org/2018/credentials/examples/v1\"],\n        \"subject\": {\n          \"alumniOf\": \"Truvera University\",\n          \"degree\": \"Credential Science\"\n          // name will be added by claims flow\n        },\n        \"expirationDate\": \"2099-08-24T14:15:22Z\",\n        \"issuer\": \"did:chedq:issuer\"\n      }\n    },\n    \"authProvider\": {\n      \"url\": \"https://creds.dock.io/claims\",\n      \"scope\": [\"openid\"],\n      \"clientId\": \"eyAic2NoZW1hIjogImh0dHBzOi8vZG9ja25ldHdvcmsuZ2l0aHViLmlvL3ZjLXNjaGVtYXMvYmFzaWMtY3JlZGVudGlhbC5qc29uIiwgImNsYWltcyI6IFsibmFtZSJdIH0=\",\n      \"clientSecret\": \"gpO2IVK+OALL8W+DcFlIfFhJtNA=\"\n    },\n    \"singleUse\": false\n  }",
+					"raw": "{\n    \"claimMap\": {\n      \"name\": \"name\"\n    },\n    \"credentialOptions\": {\n      \"credential\": {\n        \"type\": [\"UniversityDegreeCredential\"],\n        \"context\": [\"https://www.w3.org/2018/credentials/examples/v1\"],\n        \"subject\": {\n          \"alumniOf\": \"Truvera University\",\n          \"degree\": \"Credential Science\"\n          // name will be added by claims flow\n        },\n        \"expirationDate\": \"2099-08-24T14:15:22Z\",\n        \"issuer\": \"did:chedq:issuer\"\n      }\n    },\n    \"authProvider\": {\n      \"url\": \"https://creds.truvera.io/claims\",\n      \"scope\": [\"openid\"],\n      \"clientId\": \"eyAic2NoZW1hIjogImh0dHBzOi8vZG9ja25ldHdvcmsuZ2l0aHViLmlvL3ZjLXNjaGVtYXMvYmFzaWMtY3JlZGVudGlhbC5qc29uIiwgImNsYWltcyI6IFsibmFtZSJdIH0=\",\n      \"clientSecret\": \"gpO2IVK+OALL8W+DcFlIfFhJtNA=\"\n    },\n    \"singleUse\": false\n  }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -235,7 +235,7 @@
 	"variable": [
 		{
 			"key": "BaseUrl",
-			"value": "https://api-testnet.dock.io",
+			"value": "https://api-testnet.truvera.io",
 			"type": "string"
 		}
 	]
