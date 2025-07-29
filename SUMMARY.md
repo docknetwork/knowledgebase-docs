@@ -96,6 +96,7 @@
   * [mDL - Mobile Drivers License](key-standards/mdl-mobile-drivers-license.md)
 * [Credential wallet](credential-wallet/README.md)
   * [Create and manage DIDs in the Truvera Wallet](credential-wallet/create-and-manage-dids-from-the-truvera-wallet.md)
+  * [Wallet backup](credential-wallet/wallet-backup.md)
   * [White label wallet](credential-wallet/white-label-wallet/README.md)
     * [Configuration](credential-wallet/white-label-wallet/configuration/README.md)
       * [Enabling and Disabling Features](credential-wallet/white-label-wallet/configuration/enabling-and-disabling-features.md)
