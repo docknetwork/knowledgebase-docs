@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "f3832a20-fbb3-4c68-becf-8637c0e2dc17",
 		"name": "Sample Issue-Store-Verify",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
 		"_exporter_id": "36302582"
 	},
 	"item": [
@@ -44,15 +44,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "{{BaseUrl}}/dids",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"dids"
-					]
-				}
+				"url": "{{BaseUrl}}/dids"
 			},
 			"response": []
 		},
@@ -101,48 +93,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"$schema\": \"http://json-schema.org/schema\",\n      \"name\": \"My Sample schema\",\n      \"description\": \"description of my schema\",\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"string\"\n        },\n        \"emailAddress\": {\n          \"type\": \"string\",\n          \"format\": \"email\"\n        },\n        \"textAttribute\": {\n          \"type\": \"string\"\n        },\n        \"numberAttribute\": {\n          \"type\": \"number\"\n        }\n    },\n      \"required\": [\n        \"emailAddress\",\n        \"textAttribute\",\n        \"numberAttribute\"\n      ],\n      \"additionalProperties\": false\n    }",
+					"raw": "{\n      \"$schema\": \"http://json-schema.org/schema\",\n      \"name\": \"My Credential ref schema\",\n      \"description\": \"description of my schema\",\n      \"type\": \"object\",\n      \"properties\": {\n        \"@context\": {\n        \"type\": [\n        \"string\",\n        \"array\",\n        \"object\"\n      ]\n        },\n        \"id\": {\n          \"type\": \"string\"\n        },\n        \"emailAddress\": {\n          \"type\": \"string\",\n          \"format\": \"email\"\n        },\n        \"textAttribute\": {\n          \"type\": \"string\"\n        },\n        \"credentialSubject\": {\n            \"type\":\"object\",\n            \"properties\": {\n                \"name\": {\n                    \"type\": \"string\"\n            }\n        },\n        \"required\": [\n        \"name\"\n        ]\n    },\n        \"numberAttribute\": {\n          \"type\": \"number\"\n        }\n    },\n      \"required\": [\n        \"emailAddress\",\n        \"textAttribute\",\n        \"numberAttribute\",\n        \"credentialSubject\"\n      ],\n      \"additionalProperties\": false\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "{{BaseUrl}}/schemas",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"schemas"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create revocation registry",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"addOnly\": false,\n  \"policy\": [\n    \"did:cheqd:testnet:1c2c6efe-3c4b-4424-9175-f1e1057f2e71\"\n  ],\n  \"type\": \"DockVBAccumulator2022\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{BaseUrl}}/registries",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"registries"
-					]
-				}
+				"url": "{{BaseUrl}}/schemas"
 			},
 			"response": []
 		},
@@ -153,22 +111,14 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"algorithm\": \"dockbbs\",\n  \"recipientEmail\":\"agne@truvera.io\", \n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"schema\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n    \"type\": [\n      \"SampleSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"1234\",\n        \"emailAddress\":\"myemail@address.com\",\n        \"textAttribute\":\"Some text\",\n        \"numberAttribute\":1,\n        \"expirationDate\":\"2026-01-21\"\n    },\n    \"issuer\": \"did:cheqd:testnet:80c16286-a49e-4826-aaa4-18fa7f66d707\",\n    \"issuanceDate\": \"2025-01-21T11:03:35.610Z\",\n    \"status\":\"1d1a1d1e248c4b30b5a22ab5a74ea5d9e3ba1894ee8c45ebf7f56a45bdccf9c5\"\n  }\n}",
+					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"algorithm\": \"dockbbs\",\n  \"recipientEmail\":\"agne@truvera.io\", \n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"schema\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n    \"type\": [\n      \"SampleSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"1234\",\n        \"emailAddress\":\"myemail@address.com\",\n        \"textAttribute\":\"Some text\",\n        \"numberAttribute\":1,\n        \"expirationDate\":\"2026-01-21\"\n    },\n    \"issuer\": \"did:cheqd:testnet:7e62654d-06ec-420d-96ed-e5298eb2dbbf\",\n    \"issuanceDate\": \"2025-02-14T11:03:35.610Z\",\n    \"status\":\"fca210dc301632329253fb5d32bb57cc58673e5c31927777310104de3fbc1387\"\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": {
-					"raw": "{{BaseUrl}}/credentials",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"credentials"
-					]
-				}
+				"url": "{{BaseUrl}}/credentials"
 			},
 			"response": []
 		},
@@ -186,15 +136,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "{{BaseUrl}}/proof-templates",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"proof-templates"
-					]
-				}
+				"url": "{{BaseUrl}}/proof-templates"
 			},
 			"response": []
 		},
@@ -212,17 +154,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "{{BaseUrl}}/proof-templates/6cc6abd6-d47e-46c4-9ba1-3677a904237b/request",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"proof-templates",
-						"6cc6abd6-d47e-46c4-9ba1-3677a904237b",
-						"request"
-					]
-				}
+				"url": "{{BaseUrl}}/proof-templates/6cc6abd6-d47e-46c4-9ba1-3677a904237b/request"
 			},
 			"response": []
 		},
@@ -231,28 +163,16 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "{{BaseUrl}}/proof-templates",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"proof-templates"
-					]
-				}
+				"url": "{{BaseUrl}}/proof-templates"
 			},
 			"response": []
 		}
 	],
 	"auth": {
 		"type": "bearer",
-		"bearer": [
-			{
-				"key": "token",
-				"value": "{{Bearier}}",
-				"type": "string"
-			}
-		]
+		"bearer": {
+			"token": "{{Bearer}}"
+		}
 	},
 	"event": [
 		{
