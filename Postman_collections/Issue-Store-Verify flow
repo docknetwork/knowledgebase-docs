@@ -101,7 +101,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"$schema\": \"http://json-schema.org/schema\",\n      \"name\": \"My Sample schema\",\n      \"description\": \"description of my schema\",\n      \"type\": \"object\",\n      \"properties\": {\n        \"id\": {\n          \"type\": \"string\"\n        },\n        \"emailAddress\": {\n          \"type\": \"string\",\n          \"format\": \"email\"\n        },\n        \"textAttribute\": {\n          \"type\": \"string\"\n        },\n        \"numberAttribute\": {\n          \"type\": \"number\"\n        }\n    },\n      \"required\": [\n        \"emailAddress\",\n        \"textAttribute\",\n        \"numberAttribute\"\n      ],\n      \"additionalProperties\": false\n    }",
+					"raw": "{\n      \"$schema\": \"http://json-schema.org/schema\",\n      \"name\": \"My Credential ref schema\",\n      \"description\": \"description of my schema\",\n      \"type\": \"object\",\n      \"properties\": {\n        \"@context\": {\n        \"type\": [\n        \"string\",\n        \"array\",\n        \"object\"\n      ]\n        },\n        \"id\": {\n          \"type\": \"string\"\n        },\n        \"emailAddress\": {\n          \"type\": \"string\",\n          \"format\": \"email\"\n        },\n        \"textAttribute\": {\n          \"type\": \"string\"\n        },\n        \"credentialSubject\": {\n            \"type\":\"object\",\n            \"properties\": {\n                \"name\": {\n                    \"type\": \"string\"\n            }\n        },\n        \"required\": [\n        \"name\"\n        ]\n    },\n        \"numberAttribute\": {\n          \"type\": \"number\"\n        }\n    },\n      \"required\": [\n        \"emailAddress\",\n        \"textAttribute\",\n        \"numberAttribute\",\n        \"credentialSubject\"\n      ],\n      \"additionalProperties\": false\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -121,39 +121,13 @@
 			"response": []
 		},
 		{
-			"name": "Create revocation registry",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n  \"addOnly\": false,\n  \"policy\": [\n    \"did:cheqd:testnet:1c2c6efe-3c4b-4424-9175-f1e1057f2e71\"\n  ],\n  \"type\": \"DockVBAccumulator2022\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{BaseUrl}}/registries",
-					"host": [
-						"{{BaseUrl}}"
-					],
-					"path": [
-						"registries"
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Issue credential",
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"algorithm\": \"dockbbs\",\n  \"recipientEmail\":\"agne@truvera.io\", \n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"schema\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n    \"type\": [\n      \"SampleSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"1234\",\n        \"emailAddress\":\"myemail@address.com\",\n        \"textAttribute\":\"Some text\",\n        \"numberAttribute\":1,\n        \"expirationDate\":\"2026-01-21\"\n    },\n    \"issuer\": \"did:cheqd:testnet:80c16286-a49e-4826-aaa4-18fa7f66d707\",\n    \"issuanceDate\": \"2025-01-21T11:03:35.610Z\",\n    \"status\":\"1d1a1d1e248c4b30b5a22ab5a74ea5d9e3ba1894ee8c45ebf7f56a45bdccf9c5\"\n  }\n}",
+					"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"algorithm\": \"dockbbs\",\n  \"recipientEmail\":\"agne@truvera.io\", \n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"schema\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n    \"type\": [\n      \"SampleSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"1234\",\n        \"emailAddress\":\"myemail@address.com\",\n        \"textAttribute\":\"Some text\",\n        \"numberAttribute\":1,\n        \"expirationDate\":\"2026-01-21\"\n    },\n    \"issuer\": \"did:cheqd:testnet:7e62654d-06ec-420d-96ed-e5298eb2dbbf\",\n    \"issuanceDate\": \"2025-02-14T11:03:35.610Z\",\n    \"status\":\"fca210dc301632329253fb5d32bb57cc58673e5c31927777310104de3fbc1387\"\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -170,7 +144,232 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "Issue credential",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"algorithm\": \"dockbbs\",\n  \"recipientEmail\":\"agne@truvera.io\", \n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"schema\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n    \"type\": [\n      \"SampleSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"1234\",\n        \"emailAddress\":\"myemail@address.com\",\n        \"textAttribute\":\"Some text\",\n        \"numberAttribute\":1,\n        \"expirationDate\":\"2026-01-21\"\n    },\n    \"issuer\": \"did:cheqd:testnet:7e62654d-06ec-420d-96ed-e5298eb2dbbf\",\n    \"issuanceDate\": \"2025-02-14T11:03:35.610Z\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/credentials",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"credentials"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Aug 2025 13:02:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Ratelimit-Limit",
+							"value": "300"
+						},
+						{
+							"key": "X-Ratelimit-Remaining",
+							"value": "299"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "86400"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,HEAD,PUT,PATCH,POST,DELETE"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"cad-JwQHpjC/RKAK/anVnUk4Yrlv9xA\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=EKhs8rtGe0IKl8%2FK6vJEJA8TkRn9zO4eSHwzFKxW%2BiDjT2bpI9WqatnilqwTjSZUeNEUgHpWO9saaK3OaVCMhidbHJ7nOLAlGxJSPAeWXTFxaaiHAWQ%3D\"}]}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "96a67d20eb5ef289-IAD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@context\": [\n        \"https://www.w3.org/2018/credentials/v1\",\n        \"https://ld.truvera.io/credentials/extensions-v1\",\n        \"https://ld.truvera.io/security/bbs23/v1\",\n        \"https://schema.truvera.io/MySampleSchema-V1736946620866.json-ld\"\n    ],\n    \"id\": \"https://creds-testnet.truvera.io/0530b3ce9bd65bf8ecfe6682894fbd46a554e8988109d60449a639a17495916e\",\n    \"type\": [\n        \"VerifiableCredential\",\n        \"SampleSchema\"\n    ],\n    \"credentialSubject\": {\n        \"id\": \"1234\",\n        \"emailAddress\": \"myemail@address.com\",\n        \"textAttribute\": \"Some text\",\n        \"numberAttribute\": 1,\n        \"expirationDate\": \"2026-01-21\"\n    },\n    \"issuanceDate\": \"2025-02-14T11:03:35.610Z\",\n    \"issuer\": {\n        \"name\": \"MY DID\",\n        \"id\": \"did:cheqd:testnet:7e62654d-06ec-420d-96ed-e5298eb2dbbf\"\n    },\n    \"credentialSchema\": {\n        \"id\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n        \"type\": \"JsonSchemaValidator2018\",\n        \"details\": \"{\\\"jsonSchema\\\":{\\\"$id\\\":\\\"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\\\",\\\"$schema\\\":\\\"http://json-schema.org/schema\\\",\\\"description\\\":\\\"description of my schema\\\",\\\"name\\\":\\\"My Sample schema\\\",\\\"properties\\\":{\\\"@context\\\":{\\\"type\\\":\\\"string\\\"},\\\"credentialSchema\\\":{\\\"properties\\\":{\\\"details\\\":{\\\"type\\\":\\\"string\\\"},\\\"id\\\":{\\\"type\\\":\\\"string\\\"},\\\"type\\\":{\\\"type\\\":\\\"string\\\"},\\\"version\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"credentialSubject\\\":{\\\"additionalProperties\\\":false,\\\"properties\\\":{\\\"emailAddress\\\":{\\\"format\\\":\\\"email\\\",\\\"type\\\":\\\"string\\\"},\\\"expirationDate\\\":{\\\"format\\\":\\\"date\\\",\\\"type\\\":\\\"string\\\"},\\\"id\\\":{\\\"type\\\":\\\"string\\\"},\\\"numberAttribute\\\":{\\\"type\\\":\\\"number\\\"},\\\"textAttribute\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"emailAddress\\\",\\\"textAttribute\\\",\\\"numberAttribute\\\"],\\\"type\\\":\\\"object\\\"},\\\"cryptoVersion\\\":{\\\"type\\\":\\\"string\\\"},\\\"description\\\":{\\\"type\\\":\\\"string\\\"},\\\"id\\\":{\\\"type\\\":\\\"string\\\"},\\\"issuanceDate\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"},\\\"issuer\\\":{\\\"properties\\\":{\\\"id\\\":{\\\"type\\\":\\\"string\\\"},\\\"name\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"name\\\":{\\\"type\\\":\\\"string\\\"},\\\"proof\\\":{\\\"properties\\\":{\\\"@context\\\":{\\\"items\\\":[{\\\"properties\\\":{\\\"proof\\\":{\\\"properties\\\":{\\\"@container\\\":{\\\"type\\\":\\\"string\\\"},\\\"@id\\\":{\\\"type\\\":\\\"string\\\"},\\\"@type\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"sec\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},{\\\"type\\\":\\\"string\\\"}],\\\"type\\\":\\\"array\\\"},\\\"created\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"},\\\"proofPurpose\\\":{\\\"type\\\":\\\"string\\\"},\\\"type\\\":{\\\"type\\\":\\\"string\\\"},\\\"verificationMethod\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"type\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"parsingOptions\\\":{\\\"defaultDecimalPlaces\\\":4,\\\"defaultMinimumDate\\\":-17592186044415,\\\"defaultMinimumInteger\\\":-4294967295,\\\"useDefaults\\\":true}}\",\n        \"version\": \"0.4.0\"\n    },\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"cryptoVersion\": \"0.6.0\",\n    \"proof\": {\n        \"@context\": [\n            {\n                \"sec\": \"https://w3id.org/security#\",\n                \"proof\": {\n                    \"@id\": \"sec:proof\",\n                    \"@type\": \"@id\",\n                    \"@container\": \"@graph\"\n                }\n            },\n            \"https://ld.truvera.io/security/bbs23/v1\"\n        ],\n        \"type\": \"Bls12381BBSSignatureDock2023\",\n        \"created\": \"2025-08-05T13:02:26Z\",\n        \"verificationMethod\": \"did:cheqd:testnet:7e62654d-06ec-420d-96ed-e5298eb2dbbf#keys-2\",\n        \"proofPurpose\": \"assertionMethod\",\n        \"proofValue\": \"z2r5WF69ua2h9Tqn81Sv8TTMgmXbk8qKk5P5RdkQd1jb14j2cXWcJ7Yp8p4tMPNwDL3E68QWREmCJhii8A28r2dB41BzwvsU4V7VS3FAbp1Ptgt\"\n    }\n}"
+				},
+				{
+					"name": "Issue credential",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"persist\": true,\n  \"password\": \"1234\",\n  \"algorithm\": \"dockbbs\",\n  \"recipientEmail\":\"agne@truvera.io\", \n  \"distribute\": true,\n  \"format\": \"jsonld\",\n  \"credential\": {\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"schema\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n    \"type\": [\n      \"SampleSchema\"\n    ],\n    \"subject\": {\n        \"id\":\"1234\",\n        \"emailAddress\":\"myemail@address.com\",\n        \"textAttribute\":\"Some text\",\n        \"numberAttribute\":1,\n        \"expirationDate\":\"2026-01-21\"\n    },\n    \"issuer\": \"did:cheqd:testnet:7e62654d-06ec-420d-96ed-e5298eb2dbbf\",\n    \"issuanceDate\": \"2025-02-14T11:03:35.610Z\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BaseUrl}}/credentials",
+							"host": [
+								"{{BaseUrl}}"
+							],
+							"path": [
+								"credentials"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 05 Aug 2025 13:02:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "X-Ratelimit-Limit",
+							"value": "300"
+						},
+						{
+							"key": "X-Ratelimit-Remaining",
+							"value": "299"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Max-Age",
+							"value": "86400"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET,HEAD,PUT,PATCH,POST,DELETE"
+						},
+						{
+							"key": "Etag",
+							"value": "W/\"cad-JwQHpjC/RKAK/anVnUk4Yrlv9xA\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Cf-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Nel",
+							"value": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=EKhs8rtGe0IKl8%2FK6vJEJA8TkRn9zO4eSHwzFKxW%2BiDjT2bpI9WqatnilqwTjSZUeNEUgHpWO9saaK3OaVCMhidbHJ7nOLAlGxJSPAeWXTFxaaiHAWQ%3D\"}]}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "96a67d20eb5ef289-IAD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"@context\": [\n        \"https://www.w3.org/2018/credentials/v1\",\n        \"https://ld.truvera.io/credentials/extensions-v1\",\n        \"https://ld.truvera.io/security/bbs23/v1\",\n        \"https://schema.truvera.io/MySampleSchema-V1736946620866.json-ld\"\n    ],\n    \"id\": \"https://creds-testnet.truvera.io/0530b3ce9bd65bf8ecfe6682894fbd46a554e8988109d60449a639a17495916e\",\n    \"type\": [\n        \"VerifiableCredential\",\n        \"SampleSchema\"\n    ],\n    \"credentialSubject\": {\n        \"id\": \"1234\",\n        \"emailAddress\": \"myemail@address.com\",\n        \"textAttribute\": \"Some text\",\n        \"numberAttribute\": 1,\n        \"expirationDate\": \"2026-01-21\"\n    },\n    \"issuanceDate\": \"2025-02-14T11:03:35.610Z\",\n    \"issuer\": {\n        \"name\": \"MY DID\",\n        \"id\": \"did:cheqd:testnet:7e62654d-06ec-420d-96ed-e5298eb2dbbf\"\n    },\n    \"credentialSchema\": {\n        \"id\": \"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\",\n        \"type\": \"JsonSchemaValidator2018\",\n        \"details\": \"{\\\"jsonSchema\\\":{\\\"$id\\\":\\\"https://schema.truvera.io/MySampleSchema-V1-1736946620866.json\\\",\\\"$schema\\\":\\\"http://json-schema.org/schema\\\",\\\"description\\\":\\\"description of my schema\\\",\\\"name\\\":\\\"My Sample schema\\\",\\\"properties\\\":{\\\"@context\\\":{\\\"type\\\":\\\"string\\\"},\\\"credentialSchema\\\":{\\\"properties\\\":{\\\"details\\\":{\\\"type\\\":\\\"string\\\"},\\\"id\\\":{\\\"type\\\":\\\"string\\\"},\\\"type\\\":{\\\"type\\\":\\\"string\\\"},\\\"version\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"credentialSubject\\\":{\\\"additionalProperties\\\":false,\\\"properties\\\":{\\\"emailAddress\\\":{\\\"format\\\":\\\"email\\\",\\\"type\\\":\\\"string\\\"},\\\"expirationDate\\\":{\\\"format\\\":\\\"date\\\",\\\"type\\\":\\\"string\\\"},\\\"id\\\":{\\\"type\\\":\\\"string\\\"},\\\"numberAttribute\\\":{\\\"type\\\":\\\"number\\\"},\\\"textAttribute\\\":{\\\"type\\\":\\\"string\\\"}},\\\"required\\\":[\\\"emailAddress\\\",\\\"textAttribute\\\",\\\"numberAttribute\\\"],\\\"type\\\":\\\"object\\\"},\\\"cryptoVersion\\\":{\\\"type\\\":\\\"string\\\"},\\\"description\\\":{\\\"type\\\":\\\"string\\\"},\\\"id\\\":{\\\"type\\\":\\\"string\\\"},\\\"issuanceDate\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"},\\\"issuer\\\":{\\\"properties\\\":{\\\"id\\\":{\\\"type\\\":\\\"string\\\"},\\\"name\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"name\\\":{\\\"type\\\":\\\"string\\\"},\\\"proof\\\":{\\\"properties\\\":{\\\"@context\\\":{\\\"items\\\":[{\\\"properties\\\":{\\\"proof\\\":{\\\"properties\\\":{\\\"@container\\\":{\\\"type\\\":\\\"string\\\"},\\\"@id\\\":{\\\"type\\\":\\\"string\\\"},\\\"@type\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"sec\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},{\\\"type\\\":\\\"string\\\"}],\\\"type\\\":\\\"array\\\"},\\\"created\\\":{\\\"format\\\":\\\"date-time\\\",\\\"type\\\":\\\"string\\\"},\\\"proofPurpose\\\":{\\\"type\\\":\\\"string\\\"},\\\"type\\\":{\\\"type\\\":\\\"string\\\"},\\\"verificationMethod\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"type\\\":{\\\"type\\\":\\\"string\\\"}},\\\"type\\\":\\\"object\\\"},\\\"parsingOptions\\\":{\\\"defaultDecimalPlaces\\\":4,\\\"defaultMinimumDate\\\":-17592186044415,\\\"defaultMinimumInteger\\\":-4294967295,\\\"useDefaults\\\":true}}\",\n        \"version\": \"0.4.0\"\n    },\n    \"name\": \"My test credential\",\n    \"description\": \"describing my test credential\",\n    \"cryptoVersion\": \"0.6.0\",\n    \"proof\": {\n        \"@context\": [\n            {\n                \"sec\": \"https://w3id.org/security#\",\n                \"proof\": {\n                    \"@id\": \"sec:proof\",\n                    \"@type\": \"@id\",\n                    \"@container\": \"@graph\"\n                }\n            },\n            \"https://ld.truvera.io/security/bbs23/v1\"\n        ],\n        \"type\": \"Bls12381BBSSignatureDock2023\",\n        \"created\": \"2025-08-05T13:02:26Z\",\n        \"verificationMethod\": \"did:cheqd:testnet:7e62654d-06ec-420d-96ed-e5298eb2dbbf#keys-2\",\n        \"proofPurpose\": \"assertionMethod\",\n        \"proofValue\": \"z2r5WF69ua2h9Tqn81Sv8TTMgmXbk8qKk5P5RdkQd1jb14j2cXWcJ7Yp8p4tMPNwDL3E68QWREmCJhii8A28r2dB41BzwvsU4V7VS3FAbp1Ptgt\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "Create a proof template",
@@ -249,7 +448,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "{{Bearier}}",
+				"value": "{{Bearer}}",
 				"type": "string"
 			}
 		]
