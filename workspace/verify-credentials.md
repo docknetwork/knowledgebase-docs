@@ -44,6 +44,10 @@ When verifying Zero Knowledge Proof credentials, you can use range proof verific
 
 If the verification template contains a paid schema a notification on the bottom will appear.
 
+{% hint style="warning" %}
+When verifying ecosystem bound credentials with paid schemas, the issuance date can not be revealed. In order to verify credential issuance date use a date range in the verification temple.
+{% endhint %}
+
 <figure><img src="../.gitbook/assets/Screenshot 2024-08-16 at 16.16.17.png" alt=""><figcaption></figcaption></figure>
 
 Last step for a verification request is to click Request, which will generate a QR code. Every time a new request is made, it generates a new QR code.\
