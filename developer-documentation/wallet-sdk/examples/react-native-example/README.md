@@ -7,7 +7,7 @@ React-native project running the Truvera wallet-sdk
 # make sure you are using the supported nodejs version
 nvm use 16.14.0
 # Clone wallet-sdk repository
-git clone git@github.com:docknetwork/react-native-sdk.git ../wallet-sdk
+git clone git@github.com:docknetwork/wallet-sdk.git ../wallet-sdk
 # install dependencies on wallet-sdk repository
 cd ../wallet-sdk
 yarn install
