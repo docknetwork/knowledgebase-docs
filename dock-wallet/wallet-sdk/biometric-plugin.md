@@ -111,7 +111,7 @@ The biometric ID should not contain the user's actual biometric information. Whe
 
 ## Adding a custom biometric provider
 
-Adding a custom biometric provider will require the development of the plugin following the interface defined at [packages/react-native/lib/default-biometrics-plugin.ts](https://github.com/docknetwork/react-native-sdk/blob/master/packages/react-native/lib/default-biometrics-plugin.ts). The plugin should implement the following methods:
+Adding a custom biometric provider will require the development of the plugin following the interface defined at [packages/react-native/lib/default-biometrics-plugin.ts](https://github.com/docknetwork/wallet-sdk/blob/master/packages/react-native/lib/default-biometrics-plugin.ts). The plugin should implement the following methods:
 
 * hasProofOfBiometrics: Checks if the verification template is asking for biometric attributes.
 * enrollBiometrics: Enrolls the biometric data.

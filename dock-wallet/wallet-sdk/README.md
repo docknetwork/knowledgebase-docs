@@ -1,6 +1,6 @@
 # Wallet SDK
 
-The [Wallet SDK](https://github.com/docknetwork/react-native-sdk) enables you to build a Verifiable Credentials wallet inside your app and allows your users to receive, store, and manage their DOCK tokens too. This was built for native applications with added support for Polkadot-JS.
+The [Wallet SDK](https://github.com/docknetwork/wallet-sdk) enables you to build a Verifiable Credentials wallet inside your app and allows your users to receive, store, and manage their DOCK tokens too. This was built for native applications with added support for Polkadot-JS.
 
 {% hint style="info" %}
 Dock Mobile SDK supports devices that have  Android 8.1 or higher and iOS 11 or higher.
