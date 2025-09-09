@@ -76,6 +76,31 @@ async function sendYesNoMessage() {
 sendYesNoMessage();
 ```
 
+#### Response payload from the wallet
+
+```
+{
+    "messageId": "f07b97220782dd2c66df0180f09ad4cdd8d8671b2a86218129e4c721c03dfa5e",
+    "to": "did:cheqd:testnet:senderDID",
+    "messageType": "https://schema.truvera.io/yes-no-response-V1.json",
+    "sender": null,
+    "receivedAt": "2025-09-04T12:25:29.331Z",
+    "content": {
+        "id": "3d287880-898a-11f0-8698-4d8b1173feb3",
+        "type": "https://schema.truvera.io/yes-no-response-V1.json",
+        "created_time": 1756988727,
+        "from": "did:key:holderDID",
+        "body": {
+            "messageId": "internal-message-1234",
+            "response": "no"
+        },
+        "to": [
+            "did:cheqd:testnet:senderDID"
+        ]
+    }
+}
+```
+
 #### **Response notification and retrieval**
 
 Configure a webhook via the [API](../webhooks/) or the Truvera [Workspace](../../workspace/creating-api-keys-and-webhook-endpoints.md#h_fae99467a4) to listen to didcomm\_message\_received event.&#x20;
