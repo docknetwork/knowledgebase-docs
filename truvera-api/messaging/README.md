@@ -12,7 +12,12 @@ The process works as follows: the customer receives a credential during onboardi
 
 #### Prerequisites
 
-* Issuer has captured the holder's DID during credential issuance
+* Issuer has captured the holder's DID&#x20;
+* Issuer is using a valid message schema&#x20;
+
+{% hint style="info" %}
+Current Truvera wallet implementation supports only YES/NO holder messaging schema. Customers using the wallet SDK can implement custom schemas based on their needs.
+{% endhint %}
 
 #### **Encrypted message dispatch**
 
