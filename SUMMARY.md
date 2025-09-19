@@ -115,6 +115,7 @@
     * [Cloud wallet](credential-wallet/wallet-sdk/cloud-wallet-documentation.md)
     * [Biometric plugin](credential-wallet/wallet-sdk/biometric-plugin.md)
     * [Ecosystem Tools](credential-wallet/wallet-sdk/ecosystem-tools.md)
+  * [Wallet SDK Core API Documentation](credential-wallet/wallet-sdk/api/core.md)
   * [Download Truvera Wallet](credential-wallet/download-truvera-wallet.md)
   * [Truvera Wallet release notes](credential-wallet/truvera-wallet-release-notes/README.md)
     * [Release Notes 2025Q1](credential-wallet/truvera-wallet-release-notes/release-notes-2024q4.md)
