@@ -28,7 +28,7 @@ DCKW-644 Added a prompt to turn on notifications for those users that don't have
 
 ### New features and updates
 
-DCKW-555 Released [Cloud wallet ](../../developer-documentation/wallet-sdk/cloud-wallet.md)
+DCKW-555 Released [Cloud wallet ](../wallet-sdk/cloud-wallet-documentation.md)
 
 DCKW-629 Removed Transak code to prepare for token migration
 

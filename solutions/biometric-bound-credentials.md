@@ -40,7 +40,7 @@ The issued credential contains a link to the biometric template.&#x20;
 
 At time of verification, verifier requires holder to provide a biometric sample through the same service and checks that it matches the template linked in the credential.
 
-[Documentation how to add a biometric service plugin](../developer-documentation/wallet-sdk/biometric-plugin.md).
+[Documentation how to add a biometric service plugin](../credential-wallet/wallet-sdk/biometric-plugin.md).
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.24.35.png" alt=""><figcaption></figcaption></figure>
 

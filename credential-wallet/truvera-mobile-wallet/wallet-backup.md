@@ -8,7 +8,7 @@
 4. Create and enter a secure password when prompted
 5. The wallet will generate and download a JSON backup file to your device
 
-<div align="left"><figure><img src="../.gitbook/assets/Screenshot_20250729_111837.jpg" alt="" width="188"><figcaption></figcaption></figure></div>
+<div align="left"><figure><img src="../../.gitbook/assets/Screenshot_20250729_111837.jpg" alt="" width="188"><figcaption></figcaption></figure></div>
 
 ### Restoring from backup
 

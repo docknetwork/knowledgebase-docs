@@ -2,269 +2,278 @@
 
 ## Modules
 
-<dl>
-<dt><a href="#module_cloud-wallet">cloud-wallet</a></dt>
-<dd><p>Cloud wallet functionality for the Truvera Wallet SDK.
-This module provides the main cloud wallet creation and management functions.</p></dd>
-<dt><a href="#module_wallet">wallet</a></dt>
-<dd><p>Core wallet functionality for the Dock Wallet SDK.
-This module provides the main wallet creation and management functions.</p></dd>
-</dl>
+[cloud-wallet](core.md#module_cloud-wallet)
+
+Cloud wallet functionality for the Truvera Wallet SDK. This module provides the main cloud wallet creation and management functions.
+
+[wallet](core.md#module_wallet)
+
+Core wallet functionality for the Dock Wallet SDK. This module provides the main wallet creation and management functions.
 
 ## Members
 
-<dl>
-<dt><a href="#Goals">Goals</a> ⇒</dt>
-<dd></dd>
-<dt><a href="#dockDocumentNetworkResolver">dockDocumentNetworkResolver</a></dt>
-<dd><p>Given an Api URL, resolve the network ID
-For now it will be applied for creds and certs
-It can be extended to resolve other external URLs</p></dd>
-</dl>
+[Goals](core.md#Goals) ⇒[dockDocumentNetworkResolver](core.md#dockDocumentNetworkResolver)
+
+Given an Api URL, resolve the network ID For now it will be applied for creds and certs It can be extended to resolve other external URLs
 
 ## Constants
 
-<dl>
-<dt><a href="#MessageTypes">MessageTypes</a></dt>
-<dd><p>DIDComm Message helpers
-Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details</p></dd>
-</dl>
+[MessageTypes](core.md#MessageTypes)
+
+DIDComm Message helpers Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details
 
 ## Functions
 
-<dl>
-<dt><a href="#isValid">isValid(credential)</a> ⇒ <code>Promise.&lt;Object&gt;</code></dt>
-<dd><p>Uses Dock SDK to verify a credential</p></dd>
-<dt><a href="#syncCredentialStatus">syncCredentialStatus(param0)</a> ⇒</dt>
-<dd><p>Fetch credential status from the chain and update the wallet
-Store a new document <credentialId>#status in the wallet
-Returns a list of CredentialStatusDocument</p></dd>
-<dt><a href="#removeCredential">removeCredential(param0)</a> ⇒ <code>Promise.&lt;void&gt;</code></dt>
-<dd><p>Removes a credential and its related documents from the wallet</p></dd>
-<dt><a href="#buildRequestVerifiablePresentationMessage">buildRequestVerifiablePresentationMessage()</a></dt>
-<dd><p>Sender: Verifier
-OOB message to request a verifiable presentation from the holder</p></dd>
-<dt><a href="#buildAckWalletToWalletVerificationMessage">buildAckWalletToWalletVerificationMessage()</a></dt>
-<dd><p>Sender: Holder
-Start a wallet to wallet verification flow</p></dd>
-<dt><a href="#buildVerifiablePresentationMessage">buildVerifiablePresentationMessage()</a></dt>
-<dd><p>Sender: Holder
-Send a verifiable presentation to the verifier</p></dd>
-<dt><a href="#buildVerifiablePresentationAckMessage">buildVerifiablePresentationAckMessage()</a></dt>
-<dd><p>Sender: Verifier
-Sends an the presentation result to the holder</p></dd>
-<dt><a href="#handleBlockchainNetworkChange">handleBlockchainNetworkChange()</a></dt>
-<dd><p>Update existing substrate network connection
-Compare connected substrate connection with the current walle network
-Disconnect and Establish a new connection if the network is different</p></dd>
-</dl>
+[isValid(credential)](core.md#isValid) ⇒ `Promise.<Object>`
+
+Uses Dock SDK to verify a credential
+
+[syncCredentialStatus(param0)](core.md#syncCredentialStatus) ⇒
+
+Fetch credential status from the chain and update the wallet Store a new document #status in the wallet Returns a list of CredentialStatusDocument
+
+[removeCredential(param0)](core.md#removeCredential) ⇒ `Promise.<void>`
+
+Removes a credential and its related documents from the wallet
+
+[buildRequestVerifiablePresentationMessage()](core.md#buildRequestVerifiablePresentationMessage)
+
+Sender: Verifier OOB message to request a verifiable presentation from the holder
+
+[buildAckWalletToWalletVerificationMessage()](core.md#buildAckWalletToWalletVerificationMessage)
+
+Sender: Holder Start a wallet to wallet verification flow
+
+[buildVerifiablePresentationMessage()](core.md#buildVerifiablePresentationMessage)
+
+Sender: Holder Send a verifiable presentation to the verifier
+
+[buildVerifiablePresentationAckMessage()](core.md#buildVerifiablePresentationAckMessage)
+
+Sender: Verifier Sends an the presentation result to the holder
+
+[handleBlockchainNetworkChange()](core.md#handleBlockchainNetworkChange)
+
+Update existing substrate network connection Compare connected substrate connection with the current walle network Disconnect and Establish a new connection if the network is different
 
 ## Typedefs
 
-<dl>
-<dt><a href="#WalletStatus">WalletStatus</a> : <code>&#x27;closed&#x27;</code> | <code>&#x27;loading&#x27;</code> | <code>&#x27;ready&#x27;</code> | <code>&#x27;error&#x27;</code></dt>
-<dd><p>Possible wallet status values</p></dd>
-<dt><a href="#KeypairType">KeypairType</a> : <code>&#x27;sr25519&#x27;</code> | <code>&#x27;ed25519&#x27;</code> | <code>&#x27;ecdsa&#x27;</code></dt>
-<dd><p>Supported keypair types</p></dd>
-</dl>
+[WalletStatus](core.md#WalletStatus) : `'closed'` | `'loading'` | `'ready'` | `'error'`
+
+Possible wallet status values
+
+[KeypairType](core.md#KeypairType) : `'sr25519'` | `'ed25519'` | `'ecdsa'`
+
+Supported keypair types
 
 ## Interfaces
 
-<dl>
-<dt><del><a href="#IV1Wallet">IV1Wallet</a></del></dt>
-<dd><p>Legacy V1 wallet interface for backward compatibility</p></dd>
-<dt><a href="#IWallet">IWallet</a> ⇐ <code><a href="#IV1Wallet">IV1Wallet</a></code></dt>
-<dd><p>Main wallet interface providing methods for document management, import/export, and network operations.</p></dd>
-</dl>
+[~~IV1Wallet~~](core.md#IV1Wallet)
 
-<a name="module_cloud-wallet"></a>
+Legacy V1 wallet interface for backward compatibility
+
+[IWallet](core.md#IWallet) ⇐ [`IV1Wallet`](core.md#IV1Wallet)
+
+Main wallet interface providing methods for document management, import/export, and network operations.
 
 ## cloud-wallet
-<p>Cloud wallet functionality for the Truvera Wallet SDK.
-This module provides the main cloud wallet creation and management functions.</p>
 
+Cloud wallet functionality for the Truvera Wallet SDK. This module provides the main cloud wallet creation and management functions.
 
-* [cloud-wallet](#module_cloud-wallet)
-    * [~deriveBiometricKey(biometricData, identifier)](#module_cloud-wallet..deriveBiometricKey) ⇒
-    * [~deriveKeyMappingVaultKeys(biometricData, identifier)](#module_cloud-wallet..deriveKeyMappingVaultKeys) ⇒
-    * [~deriveBiometricEncryptionKey(biometricData, identifier)](#module_cloud-wallet..deriveBiometricEncryptionKey) ⇒
-    * [~encryptMasterKey(masterKey, encryptionKey, iv)](#module_cloud-wallet..encryptMasterKey) ⇒
-    * [~decryptMasterKey(encryptedKey, decryptionKey, iv)](#module_cloud-wallet..decryptMasterKey) ⇒
-    * [~initializeKeyMappingVault(edvUrl, authKey, biometricData, identifier)](#module_cloud-wallet..initializeKeyMappingVault) ⇒
-    * [~enrollUserWithBiometrics(edvUrl, authKey, biometricData, identifier)](#module_cloud-wallet..enrollUserWithBiometrics) ⇒
-    * [~getKeyMappingMasterKey(keyMappingEdv, identifier, decryptionKey, iv)](#module_cloud-wallet..getKeyMappingMasterKey) ⇒
-    * [~authenticateWithBiometrics(edvUrl, authKey, biometricData, identifier)](#module_cloud-wallet..authenticateWithBiometrics) ⇒
-    * [~initializeCloudWalletWithBiometrics(edvUrl, authKey, biometricData, identifier, dataStore)](#module_cloud-wallet..initializeCloudWalletWithBiometrics) ⇒
+* [cloud-wallet](core.md#module_cloud-wallet)
+  * [\~deriveBiometricKey(biometricData, identifier)](core.md#module_cloud-wallet..deriveBiometricKey) ⇒
+  * [\~deriveKeyMappingVaultKeys(biometricData, identifier)](core.md#module_cloud-wallet..deriveKeyMappingVaultKeys) ⇒
+  * [\~deriveBiometricEncryptionKey(biometricData, identifier)](core.md#module_cloud-wallet..deriveBiometricEncryptionKey) ⇒
+  * [\~encryptMasterKey(masterKey, encryptionKey, iv)](core.md#module_cloud-wallet..encryptMasterKey) ⇒
+  * [\~decryptMasterKey(encryptedKey, decryptionKey, iv)](core.md#module_cloud-wallet..decryptMasterKey) ⇒
+  * [\~initializeKeyMappingVault(edvUrl, authKey, biometricData, identifier)](core.md#module_cloud-wallet..initializeKeyMappingVault) ⇒
+  * [\~enrollUserWithBiometrics(edvUrl, authKey, biometricData, identifier)](core.md#module_cloud-wallet..enrollUserWithBiometrics) ⇒
+  * [\~getKeyMappingMasterKey(keyMappingEdv, identifier, decryptionKey, iv)](core.md#module_cloud-wallet..getKeyMappingMasterKey) ⇒
+  * [\~authenticateWithBiometrics(edvUrl, authKey, biometricData, identifier)](core.md#module_cloud-wallet..authenticateWithBiometrics) ⇒
+  * [\~initializeCloudWalletWithBiometrics(edvUrl, authKey, biometricData, identifier, dataStore)](core.md#module_cloud-wallet..initializeCloudWalletWithBiometrics) ⇒
 
-<a name="module_cloud-wallet..deriveBiometricKey"></a>
+### cloud-wallet\~deriveBiometricKey(biometricData, identifier) ⇒
 
-### cloud-wallet~deriveBiometricKey(biometricData, identifier) ⇒
-<p>Derives a key from biometric data using HKDF</p>
+Derives a key from biometric data using HKDF
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>Derived key</p>  
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
 
-| Param | Description |
-| --- | --- |
-| biometricData | <p>Biometric data from provider</p> |
-| identifier | <p>User's identifier as salt (email, phone number, etc.)</p> |
+Derived key
 
-<a name="module_cloud-wallet..deriveKeyMappingVaultKeys"></a>
+| Param         | Description                                           |
+| ------------- | ----------------------------------------------------- |
+| biometricData | Biometric data from provider                          |
+| identifier    | User's identifier as salt (email, phone number, etc.) |
 
-### cloud-wallet~deriveKeyMappingVaultKeys(biometricData, identifier) ⇒
-<p>Derives EDV keys from biometric data for the KeyMappingVault</p>
+### cloud-wallet\~deriveKeyMappingVaultKeys(biometricData, identifier) ⇒
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>Keys for accessing the KeyMappingVault</p>  
+Derives EDV keys from biometric data for the KeyMappingVault
 
-| Param | Description |
-| --- | --- |
-| biometricData | <p>Biometric data from the provider</p> |
-| identifier | <p>User's identifier as additional entropy (email, phone number, etc.)</p> |
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
 
-<a name="module_cloud-wallet..deriveBiometricEncryptionKey"></a>
+Keys for accessing the KeyMappingVault
 
-### cloud-wallet~deriveBiometricEncryptionKey(biometricData, identifier) ⇒
-<p>Generates a key for encrypting/decrypting the master key</p>
+| Param         | Description                                                         |
+| ------------- | ------------------------------------------------------------------- |
+| biometricData | Biometric data from the provider                                    |
+| identifier    | User's identifier as additional entropy (email, phone number, etc.) |
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>Encryption key and IV for AES encryption</p>  
+### cloud-wallet\~deriveBiometricEncryptionKey(biometricData, identifier) ⇒
 
-| Param | Description |
-| --- | --- |
-| biometricData | <p>Biometric data from provider</p> |
-| identifier | <p>User's identifier as salt (email, phone number, etc.)</p> |
+Generates a key for encrypting/decrypting the master key
 
-<a name="module_cloud-wallet..encryptMasterKey"></a>
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
 
-### cloud-wallet~encryptMasterKey(masterKey, encryptionKey, iv) ⇒
-<p>Encrypts the master key using a key derived from biometric data</p>
+Encryption key and IV for AES encryption
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>Encrypted master key</p>  
+| Param         | Description                                           |
+| ------------- | ----------------------------------------------------- |
+| biometricData | Biometric data from provider                          |
+| identifier    | User's identifier as salt (email, phone number, etc.) |
 
-| Param | Description |
-| --- | --- |
-| masterKey | <p>The CloudWalletVault master key to encrypt</p> |
-| encryptionKey | <p>Key derived from biometric data</p> |
-| iv | <p>Initialization vector</p> |
+### cloud-wallet\~encryptMasterKey(masterKey, encryptionKey, iv) ⇒
 
-<a name="module_cloud-wallet..decryptMasterKey"></a>
+Encrypts the master key using a key derived from biometric data
 
-### cloud-wallet~decryptMasterKey(encryptedKey, decryptionKey, iv) ⇒
-<p>Decrypts the master key using biometric-derived key</p>
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>The decrypted master key</p>  
+Encrypted master key
 
-| Param | Description |
-| --- | --- |
-| encryptedKey | <p>The encrypted master key</p> |
-| decryptionKey | <p>Key derived from biometric data</p> |
-| iv | <p>Initialization vector</p> |
+| Param         | Description                                |
+| ------------- | ------------------------------------------ |
+| masterKey     | The CloudWalletVault master key to encrypt |
+| encryptionKey | Key derived from biometric data            |
+| iv            | Initialization vector                      |
 
-<a name="module_cloud-wallet..initializeKeyMappingVault"></a>
+### cloud-wallet\~decryptMasterKey(encryptedKey, decryptionKey, iv) ⇒
 
-### cloud-wallet~initializeKeyMappingVault(edvUrl, authKey, biometricData, identifier) ⇒
-<p>Initializes the KeyMappingVault using biometric data</p>
+Decrypts the master key using biometric-derived key
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>Initialized EDV service</p>  
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
 
-| Param | Description |
-| --- | --- |
-| edvUrl | <p>URL for the edv</p> |
-| authKey | <p>Auth key for the edv</p> |
-| biometricData | <p>User's biometric data</p> |
-| identifier | <p>User's identifier (email, phone number, etc.)</p> |
+The decrypted master key
 
-<a name="module_cloud-wallet..enrollUserWithBiometrics"></a>
+| Param         | Description                     |
+| ------------- | ------------------------------- |
+| encryptedKey  | The encrypted master key        |
+| decryptionKey | Key derived from biometric data |
+| iv            | Initialization vector           |
 
-### cloud-wallet~enrollUserWithBiometrics(edvUrl, authKey, biometricData, identifier) ⇒
-<p>Enrolls a user by creating necessary vaults and keys</p>
+### cloud-wallet\~initializeKeyMappingVault(edvUrl, authKey, biometricData, identifier) ⇒
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>The master key and mnemonic for backup</p>  
+Initializes the KeyMappingVault using biometric data
 
-| Param | Description |
-| --- | --- |
-| edvUrl | <p>URL for the edv</p> |
-| authKey | <p>Auth key for the edv</p> |
-| biometricData | <p>Biometric data from provider</p> |
-| identifier | <p>User's identifier (email, phone number, etc.)</p> |
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
 
-<a name="module_cloud-wallet..getKeyMappingMasterKey"></a>
+Initialized EDV service
 
-### cloud-wallet~getKeyMappingMasterKey(keyMappingEdv, identifier, decryptionKey, iv) ⇒
-<p>Gets the master key from the key mapping vault using provided decryption keys</p>
+| Param         | Description                                   |
+| ------------- | --------------------------------------------- |
+| edvUrl        | URL for the edv                               |
+| authKey       | Auth key for the edv                          |
+| biometricData | User's biometric data                         |
+| identifier    | User's identifier (email, phone number, etc.) |
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>The decrypted master key for CloudWalletVault</p>  
+### cloud-wallet\~enrollUserWithBiometrics(edvUrl, authKey, biometricData, identifier) ⇒
 
-| Param | Description |
-| --- | --- |
-| keyMappingEdv | <p>Initialized key mapping vault service</p> |
-| identifier | <p>User's identifier (email, phone number, etc.)</p> |
-| decryptionKey | <p>Key for decrypting the master key</p> |
-| iv | <p>Initialization vector for decryption</p> |
+Enrolls a user by creating necessary vaults and keys
 
-<a name="module_cloud-wallet..authenticateWithBiometrics"></a>
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
 
-### cloud-wallet~authenticateWithBiometrics(edvUrl, authKey, biometricData, identifier) ⇒
-<p>Authenticates a user with biometric data and identifier</p>
+The master key and mnemonic for backup
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>The decrypted master key for CloudWalletVault</p>  
+| Param         | Description                                   |
+| ------------- | --------------------------------------------- |
+| edvUrl        | URL for the edv                               |
+| authKey       | Auth key for the edv                          |
+| biometricData | Biometric data from provider                  |
+| identifier    | User's identifier (email, phone number, etc.) |
 
-| Param | Description |
-| --- | --- |
-| edvUrl | <p>URL for the edv</p> |
-| authKey | <p>Auth key for the edv</p> |
-| biometricData | <p>Biometric data from the provider</p> |
-| identifier | <p>User's identifier (email, phone number, etc.)</p> |
+### cloud-wallet\~getKeyMappingMasterKey(keyMappingEdv, identifier, decryptionKey, iv) ⇒
 
-<a name="module_cloud-wallet..initializeCloudWalletWithBiometrics"></a>
+Gets the master key from the key mapping vault using provided decryption keys
 
-### cloud-wallet~initializeCloudWalletWithBiometrics(edvUrl, authKey, biometricData, identifier, dataStore) ⇒
-<p>Initializes the Cloud Wallet using biometric authentication</p>
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
 
-**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
-**Returns**: <p>Initialized cloud wallet</p>  
+The decrypted master key for CloudWalletVault
 
-| Param | Description |
-| --- | --- |
-| edvUrl | <p>Cloud wallet vault URL</p> |
-| authKey | <p>Cloud wallet auth key</p> |
-| biometricData | <p>User's biometric data</p> |
-| identifier | <p>User's identifier (email, phone number, etc.)</p> |
-| dataStore | <p>Optional data store for the wallet</p> |
+| Param         | Description                                   |
+| ------------- | --------------------------------------------- |
+| keyMappingEdv | Initialized key mapping vault service         |
+| identifier    | User's identifier (email, phone number, etc.) |
+| decryptionKey | Key for decrypting the master key             |
+| iv            | Initialization vector for decryption          |
 
-<a name="module_wallet"></a>
+### cloud-wallet\~authenticateWithBiometrics(edvUrl, authKey, biometricData, identifier) ⇒
+
+Authenticates a user with biometric data and identifier
+
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
+
+The decrypted master key for CloudWalletVault
+
+| Param         | Description                                   |
+| ------------- | --------------------------------------------- |
+| edvUrl        | URL for the edv                               |
+| authKey       | Auth key for the edv                          |
+| biometricData | Biometric data from the provider              |
+| identifier    | User's identifier (email, phone number, etc.) |
+
+### cloud-wallet\~initializeCloudWalletWithBiometrics(edvUrl, authKey, biometricData, identifier, dataStore) ⇒
+
+Initializes the Cloud Wallet using biometric authentication
+
+**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
+**Returns**:
+
+Initialized cloud wallet
+
+| Param         | Description                                   |
+| ------------- | --------------------------------------------- |
+| edvUrl        | Cloud wallet vault URL                        |
+| authKey       | Cloud wallet auth key                         |
+| biometricData | User's biometric data                         |
+| identifier    | User's identifier (email, phone number, etc.) |
+| dataStore     | Optional data store for the wallet            |
 
 ## wallet
-<p>Core wallet functionality for the Dock Wallet SDK.
-This module provides the main wallet creation and management functions.</p>
 
-<a name="module_wallet..createWallet"></a>
+Core wallet functionality for the Dock Wallet SDK. This module provides the main wallet creation and management functions.
 
-### wallet~createWallet(props) ⇒ [<code>Promise.&lt;IWallet&gt;</code>](#IWallet)
-<p>Creates a new wallet instance with the provided data store.
-The wallet provides secure storage and management of DIDs, credentials, keys, and other documents.</p>
+### wallet\~createWallet(props) ⇒ [`Promise.<IWallet>`](core.md#IWallet)
 
-**Kind**: inner method of [<code>wallet</code>](#module_wallet)  
-**Returns**: [<code>Promise.&lt;IWallet&gt;</code>](#IWallet) - <p>A promise that resolves to the created wallet instance</p>  
+Creates a new wallet instance with the provided data store. The wallet provides secure storage and management of DIDs, credentials, keys, and other documents.
+
+**Kind**: inner method of [`wallet`](core.md#module_wallet)\
+**Returns**: [`Promise.<IWallet>`](core.md#IWallet) -
+
+A promise that resolves to the created wallet instance
+
+\
 **Throws**:
 
-- <code>Error</code> <p>If the data store is not properly initialized</p>
+*   `Error`
 
-**See**: [IWallet](#IWallet) - The interface defining all available wallet methods  
+    If the data store is not properly initialized
 
-| Param | Type | Description |
-| --- | --- | --- |
-| props | <code>CreateWalletProps</code> | <p>Configuration options for wallet creation</p> |
-| props.dataStore | <code>DataStore</code> | <p>The data store implementation to use for persistence</p> |
+**See**: [IWallet](core.md#IWallet) - The interface defining all available wallet methods
 
-**Example**  
+| Param           | Type                | Description                                          |
+| --------------- | ------------------- | ---------------------------------------------------- |
+| props           | `CreateWalletProps` | Configuration options for wallet creation            |
+| props.dataStore | `DataStore`         | The data store implementation to use for persistence |
+
+**Example**
+
 ```js
 import { createWallet } from '@docknetwork/wallet-sdk-core';
 import { createDataStore } from '@docknetwork/wallet-sdk-data-store';
@@ -276,140 +285,160 @@ const wallet = await createWallet({ dataStore });
 await wallet.addDocument(myCredential);
 const documents = await wallet.getAllDocuments();
 ```
-<a name="IV1Wallet"></a>
 
 ## ~~IV1Wallet~~
-***This interface is obsolete and should not be used for new implementations. Use IWallet instead.***
 
-<p>Legacy V1 wallet interface for backward compatibility</p>
+_**This interface is obsolete and should not be used for new implementations. Use IWallet instead.**_
 
-**Kind**: global interface  
-<a name="IWallet"></a>
+Legacy V1 wallet interface for backward compatibility
 
-## IWallet ⇐ [<code>IV1Wallet</code>](#IV1Wallet)
-<p>Main wallet interface providing methods for document management, import/export, and network operations.</p>
+**Kind**: global interface\
 
-**Kind**: global interface  
-**Extends**: [<code>IV1Wallet</code>](#IV1Wallet)  
 
-* [IWallet](#IWallet) ⇐ [<code>IV1Wallet</code>](#IV1Wallet)
-    * [.deleteWallet()](#IWallet.deleteWallet) ⇒ <code>Promise.&lt;void&gt;</code>
-    * [.setStatus(newStatus)](#IWallet.setStatus)
-    * [.setNetwork(networkId)](#IWallet.setNetwork) ⇒ <code>Promise.&lt;void&gt;</code>
-    * [.getNetworkId()](#IWallet.getNetworkId) ⇒ <code>string</code>
-    * [.getDocumentById(id)](#IWallet.getDocumentById) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
-    * [.getAllDocuments()](#IWallet.getAllDocuments) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
-    * [.getDocumentsById(idList)](#IWallet.getDocumentsById) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
-    * [.getDocumentsByType(type)](#IWallet.getDocumentsByType) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
-    * [.addDocument(json, [options])](#IWallet.addDocument) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
-    * [.updateDocument(document, [options])](#IWallet.updateDocument) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
-    * [.removeDocument(id, [options])](#IWallet.removeDocument) ⇒ <code>Promise.&lt;void&gt;</code>
-    * [.getDocumentCorrelations(documentId)](#IWallet.getDocumentCorrelations) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
-    * [.getAccountKeyPair(accountId)](#IWallet.getAccountKeyPair) ⇒ <code>Promise.&lt;any&gt;</code>
-    * [.getDocumentsFromEncryptedWallet(json, password)](#IWallet.getDocumentsFromEncryptedWallet) ⇒ <code>Promise.&lt;any&gt;</code>
-    * [.importUniversalWalletJSON(json, password)](#IWallet.importUniversalWalletJSON) ⇒ <code>Promise.&lt;void&gt;</code>
-    * [.exportDocuments(params)](#IWallet.exportDocuments) ⇒ <code>Promise.&lt;any&gt;</code>
-    * [.exportUniversalWalletJSON(password)](#IWallet.exportUniversalWalletJSON) ⇒ <code>any</code>
+## IWallet ⇐ [`IV1Wallet`](core.md#IV1Wallet)
 
-<a name="IWallet.deleteWallet"></a>
+Main wallet interface providing methods for document management, import/export, and network operations.
 
-### IWallet.deleteWallet() ⇒ <code>Promise.&lt;void&gt;</code>
-<p>Deletes the entire wallet and all its documents</p>
+**Kind**: global interface\
+**Extends**: [`IV1Wallet`](core.md#IV1Wallet)
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Emits**: <code>WalletEvents.event:walletDeleted</code>  
-<a name="IWallet.setStatus"></a>
+* [IWallet](core.md#IWallet) ⇐ [`IV1Wallet`](core.md#IV1Wallet)
+  * [.deleteWallet()](core.md#IWallet.deleteWallet) ⇒ `Promise.<void>`
+  * [.setStatus(newStatus)](core.md#IWallet.setStatus)
+  * [.setNetwork(networkId)](core.md#IWallet.setNetwork) ⇒ `Promise.<void>`
+  * [.getNetworkId()](core.md#IWallet.getNetworkId) ⇒ `string`
+  * [.getDocumentById(id)](core.md#IWallet.getDocumentById) ⇒ `Promise.<WalletDocument>`
+  * [.getAllDocuments()](core.md#IWallet.getAllDocuments) ⇒ `Promise.<Array.<WalletDocument>>`
+  * [.getDocumentsById(idList)](core.md#IWallet.getDocumentsById) ⇒ `Promise.<Array.<WalletDocument>>`
+  * [.getDocumentsByType(type)](core.md#IWallet.getDocumentsByType) ⇒ `Promise.<Array.<WalletDocument>>`
+  * [.addDocument(json, \[options\])](core.md#IWallet.addDocument) ⇒ `Promise.<WalletDocument>`
+  * [.updateDocument(document, \[options\])](core.md#IWallet.updateDocument) ⇒ `Promise.<WalletDocument>`
+  * [.removeDocument(id, \[options\])](core.md#IWallet.removeDocument) ⇒ `Promise.<void>`
+  * [.getDocumentCorrelations(documentId)](core.md#IWallet.getDocumentCorrelations) ⇒ `Promise.<Array.<WalletDocument>>`
+  * [.getAccountKeyPair(accountId)](core.md#IWallet.getAccountKeyPair) ⇒ `Promise.<any>`
+  * [.getDocumentsFromEncryptedWallet(json, password)](core.md#IWallet.getDocumentsFromEncryptedWallet) ⇒ `Promise.<any>`
+  * [.importUniversalWalletJSON(json, password)](core.md#IWallet.importUniversalWalletJSON) ⇒ `Promise.<void>`
+  * [.exportDocuments(params)](core.md#IWallet.exportDocuments) ⇒ `Promise.<any>`
+  * [.exportUniversalWalletJSON(password)](core.md#IWallet.exportUniversalWalletJSON) ⇒ `any`
+
+### IWallet.deleteWallet() ⇒ `Promise.<void>`
+
+Deletes the entire wallet and all its documents
+
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Emits**: `WalletEvents.event:walletDeleted`\
+
 
 ### IWallet.setStatus(newStatus)
-<p>Sets the wallet status</p>
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+Sets the wallet status
 
-| Param | Type | Description |
-| --- | --- | --- |
-| newStatus | <code>string</code> | <p>The new status to set</p> |
+**Kind**: static method of [`IWallet`](core.md#IWallet)
 
-<a name="IWallet.setNetwork"></a>
+| Param     | Type     | Description           |
+| --------- | -------- | --------------------- |
+| newStatus | `string` | The new status to set |
 
-### IWallet.setNetwork(networkId) ⇒ <code>Promise.&lt;void&gt;</code>
-<p>Sets the active network for the wallet</p>
+### IWallet.setNetwork(networkId) ⇒ `Promise.<void>`
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Emits**: <code>WalletEvents.event:networkUpdated</code>  
+Sets the active network for the wallet
 
-| Param | Type | Description |
-| --- | --- | --- |
-| networkId | <code>string</code> | <p>The network identifier to switch to</p> |
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Emits**: `WalletEvents.event:networkUpdated`
 
-<a name="IWallet.getNetworkId"></a>
+| Param     | Type     | Description                         |
+| --------- | -------- | ----------------------------------- |
+| networkId | `string` | The network identifier to switch to |
 
-### IWallet.getNetworkId() ⇒ <code>string</code>
-<p>Gets the current network ID</p>
+### IWallet.getNetworkId() ⇒ `string`
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>string</code> - <p>The current network identifier</p>  
-<a name="IWallet.getDocumentById"></a>
+Gets the current network ID
 
-### IWallet.getDocumentById(id) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
-<p>Retrieves a document by its ID</p>
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `string` -
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;WalletDocument&gt;</code> - <p>The document with the specified ID</p>  
+The current network identifier
+
+\
+
+
+### IWallet.getDocumentById(id) ⇒ `Promise.<WalletDocument>`
+
+Retrieves a document by its ID
+
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<WalletDocument>` -
+
+The document with the specified ID
+
+\
 **Throws**:
 
-- <code>Error</code> <p>If document is not found</p>
+*   `Error`
+
+    If document is not found
+
+| Param | Type     | Description                           |
+| ----- | -------- | ------------------------------------- |
+| id    | `string` | The unique identifier of the document |
+
+### IWallet.getAllDocuments() ⇒ `Promise.<Array.<WalletDocument>>`
+
+Retrieves all documents stored in the wallet
+
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<Array.<WalletDocument>>` -
+
+Array of all documents in the wallet
+
+\
 
 
-| Param | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | <p>The unique identifier of the document</p> |
+### IWallet.getDocumentsById(idList) ⇒ `Promise.<Array.<WalletDocument>>`
 
-<a name="IWallet.getAllDocuments"></a>
+Retrieves multiple documents by their IDs
 
-### IWallet.getAllDocuments() ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
-<p>Retrieves all documents stored in the wallet</p>
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<Array.<WalletDocument>>` -
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code> - <p>Array of all documents in the wallet</p>  
-<a name="IWallet.getDocumentsById"></a>
+Array of documents matching the provided IDs
 
-### IWallet.getDocumentsById(idList) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
-<p>Retrieves multiple documents by their IDs</p>
+| Param  | Type             | Description                       |
+| ------ | ---------------- | --------------------------------- |
+| idList | `Array.<string>` | Array of document IDs to retrieve |
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code> - <p>Array of documents matching the provided IDs</p>  
+### IWallet.getDocumentsByType(type) ⇒ `Promise.<Array.<WalletDocument>>`
 
-| Param | Type | Description |
-| --- | --- | --- |
-| idList | <code>Array.&lt;string&gt;</code> | <p>Array of document IDs to retrieve</p> |
+Retrieves all documents of a specific type
 
-<a name="IWallet.getDocumentsByType"></a>
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<Array.<WalletDocument>>` -
 
-### IWallet.getDocumentsByType(type) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
-<p>Retrieves all documents of a specific type</p>
+Array of documents matching the specified type
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code> - <p>Array of documents matching the specified type</p>  
+| Param | Type     | Description                                                                  |
+| ----- | -------- | ---------------------------------------------------------------------------- |
+| type  | `string` | The document type to filter by (e.g., 'VerifiableCredential', 'DIDDocument') |
 
-| Param | Type | Description |
-| --- | --- | --- |
-| type | <code>string</code> | <p>The document type to filter by (e.g., 'VerifiableCredential', 'DIDDocument')</p> |
+### IWallet.addDocument(json, \[options]) ⇒ `Promise.<WalletDocument>`
 
-<a name="IWallet.addDocument"></a>
+Adds a new document to the wallet
 
-### IWallet.addDocument(json, [options]) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
-<p>Adds a new document to the wallet</p>
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<WalletDocument>` -
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;WalletDocument&gt;</code> - <p>The created document with generated metadata</p>  
-**Emits**: <code>WalletEvents.event:documentAdded</code>  
+The created document with generated metadata
 
-| Param | Type | Description |
-| --- | --- | --- |
-| json | <code>any</code> | <p>The document to add (must have valid JSON-LD structure)</p> |
-| [options] | <code>any</code> | <p>Optional parameters for document creation</p> |
+\
+**Emits**: `WalletEvents.event:documentAdded`
 
-**Example**  
+| Param      | Type  | Description                                             |
+| ---------- | ----- | ------------------------------------------------------- |
+| json       | `any` | The document to add (must have valid JSON-LD structure) |
+| \[options] | `any` | Optional parameters for document creation               |
+
+**Example**
+
 ```js
 const credential = {
   "@context": ["https://www.w3.org/2018/credentials/v1"],
@@ -419,233 +448,251 @@ const credential = {
 };
 const addedDoc = await wallet.addDocument(credential);
 ```
-<a name="IWallet.updateDocument"></a>
 
-### IWallet.updateDocument(document, [options]) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
-<p>Updates an existing document</p>
+### IWallet.updateDocument(document, \[options]) ⇒ `Promise.<WalletDocument>`
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;WalletDocument&gt;</code> - <p>The updated document</p>  
+Updates an existing document
+
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<WalletDocument>` -
+
+The updated document
+
+\
 **Throws**:
 
-- <code>Error</code> <p>If document doesn't exist</p>
+*   `Error`
 
-**Emits**: <code>WalletEvents.event:documentUpdated</code>  
+    If document doesn't exist
 
-| Param | Type | Description |
-| --- | --- | --- |
-| document | <code>any</code> | <p>The document with updated data (must include ID)</p> |
-| [options] | <code>any</code> | <p>Optional parameters for document update</p> |
+**Emits**: `WalletEvents.event:documentUpdated`
 
-<a name="IWallet.removeDocument"></a>
+| Param      | Type  | Description                                      |
+| ---------- | ----- | ------------------------------------------------ |
+| document   | `any` | The document with updated data (must include ID) |
+| \[options] | `any` | Optional parameters for document update          |
 
-### IWallet.removeDocument(id, [options]) ⇒ <code>Promise.&lt;void&gt;</code>
-<p>Removes a document from the wallet</p>
+### IWallet.removeDocument(id, \[options]) ⇒ `Promise.<void>`
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+Removes a document from the wallet
+
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
 **Throws**:
 
-- <code>Error</code> <p>If document is not found</p>
+*   `Error`
 
-**Emits**: <code>WalletEvents.event:documentRemoved</code>  
+    If document is not found
 
-| Param | Type | Description |
-| --- | --- | --- |
-| id | <code>string</code> | <p>The ID of the document to remove</p> |
-| [options] | <code>any</code> | <p>Optional parameters for document removal</p> |
+**Emits**: `WalletEvents.event:documentRemoved`
 
-<a name="IWallet.getDocumentCorrelations"></a>
+| Param      | Type     | Description                              |
+| ---------- | -------- | ---------------------------------------- |
+| id         | `string` | The ID of the document to remove         |
+| \[options] | `any`    | Optional parameters for document removal |
 
-### IWallet.getDocumentCorrelations(documentId) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
-<p>Gets all documents correlated to a specific document</p>
+### IWallet.getDocumentCorrelations(documentId) ⇒ `Promise.<Array.<WalletDocument>>`
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code> - <p>Array of correlated documents</p>  
+Gets all documents correlated to a specific document
 
-| Param | Type | Description |
-| --- | --- | --- |
-| documentId | <code>string</code> | <p>The ID of the document to find correlations for</p> |
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<Array.<WalletDocument>>` -
 
-<a name="IWallet.getAccountKeyPair"></a>
+Array of correlated documents
 
-### IWallet.getAccountKeyPair(accountId) ⇒ <code>Promise.&lt;any&gt;</code>
-<p>Retrieves the keypair associated with an account</p>
+| Param      | Type     | Description                                     |
+| ---------- | -------- | ----------------------------------------------- |
+| documentId | `string` | The ID of the document to find correlations for |
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;any&gt;</code> - <p>The keypair associated with the account</p>  
+### IWallet.getAccountKeyPair(accountId) ⇒ `Promise.<any>`
 
-| Param | Type | Description |
-| --- | --- | --- |
-| accountId | <code>string</code> | <p>The account ID to get the keypair for</p> |
+Retrieves the keypair associated with an account
 
-<a name="IWallet.getDocumentsFromEncryptedWallet"></a>
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<any>` -
 
-### IWallet.getDocumentsFromEncryptedWallet(json, password) ⇒ <code>Promise.&lt;any&gt;</code>
-<p>Decrypts and retrieves documents from an encrypted wallet without importing</p>
+The keypair associated with the account
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;any&gt;</code> - <p>Array of decrypted documents</p>  
+| Param     | Type     | Description                           |
+| --------- | -------- | ------------------------------------- |
+| accountId | `string` | The account ID to get the keypair for |
 
-| Param | Type | Description |
-| --- | --- | --- |
-| json | <code>any</code> | <p>The encrypted wallet JSON</p> |
-| password | <code>string</code> | <p>Password to decrypt the wallet</p> |
+### IWallet.getDocumentsFromEncryptedWallet(json, password) ⇒ `Promise.<any>`
 
-<a name="IWallet.importUniversalWalletJSON"></a>
+Decrypts and retrieves documents from an encrypted wallet without importing
 
-### IWallet.importUniversalWalletJSON(json, password) ⇒ <code>Promise.&lt;void&gt;</code>
-<p>Imports documents from an encrypted Universal Wallet 2020 JSON</p>
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<any>` -
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**See**: [https://w3c-ccg.github.io/universal-wallet-interop-spec/](https://w3c-ccg.github.io/universal-wallet-interop-spec/)  
+Array of decrypted documents
 
-| Param | Type | Description |
-| --- | --- | --- |
-| json | <code>any</code> | <p>The encrypted wallet JSON</p> |
-| password | <code>string</code> | <p>Password to decrypt the wallet</p> |
+| Param    | Type     | Description                    |
+| -------- | -------- | ------------------------------ |
+| json     | `any`    | The encrypted wallet JSON      |
+| password | `string` | Password to decrypt the wallet |
 
-**Example**  
+### IWallet.importUniversalWalletJSON(json, password) ⇒ `Promise.<void>`
+
+Imports documents from an encrypted Universal Wallet 2020 JSON
+
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**See**: [https://w3c-ccg.github.io/universal-wallet-interop-spec/](https://w3c-ccg.github.io/universal-wallet-interop-spec/)
+
+| Param    | Type     | Description                    |
+| -------- | -------- | ------------------------------ |
+| json     | `any`    | The encrypted wallet JSON      |
+| password | `string` | Password to decrypt the wallet |
+
+**Example**
+
 ```js
 // Import from encrypted wallet backup
 const walletBackup = { ... }; // encrypted wallet JSON
 await wallet.importUniversalWalletJSON(walletBackup, 'mypassword');
 ```
-<a name="IWallet.exportDocuments"></a>
 
-### IWallet.exportDocuments(params) ⇒ <code>Promise.&lt;any&gt;</code>
-<p>Exports specified documents as an encrypted JSON (test)</p>
+### IWallet.exportDocuments(params) ⇒ `Promise.<any>`
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>Promise.&lt;any&gt;</code> - <p>Encrypted wallet JSON</p>  
+Exports specified documents as an encrypted JSON (test)
 
-| Param | Type | Description |
-| --- | --- | --- |
-| params | <code>Object</code> | <p>Export parameters</p> |
-| params.documents | <code>Array.&lt;any&gt;</code> | <p>Documents to export</p> |
-| params.password | <code>string</code> | <p>Password for encryption</p> |
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `Promise.<any>` -
 
-<a name="IWallet.exportUniversalWalletJSON"></a>
+Encrypted wallet JSON
 
-### IWallet.exportUniversalWalletJSON(password) ⇒ <code>any</code>
-<p>Exports the entire wallet as an encrypted Universal Wallet 2020 JSON</p>
+| Param            | Type          | Description             |
+| ---------------- | ------------- | ----------------------- |
+| params           | `Object`      | Export parameters       |
+| params.documents | `Array.<any>` | Documents to export     |
+| params.password  | `string`      | Password for encryption |
 
-**Kind**: static method of [<code>IWallet</code>](#IWallet)  
-**Returns**: <code>any</code> - <p>Encrypted Universal Wallet JSON representation</p>  
-**See**: [https://w3c-ccg.github.io/universal-wallet-interop-spec/](https://w3c-ccg.github.io/universal-wallet-interop-spec/)  
+### IWallet.exportUniversalWalletJSON(password) ⇒ `any`
 
-| Param | Type | Description |
-| --- | --- | --- |
-| password | <code>string</code> | <p>Password for encryption</p> |
+Exports the entire wallet as an encrypted Universal Wallet 2020 JSON
 
-**Example**  
+**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Returns**: `any` -
+
+Encrypted Universal Wallet JSON representation
+
+\
+**See**: [https://w3c-ccg.github.io/universal-wallet-interop-spec/](https://w3c-ccg.github.io/universal-wallet-interop-spec/)
+
+| Param    | Type     | Description             |
+| -------- | -------- | ----------------------- |
+| password | `string` | Password for encryption |
+
+**Example**
+
 ```js
 // Create encrypted backup of entire wallet
 const backup = await wallet.exportUniversalWalletJSON('mypassword');
 // Save backup to file or cloud storage
 ```
-<a name="Goals"></a>
 
 ## Goals ⇒
-**Kind**: global variable  
-**Returns**: <p>OOB message to start a wallet to wallet verification flow
-The holder will scan it as QR code and should have the context to start the verification flow</p>  
-<a name="dockDocumentNetworkResolver"></a>
+
+**Kind**: global variable\
+**Returns**:
+
+OOB message to start a wallet to wallet verification flow The holder will scan it as QR code and should have the context to start the verification flow
+
+\
+
 
 ## dockDocumentNetworkResolver
-<p>Given an Api URL, resolve the network ID
-For now it will be applied for creds and certs
-It can be extended to resolve other external URLs</p>
 
-**Kind**: global variable  
-<a name="MessageTypes"></a>
+Given an Api URL, resolve the network ID For now it will be applied for creds and certs It can be extended to resolve other external URLs
+
+**Kind**: global variable\
+
 
 ## MessageTypes
-<p>DIDComm Message helpers
-Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details</p>
 
-**Kind**: global constant  
-<a name="isValid"></a>
+DIDComm Message helpers Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details
 
-## isValid(credential) ⇒ <code>Promise.&lt;Object&gt;</code>
-<p>Uses Dock SDK to verify a credential</p>
+**Kind**: global constant\
 
-**Kind**: global function  
-**Returns**: <code>Promise.&lt;Object&gt;</code> - <p>Verification result with status and optional error/warning messages</p>  
 
-| Param |
-| --- |
-| credential | 
+## isValid(credential) ⇒ `Promise.<Object>`
 
-<a name="syncCredentialStatus"></a>
+Uses Dock SDK to verify a credential
+
+**Kind**: global function\
+**Returns**: `Promise.<Object>` -
+
+Verification result with status and optional error/warning messages
+
+| Param      |
+| ---------- |
+| credential |
 
 ## syncCredentialStatus(param0) ⇒
-<p>Fetch credential status from the chain and update the wallet
-Store a new document <credentialId>#status in the wallet
-Returns a list of CredentialStatusDocument</p>
 
-**Kind**: global function  
-**Returns**: <p>CredentialStatusDocument[]</p>  
+Fetch credential status from the chain and update the wallet Store a new document #status in the wallet Returns a list of CredentialStatusDocument
 
-| Param |
-| --- |
-| param0 | 
+**Kind**: global function\
+**Returns**:
 
-<a name="removeCredential"></a>
+CredentialStatusDocument\[]
 
-## removeCredential(param0) ⇒ <code>Promise.&lt;void&gt;</code>
-<p>Removes a credential and its related documents from the wallet</p>
+| Param  |
+| ------ |
+| param0 |
 
-**Kind**: global function  
+## removeCredential(param0) ⇒ `Promise.<void>`
 
-| Param |
-| --- |
-| param0 | 
+Removes a credential and its related documents from the wallet
 
-<a name="buildRequestVerifiablePresentationMessage"></a>
+**Kind**: global function
+
+| Param  |
+| ------ |
+| param0 |
 
 ## buildRequestVerifiablePresentationMessage()
-<p>Sender: Verifier
-OOB message to request a verifiable presentation from the holder</p>
 
-**Kind**: global function  
-<a name="buildAckWalletToWalletVerificationMessage"></a>
+Sender: Verifier OOB message to request a verifiable presentation from the holder
+
+**Kind**: global function\
+
 
 ## buildAckWalletToWalletVerificationMessage()
-<p>Sender: Holder
-Start a wallet to wallet verification flow</p>
 
-**Kind**: global function  
-<a name="buildVerifiablePresentationMessage"></a>
+Sender: Holder Start a wallet to wallet verification flow
+
+**Kind**: global function\
+
 
 ## buildVerifiablePresentationMessage()
-<p>Sender: Holder
-Send a verifiable presentation to the verifier</p>
 
-**Kind**: global function  
-<a name="buildVerifiablePresentationAckMessage"></a>
+Sender: Holder Send a verifiable presentation to the verifier
+
+**Kind**: global function\
+
 
 ## buildVerifiablePresentationAckMessage()
-<p>Sender: Verifier
-Sends an the presentation result to the holder</p>
 
-**Kind**: global function  
-<a name="handleBlockchainNetworkChange"></a>
+Sender: Verifier Sends an the presentation result to the holder
+
+**Kind**: global function\
+
 
 ## handleBlockchainNetworkChange()
-<p>Update existing substrate network connection
-Compare connected substrate connection with the current walle network
-Disconnect and Establish a new connection if the network is different</p>
 
-**Kind**: global function  
-<a name="WalletStatus"></a>
+Update existing substrate network connection Compare connected substrate connection with the current walle network Disconnect and Establish a new connection if the network is different
 
-## WalletStatus : <code>&#x27;closed&#x27;</code> \| <code>&#x27;loading&#x27;</code> \| <code>&#x27;ready&#x27;</code> \| <code>&#x27;error&#x27;</code>
-<p>Possible wallet status values</p>
+**Kind**: global function\
 
-**Kind**: global typedef  
-<a name="KeypairType"></a>
 
-## KeypairType : <code>&#x27;sr25519&#x27;</code> \| <code>&#x27;ed25519&#x27;</code> \| <code>&#x27;ecdsa&#x27;</code>
-<p>Supported keypair types</p>
+## WalletStatus : `'closed'` | `'loading'` | `'ready'` | `'error'`
 
-**Kind**: global typedef  
+Possible wallet status values
+
+**Kind**: global typedef\
+
+
+## KeypairType : `'sr25519'` | `'ed25519'` | `'ecdsa'`
+
+Supported keypair types
+
+**Kind**: global typedef
