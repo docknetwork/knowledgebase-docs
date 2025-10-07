@@ -16,6 +16,14 @@ It is important to have a public key types that is supported by Truvera, the sup
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
 
+## Import DIDs
+
+Import DIDs from JSON objects ([DIDResolutionResponse](https://www.w3.org/TR/did-resolution/) or [Universal Wallet](https://w3c-ccg.github.io/universal-wallet-interop-spec/) format). Supports both encrypted and plaintext wallet exports.
+
+{% openapi-operation spec="dock-labs-api" path="/dids/import" method="post" %}
+[OpenAPI dock-labs-api](https://swagger-api.truvera.io/openapi.yaml)
+{% endopenapi-operation %}
+
 ## List DIDs
 
 Return a list of all DIDs that your user account controls as fully resolved DID documents.
