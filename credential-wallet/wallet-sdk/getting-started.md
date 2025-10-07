@@ -1,13 +1,13 @@
-# Getting Started
+# Truvera Wallet SDK
 
-This guide walks you through the process of setting up the Dock Wallet SDK, creating a wallet, managing decentralized identifiers (DIDs), adding credentials, and verifying them.
+This guide walks you through the process of setting up the Truvera Wallet SDK, creating a wallet, managing decentralized identifiers (DIDs), adding credentials, and verifying them.
 
 ## Installation
 
 To start, you need to install the necessary packages for the wallet SDK and the data store. Open your terminal and run the following command:
 
 ```bash
-yarn add @docknetwork/wallet-sdk-core @docknetwork/wallet-sdk-data-store-typeorm
+npm install @docknetwork/wallet-sdk-core @docknetwork/wallet-sdk-data-store-typeorm
 ```
 
 The `@docknetwork/wallet-sdk-core` provides the core wallet functionality, while `@docknetwork/wallet-sdk-data-store-typeorm` handles data persistence using a local SQLite database.
@@ -16,7 +16,7 @@ The `@docknetwork/wallet-sdk-core` provides the core wallet functionality, while
 
 ### 1. Initialize the Data Store
 
-Before creating a wallet, you need to set up a data store to manage the persistence of wallet data such as DIDs and credentials. Here’s how to create a data store:
+Before creating a wallet, you need to set up a data store to manage the persistence of wallet data such as DIDs and credentials. Here’s how to create a local data store:
 
 ```ts
 import {createDataStore} from '@docknetwork/wallet-sdk-data-store-typeorm/lib';
@@ -28,13 +28,13 @@ const dataStore = await createDataStore({
 });
 ```
 
-This code initializes a SQLite database to store wallet data. You can adjust the `databasePath` and `defaultNetwork` based on your needs.
+This code initializes an SQLite database to store wallet data locally on the device. You can adjust the `databasePath` and `defaultNetwork` based on your needs.
 
-If you want to use the cloud wallet solution, please refer to the [Cloud Wallet Documentation](../cloud-wallet.md) for detailed instructions and configuration options.
+If you want to store data in the Truvera Cloud Wallet, please refer to the [Cloud Wallet Documentation](cloud-wallet.md) for detailed instructions and configuration options.
 
 ### 2. Create a New Wallet
 
-Once the data store is set up, you can create a wallet. The wallet will act as a container for managing your documents, DIDs, and credentials.
+Once the data store is set up, you can create a wallet. The wallet will act as a container for managing your documents, DIDs, and credentials. 
 
 ```ts
 import {createWallet} from '@docknetwork/wallet-sdk-core/lib/wallet';
@@ -73,13 +73,11 @@ const credentialProvider = createCredentialProvider({
   wallet, // Pass the wallet instance
 });
 
+const credentialOfferUrl = 'openid-credential-offer://?credential_offer=%7B%22credential_issuer%22%3A%22https%3A%2F%2Fapi-testnet.truvera.io%2Fopenid%2Fissuers%2F7eff516f-69fb-4b9d-94dc-e88308ec0c4c%22%2C%22credentials%22%3A%5B%22ldp_vc%3AMyCredential%22%5D%2C%22grants%22%3A%7B%22urn%3Aietf%3Aparams%3Aoauth%3Agrant-type%3Apre-authorized_code%22%3A%7B%22pre-authorized_code%22%3A%22AAL4MPpEpWY6daBxVxJ8Q3chxOhvc9qIV3EAyj7dvps%22%2C%22user_pin_required%22%3Afalse%7D%7D%7D';
+
 await credentialProvider.importCredentialFromURI({
-  uri: 'https://creds-testnet.dock.io/8489dc69b69a70c97646ad9b4f256acaddb57762b5a6f661f0c9dae3b7f72ea6', // Credential URL
-  getAuthCode: async () => {
-    // You can implement your own UI to get the password
-    // For this example it will be hardcoded
-    return 'test';
-  },
+  uri: credentialOfferUrl,
+  didProvider,
 });
 
 const credentials = await credentialProvider.getCredentials(); // Retrieve all imported credentials
@@ -91,7 +89,7 @@ In this example, the credential is fetched from a specified URI and imported int
 
 ### 5. Verify a Credential
 
-The Dock Wallet SDK provides built-in functionality for verifying credentials. This is especially useful when interacting with third parties who need to verify your credentials. The verification controller manages this process. Below is an example of how to start a verification, select which credentials to reveal, create a presentation, and submit it for verification.
+The Truvera Wallet SDK provides built-in functionality for verifying credentials. This is especially useful when interacting with third parties who need to verify your credentials. The verification controller manages this process. Below is an example of how to start a verification, select which credentials to reveal, create a presentation, and submit it for verification.
 
 ```ts
 const {
@@ -103,7 +101,7 @@ const controller = createVerificationController({
 });
 
 await controller.start({
-  template: 'https://creds-testnet.dock.io/proof/1fd8c457-f805-4117-9469-67b3e8c70fff', // Proof request template from the verifier
+  template: 'https://creds-testnet.truvera.io/proof/1fd8c457-f805-4117-9469-67b3e8c70fff', // Proof request template from the verifier
 });
 
 controller.selectedCredentials.set(credential.id, {
