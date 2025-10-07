@@ -109,7 +109,7 @@
     * [Publishing in App Stores](credential-wallet/white-label-wallet/publishing-in-app-stores/README.md)
       * [Android Build Testing and Publishing](credential-wallet/white-label-wallet/publishing-in-app-stores/android-build-testing-and-publishing.md)
       * [iOS Build Testing and Publishing](credential-wallet/white-label-wallet/publishing-in-app-stores/ios-build-testing-and-publishing.md)
-  * [Wallet SDK](credential-wallet/wallet-sdk/wallet-SDK-intro.md)
+  * [Wallet SDK](credential-wallet/wallet-sdk/README.md)
     * [Getting started](credential-wallet/wallet-sdk/getting-started/README.md)
       * [Example Credential](https://github.com/docknetwork/wallet-sdk/blob/master/examples/nodejs-example/example-credential.json)
       * [Presentation definition](https://github.com/docknetwork/wallet-sdk/blob/master/examples/nodejs-example/presentation-definition.json)
