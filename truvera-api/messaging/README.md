@@ -21,7 +21,17 @@ Current Truvera wallet implementation supports only YES/NO holder messaging sche
 
 #### **Encrypted message dispatch**
 
-Uses the Truvera API to send an encrypted DIDComm message to the holders  DID. The message script:
+Uses the Truvera API to send an encrypted DIDComm message to the holders  DID.&#x20;
+
+On steps how to create the sender DID see the [Create DID](../dids.md) or step by step instructions in the [Truvera Workspace.](../../workspace/create-an-organization-profile-did.md)\
+
+
+{% hint style="warning" %}
+Static key (did:key method) cannot be used for the senders DID. Please use other available methods (e.g. did:cheqd).\
+Recipient DID from the holder wallet will be a did:key.
+{% endhint %}
+
+The message script:
 
 ```javascript
 const axios = require("axios").default;
