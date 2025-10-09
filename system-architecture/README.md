@@ -4,7 +4,7 @@ icon: folder-tree
 
 # System architecture
 
-## Architectural Overview
+## Architectural overview
 
 ### Components
 
@@ -31,7 +31,7 @@ icon: folder-tree
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-23 at 13.17.00.png" alt=""><figcaption></figcaption></figure>
 
-### Data Storage Details
+### Data storage details
 
 Truvera strives to minimize the data it stores and works to follow SSI best practices of keeping private data with the individual it belongs to. Below we outline what data is used each component of our system.
 
