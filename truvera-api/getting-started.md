@@ -33,7 +33,7 @@ Truvera uses API keys to authenticate requests. You can obtain an API Key by sig
 
 When you generate an API key, you may include a list of whitelisted IP's that can use with that key.
 
-## Architecture Style
+## Architecture style
 
 Truvera is built using a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) architecture. Our API uses standard HTTP response codes, authentication, delivers JSON-encoded responses, accepts form-encoded request bodies, and accepts form-encoded request bodies.
 
@@ -41,11 +41,11 @@ HTTPS is required for all API requests. Requests performed via plain HTTP will b
 
 <table><thead><tr><th width="305">HTTP Method</th><th>Description</th></tr></thead><tbody><tr><td>GET</td><td>Gets one or many resources</td></tr><tr><td>POST</td><td>Creates a new resources</td></tr><tr><td>PATCH</td><td>Partially updates a resource</td></tr><tr><td>DELETE</td><td>Deletes a resource</td></tr></tbody></table>
 
-## Rate Limits
+## Rate limits
 
 We allow you to make up to 200 requests in a 2 minute window (avg 100 reqs/min or 1.6 reqs/second). If you exceed beyond that, you will receive a 429 Too Many Requests response and have to wait up to a minute for the next request depending on when you hit the limit. If you require higher rate limits, please [contact us](../support/).
 
-## Error Handling
+## Error handling
 
 The Truvera API uses standard HTTP response codes to indicate if an API request was successful or unsuccessful.
 

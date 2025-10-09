@@ -1,4 +1,4 @@
-# Create a Design
+# Create a design
 
 ## Create a new design <a href="#h_314866d147" id="h_314866d147"></a>
 
@@ -22,7 +22,7 @@ You can also work on a blank template and add the elements and attributes on a b
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/802008644/688fbef383145393ac06c7cb/Screenshot+2023-08-07+at+15.09.10.png" alt=""><figcaption></figcaption></figure>
 
-## Add Elements <a href="#h_7134d4b8e1" id="h_7134d4b8e1"></a>
+## Add elements <a href="#h_7134d4b8e1" id="h_7134d4b8e1"></a>
 
 You can add images, QR Code, Text fields and HTML Blocks to customise your credential design.
 
@@ -30,7 +30,7 @@ Select **Elements** and choose the elements you need. Once they are placed on th
 
 <div align="left"><figure><img src="../.gitbook/assets/Screenshot 2024-01-26 at 15.12.58.png" alt="" width="165"><figcaption></figcaption></figure></div>
 
-## Add Certificate Attributes <a href="#h_29f46e8321" id="h_29f46e8321"></a>
+## Add certificate attributes <a href="#h_29f46e8321" id="h_29f46e8321"></a>
 
 You can choose which certificate attributes you want to appear on your template. The actual attribute details will be filled in on the issued credentials.
 
@@ -44,7 +44,7 @@ Subject refers to the recipient or item that the credential is being issued to.
 
 If you want your organization’s logo (Issuer Logo) and description (Issuer Description) to appear on your credential, you have to fill out those details in your [Organization Profile (DIDs).](create-an-organization-profile-did.md)
 
-## Other Settings <a href="#h_0097b6e872" id="h_0097b6e872"></a>
+## Other settings <a href="#h_0097b6e872" id="h_0097b6e872"></a>
 
 You can use your brand color for the design background. Chose it by changing the background colour in **Setup.**
 

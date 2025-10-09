@@ -1,10 +1,12 @@
 # Create an organization profile (DID)
 
-What is a DID?
+In Truvera, an organization profile describes an entity that is interacting with credential holders. The core of an organization profile is a DID that maps to the keys used to issue credentials and prove participation in an ecosystem. The profile also contains a name, logo, and description which helps credential holders and ecosystem participants to recognize the organization.
 
-Decentralized identifiers (DIDs) are unique identifiers that are associated with a digital identity. DIDs are made up of a string of letters and numbers that can be stored on the blockchain and can be used to authenticate that identity.
+### What is a DID? <a href="#h_95e2ff9378" id="h_95e2ff9378"></a>
 
-### Create an Organization Profile (DID) <a href="#h_95e2ff9378" id="h_95e2ff9378"></a>
+Decentralized identifiers (DIDs) are unique identifiers that are associated with a digital identity. DIDs are made up of a string of letters and numbers that can be stored on the blockchain and can be used to authenticate that identity by referencing public keys. Issuers use DIDs to publish the keys used to verify credentials, and verifiers use DIDs to prove ecosystem membership.
+
+### Create an organization profile (DID) <a href="#h_95e2ff9378" id="h_95e2ff9378"></a>
 
 To create your organization profiles (DIDs) , select Organization Profiles on the left side menu and then click Create Organization Profile.
 
@@ -34,7 +36,7 @@ Truvera supports 2 types of DID methods did:key and did:cheqd.
 
 ***
 
-### Edit an Organization Profile (DID) <a href="#h_c1052e8bf2" id="h_c1052e8bf2"></a>
+### Edit an organization profile (DID) <a href="#h_c1052e8bf2" id="h_c1052e8bf2"></a>
 
 Click on Organization Profiles in the menu, click on the three dots of the DID you want to edit, and select **Update DID**.
 
@@ -42,7 +44,7 @@ Click on Organization Profiles in the menu, click on the three dots of the DID y
 
 Update the details and select **Update DID**.
 
-### Export an Organization Profile (DID) <a href="#h_157926b249" id="h_157926b249"></a>
+### Export an organization profile (DID) <a href="#h_157926b249" id="h_157926b249"></a>
 
 Click on the three dots of the DID you want to export, and select Export DID.
 
@@ -52,7 +54,9 @@ You can export your DID to a wallet or another platform. Create a password to en
 
 ![](https://downloads.intercomcdn.com/i/o/797658873/66234318d10e677cec479706/Screenshot+2023-08-01+at+14.37.22.png)
 
-### Delete an Organization Profile (DID) <a href="#h_88118e48bc" id="h_88118e48bc"></a>
+The exported profile will be stored as an [Encrypted Data Vault](https://identity.foundation/edv-spec/).
+
+### Delete an organization profile (DID) <a href="#h_88118e48bc" id="h_88118e48bc"></a>
 
 Click on the three dots of the DID you want to delete, and select Delete DID.
 

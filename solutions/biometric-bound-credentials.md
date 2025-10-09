@@ -1,4 +1,4 @@
-# Biometric-Bound Credentials
+# Biometric-bound credentials
 
 ## What are biometric-bound credentials?
 
@@ -74,7 +74,7 @@ Primary credential: the credential which contains the attributes of interest to 
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.22.20.png" alt=""><figcaption></figcaption></figure>
 
-#### Biometric Enrollment
+#### Biometric enrollment
 
 Holder sets up a wallet integrated with the biometric service. When a biometric binding is first required, the holder wallet enrolls the holder in the biometric service.
 

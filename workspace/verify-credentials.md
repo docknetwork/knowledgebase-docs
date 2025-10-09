@@ -1,6 +1,6 @@
 # Verify credentials
 
-Verification process
+## Verification process <a href="#h_d119e38335" id="h_d119e38335"></a>
 
 In a typical verification process, there are three main parties:
 
@@ -10,13 +10,11 @@ In a typical verification process, there are three main parties:
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/801931889/c9976b09a48fe6e88920e78a/631f7526f09bcf3b4b2e6209_3-certificate+fraud-issuer%2C+holder%2C+verifier.jpeg" alt="" width="563"><figcaption></figcaption></figure>
 
-## Steps for the Verifier <a href="#h_4638f9252a" id="h_4638f9252a"></a>
+## Steps for the verifier <a href="#h_4638f9252a" id="h_4638f9252a"></a>
 
 Click on Verification in the left menu and select Create verification template or choose a premade Indentify Verification or Drivers License Verification template.
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-03-21 at 16.31.37.png" alt=""><figcaption></figcaption></figure>
-
-
 
 Add the **Template Title** and **Template Purpose**, which the holder will be able to see. Optionally, you can choose a **Verifier DID** which will be shown to the holder so that they know who is verifying their credential.
 
@@ -50,12 +48,11 @@ When verifying ecosystem bound credentials with paid schemas, the issuance date 
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-08-16 at 16.16.17.png" alt=""><figcaption></figcaption></figure>
 
-Last step for a verification request is to click Request, which will generate a QR code. Every time a new request is made, it generates a new QR code.\
-​
+Last step for a verification request is to click Request, which will generate a QR code. Every time a new request is made, it generates a new QR code.
 
 <figure><img src="../.gitbook/assets/63dc133a7f9006477e2c9e15_4-select request.png" alt=""><figcaption></figcaption></figure>
 
-## Steps for the Holder <a href="#h_551a4bc680" id="h_551a4bc680"></a>
+## Steps for the holder <a href="#h_551a4bc680" id="h_551a4bc680"></a>
 
 First step for the holder is to **Scan** the QR code with their wallet and select the credential(s) that contain the information the verifier is requesting.
 
@@ -67,7 +64,7 @@ If the credentials were issued with Zero Knowledge Proof signatures the holder w
 
 If the credentials are valid and the verification is successful, this is what the holder will see a **Verification Successful** message, if the credential could not be verified a **Verification Failed** message will appear.
 
-## Verification History
+## Verification history
 
 To see a log of all your verification requests, go to Verification and click on **History**.
 
@@ -83,7 +80,7 @@ Verification request templates can only be created in Truvera Workspace, not the
 
 In order to reduce the data stored on the system we recommend deleting the verification template data after it is not needed anymore. Read more about [data retention policies](team-management/data-retention-policies.md).
 
-## Wallet-to-Wallet Verification <a href="#h_9833d67c15" id="h_9833d67c15"></a>
+## Wallet-to-wallet verification <a href="#h_9833d67c15" id="h_9833d67c15"></a>
 
 After creating the verification request in Truvera Workspace it can be imported in to the wallet for a wallet-to-wallet verification.
 

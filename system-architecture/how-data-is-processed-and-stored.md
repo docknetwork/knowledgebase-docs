@@ -1,4 +1,4 @@
-# How Data is Processed and Stored
+# How data is processed and stored
 
 Truvera is designed to balance the requirements of user convenience with privacy and security. This document explains how we make those trade-offs in each part of the platform. This document does not replace the [Dock Labs Master Services Agreement](https://www.dock.io/master-services-agreement) or Data Processing Agreement, but provides additional insight into our architecture and practices.
 
@@ -32,7 +32,7 @@ Other wallet information may be stored unencrypted in the wallet database, such 
 
 Truvera’s white label wallets use Firebase and Google Analytics to track anonymized user activity so that we can improve the service for all users.
 
-## General Considerations&#x20;
+## General considerations&#x20;
 
 The SaaS components of the Truvera platform are hosted in the United States (AWS Northern California Availability Zone). European data is processed under the terms of the US-EU Data Sharing Standard Contractual Clauses which are incorporated into our MSA.
 

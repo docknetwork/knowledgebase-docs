@@ -1,6 +1,6 @@
-# Creating API keys and Webhook endpoints
+# Creating API keys and webhook endpoints
 
-## Creating API Keys <a href="#h_4fdcc1a10e" id="h_4fdcc1a10e"></a>
+## Creating API keys <a href="#h_4fdcc1a10e" id="h_4fdcc1a10e"></a>
 
 To create an API key, under the Developer menu item, click API Keys. Then select Create API key.
 
@@ -16,7 +16,7 @@ Keep your API key safe, for security reasons it will not be shown again. Please 
 
 For more information about API [See API documentation](../truvera-api/)
 
-## Webhooks Endpoints <a href="#h_fae99467a4" id="h_fae99467a4"></a>
+## Webhooks endpoints <a href="#h_fae99467a4" id="h_fae99467a4"></a>
 
 You can add or modify webhook endpoints that will send events when issuing or when transactions occur. Under Developer, select Webhook and click Add Endpoint on the top right.
 

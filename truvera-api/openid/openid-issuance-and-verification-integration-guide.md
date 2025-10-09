@@ -1,4 +1,4 @@
-# OpenID Issuance and Verification Integration Guide
+# OpenID issuance and verification integration guide
 
 This guide provides detailed instructions for implementing OpenID for Verifiable Credential Issuance (OID4VCI) and OpenID for Verifiable Presentation (OID4VP) using a series of API endpoints. It outlines the steps required to set up an issuer, create credential offers, manage the issuance flow, create presentations and verify the issued credentials.&#x20;
 
@@ -12,7 +12,7 @@ Before starting, ensure you have:
 
 Download and use our [Postman Collections](../../Postman_collections/OID4VC%20and%20OID4VP%20testing) to experiment with OpenID standards based credentials.
 
-## Set Up an OID4VCI Issuer
+## Set up an OID4VCI issuer
 
 Create an OID4VCI issuer with the necessary configurations, including claim mappings, credential options, and authentication provider settings.
 
@@ -68,7 +68,7 @@ This endpoint creates an OID4VCI issuer. "authProvider" and "claimMap" are suppl
 {% endtab %}
 {% endtabs %}
 
-### Check the OpenID Issuer Configuration
+### Check the OpenID issuer configuration
 
 <mark style="color:green;">`GET`</mark> /openid/issuers/{issuerId}/.well-known/openid-configuration
 
@@ -90,7 +90,7 @@ This endpoint retrieves the OpenID configuration for the specified issuer.
 {% endtab %}
 {% endtabs %}
 
-## Create Credential Offers
+## Create credential offers
 
 Generate credential offers to initiate the issuance process. Credential offers can be shared with the holder to claim the credential.
 
@@ -125,13 +125,13 @@ This endpoint creates a credential offer linked to the OpenID issuer.
 {% endtab %}
 {% endtabs %}
 
-## Retrieve and Store Credentials
+## Retrieve and store credentials
 
 Using the [Truvera Wallet ](../../credential-wallet/)or any OID4VCI Wallet, scan the QR code received and follow the process to receive the credential.
 
-## Verify Credentials
+## Verify credentials
 
-### Create a new Proof Request&#x20;
+### Create a new proof request&#x20;
 
 This step involves creating a proof request that specifies the requirements for the verifiable presentation. The proof request defines what credentials and claims are expected from the holder.
 
@@ -233,7 +233,7 @@ This endpoint generates a request URL based on the proof request ID. The withReq
 {% endtab %}
 {% endtabs %}
 
-### Verify Presentation
+### Verify presentation
 
 Using the [Truvera Wallet ](../../credential-wallet/)or any OID4VP Wallet, scan the QR code received and follow the process to verify the credential.
 

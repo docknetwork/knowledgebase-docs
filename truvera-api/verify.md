@@ -1,6 +1,6 @@
 # Verify
 
-## VCDM Verification
+## VCDM verification
 
 A verifier upon receiving a verifiable presentation verifies the validity of each credential in the presentation. This includes checking the correctness of the data model of the credential, the authenticity by verifying the issuer's signature and revocation status if the credential is revocable. It then checks whether the presentation contains the signature from the holder on the presentation, including his given challenge.
 
@@ -10,9 +10,9 @@ You can verify issued/received credentials and presentations using this route. V
 
 <table data-full-width="false"><thead><tr><th width="106">Name</th><th width="82">In</th><th width="205">Type</th><th width="89">Required</th><th>Description</th></tr></thead><tbody><tr><td>body</td><td>body</td><td><a href="../developer-documentation/dock-api/index.html.md#schemaverifiablecredential">VerifiableCredential</a> or <a href="../developer-documentation/dock-api/index.html.md#schemaverifiablepresentation">VerifiablePresentation</a></td><td>true</td><td>Provide as the body a Verifiable Credential or Verifiable Presentation JSON-LD document.</td></tr></tbody></table>
 
-{% swagger src="https://swagger-api.truvera.io/openapi.yaml" path="/verify" method="post" %}
+{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/verify" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endswagger %}
+{% endopenapi %}
 
 
 

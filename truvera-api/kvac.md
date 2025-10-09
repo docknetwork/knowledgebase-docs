@@ -12,9 +12,9 @@ Before starting, ensure you have:
 * A trust registry (`trust_registry_id`)
 * A schema (`http://example.org/schema/kvac`)
 
-## Step-by-Step Guide
+## Step-by-step guide
 
-### 1. Invite Participants to Trust Registry (issuer and verifier)
+### 1. Invite participants to trust registry (issuer and verifier)
 
 Invite issuers and verifiers to the trust registry and assign them the schema that will be used in the `KVAC` credential.
 
@@ -62,7 +62,7 @@ Invite issuers and verifiers to the trust registry and assign them the schema th
 }
 ```
 
-### 2. Assign Prices to Schemas
+### 2. Assign prices to schemas
 
 Assign a price to the schema in the trust registry. Prices are specified in "digits" to support fractional cents, where 1 cent is represented as 1,000,000 digits. This ensures precision in transactions and avoids issues related to floating-point arithmetic.
 
@@ -77,7 +77,7 @@ Assign a price to the schema in the trust registry. Prices are specified in "dig
 }
 ```
 
-### 3. List Schemas with Prices
+### 3. List schemas with prices
 
 Retrieve and verify the list of schemas with their assigned prices.
 
@@ -103,7 +103,7 @@ Retrieve and verify the list of schemas with their assigned prices.
 ]
 ```
 
-### 4. Issue Credentials
+### 4. Issue credentials
 
 Issue credentials using the schemas. The credential must be a KVAC credential to enable paid credentials. The use of the `bbdt16` algorithm is required to enable KVAC and paid credentials.
 
@@ -129,7 +129,7 @@ Issue credentials using the schemas. The credential must be a KVAC credential to
 }
 ```
 
-### 5. Create Proof Template
+### 5. Create proof template
 
 Create a proof template using the schema with a price associated and request for verification.
 
@@ -160,7 +160,7 @@ Create a proof template using the schema with a price associated and request for
 }
 ```
 
-### 6. Add the Proof Template to the Trust Registry
+### 6. Add the proof template to the trust registry
 
 Add the proof template to the trust registry to enable it being used by other participants.
 
@@ -174,7 +174,7 @@ Add the proof template to the trust registry to enable it being used by other pa
 }
 ```
 
-### 7. Create Proof Request
+### 7. Create proof request
 
 Create a proof request based on the proof template to verify the credential.
 
@@ -195,11 +195,11 @@ Create a proof request based on the proof template to verify the credential.
 * If using a did that is part of the trust registry but is not assigned as a verifier for that schema the verification process on step 6 will fail with the following error message: `Presentation could not be verified: Error: Verifier DID does not have permission to verify this credential`
 * If using a did that is not part of the trust registry the verification process on step 6 will fail with the following message: `Presentation could not be verified: Error: This credential can only be verified by participants in the ${trust_registry_name} ecosystem. You can learn about the ecosystem by visiting this website: ${trust_registry_url}`
 
-### 8. Verify Presentation
+### 8. Verify presentation
 
 Using the [Truvera Wallet](../credential-wallet/truvera-mobile-wallet/download-truvera-wallet.md), scan the QR code received and follow the process to submit the verification.
 
-### 9. Retrieve Trust Registry Reports
+### 9. Retrieve trust registry reports
 
 Fetch and verify trust registry reports to ensure proper billing and tracking.
 

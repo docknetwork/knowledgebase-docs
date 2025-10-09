@@ -16,7 +16,7 @@ For a credential to be downloadable you need to select [Persist Credential](http
 
 <figure><img src="../../.gitbook/assets/Screenshot 2024-12-19 at 14.51.50.png" alt=""><figcaption></figcaption></figure>
 
-### Deleting Credentials
+### Deleting credentials
 
 If you don’t want to see a certain Verifiable Credentials in your account, select the ones you want to remove and click Delete. This does not delete the credentials themselves, it just removes them from the account view.
 

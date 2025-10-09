@@ -71,7 +71,7 @@ Unique id of the background task. This id can be used to query the job status
 
 This is a schema used in Job operation to get a status of the job.
 
-#### Enumerated Values
+#### Enumerated values
 
 <table data-full-width="false"><thead><tr><th width="158">Property</th><th width="323">Value</th><th>Description</th></tr></thead><tbody><tr><td>JobStatus</td><td>todo <strong>or</strong> finalized <strong>or</strong> in_progress <strong>or</strong> error.</td><td>Job Status variants.</td></tr></tbody></table>
 
@@ -136,7 +136,7 @@ This is a schema used in Presentation operation that represents a type of signat
 
 This is a schema that represents a purpose of credential.
 
-### Enumerated Values
+### Enumerated values
 
 <table><thead><tr><th width="170">Property</th><th width="309">Value</th><th>Description</th></tr></thead><tbody><tr><td>ProofPurpose</td><td>assertionMethod <strong>or</strong> authentication</td><td>Purpose of credential.</td></tr></tbody></table>
 
@@ -218,7 +218,7 @@ This is a schema that represents a Verifiable (signed) Presentation returned by 
 
 <table data-full-width="false"><thead><tr><th width="144">Name</th><th width="163">Type</th><th width="121">Required</th><th>Description</th></tr></thead><tbody><tr><td>@context</td><td><a href="../developer-documentation/dock-api/index.html.md#schemacontext">Context</a></td><td>true</td><td>JSON-LD context.</td></tr><tr><td>id</td><td>string(uri)</td><td>true</td><td>Verifiable (signed) presentation id.</td></tr><tr><td>type</td><td>string</td><td>true</td><td>Verifiable (signed) presentation type.</td></tr><tr><td>verifiableCredential</td><td><a href="../developer-documentation/dock-api/index.html.md#schemaverifiablecredential">VerifiableCredential</a></td><td>true</td><td>Verifiable (signed) Credential returned by API. The current set of properties is almost complete.</td></tr><tr><td>proof</td><td>object</td><td>true</td><td>Proof of credential.</td></tr></tbody></table>
 
-### Child Properties of Proof <a href="#proofchildpropertiespresentation" id="proofchildpropertiespresentation"></a>
+### Child properties of proof <a href="#proofchildpropertiespresentation" id="proofchildpropertiespresentation"></a>
 
 <table data-full-width="false"><thead><tr><th width="162">Name</th><th width="155">Type</th><th width="112">Required</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td><a href="../developer-documentation/dock-api/index.html.md#schemasigtype">SigType</a></td><td>true</td><td>Type of signature.</td></tr><tr><td>proofPurpose</td><td><a href="../developer-documentation/dock-api/index.html.md#schemaproofpurpose">ProofPurpose</a></td><td>true</td><td>Purpose of credential.</td></tr><tr><td>verificationMethod</td><td>string</td><td>true</td><td>Verification method.</td></tr><tr><td>created</td><td>string(date-time[RFC3339])</td><td>true</td><td>The date and time in GMT that the credential was created specified in RFC 3339 format.</td></tr><tr><td>proofValue</td><td>string</td><td>true</td><td>none</td></tr></tbody></table>
 
@@ -276,7 +276,7 @@ This is a schema that represents a verifiable (signed) Credential returned by AP
 
 <table data-full-width="false"><thead><tr><th width="155">Name</th><th width="127">Type</th><th width="107">Required</th><th>Description</th></tr></thead><tbody><tr><td>@context</td><td><a href="../developer-documentation/dock-api/index.html.md#schemacontext">Context</a></td><td>false</td><td>JSON-LD context.</td></tr><tr><td>id</td><td>string(uri)</td><td>false</td><td>Credential id.</td></tr><tr><td>type</td><td>[string]</td><td>false</td><td>Credential type.</td></tr><tr><td>credentialSubject</td><td>any</td><td>false</td><td>Credential subject.</td></tr><tr><td>issuer</td><td><a href="../developer-documentation/dock-api/index.html.md#schemadiddock">DIDDock</a></td><td>false</td><td>Credential issuer or DID as fully qualified, e.g., <code>did:dock:</code>.</td></tr><tr><td>issuanceDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential was issued specified in RFC 3339 format. The issuanceDate will be automatically set if not provided.</td></tr><tr><td>expirationDate</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential expired is specified in RFC 3339 format. The default value of the expirationDate will be empty if the user does not provide it.</td></tr><tr><td>credentialStatus</td><td>any</td><td>false</td><td>Revocation registry id or user supplied status object.</td></tr><tr><td>proof</td><td>object</td><td>false</td><td>Proof of credential.</td></tr></tbody></table>
 
-### Child Properties of Proof <a href="#proofchildpropertiescredentials" id="proofchildpropertiescredentials"></a>
+### Child properties of proof <a href="#proofchildpropertiescredentials" id="proofchildpropertiescredentials"></a>
 
 <table data-full-width="false"><thead><tr><th width="164">Name</th><th width="151">Type</th><th width="129">Required</th><th>Description</th></tr></thead><tbody><tr><td>type</td><td><a href="../developer-documentation/dock-api/index.html.md#schemasigtype">SigType</a></td><td>false</td><td>Type of signature.</td></tr><tr><td>proofPurpose</td><td><a href="../developer-documentation/dock-api/index.html.md#schemaproofpurpose">ProofPurpose</a></td><td>false</td><td>Purpose of credential.</td></tr><tr><td>verificationMethod</td><td>string</td><td>false</td><td>Verification method.</td></tr><tr><td>created</td><td>string(date-time[RFC3339])</td><td>false</td><td>The date and time in GMT that the credential was created specified in RFC 3339 format.</td></tr><tr><td>proofValue</td><td>string</td><td>false</td><td>Value of credential.</td></tr></tbody></table>
 

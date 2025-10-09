@@ -1,4 +1,4 @@
-# Issue-Store-Verify sample flow
+# Issue-store-verify sample flow
 
 This flow refers to Postman, but the general steps are the same however you use the API. The Issue Store Verify collection includes the scripts that automatically propagate results into the next request bodies when you follow the below steps.&#x20;
 
@@ -82,7 +82,7 @@ To add information about your Organization to the DID, e.g. name and logo, you w
 You only need to create a DID once and then you can issue many credentials with it. A subject/holder DID should not be the same as the issuer DID in a real world credential.
 {% endhint %}
 
-## 3. Create a Schema
+## 3. Create a schema
 
 To issue a credential you will need to set a schema that will define which attributes need to be included in the credential.
 
@@ -492,7 +492,6 @@ The proof request is one time use so that the information from the credential ca
 If there is a need to have a static QR code for multiple verification, a small service can be created to make proof requests from the verification template as and when needed.
 {% endhint %}
 
-## 7. Verify the Presentation
+## 7. Verify the presentation
 
 Scan the QR code from the proof presentation using your wallet to verify the credential.
-

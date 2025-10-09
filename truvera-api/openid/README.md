@@ -8,7 +8,7 @@ OpenID issuer endpoint should not be confused with the credential Issuer as it i
 [updated_openapi.yaml](../../.gitbook/assets/updated_openapi.yaml)
 {% endopenapi %}
 
-### Credential Offers
+### Credential offers
 
 Generate credential offers to initiate the issuance process. Credential offers can be shared with the holder to claim the credential. This endpoint creates a credential offer linked to the OpenID issuer.
 

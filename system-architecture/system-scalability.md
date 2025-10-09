@@ -2,17 +2,17 @@
 description: This document explains how we audit the systems scalability.
 ---
 
-# System Scalability
+# System scalability
 
 ## Architecture
 
 Truvera's SaaS systems are engineered for scalability using tools from Amazon AWS and MongoDB Atlas.
 
-## Service Level Agreements
+## Service level agreements
 
 Our contractual SLAs are listed in our [MSA](https://www.dock.io/master-services-agreement).&#x20;
 
-## API Performance Benchmarks
+## API performance benchmarks
 
 We regularly test our platform to ensure we can meet our performance benchmarks. Verifiable credential implementations are unique for every project. It is configured with a different number of DIDs, ecosystems, different types and numbers of VCs. Those different combinations may affect the application performances differently and are tested separately.
 

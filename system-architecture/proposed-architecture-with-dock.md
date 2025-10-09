@@ -1,12 +1,12 @@
-# Proposed Architecture with Truvera
+# Proposed architecture with Truvera
 
-## Basic Architecture
+## Basic architecture
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-27 at 16.43.29.png" alt=""><figcaption></figcaption></figure>
 
 
 
-## APIs - Truvera’s VC Service
+## APIs - Truvera’s VC service
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-27 at 16.44.11.png" alt=""><figcaption></figcaption></figure>
 
@@ -19,7 +19,7 @@
 | Truvera wallet SDKs | <p>OID4VC<br>DIDcomm</p> | <p>OID4VC<br>DIDcomm</p> |
 | 3rd Party Wallet    | <p>OID4VC<br>DIDcomm</p> | Unsupported              |
 
-## Integration with Customer Systems
+## Integration with customer systems
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-27 at 16.45.53.png" alt=""><figcaption></figcaption></figure>
 

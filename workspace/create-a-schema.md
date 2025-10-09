@@ -1,6 +1,6 @@
 # Create a schema
 
-### Set up a Credential Schema <a href="#h_0bf8dff5dc" id="h_0bf8dff5dc"></a>
+### Set up a credential schema <a href="#h_0bf8dff5dc" id="h_0bf8dff5dc"></a>
 
 Select **Schemas** and click **Create schema**
 
@@ -18,7 +18,7 @@ b) Importing an existing credential template from another source
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/800461315/65abc4192bd133c968fbfc43/6431f2898c76935202fe74db_3-custom+verifiable+credential+attributes.jpeg" alt="" width="375"><figcaption></figcaption></figure>
 
-### Add Credential Attributes manually <a href="#h_faa71c7067" id="h_faa71c7067"></a>
+### Manually add credential attributes <a href="#h_faa71c7067" id="h_faa71c7067"></a>
 
 Click **Create manually**.
 
@@ -48,7 +48,7 @@ The **Issue Date** and **Expiration Date** are default attributes that will appe
 
 ![](<../.gitbook/assets/Screenshot 2024-01-19 at 16.13.52.png>)
 
-### Add Credential Attributes by importing an existing credential schema <a href="#h_b163952b0c" id="h_b163952b0c"></a>
+### Add credential attributes by importing an existing credential schema <a href="#h_b163952b0c" id="h_b163952b0c"></a>
 
 You can import an existing credential schema into Truvera.
 
@@ -62,7 +62,7 @@ Paste the schema URL or JSON in the Schema Import pop up and select Import Schem
 
 Double check to make sure that the correct data format is selected for each data field. Add or remove the fields as necessary and select Publish once ready.
 
-### Edit a Credential Schema <a href="#h_4521818d05" id="h_4521818d05"></a>
+### Edit a credential schema <a href="#h_4521818d05" id="h_4521818d05"></a>
 
 Go to the schema you want to edit, click on the three dots, and select Duplicate.
 
@@ -70,13 +70,13 @@ Go to the schema you want to edit, click on the three dots, and select Duplicate
 
 Update the schema Name so you can tell the difference between this updated version and the original one. Once you’ve made all of your edits, go to the top of the page and select Publish.
 
-### View a Credential Schema <a href="#h_7b90f5840a" id="h_7b90f5840a"></a>
+### View a credential schema <a href="#h_7b90f5840a" id="h_7b90f5840a"></a>
 
 To see the attributes included in a particular schema your can click on the three dots of the credential you want to view, and click **View schema**.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-12-23 at 13.58.24 (1).png" alt=""><figcaption></figcaption></figure>
 
-### Delete a Credential Schema <a href="#h_b89d37d495" id="h_b89d37d495"></a>
+### Delete a credential schema <a href="#h_b89d37d495" id="h_b89d37d495"></a>
 
 Go to Schemas, click on the three dots of the schema you want to delete, and click **Delete schema**.
 

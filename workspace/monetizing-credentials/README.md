@@ -1,6 +1,6 @@
-# Monetizing Credentials
+# Monetizing credentials
 
-### What is Credential Monetization?
+### What is credential monetization?
 
 Truvera has a unique feature that allows setting a verification fee on credentials and introduces a new revenue stream that ecosystem administrator can leverage to motivate issuers to join their ecosystem. It converts credential issuance from expense to profit and is an important step in accelerating adoption of verifiable credentials by creating value for participating parties.&#x20;
 

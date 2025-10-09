@@ -6,14 +6,14 @@ icon: landmark-flag
 
 Truvera is built on W3C open standards, it ensures that users can store their credentials on any digital wallet that adheres to these standards and that any stakeholder, wherever they are in the world, can verify the authenticity of the data as long as their verification system adheres to these standards. If there is a standard for which you would like further clarification or support, please [contact us](../support/).
 
-## Standards Bodies
+## Standards bodies
 
 * [World Wide Web Consortium (W3C)](https://www.w3.org/)
 * [OpenID Foundation (OIDF)](https://openid.net/foundation/)
 * [Decentralized Identity Foundation (DIF)](https://identity.foundation/)
 * [Internet Engineering Task Force (IETF)](https://www.ietf.org/)
 
-## Supported Standards
+## Supported standards
 
 Dock Supports the following open standards:
 
@@ -31,7 +31,7 @@ Dock Supports the following open standards:
 
 <figure><img src="../.gitbook/assets/Screenshot 2025-04-22 at 17.30.54.png" alt=""><figcaption></figcaption></figure>
 
-## Signature Formats
+## Signature formats
 
 Truvera supports following signature formats
 

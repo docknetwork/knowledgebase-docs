@@ -2,7 +2,7 @@
 
 You can create and sign Verifiable Credentials using Truvera API. By default, Truvera does not store the credential - only its metadata. You can choose to persist a credential, in which case we will encrypt and store the credential for later retrieval using a password. Verifiable Credentials are cryptographically secure and tamper-proof. Once issued, they cannot be edited.
 
-## Issue Credential <a href="#issue-credentials" id="issue-credentials"></a>
+## Issue credential <a href="#issue-credentials" id="issue-credentials"></a>
 
 Creates and issues a JSON-LD Verifiable Credential that conforms to the [W3C VCDM specification](https://www.w3.org/TR/vc-data-model/). The `type` values and subject properties must be represented by a schema URI in the `context` property. If you do not specify a `context` property, the API will automatically generate an embedded JSON-LD context based on the properties within your credential. You can read more about JSON-LD and contexts [here](https://json-ld.org/spec/latest/json-ld/#the-context).
 
@@ -27,7 +27,7 @@ By default, Truvera does not store the credential contents at all - only minimal
 
 Truvera credentials support [anonymous credentials](https://blog.dock.io/anonymous-credentials/) using Zero Knowledge Proofs and [Selective Disclosure](https://www.dock.io/post/selective-disclosure) by using the BBS2023 signing algorithm when issuing the credential. To enable this functionality, simply set the `algorithm` field in the request to `dockbbs`.
 
-#### Credential Distribution <a href="#credential-distribution" id="credential-distribution"></a>
+#### Credential distribution <a href="#credential-distribution" id="credential-distribution"></a>
 
 Truvera's API has built in credential distribution on issuance, allowing you to send credentials directly to a holder's email and/or Truvera-compatible wallet. You can achieve this by supplying the `recipientEmail` field and `distribute: true` in your request. For DID distribution, simply set the `credentialSubject.id` property to the holder's DID.
 
@@ -51,7 +51,7 @@ At the moment it is not possible to add a file to the credential itself. If a cr
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
 
-## List Credentials
+## List credentials
 
 When you issue a credential with us, persistent or not, we will store certain metadata about the credential to make it easier for you to reference. You can pull a list of credential metadata using this route. To return the content of a persisted credential, you should use the `GET /credentials/{id}` route.
 
@@ -91,7 +91,7 @@ Lists all created request claims that are open (the holders have not submitted t
 
 
 
-## Delete Credential
+## Delete credential
 
 A credential can have its metadata deleted, and if persisted the contents will also be deleted. Deleting a credential will remove any reference to it and its contents from our systems. This action cannot be undone. This action will not revoke or invalidate the credential in any way.
 

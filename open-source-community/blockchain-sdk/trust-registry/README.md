@@ -3,13 +3,13 @@ hidden: true
 noIndex: true
 ---
 
-# Trust Registry
+# Trust registry
 
 Verifiable credentials have an advantage over physical documents, because they cannot be forged. However, there is still a fraud risk if a credential is issued by someone that has no authority to do so.
 
 How can a verifier be sure that the credential came from an authorized issuer? And vice-versa, how can a credential holder know which verifiers are trustworthy and that it is okay to share their credentials with them? Trust registry is a solution to answer this problem.
 
-## What is a Trust Registry?
+## What is a trust registry?
 
 \
 A trust registry is an on-chain list of relationships between issuers and verifiers. It simplifies the process of identifying which issuers and verifiers are trustworthy within a particular ecosystem.  These registries serve as secure repositories for identity information, leveraging blockchain technology to ensure its integrity and reliability.

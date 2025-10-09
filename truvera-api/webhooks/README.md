@@ -2,7 +2,7 @@
 
 We provide webhooks for asynchronous integration with the API. You can configure a webhook to receive notifications whenever events occur within the API (see below for the list of published events). To use our webhook, you need to set the webhook URL that acts as a receiver receiving the information whenever an event happens. You also need to select **at least one** of the webhook events from Truvera Workspace to trigger the data exchange.
 
-## How to Setup Webhook
+## How to setup a webhook
 
 To setup webhook, simply follow the steps below:
 
@@ -14,7 +14,7 @@ To setup webhook, simply follow the steps below:
 
 You can subscribe to all events by clicking **Receive All** next to **Endpoint Events**
 
-## Webhook Events
+## Webhook events
 
 You can configure the following events to trigger the HTTP request to send the data to your application.
 

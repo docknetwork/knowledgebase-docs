@@ -1,4 +1,4 @@
-# Trust Registry JSON-RPC API
+# Trust registry JSON-RPC API
 
 ## Methods
 
@@ -35,7 +35,7 @@ This method retrieves metadata for a trust registry schema identified by the pro
 * `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve metadata.
 * `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `{ TrustRegistryId, AggregatedTrustRegistrySchemaMetadata }` Returns a dictionary where each key is a TrustRegistryId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema.
 
@@ -147,7 +147,7 @@ This method retrieves information about the issuers of a trust registry schema i
 * `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve issuer information.
 * `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `{ TrustRegistryId, AggregatedTrustRegistrySchemaIssuers<T::T> }` Returns a dictionary where each key is a TrustRegistryId and the corresponding value is AggregatedTrustRegistrySchemaIssuers associated with that schema.
 
@@ -234,7 +234,7 @@ This method retrieves information about the verifiers of a trust registry schema
 * `id`: `TrustRegistrySchemaId` - The unique identifier of the trust registry schema for which to retrieve verifier information.
 * `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `{ TrustRegistryId, AggregatedTrustRegistrySchemaIssuers<T::T> }` Returns a dictionary where each key is a TrustRegistryId and the corresponding value is TrustRegistrySchemaVerifiers associated with that schema.
 
@@ -291,7 +291,7 @@ This method retrieves metadata for a trust registry schema identified by the pro
 * `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema metadata.
 * `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `Option<AggregatedTrustRegistrySchemaMetadata>` If the schema metadata is found within the specified registry, it returns AggregatedTrustRegistrySchemaMetadata; otherwise, it returns null.
 
@@ -362,7 +362,7 @@ This method retrieves information about the issuers of a trust registry schema i
 * `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema issuers.
 * `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `Option<AggregatedTrustRegistrySchemaIssuers>` If the schema issuers are found within the specified registry, it returns AggregatedTrustRegistrySchemaIssuers; otherwise, it returns null.
 
@@ -423,7 +423,7 @@ This method retrieves information about the verifiers of a trust registry schema
 * `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry within which to search for the schema verifiers.
 * `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `Option<TrustRegistrySchemaVerifiers>` If the schema issuers are found within the specified registry, it returns `TrustRegistrySchemaVerifiers`; otherwise, it returns null.
 
@@ -465,7 +465,7 @@ This method retrieves metadata for all trust registry schemas within a specific 
 * `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
 * `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaMetadata }` Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema within the specified registry.
 
@@ -553,7 +553,7 @@ This method retrieves information about the issuers of all trust registry schema
 * `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema issuers.
 * `at`: `Option<BlockHash>` - Optional block hash to query the issuer information at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaIssuers }` Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaIssuers associated with that schema within the specified registry.
 
@@ -628,7 +628,7 @@ This method retrieves information about the verifiers of all trust registry sche
 * `registry_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema verifiers.
 * `at`: `Option<BlockHash>` - Optional block hash to query the verifier information at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `{ TrustRegistrySchemaId => TrustRegistrySchemaVerifiers }` Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is TrustRegistrySchemaVerifiers associated with that schema within the specified registry.
 
@@ -672,7 +672,7 @@ This method retrieves information about trust registries based on specified crit
 * `by`: `QueryTrustRegistriesBy` - Specifies the criteria by which to query trust registries.
 * `at`: `Option<BlockHash>` - Optional block hash to query the information at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `{ TrustRegistryId, TrustRegistryInfo }` Returns a dictionary where each key is a TrustRegistryId and the corresponding value is TrustRegistryInfo associated with that registry.
 
@@ -750,7 +750,7 @@ This method retrieves metadata for trust registry schemas based on specified par
 * `reg_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
 * `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `{ TrustRegistrySchemaId => AggregatedTrustRegistrySchemaMetadata }` Returns a dictionary where each key is a TrustRegistrySchemaId and the corresponding value is AggregatedTrustRegistrySchemaMetadata associated with that schema.
 
@@ -822,7 +822,7 @@ This method retrieves ids of trust registries based on specified parameters, and
 * `by`: `QueryTrustRegistriesBy` - Specifies the criteria by which to query the trust registry identifiers.
 * `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `[TrustRegistryId]` Returns an array where each value is a TrustRegistrySchemaId.
 
@@ -864,7 +864,7 @@ This method retrieves ids for trust registry schemas based on specified paramete
 * `reg_id`: `TrustRegistryId` - The unique identifier of the trust registry for which to retrieve schema metadata.
 * `at`: `Option<BlockHash>` - Optional block hash to query the metadata at a specific point in the blockchain.
 
-### Return Type
+### Return type
 
 `[TrustRegistrySchemaId]` Returns an array where each value is a TrustRegistrySchemaId.
 

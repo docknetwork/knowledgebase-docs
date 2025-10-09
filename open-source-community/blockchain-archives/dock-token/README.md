@@ -8,7 +8,7 @@ Thank you for your interest in the Dock token. The Dock network has migrated its
 
 For more information on the merger please read our detailed [blog post. ](https://www.dock.io/post/dock-and-cheqd-form-alliance-to-accelerate-global-adoption-of-decentralized-id)
 
-### Get in Touch with cheqd
+### Get in touch with cheqd
 
 We encourage you to stay connected with the cheqd community:
 

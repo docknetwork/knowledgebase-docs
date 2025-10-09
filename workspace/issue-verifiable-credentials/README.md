@@ -1,6 +1,6 @@
 # Issue verifiable credentials
 
-Issuing Credentials
+## Issuing credentials <a href="#h_c3a1aee140" id="h_c3a1aee140"></a>
 
 In the Credentials menu, click Issue credentials.
 

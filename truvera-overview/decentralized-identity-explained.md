@@ -2,7 +2,7 @@
 
 Decentralized identity is a way of managing online identities that do not rely on storing personal data in centralized databases such as social media platforms or government ID systems. Decentralized identity systems enable users to completely own and control their data.
 
-## **The 3 parties of decentralized identity systems**
+## **The three parties of decentralized identity systems**
 
 1. **Issuer:** An organization that has the authority to issue Verifiable Credentials such a KYC company issuing a KYC credential or online course platform issuing completion certificates.
 2. **Holder:** User who owns the credential and stores it in their digital wallet.
@@ -32,7 +32,7 @@ Blockchain acts as an immutable registry containing the Decentralized Identifier
 {% endtab %}
 {% endtabs %}
 
-### **Decentralized Identifiers (DIDs)**
+### **Decentralized IDentifiers (DIDs)**
 
 Decentralized identifiers (DIDs) are unique identifiers that are associated with a digital identity. DIDs are made up of a string of letters and numbers that can be stored on the blockchain and can be used to authenticate that identity.
 
@@ -44,11 +44,11 @@ Every DID that is created comes with a private and public key pair and some DID 
 
 Whenever an organization issues someone a Verifiable Credential, their public DID is attached to that credential. Because the public DID (and issuer’s public key) is stored on the blockchain, whenever a party wants to verify the authenticity of the credentials, they can check the DID on the blockchain to see if it was really the issuer’s private key that signed the Credential.
 
-### Verifiable Credentials
+### Verifiable credentials
 
 Digital credentials that conform to the [Verifiable Credentials Data Model 1.0](https://www.w3.org/TR/vc-data-model/) developed by the World Wide Web Consortium (W3C) can be referred to as Verifiable Credentials. This standard is a “specification \[that] provides a standard way to express credentials on the Web in a way that is cryptographically secure, privacy-respecting, and machine-verifiable.”
 
-**Benefits of Verifiable Credentials:**
+**Benefits of verifiable credentials:**
 
 * Instantly verifiable, without the need to contact the issuer
 * Tamper-resistant with the use of cryptography

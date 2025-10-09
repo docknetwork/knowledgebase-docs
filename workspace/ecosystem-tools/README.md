@@ -4,7 +4,7 @@ Verifiable credentials have an advantage over physical documents, because they c
 
 How can a verifier be sure that the credential came from an authorized issuer? And vice-versa, how can a credential holder know which verifiers are trustworthy and that it is okay to share their credentials with them? Ecosystem Tools is a solution to answer this problem.
 
-## What is an Ecosystem?
+## What is an ecosystem?
 
 \
 Ecosystem is a network of trusted digital identity issuers and verifiers. It uses a trust registry an on-chain list that contains information on who is authorized and trusted to issue or verify credentials in a particular ecosystem and which credential schemas they can issue and verify.&#x20;

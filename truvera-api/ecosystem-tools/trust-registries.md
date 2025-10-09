@@ -1,8 +1,8 @@
-# Trust Registry Integration Guide
+# Trust Registry integration guide
 
 This guide provides step-by-step instructions for integrating a trust registry into any application using a series of API endpoints. This guide assumes a basic understanding of essential elements such as DIDs, JWTs, and specific configurations.
 
-Download a sample Postman collection [here](../../../Postman\_collections/Ecosystem%20Tools%20\(Trust%20Registry\)).
+Download a sample Postman collection [here](../../Postman_collections/Ecosystem%20Tools%20\(Trust%20Registry\)).
 
 ## Prerequisites
 
@@ -11,9 +11,9 @@ Before starting, ensure you have:
 * A DID for the convener (`did:dock:convener`) with associated profile
 * A DID for the participant (`did:dock:pariticpant`) with associated profile
 
-## Step-by-Step Guide
+## Step-by-step guide
 
-### 1. Create a Trust Registry
+### 1. Create a trust registry
 
 Create a trust registry using the convener's DID and relevant metadata.
 
@@ -53,7 +53,7 @@ Create a trust registry using the convener's DID and relevant metadata.
 }
 ```
 
-### 2. Add Participants to the Trust Registry
+### 2. Add participants to the trust registry
 
 Invite participants (e.g., issuers, verifiers) to the trust registry and assign schemas.
 
@@ -131,7 +131,7 @@ Invite participants (e.g., issuers, verifiers) to the trust registry and assign 
 * Attempting to reuse an invite token will result in an error.
 * Inviting a participant that already exists in the registry may also cause an error.
 
-### 3. Retrieve Trust Registry Details
+### 3. Retrieve trust registry details
 
 Retrieve details of the trust registry, including participants and schemas.
 
@@ -167,7 +167,7 @@ Retrieve details of the trust registry, including participants and schemas.
 * `slug` can be used instead of `trust_registry_id`
 * The public info about a trust registry is available at `GET /trust-registries/{trust_registry_id}/public`
 
-### 4. Update Trust Registry Metadata
+### 4. Update trust registry metadata
 
 Update the metadata of an existing trust registry.
 
@@ -210,9 +210,9 @@ Update the metadata of an existing trust registry.
 }
 ```
 
-### 5. Manage Trust Registry Participants
+### 5. Manage trust registry participants
 
-#### a. Update Participant Information
+#### a. Update participant information
 
 Update a participant's information within the registry.
 
@@ -248,7 +248,7 @@ Update a participant's information within the registry.
 
 **Note:** The name and logo can be updated by modifying the associated DID profile's information.
 
-#### b. Suspend/Unsuspend Participants
+#### b. Suspend or unsuspend participants
 
 Suspend or unsuspend a participant's status within the registry.
 
@@ -314,9 +314,9 @@ Get a list of all participants in the trust registry
 }
 ```
 
-### 6. Manage Schemas
+### 6. Manage schemas
 
-#### a. Assign Schemas to Participants
+#### a. Assign schemas to participants
 
 Assign specific schemas to participants based on their roles.
 
@@ -351,7 +351,7 @@ Assign specific schemas to participants based on their roles.
 }
 ```
 
-#### b. Get Trust Registry Schemas
+#### b. Get trust registry schemas
 
 Retrieve schemas associated with the trust registry.
 
@@ -379,9 +379,9 @@ Retrieve schemas associated with the trust registry.
 }
 ```
 
-### 7. Manage Proof Templates
+### 7. Manage proof templates
 
-#### a. Assign Proof Templates to the Trust Registry
+#### a. Assign proof templates to the trust registry
 
 Assign proof templates to the trust registry to enable credential verification. This will allow the verifiers in the trust registry to use the proof-template
 
@@ -401,7 +401,7 @@ Assign proof templates to the trust registry to enable credential verification. 
 {}
 ```
 
-#### b. Retrieve Proof Templates
+#### b. Retrieve proof templates
 
 Retrieve proof templates associated with the trust registry.
 
@@ -422,9 +422,9 @@ Retrieve proof templates associated with the trust registry.
 }
 ```
 
-### 8. Delete Trust Registry Entities
+### 8. Delete trust registry entities
 
-#### a. Delete a Trust Registry Participant
+#### a. Delete a trust registry participant
 
 Remove a participant from the trust registry.
 
@@ -436,7 +436,7 @@ Remove a participant from the trust registry.
 {}
 ```
 
-#### b. Delete a Trust Registry Proof Template
+#### b. Delete a trust registry proof template
 
 Remove a proof template from the trust registry.
 
@@ -448,7 +448,7 @@ Remove a proof template from the trust registry.
 {}
 ```
 
-#### c. Delete a Trust Registry
+#### c. Delete a trust registry
 
 Delete the entire trust registry.
 
