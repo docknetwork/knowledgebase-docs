@@ -187,8 +187,6 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
 
 ````json
 {
-  "persist": true,
-  "password": "1234",
   "algorithm": "dockbbs",
   "recipientEmail":"agne@truvera.io",
   "distribute": true,
