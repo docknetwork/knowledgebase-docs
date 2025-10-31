@@ -117,7 +117,7 @@
     * [Cloud wallet](credential-wallet/wallet-sdk/cloud-wallet.md)
     * [Biometric plugin](credential-wallet/wallet-sdk/biometric-plugin.md)
     * [Ecosystem Tools](credential-wallet/wallet-sdk/ecosystem-tools.md)
-    * [Other topics](credential-wallet/wallet-sdk/other-topics.md)
+    * [Using WebAssembly](credential-wallet/wallet-sdk/other-topics.md)
     * [Wallet SDK API documentation](credential-wallet/wallet-sdk/index.md)
       * [Wallet SDK Core](credential-wallet/wallet-sdk/api/core.md)
   * [Truvera Wallet release notes](credential-wallet/truvera-wallet-release-notes/README.md)
