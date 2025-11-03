@@ -12,13 +12,13 @@ To help businesses integrate the wallet, Truvera offers several flexible deploym
 
 Truvera's mobile SDK allows you to quickly embed the wallet into your app or your clients’ apps. The SDK is built with a modular feature set, so you can activate only the functionalities you need, making it adaptable to various use cases. With secure, local data storage, users maintain full control of their credentials while ensuring privacy and compliance with data protection standards. This is the best option when you want to maximize user control of their data, which is important for knowledgeable users.
 
-You can see the technical implementation steps [here](wallet-sdk/wallet-SDK-intro.md).
+You can see the technical implementation steps [here](wallet-sdk/).
 
 ### Cloud wallet
 
 Truvera also offers a cloud-based wallet for those who want to reduce barriers to adoption by a non-technical user. The cloud wallet provides secure, encrypted storage of credentials, allowing users to access their digital IDs anytime, anywhere. This solution is ideal for organizations that require scalable, cloud-based credential management.
 
-Read more about the [Cloud wallet](wallet-sdk/cloud-wallet-documentation.md).
+Read more about the [Cloud wallet](broken-reference).
 
 ### White-label wallet
 
