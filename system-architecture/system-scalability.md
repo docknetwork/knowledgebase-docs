@@ -26,27 +26,35 @@ We regularly test our platform to ensure we can meet our performance benchmarks.
 
 ### Issue non anonymous credential
 
-* **Throughput:** Maximum of 90 requests/second, average of 70 requests/second
+* **Throughput:** Maximum of 78 requests/second, average of 50 requests/second
 * **Response Times**:
-  * Average: 110 ms
-  * 95% Percentile: 140 ms
-  * Maximum: 1200 ms &#x20;
+  * Average: 343 ms
+  * 95% Percentile: 1 s
+  * Maximum: 6 s &#x20;
 
 ### Issue anonymous credential
 
-* **Throughput:** Maximum of 30 requests/second, average of 20 requests/second
+* **Throughput:** Maximum of 74 requests/second, average of 49 requests/second
 * **Response Times**:
-  * Average: 3 seconds
-  * 95% Percentile: 6 seconds
-  * Maximum: 23 seconds
+  * Average: 452 ms
+  * 95% Percentile: 2 seconds
+  * Maximum: 6 seconds
 
-### Verify credential
+### Verify non-anonymous credential
 
-* **Throughput:** Maximum of 80 requests/second, average of 70 requests/second
+* **Throughput:** Maximum of 80 requests/second, average of 54 requests/second
 * **Response Times**:
-  * Average: 240 ms
-  * 95% Percentile: 260 ms
-  * Maximum: 1240 ms
+  * Average: 340 ms
+  * 95% Percentile: 414 ms
+  * Maximum: 1 s
+
+### Verify anonymous credential
+
+* **Throughput:** Maximum of 75 requests/second, average of 49 requests/second
+* **Response Times**:
+  * Average: 386 ms
+  * 95% Percentile: 485 ms
+  * Maximum: 2 s
 
 
 
