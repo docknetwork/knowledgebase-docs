@@ -38,7 +38,7 @@ Once you’ve added all the fields, click **Publish**. All credential schemas wi
 
 You can also see your new credential templates added to the pre-built templates. So whenever you issue a credential, you will be able to choose a template from this list.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40 (1).png" alt=""><figcaption></figcaption></figure>
 
 Click the Actions menu and select **Preview** to see the attributes that are included in the credential schema or Duplicate to edit the schema.
 
@@ -80,5 +80,4 @@ To see the attributes included in a particular schema your can click on the thre
 
 Go to Schemas, click on the three dots of the schema you want to delete, and click **Delete schema**.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-12-23 at 13.58.24 (2).png" alt=""><figcaption></figcaption></figure>
-
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-23 at 13.58.24 (1).png" alt=""><figcaption></figcaption></figure>

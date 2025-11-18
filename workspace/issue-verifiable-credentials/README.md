@@ -10,7 +10,7 @@ In the Credentials menu, click Issue credentials.
 
 Select a pre-made credential schema by clicking on it's name or [Create your own schema](../create-a-schema.md). You can click on Preview to see what attributes are included in the template.
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40 (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-03-21 at 16.27.40 (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Select a design <a href="#h_662fe7eaa5" id="h_662fe7eaa5"></a>
 
@@ -64,7 +64,7 @@ If you need the credential to expire, turn on the expiration toggle and enter th
 
 ![](https://downloads.intercomcdn.com/i/o/797671954/0a79de9246c232395c2825c1/Screenshot+2023-08-01+at+14.52.52.png)
 
-### Choose credential options  <a href="#h_e26a4957df" id="h_e26a4957df"></a>
+### Choose credential options <a href="#h_e26a4957df" id="h_e26a4957df"></a>
 
 After you have added your credential recipients you will be able to select the credential settings. You have the options to:
 
@@ -84,7 +84,7 @@ Select which [Organization Profile (DID)](../create-an-organization-profile-did.
 
 Truvera offers a choice of 3 different credential variants that have distinct features and are best fit for different use cases.
 
-* **Standard Signature (ed25519)** - a more simple credential variant that is the best option for interoperability with other verifiable credential services.&#x20;
+* **Standard Signature (ed25519)** - a more simple credential variant that is the best option for interoperability with other verifiable credential services.
 * **Anonymous (dockbbs23)** - uses BBS+ to enable selective disclosure and zero knowledge proofs. Best for use cases where user data privacy is a top priority.
 * **EUDI (SD-JWT-VC) -** follows European identity standards for compliance and interoperability.
 
@@ -103,6 +103,6 @@ If you have entered the email address, you will have an option to write a messag
 
 <figure><img src="https://downloads.intercomcdn.com/i/o/797730898/839d62e93c6bb388f29eb493/Screenshot+2023-08-01+at+15.57.06.png" alt="" width="375"><figcaption></figcaption></figure>
 
-If you do not have or want to use DIDs for the credential distribution you will need to enter an email of the recipient or persist the credential.&#x20;
+If you do not have or want to use DIDs for the credential distribution you will need to enter an email of the recipient or persist the credential.
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-07 at 14.16.32.png" alt="" width="375"><figcaption></figcaption></figure>
