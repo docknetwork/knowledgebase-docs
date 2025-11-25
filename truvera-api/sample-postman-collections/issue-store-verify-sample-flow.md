@@ -1,8 +1,8 @@
 # Issue-store-verify sample flow
 
-This flow refers to Postman, but the general steps are the same however you use the API. The Issue Store Verify collection includes the scripts that automatically propagate results into the next request bodies when you follow the below steps.&#x20;
+This flow refers to Postman, but the general steps are the same however you use the API. The Issue Store Verify collection includes the scripts that automatically propagate results into the next request bodies when you follow the below steps.
 
-Download the sample collection [here](../../Postman_collections/Issue-Store-Verify%20flow).
+Download the sample collection [here](https://github.com/docknetwork/knowledgebase-docs/blob/b03df61a74d26b6352779397ea6b0553bd62a76d/truvera-api/sample-postman-collections/Issue-Store-Verify%20flow).
 
 To issue a credential and or a presentation on the holder's behalf, the following steps are required:
 
@@ -43,12 +43,12 @@ The Truvera API supports `did:cheqd` and `did:key` method creation.
 </details>
 
 {% hint style="info" %}
-Creating a cheqd DID submits a transaction to the blockchain, this could take some time to process.&#x20;
+Creating a cheqd DID submits a transaction to the blockchain, this could take some time to process.
 {% endhint %}
 
 ## 2. Update the DID
 
-To add information about your Organization to the DID, e.g. name and logo, you will need to update the DID profile.&#x20;
+To add information about your Organization to the DID, e.g. name and logo, you will need to update the DID profile.
 
 <details>
 
@@ -274,8 +274,6 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
 
 </details>
 
-
-
 ## 5. Import the credential into the wallet
 
 [Download Truvera wallet ](../../credential-wallet/truvera-mobile-wallet/download-truvera-wallet.md)and click on the email link that was sent when issuing the credential. If not using the email distribution download the json of the credential an import it to the wallet using the json import option.
@@ -410,7 +408,7 @@ To verify a credential you will need a verification template, that will indicate
 
 ## 6. Create a proof request
 
-Using the verification template created in the previous step in the endpoint **POST/proof-templates/{id}/** request a single use proof request will be created.&#x20;
+Using the verification template created in the previous step in the endpoint **POST/proof-templates/{id}/** request a single use proof request will be created.
 
 <details>
 
@@ -485,7 +483,7 @@ Using the verification template created in the previous step in the endpoint **P
 </details>
 
 {% hint style="info" %}
-The proof request is one time use so that the information from the credential can be associated to a specific transaction event. However, the proof template can be used as many times as needed.&#x20;
+The proof request is one time use so that the information from the credential can be associated to a specific transaction event. However, the proof template can be used as many times as needed.
 
 If there is a need to have a static QR code for multiple verification, a small service can be created to make proof requests from the verification template as and when needed.
 {% endhint %}

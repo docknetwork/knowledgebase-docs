@@ -740,8 +740,7 @@ _**This interface is obsolete and should not be used for new implementations. Us
 
 Legacy V1 wallet interface for backward compatibility
 
-**Kind**: global interface\
-
+**Kind**: global interface<br>
 
 ## IWallet ⇐ [`IV1Wallet`](core.md#IV1Wallet)
 
@@ -774,8 +773,7 @@ Main wallet interface providing methods for document management, import/export, 
 Deletes the entire wallet and all its documents
 
 **Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Emits**: `WalletEvents.event:walletDeleted`\
-
+**Emits**: `WalletEvents.event:walletDeleted`<br>
 
 ### IWallet.setStatus(newStatus)
 
@@ -807,8 +805,7 @@ Gets the current network ID
 
 The current network identifier
 
-\
-
+<br>
 
 ### IWallet.getDocumentById(id) ⇒ `Promise.<WalletDocument>`
 
@@ -839,8 +836,7 @@ Retrieves all documents stored in the wallet
 
 Array of all documents in the wallet
 
-\
-
+<br>
 
 ### IWallet.getDocumentsById(idList) ⇒ `Promise.<Array.<WalletDocument>>`
 
@@ -1754,29 +1750,25 @@ await credentialProvider.removeCredential('credential-123');
 
 Callback functions for handling different stages of the identity verification process
 
-**Kind**: global interface\
-
+**Kind**: global interface<br>
 
 ## BiometricPlugin
 
 Defines the contract for biometric enrollment and matching operations
 
-**Kind**: global interface\
-
+**Kind**: global interface<br>
 
 ## IDVProvider
 
 Defines the contract for identity verification operations
 
-**Kind**: global interface\
-
+**Kind**: global interface<br>
 
 ## IDVProviderFactory
 
 Creates IDV provider instances with proper event handling and wallet integration
 
-**Kind**: global interface\
-
+**Kind**: global interface<br>
 
 ## IBiometricProvider
 
@@ -1793,15 +1785,13 @@ Provides a high-level API for biometric identity verification operations
 
 Starts the identity verification process using biometric credentials
 
-**Kind**: static property of [`IBiometricProvider`](core.md#IBiometricProvider)\
-
+**Kind**: static property of [`IBiometricProvider`](core.md#IBiometricProvider)<br>
 
 ### IBiometricProvider.eventEmitter
 
 Event emitter for IDV process events (onDeepLink, onMessage, onError, onCancel, onComplete)
 
-**Kind**: static property of [`IBiometricProvider`](core.md#IBiometricProvider)\
-
+**Kind**: static property of [`IBiometricProvider`](core.md#IBiometricProvider)<br>
 
 ### IBiometricProvider.startIDV(proofRequest) ⇒ `Promise.<{enrollmentCredential: Credential, matchCredential: Credential}>`
 
@@ -1912,8 +1902,7 @@ Get all registered handlers sorted by priority
 
 Array of registered handlers sorted by priority (lowest first)
 
-\
-
+<br>
 
 ### defaultQRCodeProcessor.getHandler(id) ⇒
 
@@ -1932,8 +1921,7 @@ The handler if found, undefined otherwise
 
 Clear all registered handlers
 
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-
+**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)<br>
 
 ### defaultQRCodeProcessor.process(data, options) ⇒
 
@@ -1997,15 +1985,13 @@ Result of the promise
 
 OOB message to start a wallet to wallet verification flow The holder will scan it as QR code and should have the context to start the verification flow
 
-\
-
+<br>
 
 ## dockDocumentNetworkResolver
 
 Given an Api URL, resolve the network ID For now it will be applied for creds and certs It can be extended to resolve other external URLs
 
-**Kind**: global variable\
-
+**Kind**: global variable<br>
 
 ## OID4VCHandler ⇒
 
@@ -2157,8 +2143,7 @@ Get all registered handlers sorted by priority
 
 Array of registered handlers sorted by priority (lowest first)
 
-\
-
+<br>
 
 ### defaultQRCodeProcessor.getHandler(id) ⇒
 
@@ -2177,8 +2162,7 @@ The handler if found, undefined otherwise
 
 Clear all registered handlers
 
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-
+**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)<br>
 
 ### defaultQRCodeProcessor.process(data, options) ⇒
 
@@ -2239,57 +2223,49 @@ Result of the promise
 
 DIDComm Message helpers Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details
 
-**Kind**: global constant\
-
+**Kind**: global constant<br>
 
 ## buildRequestVerifiablePresentationMessage()
 
 Sender: Verifier OOB message to request a verifiable presentation from the holder
 
-**Kind**: global function\
-
+**Kind**: global function<br>
 
 ## buildAckWalletToWalletVerificationMessage()
 
 Sender: Holder Start a wallet to wallet verification flow
 
-**Kind**: global function\
-
+**Kind**: global function<br>
 
 ## buildVerifiablePresentationMessage()
 
 Sender: Holder Send a verifiable presentation to the verifier
 
-**Kind**: global function\
-
+**Kind**: global function<br>
 
 ## buildVerifiablePresentationAckMessage()
 
 Sender: Verifier Sends an the presentation result to the holder
 
-**Kind**: global function\
-
+**Kind**: global function<br>
 
 ## handleBlockchainNetworkChange()
 
 Update existing substrate network connection Compare connected substrate connection with the current walle network Disconnect and Establish a new connection if the network is different
 
-**Kind**: global function\
-
+**Kind**: global function<br>
 
 ## WalletStatus : `'closed'` | `'loading'` | `'ready'` | `'error'`
 
 Possible wallet status values
 
-**Kind**: global typedef\
-
+**Kind**: global typedef<br>
 
 ## KeypairType : `'sr25519'` | `'ed25519'` | `'ecdsa'`
 
 Supported keypair types
 
-**Kind**: global typedef\
-
+**Kind**: global typedef<br>
 
 ## BiometricsProviderConfigs : `Object`
 

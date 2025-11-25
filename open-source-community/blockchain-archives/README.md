@@ -2,7 +2,7 @@
 
 With the migration from the Dock blockchain over to the cheqd blockchain the legacy blockchain explorers have been discontinued. However, historical archives for `account` and `transfer` history can be found at [https://archives.dock.io](https://archives.dock.io).
 
-![Archives Screen Example](../blockchain-archives.png)
+![Archives Screen Example](../../.gitbook/assets/blockchain-archives.png)
 
 ## Archived Networks
 
