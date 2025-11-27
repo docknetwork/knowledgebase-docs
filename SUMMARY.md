@@ -5,6 +5,7 @@
   * [Subscription plans & billing](truvera-overview/subscription-plans-and-billing.md)
 * [Solutions](solutions/README.md)
   * [Biometric-bound credentials](solutions/biometric-bound-credentials.md)
+  * [Caller authentication: Truvera Verified Contact](solutions/caller-authentication-truvera-verified-contact.md)
 * [Truvera Workspace](truvera-workspace/README.md)
   * [Create an organization profile (DID)](workspace/create-an-organization-profile-did.md)
   * [Issue verifiable credentials](workspace/issue-verifiable-credentials/README.md)
