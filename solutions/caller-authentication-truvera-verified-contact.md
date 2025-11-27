@@ -2,9 +2,9 @@
 
 ### Overview
 
-Truvera Verified Contact reduces caller verification time up to 80% by replacing security questions with a biometric check through their existing app.
+Truvera Verified Contact reduces caller verification time up to 80% by replacing security questions with a biometric check through your existing app.
 
-When a customer calls your support center, verification can be triggered automatically through your IVR system or manually by agents within your existing CRM. The customer receives a push notification in your company's mobile app, confirms with biometric authentication, and verification completes—all without the customer sharing any personal information verbally.
+When a customer calls your support center, verification can be triggered automatically through your IVR system or manually by agents within your existing CRM. The customer receives a push notification in your company's mobile app, unlocks the app using biometrics, and sees a message asking them to confirm if they are speaking with support. They tap a button to confirm and the verification is complete, all without the customer sharing any personal information verbally.
 
 ### How it works
 
@@ -40,7 +40,6 @@ The Truvera Wallet SDK integrates into your existing customer-facing mobile appl
 
 * Receiving and decrypting encrypted verification requests via DIDComm
 * Displaying authentication prompts to customers
-* Collecting biometric confirmation
 * Sending cryptographically signed responses
 
 [View SDK documentation ](../credential-wallet/wallet-sdk/)
