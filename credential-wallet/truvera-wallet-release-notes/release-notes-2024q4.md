@@ -1,4 +1,8 @@
-# Release Notes 2025Q1
+# Release notes 2025Q1
+
+## Wallet 1.5.5 March 27
+
+DCKA-3474 Removed did:dock creation from the Truvera wallet.
 
 ## Wallet 1.5.4 March 14
 
@@ -36,9 +40,9 @@ DCKA-3787 Fixed a bug where the Toast message was not automatically disappearing
 
 DCKA-3798 Fixed an error when verifying credential "FirstSchnorrVerificationFailed"
 
-DCKA-3640 Fixed a bug where a credential was not issued due to a network issue.&#x20;
+DCKA-3640 Fixed a bug where a credential was not issued due to a network issue.
 
-DCKA-3646  Fixed a verification issue with a non BBS cheqd credential on android.
+DCKA-3646 Fixed a verification issue with a non BBS cheqd credential on android.
 
 ## Wallet 1.5.2 February 12
 
@@ -48,7 +52,7 @@ DCKA-3461 Removed Dock blockchain connection from the wallet testnet.
 
 ### Bug fixes
 
-DCKA-3789 Fixed revoked credential issue.&#x20;
+DCKA-3789 Fixed revoked credential issue.
 
 DCKA-3623 Fixed a bound proof error with the condition "{Number} greater than".
 
