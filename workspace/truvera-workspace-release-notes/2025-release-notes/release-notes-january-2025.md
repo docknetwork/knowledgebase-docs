@@ -1,17 +1,5 @@
 # Release notes Q1 2025
 
-## v1.60.0 April 3
-
-### Updates and new features
-
-DCKA-4779 Upon issuance of the credential there will be no download of the issued credential, credential needs to be distributed via email or DID during issuance or if persisted can be downloaded from the credential view.&#x20;
-
-DCKA-4802 Update API OID4VCI flows to support latest spec requirements
-
-### Bug fixes&#x20;
-
-DCKA-3089  Fixed an error where the verification template attribute field would change value if edited.&#x20;
-
 ## v1.59.0 March 27
 
 ### Updates and new features
@@ -32,7 +20,7 @@ DCKA-4776 Move "plan and billing" item from left menu to the profile settings me
 
 ### Updates and new features
 
-DCKA-1169 Added sub-account management to the Workspace UI.&#x20;
+DCKA-1169 Added sub-account management to the Workspace UI.
 
 DCKA-2233 Added filtering for verification history in the API.
 
@@ -44,7 +32,7 @@ DCKA-2987 Proof requests can be created with an expiration date.
 
 DCKA-3091 Renamed the Key column on the API key table to avoid mixing the key alias with the actual API key.
 
-### Bug fixes&#x20;
+### Bug fixes
 
 DCKA-3110 Fixed a typo in the credential distribution email, where the first letter was a vowel.
 
@@ -52,7 +40,7 @@ DCKA-3110 Fixed a typo in the credential distribution email, where the first let
 
 ### Updates and new features
 
-DCKA-3112  Fixed verifying presentations with many different accumulators
+DCKA-3112 Fixed verifying presentations with many different accumulators
 
 DCKA-3113 Added assigning dockbbs keypairs at DID creation via the API.
 
@@ -62,7 +50,7 @@ DCKA-3114 Improved cheqd transaction processing
 
 ### Updates and new features
 
-DCKA-2917 Added production  API support for cheqd blockchain.
+DCKA-2917 Added production API support for cheqd blockchain.
 
 DCKA-2938 did:cheqd becomes the default DID method in Certs.
 
@@ -70,7 +58,7 @@ DCKA-2938 did:cheqd becomes the default DID method in Certs.
 
 ### Updates and new features
 
-DCKA-2941 Credentials will have a new revocation registry assigned automatically.&#x20;
+DCKA-2941 Credentials will have a new revocation registry assigned automatically.
 
 DCKA-2386 Added the option to Delete all verification history in Truvera Workspace.
 
@@ -100,11 +88,10 @@ DCKA-3056 Added the initials of the account user, when there is no profile pictu
 
 ### Updates and new features
 
-DCKA-2915  Released API support for cheqd
+DCKA-2915 Released API support for cheqd
 
 ### Bug fixes
 
-DCKA-2989 Fixed an issue in the Truvera Workspace, when a polygon did was selected and then changed to a different did the subject id field would still have the "Request info" checkbox selected.&#x20;
+DCKA-2989 Fixed an issue in the Truvera Workspace, when a polygon did was selected and then changed to a different did the subject id field would still have the "Request info" checkbox selected.
 
 DCKA-3028 Added a better message for a team invitation that has been accepted twice.
-
