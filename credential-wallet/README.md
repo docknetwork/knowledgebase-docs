@@ -4,7 +4,7 @@ icon: wallet
 
 # Credential wallet
 
-Truvera's Credential Wallet technology provides a secure, flexible solution for managing and sharing verifiable credentials across platforms. With the ability to store tamper-proof credentials, the wallet ensures that users can easily share their information for verification, while maintaining full control over their data.&#x20;
+Truvera's Credential Wallet technology provides a secure, flexible solution for managing and sharing verifiable credentials across platforms. With the ability to store tamper-proof credentials, the wallet ensures that users can easily share their information for verification, while maintaining full control over their data.
 
 To help businesses integrate the wallet, Truvera offers several flexible deployment options:
 
@@ -18,7 +18,7 @@ You can see the technical implementation steps [here](wallet-sdk/).
 
 Truvera also offers a cloud-based wallet for those who want to reduce barriers to adoption by a non-technical user. The cloud wallet provides secure, encrypted storage of credentials, allowing users to access their digital IDs anytime, anywhere. This solution is ideal for organizations that require scalable, cloud-based credential management.
 
-Read more about the [Cloud wallet](broken-reference).
+Read more about the [Cloud wallet](wallet-sdk/cloud-wallet.md).
 
 ### White-label wallet
 
@@ -30,7 +30,7 @@ To see the full capabilities of the Truvera mobile wallet, you can download it f
 * Android users: Download from the [Google Play store](https://play.google.com/store/apps/details?id=com.truvera.app)
 
 {% hint style="info" %}
-Truvera Wallet supports devices that have  Android 8.1 or higher and iOS 11 or higher.
+Truvera Wallet supports devices that have Android 8.1 or higher and iOS 11 or higher.
 {% endhint %}
 
 <table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/64d56c2d933df9ceec8f9b50_white label mockup 01.png" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2dca022c113851b25f_white label mockup 02.webp" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2d550809f0b632e773_white label mockup 03 (1).webp" alt=""></td><td></td></tr></tbody></table>
