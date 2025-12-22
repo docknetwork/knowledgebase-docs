@@ -1,13 +1,13 @@
 ---
-icon: webhook
 description: >-
   A complete solution for creating, managing and presenting Verifiable
   Credentials.
+icon: webhook
 ---
 
 # Truvera API
 
-Truvera API allows you to issue, verify and revoke verifiable credentials, manage DIDs and interact with a blockchain. Truvera integrates industry-leading World Wide Web Consortium (W3C) and VCDM standards, allowing it to interoperate with other open source technologies. We provide a range of open-source software on [GitHub](https://github.com/docknetwork) that can be used alongside the API.&#x20;
+The Truvera API allows you to issue, verify and revoke verifiable credentials, manage DIDs and interact with a blockchain. Truvera integrates industry-leading standards for verifiable credentials, allowing it to interoperate with other identity technologies. We provide a range of open-source software on [GitHub](https://github.com/docknetwork) that can be used alongside the API.
 
 Primary features include:
 
