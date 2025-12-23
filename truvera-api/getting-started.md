@@ -79,6 +79,6 @@ The table below shows the most frequent HTTP error messages:
 
 <table><thead><tr><th width="101">Code</th><th>Meaning</th></tr></thead><tbody><tr><td>400</td><td>Bad Request — Your request was rejected (e.g., missing mandatory field).</td></tr><tr><td>402</td><td>Payment required — Transaction limit reached or upgrade required to proceed</td></tr><tr><td>401</td><td>Unauthorized — Do not own resource or have an invalid API key in the header.</td></tr><tr><td>404</td><td>Not Found — The resource that you're trying to interact with could not be found on the server.</td></tr><tr><td>405</td><td>Method Not Allowed — The requested method does not exist in the API spec. Please check the {did} value and ensure that it's not empty/blank.</td></tr><tr><td>429</td><td>Too Many Requests — You sent too many requests. Please try to reduce the number of requests.</td></tr><tr><td>500</td><td>Server Errors — Something has gone wrong on the server. Contact us if this keeps happening.</td></tr></tbody></table>
 
-## Troubleshooting
+## Development Tips
 
 The Truvera Workspace is built using the REST API, so the network request viewer in your browser's developer tools will show the JSON used in requests and responses which you can then copy to your API calls. You can also examine errors in the browser developer console to get more insight into what is happening.

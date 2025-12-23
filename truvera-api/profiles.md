@@ -1,6 +1,6 @@
 # Profiles
 
-Organization Profiles are used to provide more context for an Issuer DID. Details about the issuer such as name and logo can be added using a Organization Profile. These details will be included in credentials that are issued by the DID.
+Organization profiles are used to provide more context for an Issuer DID. Details about the issuer such as name and logo can be added using a organization profile. These details will be included in credentials that are issued by the DID.
 
 ## Create profile
 
@@ -12,23 +12,19 @@ The `did` and `name` fields are required to create a new Profile.
 
 ## Get profile
 
-When a DID is provided in the path, the API will retrieve the Profile associated with that DID.
+When a DID is provided in the path, the API will retrieve the profile associated with that DID.
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/profiles/{did}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
 
-
-
 ## List profiles
 
-Return a list of all Profiles that your user account controls.
+Return a list of all profiles that your user account controls.
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/profiles" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
-
-
 
 ## Update profile
 
@@ -45,4 +41,3 @@ Deletes a profile from our platform. It does NOT delete the associated DID, nor 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/profiles/{did}" method="delete" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
-
