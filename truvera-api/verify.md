@@ -14,6 +14,6 @@ A verifier upon receiving a verifiable presentation verifies the validity of eac
 
 
 
-{% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/verify" method="post" %}
-[https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
-{% endopenapi %}
+{% openapi-operation spec="dock-labs-api" path="/verify" method="post" %}
+[OpenAPI dock-labs-api](https://swagger-api.truvera.io/openapi.yaml)
+{% endopenapi-operation %}
