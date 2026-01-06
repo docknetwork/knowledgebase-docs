@@ -12,23 +12,21 @@ Understanding key terminology in Truvera will help you to use the API:
 
 <table><thead><tr><th width="140">Terminology</th><th>Description</th></tr></thead><tbody><tr><td>DID</td><td>Decentralized Identifiers (DIDs) are identifiers that enable verifiable, decentralized digital identity. A DID refers to any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) as determined by the controller of the DID. For more information, please refer to the <a href="https://www.w3.org/TR/did/">W3C standard</a> or <a href="https://docknetwork.github.io/sdk/tutorials/concepts_did.html">Credential SDK docs</a>.</td></tr><tr><td>Verifiable Credential</td><td>A verifiable credential is a specific way to express a set of claims made by an issuer so that it is tamper-resistant and can be delivered to a verifier via a wallet in control of the data subject. For more information, pleases refer to the <a href="https://www.w3.org/TR/vc-data-model/">W3C standard</a>.</td></tr><tr><td>Data Schema</td><td>The structure that describes the logical view of the data. It is useful to enforce a specific structure on a collection of data like a verifiable credential.</td></tr><tr><td>Schema</td><td>The list of attributes and structure of a credential that is used to create a verifiable credential of a specific type. It does not contain any cryptographic material and is shareable among issuers.</td></tr><tr><td>Registries</td><td>A reference to a unique credential in context of a process for handling revocation of that credential type.</td></tr><tr><td>Blob</td><td>Blob stands for Binary Large OBject. It is a collection of binary data stored as a single entity. The schemas are identified and retrieved by their unique blob id, which is a 32-byte long hex string.</td></tr><tr><td>DID Resolver</td><td>The tool that initiates the process of learning the DID document.</td></tr></tbody></table>
 
-## Integration paradigms
+## Asynchronous responses
 
-There are three general patterns for using the Truvera API.
+When possible, calling the API will immediately return the desired result in a synchronous response. When the result of an operation may be delayed, an asynchronous pattern is used to close the connection and avoid blocking system resources.
 
-### Synchronous responses
+Calls that are asynchronous due to a dependency on an external system (such as a blockchain) will trigger [a job to be queued](jobs.md). Calls that are asynchronous due to an interaction with another party ([such as requesting a proof presentation from a credential holder](presentations/proof-requests.md)) will return a resource identifier that will be updated as the resource is processed through its workflow.
 
-Simply calling the API will result in a synchronous response. Calls to the API will block until a response is returned.
-
-This is a simple approach for development and testing, but is not suitable for production use because system resources will be blocked until the response is received. This can take a long time if you are waiting for the credential holder to take an action.
+These operations will provide an immediate response to indicate whether a request was accepted for processing, but the result must be obtained asynchronously using one of the methods below. For ease of integration, we recommend starting with polling and then switching to webhooks when needed.
 
 ### Asynchronous polling
 
-By adding a callback URL to an API call, a synchronous response will be immediately returned informing the caller of success or failure. The caller then polls a callback URL until the response is available. This allows the polling to be done in a background thread, unblocking system resources. It also allows the polling to be done by a proxy behind a white-labeled API.
+A call may create a resource with a unique identifier, which can then be checked for updates. System resources can be unblocked by polling for the response in a background thread. Polling can also be done by a proxy behind a white-labeled API.
 
 ### Asynchronous webhook responses
 
-[By registering a webhook](webhooks/), the response will be provided asynchronously when available. The webhook response will confirm that an event occurred and provide you with a identifier that you use to call back and receive the event details. This helps minimize data that would be seen by a 3rd party webhook provider.
+[By registering a webhook](webhooks/), Truvera can asynchronously provide your integration with data when it is available—thereby reducing the load of repeated polling. The webhook response will confirm that an event occurred and provide you with key information about the event. If additional details are needed, the webhook response contains a resource identifier that you can use to call back the same API you would use for polling.
 
 ## Prerequisites
 

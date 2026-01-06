@@ -1,6 +1,8 @@
 # Webhooks
 
-We provide webhooks for asynchronous integration with the API. You can configure a webhook to receive notifications whenever events occur within the API (see below for the list of published events). To use our webhook, you need to set the webhook URL that acts as a receiver receiving the information whenever an event happens. You also need to select **at least one** of the webhook events from Truvera Workspace to trigger the data exchange.
+Truvera allows you to register a webhook for [asynchronous integration with the API](../getting-started.md). When the below listed events occur within the API, the event will be published to the registered webhook URLs that are configured to receive the notification. You also need to select **at least one** of the webhook events from Truvera Workspace to trigger the data exchange.
+
+The webhook response will confirm that an event occurred and provide key information about the event including the relevant resource identifier. Additional information can be obtained by querying the appropriate endpoint for that resource to receive additional details. This pattern helps minimize the data that would be seen by a 3rd party webhook provider.
 
 ## How to setup a webhook
 
