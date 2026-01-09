@@ -4,17 +4,22 @@ Truvera allows you to register a webhook for [asynchronous integration with the 
 
 The webhook response will confirm that an event occurred and provide key information about the event including the relevant resource identifier. Additional information can be obtained by querying the appropriate endpoint for that resource to receive additional details. This pattern helps minimize the data that would be seen by a 3rd party webhook provider.
 
-## How to setup a webhook
+## Step-by-step
 
-To setup webhook, simply follow the steps below:
+1. Start by getting your flow working with polling. That will allow you to troubleshoot your usage of the Truvera API.
+2. Then configure your webhook receiver as appropriate for your deployment environment.
+3.  Next, configure the webhook in Truvera by following these steps:
 
-* Go to **Webhooks** in Truvera Workspace.
-* Click **Add Endpoint**.
-* Fill in the **Endpoint URL** and select **Endpoint Events** for the webhook events.
-* Click **Create Webhook**.
-* Once the webhook is created you will see a secret token. This token is sent in the webook POST request for you to validate that the webhook came from Truvera.
+    1. Go to **Webhooks** in Truvera Workspace.
+    2. Click **Add Endpoint**.
+    3. Fill in the **Endpoint URL** and select **Endpoint Events** for the webhook events.
+    4. Click **Create Webhook**.
+    5. Once the webhook is created you will see a secret token. This token is sent in the webook POST request for you to validate that the webhook came from Truvera.
 
-You can subscribe to all events by clicking **Receive All** next to **Endpoint Events**
+    You can subscribe to all events by clicking **Receive All** next to **Endpoint Events.**
+4. When the webhook triggers, your code should first validate the secret token.
+5. Then check the "event" attribute of the payload to determine the type of event that occurred.
+6. For many events, all the information you need to complete your workflow is contained in the payload. If additional information is needed, you should call the appropriate API endpoint using the same process as is used when polling.
 
 ## Webhook events
 

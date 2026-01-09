@@ -18,7 +18,7 @@ When possible, calling the API will immediately return the desired result in a s
 
 Calls that are asynchronous due to an interaction with another party ([such as requesting a proof presentation from a credential holder](presentations/proof-requests.md)) will return a resource identifier that will be updated as the resource is processed through its workflow. Calls that are asynchronous due to a dependency on an external system (such as a blockchain) will trigger [a job to be queued](jobs.md).
 
-These operations will provide an immediate response to indicate whether a request was accepted for processing, but the result must be obtained asynchronously using one of the methods below. For ease of integration, we recommend starting with polling and then switching to webhooks when needed.
+These operations will provide an immediate response to indicate whether a request was accepted for processing, but the result must be obtained asynchronously using one of the methods below. For ease of integration, we recommend getting your flow to work using polling and then switching to webhooks as you prepare for production usage.
 
 ### Asynchronous polling
 
