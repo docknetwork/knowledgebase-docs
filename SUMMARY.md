@@ -145,6 +145,5 @@
       * [Trust Registry SDK interaction](open-source-community/trust-registry/SDK.md)
 * [Support](support/README.md)
   * [System status](https://truverastatus.io/)
-  * [Discord](https://discord.com/invite/feW8KGf7r3)
   * [Support services](support/support-services.md)
   * [Security policy](support/security-policy.md)
