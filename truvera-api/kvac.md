@@ -2,7 +2,7 @@
 
 This guide provides step-by-step instructions for implementing the KVAC algorithm to issue and verify paid credentials using a series of API endpoints. Follow these instructions to integrate KVAC into your system effectively.
 
-Download a sample Postman collection [here](../Postman_collections/Issuing%20KVAC%20credentials).
+Download a sample Postman collection [here](../Postman_collections/Issuing%20KVAC%20credentials/).
 
 ## Prerequisites
 
@@ -197,7 +197,7 @@ Create a proof request based on the proof template to verify the credential.
 
 ### 8. Verify presentation
 
-Using the [Truvera Wallet](../credential-wallet/truvera-mobile-wallet/download-truvera-wallet.md), scan the QR code received and follow the process to submit the verification.
+Using the [Truvera Wallet](/broken/pages/famFFWGPSQb2hQXJZLId), scan the QR code received and follow the process to submit the verification.
 
 ### 9. Retrieve trust registry reports
 
@@ -225,7 +225,7 @@ Fetch and verify trust registry reports to ensure proper billing and tracking.
 
 ### 10. Assigning additional schemas to participants
 
-Add new schemas  to the Ecosystem by assigning them to each participant.
+Add new schemas to the Ecosystem by assigning them to each participant.
 
 **PATCH/trust-registries/{registryId}/participants/{participantId}** This endpoint allows updating the Trust Registry participant.
 

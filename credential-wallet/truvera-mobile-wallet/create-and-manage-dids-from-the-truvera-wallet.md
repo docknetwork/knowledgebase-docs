@@ -1,8 +1,10 @@
-# Create and Manage DIDs in the Truvera Wallet
+# Create and manage DIDs in the Truvera Wallet
+
+A decentralized identifier (DID) is a globally unique identifier containing an encryption key. This allows communication directly with the wallet in an authenticated and encrypted fashion. During setup, the wallet automatically creates a DID that is used by default for every interaction. Most users will never directly manage the DID in their wallet, but power users might have use cases that benefit from the capabilities described here.
 
 ## Create a DID <a href="#h_2bd05e9472" id="h_2bd05e9472"></a>
 
-Select DIDs at the bottom of your wallet and click on the + sign on the top right of the screen.
+Select DIDs at the bottom of the home screen in the wallet and click on the + sign on the top right of the screen.
 
 ![](https://downloads.intercomcdn.com/i/o/800521688/79eaf9ea1aca13933e02f9ee/63698082f885e5a34effff82_1-Plus+sign+to+start+creating+a+DID.png)
 
@@ -10,15 +12,13 @@ Select Create New DID.
 
 ![](https://downloads.intercomcdn.com/i/o/800523644/3e55b352d156ccd216fc55fe/63698097bf459d7b3fd4cb4a_2-Create+a+new+DID.png)
 
-Choose a DID type.
+You will choose a DID type. Currently only did:key is supported, and it has some useful properties:
 
-{% hint style="warning" %}
-DID:dock requires DOCK token to create. DID:key is free to create.
-{% endhint %}
+* It is a W3C compliant decentralized identifier,
+* It is local to the wallet,
+* And it is free to create.
 
-![](https://downloads.intercomcdn.com/i/o/800530488/d371384b4c30d9479abe885c/f5f56593-2e92-44e1-9313-c5e56dd24796.jpeg)
-
-If you select did:dock. Name your DID and select the DID Payment Account. If you have multiple accounts, you will see an extra field on this screen for you to choose which account to use to pay for the DID.
+You can give the DID a name to help differentiate it from your other DIDs.
 
 Name your DID e.g. Work, University, IDs etc. and select Create.
 

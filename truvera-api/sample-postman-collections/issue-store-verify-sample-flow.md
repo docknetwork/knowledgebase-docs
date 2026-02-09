@@ -276,7 +276,7 @@ To create a Verifiable Credential using the the new issuer DID, update Issuer wi
 
 ## 5. Import the credential into the wallet
 
-[Download Truvera wallet ](../../credential-wallet/truvera-mobile-wallet/download-truvera-wallet.md)and click on the email link that was sent when issuing the credential. If not using the email distribution download the json of the credential an import it to the wallet using the json import option.
+[Download Truvera wallet ](/broken/pages/famFFWGPSQb2hQXJZLId)and click on the email link that was sent when issuing the credential. If not using the email distribution download the json of the credential an import it to the wallet using the json import option.
 
 <div align="left"><figure><img src="../../.gitbook/assets/1723811020918.jpeg" alt="" width="188"><figcaption></figcaption></figure></div>
 

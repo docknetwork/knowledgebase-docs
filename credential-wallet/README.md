@@ -4,42 +4,39 @@ icon: wallet
 
 # Credential wallet
 
-Truvera's Credential Wallet technology provides a secure, flexible solution for managing and sharing verifiable credentials across platforms. With the ability to store tamper-proof credentials, the wallet ensures that users can easily share their information for verification, while maintaining full control over their data.
+Truvera's credential wallet technology provides a secure, flexible solution for managing and sharing verifiable credentials across platforms. With the ability to store tamper-proof credentials, the wallet ensures that users can easily share their information for verification, while maintaining full control over their data. Incorporating a Truvera Wallet into your identity solution will help you to comply with data protection standards while also helping your solution to interoperate with other credential technologies.
 
-To help businesses integrate the wallet, Truvera offers several flexible deployment options:
+Truvera identity wallets are built with the Truvera Wallet SDK, [which is published on GitHub](https://github.com/docknetwork/wallet-sdk/) using a proprietary license. This means that you can study the code and understand how it functions. At the center of the Wallet SDK is the [Truvera Credential SDK](../open-source-community/blockchain-sdk.md), which is an open source library also [available on GitHub](https://github.com/docknetwork/sdk). You can use this library in your own solutions if you are ever unsatisfied with the Truvera wallet offerings.
 
-### Mobile wallet SDK
+Truvera provides several options for making an identity wallet available to your credential holders.
 
-Truvera's mobile SDK allows you to quickly embed the wallet into your app or your clients’ apps. The SDK is built with a modular feature set, so you can activate only the functionalities you need, making it adaptable to various use cases. With secure, local data storage, users maintain full control of their credentials while ensuring privacy and compliance with data protection standards. This is the best option when you want to maximize user control of their data, which is important for knowledgeable users.
+### Truvera Mobile Wallet
 
-You can see the technical implementation steps [here](wallet-sdk/).
-
-### Cloud wallet
-
-Truvera also offers a cloud-based wallet for those who want to reduce barriers to adoption by a non-technical user. The cloud wallet provides secure, encrypted storage of credentials, allowing users to access their digital IDs anytime, anywhere. This solution is ideal for organizations that require scalable, cloud-based credential management.
-
-Read more about the [Cloud wallet](wallet-sdk/cloud-wallet.md).
-
-### White-label wallet
-
-When development speed is a priority , Truvera offers a white-label wallet solution. If you don’t have an existing app, Truvera's White Label Wallet is the best option. It’s a ready-made, tested solution that saves you the time and money of building a wallet from scratch. Truvera takes care of automatic wallet updates making it is easier to maintain.
-
-To see the full capabilities of the Truvera mobile wallet, you can download it from an app store:
+The [Truvera Mobile Wallet](./#truvera-mobile-wallet) is a mature and full-featured identity wallet that is freely available in major app stores to help consumers take control of their identity data.
 
 * iOS users: Download from the the [App store](https://apps.apple.com/br/app/truvera-wallet/id6739359697)
 * Android users: Download from the [Google Play store](https://play.google.com/store/apps/details?id=com.truvera.app)
 
-{% hint style="info" %}
-Truvera Wallet supports devices that have Android 8.1 or higher and iOS 11 or higher.
-{% endhint %}
+Though the Truvera Wallet could be used for a production use case, the wallet is most often used by developers. Once a solution developer is confident that they can create and verify credentials, most will deploy one of the other solutions on this page for production use.
 
-<table data-view="cards"><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><img src="../.gitbook/assets/64d56c2d933df9ceec8f9b50_white label mockup 01.png" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2dca022c113851b25f_white label mockup 02.webp" alt=""></td><td></td></tr><tr><td><img src="../.gitbook/assets/64d56c2d550809f0b632e773_white label mockup 03 (1).webp" alt=""></td><td></td></tr></tbody></table>
+### White-label wallet
 
-With White Label ID wallet you will be able to:
+The [Truvera White-Label Wallet](white-label-wallet/) allows you to easily adapt the Truvera Mobile Wallet for your use case by skinning it with your brand assets and selecting only the features that you need.
 
-* Customize the wallet with your brand identity.
-* Only activate the features you need (composable feature sets).
-* Manage your own App Store profile and relationships with users.
-* Put users in control of their data
+### Wallet SDK
 
-You can see the technical implementation steps [here](white-label-wallet/).
+[Truvera's Wallet SDK](wallet-sdk/) gives you all the functionality you need to build a custom wallet. Common ways of using the Wallet SDK include:
+
+* Building a highly customized identity wallet mobile application,
+* Embedding identity wallet capabilities into an existing application,
+* Embedding the Truvera SDK into your mobile SDK so that your clients can embed wallet capabilities into their applications,
+* Building a custom web wallet interface for credential management by storing credentials in the Truvera Cloud Wallet,
+* Embedding credential exchange flows into existing web applications.
+
+The SDK is built with a modular feature set, so you can activate only the functionalities you need. This can include secure, local data storage in order to have users to maintain full control of their credentials. It can also include storing end-to-end encrypted credentials in the Truvera Cloud Wallet in order to backup credentials or enable them to be used outside of a mobile application.
+
+### Cloud Wallet
+
+The [Truvera Cloud Wallet](wallet-sdk/cloud-wallet.md) is a hosted service for storing credential data so that it can be accessed outside of a specific mobile application. This can be used for credential recovery onto other device or credential usage in a web browser flow. The data is encrypted before storage using the Wallet SDK and a key generated by the user, so the data cannot be accessed by anyone else.
+
+The cloud wallet provides secure, encrypted storage of credentials, allowing users to access their digital IDs anytime, anywhere. This solution is ideal for organizations that require scalable, cloud-based credential management.
