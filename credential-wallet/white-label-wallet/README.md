@@ -25,8 +25,7 @@ You can see the technical implementation steps [here](configuration/).
 {% endcolumn %}
 {% endcolumns %}
 
-To see an example and full capabilities of the Truvera mobile wallet, you can download it from an app store:
+You can see the capabilities that are available for a white-label wallet by playing with the Truvera mobile wallet on your preferred platform:
 
 * iOS users: Download from the the [App store](https://apps.apple.com/br/app/truvera-wallet/id6739359697)
 * Android users: Download from the [Google Play store](https://play.google.com/store/apps/details?id=com.truvera.app)
-
