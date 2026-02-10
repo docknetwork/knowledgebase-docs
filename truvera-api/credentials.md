@@ -2,7 +2,7 @@
 
 Credential issuance is the process of creating and signing a verifiable credential using the Truvera API. Verifiable Credentials are cryptographically secure and tamper-proof. They cannot be edited once issued, but [they can be revoked](credentials.md#credential-issuance-revocation) and replaced with a new credential.
 
-By default, the Truvera API issues a credential to a holder wallet without storing a copy—only credential metadata is stored. If the holder does not yet have a wallet, we recommend [provisioning a cloud wallet](../credential-wallet/wallet-sdk/cloud-wallet.md#step-4-create-a-new-wallet) for that holder and issuing the credential into it. If that is not appropriate for your use case, you can choose to persist the credential, in which case we will encrypt and store the credential for later retrieval using a password.
+By default, the Truvera API issues a credential to a holder wallet without storing a copy—only credential metadata is stored. If the holder does not yet have a wallet, we recommend [provisioning a cloud wallet](../credential-wallet/wallet-sdk/cloud-wallet/#step-4-create-a-new-wallet) for that holder and issuing the credential into it. If that is not appropriate for your use case, you can choose to persist the credential, in which case we will encrypt and store the credential for later retrieval using a password.
 
 The following metadata is stored on each issuance:
 
