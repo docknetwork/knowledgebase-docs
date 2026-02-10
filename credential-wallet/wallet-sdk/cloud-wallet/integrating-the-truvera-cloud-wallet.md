@@ -1,4 +1,4 @@
-# Integrating the Cloud Wallet
+# Integrating the Truvera Cloud Wallet
 
 ### Overview
 
@@ -27,7 +27,7 @@ You also need a [**Schema**](../../../truvera-api/api-docs.md) and a  [**Proof T
 
 ***
 
-### 1. Wallet SDK -- Client-Side
+### 1. Wallet SDK - client side
 
 #### Install
 
@@ -35,7 +35,7 @@ You also need a [**Schema**](../../../truvera-api/api-docs.md) and a  [**Proof T
 npm install @docknetwork/wallet-sdk-web@^0.0.10
 ```
 
-#### Initialize a New Wallet
+#### Initialize a new wallet
 
 ```typescript
 import TruveraWebWallet from '@docknetwork/wallet-sdk-web';
@@ -58,7 +58,7 @@ const did = didDoc.id;  // e.g., "did:dock:5F3s..."
 
 > **Tip:** Wallet initialization can intermittently fail with "Vault indices does not exist" errors. Use a retry loop (3 attempts, 1s delay).
 
-#### Restore an Existing Wallet
+#### Restore an existing wallet
 
 ```typescript
 // Same call, just pass the stored mnemonic
@@ -70,21 +70,21 @@ const wallet = await TruveraWebWallet.initialize({
 });
 ```
 
-#### Import a Credential (OID4VC)
+#### Import a credential (OID4VC)
 
 ```typescript
 // offerUrl comes from the issuance API (see Section 2)
 const credential = await wallet.addCredential(offerUrl);
 ```
 
-#### List Credentials
+#### List credentials
 
 ```typescript
 const credentials = await wallet.getCredentials();
 // Returns: [{ id: "urn:uuid:...", type: [...], credentialSubject: {...}, ... }]
 ```
 
-#### Delete a Credential
+#### Delete a credential
 
 ```typescript
 // Access the inner wallet object for removeDocument
@@ -92,7 +92,7 @@ const innerWallet = (wallet as any).wallet;
 await innerWallet.removeDocument(credentialId);
 ```
 
-#### Submit a Zero-Knowledge Presentation
+#### Submit a zero-knowledge presentation
 
 ```typescript
 const result = await wallet.submitPresentation({
@@ -111,7 +111,7 @@ const result = await wallet.submitPresentation({
 
 ***
 
-### 2. Truvera REST API -- Server-Side
+### 2. Truvera REST API - server side
 
 All API calls use dual-header authentication:
 
@@ -121,7 +121,7 @@ Authorization: Bearer <your-api-key>
 Content-Type: application/json
 ```
 
-#### 2a. Issue a Credential
+#### 2a. Issue a credential
 
 **Step 1: Create an OpenID Issuer**
 
@@ -159,7 +159,7 @@ Response: { "id": "\<issuer-id>", ... }
 
 > **Critical:** Use algorithm: "dockbbs" for BBS+ signatures. This is required for ZK proof generation.
 
-**Step 2: Generate an OID4VC Offer**
+**Step 2: Generate an OID4VC offer**
 
 ```
 POST {API_URL}/openid/credential-offers
@@ -175,7 +175,7 @@ The url is what you pass to wallet.addCredential().
 
 ***
 
-#### 2b. Create a Proof Request
+#### 2b. Create a proof request
 
 ```
 POST {API_URL}/proof-templates/{templateId}/request
@@ -201,7 +201,7 @@ The qr field is the URL you pass to wallet.submitPresentation().
 
 ***
 
-#### 2c. Poll for Verification Result
+#### 2c. Poll for verification result
 
 ```
 GET {API_URL}/proof-requests/{proofRequestId}
@@ -225,22 +225,21 @@ Poll this endpoint (e.g., every 3 seconds) until verified === true. Use exponent
 ### 3. End-to-End Flow Summary
 
 ```
-1. SETUP   - Create Issuer DID and Verifier DID in Truvera workspace   - Create a Proof Template with ZK predicates (e.g., age >= 18)   - Add Issuer DID to template's trusted issuers2. ISSUANCE (Bank/Issuer side)   POST /openid/issuers          --> get issuerId   POST /openid/credential-offers --> get offerUrl   wallet.addCredential(offerUrl) --> credential stored in EDV3. VERIFICATION (Exchange/Verifier side)   POST /proof-templates/{id}/request --> get proofRequestId + qr URL   wallet.submitPresentation({ proofRequestUrl: qr }) --> ZKP submitted   GET /proof-requests/{id}  (poll) --> verified: true
+1. SETUP   
+- Create Issuer DID and Verifier DID in Truvera workspace   
+- Create a Proof Template with ZK predicates (e.g., age >= 18)   
+- Add Issuer DID to template's trusted issuers
+2. ISSUANCE (Bank/Issuer side)
+    POST /openid/issuers  --> get issuerId   
+    POST /openid/credential-offers --> get offerUrl   
+    wallet.addCredential(offerUrl) --> credential stored in EDV
+3. VERIFICATION (Exchange/Verifier side)   
+    POST /proof-templates/{id}/request --> get proofRequestId + qr URL   
+    wallet.submitPresentation({ proofRequestUrl: qr }) --> ZKP submitted
+    GET /proof-requests/{id}  (poll) --> verified: true
 ```
 
-### 4. Key Gotchas
-
-| Issue                                    | Solution                                                   |
-| ---------------------------------------- | ---------------------------------------------------------- |
-| Vault indices does not exist on init     | Retry up to 3 times with 1s delay                          |
-| Proof submission returns undefined error | Ensure Issuer DID is in template's trusted issuers         |
-| removeCredential not found               | Use wallet.wallet.removeDocument(id) (inner wallet object) |
-| Proof never verifies                     |                                                            |
-|                                          |                                                            |
-
-***
-
-### 5. Environment Variables Reference
+### 4. Environment Variables Reference
 
 | Variable                | Where Used                    | Purpose                   |
 | ----------------------- | ----------------------------- | ------------------------- |

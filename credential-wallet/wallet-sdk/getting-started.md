@@ -30,7 +30,7 @@ const dataStore = await createDataStore({
 
 This code initializes an SQLite database to store wallet data locally on the device. You can adjust the `databasePath` and `defaultNetwork` based on your needs.
 
-If you want to store data in the Truvera Cloud Wallet, please refer to the [Cloud Wallet Documentation](cloud-wallet/) for detailed instructions and configuration options.
+If you want to store data in the Truvera Cloud Wallet, please refer to the [Cloud Wallet Documentation](cloud-wallet.md) for detailed instructions and configuration options.
 
 ### 2. Create a new wallet
 

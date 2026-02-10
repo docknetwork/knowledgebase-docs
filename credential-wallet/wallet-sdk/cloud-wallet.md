@@ -1,9 +1,8 @@
-# Cloud Wallet documentation
+# Cloud wallet
 
 The Truvera Cloud Wallet provides SaaS hosted secure storage of a user's identity data. The contents of an individual cloud wallet are accessed through a wallet application. The Truvera Cloud Wallet APIs support synchronization between the cloud storage and local storage of a wallet application. In addition to standard mobile or web wallet applications, the Cloud Wallet also allows credentials to be used in existing web sites through embedded widgets. The Cloud Wallet is especially useful for non-human identity use cases, such as organizational identity wallets and wallets for AI agents.
 
-The implementation is in:
-`@docknetwork/wallet-sdk-core/src/cloud-wallet`
+The implementation is in: `@docknetwork/wallet-sdk-core/src/cloud-wallet`
 
 ## Feature overview
 
@@ -59,6 +58,7 @@ The `masterKey` is used to derive encryption keys for the EDV, while the `mnemon
 **Note:** Encryption keys can be derived from biometric data through a third-party service, offering enhanced security by linking the keys to a user's unique biometric profile.
 
 If the master key is lost, the mnemonic can be used to recover it. Store the mnemonic securely and do not share it with anyone.
+
 ```ts
 import {recoverCloudWalletMasterKey} from '@docknetwork/wallet-sdk-core/lib/cloud-wallet';
 
@@ -82,6 +82,7 @@ const {pullDocuments} = await initializeCloudWallet({
 // Pull documents from the EDV and sync with the wallet
 await pullDocuments();
 ```
+
 **The EDV auth key will need to be obtained from the Truvera support team via support@truvera.io**
 
 The `pullDocuments` function synchronizes the EDV and the wallet by comparing documents and updating the data store accordingly. Documents can be credentials or messages.
@@ -198,8 +199,9 @@ The Truvera Cloud Wallet supports multiple authentication methods to unlock the 
 The Cloud Wallet uses a key mapping system that allows a secondary key (e.g. derived from biometrics) to unlock the same master key that was originally derived from a mnemonic phrase.
 
 The system uses a two-vault architecture:
-- KeyMappingVault: Stores encrypted master keys that can only be accessed with proper authentication
-- CloudWalletVault: The main vault containing wallet documents, secured by the master key
+
+* KeyMappingVault: Stores encrypted master keys that can only be accessed with proper authentication
+* CloudWalletVault: The main vault containing wallet documents, secured by the master key
 
 We will provide an example of how this two-vault architecture can be used to allow biometric authentication to the cloud wallet.
 
@@ -226,7 +228,9 @@ const { masterKey, mnemonic } = await enrollUserWithBiometrics(
 
 // IMPORTANT: Store the mnemonic securely for recovery purposes
 ```
+
 The enrollment process:
+
 1. Creates a unique master key and mnemonic
 2. Generates encryption keys from the biometric data
 3. Encrypts the master key with the biometric-derived keys
@@ -265,7 +269,9 @@ const cloudWallet = await initializeCloudWalletWithBiometrics(
   dataStore
 );
 ```
+
 The authentication process:
+
 1. Uses biometric data and email to access the KeyMappingVault
 2. Finds the encrypted master key associated with the user's email
 3. Derives decryption keys from the provided biometric data
@@ -281,7 +287,6 @@ If only a master key is used, then the mnemonic should also be provided to the u
 Alternatively, one or more recovery keys can be stored in the KeyMappingVault. As they are used, old keys can be removed and new keys can be added.
 
 If a biometrically derived key can no longer be generated, then a recovery key should be used to enroll a new biometric. Any biometric-bound credentials will need to be reissued with the new biometric.
-
 
 ## Organizational wallets
 
