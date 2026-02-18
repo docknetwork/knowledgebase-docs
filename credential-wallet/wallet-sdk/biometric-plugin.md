@@ -1,8 +1,12 @@
-# Biometric Plugin
+# Biometric plugin
 
 ## Purpose
 
-The biometrics plugin allows for the collection of the user's biometric data as part of credential verification. This allows the verification process to guarantee that only the physical person who was issued the credential can perform the verification.
+The biometric plugin allows an integrated biometric service to be called to collection a user's biometric data as part of credential verification. This allows the verification process to guarantee that only the physical person who was issued the credential can perform the verification. It is a distinct integration from [using a biometric to generate a cloud wallet key](https://docs.truvera.io/credential-wallet/wallet-sdk/cloud-wallet#multi-key-authentication) or [unlocking](https://developer.android.com/identity/sign-in/biometric-auth) the [mobile application](https://developer.apple.com/documentation/localauthentication/logging-a-user-into-your-app-with-face-id-or-touch-id), though some biometric service integrations can be reused for these purposes.
+
+{% hint style="info" %}
+**Note:** Truvera does not provide a biometric service. Instead, Truvera provides integration hooks that allow you to connect your own biometric provider. The biometric service is responsible for collecting biometric samples, storing templates, and performing matching. Truvera handles the credential issuance and verification that wraps the result of that process. Let us know if you would like us to introduce you to a biometric partner who is familiar with Truvera.
+{% endhint %}
 
 ## Overview
 
@@ -176,7 +180,6 @@ The biometric check credential needs a unique binding ID that can only be genera
 At the time of verification, the verifier can request the biometric check credential along with the primary credential. If the biometric check credential is recent enough, from the same issuer, and contains the same biometric ID, then the verifier can know it is the same holder presenting the credential.
 
 The biometric ID should not contain the user's actual biometric information. When enrolling a holder in the biometric service, it might be useful to issue an enrolment credential containing the biometric template, the generated biometric ID and any other needed information to identify a returning user. This credential can be verified to get the user's information before checking their biometric. By storing this information with the holder, it avoids the biometric service having to store that PII outside of the control of the holder. The holder should only share a biometric enrollment credential with the biometric service that issued it.
-
 
 ## TrustX biometric plugin
 

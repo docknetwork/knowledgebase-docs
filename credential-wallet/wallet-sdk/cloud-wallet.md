@@ -236,6 +236,10 @@ The enrollment process:
 3. Encrypts the master key with the biometric-derived keys
 4. Stores the encrypted master key in the KeyMappingVault, indexed by the user's email
 
+{% hint style="info" %}
+This pattern requires a third-party biometric service that can provide the cloud wallet master key as the result of a biometric check. If your biometric service does not have this capability, you can associate an identifier for the user (like a phone number or email address) with their biometric template and cloud wallet master key. During enrollment, your service would create a record with this association. When the user returns on any device, they provide their identifier to look up the biometric template needed to complete a biometric check. If the check succeeds, the service retrieves the stored master key and uses it to unlock the cloud wallet. Truvera does not provide this biometric service, but the cloud wallet is designed to support this integration pattern. Contact us if you would like an introduction to a biometric provider who is familiar with the Truvera platform.
+{% endhint %}
+
 In this example, the user email address is provided as a unique identifier to look up the biometric template for highly secure one-to-one biometric matching. The identifier is not shared with issuers or verifiers and any identifier may be used so long as it is convenient for the holder to remember. Phone numbers are another common choice. Biometric solutions that support one-to-n matching might be sufficient for many scenarios and would allow the user to avoid having to remember and provide an identifier. If you use an identifier, remember to verify that the user is actually in control of the identifier or an attacker could register the identifier and prevent the legitimate holder from accessing the service.
 
 #### Step 2: Authenticate with biometrics
