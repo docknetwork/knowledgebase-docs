@@ -59,9 +59,12 @@ Any transaction you perform in **test mode** cannot be used for **production**. 
 
 ## Authentication
 
-Truvera uses API keys to authenticate requests. You can obtain an API key by signing into [Truvera Workspace](https://truvera.io/). Once a key has been generated, it should be included in **all** request headers as below:
+Truvera uses API keys to authenticate requests. You can obtain an API key by signing into [Truvera Workspace](https://truvera.io/). Once a key has been generated, it should be included in **all** request using dual-header authentication as below:
 
-* Authorization: Bearier API\_KEY
+```
+DOCK-API-TOKEN: <API_KEY>
+Authorization: Bearer <API_KEY>
+```
 
 When you generate an API key, you may include a list of whitelisted IP's that can use with that key.
 
