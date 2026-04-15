@@ -1,8 +1,9 @@
-# Cloud wallet
+# Cloud Wallet documentation
 
 The Truvera Cloud Wallet provides SaaS hosted secure storage of a user's identity data. The contents of an individual cloud wallet are accessed through a wallet application. The Truvera Cloud Wallet APIs support synchronization between the cloud storage and local storage of a wallet application. In addition to standard mobile or web wallet applications, the Cloud Wallet also allows credentials to be used in existing web sites through embedded widgets. The Cloud Wallet is especially useful for non-human identity use cases, such as organizational identity wallets and wallets for AI agents.
 
-The implementation is in: `@docknetwork/wallet-sdk-core/src/cloud-wallet`
+The implementation is in:
+`@docknetwork/wallet-sdk-core/src/cloud-wallet`
 
 ## Feature overview
 
@@ -10,7 +11,7 @@ The Truvera Cloud Wallet service hosts individual wallets for each user. The use
 
 Once initialized, the Cloud Wallet service automatically synchronizes documents between the EDV and the wallet application, allowing you to add, update, and remove credentials without dealing with the synchronization logic.
 
-Each holder's individual cloud wallet is accessed using a key in the holder's possession. This key can be stored in the local storage of a wallet application, or derived from a biometric of the holder's. A recovery mnemonic can be used to recover a lost master key.
+Each holder's individual cloud wallet is accessed using a key in the holder's possession. This key can be stored in the local storage of a wallet application, derived from a biometric of the holder's, or derived from a WebAuthn passkey using the PRF extension. A recovery mnemonic can be used to recover a lost master key.
 
 ## Usage example
 
@@ -58,7 +59,6 @@ The `masterKey` is used to derive encryption keys for the EDV, while the `mnemon
 **Note:** Encryption keys can be derived from biometric data through a third-party service, offering enhanced security by linking the keys to a user's unique biometric profile.
 
 If the master key is lost, the mnemonic can be used to recover it. Store the mnemonic securely and do not share it with anyone.
-
 ```ts
 import {recoverCloudWalletMasterKey} from '@docknetwork/wallet-sdk-core/lib/cloud-wallet';
 
@@ -82,7 +82,6 @@ const {pullDocuments} = await initializeCloudWallet({
 // Pull documents from the EDV and sync with the wallet
 await pullDocuments();
 ```
-
 **The EDV auth key will need to be obtained from the Truvera support team via support@truvera.io**
 
 The `pullDocuments` function synchronizes the EDV and the wallet by comparing documents and updating the data store accordingly. Documents can be credentials or messages.
@@ -192,16 +191,15 @@ The Truvera Cloud Wallet supports multiple authentication methods to unlock the 
 
 1. **Mnemonic-based authentication**: The traditional recovery phrase approach
 2. **Biometric authentication**: Using fingerprints, facial recognition, or other biometric data
-3. **Future extensions**: Can be extended to support passkeys and other authentication methods
+3. **Passkey authentication**: Using WebAuthn passkeys with the PRF extension for browser-based wallets
 
 ### How multi-key authentication works
 
 The Cloud Wallet uses a key mapping system that allows a secondary key (e.g. derived from biometrics) to unlock the same master key that was originally derived from a mnemonic phrase.
 
 The system uses a two-vault architecture:
-
-* KeyMappingVault: Stores encrypted master keys that can only be accessed with proper authentication
-* CloudWalletVault: The main vault containing wallet documents, secured by the master key
+- KeyMappingVault: Stores encrypted master keys that can only be accessed with proper authentication
+- CloudWalletVault: The main vault containing wallet documents, secured by the master key
 
 We will provide an example of how this two-vault architecture can be used to allow biometric authentication to the cloud wallet.
 
@@ -228,17 +226,11 @@ const { masterKey, mnemonic } = await enrollUserWithBiometrics(
 
 // IMPORTANT: Store the mnemonic securely for recovery purposes
 ```
-
 The enrollment process:
-
 1. Creates a unique master key and mnemonic
 2. Generates encryption keys from the biometric data
 3. Encrypts the master key with the biometric-derived keys
 4. Stores the encrypted master key in the KeyMappingVault, indexed by the user's email
-
-{% hint style="info" %}
-This pattern requires a third-party biometric service that can provide the cloud wallet master key as the result of a biometric check. If your biometric service does not have this capability, you can associate an identifier for the user (like a phone number or email address) with their biometric template and cloud wallet master key. During enrollment, your service would create a record with this association. When the user returns on any device, they provide their identifier to look up the biometric template needed to complete a biometric check. If the check succeeds, the service retrieves the stored master key and uses it to unlock the cloud wallet. Truvera does not provide this biometric service, but the cloud wallet is designed to support this integration pattern. Contact us if you would like an introduction to a biometric provider who is familiar with the Truvera platform.
-{% endhint %}
 
 In this example, the user email address is provided as a unique identifier to look up the biometric template for highly secure one-to-one biometric matching. The identifier is not shared with issuers or verifiers and any identifier may be used so long as it is convenient for the holder to remember. Phone numbers are another common choice. Biometric solutions that support one-to-n matching might be sufficient for many scenarios and would allow the user to avoid having to remember and provide an identifier. If you use an identifier, remember to verify that the user is actually in control of the identifier or an attacker could register the identifier and prevent the legitimate holder from accessing the service.
 
@@ -273,14 +265,128 @@ const cloudWallet = await initializeCloudWalletWithBiometrics(
   dataStore
 );
 ```
-
 The authentication process:
-
 1. Uses biometric data and email to access the KeyMappingVault
 2. Finds the encrypted master key associated with the user's email
 3. Derives decryption keys from the provided biometric data
 4. Decrypts the master key
 5. Uses the master key to access the CloudWalletVault
+
+#### Passkey authentication
+
+Passkeys provide a passwordless authentication method for web wallets using the WebAuthn PRF (Pseudo-Random Function) extension. The PRF extension extracts deterministic 32-byte key material from a passkey — same passkey + same salt always produces the same bytes. This key material is used to encrypt/decrypt the master key in the KeyMappingVault, following the same pattern as biometric authentication.
+
+**Browser requirements**: Chrome 116+, Safari 18+ (macOS Sequoia / iOS 18), Edge 116+. The PRF extension is a built-in WebAuthn capability — no browser extensions or password manager add-ons are required. It is natively supported by platform authenticators (Touch ID, Windows Hello, Android biometrics) and synced passkey providers (iCloud Keychain, Google Password Manager).
+
+##### Quick start with the web SDK
+
+The simplest way to use passkeys is through the web SDK's `initialize` method with `passkey: true`. This handles enrollment, authentication, and localStorage management automatically:
+
+```js
+import TruveraWebWallet from '@docknetwork/wallet-sdk-web';
+
+const wallet = await TruveraWebWallet.initialize({
+  edvUrl: EDV_URL,
+  edvAuthKey: EDV_AUTH_KEY,
+  networkId: 'testnet',
+  passkey: true,
+});
+
+// wallet.mnemonic is only present on first enrollment
+if (wallet.mnemonic) {
+  // Prompt the user to save their recovery phrase
+  showRecoveryDialog(wallet.mnemonic);
+}
+```
+
+On first visit this registers a passkey, generates a master key, encrypts it, and stores it in the vault. On return visits it authenticates with a single biometric/PIN prompt.
+
+For more control, pass an options object:
+
+```js
+const wallet = await TruveraWebWallet.initialize({
+  edvUrl: EDV_URL,
+  edvAuthKey: EDV_AUTH_KEY,
+  networkId: 'testnet',
+  passkey: {
+    identifier: 'user@example.com',   // Key derivation salt (defaults to hostname)
+    storageKey: 'my-app-passkey',      // Custom localStorage key
+    rpName: 'My Application',          // WebAuthn relying party name
+  },
+});
+```
+
+##### Using the core SDK directly
+
+For non-web environments or when you need full control over the WebAuthn ceremony, use the core SDK functions directly. These receive the PRF output as a parameter — the WebAuthn ceremony is handled separately.
+
+**Step 1: Register a passkey and enroll**
+
+```js
+import {
+  checkPasskeySupport,
+  registerPasskey,
+  getPasskeyPRFKey,
+  enrollPasskey,
+} from '@docknetwork/wallet-sdk-web';
+
+// Option A: High-level — handles register + PRF + vault in one call
+const { mnemonic, passkeyCredentialId } = await enrollPasskey({
+  edvUrl: EDV_URL,
+  edvAuthKey: EDV_AUTH_KEY,
+  identifier: 'user@example.com',
+});
+
+// Option B: Low-level — full control over each step
+const support = await checkPasskeySupport();
+const { credentialId, prfSupported } = await registerPasskey('user@example.com');
+const { prfOutput } = await getPasskeyPRFKey('user@example.com', { credentialId });
+
+import { enrollUserWithPasskey } from '@docknetwork/wallet-sdk-core/lib/cloud-wallet';
+const { masterKey, mnemonic } = await enrollUserWithPasskey(
+  EDV_URL, EDV_AUTH_KEY, prfOutput, 'user@example.com'
+);
+```
+
+**Step 2: Authenticate with passkey**
+
+```js
+import { authenticateWithPasskey } from '@docknetwork/wallet-sdk-core/lib/cloud-wallet';
+import { getPasskeyPRFKey } from '@docknetwork/wallet-sdk-web';
+
+const { prfOutput } = await getPasskeyPRFKey('user@example.com', { credentialId });
+
+const masterKey = await authenticateWithPasskey(
+  EDV_URL, EDV_AUTH_KEY, prfOutput, 'user@example.com'
+);
+```
+
+##### How it works
+
+The passkey authentication process:
+1. Performs a WebAuthn assertion with the PRF extension to extract deterministic key material
+2. Derives vault access keys from the PRF output using HKDF (SHA-256, 32 bytes)
+3. Initializes the KeyMappingVault and finds the encrypted master key
+4. Derives the decryption key from the PRF output
+5. Decrypts the master key using AES-GCM
+
+##### Cross-device support
+
+Passkeys sync automatically across devices via platform credential managers:
+- **Apple**: iCloud Keychain syncs passkeys across all Apple devices with the same Apple ID
+- **Google**: Google Password Manager syncs across Chrome on Android and desktop
+- **Cross-platform**: QR code scanning enables cross-ecosystem authentication (e.g., using an iPhone passkey to authenticate on a Windows PC)
+
+The `credentialId` can be omitted when calling `getPasskeyPRFKey` — the browser will show a passkey picker for discoverable credentials, enabling cross-device usage without pre-stored state.
+
+##### Security considerations
+
+- The `passkeyCredentialId` is a public identifier, safe to store in localStorage
+- PRF output and derived encryption keys exist only in memory during a session — never persisted
+- The PRF salt is deterministic (`SHA-256("truvera-wallet-prf-salt:" + identifier)`) and acts as a domain separator
+- WebAuthn ceremonies require user interaction (biometric/PIN), providing natural rate limiting
+- If a passkey is lost, the user can recover using their mnemonic phrase
+- Passkeys synced via iCloud or Google Password Manager extend the security boundary to the sync provider
 
 ### Wallet recovery
 
@@ -291,6 +397,19 @@ If only a master key is used, then the mnemonic should also be provided to the u
 Alternatively, one or more recovery keys can be stored in the KeyMappingVault. As they are used, old keys can be removed and new keys can be added.
 
 If a biometrically derived key can no longer be generated, then a recovery key should be used to enroll a new biometric. Any biometric-bound credentials will need to be reissued with the new biometric.
+
+For passkey-based wallets, the recovery mnemonic is returned during enrollment. If the passkey is lost (e.g., device replaced, credential deleted), the user can recover their wallet using the mnemonic and optionally enroll a new passkey:
+
+```js
+// Recover with mnemonic, then re-enroll with a new passkey
+const wallet = await TruveraWebWallet.initialize({
+  edvUrl: EDV_URL,
+  edvAuthKey: EDV_AUTH_KEY,
+  networkId: 'testnet',
+  mnemonic: savedMnemonic,
+});
+```
+
 
 ## Organizational wallets
 
