@@ -1,6 +1,6 @@
 # OpenID issuance and verification integration guide
 
-This guide provides detailed instructions for implementing OpenID for Verifiable Credential Issuance (OID4VCI) and OpenID for Verifiable Presentation (OID4VP) using a series of API endpoints. It outlines the steps required to set up an issuer, create credential offers, manage the issuance flow, create presentations and verify the issued credentials.&#x20;
+This guide provides detailed instructions for implementing OpenID for Verifiable Credential Issuance (OID4VCI) and OpenID for Verifiable Presentation (OID4VP) using a series of API endpoints. It outlines the steps required to set up an issuer, create credential offers, manage the issuance flow, create presentations and verify the issued credentials.
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ Before starting, ensure you have:
 * **Verifier DID** (`did:dock:verifier`): The did for the credential verifier.
 * **Holder DID** (`did:key:holder`): The DID for the credential holder (optional)
 
-Download and use our [Postman Collections](../../Postman_collections/OID4VC%20and%20OID4VP%20testing) to experiment with OpenID standards based credentials.
+Download and use our [Postman Collections](../../Postman_collections/OID4VC%20and%20OID4VP%20testing/) to experiment with OpenID standards based credentials.
 
 ## Set up an OID4VCI issuer
 
@@ -19,6 +19,10 @@ Create an OID4VCI issuer with the necessary configurations, including claim mapp
 <mark style="color:green;">`POST`</mark> /openid/issuers
 
 This endpoint creates an OID4VCI issuer. "authProvider" and "claimMap" are supplied as part of the [Authorization Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-authorization-code-flow). It can be omitted for the [Pre-Authorized Code Flow](https://openid.net/specs/openid-4-verifiable-credential-issuance-1_0.html#name-pre-authorized-code-flow).
+
+{% hint style="info" %}
+**Note:** Credential offers created with `"singleUse": false` are not subject to automatic deletion by the retention policy. Because these offers are designed for repeated use, they persist indefinitely until manually deleted. If you want offers to be cleaned up automatically, set `"singleUse": true`.
+{% endhint %}
 
 **Request/Response**
 
@@ -131,7 +135,7 @@ Using the [Truvera Wallet ](../../credential-wallet/)or any OID4VCI Wallet, scan
 
 ## Verify credentials
 
-### Create a new proof request&#x20;
+### Create a new proof request
 
 This step involves creating a proof request that specifies the requirements for the verifiable presentation. The proof request defines what credentials and claims are expected from the holder.
 
@@ -272,4 +276,3 @@ This endpoint retrieves the status and details of the specified proof request, i
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -76,7 +76,6 @@
     * [Messaging API calls](truvera-api/messaging/messaging-api-calls.md)
   * [OpenID](truvera-api/openid/README.md)
     * [OpenID issuance and verification integration guide](truvera-api/openid/openid-issuance-and-verification-integration-guide.md)
-  * [iden3comm](truvera-api/iden3comm.md)
   * [Ecosystem Tools](truvera-api/ecosystem-tools/README.md)
     * [Trust Registry integration guide](truvera-api/ecosystem-tools/trust-registries.md)
     * [Creating a trust registry](truvera-api/ecosystem-tools/creating-a-trust-registry.md)
