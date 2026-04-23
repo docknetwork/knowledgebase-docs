@@ -2,7 +2,11 @@
 
 OpenID issuance is the best way to go, when you need to send the credential to the holder using a deeplink or QR code.
 
-OpenID issuer endpoint should not be confused with the credential Issuer as it is in the Truvera platform. With OpenID creating an OpenID issuer is the first step of credential issuance and will need to be done for each individual credential.&#x20;
+OpenID issuer endpoint should not be confused with the credential Issuer as it is in the Truvera platform. With OpenID creating an OpenID issuer is the first step of credential issuance and will need to be done for each individual credential.
+
+{% hint style="warning" %}
+**Note:** Credential offers created with `"singleUse": false` are not subject to automatic deletion by the retention policy. Because these offers are designed for repeated use, they persist indefinitely until manually deleted. If you want offers to be cleaned up automatically, set `"singleUse": true`.
+{% endhint %}
 
 {% openapi src="../../.gitbook/assets/updated_openapi.yaml" path="/openid/issuers" method="post" %}
 [updated_openapi.yaml](../../.gitbook/assets/updated_openapi.yaml)
@@ -16,19 +20,13 @@ Generate credential offers to initiate the issuance process. Credential offers c
 [updated_openapi.yaml](../../.gitbook/assets/updated_openapi.yaml)
 {% endopenapi %}
 
-
-
 {% openapi src="../../.gitbook/assets/updated_openapi.yaml" path="/openid/issuers" method="get" %}
 [updated_openapi.yaml](../../.gitbook/assets/updated_openapi.yaml)
 {% endopenapi %}
 
-
-
 {% openapi src="../../.gitbook/assets/updated_openapi.yaml" path="/openid/issuers/{id}" method="get" %}
 [updated_openapi.yaml](../../.gitbook/assets/updated_openapi.yaml)
 {% endopenapi %}
-
-
 
 {% openapi src="../../.gitbook/assets/updated_openapi.yaml" path="/openid/issuers/{id}" method="delete" %}
 [updated_openapi.yaml](../../.gitbook/assets/updated_openapi.yaml)
@@ -41,6 +39,3 @@ Generate credential offers to initiate the issuance process. Credential offers c
 {% openapi src="../../.gitbook/assets/updated_openapi.yaml" path="/openid/vp/{id}/request-url" method="post" %}
 [updated_openapi.yaml](../../.gitbook/assets/updated_openapi.yaml)
 {% endopenapi %}
-
-
-
