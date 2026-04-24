@@ -137,6 +137,7 @@
     * [Release notes June 2024](credential-wallet/truvera-wallet-release-notes/release-notes-june-2024.md)
     * [Release notes May 2024](credential-wallet/truvera-wallet-release-notes/release-notes-v.0.4.27-may-30-2024.md)
     * [Release notes April 2024](credential-wallet/truvera-wallet-release-notes/release-notes-v0.4.22-apr-25-2024.md)
+  * [Truvera Web Wallet integration guide](credential-wallet/truvera-web-wallet-integration-guide.md)
 * [Open source community](open-source-community/README.md)
   * [Code of conduct](open-source-community/code_of_conduct.md)
   * [Truvera Credential SDK](open-source-community/blockchain-sdk.md)
