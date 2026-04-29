@@ -197,7 +197,7 @@ Use `dockbbs` (BBS+) as the algorithm when creating issuers if selective disclos
 |---|---|
 | **Key management** | Use passkey (`passkey: true`) as the default. Mnemonic and master key are for recovery or advanced cases only |
 | **Mnemonic backup** | If using mnemonic, prompt the user to save it on first enrollment. Never store it server-side or in localStorage |
-| **EDV auth key** | Issue per-user `edvAuthKey` values after authentication. Never share a single key across users |
+| **EDV auth key** | Contact support@dock.io to obtain your EDV auth key|
 | **API key security** | Keep `TRUVERA_API_KEY` server-side only. Never expose to the client |
 | **Backend auth** | Scope all issuance endpoints to authenticated users. Enforce JWT verification |
 | **Revocation** | Check `credentialStatus` on every presentation before granting access |
