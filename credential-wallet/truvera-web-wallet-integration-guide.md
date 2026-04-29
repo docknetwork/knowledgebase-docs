@@ -9,12 +9,12 @@ A concise reference for integrating Truvera into your application. For the full 
 
 Four components are involved in every integration:
 
-| Component | Role |
+| Actor | Role |
 |---|---|
-| **Customer App** | Frontend that hosts the Truvera Wallet SDK and presents consent UI to the user |
-| **Customer Backend** | Your server — calls the Truvera API, holds your API key, issues and verifies credentials |
-| **Truvera Wallet SDK** | Client-side SDK that manages the user's DID, stores credentials, and builds presentations |
-| **Truvera API** | Truvera's hosted API — handles credential issuance, proof requests, and verification |
+| **Holder** | The credential holder obtains credentials from an issuer, stores those credentials in a individually controlled web wallet, and uses the credentials to establish a trusted relationship with a verifier |
+| **Wallet Provider** | The wallet provider is trusted by the holders to give them access to a web wallet |
+| **Issuer** | The holder identity proofs with the credential issuer before receiving credentials. If the holder does not yet have a wallet, the issuer helps them set one up with the wallet provider. |
+| **Verifer** | The verifier requests credentials from the holder in order to obtain trusted data that will allow the holder to complete a business process |
 
 ---
 
