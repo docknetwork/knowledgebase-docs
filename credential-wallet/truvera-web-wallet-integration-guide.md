@@ -16,6 +16,64 @@ Four components are involved in every integration:
 | **Issuer** | The holder identity proofs with the credential issuer before receiving credentials. If the holder does not yet have a wallet, the issuer helps them set one up with the wallet provider. |
 | **Verifer** | The verifier requests credentials from the holder in order to obtain trusted data that will allow the holder to complete a business process |
 
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User as User (Holder)
+
+    box Wallet Provider
+        participant App as Customer App
+        participant SDK as Truvera Wallet SDK
+    end
+
+    box Issuer
+        participant Backend as Customer Backend
+        participant Truvera as Truvera API
+    end
+
+    Note over User,Truvera: Wallet Initialization (once per user)
+    User->>App: Open app
+    App->>SDK: Initialize wallet
+    SDK-->>App: Wallet ready + DID
+    App->>Backend: Register DID for user
+
+    Note over User,Truvera: Credential Issuance (OID4VCI)
+    User->>App: Authenticate (existing flow)
+    App->>Backend: Request credential issuance
+    Backend->>Truvera: POST /openid/credential-offers (subject DID, attributes)
+    Truvera-->>Backend: Credential offer URL
+    Backend-->>App: Credential offer URL
+    App->>SDK: wallet.addCredential(offerUrl)
+    SDK->>Truvera: Claim credential
+    Truvera-->>SDK: Verifiable Credential
+    SDK-->>App: Credential stored in wallet
+```
+
+
+```mermaid
+sequenceDiagram
+    autonumber
+    actor User
+    participant App as Customer App
+    participant SDK as Truvera Wallet SDK
+    participant Truvera as Truvera API
+    participant Verifier as Customer Backend / External Partner
+
+    Note over User,Verifier: Credential Verification (OID4VP) — default presentation
+    User->>App: Access service
+    App->>Verifier: Request access
+    Verifier->>Truvera: POST /proof-templates/{id}/request
+    Truvera-->>Verifier: Proof request URL
+    Verifier-->>App: Proof request URL
+    App->>SDK: wallet.createPresentation({ proofRequest: url })
+    Note over SDK: Auto-selects matching credentials
+    SDK->>Truvera: Submit signed Verifiable Presentation
+    Verifier->>Truvera: GET /proof-requests/{id}
+    Truvera-->>Verifier: Verified result + attributes
+    Verifier-->>App: Access granted / eligibility confirmed
+    App-->>User: Access granted
+```
+
 ---
 
 ## 1. Wallet Initialization
@@ -146,19 +204,26 @@ Return the proof request URL to the app.
 
 ### Step 3: Build and submit the presentation
 
+When called without credentials, the SDK automatically selects the best matching credentials from the wallet.
+
 **App:**
 
 ```ts
-const credentials = await wallet.getCredentials();
-
-const { submit } = await wallet.createPresentation({
-  proofRequest: proofRequestUrl,
-  credentials: [
-    { id: credential.id, attributesToReveal: ['credentialSubject.fullName'] },
-  ],
+// Using a proof request URL
+const result = await wallet.createPresentation({
+  proofRequest: 'https://creds-staging.truvera.io/proof/77ae2c67-678e-4cb6-8c5d-a4dd4a1a19f1'
 });
 
-await submit();
+// Or using a proof request object
+const result = await wallet.createPresentation({
+  proofRequest: proofRequestObject,
+});
+
+// Inspect the presentation
+console.log(result.presentation);
+
+// Submit when ready
+const response = await result.submit();
 ```
 
 ### Step 4: Poll for the result
