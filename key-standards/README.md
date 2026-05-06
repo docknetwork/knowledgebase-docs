@@ -35,7 +35,7 @@ Truvera supports following signature formats
 
 <table><thead><tr><th width="186">Credential variant</th><th width="466">Signature formats</th></tr></thead><tbody><tr><td>Standard signature</td><td>ed25519</td></tr><tr><td>Anonymous</td><td>dockbbs23</td></tr><tr><td>Anonymous Ecosystem-Bound</td><td>BBDT16 as an algebraic MAC to build keyed anonymous credentials</td></tr><tr><td>EUDI</td><td>SD-JWT-VC</td></tr></tbody></table>
 
-### Encryption
+### Encryption and Cryptography
 
 #### Encryption at rest in Truvera Workspace
 
@@ -46,6 +46,12 @@ Other data is stored on RDS and S3 using AWS's default encryption.
 #### Encryption in transit
 
 Queued messages are encrypted per the DIDComm Message packing.
+
+#### Cryptographic Primitives
+
+Our credential library uses [Arkworks Math Library](https://github.com/arkworks-rs/algebra) for signing credentials and generating proofs.
+
+We also use [Libsodium](https://libsodium.org/) for encryption in communication and storage.
 
 ## Interoperability
 
