@@ -1,2 +1,6 @@
-# Dock Certs Release Notes
+---
+hidden: true
+---
+
+# Truvera Workspace release notes
 

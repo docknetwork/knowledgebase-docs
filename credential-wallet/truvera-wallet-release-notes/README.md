@@ -1,2 +1,6 @@
-# Dock Wallet Release Notes
+---
+hidden: true
+---
+
+# Truvera Wallet release notes
 
