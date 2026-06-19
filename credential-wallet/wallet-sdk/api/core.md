@@ -1,214 +1,193 @@
-# Wallet SDK Core
+# Wallet SDK Core API Documentation
 
 ## Modules
 
-[biometric-provider](core.md#module_biometric-provider)
-
-Biometric plugin for the Truvera Wallet SDK. This module provides functions for biometric enrollment, matching, and identity verification processes.
-
-[cloud-wallet](core.md#module_cloud-wallet)
-
-Cloud wallet functionality for the Truvera Wallet SDK. This module provides the main cloud wallet creation and management functions.
-
-[credential-provider](core.md#module_credential-provider)
-
-Verifiable credential management functionality for the Truvera Wallet SDK. This module provides functions for importing, verifying, storing, and managing verifiable credentials.
-
-[did-provider](core.md#module_did-provider)
-
-DID (Decentralized Identifier) management functionality for the Truvera Wallet SDK. This module provides functions for creating, importing, exporting, and managing DIDs.
-
-[message-provider](core.md#module_message-provider)
-
-DIDComm message management functionality for the Truvera Wallet SDK. This module provides functions for sending, receiving, and processing DIDComm messages.
-
-[wallet](core.md#module_wallet)
-
-Core wallet functionality for the Dock Wallet SDK. This module provides the main wallet creation and management functions.
+<dl>
+<dt><a href="#module_biometric-provider">biometric-provider</a></dt>
+<dd><p>Biometric plugin for the Truvera Wallet SDK.
+This module provides functions for biometric enrollment, matching, and identity verification processes.</p></dd>
+<dt><a href="#module_cloud-wallet">cloud-wallet</a></dt>
+<dd><p>Cloud wallet functionality for the Truvera Wallet SDK.
+This module provides the main cloud wallet creation and management functions.</p></dd>
+<dt><a href="#module_credential-provider">credential-provider</a></dt>
+<dd><p>Verifiable credential management functionality for the Truvera Wallet SDK.
+This module provides functions for importing, verifying, storing, and managing verifiable credentials.</p></dd>
+<dt><a href="#module_did-provider">did-provider</a></dt>
+<dd><p>DID (Decentralized Identifier) management functionality for the Truvera Wallet SDK.
+This module provides functions for creating, importing, exporting, and managing DIDs.</p></dd>
+<dt><a href="#module_message-provider">message-provider</a></dt>
+<dd><p>DIDComm message management functionality for the Truvera Wallet SDK.
+This module provides functions for sending, receiving, and processing DIDComm messages.</p></dd>
+<dt><a href="#module_wallet">wallet</a></dt>
+<dd><p>Core wallet functionality for the Dock Wallet SDK.
+This module provides the main wallet creation and management functions.</p></dd>
+</dl>
 
 ## Classes
 
-[DefaultQRCodeProcessor](core.md#DefaultQRCodeProcessor)
-
-Default implementation of QRCodeProcessor
-
-This processor manages a registry of QR code handlers and executes them in priority order to process scanned QR codes. It provides a flexible, extensible system for handling various types of QR codes in a wallet application.
-
-[OID4VCHandler](core.md#OID4VCHandler)
-
-Built-in handler for OID4VC (OpenID for Verifiable Credentials) URIs
-
-This is a generic handler that can be configured with app-specific callbacks for importing credentials. The handler itself only handles protocol detection and delegates the actual import logic to the configured callback.
-
-### Example Usage
-
-```
-import { OID4VCHandler } from '@docknetwork/wallet-sdk-core/src/qr-handlers/builtin';
+<dl>
+<dt><a href="#DefaultQRCodeProcessor">DefaultQRCodeProcessor</a></dt>
+<dd><p>Default implementation of QRCodeProcessor</p>
+<p>This processor manages a registry of QR code handlers and executes them
+in priority order to process scanned QR codes. It provides a flexible,
+extensible system for handling various types of QR codes in a wallet application.</p></dd>
+<dt><a href="#OID4VCHandler">OID4VCHandler</a></dt>
+<dd><p>Built-in handler for OID4VC (OpenID for Verifiable Credentials) URIs</p>
+<p>This is a generic handler that can be configured with app-specific callbacks
+for importing credentials. The handler itself only handles protocol detection
+and delegates the actual import logic to the configured callback.</p>
+<h2>Example Usage</h2>
+<pre class="prettyprint source lang-typescript"><code>import { OID4VCHandler } from '@docknetwork/wallet-sdk-core/src/qr-handlers/builtin';
 import { getCredentialProvider } from '@docknetwork/wallet-sdk-react-native';
-const handler = new OID4VCHandler({
-  onImportCredential: async (uri, context) => {
+
+<p>const handler = new OID4VCHandler({
+  onImportCredential: async (uri, context) =&gt; {
     try {
       // Use SDK to import credential
       await getCredentialProvider().importCredentialFromURI({
         uri,
         didProvider: getDIDProvider(),
-        getAuthCode: async (authUrl) => {
+        getAuthCode: async (authUrl) =&gt; {
           // App-specific auth handling
           return await showAuthWebView(authUrl);
         },
-      });
-  return { success: true };} catch (error) {  return {    success: false,    error: error instanceof Error ? error : new Error(String(error)),  };}
-  },
-});
-processor.registerHandler(handler);
-```
-
-### Handler Priority
-
-Default priority: 5 (very high) This ensures OID4VC URIs are checked before other credential handlers.
+      });</p>
+<pre><code>  return { success: true };
+} catch (error) {
+  return {
+    success: false,
+    error: error instanceof Error ? error : new Error(String(error)),
+  };
+}
+</code></pre>
+<p>  },
+});</p>
+<p>processor.registerHandler(handler);
+</code></pre></p>
+<h2>Handler Priority</h2>
+<p>Default priority: 5 (very high)
+This ensures OID4VC URIs are checked before other credential handlers.</p></dd>
+</dl>
 
 ## Members
 
-[Goals](core.md#Goals) ⇒[dockDocumentNetworkResolver](core.md#dockDocumentNetworkResolver)
-
-Given an Api URL, resolve the network ID For now it will be applied for creds and certs It can be extended to resolve other external URLs
-
-[OID4VCHandler](core.md#OID4VCHandler) ⇒
-
-Create an OID4VC handler with custom configuration
-
-This is a convenience factory function for creating an OID4VC handler.
-
-[DefaultQRCodeProcessor](core.md#DefaultQRCodeProcessor) ⇒
-
-Create a new QR code processor instance
-
-This is a convenience factory function for creating a processor.
+<dl>
+<dt><a href="#Goals">Goals</a> ⇒</dt>
+<dd></dd>
+<dt><a href="#dockDocumentNetworkResolver">dockDocumentNetworkResolver</a></dt>
+<dd><p>Given an Api URL, resolve the network ID
+For now it will be applied for creds and certs
+It can be extended to resolve other external URLs</p></dd>
+<dt><a href="#OID4VCHandler">OID4VCHandler</a> ⇒</dt>
+<dd><p>Create an OID4VC handler with custom configuration</p>
+<p>This is a convenience factory function for creating an OID4VC handler.</p></dd>
+<dt><a href="#DefaultQRCodeProcessor">DefaultQRCodeProcessor</a> ⇒</dt>
+<dd><p>Create a new QR code processor instance</p>
+<p>This is a convenience factory function for creating a processor.</p></dd>
+</dl>
 
 ## Constants
 
-[MessageTypes](core.md#MessageTypes)
-
-DIDComm Message helpers Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details
+<dl>
+<dt><a href="#MessageTypes">MessageTypes</a></dt>
+<dd><p>DIDComm Message helpers
+Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details</p></dd>
+</dl>
 
 ## Functions
 
-[buildRequestVerifiablePresentationMessage()](core.md#buildRequestVerifiablePresentationMessage)
-
-Sender: Verifier OOB message to request a verifiable presentation from the holder
-
-[buildAckWalletToWalletVerificationMessage()](core.md#buildAckWalletToWalletVerificationMessage)
-
-Sender: Holder Start a wallet to wallet verification flow
-
-[buildVerifiablePresentationMessage()](core.md#buildVerifiablePresentationMessage)
-
-Sender: Holder Send a verifiable presentation to the verifier
-
-[buildVerifiablePresentationAckMessage()](core.md#buildVerifiablePresentationAckMessage)
-
-Sender: Verifier Sends an the presentation result to the holder
-
-[handleBlockchainNetworkChange()](core.md#handleBlockchainNetworkChange)
-
-Update existing substrate network connection Compare connected substrate connection with the current walle network Disconnect and Establish a new connection if the network is different
+<dl>
+<dt><a href="#buildRequestVerifiablePresentationMessage">buildRequestVerifiablePresentationMessage()</a></dt>
+<dd><p>Sender: Verifier
+OOB message to request a verifiable presentation from the holder</p></dd>
+<dt><a href="#buildAckWalletToWalletVerificationMessage">buildAckWalletToWalletVerificationMessage()</a></dt>
+<dd><p>Sender: Holder
+Start a wallet to wallet verification flow</p></dd>
+<dt><a href="#buildVerifiablePresentationMessage">buildVerifiablePresentationMessage()</a></dt>
+<dd><p>Sender: Holder
+Send a verifiable presentation to the verifier</p></dd>
+<dt><a href="#buildVerifiablePresentationAckMessage">buildVerifiablePresentationAckMessage()</a></dt>
+<dd><p>Sender: Verifier
+Sends an the presentation result to the holder</p></dd>
+<dt><a href="#handleBlockchainNetworkChange">handleBlockchainNetworkChange()</a></dt>
+<dd><p>Update existing substrate network connection
+Compare connected substrate connection with the current walle network
+Disconnect and Establish a new connection if the network is different</p></dd>
+</dl>
 
 ## Typedefs
 
-[WalletStatus](core.md#WalletStatus) : `'closed'` | `'loading'` | `'ready'` | `'error'`
-
-Possible wallet status values
-
-[KeypairType](core.md#KeypairType) : `'sr25519'` | `'ed25519'` | `'ecdsa'`
-
-Supported keypair types
-
-[BiometricsProviderConfigs](core.md#BiometricsProviderConfigs) : `Object`
-
-Configuration options for biometric provider operations
+<dl>
+<dt><a href="#WalletStatus">WalletStatus</a> : <code>&#x27;closed&#x27;</code> | <code>&#x27;loading&#x27;</code> | <code>&#x27;ready&#x27;</code> | <code>&#x27;error&#x27;</code></dt>
+<dd><p>Possible wallet status values</p></dd>
+<dt><a href="#KeypairType">KeypairType</a> : <code>&#x27;sr25519&#x27;</code> | <code>&#x27;ed25519&#x27;</code> | <code>&#x27;ecdsa&#x27;</code></dt>
+<dd><p>Supported keypair types</p></dd>
+<dt><a href="#BiometricsProviderConfigs">BiometricsProviderConfigs</a> : <code>Object</code></dt>
+<dd><p>Configuration options for biometric provider operations</p></dd>
+</dl>
 
 ## Interfaces
 
-[~~IV1Wallet~~](core.md#IV1Wallet)
+<dl>
+<dt><del><a href="#IV1Wallet">IV1Wallet</a></del></dt>
+<dd><p>Legacy V1 wallet interface for backward compatibility</p></dd>
+<dt><a href="#IWallet">IWallet</a> ⇐ <code><a href="#IV1Wallet">IV1Wallet</a></code></dt>
+<dd><p>Main wallet interface providing methods for document management, import/export, and network operations.</p></dd>
+<dt><a href="#IDIDProvider">IDIDProvider</a></dt>
+<dd><p>Provides a high-level API for DID management operations</p></dd>
+<dt><a href="#IMessageProvider">IMessageProvider</a></dt>
+<dd><p>Provides a high-level API for DIDComm message management operations</p></dd>
+<dt><a href="#ICredentialProvider">ICredentialProvider</a></dt>
+<dd><p>Provides a high-level API for verifiable credential management operations</p></dd>
+<dt><a href="#IDVProcessOptions">IDVProcessOptions</a></dt>
+<dd><p>Callback functions for handling different stages of the identity verification process</p></dd>
+<dt><a href="#BiometricPlugin">BiometricPlugin</a></dt>
+<dd><p>Defines the contract for biometric enrollment and matching operations</p></dd>
+<dt><a href="#IDVProvider">IDVProvider</a></dt>
+<dd><p>Defines the contract for identity verification operations</p></dd>
+<dt><a href="#IDVProviderFactory">IDVProviderFactory</a></dt>
+<dd><p>Creates IDV provider instances with proper event handling and wallet integration</p></dd>
+<dt><a href="#IBiometricProvider">IBiometricProvider</a></dt>
+<dd><p>Provides a high-level API for biometric identity verification operations</p></dd>
+</dl>
 
-Legacy V1 wallet interface for backward compatibility
-
-[IWallet](core.md#IWallet) ⇐ [`IV1Wallet`](core.md#IV1Wallet)
-
-Main wallet interface providing methods for document management, import/export, and network operations.
-
-[IDIDProvider](core.md#IDIDProvider)
-
-Provides a high-level API for DID management operations
-
-[IMessageProvider](core.md#IMessageProvider)
-
-Provides a high-level API for DIDComm message management operations
-
-[ICredentialProvider](core.md#ICredentialProvider)
-
-Provides a high-level API for verifiable credential management operations
-
-[IDVProcessOptions](core.md#IDVProcessOptions)
-
-Callback functions for handling different stages of the identity verification process
-
-[BiometricPlugin](core.md#BiometricPlugin)
-
-Defines the contract for biometric enrollment and matching operations
-
-[IDVProvider](core.md#IDVProvider)
-
-Defines the contract for identity verification operations
-
-[IDVProviderFactory](core.md#IDVProviderFactory)
-
-Creates IDV provider instances with proper event handling and wallet integration
-
-[IBiometricProvider](core.md#IBiometricProvider)
-
-Provides a high-level API for biometric identity verification operations
+<a name="module_biometric-provider"></a>
 
 ## biometric-provider
+<p>Biometric plugin for the Truvera Wallet SDK.
+This module provides functions for biometric enrollment, matching, and identity verification processes.</p>
 
-Biometric plugin for the Truvera Wallet SDK. This module provides functions for biometric enrollment, matching, and identity verification processes.
 
-* [biometric-provider](core.md#module_biometric-provider)
-  * _static_
-    * [.IDV\_EVENTS](core.md#module_biometric-provider.IDV_EVENTS) ⇒ [`IBiometricProvider`](core.md#IBiometricProvider)
-  * _inner_
-    * [\~setConfigs(configs)](core.md#module_biometric-provider..setConfigs)
-    * [\~isBiometricPluginEnabled()](core.md#module_biometric-provider..isBiometricPluginEnabled) ⇒ `boolean`
-    * [\~assertConfigs()](core.md#module_biometric-provider..assertConfigs)
-    * [\~getBiometricConfigs()](core.md#module_biometric-provider..getBiometricConfigs) ⇒ `BiometricsProviderConfigs.<unknown>`
-    * [\~hasProofOfBiometrics(proofRequest)](core.md#module_biometric-provider..hasProofOfBiometrics) ⇒ `boolean`
+* [biometric-provider](#module_biometric-provider)
+    * _static_
+        * [.IDV_EVENTS](#module_biometric-provider.IDV_EVENTS) ⇒ [<code>IBiometricProvider</code>](#IBiometricProvider)
+    * _inner_
+        * [~setConfigs(configs)](#module_biometric-provider..setConfigs)
+        * [~isBiometricPluginEnabled()](#module_biometric-provider..isBiometricPluginEnabled) ⇒ <code>boolean</code>
+        * [~assertConfigs()](#module_biometric-provider..assertConfigs)
+        * [~getBiometricConfigs()](#module_biometric-provider..getBiometricConfigs) ⇒ <code>BiometricsProviderConfigs.&lt;unknown&gt;</code>
+        * [~hasProofOfBiometrics(proofRequest)](#module_biometric-provider..hasProofOfBiometrics) ⇒ <code>boolean</code>
 
-### biometric-provider.IDV\_EVENTS ⇒ [`IBiometricProvider`](core.md#IBiometricProvider)
+<a name="module_biometric-provider.IDV_EVENTS"></a>
 
-Creates a biometric provider instance for identity verification and biometric credential management
+### biometric-provider.IDV\_EVENTS ⇒ [<code>IBiometricProvider</code>](#IBiometricProvider)
+<p>Creates a biometric provider instance for identity verification and biometric credential management</p>
 
-**Kind**: static property of [`biometric-provider`](core.md#module_biometric-provider)\
-**Returns**: [`IBiometricProvider`](core.md#IBiometricProvider) -
-
-A biometric provider instance with identity verification methods
-
-\
+**Kind**: static property of [<code>biometric-provider</code>](#module_biometric-provider)  
+**Returns**: [<code>IBiometricProvider</code>](#IBiometricProvider) - <p>A biometric provider instance with identity verification methods</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If wallet or idvProviderFactory is not provided</p>
 
-    If wallet or idvProviderFactory is not provided
+**See**: [IBiometricProvider](#IBiometricProvider) - The interface defining all available biometric provider methods  
 
-**See**: [IBiometricProvider](core.md#IBiometricProvider) - The interface defining all available biometric provider methods
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Provider configuration</p> |
+| params.wallet | [<code>IWallet</code>](#IWallet) | <p>The wallet instance to use for credential storage</p> |
+| params.idvProviderFactory | [<code>IDVProviderFactory</code>](#IDVProviderFactory) | <p>Factory for creating IDV provider instances</p> |
 
-| Param                     | Type                                               | Description                                       |
-| ------------------------- | -------------------------------------------------- | ------------------------------------------------- |
-| params                    | `Object`                                           | Provider configuration                            |
-| params.wallet             | [`IWallet`](core.md#IWallet)                       | The wallet instance to use for credential storage |
-| params.idvProviderFactory | [`IDVProviderFactory`](core.md#IDVProviderFactory) | Factory for creating IDV provider instances       |
-
-**Example**
-
+**Example**  
 ```js
 import { createBiometricProvider } from '@docknetwork/wallet-sdk-core';
 
@@ -227,22 +206,21 @@ biometricProvider.eventEmitter.on('onComplete', (data) => {
   console.log('IDV process completed:', data);
 });
 ```
+<a name="module_biometric-provider..setConfigs"></a>
 
-### biometric-provider\~setConfigs(configs)
+### biometric-provider~setConfigs(configs)
+<p>Sets the global biometric provider configurations for the SDK</p>
 
-Sets the global biometric provider configurations for the SDK
+**Kind**: inner method of [<code>biometric-provider</code>](#module_biometric-provider)  
 
-**Kind**: inner method of [`biometric-provider`](core.md#module_biometric-provider)
+| Param | Type | Description |
+| --- | --- | --- |
+| configs | <code>BiometricsProviderConfigs.&lt;unknown&gt;</code> | <p>The biometric provider configurations to set</p> |
+| configs.enrollmentCredentialType | <code>string</code> | <p>The credential type for enrollment</p> |
+| configs.biometricMatchCredentialType | <code>string</code> | <p>The credential type for biometric matching</p> |
+| [configs.idvProvider] | <code>any</code> | <p>Optional IDV provider configuration</p> |
 
-| Param                                | Type                                  | Description                                  |
-| ------------------------------------ | ------------------------------------- | -------------------------------------------- |
-| configs                              | `BiometricsProviderConfigs.<unknown>` | The biometric provider configurations to set |
-| configs.enrollmentCredentialType     | `string`                              | The credential type for enrollment           |
-| configs.biometricMatchCredentialType | `string`                              | The credential type for biometric matching   |
-| \[configs.idvProvider]               | `any`                                 | Optional IDV provider configuration          |
-
-**Example**
-
+**Example**  
 ```js
 import { setConfigs } from '@docknetwork/wallet-sdk-core/biometric-provider';
 
@@ -252,19 +230,14 @@ setConfigs({
   idvProvider: myIDVProviderConfig
 });
 ```
+<a name="module_biometric-provider..isBiometricPluginEnabled"></a>
 
-### biometric-provider\~isBiometricPluginEnabled() ⇒ `boolean`
+### biometric-provider~isBiometricPluginEnabled() ⇒ <code>boolean</code>
+<p>Checks if the biometric plugin is enabled by verifying if biometric match credential type is configured</p>
 
-Checks if the biometric plugin is enabled by verifying if biometric match credential type is configured
-
-**Kind**: inner method of [`biometric-provider`](core.md#module_biometric-provider)\
-**Returns**: `boolean` -
-
-True if biometric match credential type is configured, false otherwise
-
-\
-**Example**
-
+**Kind**: inner method of [<code>biometric-provider</code>](#module_biometric-provider)  
+**Returns**: <code>boolean</code> - <p>True if biometric match credential type is configured, false otherwise</p>  
+**Example**  
 ```js
 import { isBiometricPluginEnabled, setConfigs } from '@docknetwork/wallet-sdk-core/biometric-provider';
 
@@ -278,20 +251,17 @@ setConfigs({
 });
 console.log(isBiometricPluginEnabled()); // true
 ```
+<a name="module_biometric-provider..assertConfigs"></a>
 
-### biometric-provider\~assertConfigs()
+### biometric-provider~assertConfigs()
+<p>Asserts that biometric provider configurations are available</p>
 
-Asserts that biometric provider configurations are available
-
-**Kind**: inner method of [`biometric-provider`](core.md#module_biometric-provider)\
+**Kind**: inner method of [<code>biometric-provider</code>](#module_biometric-provider)  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If biometric provider configs are not set</p>
 
-    If biometric provider configs are not set
-
-**Example**
-
+**Example**  
 ```js
 import { assertConfigs } from '@docknetwork/wallet-sdk-core/biometric-provider';
 
@@ -302,25 +272,18 @@ try {
   console.error('Biometric configs missing:', error.message);
 }
 ```
+<a name="module_biometric-provider..getBiometricConfigs"></a>
 
-### biometric-provider\~getBiometricConfigs() ⇒ `BiometricsProviderConfigs.<unknown>`
+### biometric-provider~getBiometricConfigs() ⇒ <code>BiometricsProviderConfigs.&lt;unknown&gt;</code>
+<p>Gets the current biometric provider configurations</p>
 
-Gets the current biometric provider configurations
-
-**Kind**: inner method of [`biometric-provider`](core.md#module_biometric-provider)\
-**Returns**: `BiometricsProviderConfigs.<unknown>` -
-
-The current biometric provider configurations
-
-\
+**Kind**: inner method of [<code>biometric-provider</code>](#module_biometric-provider)  
+**Returns**: <code>BiometricsProviderConfigs.&lt;unknown&gt;</code> - <p>The current biometric provider configurations</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If biometric provider configs are not set</p>
 
-    If biometric provider configs are not set
-
-**Example**
-
+**Example**  
 ```js
 import { getBiometricConfigs } from '@docknetwork/wallet-sdk-core/biometric-provider';
 
@@ -332,22 +295,19 @@ try {
   console.error('Failed to get configs:', error.message);
 }
 ```
+<a name="module_biometric-provider..hasProofOfBiometrics"></a>
 
-### biometric-provider\~hasProofOfBiometrics(proofRequest) ⇒ `boolean`
+### biometric-provider~hasProofOfBiometrics(proofRequest) ⇒ <code>boolean</code>
+<p>Checks if a proof request requires biometric credentials</p>
 
-Checks if a proof request requires biometric credentials
+**Kind**: inner method of [<code>biometric-provider</code>](#module_biometric-provider)  
+**Returns**: <code>boolean</code> - <p>True if the proof request requires biometric credentials</p>  
 
-**Kind**: inner method of [`biometric-provider`](core.md#module_biometric-provider)\
-**Returns**: `boolean` -
+| Param | Type | Description |
+| --- | --- | --- |
+| proofRequest | <code>any</code> | <p>The proof request to analyze</p> |
 
-True if the proof request requires biometric credentials
-
-| Param        | Type  | Description                  |
-| ------------ | ----- | ---------------------------- |
-| proofRequest | `any` | The proof request to analyze |
-
-**Example**
-
+**Example**  
 ```js
 import { hasProofOfBiometrics } from '@docknetwork/wallet-sdk-core/biometric-provider';
 
@@ -367,216 +327,206 @@ if (hasProofOfBiometrics(proofRequest)) {
   console.log('This proof request requires biometric verification');
 }
 ```
+<a name="module_cloud-wallet"></a>
 
 ## cloud-wallet
+<p>Cloud wallet functionality for the Truvera Wallet SDK.
+This module provides the main cloud wallet creation and management functions.</p>
 
-Cloud wallet functionality for the Truvera Wallet SDK. This module provides the main cloud wallet creation and management functions.
 
-* [cloud-wallet](core.md#module_cloud-wallet)
-  * [\~deriveBiometricKey(biometricData, identifier)](core.md#module_cloud-wallet..deriveBiometricKey) ⇒
-  * [\~deriveKeyMappingVaultKeys(biometricData, identifier)](core.md#module_cloud-wallet..deriveKeyMappingVaultKeys) ⇒
-  * [\~deriveBiometricEncryptionKey(biometricData, identifier)](core.md#module_cloud-wallet..deriveBiometricEncryptionKey) ⇒
-  * [\~encryptMasterKey(masterKey, encryptionKey, iv)](core.md#module_cloud-wallet..encryptMasterKey) ⇒
-  * [\~decryptMasterKey(encryptedKey, decryptionKey, iv)](core.md#module_cloud-wallet..decryptMasterKey) ⇒
-  * [\~initializeKeyMappingVault(edvUrl, authKey, biometricData, identifier)](core.md#module_cloud-wallet..initializeKeyMappingVault) ⇒
-  * [\~enrollUserWithBiometrics(edvUrl, authKey, biometricData, identifier)](core.md#module_cloud-wallet..enrollUserWithBiometrics) ⇒
-  * [\~getKeyMappingMasterKey(keyMappingEdv, identifier, decryptionKey, iv)](core.md#module_cloud-wallet..getKeyMappingMasterKey) ⇒
-  * [\~authenticateWithBiometrics(edvUrl, authKey, biometricData, identifier)](core.md#module_cloud-wallet..authenticateWithBiometrics) ⇒
-  * [\~initializeCloudWalletWithBiometrics(edvUrl, authKey, biometricData, identifier, dataStore)](core.md#module_cloud-wallet..initializeCloudWalletWithBiometrics) ⇒
+* [cloud-wallet](#module_cloud-wallet)
+    * [~deriveBiometricKey(biometricData, identifier)](#module_cloud-wallet..deriveBiometricKey) ⇒
+    * [~deriveKeyMappingVaultKeys(biometricData, identifier)](#module_cloud-wallet..deriveKeyMappingVaultKeys) ⇒
+    * [~deriveBiometricEncryptionKey(biometricData, identifier)](#module_cloud-wallet..deriveBiometricEncryptionKey) ⇒
+    * [~encryptMasterKey(masterKey, encryptionKey, iv)](#module_cloud-wallet..encryptMasterKey) ⇒
+    * [~decryptMasterKey(encryptedKey, decryptionKey, iv)](#module_cloud-wallet..decryptMasterKey) ⇒
+    * [~initializeKeyMappingVault(edvUrl, authKey, biometricData, identifier)](#module_cloud-wallet..initializeKeyMappingVault) ⇒
+    * [~enrollUserWithBiometrics(edvUrl, authKey, biometricData, identifier)](#module_cloud-wallet..enrollUserWithBiometrics) ⇒
+    * [~getKeyMappingMasterKey(keyMappingEdv, identifier, decryptionKey, iv)](#module_cloud-wallet..getKeyMappingMasterKey) ⇒
+    * [~authenticateWithBiometrics(edvUrl, authKey, biometricData, identifier)](#module_cloud-wallet..authenticateWithBiometrics) ⇒
+    * [~initializeCloudWalletWithBiometrics(edvUrl, authKey, biometricData, identifier, dataStore)](#module_cloud-wallet..initializeCloudWalletWithBiometrics) ⇒
 
-### cloud-wallet\~deriveBiometricKey(biometricData, identifier) ⇒
+<a name="module_cloud-wallet..deriveBiometricKey"></a>
 
-Derives a key from biometric data using HKDF
+### cloud-wallet~deriveBiometricKey(biometricData, identifier) ⇒
+<p>Derives a key from biometric data using HKDF</p>
 
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>Derived key</p>  
 
-Derived key
+| Param | Description |
+| --- | --- |
+| biometricData | <p>Biometric data from provider</p> |
+| identifier | <p>User's identifier as salt (email, phone number, etc.)</p> |
 
-| Param         | Description                                           |
-| ------------- | ----------------------------------------------------- |
-| biometricData | Biometric data from provider                          |
-| identifier    | User's identifier as salt (email, phone number, etc.) |
+<a name="module_cloud-wallet..deriveKeyMappingVaultKeys"></a>
 
-### cloud-wallet\~deriveKeyMappingVaultKeys(biometricData, identifier) ⇒
+### cloud-wallet~deriveKeyMappingVaultKeys(biometricData, identifier) ⇒
+<p>Derives EDV keys from biometric data for the KeyMappingVault</p>
 
-Derives EDV keys from biometric data for the KeyMappingVault
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>Keys for accessing the KeyMappingVault</p>  
 
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
+| Param | Description |
+| --- | --- |
+| biometricData | <p>Biometric data from the provider</p> |
+| identifier | <p>User's identifier as additional entropy (email, phone number, etc.)</p> |
 
-Keys for accessing the KeyMappingVault
+<a name="module_cloud-wallet..deriveBiometricEncryptionKey"></a>
 
-| Param         | Description                                                         |
-| ------------- | ------------------------------------------------------------------- |
-| biometricData | Biometric data from the provider                                    |
-| identifier    | User's identifier as additional entropy (email, phone number, etc.) |
+### cloud-wallet~deriveBiometricEncryptionKey(biometricData, identifier) ⇒
+<p>Generates a key for encrypting/decrypting the master key</p>
 
-### cloud-wallet\~deriveBiometricEncryptionKey(biometricData, identifier) ⇒
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>Encryption key and IV for AES encryption</p>  
 
-Generates a key for encrypting/decrypting the master key
+| Param | Description |
+| --- | --- |
+| biometricData | <p>Biometric data from provider</p> |
+| identifier | <p>User's identifier as salt (email, phone number, etc.)</p> |
 
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
+<a name="module_cloud-wallet..encryptMasterKey"></a>
 
-Encryption key and IV for AES encryption
+### cloud-wallet~encryptMasterKey(masterKey, encryptionKey, iv) ⇒
+<p>Encrypts the master key using a key derived from biometric data</p>
 
-| Param         | Description                                           |
-| ------------- | ----------------------------------------------------- |
-| biometricData | Biometric data from provider                          |
-| identifier    | User's identifier as salt (email, phone number, etc.) |
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>Encrypted master key</p>  
 
-### cloud-wallet\~encryptMasterKey(masterKey, encryptionKey, iv) ⇒
+| Param | Description |
+| --- | --- |
+| masterKey | <p>The CloudWalletVault master key to encrypt</p> |
+| encryptionKey | <p>Key derived from biometric data</p> |
+| iv | <p>Initialization vector</p> |
 
-Encrypts the master key using a key derived from biometric data
+<a name="module_cloud-wallet..decryptMasterKey"></a>
 
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
+### cloud-wallet~decryptMasterKey(encryptedKey, decryptionKey, iv) ⇒
+<p>Decrypts the master key using biometric-derived key</p>
 
-Encrypted master key
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>The decrypted master key</p>  
 
-| Param         | Description                                |
-| ------------- | ------------------------------------------ |
-| masterKey     | The CloudWalletVault master key to encrypt |
-| encryptionKey | Key derived from biometric data            |
-| iv            | Initialization vector                      |
+| Param | Description |
+| --- | --- |
+| encryptedKey | <p>The encrypted master key</p> |
+| decryptionKey | <p>Key derived from biometric data</p> |
+| iv | <p>Initialization vector</p> |
 
-### cloud-wallet\~decryptMasterKey(encryptedKey, decryptionKey, iv) ⇒
+<a name="module_cloud-wallet..initializeKeyMappingVault"></a>
 
-Decrypts the master key using biometric-derived key
+### cloud-wallet~initializeKeyMappingVault(edvUrl, authKey, biometricData, identifier) ⇒
+<p>Initializes the KeyMappingVault using biometric data</p>
 
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>Initialized EDV service</p>  
 
-The decrypted master key
+| Param | Description |
+| --- | --- |
+| edvUrl | <p>URL for the edv</p> |
+| authKey | <p>Auth key for the edv</p> |
+| biometricData | <p>User's biometric data</p> |
+| identifier | <p>User's identifier (email, phone number, etc.)</p> |
 
-| Param         | Description                     |
-| ------------- | ------------------------------- |
-| encryptedKey  | The encrypted master key        |
-| decryptionKey | Key derived from biometric data |
-| iv            | Initialization vector           |
+<a name="module_cloud-wallet..enrollUserWithBiometrics"></a>
 
-### cloud-wallet\~initializeKeyMappingVault(edvUrl, authKey, biometricData, identifier) ⇒
+### cloud-wallet~enrollUserWithBiometrics(edvUrl, authKey, biometricData, identifier) ⇒
+<p>Enrolls a user by creating necessary vaults and keys</p>
 
-Initializes the KeyMappingVault using biometric data
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>The master key and mnemonic for backup</p>  
 
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
+| Param | Description |
+| --- | --- |
+| edvUrl | <p>URL for the edv</p> |
+| authKey | <p>Auth key for the edv</p> |
+| biometricData | <p>Biometric data from provider</p> |
+| identifier | <p>User's identifier (email, phone number, etc.)</p> |
 
-Initialized EDV service
+<a name="module_cloud-wallet..getKeyMappingMasterKey"></a>
 
-| Param         | Description                                   |
-| ------------- | --------------------------------------------- |
-| edvUrl        | URL for the edv                               |
-| authKey       | Auth key for the edv                          |
-| biometricData | User's biometric data                         |
-| identifier    | User's identifier (email, phone number, etc.) |
+### cloud-wallet~getKeyMappingMasterKey(keyMappingEdv, identifier, decryptionKey, iv) ⇒
+<p>Gets the master key from the key mapping vault using provided decryption keys</p>
 
-### cloud-wallet\~enrollUserWithBiometrics(edvUrl, authKey, biometricData, identifier) ⇒
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>The decrypted master key for CloudWalletVault</p>  
 
-Enrolls a user by creating necessary vaults and keys
+| Param | Description |
+| --- | --- |
+| keyMappingEdv | <p>Initialized key mapping vault service</p> |
+| identifier | <p>User's identifier (email, phone number, etc.)</p> |
+| decryptionKey | <p>Key for decrypting the master key</p> |
+| iv | <p>Initialization vector for decryption</p> |
 
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
+<a name="module_cloud-wallet..authenticateWithBiometrics"></a>
 
-The master key and mnemonic for backup
+### cloud-wallet~authenticateWithBiometrics(edvUrl, authKey, biometricData, identifier) ⇒
+<p>Authenticates a user with biometric data and identifier</p>
 
-| Param         | Description                                   |
-| ------------- | --------------------------------------------- |
-| edvUrl        | URL for the edv                               |
-| authKey       | Auth key for the edv                          |
-| biometricData | Biometric data from provider                  |
-| identifier    | User's identifier (email, phone number, etc.) |
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>The decrypted master key for CloudWalletVault</p>  
 
-### cloud-wallet\~getKeyMappingMasterKey(keyMappingEdv, identifier, decryptionKey, iv) ⇒
+| Param | Description |
+| --- | --- |
+| edvUrl | <p>URL for the edv</p> |
+| authKey | <p>Auth key for the edv</p> |
+| biometricData | <p>Biometric data from the provider</p> |
+| identifier | <p>User's identifier (email, phone number, etc.)</p> |
 
-Gets the master key from the key mapping vault using provided decryption keys
+<a name="module_cloud-wallet..initializeCloudWalletWithBiometrics"></a>
 
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
+### cloud-wallet~initializeCloudWalletWithBiometrics(edvUrl, authKey, biometricData, identifier, dataStore) ⇒
+<p>Initializes the Cloud Wallet using biometric authentication</p>
 
-The decrypted master key for CloudWalletVault
+**Kind**: inner method of [<code>cloud-wallet</code>](#module_cloud-wallet)  
+**Returns**: <p>Initialized cloud wallet</p>  
 
-| Param         | Description                                   |
-| ------------- | --------------------------------------------- |
-| keyMappingEdv | Initialized key mapping vault service         |
-| identifier    | User's identifier (email, phone number, etc.) |
-| decryptionKey | Key for decrypting the master key             |
-| iv            | Initialization vector for decryption          |
+| Param | Description |
+| --- | --- |
+| edvUrl | <p>Cloud wallet vault URL</p> |
+| authKey | <p>Cloud wallet auth key</p> |
+| biometricData | <p>User's biometric data</p> |
+| identifier | <p>User's identifier (email, phone number, etc.)</p> |
+| dataStore | <p>Optional data store for the wallet</p> |
 
-### cloud-wallet\~authenticateWithBiometrics(edvUrl, authKey, biometricData, identifier) ⇒
-
-Authenticates a user with biometric data and identifier
-
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
-
-The decrypted master key for CloudWalletVault
-
-| Param         | Description                                   |
-| ------------- | --------------------------------------------- |
-| edvUrl        | URL for the edv                               |
-| authKey       | Auth key for the edv                          |
-| biometricData | Biometric data from the provider              |
-| identifier    | User's identifier (email, phone number, etc.) |
-
-### cloud-wallet\~initializeCloudWalletWithBiometrics(edvUrl, authKey, biometricData, identifier, dataStore) ⇒
-
-Initializes the Cloud Wallet using biometric authentication
-
-**Kind**: inner method of [`cloud-wallet`](core.md#module_cloud-wallet)\
-**Returns**:
-
-Initialized cloud wallet
-
-| Param         | Description                                   |
-| ------------- | --------------------------------------------- |
-| edvUrl        | Cloud wallet vault URL                        |
-| authKey       | Cloud wallet auth key                         |
-| biometricData | User's biometric data                         |
-| identifier    | User's identifier (email, phone number, etc.) |
-| dataStore     | Optional data store for the wallet            |
+<a name="module_credential-provider"></a>
 
 ## credential-provider
+<p>Verifiable credential management functionality for the Truvera Wallet SDK.
+This module provides functions for importing, verifying, storing, and managing verifiable credentials.</p>
 
-Verifiable credential management functionality for the Truvera Wallet SDK. This module provides functions for importing, verifying, storing, and managing verifiable credentials.
 
-* [credential-provider](core.md#module_credential-provider)
-  * [\~isValid(credential)](core.md#module_credential-provider..isValid) ⇒ `Promise.<Object>`
-  * [\~createCredentialProvider(params)](core.md#module_credential-provider..createCredentialProvider) ⇒ [`ICredentialProvider`](core.md#ICredentialProvider)
+* [credential-provider](#module_credential-provider)
+    * [~isValid(credential)](#module_credential-provider..isValid) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [~createCredentialProvider(params)](#module_credential-provider..createCredentialProvider) ⇒ [<code>ICredentialProvider</code>](#ICredentialProvider)
 
-### credential-provider\~isValid(credential) ⇒ `Promise.<Object>`
+<a name="module_credential-provider..isValid"></a>
 
-Uses Dock SDK to verify a credential
+### credential-provider~isValid(credential) ⇒ <code>Promise.&lt;Object&gt;</code>
+<p>Uses Dock SDK to verify a credential</p>
 
-**Kind**: inner method of [`credential-provider`](core.md#module_credential-provider)\
-**Returns**: `Promise.<Object>` -
+**Kind**: inner method of [<code>credential-provider</code>](#module_credential-provider)  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - <p>Verification result with status and optional error/warning messages</p>  
 
-Verification result with status and optional error/warning messages
+| Param |
+| --- |
+| credential | 
 
-| Param      |
-| ---------- |
-| credential |
+<a name="module_credential-provider..createCredentialProvider"></a>
 
-### credential-provider\~createCredentialProvider(params) ⇒ [`ICredentialProvider`](core.md#ICredentialProvider)
+### credential-provider~createCredentialProvider(params) ⇒ [<code>ICredentialProvider</code>](#ICredentialProvider)
+<p>Creates a credential provider instance bound to a wallet</p>
 
-Creates a credential provider instance bound to a wallet
+**Kind**: inner method of [<code>credential-provider</code>](#module_credential-provider)  
+**Returns**: [<code>ICredentialProvider</code>](#ICredentialProvider) - <p>A credential provider instance with all verifiable credential management methods</p>  
+**See**: [ICredentialProvider](#ICredentialProvider) - The interface defining all available credential provider methods  
 
-**Kind**: inner method of [`credential-provider`](core.md#module_credential-provider)\
-**Returns**: [`ICredentialProvider`](core.md#ICredentialProvider) -
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Provider configuration</p> |
+| params.wallet | [<code>IWallet</code>](#IWallet) | <p>The wallet instance to use for credential storage</p> |
 
-A credential provider instance with all verifiable credential management methods
-
-\
-**See**: [ICredentialProvider](core.md#ICredentialProvider) - The interface defining all available credential provider methods
-
-| Param         | Type                         | Description                                       |
-| ------------- | ---------------------------- | ------------------------------------------------- |
-| params        | `Object`                     | Provider configuration                            |
-| params.wallet | [`IWallet`](core.md#IWallet) | The wallet instance to use for credential storage |
-
-**Example**
-
+**Example**  
 ```js
 import { createCredentialProvider } from '@docknetwork/wallet-sdk-core';
 
@@ -600,30 +550,27 @@ await credentialProvider.importCredentialFromURI({
   didProvider
 });
 ```
+<a name="module_did-provider"></a>
 
 ## did-provider
+<p>DID (Decentralized Identifier) management functionality for the Truvera Wallet SDK.
+This module provides functions for creating, importing, exporting, and managing DIDs.</p>
 
-DID (Decentralized Identifier) management functionality for the Truvera Wallet SDK. This module provides functions for creating, importing, exporting, and managing DIDs.
+<a name="module_did-provider..createDIDProvider"></a>
 
-### did-provider\~createDIDProvider(params) ⇒ [`IDIDProvider`](core.md#IDIDProvider)
+### did-provider~createDIDProvider(params) ⇒ [<code>IDIDProvider</code>](#IDIDProvider)
+<p>Creates a DID provider instance bound to a wallet</p>
 
-Creates a DID provider instance bound to a wallet
+**Kind**: inner method of [<code>did-provider</code>](#module_did-provider)  
+**Returns**: [<code>IDIDProvider</code>](#IDIDProvider) - <p>A DID provider instance with all DID management methods</p>  
+**See**: [IDIDProvider](#IDIDProvider) - The interface defining all available DID provider methods  
 
-**Kind**: inner method of [`did-provider`](core.md#module_did-provider)\
-**Returns**: [`IDIDProvider`](core.md#IDIDProvider) -
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Provider configuration</p> |
+| params.wallet | [<code>IWallet</code>](#IWallet) | <p>The wallet instance to bind the provider to</p> |
 
-A DID provider instance with all DID management methods
-
-\
-**See**: [IDIDProvider](core.md#IDIDProvider) - The interface defining all available DID provider methods
-
-| Param         | Type                         | Description                                 |
-| ------------- | ---------------------------- | ------------------------------------------- |
-| params        | `Object`                     | Provider configuration                      |
-| params.wallet | [`IWallet`](core.md#IWallet) | The wallet instance to bind the provider to |
-
-**Example**
-
+**Example**  
 ```js
 import { createDIDProvider } from '@docknetwork/wallet-sdk-core';
 
@@ -643,32 +590,29 @@ const exportedDID = await didProvider.exportDID({
   password: 'mypassword'
 });
 ```
+<a name="module_message-provider"></a>
 
 ## message-provider
+<p>DIDComm message management functionality for the Truvera Wallet SDK.
+This module provides functions for sending, receiving, and processing DIDComm messages.</p>
 
-DIDComm message management functionality for the Truvera Wallet SDK. This module provides functions for sending, receiving, and processing DIDComm messages.
+<a name="module_message-provider..createMessageProvider"></a>
 
-### message-provider\~createMessageProvider(params) ⇒ [`IMessageProvider`](core.md#IMessageProvider)
+### message-provider~createMessageProvider(params) ⇒ [<code>IMessageProvider</code>](#IMessageProvider)
+<p>Creates a message provider instance bound to a wallet and DID provider</p>
 
-Creates a message provider instance bound to a wallet and DID provider
+**Kind**: inner method of [<code>message-provider</code>](#module_message-provider)  
+**Returns**: [<code>IMessageProvider</code>](#IMessageProvider) - <p>A message provider instance with all DIDComm message management methods</p>  
+**See**: [IMessageProvider](#IMessageProvider) - The interface defining all available message provider methods  
 
-**Kind**: inner method of [`message-provider`](core.md#module_message-provider)\
-**Returns**: [`IMessageProvider`](core.md#IMessageProvider) -
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Provider configuration</p> |
+| params.wallet | [<code>IWallet</code>](#IWallet) | <p>The wallet instance to use for message storage</p> |
+| params.didProvider | [<code>IDIDProvider</code>](#IDIDProvider) | <p>The DID provider instance to use for key management</p> |
+| [params.relayService] | <code>any</code> | <p>Optional relay service implementation (defaults to built-in service)</p> |
 
-A message provider instance with all DIDComm message management methods
-
-\
-**See**: [IMessageProvider](core.md#IMessageProvider) - The interface defining all available message provider methods
-
-| Param                  | Type                                   | Description                                                          |
-| ---------------------- | -------------------------------------- | -------------------------------------------------------------------- |
-| params                 | `Object`                               | Provider configuration                                               |
-| params.wallet          | [`IWallet`](core.md#IWallet)           | The wallet instance to use for message storage                       |
-| params.didProvider     | [`IDIDProvider`](core.md#IDIDProvider) | The DID provider instance to use for key management                  |
-| \[params.relayService] | `any`                                  | Optional relay service implementation (defaults to built-in service) |
-
-**Example**
-
+**Example**  
 ```js
 import { createMessageProvider } from '@docknetwork/wallet-sdk-core';
 
@@ -692,36 +636,32 @@ const removeListener = messageProvider.addMessageListener((message) => {
   console.log('Received message:', message);
 });
 ```
+<a name="module_wallet"></a>
 
 ## wallet
+<p>Core wallet functionality for the Dock Wallet SDK.
+This module provides the main wallet creation and management functions.</p>
 
-Core wallet functionality for the Dock Wallet SDK. This module provides the main wallet creation and management functions.
+<a name="module_wallet..createWallet"></a>
 
-### wallet\~createWallet(props) ⇒ [`Promise.<IWallet>`](core.md#IWallet)
+### wallet~createWallet(props) ⇒ [<code>Promise.&lt;IWallet&gt;</code>](#IWallet)
+<p>Creates a new wallet instance with the provided data store.
+The wallet provides secure storage and management of DIDs, credentials, keys, and other documents.</p>
 
-Creates a new wallet instance with the provided data store. The wallet provides secure storage and management of DIDs, credentials, keys, and other documents.
-
-**Kind**: inner method of [`wallet`](core.md#module_wallet)\
-**Returns**: [`Promise.<IWallet>`](core.md#IWallet) -
-
-A promise that resolves to the created wallet instance
-
-\
+**Kind**: inner method of [<code>wallet</code>](#module_wallet)  
+**Returns**: [<code>Promise.&lt;IWallet&gt;</code>](#IWallet) - <p>A promise that resolves to the created wallet instance</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If the data store is not properly initialized</p>
 
-    If the data store is not properly initialized
+**See**: [IWallet](#IWallet) - The interface defining all available wallet methods  
 
-**See**: [IWallet](core.md#IWallet) - The interface defining all available wallet methods
+| Param | Type | Description |
+| --- | --- | --- |
+| props | <code>CreateWalletProps</code> | <p>Configuration options for wallet creation</p> |
+| props.dataStore | <code>DataStore</code> | <p>The data store implementation to use for persistence</p> |
 
-| Param           | Type                | Description                                          |
-| --------------- | ------------------- | ---------------------------------------------------- |
-| props           | `CreateWalletProps` | Configuration options for wallet creation            |
-| props.dataStore | `DataStore`         | The data store implementation to use for persistence |
-
-**Example**
-
+**Example**  
 ```js
 import { createWallet } from '@docknetwork/wallet-sdk-core';
 import { createDataStore } from '@docknetwork/wallet-sdk-data-store';
@@ -733,156 +673,140 @@ const wallet = await createWallet({ dataStore });
 await wallet.addDocument(myCredential);
 const documents = await wallet.getAllDocuments();
 ```
+<a name="IV1Wallet"></a>
 
 ## ~~IV1Wallet~~
+***This interface is obsolete and should not be used for new implementations. Use IWallet instead.***
 
-_**This interface is obsolete and should not be used for new implementations. Use IWallet instead.**_
+<p>Legacy V1 wallet interface for backward compatibility</p>
 
-Legacy V1 wallet interface for backward compatibility
+**Kind**: global interface  
+<a name="IWallet"></a>
 
-**Kind**: global interface<br>
+## IWallet ⇐ [<code>IV1Wallet</code>](#IV1Wallet)
+<p>Main wallet interface providing methods for document management, import/export, and network operations.</p>
 
-## IWallet ⇐ [`IV1Wallet`](core.md#IV1Wallet)
+**Kind**: global interface  
+**Extends**: [<code>IV1Wallet</code>](#IV1Wallet)  
 
-Main wallet interface providing methods for document management, import/export, and network operations.
+* [IWallet](#IWallet) ⇐ [<code>IV1Wallet</code>](#IV1Wallet)
+    * [.deleteWallet()](#IWallet.deleteWallet) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.setStatus(newStatus)](#IWallet.setStatus)
+    * [.setNetwork(networkId)](#IWallet.setNetwork) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.getNetworkId()](#IWallet.getNetworkId) ⇒ <code>string</code>
+    * [.getDocumentById(id)](#IWallet.getDocumentById) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
+    * [.getAllDocuments()](#IWallet.getAllDocuments) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
+    * [.getDocumentsById(idList)](#IWallet.getDocumentsById) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
+    * [.getDocumentsByType(type)](#IWallet.getDocumentsByType) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
+    * [.addDocument(json, [options])](#IWallet.addDocument) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
+    * [.updateDocument(document, [options])](#IWallet.updateDocument) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
+    * [.removeDocument(id, [options])](#IWallet.removeDocument) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.getDocumentCorrelations(documentId)](#IWallet.getDocumentCorrelations) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
+    * [.getAccountKeyPair(accountId)](#IWallet.getAccountKeyPair) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.getDocumentsFromEncryptedWallet(json, password)](#IWallet.getDocumentsFromEncryptedWallet) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.importUniversalWalletJSON(json, password)](#IWallet.importUniversalWalletJSON) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.exportDocuments(params)](#IWallet.exportDocuments) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.exportUniversalWalletJSON(password)](#IWallet.exportUniversalWalletJSON) ⇒ <code>any</code>
 
-**Kind**: global interface\
-**Extends**: [`IV1Wallet`](core.md#IV1Wallet)
+<a name="IWallet.deleteWallet"></a>
 
-* [IWallet](core.md#IWallet) ⇐ [`IV1Wallet`](core.md#IV1Wallet)
-  * [.deleteWallet()](core.md#IWallet.deleteWallet) ⇒ `Promise.<void>`
-  * [.setStatus(newStatus)](core.md#IWallet.setStatus)
-  * [.setNetwork(networkId)](core.md#IWallet.setNetwork) ⇒ `Promise.<void>`
-  * [.getNetworkId()](core.md#IWallet.getNetworkId) ⇒ `string`
-  * [.getDocumentById(id)](core.md#IWallet.getDocumentById) ⇒ `Promise.<WalletDocument>`
-  * [.getAllDocuments()](core.md#IWallet.getAllDocuments) ⇒ `Promise.<Array.<WalletDocument>>`
-  * [.getDocumentsById(idList)](core.md#IWallet.getDocumentsById) ⇒ `Promise.<Array.<WalletDocument>>`
-  * [.getDocumentsByType(type)](core.md#IWallet.getDocumentsByType) ⇒ `Promise.<Array.<WalletDocument>>`
-  * [.addDocument(json, \[options\])](core.md#IWallet.addDocument) ⇒ `Promise.<WalletDocument>`
-  * [.updateDocument(document, \[options\])](core.md#IWallet.updateDocument) ⇒ `Promise.<WalletDocument>`
-  * [.removeDocument(id, \[options\])](core.md#IWallet.removeDocument) ⇒ `Promise.<void>`
-  * [.getDocumentCorrelations(documentId)](core.md#IWallet.getDocumentCorrelations) ⇒ `Promise.<Array.<WalletDocument>>`
-  * [.getAccountKeyPair(accountId)](core.md#IWallet.getAccountKeyPair) ⇒ `Promise.<any>`
-  * [.getDocumentsFromEncryptedWallet(json, password)](core.md#IWallet.getDocumentsFromEncryptedWallet) ⇒ `Promise.<any>`
-  * [.importUniversalWalletJSON(json, password)](core.md#IWallet.importUniversalWalletJSON) ⇒ `Promise.<void>`
-  * [.exportDocuments(params)](core.md#IWallet.exportDocuments) ⇒ `Promise.<any>`
-  * [.exportUniversalWalletJSON(password)](core.md#IWallet.exportUniversalWalletJSON) ⇒ `any`
+### IWallet.deleteWallet() ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Deletes the entire wallet and all its documents</p>
 
-### IWallet.deleteWallet() ⇒ `Promise.<void>`
-
-Deletes the entire wallet and all its documents
-
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Emits**: `WalletEvents.event:walletDeleted`<br>
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Emits**: <code>WalletEvents.event:walletDeleted</code>  
+<a name="IWallet.setStatus"></a>
 
 ### IWallet.setStatus(newStatus)
+<p>Sets the wallet status</p>
 
-Sets the wallet status
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)
+| Param | Type | Description |
+| --- | --- | --- |
+| newStatus | <code>string</code> | <p>The new status to set</p> |
 
-| Param     | Type     | Description           |
-| --------- | -------- | --------------------- |
-| newStatus | `string` | The new status to set |
+<a name="IWallet.setNetwork"></a>
 
-### IWallet.setNetwork(networkId) ⇒ `Promise.<void>`
+### IWallet.setNetwork(networkId) ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Sets the active network for the wallet</p>
 
-Sets the active network for the wallet
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Emits**: <code>WalletEvents.event:networkUpdated</code>  
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Emits**: `WalletEvents.event:networkUpdated`
+| Param | Type | Description |
+| --- | --- | --- |
+| networkId | <code>string</code> | <p>The network identifier to switch to</p> |
 
-| Param     | Type     | Description                         |
-| --------- | -------- | ----------------------------------- |
-| networkId | `string` | The network identifier to switch to |
+<a name="IWallet.getNetworkId"></a>
 
-### IWallet.getNetworkId() ⇒ `string`
+### IWallet.getNetworkId() ⇒ <code>string</code>
+<p>Gets the current network ID</p>
 
-Gets the current network ID
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>string</code> - <p>The current network identifier</p>  
+<a name="IWallet.getDocumentById"></a>
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `string` -
+### IWallet.getDocumentById(id) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
+<p>Retrieves a document by its ID</p>
 
-The current network identifier
-
-<br>
-
-### IWallet.getDocumentById(id) ⇒ `Promise.<WalletDocument>`
-
-Retrieves a document by its ID
-
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<WalletDocument>` -
-
-The document with the specified ID
-
-\
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;WalletDocument&gt;</code> - <p>The document with the specified ID</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If document is not found</p>
 
-    If document is not found
 
-| Param | Type     | Description                           |
-| ----- | -------- | ------------------------------------- |
-| id    | `string` | The unique identifier of the document |
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | <p>The unique identifier of the document</p> |
 
-### IWallet.getAllDocuments() ⇒ `Promise.<Array.<WalletDocument>>`
+<a name="IWallet.getAllDocuments"></a>
 
-Retrieves all documents stored in the wallet
+### IWallet.getAllDocuments() ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
+<p>Retrieves all documents stored in the wallet</p>
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<Array.<WalletDocument>>` -
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code> - <p>Array of all documents in the wallet</p>  
+<a name="IWallet.getDocumentsById"></a>
 
-Array of all documents in the wallet
+### IWallet.getDocumentsById(idList) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
+<p>Retrieves multiple documents by their IDs</p>
 
-<br>
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code> - <p>Array of documents matching the provided IDs</p>  
 
-### IWallet.getDocumentsById(idList) ⇒ `Promise.<Array.<WalletDocument>>`
+| Param | Type | Description |
+| --- | --- | --- |
+| idList | <code>Array.&lt;string&gt;</code> | <p>Array of document IDs to retrieve</p> |
 
-Retrieves multiple documents by their IDs
+<a name="IWallet.getDocumentsByType"></a>
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<Array.<WalletDocument>>` -
+### IWallet.getDocumentsByType(type) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
+<p>Retrieves all documents of a specific type</p>
 
-Array of documents matching the provided IDs
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code> - <p>Array of documents matching the specified type</p>  
 
-| Param  | Type             | Description                       |
-| ------ | ---------------- | --------------------------------- |
-| idList | `Array.<string>` | Array of document IDs to retrieve |
+| Param | Type | Description |
+| --- | --- | --- |
+| type | <code>string</code> | <p>The document type to filter by (e.g., 'VerifiableCredential', 'DIDDocument')</p> |
 
-### IWallet.getDocumentsByType(type) ⇒ `Promise.<Array.<WalletDocument>>`
+<a name="IWallet.addDocument"></a>
 
-Retrieves all documents of a specific type
+### IWallet.addDocument(json, [options]) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
+<p>Adds a new document to the wallet</p>
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<Array.<WalletDocument>>` -
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;WalletDocument&gt;</code> - <p>The created document with generated metadata</p>  
+**Emits**: <code>WalletEvents.event:documentAdded</code>  
 
-Array of documents matching the specified type
+| Param | Type | Description |
+| --- | --- | --- |
+| json | <code>any</code> | <p>The document to add (must have valid JSON-LD structure)</p> |
+| [options] | <code>any</code> | <p>Optional parameters for document creation</p> |
 
-| Param | Type     | Description                                                                  |
-| ----- | -------- | ---------------------------------------------------------------------------- |
-| type  | `string` | The document type to filter by (e.g., 'VerifiableCredential', 'DIDDocument') |
-
-### IWallet.addDocument(json, \[options]) ⇒ `Promise.<WalletDocument>`
-
-Adds a new document to the wallet
-
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<WalletDocument>` -
-
-The created document with generated metadata
-
-\
-**Emits**: `WalletEvents.event:documentAdded`
-
-| Param      | Type  | Description                                             |
-| ---------- | ----- | ------------------------------------------------------- |
-| json       | `any` | The document to add (must have valid JSON-LD structure) |
-| \[options] | `any` | Optional parameters for document creation               |
-
-**Example**
-
+**Example**  
 ```js
 const credential = {
   "@context": ["https://www.w3.org/2018/credentials/v1"],
@@ -892,428 +816,366 @@ const credential = {
 };
 const addedDoc = await wallet.addDocument(credential);
 ```
+<a name="IWallet.updateDocument"></a>
 
-### IWallet.updateDocument(document, \[options]) ⇒ `Promise.<WalletDocument>`
+### IWallet.updateDocument(document, [options]) ⇒ <code>Promise.&lt;WalletDocument&gt;</code>
+<p>Updates an existing document</p>
 
-Updates an existing document
-
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<WalletDocument>` -
-
-The updated document
-
-\
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;WalletDocument&gt;</code> - <p>The updated document</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If document doesn't exist</p>
 
-    If document doesn't exist
+**Emits**: <code>WalletEvents.event:documentUpdated</code>  
 
-**Emits**: `WalletEvents.event:documentUpdated`
+| Param | Type | Description |
+| --- | --- | --- |
+| document | <code>any</code> | <p>The document with updated data (must include ID)</p> |
+| [options] | <code>any</code> | <p>Optional parameters for document update</p> |
 
-| Param      | Type  | Description                                      |
-| ---------- | ----- | ------------------------------------------------ |
-| document   | `any` | The document with updated data (must include ID) |
-| \[options] | `any` | Optional parameters for document update          |
+<a name="IWallet.removeDocument"></a>
 
-### IWallet.removeDocument(id, \[options]) ⇒ `Promise.<void>`
+### IWallet.removeDocument(id, [options]) ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Removes a document from the wallet</p>
 
-Removes a document from the wallet
-
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If document is not found</p>
 
-    If document is not found
+**Emits**: <code>WalletEvents.event:documentRemoved</code>  
 
-**Emits**: `WalletEvents.event:documentRemoved`
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | <p>The ID of the document to remove</p> |
+| [options] | <code>any</code> | <p>Optional parameters for document removal</p> |
 
-| Param      | Type     | Description                              |
-| ---------- | -------- | ---------------------------------------- |
-| id         | `string` | The ID of the document to remove         |
-| \[options] | `any`    | Optional parameters for document removal |
+<a name="IWallet.getDocumentCorrelations"></a>
 
-### IWallet.getDocumentCorrelations(documentId) ⇒ `Promise.<Array.<WalletDocument>>`
+### IWallet.getDocumentCorrelations(documentId) ⇒ <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code>
+<p>Gets all documents correlated to a specific document</p>
 
-Gets all documents correlated to a specific document
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;Array.&lt;WalletDocument&gt;&gt;</code> - <p>Array of correlated documents</p>  
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<Array.<WalletDocument>>` -
+| Param | Type | Description |
+| --- | --- | --- |
+| documentId | <code>string</code> | <p>The ID of the document to find correlations for</p> |
 
-Array of correlated documents
+<a name="IWallet.getAccountKeyPair"></a>
 
-| Param      | Type     | Description                                     |
-| ---------- | -------- | ----------------------------------------------- |
-| documentId | `string` | The ID of the document to find correlations for |
+### IWallet.getAccountKeyPair(accountId) ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Retrieves the keypair associated with an account</p>
 
-### IWallet.getAccountKeyPair(accountId) ⇒ `Promise.<any>`
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>The keypair associated with the account</p>  
 
-Retrieves the keypair associated with an account
+| Param | Type | Description |
+| --- | --- | --- |
+| accountId | <code>string</code> | <p>The account ID to get the keypair for</p> |
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<any>` -
+<a name="IWallet.getDocumentsFromEncryptedWallet"></a>
 
-The keypair associated with the account
+### IWallet.getDocumentsFromEncryptedWallet(json, password) ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Decrypts and retrieves documents from an encrypted wallet without importing</p>
 
-| Param     | Type     | Description                           |
-| --------- | -------- | ------------------------------------- |
-| accountId | `string` | The account ID to get the keypair for |
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>Array of decrypted documents</p>  
 
-### IWallet.getDocumentsFromEncryptedWallet(json, password) ⇒ `Promise.<any>`
+| Param | Type | Description |
+| --- | --- | --- |
+| json | <code>any</code> | <p>The encrypted wallet JSON</p> |
+| password | <code>string</code> | <p>Password to decrypt the wallet</p> |
 
-Decrypts and retrieves documents from an encrypted wallet without importing
+<a name="IWallet.importUniversalWalletJSON"></a>
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<any>` -
+### IWallet.importUniversalWalletJSON(json, password) ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Imports documents from an encrypted Universal Wallet 2020 JSON</p>
 
-Array of decrypted documents
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**See**: [https://w3c-ccg.github.io/universal-wallet-interop-spec/](https://w3c-ccg.github.io/universal-wallet-interop-spec/)  
 
-| Param    | Type     | Description                    |
-| -------- | -------- | ------------------------------ |
-| json     | `any`    | The encrypted wallet JSON      |
-| password | `string` | Password to decrypt the wallet |
+| Param | Type | Description |
+| --- | --- | --- |
+| json | <code>any</code> | <p>The encrypted wallet JSON</p> |
+| password | <code>string</code> | <p>Password to decrypt the wallet</p> |
 
-### IWallet.importUniversalWalletJSON(json, password) ⇒ `Promise.<void>`
-
-Imports documents from an encrypted Universal Wallet 2020 JSON
-
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**See**: [https://w3c-ccg.github.io/universal-wallet-interop-spec/](https://w3c-ccg.github.io/universal-wallet-interop-spec/)
-
-| Param    | Type     | Description                    |
-| -------- | -------- | ------------------------------ |
-| json     | `any`    | The encrypted wallet JSON      |
-| password | `string` | Password to decrypt the wallet |
-
-**Example**
-
+**Example**  
 ```js
 // Import from encrypted wallet backup
 const walletBackup = { ... }; // encrypted wallet JSON
 await wallet.importUniversalWalletJSON(walletBackup, 'mypassword');
 ```
+<a name="IWallet.exportDocuments"></a>
 
-### IWallet.exportDocuments(params) ⇒ `Promise.<any>`
+### IWallet.exportDocuments(params) ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Exports specified documents as an encrypted JSON (test)</p>
 
-Exports specified documents as an encrypted JSON (test)
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>Encrypted wallet JSON</p>  
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `Promise.<any>` -
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Export parameters</p> |
+| params.documents | <code>Array.&lt;any&gt;</code> | <p>Documents to export</p> |
+| params.password | <code>string</code> | <p>Password for encryption</p> |
 
-Encrypted wallet JSON
+<a name="IWallet.exportUniversalWalletJSON"></a>
 
-| Param            | Type          | Description             |
-| ---------------- | ------------- | ----------------------- |
-| params           | `Object`      | Export parameters       |
-| params.documents | `Array.<any>` | Documents to export     |
-| params.password  | `string`      | Password for encryption |
+### IWallet.exportUniversalWalletJSON(password) ⇒ <code>any</code>
+<p>Exports the entire wallet as an encrypted Universal Wallet 2020 JSON</p>
 
-### IWallet.exportUniversalWalletJSON(password) ⇒ `any`
+**Kind**: static method of [<code>IWallet</code>](#IWallet)  
+**Returns**: <code>any</code> - <p>Encrypted Universal Wallet JSON representation</p>  
+**See**: [https://w3c-ccg.github.io/universal-wallet-interop-spec/](https://w3c-ccg.github.io/universal-wallet-interop-spec/)  
 
-Exports the entire wallet as an encrypted Universal Wallet 2020 JSON
+| Param | Type | Description |
+| --- | --- | --- |
+| password | <code>string</code> | <p>Password for encryption</p> |
 
-**Kind**: static method of [`IWallet`](core.md#IWallet)\
-**Returns**: `any` -
-
-Encrypted Universal Wallet JSON representation
-
-\
-**See**: [https://w3c-ccg.github.io/universal-wallet-interop-spec/](https://w3c-ccg.github.io/universal-wallet-interop-spec/)
-
-| Param    | Type     | Description             |
-| -------- | -------- | ----------------------- |
-| password | `string` | Password for encryption |
-
-**Example**
-
+**Example**  
 ```js
 // Create encrypted backup of entire wallet
 const backup = await wallet.exportUniversalWalletJSON('mypassword');
 // Save backup to file or cloud storage
 ```
+<a name="IDIDProvider"></a>
 
 ## IDIDProvider
+<p>Provides a high-level API for DID management operations</p>
 
-Provides a high-level API for DID management operations
+**Kind**: global interface  
 
-**Kind**: global interface
+* [IDIDProvider](#IDIDProvider)
+    * [.importDID(params)](#IDIDProvider.importDID) ⇒ <code>Promise.&lt;Array.&lt;any&gt;&gt;</code>
+    * [.createDIDKey(params)](#IDIDProvider.createDIDKey) ⇒ <code>Promise.&lt;{keyDoc: any, didDocumentResolution: any}&gt;</code>
+    * [.editDID(params)](#IDIDProvider.editDID) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.deleteDID(params)](#IDIDProvider.deleteDID) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.exportDID(params)](#IDIDProvider.exportDID) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.getAll()](#IDIDProvider.getAll) ⇒ <code>Promise.&lt;Array.&lt;any&gt;&gt;</code>
+    * [.getDIDKeyPairs()](#IDIDProvider.getDIDKeyPairs) ⇒ <code>Promise.&lt;Array.&lt;any&gt;&gt;</code>
+    * [.ensureDID()](#IDIDProvider.ensureDID) ⇒ <code>Promise.&lt;({keyDoc: any, didDocumentResolution: any}\|void)&gt;</code>
+    * [.getDefaultDID()](#IDIDProvider.getDefaultDID) ⇒ <code>Promise.&lt;(string\|undefined)&gt;</code>
 
-* [IDIDProvider](core.md#IDIDProvider)
-  * [.importDID(params)](core.md#IDIDProvider.importDID) ⇒ `Promise.<Array.<any>>`
-  * [.createDIDKey(params)](core.md#IDIDProvider.createDIDKey) ⇒ `Promise.<{keyDoc: any, didDocumentResolution: any}>`
-  * [.editDID(params)](core.md#IDIDProvider.editDID) ⇒ `Promise.<void>`
-  * [.deleteDID(params)](core.md#IDIDProvider.deleteDID) ⇒ `Promise.<void>`
-  * [.exportDID(params)](core.md#IDIDProvider.exportDID) ⇒ `Promise.<any>`
-  * [.getAll()](core.md#IDIDProvider.getAll) ⇒ `Promise.<Array.<any>>`
-  * [.getDIDKeyPairs()](core.md#IDIDProvider.getDIDKeyPairs) ⇒ `Promise.<Array.<any>>`
-  * [.ensureDID()](core.md#IDIDProvider.ensureDID) ⇒ `Promise.<({keyDoc: any, didDocumentResolution: any}|void)>`
-  * [.getDefaultDID()](core.md#IDIDProvider.getDefaultDID) ⇒ `Promise.<(string|undefined)>`
+<a name="IDIDProvider.importDID"></a>
 
-### IDIDProvider.importDID(params) ⇒ `Promise.<Array.<any>>`
+### IDIDProvider.importDID(params) ⇒ <code>Promise.&lt;Array.&lt;any&gt;&gt;</code>
+<p>Imports a DID from an encrypted wallet JSON</p>
 
-Imports a DID from an encrypted wallet JSON
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
-**Returns**: `Promise.<Array.<any>>` -
-
-Array of imported documents
-
-\
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
+**Returns**: <code>Promise.&lt;Array.&lt;any&gt;&gt;</code> - <p>Array of imported documents</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If password is incorrect or DID already exists in wallet</p>
 
-    If password is incorrect or DID already exists in wallet
 
-| Param                      | Type     | Description                                  |
-| -------------------------- | -------- | -------------------------------------------- |
-| params                     | `Object` | Import parameters                            |
-| params.encryptedJSONWallet | `any`    | The encrypted wallet JSON containing the DID |
-| params.password            | `string` | Password to decrypt the wallet               |
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Import parameters</p> |
+| params.encryptedJSONWallet | <code>any</code> | <p>The encrypted wallet JSON containing the DID</p> |
+| params.password | <code>string</code> | <p>Password to decrypt the wallet</p> |
 
-**Example**
-
+**Example**  
 ```js
 const importedDocs = await didProvider.importDID({
   encryptedJSONWallet: encryptedBackup,
   password: 'mypassword'
 });
 ```
+<a name="IDIDProvider.createDIDKey"></a>
 
-### IDIDProvider.createDIDKey(params) ⇒ `Promise.<{keyDoc: any, didDocumentResolution: any}>`
+### IDIDProvider.createDIDKey(params) ⇒ <code>Promise.&lt;{keyDoc: any, didDocumentResolution: any}&gt;</code>
+<p>Creates a new DID:key with an associated keypair</p>
 
-Creates a new DID:key with an associated keypair
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
-**Returns**: `Promise.<{keyDoc: any, didDocumentResolution: any}>` -
-
-The created keypair and DID document
-
-\
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
+**Returns**: <code>Promise.&lt;{keyDoc: any, didDocumentResolution: any}&gt;</code> - <p>The created keypair and DID document</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If name is not provided</p>
 
-    If name is not provided
 
-| Param                | Type     | Description                              |
-| -------------------- | -------- | ---------------------------------------- |
-| params               | `Object` | Creation parameters                      |
-| params.name          | `string` | The name for the new DID                 |
-| \[params.derivePath] | `string` | Optional derivation path for the keypair |
-| \[params.type]       | `string` | Optional key type specification          |
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Creation parameters</p> |
+| params.name | <code>string</code> | <p>The name for the new DID</p> |
+| [params.derivePath] | <code>string</code> | <p>Optional derivation path for the keypair</p> |
+| [params.type] | <code>string</code> | <p>Optional key type specification</p> |
 
-**Example**
-
+**Example**  
 ```js
 const {keyDoc, didDocumentResolution} = await didProvider.createDIDKey({
   name: 'My Identity DID',
   derivePath: "m/44'/60'/0'/0/0"
 });
 ```
+<a name="IDIDProvider.editDID"></a>
 
-### IDIDProvider.editDID(params) ⇒ `Promise.<void>`
+### IDIDProvider.editDID(params) ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Edits a DID document's name</p>
 
-Edits a DID document's name
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If document ID is not set or document not found</p>
 
-    If document ID is not set or document not found
 
-| Param       | Type     | Description                        |
-| ----------- | -------- | ---------------------------------- |
-| params      | `Object` | Edit parameters                    |
-| params.id   | `string` | The ID of the DID document to edit |
-| params.name | `string` | The new name for the DID           |
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Edit parameters</p> |
+| params.id | <code>string</code> | <p>The ID of the DID document to edit</p> |
+| params.name | <code>string</code> | <p>The new name for the DID</p> |
 
-**Example**
-
+**Example**  
 ```js
 await didProvider.editDID({
   id: 'did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK',
   name: 'Updated DID Name'
 });
 ```
+<a name="IDIDProvider.deleteDID"></a>
 
-### IDIDProvider.deleteDID(params) ⇒ `Promise.<void>`
+### IDIDProvider.deleteDID(params) ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Deletes a DID from the wallet</p>
 
-Deletes a DID from the wallet
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If document ID is not set</p>
 
-    If document ID is not set
 
-| Param     | Type     | Description                          |
-| --------- | -------- | ------------------------------------ |
-| params    | `Object` | Delete parameters                    |
-| params.id | `string` | The ID of the DID document to delete |
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Delete parameters</p> |
+| params.id | <code>string</code> | <p>The ID of the DID document to delete</p> |
 
-**Example**
-
+**Example**  
 ```js
 await didProvider.deleteDID({
   id: 'did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK'
 });
 ```
+<a name="IDIDProvider.exportDID"></a>
 
-### IDIDProvider.exportDID(params) ⇒ `Promise.<any>`
+### IDIDProvider.exportDID(params) ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Exports a DID and its correlated documents as an encrypted JSON</p>
 
-Exports a DID and its correlated documents as an encrypted JSON
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
-**Returns**: `Promise.<any>` -
-
-Encrypted wallet JSON containing the DID and correlations
-
-\
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>Encrypted wallet JSON containing the DID and correlations</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If DID document or keypair not found</p>
 
-    If DID document or keypair not found
 
-| Param           | Type     | Description                          |
-| --------------- | -------- | ------------------------------------ |
-| params          | `Object` | Export parameters                    |
-| params.id       | `string` | The ID of the DID document to export |
-| params.password | `string` | Password for encryption              |
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Export parameters</p> |
+| params.id | <code>string</code> | <p>The ID of the DID document to export</p> |
+| params.password | <code>string</code> | <p>Password for encryption</p> |
 
-**Example**
-
+**Example**  
 ```js
 const exportedDID = await didProvider.exportDID({
   id: 'did:key:z6MkhaXgBZDvotDkL5257faiztiGiC2QtKLGpbnnEGta2doK',
   password: 'mypassword'
 });
 ```
+<a name="IDIDProvider.getAll"></a>
 
-### IDIDProvider.getAll() ⇒ `Promise.<Array.<any>>`
+### IDIDProvider.getAll() ⇒ <code>Promise.&lt;Array.&lt;any&gt;&gt;</code>
+<p>Retrieves all DIDs stored in the wallet</p>
 
-Retrieves all DIDs stored in the wallet
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
-**Returns**: `Promise.<Array.<any>>` -
-
-Array of DID resolution response documents
-
-\
-**Example**
-
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
+**Returns**: <code>Promise.&lt;Array.&lt;any&gt;&gt;</code> - <p>Array of DID resolution response documents</p>  
+**Example**  
 ```js
 const allDIDs = await didProvider.getAll();
 console.log(`Found ${allDIDs.length} DIDs in wallet`);
 ```
+<a name="IDIDProvider.getDIDKeyPairs"></a>
 
-### IDIDProvider.getDIDKeyPairs() ⇒ `Promise.<Array.<any>>`
+### IDIDProvider.getDIDKeyPairs() ⇒ <code>Promise.&lt;Array.&lt;any&gt;&gt;</code>
+<p>Retrieves all keypairs associated with DIDs in the wallet</p>
 
-Retrieves all keypairs associated with DIDs in the wallet
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
-**Returns**: `Promise.<Array.<any>>` -
-
-Array of keypair documents
-
-\
-**Example**
-
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
+**Returns**: <code>Promise.&lt;Array.&lt;any&gt;&gt;</code> - <p>Array of keypair documents</p>  
+**Example**  
 ```js
 const keyPairs = await didProvider.getDIDKeyPairs();
 console.log(`Found ${keyPairs.length} DID keypairs`);
 ```
+<a name="IDIDProvider.ensureDID"></a>
 
-### IDIDProvider.ensureDID() ⇒ `Promise.<({keyDoc: any, didDocumentResolution: any}|void)>`
+### IDIDProvider.ensureDID() ⇒ <code>Promise.&lt;({keyDoc: any, didDocumentResolution: any}\|void)&gt;</code>
+<p>Ensures at least one DID exists in the wallet, creating a default if none exist</p>
 
-Ensures at least one DID exists in the wallet, creating a default if none exist
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
-**Returns**: `Promise.<({keyDoc: any, didDocumentResolution: any}|void)>` -
-
-The created DID if one was created, undefined otherwise
-
-\
-**Example**
-
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
+**Returns**: <code>Promise.&lt;({keyDoc: any, didDocumentResolution: any}\|void)&gt;</code> - <p>The created DID if one was created, undefined otherwise</p>  
+**Example**  
 ```js
 // Ensure wallet has at least one DID
 await didProvider.ensureDID();
 ```
+<a name="IDIDProvider.getDefaultDID"></a>
 
-### IDIDProvider.getDefaultDID() ⇒ `Promise.<(string|undefined)>`
+### IDIDProvider.getDefaultDID() ⇒ <code>Promise.&lt;(string\|undefined)&gt;</code>
+<p>Gets the default DID from the wallet (first DID if exists)</p>
 
-Gets the default DID from the wallet (first DID if exists)
-
-**Kind**: static method of [`IDIDProvider`](core.md#IDIDProvider)\
-**Returns**: `Promise.<(string|undefined)>` -
-
-The default DID identifier or undefined if no DIDs exist
-
-\
-**Example**
-
+**Kind**: static method of [<code>IDIDProvider</code>](#IDIDProvider)  
+**Returns**: <code>Promise.&lt;(string\|undefined)&gt;</code> - <p>The default DID identifier or undefined if no DIDs exist</p>  
+**Example**  
 ```js
 const defaultDID = await didProvider.getDefaultDID();
 if (defaultDID) {
   console.log(`Default DID: ${defaultDID}`);
 }
 ```
+<a name="IMessageProvider"></a>
 
 ## IMessageProvider
+<p>Provides a high-level API for DIDComm message management operations</p>
 
-Provides a high-level API for DIDComm message management operations
+**Kind**: global interface  
 
-**Kind**: global interface
+* [IMessageProvider](#IMessageProvider)
+    * [.fetchMessages](#IMessageProvider.fetchMessages) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.addMessageListener](#IMessageProvider.addMessageListener) ⇒ <code>function</code>
+    * [.processDIDCommMessages](#IMessageProvider.processDIDCommMessages) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.processMessageRecurrentJob](#IMessageProvider.processMessageRecurrentJob) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.markMessageAsRead](#IMessageProvider.markMessageAsRead) ⇒ <code>Promise.&lt;void&gt;</code>
+    * [.sendMessage(params)](#IMessageProvider.sendMessage) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.waitForMessage()](#IMessageProvider.waitForMessage) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.startAutoFetch([timeout])](#IMessageProvider.startAutoFetch) ⇒ <code>function</code>
+    * [.clearCache()](#IMessageProvider.clearCache) ⇒ <code>Promise.&lt;void&gt;</code>
 
-* [IMessageProvider](core.md#IMessageProvider)
-  * [.fetchMessages](core.md#IMessageProvider.fetchMessages) ⇒ `Promise.<void>`
-  * [.addMessageListener](core.md#IMessageProvider.addMessageListener) ⇒ `function`
-  * [.processDIDCommMessages](core.md#IMessageProvider.processDIDCommMessages) ⇒ `Promise.<void>`
-  * [.processMessageRecurrentJob](core.md#IMessageProvider.processMessageRecurrentJob) ⇒ `Promise.<void>`
-  * [.markMessageAsRead](core.md#IMessageProvider.markMessageAsRead) ⇒ `Promise.<void>`
-  * [.sendMessage(params)](core.md#IMessageProvider.sendMessage) ⇒ `Promise.<any>`
-  * [.waitForMessage()](core.md#IMessageProvider.waitForMessage) ⇒ `Promise.<any>`
-  * [.startAutoFetch(\[timeout\])](core.md#IMessageProvider.startAutoFetch) ⇒ `function`
-  * [.clearCache()](core.md#IMessageProvider.clearCache) ⇒ `Promise.<void>`
+<a name="IMessageProvider.fetchMessages"></a>
 
-### IMessageProvider.fetchMessages ⇒ `Promise.<void>`
+### IMessageProvider.fetchMessages ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Fetches new messages from the relay service</p>
 
-Fetches new messages from the relay service
-
-**Kind**: static property of [`IMessageProvider`](core.md#IMessageProvider)\
+**Kind**: static property of [<code>IMessageProvider</code>](#IMessageProvider)  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If message fetching fails</p>
 
-    If message fetching fails
-
-**Example**
-
+**Example**  
 ```js
 await messageProvider.fetchMessages();
 console.log('Messages fetched successfully');
 ```
+<a name="IMessageProvider.addMessageListener"></a>
 
-### IMessageProvider.addMessageListener ⇒ `function`
+### IMessageProvider.addMessageListener ⇒ <code>function</code>
+<p>Adds a listener for when messages are decrypted</p>
 
-Adds a listener for when messages are decrypted
+**Kind**: static property of [<code>IMessageProvider</code>](#IMessageProvider)  
+**Returns**: <code>function</code> - <p>Function to remove the listener</p>  
 
-**Kind**: static property of [`IMessageProvider`](core.md#IMessageProvider)\
-**Returns**: `function` -
+| Param | Type | Description |
+| --- | --- | --- |
+| handler | <code>function</code> | <p>Callback function to handle decrypted messages</p> |
 
-Function to remove the listener
-
-| Param   | Type       | Description                                    |
-| ------- | ---------- | ---------------------------------------------- |
-| handler | `function` | Callback function to handle decrypted messages |
-
-**Example**
-
+**Example**  
 ```js
 const removeListener = messageProvider.addMessageListener((message) => {
   console.log('New message received:', message);
@@ -1321,87 +1183,75 @@ const removeListener = messageProvider.addMessageListener((message) => {
 // Later, remove the listener
 removeListener();
 ```
+<a name="IMessageProvider.processDIDCommMessages"></a>
 
-### IMessageProvider.processDIDCommMessages ⇒ `Promise.<void>`
+### IMessageProvider.processDIDCommMessages ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Processes stored DIDComm messages and decrypts them</p>
 
-Processes stored DIDComm messages and decrypts them
-
-**Kind**: static property of [`IMessageProvider`](core.md#IMessageProvider)\
+**Kind**: static property of [<code>IMessageProvider</code>](#IMessageProvider)  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If message processing fails</p>
 
-    If message processing fails
-
-**Example**
-
+**Example**  
 ```js
 await messageProvider.processDIDCommMessages();
 console.log('Messages processed successfully');
 ```
+<a name="IMessageProvider.processMessageRecurrentJob"></a>
 
-### IMessageProvider.processMessageRecurrentJob ⇒ `Promise.<void>`
+### IMessageProvider.processMessageRecurrentJob ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Starts the recurrent message processing job</p>
 
-Starts the recurrent message processing job
-
-**Kind**: static property of [`IMessageProvider`](core.md#IMessageProvider)\
-**Example**
-
+**Kind**: static property of [<code>IMessageProvider</code>](#IMessageProvider)  
+**Example**  
 ```js
 await messageProvider.processMessageRecurrentJob();
 ```
+<a name="IMessageProvider.markMessageAsRead"></a>
 
-### IMessageProvider.markMessageAsRead ⇒ `Promise.<void>`
+### IMessageProvider.markMessageAsRead ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Marks a message as read and removes it from storage</p>
 
-Marks a message as read and removes it from storage
-
-**Kind**: static property of [`IMessageProvider`](core.md#IMessageProvider)\
+**Kind**: static property of [<code>IMessageProvider</code>](#IMessageProvider)  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If message is not found or not a DIDComm message</p>
 
-    If message is not found or not a DIDComm message
 
-| Param     | Type     | Description                           |
-| --------- | -------- | ------------------------------------- |
-| messageId | `string` | The ID of the message to mark as read |
+| Param | Type | Description |
+| --- | --- | --- |
+| messageId | <code>string</code> | <p>The ID of the message to mark as read</p> |
 
-**Example**
-
+**Example**  
 ```js
 await messageProvider.markMessageAsRead('message-id-123');
 console.log('Message marked as read');
 ```
+<a name="IMessageProvider.sendMessage"></a>
 
-### IMessageProvider.sendMessage(params) ⇒ `Promise.<any>`
+### IMessageProvider.sendMessage(params) ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Sends a DIDComm message to a recipient</p>
 
-Sends a DIDComm message to a recipient
-
-**Kind**: static method of [`IMessageProvider`](core.md#IMessageProvider)\
-**Returns**: `Promise.<any>` -
-
-Result of sending the message
-
-\
+**Kind**: static method of [<code>IMessageProvider</code>](#IMessageProvider)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>Result of sending the message</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If sender DID not found or message sending fails</p>
 
-    If sender DID not found or message sending fails
 
-| Param                  | Type     | Description                                                 |
-| ---------------------- | -------- | ----------------------------------------------------------- |
-| params                 | `Object` | Message parameters                                          |
-| \[params.from]         | `string` | Sender DID identifier                                       |
-| \[params.to]           | `string` | Recipient DID identifier                                    |
-| \[params.message]      | `any`    | Message payload to send                                     |
-| \[params.type]         | `string` | DIDComm message type                                        |
-| \[params.did]          | `string` | @deprecated Use 'from' instead - Sender DID identifier      |
-| \[params.recipientDid] | `string` | @deprecated Use 'to' instead - Recipient DID identifier     |
-| \[params.body]         | `any`    | @deprecated Use 'message' instead - Message payload to send |
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Message parameters</p> |
+| [params.from] | <code>string</code> | <p>Sender DID identifier</p> |
+| [params.to] | <code>string</code> | <p>Recipient DID identifier</p> |
+| [params.message] | <code>any</code> | <p>Message payload to send</p> |
+| [params.type] | <code>string</code> | <p>DIDComm message type</p> |
+| [params.did] | <code>string</code> | <p>@deprecated Use 'from' instead - Sender DID identifier</p> |
+| [params.recipientDid] | <code>string</code> | <p>@deprecated Use 'to' instead - Recipient DID identifier</p> |
+| [params.body] | <code>any</code> | <p>@deprecated Use 'message' instead - Message payload to send</p> |
 
-**Example**
-
+**Example**  
 ```js
 await messageProvider.sendMessage({
   from: 'did:key:sender123',
@@ -1410,142 +1260,122 @@ await messageProvider.sendMessage({
   type: 'basic-message'
 });
 ```
+<a name="IMessageProvider.waitForMessage"></a>
 
-### IMessageProvider.waitForMessage() ⇒ `Promise.<any>`
+### IMessageProvider.waitForMessage() ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Waits for the next incoming message</p>
 
-Waits for the next incoming message
-
-**Kind**: static method of [`IMessageProvider`](core.md#IMessageProvider)\
-**Returns**: `Promise.<any>` -
-
-Promise that resolves with the next received message
-
-\
-**Example**
-
+**Kind**: static method of [<code>IMessageProvider</code>](#IMessageProvider)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>Promise that resolves with the next received message</p>  
+**Example**  
 ```js
 const nextMessage = await messageProvider.waitForMessage();
 console.log('Received message:', nextMessage);
 ```
+<a name="IMessageProvider.startAutoFetch"></a>
 
-### IMessageProvider.startAutoFetch(\[timeout]) ⇒ `function`
+### IMessageProvider.startAutoFetch([timeout]) ⇒ <code>function</code>
+<p>Starts automatic message fetching at regular intervals</p>
 
-Starts automatic message fetching at regular intervals
+**Kind**: static method of [<code>IMessageProvider</code>](#IMessageProvider)  
+**Returns**: <code>function</code> - <p>Function to stop the auto-fetch process</p>  
 
-**Kind**: static method of [`IMessageProvider`](core.md#IMessageProvider)\
-**Returns**: `function` -
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [timeout] | <code>number</code> | <code>2000</code> | <p>Interval in milliseconds between fetch operations</p> |
 
-Function to stop the auto-fetch process
-
-| Param      | Type     | Default | Description                                       |
-| ---------- | -------- | ------- | ------------------------------------------------- |
-| \[timeout] | `number` | `2000`  | Interval in milliseconds between fetch operations |
-
-**Example**
-
+**Example**  
 ```js
 const stopAutoFetch = messageProvider.startAutoFetch(5000);
 // Later, stop auto-fetching
 stopAutoFetch();
 ```
+<a name="IMessageProvider.clearCache"></a>
 
-### IMessageProvider.clearCache() ⇒ `Promise.<void>`
+### IMessageProvider.clearCache() ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Clears all cached messages from the wallet</p>
 
-Clears all cached messages from the wallet
-
-**Kind**: static method of [`IMessageProvider`](core.md#IMessageProvider)\
-**Example**
-
+**Kind**: static method of [<code>IMessageProvider</code>](#IMessageProvider)  
+**Example**  
 ```js
 await messageProvider.clearCache();
 console.log('All messages cleared');
 ```
+<a name="ICredentialProvider"></a>
 
 ## ICredentialProvider
+<p>Provides a high-level API for verifiable credential management operations</p>
 
-Provides a high-level API for verifiable credential management operations
+**Kind**: global interface  
 
-**Kind**: global interface
+* [ICredentialProvider](#ICredentialProvider)
+    * [.getCredentials](#ICredentialProvider.getCredentials) ⇒ <code>Array.&lt;any&gt;</code>
+    * [.isBBSPlusCredential](#ICredentialProvider.isBBSPlusCredential) ⇒ <code>boolean</code>
+    * [.importCredentialFromURI(params)](#ICredentialProvider.importCredentialFromURI) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.getMembershipWitness(credentialId)](#ICredentialProvider.getMembershipWitness) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.getById(id)](#ICredentialProvider.getById) ⇒ <code>any</code>
+    * [.isValid(credential, [forceFetch])](#ICredentialProvider.isValid) ⇒ <code>Promise.&lt;Object&gt;</code> \| <code>string</code> \| <code>string</code> \| <code>string</code>
+    * [.getCredentialStatus(credential)](#ICredentialProvider.getCredentialStatus) ⇒ <code>Promise.&lt;Object&gt;</code> \| <code>string</code> \| <code>string</code>
+    * [.syncCredentialStatus(params)](#ICredentialProvider.syncCredentialStatus) ⇒ <code>Promise.&lt;Array.&lt;any&gt;&gt;</code>
+    * [.addCredential(credential)](#ICredentialProvider.addCredential) ⇒ <code>Promise.&lt;any&gt;</code>
+    * [.removeCredential(credential)](#ICredentialProvider.removeCredential) ⇒ <code>Promise.&lt;void&gt;</code>
 
-* [ICredentialProvider](core.md#ICredentialProvider)
-  * [.getCredentials](core.md#ICredentialProvider.getCredentials) ⇒ `Array.<any>`
-  * [.isBBSPlusCredential](core.md#ICredentialProvider.isBBSPlusCredential) ⇒ `boolean`
-  * [.importCredentialFromURI(params)](core.md#ICredentialProvider.importCredentialFromURI) ⇒ `Promise.<any>`
-  * [.getMembershipWitness(credentialId)](core.md#ICredentialProvider.getMembershipWitness) ⇒ `Promise.<any>`
-  * [.getById(id)](core.md#ICredentialProvider.getById) ⇒ `any`
-  * [.isValid(credential, \[forceFetch\])](core.md#ICredentialProvider.isValid) ⇒ `Promise.<Object>` | `string` | `string` | `string`
-  * [.getCredentialStatus(credential)](core.md#ICredentialProvider.getCredentialStatus) ⇒ `Promise.<Object>` | `string` | `string`
-  * [.syncCredentialStatus(params)](core.md#ICredentialProvider.syncCredentialStatus) ⇒ `Promise.<Array.<any>>`
-  * [.addCredential(credential)](core.md#ICredentialProvider.addCredential) ⇒ `Promise.<any>`
-  * [.removeCredential(credential)](core.md#ICredentialProvider.removeCredential) ⇒ `Promise.<void>`
+<a name="ICredentialProvider.getCredentials"></a>
 
-### ICredentialProvider.getCredentials ⇒ `Array.<any>`
+### ICredentialProvider.getCredentials ⇒ <code>Array.&lt;any&gt;</code>
+<p>Retrieves credentials from the wallet, optionally filtered by type</p>
 
-Retrieves credentials from the wallet, optionally filtered by type
+**Kind**: static property of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>Array.&lt;any&gt;</code> - <p>Array of credentials matching the specified type</p>  
 
-**Kind**: static property of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `Array.<any>` -
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| [type] | <code>string</code> | <code>&quot;&#x27;VerifiableCredential&#x27;&quot;</code> | <p>The credential type to filter by</p> |
 
-Array of credentials matching the specified type
-
-| Param   | Type     | Default                    | Description                      |
-| ------- | -------- | -------------------------- | -------------------------------- |
-| \[type] | `string` | `"'VerifiableCredential'"` | The credential type to filter by |
-
-**Example**
-
+**Example**  
 ```js
 const allCredentials = credentialProvider.getCredentials();
 const certificates = credentialProvider.getCredentials('Certificate');
 ```
+<a name="ICredentialProvider.isBBSPlusCredential"></a>
 
-### ICredentialProvider.isBBSPlusCredential ⇒ `boolean`
+### ICredentialProvider.isBBSPlusCredential ⇒ <code>boolean</code>
+<p>Checks if a credential uses BBS+ signature</p>
 
-Checks if a credential uses BBS+ signature
+**Kind**: static property of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>boolean</code> - <p>True if the credential uses BBS+ signature</p>  
 
-**Kind**: static property of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `boolean` -
+| Param | Type | Description |
+| --- | --- | --- |
+| credential | <code>any</code> | <p>The credential to check</p> |
 
-True if the credential uses BBS+ signature
-
-| Param      | Type  | Description             |
-| ---------- | ----- | ----------------------- |
-| credential | `any` | The credential to check |
-
-**Example**
-
+**Example**  
 ```js
 const isBBS = credentialProvider.isBBSPlusCredential(credential);
 if (isBBS) {
   console.log('This credential uses BBS+ signatures');
 }
 ```
+<a name="ICredentialProvider.importCredentialFromURI"></a>
 
-### ICredentialProvider.importCredentialFromURI(params) ⇒ `Promise.<any>`
+### ICredentialProvider.importCredentialFromURI(params) ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Imports a credential from a URI (supports OpenID credential offers)</p>
 
-Imports a credential from a URI (supports OpenID credential offers)
-
-**Kind**: static method of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `Promise.<any>` -
-
-The imported credential
-
-\
+**Kind**: static method of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>The imported credential</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If import fails</p>
 
-    If import fails
 
-| Param                 | Type       | Description                               |
-| --------------------- | ---------- | ----------------------------------------- |
-| params                | `Object`   | Import parameters                         |
-| params.uri            | `string`   | The URI containing the credential offer   |
-| params.didProvider    | `any`      | DID provider instance for key management  |
-| \[params.getAuthCode] | `function` | Optional callback to handle authorization |
+| Param | Type | Description |
+| --- | --- | --- |
+| params | <code>Object</code> | <p>Import parameters</p> |
+| params.uri | <code>string</code> | <p>The URI containing the credential offer</p> |
+| params.didProvider | <code>any</code> | <p>DID provider instance for key management</p> |
+| [params.getAuthCode] | <code>function</code> | <p>Optional callback to handle authorization</p> |
 
-**Example**
-
+**Example**  
 ```js
 const credential = await credentialProvider.importCredentialFromURI({
   uri: 'https://issuer.example.com/credential-offer',
@@ -1553,87 +1383,60 @@ const credential = await credentialProvider.importCredentialFromURI({
   getAuthCode: async (url) => getUserAuthCode(url)
 });
 ```
+<a name="ICredentialProvider.getMembershipWitness"></a>
 
-### ICredentialProvider.getMembershipWitness(credentialId) ⇒ `Promise.<any>`
+### ICredentialProvider.getMembershipWitness(credentialId) ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Gets the membership witness for a credential (used for BBS+ credentials)</p>
 
-Gets the membership witness for a credential (used for BBS+ credentials)
+**Kind**: static method of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>The membership witness data</p>  
 
-**Kind**: static method of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `Promise.<any>` -
+| Param | Type | Description |
+| --- | --- | --- |
+| credentialId | <code>string</code> | <p>The credential ID to get the witness for</p> |
 
-The membership witness data
-
-| Param        | Type     | Description                              |
-| ------------ | -------- | ---------------------------------------- |
-| credentialId | `string` | The credential ID to get the witness for |
-
-**Example**
-
+**Example**  
 ```js
 const witness = await credentialProvider.getMembershipWitness('credential-123');
 ```
+<a name="ICredentialProvider.getById"></a>
 
-### ICredentialProvider.getById(id) ⇒ `any`
+### ICredentialProvider.getById(id) ⇒ <code>any</code>
+<p>Retrieves a credential by its ID</p>
 
-Retrieves a credential by its ID
-
-**Kind**: static method of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `any` -
-
-The credential document
-
-\
+**Kind**: static method of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>any</code> - <p>The credential document</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If credential is not found</p>
 
-    If credential is not found
 
-| Param | Type     | Description                             |
-| ----- | -------- | --------------------------------------- |
-| id    | `string` | The unique identifier of the credential |
+| Param | Type | Description |
+| --- | --- | --- |
+| id | <code>string</code> | <p>The unique identifier of the credential</p> |
 
-**Example**
-
+**Example**  
 ```js
 const credential = await credentialProvider.getById('credential-123');
 ```
+<a name="ICredentialProvider.isValid"></a>
 
-### ICredentialProvider.isValid(credential, \[forceFetch]) ⇒ `Promise.<Object>` | `string` | `string` | `string`
+### ICredentialProvider.isValid(credential, [forceFetch]) ⇒ <code>Promise.&lt;Object&gt;</code> \| <code>string</code> \| <code>string</code> \| <code>string</code>
+<p>Validates a credential by verifying its cryptographic proof and status</p>
 
-Validates a credential by verifying its cryptographic proof and status
-
-**Kind**: static method of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `Promise.<Object>` -
-
-Validation result
-
-`string` -
-
-returns.status - Validation status (verified, revoked, expired, invalid, pending)
-
-`string` -
-
-\[returns.error] - Error message if validation failed
-
-`string` -
-
-\[returns.warning] - Warning message if any
-
-\
+**Kind**: static method of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - <p>Validation result</p><code>string</code> - <p>returns.status - Validation status (verified, revoked, expired, invalid, pending)</p><code>string</code> - <p>[returns.error] - Error message if validation failed</p><code>string</code> - <p>[returns.warning] - Warning message if any</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If validation fails</p>
 
-    If validation fails
 
-| Param         | Type      | Default | Description                                    |
-| ------------- | --------- | ------- | ---------------------------------------------- |
-| credential    | `any`     |         | The credential to validate                     |
-| \[forceFetch] | `boolean` | `false` | Whether to force refresh the credential status |
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| credential | <code>any</code> |  | <p>The credential to validate</p> |
+| [forceFetch] | <code>boolean</code> | <code>false</code> | <p>Whether to force refresh the credential status</p> |
 
-**Example**
-
+**Example**  
 ```js
 const result = await credentialProvider.isValid(credential);
 if (result.status === 'verified') {
@@ -1642,52 +1445,38 @@ if (result.status === 'verified') {
   console.log('Credential has been revoked');
 }
 ```
+<a name="ICredentialProvider.getCredentialStatus"></a>
 
-### ICredentialProvider.getCredentialStatus(credential) ⇒ `Promise.<Object>` | `string` | `string`
+### ICredentialProvider.getCredentialStatus(credential) ⇒ <code>Promise.&lt;Object&gt;</code> \| <code>string</code> \| <code>string</code>
+<p>Gets the current status of a credential (cached, fast operation)</p>
 
-Gets the current status of a credential (cached, fast operation)
+**Kind**: static method of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>Promise.&lt;Object&gt;</code> - <p>Current credential status</p><code>string</code> - <p>returns.status - Current status of the credential</p><code>string</code> - <p>[returns.error] - Error message if any</p>  
 
-**Kind**: static method of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `Promise.<Object>` -
+| Param | Type | Description |
+| --- | --- | --- |
+| credential | <code>any</code> | <p>The credential to check</p> |
 
-Current credential status
-
-`string` -
-
-returns.status - Current status of the credential
-
-`string` -
-
-\[returns.error] - Error message if any
-
-| Param      | Type  | Description             |
-| ---------- | ----- | ----------------------- |
-| credential | `any` | The credential to check |
-
-**Example**
-
+**Example**  
 ```js
 const status = await credentialProvider.getCredentialStatus(credential);
 console.log(`Credential status: ${status.status}`);
 ```
+<a name="ICredentialProvider.syncCredentialStatus"></a>
 
-### ICredentialProvider.syncCredentialStatus(params) ⇒ `Promise.<Array.<any>>`
+### ICredentialProvider.syncCredentialStatus(params) ⇒ <code>Promise.&lt;Array.&lt;any&gt;&gt;</code>
+<p>Synchronizes credential status from the blockchain</p>
 
-Synchronizes credential status from the blockchain
+**Kind**: static method of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>Promise.&lt;Array.&lt;any&gt;&gt;</code> - <p>Array of credential status documents</p>  
 
-**Kind**: static method of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `Promise.<Array.<any>>` -
+| Param | Type | Default | Description |
+| --- | --- | --- | --- |
+| params | <code>Object</code> |  | <p>Sync parameters</p> |
+| [params.credentialIds] | <code>Array.&lt;string&gt;</code> |  | <p>Optional list of credential IDs to sync</p> |
+| [params.forceFetch] | <code>boolean</code> | <code>false</code> | <p>Whether to force refresh from blockchain</p> |
 
-Array of credential status documents
-
-| Param                   | Type             | Default | Description                              |
-| ----------------------- | ---------------- | ------- | ---------------------------------------- |
-| params                  | `Object`         |         | Sync parameters                          |
-| \[params.credentialIds] | `Array.<string>` |         | Optional list of credential IDs to sync  |
-| \[params.forceFetch]    | `boolean`        | `false` | Whether to force refresh from blockchain |
-
-**Example**
-
+**Example**  
 ```js
 // Sync all credentials
 await credentialProvider.syncCredentialStatus({});
@@ -1698,22 +1487,19 @@ await credentialProvider.syncCredentialStatus({
   forceFetch: true
 });
 ```
+<a name="ICredentialProvider.addCredential"></a>
 
-### ICredentialProvider.addCredential(credential) ⇒ `Promise.<any>`
+### ICredentialProvider.addCredential(credential) ⇒ <code>Promise.&lt;any&gt;</code>
+<p>Adds a credential to the wallet</p>
 
-Adds a credential to the wallet
+**Kind**: static method of [<code>ICredentialProvider</code>](#ICredentialProvider)  
+**Returns**: <code>Promise.&lt;any&gt;</code> - <p>The added credential document</p>  
 
-**Kind**: static method of [`ICredentialProvider`](core.md#ICredentialProvider)\
-**Returns**: `Promise.<any>` -
+| Param | Type | Description |
+| --- | --- | --- |
+| credential | <code>any</code> | <p>The credential to add</p> |
 
-The added credential document
-
-| Param      | Type  | Description           |
-| ---------- | ----- | --------------------- |
-| credential | `any` | The credential to add |
-
-**Example**
-
+**Example**  
 ```js
 const addedCredential = await credentialProvider.addCredential({
   '@context': ['https://www.w3.org/2018/credentials/v1'],
@@ -1722,99 +1508,92 @@ const addedCredential = await credentialProvider.addCredential({
   credentialSubject: { name: 'Alice' }
 });
 ```
+<a name="ICredentialProvider.removeCredential"></a>
 
-### ICredentialProvider.removeCredential(credential) ⇒ `Promise.<void>`
+### ICredentialProvider.removeCredential(credential) ⇒ <code>Promise.&lt;void&gt;</code>
+<p>Removes a credential and all its related documents from the wallet</p>
 
-Removes a credential and all its related documents from the wallet
-
-**Kind**: static method of [`ICredentialProvider`](core.md#ICredentialProvider)\
+**Kind**: static method of [<code>ICredentialProvider</code>](#ICredentialProvider)  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If credential is not found</p>
 
-    If credential is not found
 
-| Param      | Type  | Description              |
-| ---------- | ----- | ------------------------ |
-| credential | `any` | The credential to remove |
+| Param | Type | Description |
+| --- | --- | --- |
+| credential | <code>any</code> | <p>The credential to remove</p> |
 
-**Example**
-
+**Example**  
 ```js
 await credentialProvider.removeCredential(credential);
 // Or by ID
 await credentialProvider.removeCredential('credential-123');
 ```
+<a name="IDVProcessOptions"></a>
 
 ## IDVProcessOptions
+<p>Callback functions for handling different stages of the identity verification process</p>
 
-Callback functions for handling different stages of the identity verification process
-
-**Kind**: global interface<br>
+**Kind**: global interface  
+<a name="BiometricPlugin"></a>
 
 ## BiometricPlugin
+<p>Defines the contract for biometric enrollment and matching operations</p>
 
-Defines the contract for biometric enrollment and matching operations
-
-**Kind**: global interface<br>
+**Kind**: global interface  
+<a name="IDVProvider"></a>
 
 ## IDVProvider
+<p>Defines the contract for identity verification operations</p>
 
-Defines the contract for identity verification operations
-
-**Kind**: global interface<br>
+**Kind**: global interface  
+<a name="IDVProviderFactory"></a>
 
 ## IDVProviderFactory
+<p>Creates IDV provider instances with proper event handling and wallet integration</p>
 
-Creates IDV provider instances with proper event handling and wallet integration
-
-**Kind**: global interface<br>
+**Kind**: global interface  
+<a name="IBiometricProvider"></a>
 
 ## IBiometricProvider
+<p>Provides a high-level API for biometric identity verification operations</p>
 
-Provides a high-level API for biometric identity verification operations
+**Kind**: global interface  
 
-**Kind**: global interface
+* [IBiometricProvider](#IBiometricProvider)
+    * [.startIDV](#IBiometricProvider.startIDV)
+    * [.eventEmitter](#IBiometricProvider.eventEmitter)
+    * [.startIDV(proofRequest)](#IBiometricProvider.startIDV) ⇒ <code>Promise.&lt;{enrollmentCredential: Credential, matchCredential: Credential}&gt;</code>
 
-* [IBiometricProvider](core.md#IBiometricProvider)
-  * [.startIDV](core.md#IBiometricProvider.startIDV)
-  * [.eventEmitter](core.md#IBiometricProvider.eventEmitter)
-  * [.startIDV(proofRequest)](core.md#IBiometricProvider.startIDV) ⇒ `Promise.<{enrollmentCredential: Credential, matchCredential: Credential}>`
+<a name="IBiometricProvider.startIDV"></a>
 
 ### IBiometricProvider.startIDV
+<p>Starts the identity verification process using biometric credentials</p>
 
-Starts the identity verification process using biometric credentials
-
-**Kind**: static property of [`IBiometricProvider`](core.md#IBiometricProvider)<br>
+**Kind**: static property of [<code>IBiometricProvider</code>](#IBiometricProvider)  
+<a name="IBiometricProvider.eventEmitter"></a>
 
 ### IBiometricProvider.eventEmitter
+<p>Event emitter for IDV process events (onDeepLink, onMessage, onError, onCancel, onComplete)</p>
 
-Event emitter for IDV process events (onDeepLink, onMessage, onError, onCancel, onComplete)
+**Kind**: static property of [<code>IBiometricProvider</code>](#IBiometricProvider)  
+<a name="IBiometricProvider.startIDV"></a>
 
-**Kind**: static property of [`IBiometricProvider`](core.md#IBiometricProvider)<br>
+### IBiometricProvider.startIDV(proofRequest) ⇒ <code>Promise.&lt;{enrollmentCredential: Credential, matchCredential: Credential}&gt;</code>
+<p>Starts the identity verification process using biometric credentials</p>
 
-### IBiometricProvider.startIDV(proofRequest) ⇒ `Promise.<{enrollmentCredential: Credential, matchCredential: Credential}>`
-
-Starts the identity verification process using biometric credentials
-
-**Kind**: static method of [`IBiometricProvider`](core.md#IBiometricProvider)\
-**Returns**: `Promise.<{enrollmentCredential: Credential, matchCredential: Credential}>` -
-
-The enrollment and match credentials
-
-\
+**Kind**: static method of [<code>IBiometricProvider</code>](#IBiometricProvider)  
+**Returns**: <code>Promise.&lt;{enrollmentCredential: Credential, matchCredential: Credential}&gt;</code> - <p>The enrollment and match credentials</p>  
 **Throws**:
 
-*   `Error`
+- <code>Error</code> <p>If IDV process fails or biometric configs are missing</p>
 
-    If IDV process fails or biometric configs are missing
 
-| Param        | Type  | Description                                         |
-| ------------ | ----- | --------------------------------------------------- |
-| proofRequest | `any` | The proof request containing biometric requirements |
+| Param | Type | Description |
+| --- | --- | --- |
+| proofRequest | <code>any</code> | <p>The proof request containing biometric requirements</p> |
 
-**Example**
-
+**Example**  
 ```js
 const result = await biometricProvider.startIDV({
   input_descriptors: [{
@@ -1827,30 +1606,31 @@ const result = await biometricProvider.startIDV({
   }]
 });
 ```
+<a name="DefaultQRCodeProcessor"></a>
 
 ## DefaultQRCodeProcessor
+<p>Default implementation of QRCodeProcessor</p>
+<p>This processor manages a registry of QR code handlers and executes them
+in priority order to process scanned QR codes. It provides a flexible,
+extensible system for handling various types of QR codes in a wallet application.</p>
 
-Default implementation of QRCodeProcessor
+**Kind**: global class  
 
-This processor manages a registry of QR code handlers and executes them in priority order to process scanned QR codes. It provides a flexible, extensible system for handling various types of QR codes in a wallet application.
+* [DefaultQRCodeProcessor](#DefaultQRCodeProcessor)
+    * [new DefaultQRCodeProcessor()](#new_DefaultQRCodeProcessor_new)
+    * [.registerHandler(handler)](#DefaultQRCodeProcessor+registerHandler)
+    * [.unregisterHandler(id)](#DefaultQRCodeProcessor+unregisterHandler) ⇒
+    * [.getHandlers()](#DefaultQRCodeProcessor+getHandlers) ⇒
+    * [.getHandler(id)](#DefaultQRCodeProcessor+getHandler) ⇒
+    * [.clearHandlers()](#DefaultQRCodeProcessor+clearHandlers)
+    * [.process(data, options)](#DefaultQRCodeProcessor+process) ⇒
+    * [.defaultPrepareContext(data)](#DefaultQRCodeProcessor+defaultPrepareContext) ⇒
+    * [.withTimeout(promise, timeoutMs)](#DefaultQRCodeProcessor+withTimeout) ⇒
 
-**Kind**: global class
-
-* [DefaultQRCodeProcessor](core.md#DefaultQRCodeProcessor)
-  * [new DefaultQRCodeProcessor()](core.md#new_DefaultQRCodeProcessor_new)
-  * [.registerHandler(handler)](core.md#DefaultQRCodeProcessor+registerHandler)
-  * [.unregisterHandler(id)](core.md#DefaultQRCodeProcessor+unregisterHandler) ⇒
-  * [.getHandlers()](core.md#DefaultQRCodeProcessor+getHandlers) ⇒
-  * [.getHandler(id)](core.md#DefaultQRCodeProcessor+getHandler) ⇒
-  * [.clearHandlers()](core.md#DefaultQRCodeProcessor+clearHandlers)
-  * [.process(data, options)](core.md#DefaultQRCodeProcessor+process) ⇒
-  * [.defaultPrepareContext(data)](core.md#DefaultQRCodeProcessor+defaultPrepareContext) ⇒
-  * [.withTimeout(promise, timeoutMs)](core.md#DefaultQRCodeProcessor+withTimeout) ⇒
+<a name="new_DefaultQRCodeProcessor_new"></a>
 
 ### new DefaultQRCodeProcessor()
-
-**Example**
-
+**Example**  
 ```typescript
 const processor = new DefaultQRCodeProcessor();
 
@@ -1866,150 +1646,137 @@ if (result.success) {
   console.error('Failed to process QR code:', result.error);
 }
 ```
+<a name="DefaultQRCodeProcessor+registerHandler"></a>
 
 ### defaultQRCodeProcessor.registerHandler(handler)
+<p>Register a new QR code handler</p>
 
-Register a new QR code handler
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
 **Throws**:
 
-* Error if a handler with the same ID is already registered
+- <p>Error if a handler with the same ID is already registered</p>
 
-| Param   | Description             |
-| ------- | ----------------------- |
-| handler | The handler to register |
+
+| Param | Description |
+| --- | --- |
+| handler | <p>The handler to register</p> |
+
+<a name="DefaultQRCodeProcessor+unregisterHandler"></a>
 
 ### defaultQRCodeProcessor.unregisterHandler(id) ⇒
+<p>Unregister a QR code handler by its ID</p>
 
-Unregister a QR code handler by its ID
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>True if the handler was found and removed, false otherwise</p>  
 
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
+| Param | Description |
+| --- | --- |
+| id | <p>The ID of the handler to unregister</p> |
 
-True if the handler was found and removed, false otherwise
-
-| Param | Description                         |
-| ----- | ----------------------------------- |
-| id    | The ID of the handler to unregister |
+<a name="DefaultQRCodeProcessor+getHandlers"></a>
 
 ### defaultQRCodeProcessor.getHandlers() ⇒
+<p>Get all registered handlers sorted by priority</p>
 
-Get all registered handlers sorted by priority
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
-
-Array of registered handlers sorted by priority (lowest first)
-
-<br>
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>Array of registered handlers sorted by priority (lowest first)</p>  
+<a name="DefaultQRCodeProcessor+getHandler"></a>
 
 ### defaultQRCodeProcessor.getHandler(id) ⇒
+<p>Get a specific handler by its ID</p>
 
-Get a specific handler by its ID
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>The handler if found, undefined otherwise</p>  
 
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
+| Param | Description |
+| --- | --- |
+| id | <p>The ID of the handler to retrieve</p> |
 
-The handler if found, undefined otherwise
-
-| Param | Description                       |
-| ----- | --------------------------------- |
-| id    | The ID of the handler to retrieve |
+<a name="DefaultQRCodeProcessor+clearHandlers"></a>
 
 ### defaultQRCodeProcessor.clearHandlers()
+<p>Clear all registered handlers</p>
 
-Clear all registered handlers
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)<br>
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+<a name="DefaultQRCodeProcessor+process"></a>
 
 ### defaultQRCodeProcessor.process(data, options) ⇒
+<p>Process QR code data through registered handlers</p>
+<p>This method:</p>
+<ol>
+<li>Prepares the context from raw QR data</li>
+<li>Executes handlers in priority order</li>
+<li>Returns the first successful result (or continues if stopOnFirstSuccess is false)</li>
+<li>Returns an error result if no handler can process the data</li>
+</ol>
 
-Process QR code data through registered handlers
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>Result of the processing</p>  
 
-This method:
+| Param | Description |
+| --- | --- |
+| data | <p>Raw QR code data string</p> |
+| options | <p>Processing options</p> |
 
-1. Prepares the context from raw QR data
-2. Executes handlers in priority order
-3. Returns the first successful result (or continues if stopOnFirstSuccess is false)
-4. Returns an error result if no handler can process the data
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
-
-Result of the processing
-
-| Param   | Description             |
-| ------- | ----------------------- |
-| data    | Raw QR code data string |
-| options | Processing options      |
+<a name="DefaultQRCodeProcessor+defaultPrepareContext"></a>
 
 ### defaultQRCodeProcessor.defaultPrepareContext(data) ⇒
+<p>Default context preparation function</p>
+<p>This method attempts to parse the raw QR data as JSON or URL.
+Override this by providing a custom prepareContext function in ProcessOptions.</p>
 
-Default context preparation function
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>Prepared context object</p>  
 
-This method attempts to parse the raw QR data as JSON or URL. Override this by providing a custom prepareContext function in ProcessOptions.
+| Param | Description |
+| --- | --- |
+| data | <p>Raw QR code data string</p> |
 
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
-
-Prepared context object
-
-| Param | Description             |
-| ----- | ----------------------- |
-| data  | Raw QR code data string |
+<a name="DefaultQRCodeProcessor+withTimeout"></a>
 
 ### defaultQRCodeProcessor.withTimeout(promise, timeoutMs) ⇒
+<p>Execute a promise with a timeout</p>
 
-Execute a promise with a timeout
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
-
-Result of the promise
-
-\
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>Result of the promise</p>  
 **Throws**:
 
-* Error if the promise times out
+- <p>Error if the promise times out</p>
 
-| Param     | Description             |
-| --------- | ----------------------- |
-| promise   | Promise to execute      |
-| timeoutMs | Timeout in milliseconds |
+
+| Param | Description |
+| --- | --- |
+| promise | <p>Promise to execute</p> |
+| timeoutMs | <p>Timeout in milliseconds</p> |
+
+<a name="Goals"></a>
 
 ## Goals ⇒
-
-**Kind**: global variable\
-**Returns**:
-
-OOB message to start a wallet to wallet verification flow The holder will scan it as QR code and should have the context to start the verification flow
-
-<br>
+**Kind**: global variable  
+**Returns**: <p>OOB message to start a wallet to wallet verification flow
+The holder will scan it as QR code and should have the context to start the verification flow</p>  
+<a name="dockDocumentNetworkResolver"></a>
 
 ## dockDocumentNetworkResolver
+<p>Given an Api URL, resolve the network ID
+For now it will be applied for creds and certs
+It can be extended to resolve other external URLs</p>
 
-Given an Api URL, resolve the network ID For now it will be applied for creds and certs It can be extended to resolve other external URLs
-
-**Kind**: global variable<br>
+**Kind**: global variable  
+<a name="OID4VCHandler"></a>
 
 ## OID4VCHandler ⇒
+<p>Create an OID4VC handler with custom configuration</p>
+<p>This is a convenience factory function for creating an OID4VC handler.</p>
 
-Create an OID4VC handler with custom configuration
+**Kind**: global variable  
+**Returns**: <p>Configured OID4VC handler</p>  
 
-This is a convenience factory function for creating an OID4VC handler.
+| Param | Description |
+| --- | --- |
+| config | <p>Handler configuration</p> |
 
-**Kind**: global variable\
-**Returns**:
-
-Configured OID4VC handler
-
-| Param  | Description           |
-| ------ | --------------------- |
-| config | Handler configuration |
-
-**Example**
-
+**Example**  
 ```typescript
 const handler = createOID4VCHandler({
   onImportCredential: async (uri) => {
@@ -2019,57 +1786,52 @@ const handler = createOID4VCHandler({
 });
 ```
 
-* [OID4VCHandler](core.md#OID4VCHandler) ⇒
-  * [.canHandle(context)](core.md#OID4VCHandler+canHandle) ⇒
-  * [.handle(context)](core.md#OID4VCHandler+handle) ⇒
+* [OID4VCHandler](#OID4VCHandler) ⇒
+    * [.canHandle(context)](#OID4VCHandler+canHandle) ⇒
+    * [.handle(context)](#OID4VCHandler+handle) ⇒
+
+<a name="OID4VCHandler+canHandle"></a>
 
 ### oiD4VCHandler.canHandle(context) ⇒
+<p>Check if this is an OID4VC URI</p>
+<p>Matches URIs that start with any of the configured prefixes.
+By default, matches: openid-credential-offer://</p>
 
-Check if this is an OID4VC URI
+**Kind**: instance method of [<code>OID4VCHandler</code>](#OID4VCHandler)  
+**Returns**: <p>True if this handler can process the URI</p>  
 
-Matches URIs that start with any of the configured prefixes. By default, matches: openid-credential-offer://
+| Param | Description |
+| --- | --- |
+| context | <p>The QR code context</p> |
 
-**Kind**: instance method of [`OID4VCHandler`](core.md#OID4VCHandler)\
-**Returns**:
-
-True if this handler can process the URI
-
-| Param   | Description         |
-| ------- | ------------------- |
-| context | The QR code context |
+<a name="OID4VCHandler+handle"></a>
 
 ### oiD4VCHandler.handle(context) ⇒
+<p>Process the OID4VC credential offer URI</p>
+<p>Delegates to the configured onImportCredential callback for actual processing.
+This allows apps to implement their own navigation, UI, and error handling.</p>
 
-Process the OID4VC credential offer URI
+**Kind**: instance method of [<code>OID4VCHandler</code>](#OID4VCHandler)  
+**Returns**: <p>Result of the processing</p>  
 
-Delegates to the configured onImportCredential callback for actual processing. This allows apps to implement their own navigation, UI, and error handling.
+| Param | Description |
+| --- | --- |
+| context | <p>The QR code context</p> |
 
-**Kind**: instance method of [`OID4VCHandler`](core.md#OID4VCHandler)\
-**Returns**:
-
-Result of the processing
-
-| Param   | Description         |
-| ------- | ------------------- |
-| context | The QR code context |
+<a name="DefaultQRCodeProcessor"></a>
 
 ## DefaultQRCodeProcessor ⇒
+<p>Create a new QR code processor instance</p>
+<p>This is a convenience factory function for creating a processor.</p>
 
-Create a new QR code processor instance
+**Kind**: global variable  
+**Returns**: <p>New processor instance with handlers registered</p>  
 
-This is a convenience factory function for creating a processor.
+| Param | Description |
+| --- | --- |
+| handlers | <p>Optional array of handlers to register immediately</p> |
 
-**Kind**: global variable\
-**Returns**:
-
-New processor instance with handlers registered
-
-| Param    | Description                                        |
-| -------- | -------------------------------------------------- |
-| handlers | Optional array of handlers to register immediately |
-
-**Example**
-
+**Example**  
 ```typescript
 const processor = createQRCodeProcessor([
   new OID4VCHandler(),
@@ -2077,21 +1839,21 @@ const processor = createQRCodeProcessor([
 ]);
 ```
 
-* [DefaultQRCodeProcessor](core.md#DefaultQRCodeProcessor) ⇒
-  * [new DefaultQRCodeProcessor()](core.md#new_DefaultQRCodeProcessor_new)
-  * [.registerHandler(handler)](core.md#DefaultQRCodeProcessor+registerHandler)
-  * [.unregisterHandler(id)](core.md#DefaultQRCodeProcessor+unregisterHandler) ⇒
-  * [.getHandlers()](core.md#DefaultQRCodeProcessor+getHandlers) ⇒
-  * [.getHandler(id)](core.md#DefaultQRCodeProcessor+getHandler) ⇒
-  * [.clearHandlers()](core.md#DefaultQRCodeProcessor+clearHandlers)
-  * [.process(data, options)](core.md#DefaultQRCodeProcessor+process) ⇒
-  * [.defaultPrepareContext(data)](core.md#DefaultQRCodeProcessor+defaultPrepareContext) ⇒
-  * [.withTimeout(promise, timeoutMs)](core.md#DefaultQRCodeProcessor+withTimeout) ⇒
+* [DefaultQRCodeProcessor](#DefaultQRCodeProcessor) ⇒
+    * [new DefaultQRCodeProcessor()](#new_DefaultQRCodeProcessor_new)
+    * [.registerHandler(handler)](#DefaultQRCodeProcessor+registerHandler)
+    * [.unregisterHandler(id)](#DefaultQRCodeProcessor+unregisterHandler) ⇒
+    * [.getHandlers()](#DefaultQRCodeProcessor+getHandlers) ⇒
+    * [.getHandler(id)](#DefaultQRCodeProcessor+getHandler) ⇒
+    * [.clearHandlers()](#DefaultQRCodeProcessor+clearHandlers)
+    * [.process(data, options)](#DefaultQRCodeProcessor+process) ⇒
+    * [.defaultPrepareContext(data)](#DefaultQRCodeProcessor+defaultPrepareContext) ⇒
+    * [.withTimeout(promise, timeoutMs)](#DefaultQRCodeProcessor+withTimeout) ⇒
+
+<a name="new_DefaultQRCodeProcessor_new"></a>
 
 ### new DefaultQRCodeProcessor()
-
-**Example**
-
+**Example**  
 ```typescript
 const processor = new DefaultQRCodeProcessor();
 
@@ -2107,245 +1869,250 @@ if (result.success) {
   console.error('Failed to process QR code:', result.error);
 }
 ```
+<a name="DefaultQRCodeProcessor+registerHandler"></a>
 
 ### defaultQRCodeProcessor.registerHandler(handler)
+<p>Register a new QR code handler</p>
 
-Register a new QR code handler
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
 **Throws**:
 
-* Error if a handler with the same ID is already registered
+- <p>Error if a handler with the same ID is already registered</p>
 
-| Param   | Description             |
-| ------- | ----------------------- |
-| handler | The handler to register |
+
+| Param | Description |
+| --- | --- |
+| handler | <p>The handler to register</p> |
+
+<a name="DefaultQRCodeProcessor+unregisterHandler"></a>
 
 ### defaultQRCodeProcessor.unregisterHandler(id) ⇒
+<p>Unregister a QR code handler by its ID</p>
 
-Unregister a QR code handler by its ID
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>True if the handler was found and removed, false otherwise</p>  
 
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
+| Param | Description |
+| --- | --- |
+| id | <p>The ID of the handler to unregister</p> |
 
-True if the handler was found and removed, false otherwise
-
-| Param | Description                         |
-| ----- | ----------------------------------- |
-| id    | The ID of the handler to unregister |
+<a name="DefaultQRCodeProcessor+getHandlers"></a>
 
 ### defaultQRCodeProcessor.getHandlers() ⇒
+<p>Get all registered handlers sorted by priority</p>
 
-Get all registered handlers sorted by priority
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
-
-Array of registered handlers sorted by priority (lowest first)
-
-<br>
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>Array of registered handlers sorted by priority (lowest first)</p>  
+<a name="DefaultQRCodeProcessor+getHandler"></a>
 
 ### defaultQRCodeProcessor.getHandler(id) ⇒
+<p>Get a specific handler by its ID</p>
 
-Get a specific handler by its ID
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>The handler if found, undefined otherwise</p>  
 
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
+| Param | Description |
+| --- | --- |
+| id | <p>The ID of the handler to retrieve</p> |
 
-The handler if found, undefined otherwise
-
-| Param | Description                       |
-| ----- | --------------------------------- |
-| id    | The ID of the handler to retrieve |
+<a name="DefaultQRCodeProcessor+clearHandlers"></a>
 
 ### defaultQRCodeProcessor.clearHandlers()
+<p>Clear all registered handlers</p>
 
-Clear all registered handlers
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)<br>
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+<a name="DefaultQRCodeProcessor+process"></a>
 
 ### defaultQRCodeProcessor.process(data, options) ⇒
+<p>Process QR code data through registered handlers</p>
+<p>This method:</p>
+<ol>
+<li>Prepares the context from raw QR data</li>
+<li>Executes handlers in priority order</li>
+<li>Returns the first successful result (or continues if stopOnFirstSuccess is false)</li>
+<li>Returns an error result if no handler can process the data</li>
+</ol>
 
-Process QR code data through registered handlers
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>Result of the processing</p>  
 
-This method:
+| Param | Description |
+| --- | --- |
+| data | <p>Raw QR code data string</p> |
+| options | <p>Processing options</p> |
 
-1. Prepares the context from raw QR data
-2. Executes handlers in priority order
-3. Returns the first successful result (or continues if stopOnFirstSuccess is false)
-4. Returns an error result if no handler can process the data
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
-
-Result of the processing
-
-| Param   | Description             |
-| ------- | ----------------------- |
-| data    | Raw QR code data string |
-| options | Processing options      |
+<a name="DefaultQRCodeProcessor+defaultPrepareContext"></a>
 
 ### defaultQRCodeProcessor.defaultPrepareContext(data) ⇒
+<p>Default context preparation function</p>
+<p>This method attempts to parse the raw QR data as JSON or URL.
+Override this by providing a custom prepareContext function in ProcessOptions.</p>
 
-Default context preparation function
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>Prepared context object</p>  
 
-This method attempts to parse the raw QR data as JSON or URL. Override this by providing a custom prepareContext function in ProcessOptions.
+| Param | Description |
+| --- | --- |
+| data | <p>Raw QR code data string</p> |
 
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
-
-Prepared context object
-
-| Param | Description             |
-| ----- | ----------------------- |
-| data  | Raw QR code data string |
+<a name="DefaultQRCodeProcessor+withTimeout"></a>
 
 ### defaultQRCodeProcessor.withTimeout(promise, timeoutMs) ⇒
+<p>Execute a promise with a timeout</p>
 
-Execute a promise with a timeout
-
-**Kind**: instance method of [`DefaultQRCodeProcessor`](core.md#DefaultQRCodeProcessor)\
-**Returns**:
-
-Result of the promise
-
-\
+**Kind**: instance method of [<code>DefaultQRCodeProcessor</code>](#DefaultQRCodeProcessor)  
+**Returns**: <p>Result of the promise</p>  
 **Throws**:
 
-* Error if the promise times out
+- <p>Error if the promise times out</p>
 
-| Param     | Description             |
-| --------- | ----------------------- |
-| promise   | Promise to execute      |
-| timeoutMs | Timeout in milliseconds |
+
+| Param | Description |
+| --- | --- |
+| promise | <p>Promise to execute</p> |
+| timeoutMs | <p>Timeout in milliseconds</p> |
+
+<a name="MessageTypes"></a>
 
 ## MessageTypes
+<p>DIDComm Message helpers
+Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details</p>
 
-DIDComm Message helpers Check https://identity.foundation/didcomm-messaging/spec/#out-of-band-messages for more details
-
-**Kind**: global constant<br>
+**Kind**: global constant  
+<a name="buildRequestVerifiablePresentationMessage"></a>
 
 ## buildRequestVerifiablePresentationMessage()
+<p>Sender: Verifier
+OOB message to request a verifiable presentation from the holder</p>
 
-Sender: Verifier OOB message to request a verifiable presentation from the holder
-
-**Kind**: global function<br>
+**Kind**: global function  
+<a name="buildAckWalletToWalletVerificationMessage"></a>
 
 ## buildAckWalletToWalletVerificationMessage()
+<p>Sender: Holder
+Start a wallet to wallet verification flow</p>
 
-Sender: Holder Start a wallet to wallet verification flow
-
-**Kind**: global function<br>
+**Kind**: global function  
+<a name="buildVerifiablePresentationMessage"></a>
 
 ## buildVerifiablePresentationMessage()
+<p>Sender: Holder
+Send a verifiable presentation to the verifier</p>
 
-Sender: Holder Send a verifiable presentation to the verifier
-
-**Kind**: global function<br>
+**Kind**: global function  
+<a name="buildVerifiablePresentationAckMessage"></a>
 
 ## buildVerifiablePresentationAckMessage()
+<p>Sender: Verifier
+Sends an the presentation result to the holder</p>
 
-Sender: Verifier Sends an the presentation result to the holder
-
-**Kind**: global function<br>
+**Kind**: global function  
+<a name="handleBlockchainNetworkChange"></a>
 
 ## handleBlockchainNetworkChange()
+<p>Update existing substrate network connection
+Compare connected substrate connection with the current walle network
+Disconnect and Establish a new connection if the network is different</p>
 
-Update existing substrate network connection Compare connected substrate connection with the current walle network Disconnect and Establish a new connection if the network is different
+**Kind**: global function  
+<a name="WalletStatus"></a>
 
-**Kind**: global function<br>
+## WalletStatus : <code>&#x27;closed&#x27;</code> \| <code>&#x27;loading&#x27;</code> \| <code>&#x27;ready&#x27;</code> \| <code>&#x27;error&#x27;</code>
+<p>Possible wallet status values</p>
 
-## WalletStatus : `'closed'` | `'loading'` | `'ready'` | `'error'`
+**Kind**: global typedef  
+<a name="KeypairType"></a>
 
-Possible wallet status values
+## KeypairType : <code>&#x27;sr25519&#x27;</code> \| <code>&#x27;ed25519&#x27;</code> \| <code>&#x27;ecdsa&#x27;</code>
+<p>Supported keypair types</p>
 
-**Kind**: global typedef<br>
+**Kind**: global typedef  
+<a name="BiometricsProviderConfigs"></a>
 
-## KeypairType : `'sr25519'` | `'ed25519'` | `'ecdsa'`
+## BiometricsProviderConfigs : <code>Object</code>
+<p>Configuration options for biometric provider operations</p>
 
-Supported keypair types
-
-**Kind**: global typedef<br>
-
-## BiometricsProviderConfigs : `Object`
-
-Configuration options for biometric provider operations
-
-**Kind**: global typedef\
+**Kind**: global typedef  
 **Properties**
 
-| Name                         | Type     | Description                                       |
-| ---------------------------- | -------- | ------------------------------------------------- |
-| enrollmentCredentialType     | `string` | The credential type used for biometric enrollment |
-| biometricMatchCredentialType | `string` | The credential type used for biometric matching   |
-| idvConfigs                   | `E`      | IDV provider-specific configuration options       |
+| Name | Type | Description |
+| --- | --- | --- |
+| enrollmentCredentialType | <code>string</code> | <p>The credential type used for biometric enrollment</p> |
+| biometricMatchCredentialType | <code>string</code> | <p>The credential type used for biometric matching</p> |
+| idvConfigs | <code>E</code> | <p>IDV provider-specific configuration options</p> |
+
+<a name="OID4VCHandler"></a>
 
 ## OID4VCHandler
-
-Built-in handler for OID4VC (OpenID for Verifiable Credentials) URIs
-
-This is a generic handler that can be configured with app-specific callbacks for importing credentials. The handler itself only handles protocol detection and delegates the actual import logic to the configured callback.
-
-## Example Usage
-
-```
-import { OID4VCHandler } from '@docknetwork/wallet-sdk-core/src/qr-handlers/builtin';
+<p>Built-in handler for OID4VC (OpenID for Verifiable Credentials) URIs</p>
+<p>This is a generic handler that can be configured with app-specific callbacks
+for importing credentials. The handler itself only handles protocol detection
+and delegates the actual import logic to the configured callback.</p>
+<h2>Example Usage</h2>
+<pre class="prettyprint source lang-typescript"><code>import { OID4VCHandler } from '@docknetwork/wallet-sdk-core/src/qr-handlers/builtin';
 import { getCredentialProvider } from '@docknetwork/wallet-sdk-react-native';
+
 const handler = new OID4VCHandler({
-onImportCredential: async (uri, context) => {
-try {
-// Use SDK to import credential
-await getCredentialProvider().importCredentialFromURI({
-uri,
-didProvider: getDIDProvider(),
-getAuthCode: async (authUrl) => {
-// App-specific auth handling
-return await showAuthWebView(authUrl);
-},
+  onImportCredential: async (uri, context) => {
+    try {
+      // Use SDK to import credential
+      await getCredentialProvider().importCredentialFromURI({
+        uri,
+        didProvider: getDIDProvider(),
+        getAuthCode: async (authUrl) => {
+          // App-specific auth handling
+          return await showAuthWebView(authUrl);
+        },
+      });
+
+      return { success: true };
+    } catch (error) {
+      return {
+        success: false,
+        error: error instanceof Error ? error : new Error(String(error)),
+      };
+    }
+  },
 });
-  return { success: true };} catch (error) {  return {    success: false,    error: error instanceof Error ? error : new Error(String(error)),  };}
-},
-});
+
 processor.registerHandler(handler);
-```
+</code></pre>
+<h2>Handler Priority</h2>
+<p>Default priority: 5 (very high)
+This ensures OID4VC URIs are checked before other credential handlers.</p>
 
-## Handler Priority
+**Kind**: global class  
+**Category**: Built-in Handlers  
 
-Default priority: 5 (very high) This ensures OID4VC URIs are checked before other credential handlers.
+* [OID4VCHandler](#OID4VCHandler)
+    * [.canHandle(context)](#OID4VCHandler+canHandle) ⇒
+    * [.handle(context)](#OID4VCHandler+handle) ⇒
 
-**Kind**: global class\
-**Category**: Built-in Handlers
-
-* [OID4VCHandler](core.md#OID4VCHandler)
-  * [.canHandle(context)](core.md#OID4VCHandler+canHandle) ⇒
-  * [.handle(context)](core.md#OID4VCHandler+handle) ⇒
+<a name="OID4VCHandler+canHandle"></a>
 
 ### oiD4VCHandler.canHandle(context) ⇒
+<p>Check if this is an OID4VC URI</p>
+<p>Matches URIs that start with any of the configured prefixes.
+By default, matches: openid-credential-offer://</p>
 
-Check if this is an OID4VC URI
+**Kind**: instance method of [<code>OID4VCHandler</code>](#OID4VCHandler)  
+**Returns**: <p>True if this handler can process the URI</p>  
 
-Matches URIs that start with any of the configured prefixes. By default, matches: openid-credential-offer://
+| Param | Description |
+| --- | --- |
+| context | <p>The QR code context</p> |
 
-**Kind**: instance method of [`OID4VCHandler`](core.md#OID4VCHandler)\
-**Returns**:
-
-True if this handler can process the URI
-
-| Param   | Description         |
-| ------- | ------------------- |
-| context | The QR code context |
+<a name="OID4VCHandler+handle"></a>
 
 ### oiD4VCHandler.handle(context) ⇒
+<p>Process the OID4VC credential offer URI</p>
+<p>Delegates to the configured onImportCredential callback for actual processing.
+This allows apps to implement their own navigation, UI, and error handling.</p>
 
-Process the OID4VC credential offer URI
+**Kind**: instance method of [<code>OID4VCHandler</code>](#OID4VCHandler)  
+**Returns**: <p>Result of the processing</p>  
 
-Delegates to the configured onImportCredential callback for actual processing. This allows apps to implement their own navigation, UI, and error handling.
+| Param | Description |
+| --- | --- |
+| context | <p>The QR code context</p> |
 
-**Kind**: instance method of [`OID4VCHandler`](core.md#OID4VCHandler)\
-**Returns**:
-
-Result of the processing
-
-| Param   | Description         |
-| ------- | ------------------- |
-| context | The QR code context |
