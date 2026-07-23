@@ -2,7 +2,7 @@
 
 ## Architecture style
 
-Truvera is built using a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) architecture. Our API follows common patterns including standard HTTP header authentication and standard HTTP response codes. It accepts form-encoded request bodies and  delivers JSON-encoded responses.
+Truvera is built using a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) architecture. Our API follows common patterns including standard HTTP header authentication and standard HTTP response codes. It accepts form-encoded request bodies and delivers JSON-encoded responses.
 
 HTTPS is required for all API requests. Requests performed via plain HTTP will be rejected. API requests that do not include authentication will also fail. JSON requests should typically be encoded as UTF-8.
 
@@ -59,10 +59,9 @@ Any transaction you perform in **test mode** cannot be used for **production**. 
 
 ## Authentication
 
-Truvera uses API keys to authenticate requests. You can obtain an API key by signing into [Truvera Workspace](https://truvera.io/). Once a key has been generated, it should be included in **all** request using dual-header authentication as below:
+Truvera uses API keys to authenticate requests. You can obtain an API key by signing into [Truvera Workspace](https://truvera.io/). Once a key has been generated, it should be included in **all** request as an HTTP bearer token as below:
 
 ```
-DOCK-API-TOKEN: <API_KEY>
 Authorization: Bearer <API_KEY>
 ```
 
