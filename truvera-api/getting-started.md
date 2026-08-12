@@ -2,7 +2,7 @@
 
 ## Architecture style
 
-Truvera is built using a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) architecture. Our API follows common patterns including standard HTTP header authentication and standard HTTP response codes. It accepts form-encoded request bodies and delivers JSON-encoded responses.
+Truvera is built using a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) architecture. Our API follows common patterns including standard HTTP header authentication and standard HTTP response codes. It accepts JSON-encoded request bodies and delivers JSON-encoded responses.
 
 HTTPS is required for all API requests. Requests performed via plain HTTP will be rejected. API requests that do not include authentication will also fail. JSON requests should typically be encoded as UTF-8.
 
