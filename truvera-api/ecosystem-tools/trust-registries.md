@@ -2,7 +2,7 @@
 
 This guide provides step-by-step instructions for integrating a trust registry into any application using a series of API endpoints. This guide assumes a basic understanding of essential elements such as DIDs, JWTs, and specific configurations.
 
-Download a sample Postman collection [here](../../Postman_collections/Ecosystem%20Tools%20\(Trust%20Registry\)).
+Download a sample Postman collection [here](https://github.com/docknetwork/knowledgebase-docs/blob/main/Postman_collections/Ecosystem%20Tools%20\(Trust%20Registry\)/README.md).
 
 ## Prerequisites
 

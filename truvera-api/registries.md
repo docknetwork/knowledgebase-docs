@@ -35,13 +35,11 @@ CredentialStatusList2017 (Deprecated)
 
 ### Parameters <a href="#create-registry-parameters" id="create-registry-parameters"></a>
 
-<table data-full-width="false"><thead><tr><th width="119">Name</th><th width="82">In</th><th width="118">Type</th><th width="117">Required</th><th>Description</th></tr></thead><tbody><tr><td>addOnly</td><td>body</td><td>boolean</td><td>false</td><td>True/false options. The default value is "false".</td></tr><tr><td>policy</td><td>body</td><td>[<a href="../developer-documentation/dock-api/index.html.md#schemadiddock">DIDDock</a>]</td><td>true</td><td>The DIDs which control this registry. You must own a DID listed here to use the registry. Only one policy supported as of now: <code>OneOf</code> DID in list.</td></tr><tr><td>type</td><td>body</td><td>string</td><td>false</td><td>Specifies which type of registry to create. Defaults to <code>StatusList2021Entry</code>.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="119">Name</th><th width="82">In</th><th width="118">Type</th><th width="117">Required</th><th>Description</th></tr></thead><tbody><tr><td>addOnly</td><td>body</td><td>boolean</td><td>false</td><td>True/false options. The default value is "false".</td></tr><tr><td>policy</td><td>body</td><td>[<a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemadiddock">DIDDock</a>]</td><td>true</td><td>The DIDs which control this registry. You must own a DID listed here to use the registry. Only one policy supported as of now: <code>OneOf</code> DID in list.</td></tr><tr><td>type</td><td>body</td><td>string</td><td>false</td><td>Specifies which type of registry to create. Defaults to <code>StatusList2021Entry</code>.</td></tr></tbody></table>
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/registries" method="post" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
-
-
 
 ## List registries
 
@@ -59,15 +57,13 @@ For now, only one policy is supported, and each registry is owned by a single DI
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
 
-
-
 ## Get registry
 
 Get the details of an existing registry, such as policy, add-only status, when it was last updated, and controller(s). You need only supply the revocation registry id that was returned upon revocation registry creation.
 
 ### Parameters <a href="#get-registry-parameters" id="get-registry-parameters"></a>
 
-<table data-full-width="false"><thead><tr><th width="100">Name</th><th width="88">In</th><th width="104">Type</th><th width="160">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>path</td><td><a href="../developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="100">Name</th><th width="88">In</th><th width="104">Type</th><th width="160">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>path</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr></tbody></table>
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/registries/{id}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
@@ -83,7 +79,7 @@ In this API, simply add Revoke/Unrevoke into the `action` parameter and input th
 
 ### Parameters <a href="#revoke-unrevoke-credential-parameters" id="revoke-unrevoke-credential-parameters"></a>
 
-<table data-full-width="false"><thead><tr><th width="147">Name</th><th width="89">In</th><th width="96">Type</th><th width="106">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>path</td><td><a href="../developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr><tr><td>action</td><td>body</td><td>string</td><td>false</td><td>The action taken, either revoke or unrevoke. The default value is "revoke"</td></tr><tr><td>credentialIds</td><td>body</td><td>array</td><td>true</td><td>The list of credential ids to act upon.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="147">Name</th><th width="89">In</th><th width="96">Type</th><th width="106">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>path</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr><tr><td>action</td><td>body</td><td>string</td><td>false</td><td>The action taken, either revoke or unrevoke. The default value is "revoke"</td></tr><tr><td>credentialIds</td><td>body</td><td>array</td><td>true</td><td>The list of credential ids to act upon.</td></tr></tbody></table>
 
 ### Enumerated values
 
@@ -99,9 +95,8 @@ A registry can be deleted, leading to all the corresponding revocation ids being
 
 ### Parameters <a href="#delete-registry-parameters" id="delete-registry-parameters"></a>
 
-<table data-full-width="false"><thead><tr><th width="105">Name</th><th width="85">In</th><th width="126">Type</th><th width="137">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>path</td><td><a href="../developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="105">Name</th><th width="85">In</th><th width="126">Type</th><th width="137">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>path</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr></tbody></table>
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/registries/{id}" method="delete" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
-

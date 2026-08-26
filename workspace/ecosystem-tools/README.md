@@ -7,11 +7,11 @@ How can a verifier be sure that the credential came from an authorized issuer? A
 ## What is an ecosystem?
 
 \
-Ecosystem is a network of trusted digital identity issuers and verifiers. It uses a trust registry an on-chain list that contains information on who is authorized and trusted to issue or verify credentials in a particular ecosystem and which credential schemas they can issue and verify.&#x20;
+Ecosystem is a network of trusted digital identity issuers and verifiers. It uses a trust registry an on-chain list that contains information on who is authorized and trusted to issue or verify credentials in a particular ecosystem and which credential schemas they can issue and verify.
 
 Ecosystems are governed by trust frameworks, a set of operating rules that participants of the ecosystem must follow.
 
-<figure><img src="../../.gitbook/assets/Sales Demo v2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Sales Demo v2.png" alt=""><figcaption></figcaption></figure>
 
 ## Why use Ecosystem Tools?
 
@@ -24,4 +24,3 @@ By having an on-chain trust registry, credential verifiers do not need to manage
 {% hint style="info" %}
 Ecosystem Tools is an add-on feature. If you want it enabled for your account please contact support@truvera.io
 {% endhint %}
-

@@ -8,7 +8,7 @@ To check if an id is revoked or not, you can check its status with the registry 
 
 ### Parameters <a href="#get-revocation-status-parameters" id="get-revocation-status-parameters"></a>
 
-<table data-full-width="false"><thead><tr><th width="118">Name</th><th width="106">In</th><th width="117">Type</th><th width="130">Required</th><th>Description</th></tr></thead><tbody><tr><td>regId</td><td>path</td><td><a href="../developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr><tr><td>revId</td><td>path</td><td><a href="../developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Credential revocation id.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="118">Name</th><th width="106">In</th><th width="117">Type</th><th width="130">Required</th><th>Description</th></tr></thead><tbody><tr><td>regId</td><td>path</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr><tr><td>revId</td><td>path</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Credential revocation id.</td></tr></tbody></table>
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/revocationStatus/{regId}/{revId}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
@@ -20,9 +20,8 @@ The accumulator witness is utilized by the holder to generate a proof, which com
 
 ### Parameters <a href="#get-revocation-status-parameters" id="get-revocation-status-parameters"></a>
 
-<table><thead><tr><th width="113">Name</th><th width="93">In</th><th width="117">Type</th><th width="123">Required</th><th>Description</th></tr></thead><tbody><tr><td>regId</td><td>path</td><td><a href="../developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr><tr><td>revId</td><td>path</td><td><a href="../developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Credential revocation id.</td></tr></tbody></table>
+<table><thead><tr><th width="113">Name</th><th width="93">In</th><th width="117">Type</th><th width="123">Required</th><th>Description</th></tr></thead><tbody><tr><td>regId</td><td>path</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Revocation registry id.</td></tr><tr><td>revId</td><td>path</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemahex32">Hex32</a></td><td>true</td><td>Credential revocation id.</td></tr></tbody></table>
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/revocationStatus/{regId}/{revId}/witness" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
-

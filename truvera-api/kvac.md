@@ -2,7 +2,7 @@
 
 This guide provides step-by-step instructions for implementing the KVAC algorithm to issue and verify paid credentials using a series of API endpoints. Follow these instructions to integrate KVAC into your system effectively.
 
-Download a sample Postman collection [here](../Postman_collections/Issuing%20KVAC%20credentials/).
+Download a sample Postman collection [here](https://github.com/docknetwork/knowledgebase-docs/blob/main/Postman_collections/Issuing%20KVAC%20credentials/README.md).
 
 ## Prerequisites
 

@@ -6,9 +6,9 @@ You will be invited to a dedicated Github repository, which will contain the fil
 
 First clone the GitHub repository to add the source code to your machine.
 
-<figure><img src="../../../.gitbook/assets/Screenshot 2023-09-01 at 17.25.08 (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2023-09-01 at 17.25.08 (1).png" alt=""><figcaption></figcaption></figure>
 
-First step is to to go through the documentation in [README.md](http://readme.md/).&#x20;
+First step is to to go through the documentation in [README.md](http://readme.md/).
 
 To make changes follow the instructions below and submit a pull request (PR) to this repository to be reviewed by the Truvera team. Once the changes are accepted a new release will be generated.
 

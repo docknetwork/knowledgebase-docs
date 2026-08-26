@@ -10,7 +10,7 @@ To check the job status and data, you can use the `GET` method and simply put th
 
 ### Parameters <a href="#get-job-status-and-data-parameters" id="get-job-status-and-data-parameters"></a>
 
-<table data-full-width="false"><thead><tr><th width="125">Name</th><th width="109">In</th><th width="103">Type</th><th width="128">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>path</td><td><a href="../developer-documentation/dock-api/index.html.md#schemajobid">JobId</a></td><td>true</td><td>Represents a Job id.</td></tr></tbody></table>
+<table data-full-width="false"><thead><tr><th width="125">Name</th><th width="109">In</th><th width="103">Type</th><th width="128">Required</th><th>Description</th></tr></thead><tbody><tr><td>id</td><td>path</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemajobid">JobId</a></td><td>true</td><td>Represents a Job id.</td></tr></tbody></table>
 
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/jobs/{id}" method="get" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)

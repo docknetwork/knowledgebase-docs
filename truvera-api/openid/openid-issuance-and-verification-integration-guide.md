@@ -10,7 +10,7 @@ Before starting, ensure you have:
 * **Verifier DID** (`did:dock:verifier`): The did for the credential verifier.
 * **Holder DID** (`did:key:holder`): The DID for the credential holder (optional)
 
-Download and use our [Postman Collections](../../Postman_collections/OID4VC%20and%20OID4VP%20testing/) to experiment with OpenID standards based credentials.
+Download and use our [Postman Collections](https://github.com/docknetwork/knowledgebase-docs/blob/main/Postman_collections/OID4VC%20and%20OID4VP%20testing/README.md) to experiment with OpenID standards based credentials.
 
 ## Set up an OID4VCI issuer
 

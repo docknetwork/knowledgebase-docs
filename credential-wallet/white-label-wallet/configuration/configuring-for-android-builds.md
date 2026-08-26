@@ -1,4 +1,4 @@
-# Configuring for Android Builds
+# Configuring for Android builds
 
 In order to generate the needed files and publish the wallet to the Google Play Store several configuration steps are needed.
 
@@ -22,7 +22,7 @@ In the ../build-config.json file set `build-android: true`.
 Use the same package name that you have defined in the General Setup step.
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/packageID (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/packageID.png" alt=""><figcaption></figcaption></figure>
 
 3. Go to Project Settings and download the `google-services.json` file
 

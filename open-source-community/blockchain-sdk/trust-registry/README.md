@@ -16,7 +16,7 @@ A trust registry is an on-chain list of relationships between issuers and verifi
 
 Trust registries are governed by trust frameworks, a set of operating rules that participants of the ecosystem must follow.
 
-<figure><img src="../../../.gitbook/assets/Sales Demo v2 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Sales Demo v2.png" alt=""><figcaption></figcaption></figure>
 
 ## Why use a trust registry
 

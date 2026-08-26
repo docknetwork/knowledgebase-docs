@@ -2,13 +2,13 @@
 
 Sub-accounts are a feature of the Truvera API that allows Truvera's enterprise customers to segregate their data within the Truvera platform based on their own customers. Each sub-account can have its own keys, organization profiles, credential designs and verification templates conveniently organized to help with tracking and auditing of the activity performed by each.
 
-When using a sub-account the parent account will set up separate API keys for each sub-account and then use the sub-account specific API key for the transactions associated with that sub-account.&#x20;
+When using a sub-account the parent account will set up separate API keys for each sub-account and then use the sub-account specific API key for the transactions associated with that sub-account.
 
 In order to easier manage sub-account assets [Ecosystem Tools](ecosystem-tools/) can be used.
 
 ### Sample sub-account Postman collection
 
-Download the collection [here](../Postman_collections/Subaccounts).
+Download the collection [here](https://github.com/docknetwork/knowledgebase-docs/blob/main/Postman_collections/Subaccounts/README.md).
 
 This Postman collection shows a simple example of sub-account set up in 5 steps:
 
@@ -50,8 +50,6 @@ Sub-accounts are limited to 5 for trial users. The amount of sub-accounts for cu
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
 
-
-
 ## Get sub-account usage
 
 Get details about the activity that this sub-account has performed in the system.
@@ -81,4 +79,3 @@ Delete the specified API key for the given sub-account.
 {% openapi src="https://swagger-api.truvera.io/openapi.yaml" path="/subaccounts/{id}/keys/{keyId}" method="delete" %}
 [https://swagger-api.truvera.io/openapi.yaml](https://swagger-api.truvera.io/openapi.yaml)
 {% endopenapi %}
-

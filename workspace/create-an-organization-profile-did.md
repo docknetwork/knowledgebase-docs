@@ -20,7 +20,7 @@ Fill in the Public Name, add the Logo and Public Description you can leave the D
 The Logo image should not exeed 1MB in size. Accepted formats: 'jpeg', 'jpg', 'png', 'bmp'. Logo image can be square or round it will be optimized on display.
 {% endhint %}
 
-All of your Organization profiles (DIDs) will be listed on this page.&#x20;
+All of your Organization profiles (DIDs) will be listed on this page.
 
 <figure><img src="../.gitbook/assets/Screenshot 2024-04-18 at 16.33.22.png" alt=""><figcaption></figcaption></figure>
 
@@ -48,7 +48,7 @@ Update the details and select **Update DID**.
 
 Click on the three dots of the DID you want to export, and select Export DID.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.39.13 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.39.13.png" alt=""><figcaption></figcaption></figure>
 
 You can export your DID to a wallet or another platform. Create a password to encrypt the file and select Export.
 
@@ -60,7 +60,7 @@ The exported profile will be stored as an [Encrypted Data Vault](https://identit
 
 Click on the three dots of the DID you want to delete, and select Delete DID.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.39.13 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Screenshot 2024-12-19 at 14.39.13.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Deleting your DID will make it unresolvable. This means that any credentials you issued with it will become invalid and it cannot be looked up on the blockchain anymore. Your associated key pair will also be deleted. This action cannot be undone.

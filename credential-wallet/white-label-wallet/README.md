@@ -17,7 +17,7 @@ You can see the technical implementation steps [here](configuration/).
 {% endcolumn %}
 
 {% column %}
-<figure><img src="../../.gitbook/assets/64d56c2d550809f0b632e773_white label mockup 03 (1).webp" alt="" width="127"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/64d56c2d550809f0b632e773_white label mockup 03.webp" alt="" width="127"><figcaption></figcaption></figure>
 {% endcolumn %}
 
 {% column %}

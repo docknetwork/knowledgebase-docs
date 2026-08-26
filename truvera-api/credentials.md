@@ -47,7 +47,7 @@ In some use cases, you might choose to set the `persist` value to `true` and pro
 
 #### Revocation <a href="#credential-issuance-revocation" id="credential-issuance-revocation"></a>
 
-In order to support revocation the credential must be linked to a [revocation registry](registries.md) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](../developer-documentation/dock-api/index.html.md#schemacredential) body to the `registry.id` value.
+In order to support revocation the credential must be linked to a [revocation registry](registries.md) at the time of issuance. To link the revocation registry to the credential set the `status` field in the [Credential](https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemacredential) body to the `registry.id` value.
 
 {% hint style="info" %}
 One time use credentials can be created, but automating the revocation based on tracking the verification of the credential ID and revoking the credential associated with it.

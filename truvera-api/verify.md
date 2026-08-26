@@ -10,9 +10,7 @@ A verifier upon receiving a verifiable presentation verifies the validity of eac
 
 ### Parameters <a href="#verify-a-credential-or-presentation-parameters" id="verify-a-credential-or-presentation-parameters"></a>
 
-<table data-full-width="false"><thead><tr><th width="106">Name</th><th width="82">In</th><th width="205">Type</th><th width="89">Required</th><th>Description</th></tr></thead><tbody><tr><td>body</td><td>body</td><td><a href="../developer-documentation/dock-api/index.html.md#schemaverifiablecredential">VerifiableCredential</a> or <a href="../developer-documentation/dock-api/index.html.md#schemaverifiablepresentation">VerifiablePresentation</a></td><td>true</td><td>Provide as the body a verifiable credential or verifiable presentation JSON-LD document.</td></tr></tbody></table>
-
-
+<table data-full-width="false"><thead><tr><th width="106">Name</th><th width="82">In</th><th width="205">Type</th><th width="89">Required</th><th>Description</th></tr></thead><tbody><tr><td>body</td><td>body</td><td><a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemaverifiablecredential">VerifiableCredential</a> or <a href="https://github.com/docknetwork/knowledgebase-docs/blob/main/developer-documentation/dock-api/index.html.md#schemaverifiablepresentation">VerifiablePresentation</a></td><td>true</td><td>Provide as the body a verifiable credential or verifiable presentation JSON-LD document.</td></tr></tbody></table>
 
 {% openapi-operation spec="dock-labs-api" path="/verify" method="post" %}
 [OpenAPI dock-labs-api](https://swagger-api.truvera.io/openapi.yaml)

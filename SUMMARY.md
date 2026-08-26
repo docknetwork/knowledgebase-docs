@@ -7,6 +7,8 @@
   * [Reusable identity without a wallet application](solutions/reusable-identity-without-a-wallet-application.md)
   * [Biometric-bound credentials](solutions/biometric-bound-credentials.md)
   * [Caller authentication: Truvera Verified Contact](solutions/caller-authentication-truvera-verified-contact.md)
+  * [Building a digital identity ecosystem prototype with AI tools](solutions/building-a-digital-identity-ecosystem-prototype-with-ai-tools/README.md)
+    * [Part 1.  Setting up in the Workspace](solutions/building-a-digital-identity-ecosystem-prototype-with-ai-tools/part-1.-setting-up-in-the-workspace.md)
 * [Truvera Workspace](truvera-workspace/README.md)
   * [Create an organization profile (DID)](workspace/create-an-organization-profile-did.md)
   * [Issue verifiable credentials](workspace/issue-verifiable-credentials/README.md)
