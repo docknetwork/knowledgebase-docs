@@ -109,13 +109,31 @@ Before writing any code, prove the setup works.
 
 Making sure the schemas and verification templates work well together will save us time debugging it in the code in the later step.
 
-### 7. Write down configuration for handoff&#x20;
+### 7. Write the configuration file
 
-Everything from here on refers back to these values. Keep them in one place in your project directory:
+Everything from here on refers back to these values. Create `config.json` in your project directory.
 
-* Issuer DID
-* Verifier DID
-* Schema ID/URL
-* Proof template ID
-* Issuer API key
-* Verifier API key
+```json
+  "ecosystem": "Quotient Employment Credential Ecosystem",
+  "issuer": {
+    "name": "Quotient",
+    "did": "did:cheqd:testnet:z6MkfWt2wJ8xR4nQvB7hL3pYcE9dT5sN1aK"
+  },
+  "verifier": {
+    "name": "Event Platform",
+    "did": "did:cheqd:testnet:z6MkqR8vN3hT7wY2bL5xJ9cF4dP6sM1aG"
+  },
+  "schema": {
+    "id": "3f9a2c81-6d47-4e12-b58a-91c0e7d34b26",
+    "url": "https://schema.truvera.io/3f9a2c81-6d47-4e12-b58a-91c0e7d34b26.json"
+  },
+  "proofTemplate": {
+    "id": "7b41e0d9-2f83-4a56-9c17-e5d82b4f06a3",
+    "name": "Employment check"
+  }
+}
+```
+
+No API keys here. The two API keys and the EDV auth key go in `.env` that we set up in Part 3.&#x20;
+
+**For your use case.** Same file, your values. This is the contract between the Workspace and the code, and handing it over as a file saves us time adding this piece by piece when implementing the prototype in Part 3.
