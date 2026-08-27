@@ -109,7 +109,7 @@ Before writing any code, prove the setup works.
 
 Making sure the schemas and verification templates work well together will save us time debugging it in the code in the later step.
 
-#### 4.8 Write down configuration for handoff&#x20;
+### 7. Write down configuration for handoff&#x20;
 
 Everything from here on refers back to these values. Keep them in one place in your project directory:
 
