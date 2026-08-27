@@ -9,7 +9,7 @@
   * [Caller authentication: Truvera Verified Contact](solutions/caller-authentication-truvera-verified-contact.md)
   * [Building a digital identity ecosystem prototype with AI tools](solutions/building-a-digital-identity-ecosystem-prototype-with-ai-tools/README.md)
     * [Part 1.  Setting up in the Workspace](solutions/building-a-digital-identity-ecosystem-prototype-with-ai-tools/part-1.-setting-up-in-the-workspace.md)
-    * [Part 2. Design user journeys in Claude Design](solutions/building-a-digital-identity-ecosystem-prototype-with-ai-tools/part-2.-design-user-journeys-in-claude-design.md)
+    * [Part 2. Design user journeys](solutions/building-a-digital-identity-ecosystem-prototype-with-ai-tools/part-2.-design-user-journeys.md)
     * [Part 3. Implementation](solutions/building-a-digital-identity-ecosystem-prototype-with-ai-tools/part-3.-implementation.md)
 * [Truvera Workspace](truvera-workspace/README.md)
   * [Create an organization profile (DID)](workspace/create-an-organization-profile-did.md)
