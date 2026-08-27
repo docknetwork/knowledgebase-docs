@@ -24,18 +24,7 @@ There is no issuer screen. The employee triggers onboarding and issuance happens
 
 These are the placeholder values that you will change to match your use case.
 
-| \{{ISSUER\}}               | Quotient, an employer                                                                   |
-| -------------------------- | --------------------------------------------------------------------------------------- |
-| \{{HOLDER\}}               | a new employee                                                                          |
-| \{{CREDENTIAL\}}           | employee badge                                                                          |
-| \{{CREDENTIAL\_FIELDS\}}   | employer name, employee ID, full name, role, employment status, valid from, valid until |
-| \{{ONBOARDING\_TRIGGER\}}  | an email from HR on the employee's first day                                            |
-| \{{VERIFIER\}}             | Event Platform, an online event platform                                                |
-| \{{VERIFIER\_SURFACE\}}    | event registration page                                                                 |
-| \{{VERIFIER\_GOAL\}}       | enter a members-only event                                                              |
-| \{{DISCLOSED\_FIELDS\}}    | employer name, employment status                                                        |
-| \{{WITHHELD\_FIELDS\}}     | full name, employee ID, role                                                            |
-| \{{SAMPLE\_DATA\_REGION\}} | <p>UK company and personal names<br></p>                                                |
+<table data-search="false"><thead><tr><th>Placeholder</th><th>Employee badge example</th></tr></thead><tbody><tr><td>{{ISSUER}}</td><td>Quotient, an employer</td></tr><tr><td>{{HOLDER}}</td><td>a new employee</td></tr><tr><td>{{CREDENTIAL}}</td><td>employee badge</td></tr><tr><td>{{CREDENTIAL_FIELDS}}</td><td>employer name, employee ID, full name, role, employment status, valid from, valid until</td></tr><tr><td>{{ONBOARDING_TRIGGER}}</td><td>an email from HR on the employee's first day</td></tr><tr><td>{{VERIFIER}}</td><td>Event Platform, an online event platform</td></tr><tr><td>{{VERIFIER_SURFACE}}</td><td>event registration page</td></tr><tr><td>{{VERIFIER_GOAL}}</td><td>enter a members-only event</td></tr><tr><td>{{DISCLOSED_FIELDS}}</td><td>employer name, employment status</td></tr><tr><td>{{WITHHELD_FIELDS}}</td><td>full name, employee ID, role</td></tr><tr><td>{{SAMPLE_DATA_REGION}}</td><td>UK company and personal names<br></td></tr></tbody></table>
 
 {% prompt description="prompt for the design" %}
 ```markdown
