@@ -118,6 +118,6 @@ plausible {{SAMPLE_DATA_REGION}} sample data. Polished enough to present to a cl
 
 Hand over directly from Claude Design to Claude Code. That is the shortest path and there is nothing to move between tools.
 
-If you are designing somewhere else, export the prototype as HTML and put it in the project directory instead. Either way, the prompts in section 6 assume the design is readable in the working directory, and that it is treated as a visual reference rather than a starting codebase.
+If you are designing somewhere else, export the prototype as HTML and put it in the project directory instead. Either way, the prompts in Part 3 assume the design is readable in the working directory, and that it is treated as a visual reference rather than a starting codebase.
 
 <br>
