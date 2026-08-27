@@ -1,4 +1,4 @@
-# Part 2. Design user journeys in Claude Design
+# Part 2. Design user journeys
 
 &#x20;Now it’s time to think about the story that you want your prototype to tell and the user journeys you want to show.&#x20;
 
@@ -102,8 +102,7 @@ plausible {{SAMPLE_DATA_REGION}} sample data. Polished enough to present to a cl
 ```
 {% endprompt %}
 
-\
-5.4 Handing over Claude Code
+### Handing over for implementation
 
 Hand over directly from Claude Design to Claude Code. That is the shortest path and there is nothing to move between tools.
 
