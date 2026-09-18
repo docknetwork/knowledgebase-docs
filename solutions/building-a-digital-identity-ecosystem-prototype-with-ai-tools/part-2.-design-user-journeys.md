@@ -2,6 +2,8 @@
 
 &#x20;Now it’s time to think about the story that you want your prototype to tell and the user journeys you want to show.&#x20;
 
+{% embed url="https://www.loom.com/share/7b86d97e51164f5bb641637dd5bcf877" %}
+
 ### The three journeys
 
 Most credential prototypes will the same three key journeys:

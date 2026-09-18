@@ -1,5 +1,7 @@
 # Building a digital identity ecosystem prototype with AI tools
 
+{% embed url="https://www.loom.com/share/8561718e04b9427994d13258bb51ce15" %}
+
 ## What this is
 
 A walkthrough for building a working verifiable credentials prototype on Truvera in about an hour, using Claude Design for the interface and Claude Code for the implementation.
@@ -16,10 +18,7 @@ Before you start
 
 ### From Truvera support
 
-Email [support@truvera.io](mailto:support@truvera.io) for both of these at once, they take a day or so to come back:
-
-* Ecosystem tools enabled on your account. It is an add-on and off by default.
-* An EDV auth key. Required for the cloud wallet.
+Email [support@truvera.io](mailto:support@truvera.io) for an EDV auth key.  It is required for the cloud wallet and it could take 1-2 business days.&#x20;
 
 ### On your machine
 

@@ -2,6 +2,8 @@
 
 Before starting, make sure Claude Code (or another tool of your choice) has the configuration file from the Part 1, design from Part 2 and the [knowledgebase](https://github.com/docknetwork/knowledgebase-docs) repo in the working directory. Working from these means it will be easier to get predictable results and less de-bugging will be needed.
 
+{% embed url="https://www.loom.com/share/d96f4076cc0247198a9fe5b899487c42" %}
+
 ### 1. Project setup
 
 A frontend plus a small server-side proxy. The Truvera API keys cannot go in the browser, so every call to the Truvera API goes through the proxy. Add these values to your `.env` file.

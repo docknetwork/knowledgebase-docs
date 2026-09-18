@@ -2,6 +2,8 @@
 
 All of this happens in the Truvera Workspace UI. Everything created here is what the code will refer to, and if any of it is wrong the code will fail in ways that look like code problems, so testing here will save time later.
 
+{% embed url="https://www.loom.com/share/a3177bdb16ec41f09c86f4164441e939" %}
+
 ### 1. Map the parties
 
 Write down who issues, who holds, and who verifies the credentials. In this example the employer issues, the event platform verifies, the employee holds.
