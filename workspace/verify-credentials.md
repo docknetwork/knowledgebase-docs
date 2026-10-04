@@ -52,6 +52,10 @@ Last step for a verification request is to click Request, which will generate a 
 
 <figure><img src="../.gitbook/assets/63dc133a7f9006477e2c9e15_4-select request.png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+Saving an updated template may require a few minutes to take effect. Verification requests may continue to use an old version of a presentation template for a short period after an edit is saved.
+{% endhint %}
+
 ## Steps for the holder <a href="#h_551a4bc680" id="h_551a4bc680"></a>
 
 First step for the holder is to **Scan** the QR code with their wallet and select the credential(s) that contain the information the verifier is requesting.
