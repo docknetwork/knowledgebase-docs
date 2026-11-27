@@ -1,4 +1,4 @@
-# Getting started
+# Getting started with the Truvera Wallet SDK
 
 This guide walks you through the process of setting up the Truvera Wallet SDK, creating a wallet, managing decentralized identifiers (DIDs), adding credentials, and verifying them.
 
@@ -34,7 +34,7 @@ If you want to store data in the Truvera Cloud Wallet, please refer to the [Clou
 
 ### 2. Create a new wallet
 
-Once the data store is set up, you can create a wallet. The wallet will act as a container for managing your documents, DIDs, and credentials.
+Once the data store is set up, you can create a wallet. The wallet will act as a container for managing your documents, DIDs, and credentials. 
 
 ```ts
 import {createWallet} from '@docknetwork/wallet-sdk-core/lib/wallet';
